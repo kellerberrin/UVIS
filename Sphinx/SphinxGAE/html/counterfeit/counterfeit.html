@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Validated Inventory &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../index.html"/>
+        <link rel="prev" title="Contact Kellerberrin Software" href="../contact/contact.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Validated Inventory</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/counterfeit/counterfeit.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <a class="reference internal image-reference" href="../_images/sacred-kingfisher.jpg" id="counterfeit"><img alt="../_images/sacred-kingfisher.jpg" class="align-left" id="counterfeit" src="../_images/sacred-kingfisher.jpg" style="width: 170px; height: 128px;" /></a>
+<div class="section" id="validated-inventory">
+<h1>Validated Inventory<a class="headerlink" href="#validated-inventory" title="Permalink to this headline">¶</a></h1>
+<p>Counterfeit product substitution is estimated to cost the global economy $1.7 trillion in 2015.
+Almost every category of manufactured product has been, and is being, counterfeited.</p>
+<p>Digital movie piracy, fake watches in flea markets and counterfeit high fashion goods sold in the boutiques of Paris and Shanghai
+are examples of economically costly counterfeit product substitution.</p>
+<p>More serious are counterfeit products that are unsafe. Car seat belt buckles made of inferior metal and
+used aircraft parts that have been substituted for new parts.</p>
+<p>But perhaps the most pernicious and persistent problem is counterfeit pharmaceuticals.
+Counterfeit pharmaceuticals in Least Developed Countries (LDC) are a particularly serious problem, with studies showing
+counterfeit rates of some anti-malarial drugs (Artemisinin) as high as 30% in Asia <a class="reference internal" href="#cf2012" id="id1">[CF2012]</a> and 50%
+in Africa <a class="reference internal" href="#cf2013" id="id2">[CF2013]</a>.</p>
+<p>The conventional technique to combat pharmaceutical counterfeiting is Ramen Spectroscopy which analyses the ingredients of
+suspect pharmaceuticals. This is a powerful and effective technique but it requires expensive equipment, trained staff and
+can only analyse a small proportion of the suspect pharmaceuticals sold.</p>
+<p><strong>Introducing a powerful weapon in the fight against counterfeiting - the smart phone.</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Smart phones are now cheap. Spurred on by vast markets in less developed countries, phone manufacturers
+have aggressively cut prices. In July 2014 a smart-phone with a 1.2 Ghz dual
+core processor and an 8 mega-pixel camera could be purchased in India for 5,999 Rupees ($100 USD).</p>
+</div>
+<p>Using a smart-phone as a lightweight client for cloud based anti-counterfeit software:</p>
+<ul class="simple">
+<li>Enables purchasers/end-users to validate the authenticity of products.</li>
+<li>Enables Governments, Manufacturers and NGOs to identify where product distribution channels have been compromised.</li>
+<li>Implements a secure <em>Track and Trace</em> distribution system.</li>
+</ul>
+<p>To do this, the techniques of <em>Serialization</em>, <em>Location</em> and <em>Trust Hierarchies</em> can be applied. These are explained below.</p>
+<div class="section" id="serialization">
+<h2>Serialization<a class="headerlink" href="#serialization" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Serialization is a unique serial code affixed (generally a 2D DataMatrix Barcode)
+to each product package.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/SerialCode.png"><img alt="../_images/SerialCode.png" class="align-left" src="../_images/SerialCode.png" style="width: 203px; height: 190px;" /></a>
+<p>Serialization is a simple and powerful tool against counterfeiting.
+A guaranteed unique serial code, a number or text sequence, is attached to the product or
+aggregate packaging (carton, pallet or container).</p>
+<p>The serial codes can be used to <em>authenticate</em> a genuine product.</p>
+<p>Serial codes can also be used to track products from manufacture, through the distribution channel, to final purchase.
+This can be used to implement the usual tasks of distribution and inventory.
+Also, importantly, <em>Track and Trace</em> can also be used to detect where, who and when unauthorised diversion of products
+occurred, theft or compromise of the distribution channel through the introduction of counterfeit goods.</p>
+<p>The image on the above left shows the format of serial coding (&#8220;SN&#8221;) of pharmaceutical retail packaging that will be introduced
+into the United States by 2018. The 2D Barcode carrier is a GS1 standard (ECC200) DataMatrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As a demonstration of how serialization works, you can scan the Barcode with a freeware smart-phone barcode
+app such as <strong>zxing</strong> (Android). The serial code is the &#8220;SN&#8221; field.</p>
+</div>
+<div class="section" id="track-and-trace-authentication">
+<h3>Track and Trace, Authentication<a class="headerlink" href="#track-and-trace-authentication" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Track and Trace</em>, as the name suggests, uses the product serial code to produce an audit log of all movements
+of a product in the distribution channel from manufacturer to consumer. This audit log is called the ePedigree of
+the product and confirms the integrity of the distribution channel of the product.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><em>Authentication</em> systems use a guaranteed <em>unique</em> serial code to authenticate a product.
+Without special packaging (see Ghana, <em>mPedigree</em> below), serial codes printed as Text or Barcodes are <strong>not</strong> guaranteed to be
+<em>unique</em> until they can be checked against a database.</p>
+</div>
+</div>
+<div class="section" id="physical-implementation-of-serialization">
+<h3>Physical Implementation of Serialization<a class="headerlink" href="#physical-implementation-of-serialization" title="Permalink to this headline">¶</a></h3>
+<p><strong>Text and Barcodes</strong></p>
+<p>Serial codes can be implemented physically as Text or a Barcode and, most often, both.
+The 2D DataMatrix Barcode shown above is a GS1 standard (ECC200) Barcode and the information contained within
+the Barcode also follows GS1 formatting standards. This standard will be adopted in the United States and probably by Europe (EU)
+for serial coding pharmaceutical unit (retail) packaging by 2018.</p>
+<p>Text and Barcodes can be printed using suitable high speed printers on existing production lines. Setup costs
+for manufacturers implementing serial codes are relatively cheap and ongoing production costs to print serial codes are also low.
+Therefore, this technology is attractive to manufacturers who need to implement serial coding on existing packaging lines.
+Another advantage of printed barcodes is that they are can be read
+and processed using freeware software on relatively low-end smart phones.</p>
+<p>An obvious attack on printed serial codes by a counterfeiter is to duplicate a valid code on the counterfeit packaging.
+Therefore, if the serial code is implemented as Text or a Barcode on the unit packaging then the serial code
+must be confirmed as unique. This is done by marking the code off on a database when it is purchased or used.
+If a serial code previously recorded as purchased or used
+is again presented on a package for purchase or use, then counterfeiting is immediately detected.</p>
+<p><strong>RFID Chips</strong></p>
+<p>Serial codes can be uniquely encrypted into RFID chips. Every RFID Chip carries a permanent unique ID code and cannot be copied.
+RFID chips also have a significantly larger data payload than Barcodes. RFID chips have unbreakable on-chip encryption engines
+implemented in hardware (3DES). RFID chips are reliably scanned in a production line environment (and at relatively longer distances).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Serial codes encrypted onto RFID chips can be easily authenticated and verified as unique <em>without</em> reference
+to an external database (they can be authenticated off-line). RFID chips are the &#8216;gold standard&#8217; for serial code authentication.</p>
+</div>
+<p>RFID chips are considered expensive at a cost of around USD$0.10 per RFID label in volume (from $0.01 to $1.00 depending
+on volume, type and packaging, source: Alibaba.com, July 2014).
+However, they are cheap enough to be widely used in disposable tickets in urban transport systems. RFID chips can be read/written
+by most high-end Android phones - termed Near Field Communication (NFC). Low and mid-level phones currently do not support
+NFC in hardware. This is the disadvantage of RFID chips, they cannot be accessed using universally available
+hardware (a cheap smart phone). This would be an issue for universal (purchaser/user) product authentication. But would not be
+an issue in a secure <em>Track and Trace</em> system.</p>
+</div>
+<div class="section" id="sequences-of-serial-codes">
+<h3>Sequences of Serial Codes.<a class="headerlink" href="#sequences-of-serial-codes" title="Permalink to this headline">¶</a></h3>
+<p>In order for serial codes to be secure:</p>
+<ol class="arabic simple">
+<li>A counterfeiter must not be able anticipate or reproduce the sequence of serial codes.</li>
+<li>For a serial code to authenticate a product the verifier (purchaser/user/distributor) needs to be able to confirm
+that only the Manufacturer, Government or NGO (the <em>Trusted Entity</em>) could have generated the serial code.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Anecdotally, some US pharmaceutical manufacturers are planning to produce sequential serial codes when implementing the
+requirements of the DQSA Act (see below). This is egregiously careless; sequential
+codes are trivially easy to counterfeit and cannot be authenticated.</p>
+</div>
+<p><strong>Random Sequences</strong></p>
+<p>European and most United States manufacturers have responded to this requirement by producing serial codes that
+are random sequences (requirement 1). Authenticating the serial code and thus the product is done by referring back to a
+database with a list of generated serial codes.</p>
+<p>Although this achieves both requirements, it requires secure access to the serial code database.</p>
+<p><strong>Non-Interactive Zero Knowledge (NIZK) Encryption</strong></p>
+<p>A better serial coding solution is to use is a &#8216;Non-Interactive Zero-Knowledge proof&#8217; (NIZK) verification algorithm that does not need a database
+link.  Using this technique, the NIZK algorithm verifies that the serial code was generated by an
+authorised <em>Manufactuer, Government or NGO</em> without the need to communicate and without knowing how the serial code was
+generated. Although this is somewhat more complex, well proven cryptographic software libraries are readily available
+(never attempt to write cryptographic software in-house).  The advantage is that the verification process is greatly simplified
+and more secure.</p>
+<p>NIZK serial codes only provide proof of uniqueness if implemented on an RFID chip. Text and Barcodes
+can always be copied and these must be checked against a database to establish uniqueness. However, the counterfeiter does
+not know the code sequence, so it is likely they will only copy one or a few codes. So Text and Barcodes with an NIZK
+serial code can provide a partial authentication with a reasonable level of confidence. The partial
+authentication scans can then be queued and checked against a database for uniqueness when the phone (or scanning device)
+is on-line.</p>
+</div>
+<div class="section" id="potential-problems-with-serial-coding">
+<h3>Potential Problems with Serial Coding<a class="headerlink" href="#potential-problems-with-serial-coding" title="Permalink to this headline">¶</a></h3>
+<p>For serial codes to work, a serial code must be on the final use packaging. This may seem obvious but serial codes
+have not yet been mandated in the Least Developed Countries where the problem of counterfeiting is most severe.
+In addition, countries where most counterfeit pharmaceuticals are sourced; Nigeria, Pakistan, China and India have not
+mandated the introduction of serial coding. This could be overcome by Governments or NGOs requiring all packaging
+to be serial coded, or alternately, that serial codes be manually affixed to packaging.</p>
+<p>The problem with the authentication step is again obvious. Unless counterfeit packaging is checked when purchased or used,
+then serial coding cannot be authenticated (See Turkey below). The US and EU will address this problem by requiring pharmacists and healthcare
+professionals to scan serial codes at point of purchase or use. However, if serial code authentication is performed
+sparsely and haphazardly then counterfeits may not be identified or may only be identified after many counterfeit units
+have been sold.</p>
+</div>
+<div class="section" id="serialization-and-pharmaceuticals">
+<h3>Serialization and Pharmaceuticals<a class="headerlink" href="#serialization-and-pharmaceuticals" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="ghana">
+<h3>Ghana<a class="headerlink" href="#ghana" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/GhanaFlag.jpg"><img alt="../_images/GhanaFlag.jpg" class="align-left" src="../_images/GhanaFlag.jpg" style="width: 80px; height: 50px;" /></a>
+<p><strong>Simple and Effective Authentication</strong></p>
+<p>The <em>mPegigree</em> system was the first use of a serialization to authenticate pharmaceuticals.
+It was launched in 2007 in Ghana by Ghanaian entrepreneur Bright Simons. It is brilliantly simple and cost effective.
+A text serial code is placed under a tamper proof scratch off covering. The pharmaceutical purchaser scratches off the covering
+to reveal the serial code. They then enter the code as an SMS text message which is sent to a toll free number.
+A return SMS message authenticates the purchase.</p>
+<p>The <em>mPedigree</em> system was introduced into Nigeria in 2010 and India in 2011.
+Kenya is currently (July 2014) introducing the system
+and there are advanced plans to introduce <em>mPedigree</em> into Rwanda and Uganda.</p>
+<p>By its design, the serial code is only revealed by the purchaser and the mPedigree system cannot be used to
+implement a <em>Track and Trace</em> system.</p>
+</div>
+<div class="section" id="turkey">
+<h3>Turkey<a class="headerlink" href="#turkey" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/TurkishFlag.jpg"><img alt="../_images/TurkishFlag.jpg" class="align-left" src="../_images/TurkishFlag.jpg" style="width: 80px; height: 50px;" /></a>
+<p><strong>Track and Trace but no Authentication, a Cautionary Tale</strong></p>
+<p>The pioneering use of serial codes to implement a pharmaceutical <em>Track and Trace</em> system was with the Turkish Ministry of Health
+who developed the ITS system (also called the Medical Tracking System in English). The primary objective of the system
+was to reduce insurance fraud by pharmacists reporting inflated sales.  It is not currently compulsory for pharmacists
+to authenticate medicines in the ITS system.</p>
+<p>There are claims that the system has assisted police apprehend counterfeiters: <em>&#8216;Over the last two years, police have seized
+approximately 2 million packages of counterfeit medications, worth 6 million Turkish Lira, which were sold either on the internet,
+by patients&#8217; relatives and even in some pharmacies, which acted as intermediaries for counterfeiters.&#8217; (Turkish SEtimes)</em>.</p>
+<p>It is worth noting that apparently the counterfeit pharmaceuticals were not introduced into the supply chain by
+manufacturers or distributors, but by vendors - retail pharmacists. We will see this theme again when the supply
+of counterfeit pharmaceuticals in regional Uganda is examined.</p>
+<p>In December 2013 counterfeit cancer drugs were found to have been sold to cancer patients. Some of the
+counterfeit cancer drugs reached the United States via a circuitous route and American citizens were implicated
+in the scam.</p>
+<p>It is worth quoting the response of Turkish drug manufacturers at length:</p>
+<p><em>&#8216;Turkey&#8217;s Association of Research-Based Pharmaceutical Companies (AIFD) issued a statement in the wake of the operation
+noting that the counterfeiting operation is &#8220;alarming&#8221;, particularly as the country has implemented a national programme
+of medicine serialisation via 2D barcodes - the drug tracking system (ITS) - which should make it hard to carry out this
+sort of illegal activity.</em></p>
+<p><em>&#8216;The AIFD points to a potential weakness in the system in its statement, noting: &#8220;to ensure impeccable functionality of
+those safeguards, the 2D barcode on a product purchased must be scanned and checked on the system at the pharmacy to verify
+its authenticity, since having a 2D barcode alone may not necessarily attest to the authenticity of the product; the 2D barcode
+must be verified on the system.&#8217;</em></p>
+<p><strong>&#8216;It recommends that all 2D barcodes on medicine packs are scanned and verified in pharmacies, and the product checked to make
+sure it has not been re-packaged or removed from the original packaging.&#8217;</strong> [my emphasis]</p>
+<p>There are related two points to be made from the Turkish experience.  Firstly, that a voluntary system will be ignored or
+misused by compromised vendors (pharmacists). Secondly, once again the problem appears at the vendor level and does not appear to
+involve higher levels of the distribution channel.</p>
+</div>
+<div class="section" id="united-states-and-europe">
+<h3>United States and Europe<a class="headerlink" href="#united-states-and-europe" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/US_EU_Flag.jpg"><img alt="../_images/US_EU_Flag.jpg" class="align-left" src="../_images/US_EU_Flag.jpg" style="width: 125px; height: 45px;" /></a>
+<p><strong>A Standards Swamp</strong></p>
+<p>The United States and Europe (EU) have both mandated the serialization of pharmaceuticals by 2018.</p>
+<p><strong>The United States</strong></p>
+<p>President Barack Obama signed H.R. 3204, the Drug Quality and Security Act (DQSA),
+into law in November 2013. Pharmaceutical manufacturers must have serial codes on unit packaging by November 2017.</p>
+<p>The relevant parts of the legislation concerning serialization are reproduced below.</p>
+<p><em>&#8216;SEC. 581. DEFINITIONS&#8217;: &#8216;(14) PRODUCT IDENTIFIER .... means a standardized graphic that includes,
+in both human-readable form and on a machine-readable data carrier ....the standardized numerical identifier,
+lot number, and expiration date of the product.&#8217; and &#8216;(20) STANDARDIZED NUMERICAL IDENTIFIER .... means a set of numbers or
+characters used to uniquely identify each package or homogeneous case that is composed of the National Drug Code .... combined
+with a unique alphanumeric serial number of up to 20 characters.&#8217;</em></p>
+<p>In other words the specification is consistent with a GS1 formatted DataMatrix, although machine readable could also apply to
+a RFID chip. Importantly - there is no specification on how the <em>&#8216;STANDARDIZED NUMERICAL IDENTIFIER&#8217;</em> is to be generated.
+Simply that it is a <em>&#8216;unique alphanumeric serial number of up to 20 characters.&#8217;</em>. This could apply to a sequential sequence.</p>
+<p>The relevant parts of the legislation concerning authentication using serialization are reproduced below.</p>
+<p><em>&#8216;SEC. 582. REQUIREMENTS&#8217; ,(b)(4)(C): .... upon receiving a request for verification from an authorized repackager,
+wholesale distributor, or dispenser that is in possession or control of a product ...., a manufacturer shall....notify
+the person making the request whether the product identifier, including the standardized numerical identifier, that is the
+subject of the request corresponds to the product identifier affixed or imprinted by the manufacturer.&#8217;</em></p>
+<p>In other words the manufacturer only needs to respond to <em>&#8216;receiving a request for verification from an authorized&#8217;</em>
+[entity]. Authentication will <strong>not</strong> be available to purchasers or end-users.</p>
+<p><strong>Europe</strong></p>
+<p>Directive 2001/83/EC and Directive 2011/62/EU of the European Parliament has mandated the introduction of pharmaceutical
+anti-counterfeit technology (serialization). Under the European federal system
+these directives must then be passed into legislation by each of the member countries and it is expected that this will be
+completed by 2017.</p>
+<p>An alliance of European pharmaceutical organisations (EAEPC-EFPIA-GIRP-PGEU)
+has responded with a proposal for the technical specifications of serialization.</p>
+<p>The data carrier will be a GS1 (ECC200 or ISO/IEC 16022) 2D DataMatrix (no provision for RFID). Serial codes will be randomly
+generated (good). Where the European proposal differs from the Americans is the product identifier. The US has a National Drug
+Code (NDC) which is easily extended to a GS1 Global Trade Identification Number (GTIN). However, the Europeans have
+a variety of legacy national drug codes that cannot be converted to a GTIN.</p>
+</div>
+</div>
+<div class="section" id="location">
+<h2>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/Mbarara.png"><img alt="../_images/Mbarara.png" class="align-left" src="../_images/Mbarara.png" style="width: 375px; height: 160px;" /></a>
+<p>All smart-phones have location information. Low-end smart phone calculate location from cell phone towers,
+this has an accuracy of 100-500 metres (Google documentation). Mid and high-end smart phones generally have GPS built-in
+and this has an accuracy of less than than 100 meres (Google documentation). In practice, GPS accuracy is frequently better
+than 20 meters. Note that for on-line pharmacies, location could also be a URL.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The frequency of counterfeit products is highly dependent on location and specific vendor.
+For example, in Mbarara district, Uganda, the probability of buying counterfeit antimalarials doubles if purchased from
+a vendor who has previously sold counterfeit antimalarials.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/UgandaCounterfeit.png"><img alt="../_images/UgandaCounterfeit.png" class="align-center" src="../_images/UgandaCounterfeit.png" style="width: 650px; height: 700px;" /></a>
+<p>The table above shows the frequency of antimalarial drugs (Artemisinin-based Combination Therapy - ACT) in 4 districts
+in Uganda. The frequency of counterfeit drugs varies considerably with district (All Shops column). Researchers <a class="reference internal" href="#cf2013" id="id3">[CF2013]</a>
+in Uganda also find that purchasers overestimate the quality of antimalarials purchased. In addition, there is only a weak
+or non-existent relationship between pharmaceutical quality and price <a class="reference internal" href="#cf2011" id="id4">[CF2011]</a>. Presumably this is to prevent the purchaser
+receiving adverse signals about the quality of the pharmaceuticals from price.</p>
+<p>The most interesting
+finding of <a class="reference internal" href="#cf2013" id="id5">[CF2013]</a> is that the probability of of purchasing counterfeit antimalarials doubles if the vendor has previously
+sold counterfeit antimalarials (Conditional column).</p>
+<p>The immediate implication is that some vendors are not just passive conduits of counterfeits sourced further up the
+distribution channel, but are actively <em>facilitating</em> the sale of
+counterfeit antimalarials. A major objective of any <em>Track and Trace</em> system should be to modify vendor behaviour.</p>
+<p>An open user-based <em>review</em> system such as Google maps or the travel site <em>Trip Advisor</em> cannot be
+used to assess the quality of vendors.</p>
+<ol class="arabic simple">
+<li>Purchasers (in general) lack the technical capability (Ramen Spectroscopy or similar) to properly analyse
+and review pharmaceuticals.</li>
+<li>Non-compliant vendors will simply arrange for false reviews to be posted.</li>
+</ol>
+<p>This can only be done with a formal
+compliance and audit system where purchased pharmaceuticals are periodically analysed for quality.  Vendors who are
+compliant with quality standards are granted &#8216;authorised dealer&#8217; status, see <em>Trust Hierarchy</em> below.</p>
+<p>Vendors should be highly motivated to gain &#8216;authorized dealer&#8217; status because the <em>Track and Trace</em> application will show a
+higher probability of purchasing genuine pharmaceuticals from &#8216;authorized dealers&#8217;.</p>
+<p>There are 14 pharmacies in Mbarara township, from the table above,
+half of them sell genuine pharmaceuticals. These vendors should be rewarded with &#8216;authorized dealer&#8217; status.</p>
+</div>
+<div class="section" id="trust-hierarchy">
+<h2>Trust Hierarchy<a class="headerlink" href="#trust-hierarchy" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/Dealer1962.jpg"><img alt="../_images/Dealer1962.jpg" class="align-left" src="../_images/Dealer1962.jpg" style="width: 300px; height: 200px;" /></a>
+<p>Trust Hierarchies work like an authorized car dealership.  Dealers comply with car manufacturer
+quality standards and in return are granted the privilege of &#8216;authorized dealer&#8217;.
+This is economically beneficial to the dealer; customers preferentially purchase from &#8216;authorized dealers&#8217; because
+they know the dealer meets manufacturer quality standards.</p>
+<p>The Trust Hierarchy formalizes this relationship using cryptographic certificates that can be conveniently
+transferred and authenticated. The top of the Trust Hierarchy is the <em>Trusted Entity</em>; a Government, Manufacturer or NGO
+who issues &#8216;authorized dealer&#8217; certificates to distributors and vendors who meet quality standards.
+The <em>Trusted Entity</em> and can also authenticate certificates.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Certificates grant distributors and vendors &#8216;authorized dealer&#8217; status. They allow the <em>Trusted Entity</em>
+to securely audit the transactions of distributors and vendors. They also provide vendor quality information to a
+purchaser.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/TrustHierarchy.png"><img alt="../_images/TrustHierarchy.png" class="align-center" src="../_images/TrustHierarchy.png" style="width: 800px; height: 425px;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Certificates are implemented as X509 certificates. These are used in your web browser for secure
+communication using https. You can view X509 certificates by connecting to a website using https and clicking on
+the padlock symbol.</p>
+</div>
+<p>There are three types of authorisation certificates in the trusted hierarchy.</p>
+<ol class="arabic simple">
+<li><em>Trusted Entity</em> Certificates [X.509 terminology - a Certificate Authority]</li>
+</ol>
+<p>This certificate is at the apex of the trust hierarchy.
+It has the ability to cryptographically verify subordinate certificates and can issue and sign new
+subordinate certificates.</p>
+<ol class="arabic simple" start="2">
+<li>Distributor Certificates [X.509 terminology - Intermediate Certificate]</li>
+</ol>
+<p>In a global distribution network it is unrealistic for the <em>Trusted Entity</em> to verify and
+issue certificates to all (particularly the lower) levels of the distribution channel. Therefore trusted authorised
+distributors are empowered to issue certificates further down the distribution channel. These lower level certificates
+are signed by the trusted distributor issuing the certificate and, importantly, cannot be repudiated by the issuer.
+It is implicit that the trusted distributor is responsible for the behaviour of
+subordinate distributors and vendors holding certificates they have issued.</p>
+<ol class="arabic simple" start="3">
+<li>Subordinate (Vendor) Certificates [X.509 terminology - User Certificate]</li>
+</ol>
+<p>This certificate cannot issue subordinate certificates.
+Typically these certificates are issued to low-level distributors and vendors.</p>
+<p>Products moving through the distribution channel are scanned using trust certificates and this creates a log of product
+movement through the distribution channel. This can be used to identify where counterfeit products have entered the
+distribution channel or where products have been diverted or stolen.
+The <em>Trusted Entity</em> can then take corrective action by revoking or restricting the authorization certificates of
+distributors or vendors in the compromised section of the distribution channel.</p>
+</div>
+<div class="section" id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/Functional.png"><img alt="../_images/Functional.png" class="align-center" src="../_images/Functional.png" style="width: 800px; height: 500px;" /></a>
+<p>The functional steps are:</p>
+<ol class="arabic simple">
+<li><em>(Optional) The product cryptographic serial code is scanned by a phone, tablet or barcode reader.</em></li>
+<li><em>(Optional) The vendor/distributor authorization certificate is verified.</em></li>
+<li><em>This information along with product, location and device is sent to a cloud server</em>.</li>
+<li>The product <strong>Authentication Rating</strong> of between 0% (a counterfeit product) and 100% (a genuine product) is returned.</li>
+</ol>
+</div>
+<div class="section" id="prototype-screen-shots">
+<h2>Prototype Screen Shots<a class="headerlink" href="#prototype-screen-shots" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="scanning-the-serial-code">
+<h3>Scanning the Serial Code<a class="headerlink" href="#scanning-the-serial-code" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/ScanScreen.png"><img alt="../_images/ScanScreen.png" class="align-center" src="../_images/ScanScreen.png" style="width: 600px; height: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/AuthScreen.png"><img alt="../_images/AuthScreen.png" class="align-center" src="../_images/AuthScreen.png" style="width: 600px; height: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>3 technologies are combined to defeat counterfeit products.</p>
+<ul class="simple">
+<li><strong>Portable Computing</strong></li>
+<li><strong>Cloud Storage and CPU</strong></li>
+<li><strong>Cryptographic Verification</strong></li>
+</ul>
+<p>The application is implemented as an application running on Google App Engine (GAE).</p>
+<a class="reference internal image-reference" href="../_images/Implementation.png"><img alt="../_images/Implementation.png" class="align-center" src="../_images/Implementation.png" style="width: 800px; height: 300px;" /></a>
+<p>The software components are:</p>
+<ol class="arabic simple">
+<li>A thin client app that captures the serial code as a Barcode, RFID chip or Text input, depending on device capability.
+It then transmits this and other data (time, location, device and trust certificate) to the GAE back-end.</li>
+<li>Back-end software hosted on GAE then stores all entered serial codes
+and implements verification/credibility logic.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All processing and verification is done by the back-end software.
+This permits low-end smart phones/tablets to be used in verification.</p>
+</div>
+<table class="docutils citation" frame="void" id="cf2012" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[CF2012]</a></td><td>Pierre Ambroise-Thomas, The Tragedy Caused by Fake Antimalarial Drugs, Meditterr. J. Hematol. Infect. Dis., 2012.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cf2013" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[CF2013]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>, <a class="fn-backref" href="#id5">3</a>)</em> Martina Björkman-Nyqvist Jakob Svensson David Yanagizawa-Drott, The Market for (Fake) Antimalarial Medicine:
+Evidence from Uganda, <a class="reference external" href="http://www.povertyactionlab.org/publication/market-fake-antimalarial-medicine-evidence-uganda">http://www.povertyactionlab.org/publication/market-fake-antimalarial-medicine-evidence-uganda</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="cf2011" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[CF2011]</a></td><td>Bate R., G. Z. Jin, and A. Mathur, 2011, Does Price Reveal Poor-quality Drugs? Evidence from
+17 countries, Journal of Health Economics, 30(6):1150-63.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../contact/contact.html" class="btn btn-neutral" title="Contact Kellerberrin Software"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

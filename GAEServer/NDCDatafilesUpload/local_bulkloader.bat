@@ -1,0 +1,4 @@
+rem The uploader batch file.
+rem The SQLLite file checkpoints and restarts the batch upload after a problem with a large upload
+rem C:\Python27\python.exe "C:\Program Files (x86)\Google\google_appengine\appcfg.py" upload_data --config_file=bulkloader.yaml --filename=.\csvupload\NDCDatabase.csv --kind=NDCLookup --url=http://localhost:10080/_ah/remote_api  --db_filename=bulkloader-progress-20140601.131702.sql3
+C:\Python27\python.exe "C:\Program Files (x86)\Google\google_appengine\appcfg.py" upload_data --config_file=bulkloader.yaml --filename=.\csvupload\NDCDatabase.csv --kind=NDCLookup --url=http://localhost:9080/_ah/remote_api  --db_filename=bulkloader-progress-20140721.sql3

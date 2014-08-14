@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <!-- [START head_html] -->
+  <head>
+    <link type="text/css" rel="stylesheet" href="/html/css/main.css" />
+  </head>
+  <!-- [END head_html] -->
+  <body>
+    <h1>
+    National Drug Code (NDC) Database
+    </h1>
+    <br>
+    <img alt="/html/images/USDrugDatabase.png" class="align-center" src="/html/images/USDrugDatabase.png" style="width: 400px; height: 240px;" />
+    <br>
+    <form action="/searchdb" method="post">
+	Search by:
+    <select name="searchtype">
+		<option value="ndc">National Drug Code</option>
+		<option value="generic" {{ GenericSelected }}>Drug Name</option>
+		<option value="ingredient" {{ ActiveSelected }}>Active Ingredient</option>
+	</select>
+    <input type="search" name="searchstring" value="{{SearchText}}"/>
+    <input type="submit" value="Search" />
+    </form>
+
+    {% if NDCEnhancedArray is NotEmptyArray %}
+
+        {% if NDCEnhancedArray is SingleElementArray %}
+        <br>
+        <hr>
+
+            National Drug Code: {{ NDCEnhancedArray[0].NDCRecord.ndc }} ({{ NDCEnhancedArray[0].NDCRecord.format }})
+            <br>
+            Drug Name: {{ NDCEnhancedArray[0].NDCRecord.proprietaryname }}
+            <br>
+            Labeler: {{ NDCEnhancedArray[0].NDCRecord.labellername }} 
+            <br>
+            Active Ingredient: {{ NDCEnhancedArray[0].NDCRecord.nonproprietaryname }}
+            <br>
+            Ingredient Strength: {{ NDCEnhancedArray[0].NDCRecord.activenumeratorstrength }} {{ NDCEnhancedArray[0].NDCRecord.activeingredientunit }}
+            <br>
+            Dosage / Route: {{ NDCEnhancedArray[0].NDCRecord.dosageformname }} / {{ NDCEnhancedArray[0].NDCRecord.routename }}
+            <br>
+            Package: {{ NDCEnhancedArray[0].NDCRecord.packagedescription }}
+            <br>
+            Pharmaceutical Class : {{ NDCEnhancedArray[0].NDCRecord.pharmclasses }}
+            <br>
+            11 Digit NDC: {{ NDCEnhancedArray[0].NDCElevenDigits }} (5-4-2)
+
+        {% else %}    
+        <br>
+        <hr>
+
+            <table>
+
+            <thead>
+            <tr>
+            <th scope="col">NDC</th>
+            <th scope="col">Drug Name</th>
+            <th scope="col">Labeler</th>
+            </tr>
+            </thead>
+ 
+            <tbody>
+            {% for NDCEnhanced in NDCEnhancedArray %}
+            <tr>
+                <td>
+                <a href="/selectndc?ndc={{NDCEnhanced.NDCRecord.ndc}}">{{ NDCEnhanced.NDCRecord.ndc }}</a>
+                </td>
+                <td>
+                {{ NDCEnhanced.NDCRecord.proprietaryname }}
+                </td>
+                <td>
+                {{ NDCEnhanced.NDCRecord.labellername }} 
+                </td>                
+            </tr>
+            {% endfor %}
+            </tbody>
+
+            </table>
+        
+        {% endif %}
+        
+    {% else %}
+
+    <br>
+    <hr>
+      {{ TypeExample }}
+
+    {% endif %}
+    
+    
+  </body>
+</html>
+{% endautoescape %}

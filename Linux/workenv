@@ -1,0 +1,36 @@
+#!/bin/bash
+# Change directory to a virtual directory
+# and start a new Bash shell
+
+if [ $# -eq 0 ]
+then
+
+echo "Usage: 'workenv <environment>'"
+echo "Creates another Bash shell with appropriate environment variables"
+echo "type 'exit' to return to the orginal shell"
+echo "Currently supports the following work <environment(s)>:"
+echo "'UVIS'"
+exit 0 
+
+fi
+ 
+case $1 in
+
+    UVIS ) source UVIS
+           cd $UVISDIR
+           PROMPTTEXT="(UVIS) ";;	   
+
+       * ) 
+
+	echo "'workenv' Unknown work environment:" $1
+	echo "Currently supports the following work <environment(s)>:"
+	echo "'UVIS'"
+	exit 1
+
+esac
+
+
+echo $PWD
+export PROMPTTEXT
+PROMPT_COMMAND='reldir; PS1="$PROMPTTEXT $TRUNC_PWD\$"' bash
+exit $?

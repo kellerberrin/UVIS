@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The UVIS Github Repository &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../counterfeit/counterfeit.html">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>The UVIS Github Repository</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/software/github/github.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <span class="target" id="github"></span><a class="reference internal image-reference" href="../../_images/octocat.png"><img alt="../../_images/octocat.png" class="align-left" src="../../_images/octocat.png" style="width: 64px; height: 64px;" /></a>
+<div class="section" id="the-uvis-github-repository">
+<h1>The UVIS Github Repository<a class="headerlink" href="#the-uvis-github-repository" title="Permalink to this headline">¶</a></h1>
+<p>The UVIS Github repository is at top level (root directory) of the UVIS
+software structure.</p>
+<p>Go to the root directory by executing the UVIS work environment:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $workenv UVIS</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The prompt &#8216;(UVIS) $&#8217; should appear.</p>
+<p>Alternatively, if you are already in thje UVIS work environment then simply change directory:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $cd $UVISDIR</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="linux-shell-github-commands">
+<h2>Linux Shell Github Commands<a class="headerlink" href="#linux-shell-github-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup-git">
+<h3>Setup Git<a class="headerlink" href="#setup-git" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Set up a global user name.</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git config &#8211;global user.name &#8220;kellerberrin&#8221;</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul>
+<li><p class="first">Set up a global email (must be the same as the email registered on Github)</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git config &#8211;global user.email &#8220;<a class="reference external" href="mailto:james&#46;duncan&#46;mcculloch&#37;&#52;&#48;gmail&#46;com">james<span>&#46;</span>duncan<span>&#46;</span>mcculloch<span>&#64;</span>gmail<span>&#46;</span>com</a>&#8220;</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="create-a-repository-and-add-files">
+<h3>Create a Repository and Add Files.<a class="headerlink" href="#create-a-repository-and-add-files" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Make sure we are in the UVIS root directory.</li>
+</ul>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $cd $UVISDIR</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul>
+<li><p class="first">Create the respository.</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git init</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul>
+<li><p class="first">Add all subdirectories and files to the repository.</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git add .</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul>
+<li><p class="first">Commit all the new files.</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git commit -m &#8220;The Initial UVIS Commit&#8221;</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="create-a-remote-repository-on-github">
+<h3>Create a Remote Repository on Github<a class="headerlink" href="#create-a-remote-repository-on-github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Register the Github respository.</li>
+</ul>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git remote add origin <a class="reference external" href="https://github.com/kellerberrin/UVIS.git">https://github.com/kellerberrin/UVIS.git</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Verify the remote repository.</li>
+</ul>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git remote -v</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="push-the-local-repository-onto-github">
+<h3>Push the Local Repository onto Github<a class="headerlink" href="#push-the-local-repository-onto-github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Push the local repository onto Github.</li>
+</ul>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git push origin master</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

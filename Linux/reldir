@@ -1,0 +1,24 @@
+#!/bin/bash
+#Function to truncate the bash prompt PWD
+
+pwd_truncate() {
+    # How many characters of the $PWD should be kept
+    local pwdmaxlen=20
+    # Indicate that there has been dir truncation
+    local trunc_symbol="~~"
+    local dir=${PWD##*/}
+    pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
+    NEW_PWD=${PWD/#$HOME/\~}
+    local pwdoffset=$(( ${#NEW_PWD} - pwdmaxlen ))
+    if [ ${pwdoffset} -gt "0" ]
+    then
+        NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
+        NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
+    fi
+}
+
+pwd_truncate
+export TRUNC_PWD=$NEW_PWD
+echo $TRUNC_PWD
+export TRUNC_PWD
+exit $?

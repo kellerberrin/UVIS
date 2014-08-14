@@ -1,0 +1,8 @@
+#!/bin/bash
+# The uploader batch file.
+# This uploads the local US Drug Database application to the 
+# Google Application Engine
+
+echo "UVISUSDRUGGAE:" $UVISUSDRUGGAE
+
+python $GOOGLEAPPBIN/appcfg.py --verbose update $UVISUSDRUGGAE

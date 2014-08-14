@@ -1,0 +1,2 @@
+# The uploader batch file.
+C:\Python27\python.exe "C:\Program Files (x86)\Google\google_appengine\appcfg.py" upload_data --config_file=bulkloader.yaml --filename=.\csvupload\NDCDatabase.csv --kind=NDCLookup --url=http://kellerberrin-drugdatabase.appspot.com/_ah/remote_api

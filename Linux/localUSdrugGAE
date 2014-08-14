@@ -1,0 +1,9 @@
+#!/bin/bash
+# Run a local version of the UVIS US Drug Application on
+# the local Google App Engine server.
+
+python $GOOGLEAPPBIN/dev_appserver.py \
+  --port=$UVISUSDRUGLOCALPORT  \
+  --host=$UVISUSDRUGLOCALHOST  \
+  --storage_path=$UVISUSDRUGLOCALSTORAGE \
+  $UVISUSDRUGGAEAPPPATH

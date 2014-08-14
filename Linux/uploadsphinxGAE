@@ -1,0 +1,8 @@
+#!/bin/bash
+# The uploader batch file.
+# This uploads the local Sphinx documentation application to the 
+# Google Application Engine
+
+echo "UVISSPHINXGAE:" $UVISSPHINXGAE
+
+python $GOOGLEAPPBIN/appcfg.py --verbose update $UVISSPHINXGAE

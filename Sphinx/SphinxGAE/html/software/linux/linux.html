@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The UVIS Linux (Bash) Environment &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../counterfeit/counterfeit.html">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>The UVIS Linux (Bash) Environment</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/software/linux/linux.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <span class="target" id="linuxdoc"></span><a class="reference internal image-reference" href="../../_images/linux.jpg"><img alt="../../_images/linux.jpg" class="align-left" src="../../_images/linux.jpg" style="width: 64px; height: 64px;" /></a>
+<div class="section" id="the-uvis-linux-bash-environment">
+<h1>The UVIS Linux (Bash) Environment<a class="headerlink" href="#the-uvis-linux-bash-environment" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/apple.jpg"><img alt="../../_images/apple.jpg" class="align-left" src="../../_images/apple.jpg" style="width: 64px; height: 64px;" /></a>
+<p>This is a command line environment that can used by any OS using the Bash command shell.
+In particular, this documentation applies to the Apple command line development environment.</p>
+</div>
+<div class="section" id="the-uvis-bash-scripts">
+<h1>The UVIS Bash Scripts<a class="headerlink" href="#the-uvis-bash-scripts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup-scripts-once-only">
+<h2>Setup Scripts (Once Only)<a class="headerlink" href="#setup-scripts-once-only" title="Permalink to this headline">¶</a></h2>
+<p>The scripts simply need to be copied into a suitable directory such as
+&#8216;$HOME/bin&#8217;. Ensure that the directory is in the &#8216;$PATH&#8217; of the Bash shell environment.</p>
+<p><strong>Important</strong> - some environment variables defined in the script &#8216;UVIS&#8217; may
+need to changed for each different development environment.
+See the comments in the &#8216;UVIS&#8217; script.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="terminal-session-setup-every-terminal-session">
+<h2>Terminal Session Setup (Every Terminal Session)<a class="headerlink" href="#terminal-session-setup-every-terminal-session" title="Permalink to this headline">¶</a></h2>
+<p>At the command prompt execute the following:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> $workenv UVIS</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This has the following actions:</p>
+<ol class="arabic simple">
+<li>Creates a child shell with the environment variables for UVIS. These are defined in the &#8216;UVIS&#8217; script.
+<strong>Important</strong> - some of these environment variables may need to changed for each different
+development environment. See the comments in the script.</li>
+<li>Changes the working directory to the UVIS root directory.</li>
+<li>Changes the shell prompt to indicate that the user is in the UVIS development environment.
+The prompt is: &#8216;(UVIS) $&#8217; to indicate a child shell with the UVIS environment.</li>
+</ol>
+<p>Once you have finished developing in the UVIS environment; simply execute &#8216;(UVIS) $exit&#8217; to return to the
+original (parent) shell.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $exit</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="the-scripts">
+<h2>The Scripts<a class="headerlink" href="#the-scripts" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first"><strong>bulkloader</strong> - This script uploads the drug database data in spreadsheet &#8216;.csv&#8217; format to either the local GAE
+datastore or the remote GAE datastore. Change the appropriate environment variable to change between &#8216;local&#8217;
+or &#8216;remote&#8217;. See the comment in the script &#8216;UVIS&#8217;.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $bulkloader</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>localsphinxGAE</strong> - Run a local copy of the Sphinx documentation on the local GAE server. This
+documentation can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:8080">http://localhost:8080</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localsphinxGAE</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="3">
+<li><p class="first"><strong>localUSdrugGAE</strong> - Run a local copy of the US drug database on the local GAE server. This
+can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:9080">http://localhost:9080</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localUSdrugGAE</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><strong>reldir</strong> - Not important - changes the UVIS environment shell prompt. Not executed directly.
+Should be replaced with a prompt script based on sed.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="5">
+<li><p class="first"><strong>sphinxmake</strong> - Generate a new version of the Sphinx html documentation from the &#8216;.rst&#8217; source files.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $sphinxmake html</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="6">
+<li><p class="first"><strong>uploadsphinxGAE</strong> - Upload the current local version of the Sphinx documentation to the remote GAE server.
+This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-doc.appspot.com">http://kellerberrin-doc.appspot.com</a>&#8216;.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $uploadsphinxGAE</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="7">
+<li><p class="first"><strong>uploadUSdrugGAE</strong> - Upload the current local version of the US drug database to the remote GAE server.
+This application can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-drugdatabase.appspot.com">http://kellerberrin-drugdatabase.appspot.com</a>&#8216;.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $uploadUSdrugGAE</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><strong>UVIS</strong> - Defines all the environment variables needed by the UVIS development environment.
+<strong>Important</strong> - some of these environment variables may need to changed for each different
+development environment. See the comments in the script.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="9">
+<li><p class="first"><strong>workenv</strong> - Setup the UVIS development environment. Must be run in each terminal session &#8216;$workenv UVIS&#8217;.
+Creates a child shell, defines the UVIS environment variables and changes the prompt. Exit by executing &#8216;$exit&#8217; and
+returning to the original (parent) shell.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> $workenv UVIS</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

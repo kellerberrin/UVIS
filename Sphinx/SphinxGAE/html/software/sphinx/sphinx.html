@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Documenting With Sphinx &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../counterfeit/counterfeit.html">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../counterfeit/counterfeit.html#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Documenting With Sphinx</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../_sources/software/sphinx/sphinx.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <span class="target" id="sphinxdoc"></span><a class="reference external image-reference" href="http://sphinx-doc.org/"><img alt="../../_images/sphinx.jpg" class="align-left" src="../../_images/sphinx.jpg" style="width: 64px; height: 64px;" /></a>
+<div class="section" id="documenting-with-sphinx">
+<h1>Documenting With Sphinx<a class="headerlink" href="#documenting-with-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>There are two logical documentation projects.</p>
+<a class="reference internal image-reference" href="../../_images/tree_wheat.jpg"><img alt="../../_images/tree_wheat.jpg" class="align-left" src="../../_images/tree_wheat.jpg" style="width: 300px; height: 160px;" /></a>
+<p><strong>UVIS Documentation</strong>. This is public, non-technical documentation of the UVI System.
+It is accessed using the URL: <a class="reference external" href="http://kellerberrin-doc.appspot.com">http://kellerberrin-doc.appspot.com</a>.
+This documentation features an image of a tree in a wheat field on its web page.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/keller_post_office1.jpg"><img alt="../../_images/keller_post_office1.jpg" class="align-left" src="../../_images/keller_post_office1.jpg" style="width: 250px; height: 180px;" /></a>
+<p><strong>Software Documentation</strong>. This is the proprietary, software documentation of the UVI System.
+It is strictly access controlled and is accessed using the URL:
+<a class="reference external" href="https://kellerberrin-doc.appspot.com/html/software/software.html">https://kellerberrin-doc.appspot.com/html/software/software.html</a>.
+This documentation features an image of the Kellerberrin post office on its web page.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>The two documentation environments share the same source directories.
+The software directory is protected by the requirement to be logged in as
+&#8216;admin&#8217; (currently only <a class="reference external" href="mailto:james&#46;duncan&#46;mcculloch&#37;&#52;&#48;gmail&#46;com">james<span>&#46;</span>duncan<span>&#46;</span>mcculloch<span>&#64;</span>gmail<span>&#46;</span>com</a>) in <em>app.yaml</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This section refers to setup and use in a <em>Windows</em> environment only.</p>
+</div>
+<p>However, it should be relative easy to infer setup instructions for use in other environments such as Mac and Linux.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Python 2.7 must be installed and defined in the Windows %Path% environment variable.</p>
+</div>
+<p>More information on installing Python is available here: <a class="reference external" href="https://www.python.org/">https://www.python.org/</a>.</p>
+<div class="section" id="setting-up-sphinx">
+<h2>Setting Up Sphinx<a class="headerlink" href="#setting-up-sphinx" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sphinx-software">
+<h3>Sphinx Software<a class="headerlink" href="#sphinx-software" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The (virtual environment) Sphinx directory is <em>C:\Sphinx\SphinxVirtual</em>.</p>
+</div>
+<p>Sphinx uses several 3rd party Python text libraries (DocUtils). Therefore it is generally a good idea (but not necessary)
+to run Sphinx in a virtual Python environment. See <a class="reference external" href="http://www.westga.edu/~drocco/sphinx/">http://www.westga.edu/~drocco/sphinx/</a> for further details.</p>
+<p>It is assumed that Sphinx is set up in a Python virtual environment in directory <em>C:\Sphinx\SphinxVirtual</em>.
+This directory contains the subdirectories <em>Lib</em> and <em>Scripts</em> containing the Python code that implements Sphinx.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not create a Sphinx project after installing Sphinx.</p>
+</div>
+<p><a class="reference internal" href="../../_images/emphasize.png"><img alt="action" src="../../_images/emphasize.png" style="width: 20pt; height: 20pt;" /></a> Download from the Sphinx project website <a class="reference external" href="http://sphinx-doc.org/">http://sphinx-doc.org/</a>.</p>
+<p><a class="reference internal" href="../../_images/emphasize.png"><img alt="action" src="../../_images/emphasize.png" style="width: 20pt; height: 20pt;" /></a> Create a permanent global (or user) environment variable %SPHINX_BIN% that points to the Sphinx install directory <em>C:\Sphinx\SphinxVirtual</em>.</p>
+<p>The Windows environment variable can be set by selecting <em>Advanced system settings</em> from the
+System page of the Control Panel. If Sphinx is installed to another directory then %SPHINX_BIN% should point
+to the directory that contains the subdirectories <em>Lib</em> and <em>Scripts</em>.</p>
+</div>
+<div class="section" id="top-level-directories">
+<h3>Top Level Directories<a class="headerlink" href="#top-level-directories" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="uvis-documentation-public">
+<h4>UVIS Documentation (Public)<a class="headerlink" href="#uvis-documentation-public" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The UVIS Documentation top-level directory is <em>&lt;UserPath&gt;\UVIS\Sphinx\UVIS</em>.</p>
+</div>
+<p>This directory contains the batch files used to compile the documentation.
+The <em>make.bat</em> file is has the filename <em>&lt;UserPath&gt;\Sphinx\make.bat</em>.
+This has been modified from the original Sphinx distribution file to use the %SPHINX_BIN% environment variable to locate
+the Sphinx Python run-times (<em>C:\Sphinx\SphinxVirtual</em>).
+It has also been modified to directly place compiled HTML files in the Sphinx Google Engine directory
+<em>&lt;UserPath&gt;\UVIS\Sphinx\SphinxGAE\html</em>.</p>
+</div>
+<div class="section" id="software-documentation-restricted">
+<h4>Software Documentation (Restricted)<a class="headerlink" href="#software-documentation-restricted" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Software Documentation top-level directory is <em>&lt;UserPath&gt;\Sphinx\Software</em>.</p>
+</div>
+<p>The batch files are identical to UVIS Documentation (above).</p>
+</div>
+</div>
+</div>
+<div class="section" id="using-sphinx">
+<h2>Using Sphinx<a class="headerlink" href="#using-sphinx" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The UVIS Documentation source code directory root is <em>&lt;UserPath&gt;\Sphinx\UVIS\source</em>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Software source code directory root is <em>&lt;UserPath&gt;\Sphinx\Software\source</em>.</p>
+</div>
+<p>Using Sphinx is identical for both projects, the example code assumes we are compiling UVIS Documentation.</p>
+<p>If sphinx is installed in a virtual python environment then initialize this environment (skip if a non-virtual install).</p>
+<p><a class="reference internal" href="../../_images/emphasize.png"><img alt="action" src="../../_images/emphasize.png" style="width: 20pt; height: 20pt;" /></a> Initialize the Sphinx virtual environment by executing (once only) the batch
+file <em>&lt;UserPath&gt;\UVIS\Sphinx\initSphinx.bat</em></p>
+<p>The command window line prompt should now change to:</p>
+<div class="highlight-python"><div class="highlight"><pre>(SphinxVirtual) &lt;UserPath&gt;\UVIS\Sphinx
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../_images/emphasize.png"><img alt="action" src="../../_images/emphasize.png" style="width: 20pt; height: 20pt;" /></a> Compile the Sphinx Restructured Text (reST) sources by executing the batch file
+<em>&lt;UserPath&gt;\UVIS\Sphinx\make.bat</em> with the argument <em>html</em>:</p>
+<div class="highlight-python"><div class="highlight"><pre>(SphinxVirtual) &lt;UserPath&gt;\UVIS\Sphinx\make html
+</pre></div>
+</div>
+<p>This can be executed repeatedly as part of the the edit/debug cycle and places the compiles HTML code
+and image files, etc  in the Sphinx Google Engine directory <em>&lt;UserPath&gt;\UVIS\Sphinx\SphinxGAE\hmtl</em>.</p>
+<p>These are then ready for viewing in a web browser using the local Google App Engine Launcher or deploying to
+the Cloud Google App Engine to be globally served as HTML pages.</p>
+<a class="reference external image-reference" href="https://developers.google.com/appengine/downloads/"><img alt="../../_images/GAEsmall.jpg" class="align-left" src="../../_images/GAEsmall.jpg" style="width: 62px; height: 55px;" /></a>
+</div>
+<div class="section" id="linking-to-google-app-engine">
+<h2>Linking to Google App Engine<a class="headerlink" href="#linking-to-google-app-engine" title="Permalink to this headline">¶</a></h2>
+<p>Information on installing and using the local Google App Engine Launcher is available
+here: <a class="reference external" href="https://developers.google.com/appengine/downloads">https://developers.google.com/appengine/downloads</a>. Typically, it installs as part of the Google App Engine API
+download.</p>
+<p>When the documentation source is compiled (see using Sphinx above) it is automatically placed in the relevant
+<em>SphinxGAE</em> directory tree. The documenter only needs to refresh the browser to see the latest version.
+However, first the <em>SphinxGAE</em> directory must be linked to the local Google App Engine Launcher.
+The documentation application is configured as a local Google App by specifying the <em>SphinxGAE</em> directory in the
+&#8220;Add Existing Application&#8221; item of the &#8220;File&#8221; menu of the GAE Launcher.</p>
+<p>The Sphinx documentation can then be readily deployed to the Cloud from the GAE Launcher.</p>
+<p>The Google App Engine directory contains two small files that defines Sphinx HTML output as a GAE application.</p>
+<ul class="simple">
+<li><em>app.yaml</em></li>
+<li><em>gae_sphinx.py</em></li>
+</ul>
+<p>See the GAE documentation for further information: <a class="reference external" href="https://developers.google.com/appengine/docs/python/config/appconfig">https://developers.google.com/appengine/docs/python/config/appconfig</a>.</p>
+<div class="section" id="id1">
+<h3>UVIS Documentation (Public)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The UVIS Documentation Google App Engine directory root (<em>SphinxGAE</em>) is <em>&lt;UserPath&gt;\UVIS\Sphinx\SphinxGAE</em>.</p>
+</div>
+<p>The file <em>app.yaml</em> has the first line:</p>
+<div class="highlight-python"><div class="highlight"><pre>application: kellerberrin-doc
+</pre></div>
+</div>
+<p>Which must be changed to:</p>
+<div class="highlight-python"><div class="highlight"><pre>application: &lt;new application name&gt;
+</pre></div>
+</div>
+<p>If the UVIS documentation application name is changed to &lt;new application name&gt;.</p>
+<p>This name maps onto a GAE application ID of the same name when the documentation application is deployed.</p>
+</div>
+<div class="section" id="id2">
+<h3>Software Documentation (Restricted)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Software Documentation source directory root (<em>SphinxGAE</em>) is <em>&lt;UserPath&gt;\UVIS\Sphinx\source\software</em>.</p>
+</div>
+<p>The file <em>app.yaml</em> has the url handler:</p>
+<div class="highlight-python"><div class="highlight"><pre>url: /html/software
+static_dir: html/software
+login: admin
+secure: always
+auth_fail_action: unauthorized
+</pre></div>
+</div>
+<p>This ensures that:</p>
+<ol class="arabic">
+<li><p class="first">All server response is returned using the secure <em>https</em> protocol
+(the initial request can use the <em>http</em> protocol).</p>
+</li>
+<li><dl class="first docutils">
+<dt>Restrict access to requesters whose Google ID has been granted <strong>admin</strong> (owner) privileges.</dt>
+<dd><p class="first last">The &#8216;auth_fail_action&#8217; can be set to &#8216;unauthorized&#8217; which issues an error message to users
+not logged in with an an admin account or &#8216;redirect&#8217; which prompts the user to login to an
+an admin account.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

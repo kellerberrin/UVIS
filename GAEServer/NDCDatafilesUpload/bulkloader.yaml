@@ -1,0 +1,62 @@
+# If you have module(s) with your model classes, add them here. Also
+
+# change the kind properties to model_class.
+python_preamble:
+
+- import: google.appengine.ext.bulkload.transform
+- import: google.appengine.ext.db
+- import: re
+- import: base64
+
+transformers:
+
+
+- kind: NDCLookup
+  
+  connector: csv
+  
+  connector_options:
+    encoding: utf-8
+
+  property_map:
+    - property: ndc
+      external_name: NDC
+
+    - property: format
+      external_name: FORMAT
+
+    - property: proprietaryname
+      external_name: PROPRIETARYNAME
+      import_transform: "lambda x: x.upper()"
+
+    - property: nonproprietaryname
+      external_name: NONPROPRIETARYNAME
+
+    - property: dosageformname
+      external_name: DOSAGEFORMNAME
+
+    - property: routename
+      external_name: ROUTENAME
+
+    - property: applicationnumber
+      external_name: APPLICATIONNUMBER
+
+    - property: labellername
+      external_name: LABELERNAME
+
+    - property: substancename
+      external_name: SUBSTANCENAME
+      import_transform: "lambda x: x.replace(';','').split(' ')"
+
+    - property: activenumeratorstrength
+      external_name: ACTIVE_NUMERATOR_STRENGTH
+
+    - property: activeingredientunit
+      external_name: ACTIVE_INGRED_UNIT
+
+    - property: pharmclasses
+      external_name: PHARM_CLASSES
+
+    - property: packagedescription
+      external_name: PACKAGEDESCRIPTION
+      import_transform: "lambda x: x[:256]"

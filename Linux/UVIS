@@ -1,0 +1,83 @@
+#!/bin/bash
+# Define the UVIS Directory structure.
+# This should be run once in each terminal session
+# when working on UVIS software.
+# This is run autmatically by the 'workenv UVIS' script  
+
+# Absolute directories. 
+# IMPORTANT - These will need to be modified for each development computer. 
+#
+#The directory where the UVIS application is found
+export UVISDIR="/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/Code/UVIS"
+#The Linux Sphinx Bin Directory
+export SPHINXBIN="/usr/bin"
+#The Linux Google App engine Bin Directory
+export GOOGLEAPPBIN="/opt/google/google_appengine"
+#The local root storage location (logs & datastore) for local UVIS GAE applications
+export UVISGAELOCALSTORAGE="/opt/google/GAEdata"
+
+# The following environment variables may not need to be changed
+# for different development environments if the relative UVIS directory
+# structure is unchanged from that used by the software on GITHUB. 
+ 
+#The local URL for locally run GAE applications
+export UVISGAELOCALURL="localhost"
+
+#US Drug Database
+#
+#The US Drug Database GAE application name (defined in app.yaml)
+export UVISUSDRUGGAEAPPNAME="s~kellerberrin-drugdatabase"
+#The directory for the US Drug Database Google App Engine files (app.yaml is here)
+export UVISUSDRUGGAE="$UVISDIR/GAEServer/NDCWeb"
+#The directory and name for the US Drug Database Google Application (app name is defined in app.yaml)
+export UVISUSDRUGGAEAPPPATH="$UVISUSDRUGGAE/app.yaml"
+#The local URL for the US Drug database
+export UVISUSDRUGLOCALHOST="$UVISGAELOCALURL"
+#The local port for the US Drug Database.
+export UVISUSDRUGLOCALPORT="9080"
+#Local storage (logs & datastore) for the US DrugDatabase
+export UVISUSDRUGLOCALSTORAGE="$UVISGAELOCALSTORAGE/USDrugDatabase" 
+#The remote URL for the US Drug Database.
+export UVISUSDRUGURL="http://kellerberrin-drugdatabase.appspot.com"
+#
+# Documentation for the US Drug Database bulkuploader
+#
+# The the US Drug Database Datastore Kind (equivalent to an SQL table)
+# This must be equal to the name of the Kind defined in the Python application code.
+export UVISUSDRUGDATASTOREKIND="NDCLookup"
+# The directory for the USDrug Database Data files (bulkloader.yaml is here)
+export UVISUSDRUGDATA="$UVISDIR/GAEServer/NDCDatafilesUpload"
+#The path for the USDrug Database Data files (specifies bulkloader.yaml)
+export UVISUSDRUGDATAPATH="$UVISUSDRUGDATA/bulkloader.yaml"
+#The USDrug Database Data .csv file to be uploaded.
+export UVISUSDRUGDATAFILE="$UVISUSDRUGDATA/csvupload/NDCDatabase.csv"
+#The USDrug LOCAL Datastore URL.
+export UVISUSDRUGDATALOCALURL="http://${UVISUSDRUGLOCALHOST}:${UVISUSDRUGLOCALPORT}/_ah/remote_api"
+#The USDrug REMOTE Datastore URL.
+export UVISUSDRUGDATAREMOTEURL="$UVISUSDRUGURL/_ah/remote_api"
+#The USDrug ACTIVE Datastore URL (change this for LOCAL or REMOTE)
+#If set to the REMOTE URL then uploads data to the remote GAE DATASTORE
+#If set to the LOCAL URL then uploads data to LOCAL DATASTORE 
+export UVISUSDRUGDATAACTIVEURL="$UVISUSDRUGDATALOCALURL"
+#The uploader checkpoint database. Used for re-starting the upload. 
+export UVISUSDRUGDATACHECKPOINT="$UVISUSDRUGDATA/bulkloader-upload-progress.sql3"
+
+
+#Sphinx Documentation
+#
+#The Sphinx GAE application name (defined in app.yaml)
+export UVISSPHINXGAEAPPNAME="kellerberrin-doc"
+#The root directory for the Sphinx UVIS documentation.
+export UVISSPHINX="$UVISDIR/Sphinx"
+#The directory for the Sphinx Google App Files (app.yaml is here)
+export UVISSPHINXGAE="$UVISSPHINX/SphinxGAE"
+#The directory and name for the Sphinx Google Application (app name is defined in app.yaml)
+export UVISSPHINXGAEAPPPATH="$UVISSPHINXGAE/app.yaml"
+#The local URL for Sphinx documentation
+export UVISSPHINXLOCALHOST="$UVISGAELOCALURL"
+#The local port for the Sphinx documentation.
+export UVISSPHINXLOCALPORT="8080"
+#Local storage (logs & datastore) for the phinx Documentation
+export UVISSPHINXLOCALSTORAGE="$UVISGAELOCALSTORAGE/Sphinx" 
+#The remote URL for the Sphinx documentation.
+export UVISSPHINXURL="http://kellerberrin-doc.appspot.com"

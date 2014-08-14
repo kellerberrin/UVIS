@@ -1,0 +1,104 @@
+.. _softwaredoc:
+
+:orphan:
+
+Software Documentation
+======================    
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+    :hidden:
+    :includehidden:
+    
+    sphinx/sphinx
+    linux/linux
+    github/github
+    usdrugdatabase/usdrugdatabase
+
+    
+    
+.. image:: keller_post_office.jpg
+    :width: 500px
+    :height: 373px
+    :align: center
+
+|
+|
+ 
+
+
+    
+Software Project Documentation
+--------------------------------
+
+
+Sphinx 
+++++++
+
+
+.. image:: sphinx/sphinx.jpg
+    :width: 64px
+    :height: 64px
+    :align: left
+    :target: sphinx/sphinx.html
+  
+:ref:`Sphinx Setup and Usage<sphinxdoc>` UVIS on-line documentation uses the Sphinx project.
+
+|
+|
+|
+|
+|
+
+
+Linux (Mac) Bash Environment 
+++++++++++++++++++++++++++++
+
+.. image:: linux/linux.jpg
+    :width: 64px
+    :height: 64px
+    :align: left
+    :target: linux/linux.html
+  
+:ref:`Linux (Mac) Bash Environment<linuxdoc>` The Bash shell scripts for the UVIS development environment.
+
+
+|
+|
+|
+|
+|
+
+
+UVIS Github Repository 
+++++++++++++++++++++++
+
+.. image:: github/octocat.png
+    :width: 64px
+    :height: 64px
+    :align: left
+    :target: github/github.html
+  
+:ref:`UVIS Github Repository<github>` Repository description and linux shell github commands.
+
+|
+|
+|
+|
+|
+
+
+US Drug Database 
+++++++++++++++++
+
+
+.. image:: usdrugdatabase/usdrugdatabase.png
+    :width: 100px
+    :height: 60px
+    :align: left
+    :target: usdrugdatabase/usdrugdatabase.html
+  
+:ref:`US Drug Database Documentation<usdrugdatabasedoc>` The United States Food and Drug Administration (FDA) database 
+is placed on-line to provide a convenient lookup function for US drug consumers wishing to find equivalent drugs and generics.
+
