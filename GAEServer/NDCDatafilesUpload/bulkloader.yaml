@@ -7,6 +7,7 @@ python_preamble:
 - import: google.appengine.ext.db
 - import: re
 - import: base64
+- import: transformers
 
 transformers:
 
@@ -46,16 +47,23 @@ transformers:
 
     - property: substancename
       external_name: SUBSTANCENAME
-      import_transform: "lambda x: x.replace(';','').split(' ')"
+      import_transform: transformers.SpaceDelimiter()
+
+    - property: substancelist
+      external_name: SUBSTANCENAME
+      import_transform: transformers.SemiDelimiter()
 
     - property: activenumeratorstrength
       external_name: ACTIVE_NUMERATOR_STRENGTH
+      import_transform: transformers.SemiDelimiter()
 
     - property: activeingredientunit
       external_name: ACTIVE_INGRED_UNIT
+      import_transform: transformers.SemiDelimiter()
 
     - property: pharmclasses
       external_name: PHARM_CLASSES
+      import_transform: transformers.CommaDelimiter()
 
     - property: packagedescription
       external_name: PACKAGEDESCRIPTION

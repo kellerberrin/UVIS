@@ -6,4 +6,5 @@ python $GOOGLEAPPBIN/dev_appserver.py \
   --port=$UVISSPHINXLOCALPORT  \
   --host=$UVISSPHINXLOCALHOST  \
   --storage_path=$UVISSPHINXLOCALSTORAGE \
+  --admin_port=$UVISSPHINXADMINPORT \
   $UVISSPHINXGAEAPPPATH

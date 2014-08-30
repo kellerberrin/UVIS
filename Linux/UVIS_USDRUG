@@ -1,0 +1,71 @@
+#!/bin/bash
+# Define the environment variables for the
+# US drug application.
+# Should be run once in each terminal session
+# when working on UVIS US drug software.
+# It is run autmatically by the 'workenv UVIS' script  
+
+
+#US Drug Database
+#The US Drug Database GAE application name (defined in app.yaml)
+export UVISUSDRUGGAEAPPNAME="s~kellerberrin-drugdatabase"
+#The directory for the US Drug Database Google App Engine files (app.yaml is here)
+export UVISUSDRUGGAE="$UVISDIR/GAEServer/NDCWeb"
+#The directory and name for the US Drug Database Google Application (app name is defined in app.yaml)
+export UVISUSDRUGGAEAPPPATH="$UVISUSDRUGGAE/app.yaml"
+#The local URL for the US Drug database
+export UVISUSDRUGLOCALHOST="localhost"
+#The local port for the US Drug Database.
+export UVISUSDRUGLOCALPORT="9080"
+#The local admin port for the US Drug Database 
+export UVISUSDRUGADMINPORT="8000"
+#Local storage (logs & datastore) for the US DrugDatabase
+export UVISUSDRUGLOCALSTORAGE="$UVISGAELOCALSTORAGE/USDrugDatabase" 
+#The remote URL for the US Drug Database.
+export UVISUSDRUGURL="http://kellerberrin-drugdatabase.appspot.com"
+#
+# Documentation for the US Drug Database bulkuploader
+#
+# The US Drug Database Datastore Kind (equivalent to an SQL table)
+# This must be equal to the name of the Kind defined in the Python application code.
+export UVISUSDRUGDATASTOREKIND="NDCLookup"
+# The directory for the USDrug Database Data files (bulkloader.yaml is here)
+export UVISUSDRUGDATA="$UVISDIR/GAEServer/NDCDatafilesUpload"
+#The path for the USDrug Database Data files (specifies bulkloader.yaml)
+export UVISUSDRUGDATAPATH="$UVISUSDRUGDATA/bulkloader.yaml"
+#The FULL (150,000 records) USDrug Database Data .csv file to be uploaded.
+export UVISUSDRUGFULLDATAFILE="$UVISUSDRUGDATA/csvupload/NDCDatabase.csv"
+#The TEST (100 records) USDrug Database Data .csv file to be uploaded.
+export UVISUSDRUGTESTDATAFILE="$UVISUSDRUGDATA/csvupload/TestNDCDatabase.csv"
+#The USDrug LOCAL Datastore URL.
+export UVISUSDRUGDATALOCALURL="http://${UVISUSDRUGLOCALHOST}:${UVISUSDRUGLOCALPORT}/_ah/remote_api"
+#The USDrug REMOTE Datastore URL.
+export UVISUSDRUGDATAREMOTEURL="$UVISUSDRUGURL/_ah/remote_api"
+#The uploader checkpoint database. Used for re-starting the upload. 
+export UVISUSDRUGDATACHECKPOINT="$UVISUSDRUGDATA/bulkloader-upload-progress.sql3"
+
+#The USDrug Datastore Size (change this for FULL or TEST)
+#If set to the FULL file then uploads all the data (150,000 records)
+#If set to the TEST file then just uploads the test data (100 records) 
+export UVISUSDRUGDATAFILE="$UVISUSDRUGFULLDATAFILE"  #Currently set to FULL
+
+#The USDrug ACTIVE Datastore URL (change this for LOCAL or REMOTE)
+#If set to the REMOTE URL then uploads data to the remote GAE DATASTORE
+#If set to the LOCAL URL then uploads data to LOCAL DATASTORE 
+export UVISUSDRUGDATAACTIVEURL="$UVISUSDRUGDATALOCALURL"  #Currently set to LOCAL
+#
+
+# Raw US Drug Data Processing. See kellerberrin-doc.appspot.com for further details.
+# These environment variables are used by Python software that converts the files downloaded 
+# from the US Food & Drug Administration (FDA) website to .csv files that can be uploaded 
+# into the GAE datastore using the bulkloader software.
+
+# The directory for the raw NDC data files 
+export UVISUSDRUGRAWNDCDIR="$UVISDATADIR/RawNDCDataFiles"
+# The raw product text file. This file is tab delimited between records (1 record per line).
+export UVISUSDRUGRAWDATAPRODUCT="$UVISUSDRUGRAWNDCDIR/product.txt"
+# The raw package file. This file is tab delimited between records (1 record per line).
+export UVISUSDRUGRAWDATAPACKAGE="$UVISUSDRUGRAWNDCDIR/package.txt"
+# The raw data python log file.
+export UVISUSDRUGRAWDATALOGFILE="$UVISUSDRUGRAWNDCDIR/processrawNDCfiles.log"
+

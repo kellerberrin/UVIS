@@ -17,10 +17,11 @@ class NDCLookup(ndb.Model):
     routename = ndb.StringProperty()
     applicationnumber = ndb.StringProperty()
     labellername = ndb.StringProperty()
-    substancename = ndb.StringProperty()
-    activenumeratorstrength = ndb.StringProperty()
-    activeingredientunit = ndb.StringProperty()
-    pharmclasses = ndb.StringProperty()
+    substancename = ndb.StringProperty(repeated=True)
+    substancelist = ndb.StringProperty(repeated=True)
+    activenumeratorstrength = ndb.StringProperty(repeated=True)
+    activeingredientunit = ndb.StringProperty(repeated=True)
+    pharmclasses = ndb.StringProperty(repeated=True)
     packagedescription = ndb.StringProperty()		
 
     
@@ -31,6 +32,7 @@ class EnhancedNDCLookup :
 NDCSEARCHEXAMPLE = "Enter a 10 Digit NDC, Example: '0002477090' or '0002-4770-90'."
 GENERICSEARCHEXAMPLE = "Enter a Drug Name, Example 'Livalo' (case insensitive)."
 ACTIVESEARCHEXAMPLE = "Enter an Active Ingredient, Example 'Pitavastatin' (case insensitive)."	
+INGREDIENTSEARCHEXAMPLE = "Select an Active Ingredient and Strength ('Strength') or just an Active Ingredient ('Include')."	
 
 
 def NDCTenDigitFormat(NDC, Format) :
@@ -50,6 +52,77 @@ def NDCTenDigitFormat(NDC, Format) :
     FormatNDC = LabellerCode + "-" + ProductCode + "-" + PackageCode
 
     return FormatNDC
+
+def ActiveList(Substances, Strengths, Units) :
+    "Utility function takes separate lists of drugs, strengths and units and returns a list of 3-tuples"    
+    SubstanceList = Substances
+    StrengthList = Strengths
+    UnitList = Units
+
+    Index = 0
+    ActiveList = []
+    SubstanceList = RemoveEmptyStrings(SubstanceList)
+    StrengthList = RemoveEmptyStrings(StrengthList)
+    UnitList = RemoveEmptyStrings(UnitList)
+
+    if len(SubstanceList) != len(StrengthList) or len(StrengthList) != len(UnitList) :
+        logging.error('Different Sized Lists, len(Substance):%d, len(Strength):%d, len(Unit):%d',  len(SubstanceList), len(StrengthList), len(UnitList) )
+        return ActiveList
+
+    while Index < len(SubstanceList) :
+        
+       Sub = SubstanceList[Index].strip()
+       Str = StrengthList[Index].strip()
+       Unit = UnitList[Index].strip()
+       Tuple = (Sub, Str, Unit)
+       ActiveList.append(Tuple)
+       Index = Index + 1
+
+    return ActiveList
+
+
+def RemoveEmptyStrings(StringList) :
+    "Remove empty string from a string list"
+    ResultList = []
+    for String in StringList :
+        if len(String) > 0 : ResultList.append(String)
+
+    return ResultList
+
+
+def IngredientQuery(SearchArray) :
+    "Create a datastore active ingredient search query based on search type (include: ingredient only, strength: ingredient and strength)."  
+    Index = 0
+    Condition = 0
+    QueryString = ""
+    while Index < len(SearchArray) :
+
+        IngredientTuple = SearchArray[Index]
+ 
+        if IngredientTuple[0] == "strength" :
+            if Condition == 0 :
+                QueryString = QueryString + " WHERE "    
+            else :
+                QueryString = QueryString + " AND "
+
+            QueryString = QueryString + "substancelist = " + "'" + IngredientTuple[1] + "'"
+            QueryString = QueryString + " AND activenumeratorstrength = " + "'" + IngredientTuple[2] + "'"
+            QueryString = QueryString + " AND activeingredientunit = " + "'" + IngredientTuple[3] + "'"
+            Condition = Condition + 1
+
+        elif IngredientTuple[0] == "include" :
+            if Condition == 0 :
+                QueryString = QueryString + " WHERE "    
+            else :
+                QueryString = QueryString + " AND "
+
+            QueryString = QueryString + "substancelist = " + "'" + IngredientTuple[1] + "'" 
+            Condition = Condition + 1
+
+        Index = Index + 1
+
+    return QueryString
+
 
     
 def NDCElevenDigitFormat(NDC, Format) :
@@ -76,38 +149,44 @@ def NDCElevenDigitFormat(NDC, Format) :
         return "00000-0000-00"                
         
     FormatNDC = LabellerCode + "-" + ProductCode + "-" + PackageCode
-
     return FormatNDC
 
     
-def ReadNDCDatabase(SearchText, SearchType):
+def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     " Read the NDC database from the Google App Engine Kind NDCLookup"
 
-    GenericSelected = ""
-    ActiveSelected = ""
     NDCRecords = []
     NDCElevenDigits = ""
     NDCEnhancedArray = []
     
     if SearchType=="ndc":
-
         SearchExampleText = NDCSEARCHEXAMPLE
         SearchError = not(SearchText.isdigit()) or len(SearchText) != 10  
         qNDC = NDCLookup.query(NDCLookup.ndc == SearchText)
 
-    elif SearchType=="generic":
+    elif SearchType=="name" :
         SearchExampleText = GENERICSEARCHEXAMPLE
-        GenericSelected = "selected"
         SearchError = len(SearchText) == 0              
         qNDC = NDCLookup.query(NDCLookup.proprietaryname == SearchText)
 
-    else:
+    elif SearchType=="ingredient" :
+        SearchType=="active"
+        SearchExampleText = INGREDIENTSEARCHEXAMPLE
+        QueryString = IngredientQuery(SearchArray)
+        logging.info('Executing Ingredient Search: %s', QueryString)
+        SearchError = len(QueryString) == 0              
+        qNDC= NDCLookup.gql(QueryString)
+
+    elif SearchType == "active" :
         SearchExampleText = ACTIVESEARCHEXAMPLE
-        ActiveSelected = "selected"
         SearchError = len(SearchText) == 0              
         qNDC = NDCLookup.query(NDCLookup.substancename == SearchText)
  
- 
+    else : 
+        SearchError = True
+        SearchType = "name"
+        SearchExampleText = NDCSEARCHEXAMPLE
+        
     if not(SearchError) : NDCRecords = qNDC.fetch(limit=100)
 
     for NDCRecord in NDCRecords :
@@ -118,15 +197,19 @@ def ReadNDCDatabase(SearchText, SearchType):
         NDCEnhanced = EnhancedNDCLookup()
         NDCEnhanced.NDCRecord = NDCRecord
         NDCEnhanced.NDCElevenDigits = NDCElevenDigits
+        NDCEnhanced.ActiveList = ActiveList(NDCRecord.substancelist, \
+                                            NDCRecord.activenumeratorstrength, \
+                                            NDCRecord.activeingredientunit)
+        NDCEnhanced.ActiveListSize = len(NDCEnhanced.ActiveList)
+        NDCEnhanced.Classes = RemoveEmptyStrings(NDCRecord.pharmclasses)
         NDCEnhancedArray.append(NDCEnhanced)
             
                    
     JINJATemplatValues = { 'NDCEnhancedArray' : NDCEnhancedArray,
+                           'NDCEnhancedArraySize' : len(NDCEnhancedArray),
                            'TypeExample' : SearchExampleText, 
                            'SearchText' : SearchText, 
-                           'SearchType' : SearchType,
-                           'GenericSelected' : GenericSelected,
-                           'ActiveSelected' : ActiveSelected }
+                           'SearchType' : SearchType }
 
     return JINJATemplatValues
                                

@@ -108,7 +108,7 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<a class="reference external image-reference" href="https://developers.google.com/appengine/downloads/"><img alt="software/usdrugdatabase/GAEsmall.jpg" class="align-left" src="software/usdrugdatabase/GAEsmall.jpg" style="width: 62px; height: 55px;" /></a>
+<a class="reference external image-reference" href="https://developers.google.com/appengine/downloads/"><img alt="../../_images/GAEsmall1.jpg" class="align-left" src="../../_images/GAEsmall1.jpg" style="width: 62px; height: 55px;" /></a>
 <div class="section" id="google-app-engine-implementation">
 <h2>Google App Engine Implementation<a class="headerlink" href="#google-app-engine-implementation" title="Permalink to this headline">¶</a></h2>
 <p>The National Drug Code Database Background Information available here:
@@ -252,14 +252,12 @@ Asterisks are no longer used or included within the product and package code seg
 <div>A description of the size and type of packaging in sentence form. Multilevel packages will have the descriptions
 concatenated together.  For example: 4 BOTTLES in 1 CARTON/100 TABLETS in 1 BOTTLE.</div></blockquote>
 </div>
-<div class="section" id="the-kind-ndclookup-entity-layout">
-<h3>The Kind = <strong>&#8220;NDCLookup&#8221;</strong> Entity Layout.<a class="headerlink" href="#the-kind-ndclookup-entity-layout" title="Permalink to this headline">¶</a></h3>
-<p>The GAE datastore is a &#8220;High Replication&#8221; database. It is not a standard SQL database but is based on the &#8220;Big Table&#8221; concept.
-Database tables are referred to as a &#8220;Kind&#8221;. The entry in the &#8220;Kind&#8221; is an &#8220;Entity&#8221; and can be best thought of
-as a stored object (or in SQL terms a table row).</p>
-<p>Kind = <strong>&#8220;NDCLookup&#8221;</strong></p>
-<p>The entity layout. This is constructed from the product and package csv files from the
-FDA database.</p>
+<div class="section" id="the-composite-csv-file-layout">
+<h3>The composite CSV file Layout.<a class="headerlink" href="#the-composite-csv-file-layout" title="Permalink to this headline">¶</a></h3>
+<p>A CSV data file is created from the a composite of the FDA product and package files
+above. In particular, the product file is &#8216;joined&#8217; with the package file using the
+partial NDC code in the product file. This join is then projected onto the fields listed below.
+Two additional fields are also generated (first two fields).</p>
 <p>Field List.</p>
 <p>Need to add 2 additional fields</p>
 <ol class="arabic simple">
@@ -283,12 +281,18 @@ FDA database.</p>
 <li>Field 14. Product File; SubstanceName Text/string. MV  &#8220;FLUOXETINE HYDROCHLORIDE; OLANZAPINE&#8221; If more than one substance, then each substance is separated by a semicolon.</li>
 <li>Field 15. Product File; StrengthNumber Text/string. MV &#8220;25; 3&#8221; If more than one substance, then each strength is separated by a semicolon.</li>
 <li>Field 16. Product File; StrengthUnit  Text/string. MV &#8220;mg/1; mg/1&#8221; If more than one substance, then each strength unit  is separated by a semicolon.</li>
-<li>Field 17. Product File; Pharm_Classes Text/string. MV &#8220;Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]&#8221;</li>
+<li>Field 17. Product File; Pharm_Classes Text string. If more than one substance, then each strength is separated by a comma. Example, MV &#8220;Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]&#8221;</li>
 <li>Field 4. Package File; PackageDescription   Text/string  &#8220;1 VIAL, MULTI-DOSE in 1 CAN (0002-1200-10)  &gt; 10 mL in 1 VIAL, MULTI-DOSE&#8221;</li>
 </ol>
 </div>
-<div class="section" id="the-kind-ndclookup-index-structure">
-<h3>The Kind = <strong>&#8220;NDCLookup&#8221;</strong> Index Structure<a class="headerlink" href="#the-kind-ndclookup-index-structure" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="the-kind-ndclookup-entity-layout">
+<h3>The Kind = <strong>&#8220;NDCLookup&#8221;</strong> Entity Layout.<a class="headerlink" href="#the-kind-ndclookup-entity-layout" title="Permalink to this headline">¶</a></h3>
+<p>The GAE datastore is a &#8220;High Replication&#8221; database. It is not a standard SQL database but is based on the &#8220;Big Table&#8221; concept.
+Database tables are referred to as a &#8220;Kind&#8221;. The entry in the &#8220;Kind&#8221; is an &#8220;Entity&#8221; and can be best thought of
+as a stored object (or in SQL terms a table row).</p>
+<p>Kind = <strong>&#8220;NDCLookup&#8221;</strong></p>
+<p>The entity layout. This is constructed from the product and package csv files from the
+FDA database.</p>
 </div>
 </div>
 </div>

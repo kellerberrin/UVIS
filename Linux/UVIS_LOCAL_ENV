@@ -1,0 +1,20 @@
+#!/bin/bash
+# 
+# This script defines the environment variable:
+# $UVISLOCALENVIRONMENT
+#***************************************************************************
+# ONLY THIS SCRIPT/VARIABLE NEEDS TO BE CHANGED TO DEFINE A UVIS ENVIRONMENT
+#***************************************************************************
+# This points a particular development machine 
+# environment script that defines the local drireectory structure.
+# For example; if UVISLOCALENVIRONMENT="UVIS_TURING_ENV",
+# then the script UVIS_TURING_ENV is executed which defines the UVIS development 
+# environment for the TURING development computer.
+
+# The TURING development environment is currently defined.
+
+export UVISLOCALENVIRONMENT="UVIS_TURING_ENV"
+
+# Execute the defined local environment.
+
+source UVIS_TURING_ENV

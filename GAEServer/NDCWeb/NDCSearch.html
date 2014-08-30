@@ -1,57 +1,226 @@
+<!-- Macro definitions used by JinJA -->
+
+<!-- Dynamically create input html -->
+{% macro input(label, type, name, namecount, value, active='') -%}
+    {% set namevar = name ~ namecount %}
+    <input type="{{ type }}" name="{{ namevar }}" value="{{ value }}" {{active}}> {{ label }}
+{%- endmacro %}
+
+<!-- Create the record count text -->
+{% macro recordcount(text, arraysize) -%}
+    {% set recordcount = text ~ arraysize ~ " drug(s) (100 max)" %}
+    {{ recordcount }}
+{%- endmacro %}
+
+<!-- The HTML page begins -->
 <!DOCTYPE html>
 {% autoescape true %}
-<html>
-  <!-- [START head_html] -->
-  <head>
-    <link type="text/css" rel="stylesheet" href="/html/css/main.css" />
-  </head>
-  <!-- [END head_html] -->
-  <body>
-    <h1>
-    National Drug Code (NDC) Database
-    </h1>
-    <br>
-    <img alt="/html/images/USDrugDatabase.png" class="align-center" src="/html/images/USDrugDatabase.png" style="width: 400px; height: 240px;" />
-    <br>
-    <form action="/searchdb" method="post">
-	Search by:
-    <select name="searchtype">
-		<option value="ndc">National Drug Code</option>
-		<option value="generic" {{ GenericSelected }}>Drug Name</option>
-		<option value="ingredient" {{ ActiveSelected }}>Active Ingredient</option>
-	</select>
-    <input type="search" name="searchstring" value="{{SearchText}}"/>
-    <input type="submit" value="Search" />
-    </form>
+<html class="no-js" lang="en">
+<!-- [START head_html] -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FDA Drug Database</title>
+<!-- Foundation specific setup -->
+        <link rel="stylesheet" href="html/css/app.css" />
+        <script src="html/js/vendor/jquery.js"></script>  <!-- Important! - load this first -->
+        <script src="html/js/vendor/modernizr.js"></script>
+    </head>
+<!-- [END head_html] [BEGIN body html]-->
+    <body>
+
+        <div class="row">
+
+            <div class="large-12 columns">
+            
+                <h2>Search for Equivalent and Generic Drugs</h2>
+                
+            </div> <!-- large-12 columns -->
+    
+            <div class="large-6 columns">
+ 
+            <img src="/html/images/USDrugDatabase.png" />
+
+            </div> <!-- large-6 columns -->
+ 
+            <div class="large-6 columns">
+
+                <div class="radius panel">
+ 
+                    <form id="search-form">
+
+                        <div class="row">
+
+                            <div class="large-4 columns">
+                                <div>
+                                    <h4> Search by: </h4>
+                                    <br>
+                                    <a href="#" class="button tiny radius">More Info...</a>
+                                </div>                    
+                            </div> <!-- "large-4-columns" -->
+ 
+                            <div class="large-7 columns">
+                                <ul class="tabs-select-drug-search vertical" data-tab>
+                                    <li class="tab-title" id = "name-tab">
+                                        <a data-tooltip 
+                                           aria-haspopup="true" 
+                                           title="Click to search on a Drug Name, Example 'Livalo' (case insensitive)." 
+                                           href="#name-prompt" 
+                                           class="button radius tip-top" 
+                                           onclick="ResetInputFocus()" >
+                                           Drug Name </a>
+                                    </li>
+                                    <li class="tab-title" id = "active-tab">
+                                        <a data-tooltip 
+                                           aria-haspopup="true"
+                                           title="Click to search on an Active Drug Ingredient, Example 'Pitavastatin' (case insensitive)."  
+                                           href="#active-prompt" 
+                                           class="button radius tip-top" 
+                                           onclick="ResetInputFocus()" >
+                                           Active Ingredient</a>
+                                    </li>
+                                    <li class="tab-title" id = "ndc-tab">
+                                        <a data-tooltip 
+                                           aria-haspopup="true"
+                                           title="Click to search on a 10 Digit National Drug Code (NDC), Example: '0002477090' or '0002-4770-90'"  
+                                           href="#ndc-prompt" 
+                                           class="button radius tip-top" 
+                                           onclick="ResetInputFocus()" >
+                                           National Drug Code</a>
+                                    </li>
+                                </ul>
+
+                            </div> <!-- "large-7-columns" -->
+
+                            <div class="large-1 column">
+                            </div> <!-- "large-1-column" -->
+
+                        </div> <!-- "row" -->
+
+                        <div class="row collapse">
+ 
+                            <div class="large-9 columns">
+                                <input id="search-string" type="search" name="searchstring" value="{{SearchText}}" class="radius"/>
+                            </div> <!-- large-9 columns -->
+ 
+                            <div class="large-3 columns">
+                                <input type="submit" class="postfix button expand radius">
+                            </div> <!-- large-3 columns --> 
+ 
+                        </div> <!-- row collapse --> 
+
+                    </form>
+ 
+                </div> <!-- radius panel -->
+
+                        <div class="row">
+                    
+                            <div class="large-12 columns">
+
+                                    <div class="tabs-content" >
+                                        <div class="content" id="name-prompt" >
+                                            <p>Enter a Drug Name, Example 'Livalo' (case insensitive).</p>
+                                            <a href="#" class="button tiny radius">More Info ...</a>
+                                        </div>
+                                        <div class="content" id="active-prompt" >
+                                            <p>Enter an Active Drug Ingredient, Example 'Pitavastatin' (case insensitive).</p>
+                                            <a href="#" class="button tiny radius">More Info...</a>
+                                        </div>
+                                        <div class="content" id="ndc-prompt" >
+                                            <p>Enter a 10 Digit National Drug Code (NDC), Example: '0002477090' or '0002-4770-90'.</p>
+                                            <a href="#" class="button tiny radius">More Info...</a>
+                                        </div>
+                                    </div> <!-- "tabs-content" -->
+
+                            </div> <!-- large-12 columns -->                    
+                    
+                        </div> <!-- "row" -->
+
+            </div> <!-- large-6 columns --> 
+ 
+        </div> <!-- row --> 
+ 
+        <div class = "row">
+ 
+            <div class="large-12 columns">
+        
+                <hr>
+            
+            </div> <!-- large-12 columns --> 
+ 
+        </div> <!-- row --> 
+
+
+<!-- Data (Ajax) HTML section begins --> 
+    
+    <div class="row">
+
+    <div class="large-12 columns">
 
     {% if NDCEnhancedArray is NotEmptyArray %}
 
         {% if NDCEnhancedArray is SingleElementArray %}
         <br>
-        <hr>
 
             National Drug Code: {{ NDCEnhancedArray[0].NDCRecord.ndc }} ({{ NDCEnhancedArray[0].NDCRecord.format }})
             <br>
-            Drug Name: {{ NDCEnhancedArray[0].NDCRecord.proprietaryname }}
             <br>
-            Labeler: {{ NDCEnhancedArray[0].NDCRecord.labellername }} 
+            Labeler: {{ NDCEnhancedArray[0].NDCRecord.labellername }}
             <br>
-            Active Ingredient: {{ NDCEnhancedArray[0].NDCRecord.nonproprietaryname }}
             <br>
-            Ingredient Strength: {{ NDCEnhancedArray[0].NDCRecord.activenumeratorstrength }} {{ NDCEnhancedArray[0].NDCRecord.activeingredientunit }}
+        <form action="/searchdb" method="post">
+            {{ NDCEnhancedArray[0].NDCRecord.proprietaryname }}
+        <input type="hidden" name="searchstring" value="{{ NDCEnhancedArray[0].NDCRecord.proprietaryname }}" />                
+        <input type="hidden" name="searchtype" value="name" />                
+        <input type="submit" value="Search" />
+            </form>
+            <br>
+        {% if NDCEnhancedArray[0].ActiveList is NotEmptyArray %}
+            <form action="/searchingredients" method="post">
+            <input type="hidden" name="activecount" value={{ NDCEnhancedArray[0].ActiveListSize }} />
+                    {% set Count = 1 %}                
+                    {% for Ingredient in NDCEnhancedArray[0].ActiveList %}
+                    {{ Ingredient[0] }}; {{ Ingredient[1] }} {{ Ingredient[2] }}
+                        <br>
+                        {{ input("Ignore", "radio", "searchtype", Count, "ignore") }}
+                        {{ input("Active", "radio", "searchtype", Count, "include") }}
+                        {{ input("Strength", "radio", "searchtype", Count, "strength", "checked='checked'") }}
+                        {{ input("", "hidden", "ingredient", Count, Ingredient[0]) }}
+                        {{ input("", "hidden", "strength", Count, Ingredient[1]) }}
+                        {{ input("", "hidden", "units", Count, Ingredient[2]) }}
+                <br>
+                       {% set Count = Count + 1 %}
+                   {% endfor %}
+           <input type="submit" value="Search" />
+            </form>
+            {% endif %}
             <br>
             Dosage / Route: {{ NDCEnhancedArray[0].NDCRecord.dosageformname }} / {{ NDCEnhancedArray[0].NDCRecord.routename }}
             <br>
             Package: {{ NDCEnhancedArray[0].NDCRecord.packagedescription }}
             <br>
-            Pharmaceutical Class : {{ NDCEnhancedArray[0].NDCRecord.pharmclasses }}
+        {% if NDCEnhancedArray[0].Classes is NotEmptyArray %}
+                <br>
+        {% if NDCEnhancedArray[0].Classes is SingleElementArray %}
+            Pharma Class:
+                {% else %}
+                Pharma Classes :
+                    <br>
+                {% endif %} 
+            {% for Class in NDCEnhancedArray[0].Classes %}
+                {{ Class }}
+                    <br>
+            {% endfor %}
+                <br>
+           {% endif %}
             <br>
-            11 Digit NDC: {{ NDCEnhancedArray[0].NDCElevenDigits }} (5-4-2)
+           11 Digit NDC: {{ NDCEnhancedArray[0].NDCElevenDigits }} (5-4-2)
 
         {% else %}    
         <br>
-        <hr>
-
+    {{ recordcount("Search found ", NDCEnhancedArraySize) }}
+    <br>
+    <br>
             <table>
 
             <thead>
@@ -64,17 +233,26 @@
  
             <tbody>
             {% for NDCEnhanced in NDCEnhancedArray %}
-            <tr>
-                <td>
-                <a href="/selectndc?ndc={{NDCEnhanced.NDCRecord.ndc}}">{{ NDCEnhanced.NDCRecord.ndc }}</a>
-                </td>
-                <td>
-                {{ NDCEnhanced.NDCRecord.proprietaryname }}
-                </td>
-                <td>
-                {{ NDCEnhanced.NDCRecord.labellername }} 
-                </td>                
-            </tr>
+                <tr>
+                    <td>
+                    <a href="/selectndc?ndc={{NDCEnhanced.NDCRecord.ndc}}">{{ NDCEnhanced.NDCRecord.ndc }}</a>
+                    </td>
+                    <td>
+                    {{ NDCEnhanced.NDCRecord.proprietaryname }}
+                    </td>
+                    <td>
+                    {{ NDCEnhanced.NDCRecord.labellername }} 
+                    </td>                
+                </tr>
+            {% if NDCEnhanced.ActiveList is NotEmptyArray %}
+                    {% for Ingredient in NDCEnhanced.ActiveList %}
+                    <tr>
+                    <td colspan="3">
+                    {{ Ingredient[0] }}; {{ Ingredient[1] }} {{ Ingredient[2] }}
+                        </td>
+                    </tr>
+            {% endfor %}
+                {% endif %}
             {% endfor %}
             </tbody>
 
@@ -82,15 +260,94 @@
         
         {% endif %}
         
-    {% else %}
+    {% else %} <!-- No drug records available -->
+        <br>
+        <div>
+            No drugs found.
+        </div>
+    {% endif %} <!-- if Records > 0 -->
 
-    <br>
-    <hr>
-      {{ TypeExample }}
 
-    {% endif %}
-    
-    
+    </div>   <!-- large 12 columns -->
+    </div>   <!-- row -->
+
+<!-- End of Data (AJAX) Section -->
+
+<!-- JS to Initialize Foundation -->    
+    <script src="html/js/foundation.min.js"></script>
+    <script src="html/js/app.js"></script>    
+<!-- Application specific JS -->
+    <script>
+        function ConsoleLog(LogArgs)
+        {
+            if (window.console && console.log)  // Ensures that logging is available and logs to debug console. 
+            {
+                console.log(LogArgs);
+            }        
+        }
+        $.fn.log = function()  // A useful logging tool for a javascript object (see SetSearchType for use).
+        {
+            ConsoleLog(this);
+            return this;
+        }
+        function ResetInputFocus()
+        {
+            $("#search-string").focus();  // Set the focus to search text input                    
+        }
+        function SetSearchType(SearchType)
+        {
+            var TabId = "#" + SearchType + "-tab";  // Construct the Tab Id string
+            var PromptId = "#" + SearchType + "-prompt"; // Construct the Prompt Id String   
+            $(TabId).addClass("active");   // Set the named search tab-title to active. 
+            $(PromptId).addClass("active");   // Set the named search prompt to active.
+            ResetInputFocus();
+        }
+        function ReRenderDocument(DocumentHTML)
+        {
+            document.open("text/html","replace");
+            document.write(DocumentHTML);
+            document.close();        
+        }
+        function GetSearchType()
+        {
+            if ($("#name-tab").hasClass("active")) 
+            {
+                return "name";
+            }
+            else if ($("#active-tab").hasClass("active"))
+            {
+                return "active";
+            }
+            else if ($("#ndc-tab").hasClass("active"))
+            {
+                return "ndc";
+            }
+            else // error condition - just return "name" for now 
+            {
+                SetSearchType("name");
+                return "name";
+            }
+        }
+        function PostSearch(event)
+        {
+            // Stop form from submitting normally
+            event.preventDefault();    
+            // Get values from the search form elements on the page:
+            var SearchType = GetSearchType();
+            var SearchString = $("#search-string").log().val();
+            // Send the data using JQuery post
+            var posting = $.post("/searchdb" , { "searchstring": SearchString, "searchtype": SearchType } );
+            // Render the returned html.
+            posting.done(ReRenderDocument);
+        }
+        function InitSearchPage()
+        {
+            //   Any general page/form initialization here.
+            SetSearchType("{{SearchType|safe}}");  // Setup the 'active' search option.
+            $("#search-form").submit(PostSearch); // Set the submit function for the search form.
+        }        
+        $(document).ready(InitSearchPage);   // Perform any page specific initialization.
+    </script> 
   </body>
 </html>
 {% endautoescape %}

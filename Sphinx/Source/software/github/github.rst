@@ -106,3 +106,34 @@ Push the Local Repository onto Github
 
 |action| $git push origin master
 
+|
+
+Update the Local and (Optional!) Remote Repository on Github
+------------------------------------------------------------
+
+*    Make sure we are in the UVIS root directory.
+
+    |action| $cd $UVISDIR
+
+|
+
+*    Add all the updated files and directories to the local repository. 
+
+     |action| $git add .
+
+|
+
+*    Commit all the updated files and directories to the local repository.
+
+     |action| $git commit -m "Some Suitable Update Comment"
+
+|
+
+*   (Optional!) Push the local repository onto the remote (public!) Github.
+
+    |action| $git push origin master
+
+|
+
+
+

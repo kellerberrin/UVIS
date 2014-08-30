@@ -1,0 +1,29 @@
+#!/bin/bash
+# Define the Environment UVIS Directory structure.
+# Define all the directies that are unique to a particular 
+# UVIS development environment.
+#
+#************************************************************
+# This script defines the environment for the TURING computer.  
+#************************************************************
+#
+# To enable this environment, the script "UVIS_LOCAL_ENV" must
+# point to this script.
+#
+# For example; in UVIS_LOCAL_ENV script we should have this definition:
+# export UVISLOCALENVIRONMENT="UVIS_TURING_ENV" 
+#
+# Absolute directories. 
+# IMPORTANT - These will need to be modified for each development computer. 
+#
+#The directory where the UVIS application is found
+export UVISDIR="/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/Code/UVIS"
+#The Linux Sphinx Bin Directory
+export SPHINXBIN="/usr/bin"
+#The Linux Google App engine Bin Directory
+export GOOGLEAPPBIN="/opt/google/google_appengine"
+#The local root storage location (logs & datastore) for local UVIS GAE applications
+export UVISGAELOCALSTORAGE="/opt/google/GAEdata"
+#The local root storage for the UVIS data files.
+export UVISDATADIR="/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/Data"
+

@@ -1,0 +1,27 @@
+#!/bin/bash
+# Define the Shinx UVIS environment variables 
+# and directory structure.
+# Should be run once in each terminal session
+# when working on UVIS Sphinx software.
+# It is run automatically by the 'workenv UVIS' script  
+
+#Sphinx Documentation
+#
+#The Sphinx GAE application name (defined in app.yaml)
+export UVISSPHINXGAEAPPNAME="kellerberrin-doc"
+#The root directory for the Sphinx UVIS documentation.
+export UVISSPHINX="$UVISDIR/Sphinx"
+#The directory for the Sphinx Google App Files (app.yaml is here)
+export UVISSPHINXGAE="$UVISSPHINX/SphinxGAE"
+#The directory and name for the Sphinx Google Application (app name is defined in app.yaml)
+export UVISSPHINXGAEAPPPATH="$UVISSPHINXGAE/app.yaml"
+#The local URL for Sphinx documentation
+export UVISSPHINXLOCALHOST="localhost"
+#The local port for Sphinx documentation.
+export UVISSPHINXLOCALPORT="8080"
+#The local admin port for Sphinx Documentation 
+export UVISSPHINXADMINPORT="8010"
+#Local storage (logs & datastore) for the Sphinx Documentation
+export UVISSPHINXLOCALSTORAGE="$UVISGAELOCALSTORAGE/Sphinx" 
+#The remote URL for the Sphinx documentation.
+export UVISSPHINXURL="http://kellerberrin-doc.appspot.com"

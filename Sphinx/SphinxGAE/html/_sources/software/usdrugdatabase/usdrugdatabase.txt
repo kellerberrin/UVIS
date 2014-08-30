@@ -151,17 +151,13 @@ These two fields are concatenated onto the front of the package field.
     concatenated together.  For example: 4 BOTTLES in 1 CARTON/100 TABLETS in 1 BOTTLE.
     
 
-The Kind = **"NDCLookup"** Entity Layout.
+The composite CSV file Layout.
 +++++++++++++++++++++++++++++++++++++++++
 
-The GAE datastore is a "High Replication" database. It is not a standard SQL database but is based on the "Big Table" concept.
-Database tables are referred to as a "Kind". The entry in the "Kind" is an "Entity" and can be best thought of
-as a stored object (or in SQL terms a table row).
-
-Kind = **"NDCLookup"**  
-
-The entity layout. This is constructed from the product and package csv files from the 
-FDA database.
+A CSV data file is created from the a composite of the FDA product and package files
+above. In particular, the product file is 'joined' with the package file using the 
+partial NDC code in the product file. This join is then projected onto the fields listed below.
+Two additional fields are also generated (first two fields).  
 
 Field List.
 
@@ -196,11 +192,20 @@ Need to add 2 additional fields
 
 13. Field 16. Product File; StrengthUnit  Text/string. MV "mg/1; mg/1" If more than one substance, then each strength unit  is separated by a semicolon.	
 
-14. Field 17. Product File; Pharm_Classes Text/string. MV "Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]"
+14. Field 17. Product File; Pharm_Classes Text string. If more than one substance, then each strength is separated by a comma. Example, MV "Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]"
 
 15. Field 4. Package File; PackageDescription   Text/string  "1 VIAL, MULTI-DOSE in 1 CAN (0002-1200-10)  > 10 mL in 1 VIAL, MULTI-DOSE"
   
 
-The Kind = **"NDCLookup"** Index Structure
-+++++++++++++++++++++++++++++++++++++++++++
+The Kind = **"NDCLookup"** Entity Layout.
++++++++++++++++++++++++++++++++++++++++++
+
+The GAE datastore is a "High Replication" database. It is not a standard SQL database but is based on the "Big Table" concept.
+Database tables are referred to as a "Kind". The entry in the "Kind" is an "Entity" and can be best thought of
+as a stored object (or in SQL terms a table row).
+
+Kind = **"NDCLookup"**  
+
+The entity layout. This is constructed from the product and package csv files from the 
+FDA database.
   

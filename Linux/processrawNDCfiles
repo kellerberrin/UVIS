@@ -1,0 +1,11 @@
+#!/bin/bash
+# Convenience script to process the raw NDC files downloaded from the US FDA website.
+# All processing logic is in the Python file.
+
+
+echo "UVISUSDRUGRAWDATAPRODUCT:" $UVISUSDRUGRAWDATAPRODUCT
+echo "UVISUSDRUGRAWDATAPACKAGE:" $UVISUSDRUGRAWDATAPACKAGE
+echo "UVISUSDRUGRAWDATALOGFILE:" $UVISUSDRUGRAWDATALOGFILE
+echo "UVISUSDRUGDATAFILE:" $UVISUSDRUGDATAFILE
+
+python $UVISUSDRUGDATA/rawNDCfiles.py
