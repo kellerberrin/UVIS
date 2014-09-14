@@ -1,0 +1,429 @@
+/* 
+*
+* Copyright Kellerberrin 2014.
+*
+* k-widgets SASS widget library 
+* The corrsponding Javascript library is "k-widgets.js".
+*
+*/
+//
+//
+//
+// Include the compass utilities.
+//
+@import "compass"; 
+//
+// Depends on the Foundation icon library (for now).
+//
+//
+//
+//**************************Accordian ************************************************************************* 
+//
+// Example HTML declaration:
+/*
+<div id="expand-menu" class="k-accordion k-unique"> <!-- Declares the k-accordion, "k-unique" means only one expanded section open at a time.
+		<div class="k-header">Home</div>              <!- Accordion header --> 
+		<div class="k-expander k-expanded">Products</div> <!-- Expand button, "k-expanded" initially expands the selection. -->
+	    <div class="k-expandable">     <!-- The k-exandable section, must be the next sibling to the k-expander class -->
+		    <div>Widgets</div>      <!-- Sub-menu items that are initially expanded -->
+			<div>Menus</div>
+		    <div>Products</div>
+		</div>
+		<div class="k-expander">Company</div>
+		<div class="k-expandable">
+		    <div>About</div>
+			<a href="#">Location</a>
+		</div>
+		<div class="k-static">Contact</div> <!-- Non-expandable sibling menu item. -->
+</div> <!-- k-accordion -->
+<script>$(document).ready(function() { k_InitializeAccordian("expand-menu"); });</script> <!-- Must be initialized -->
+*/
+//
+// Colours for the accordion.
+// Selector : ".k-accordion"
+
+$K-Accordion-Background-Colour: #66665e;
+$K-Accordion-Text-Colour: white;
+
+// Default colours
+$K-Accordion-Border-Bottom-Colour: lighten($K-Accordion-Background-Colour, 5%);
+$K-Accordion-Stop-Gradient-Colour: darken($K-Accordion-Background-Colour, 10%);
+$K-Accordion-Text-Shadow-Colour: darken($K-Accordion-Text-Colour, 20%);
+
+$K-Accordion-Menu-Radius: 3px;
+
+// Colours for the expanders and static
+// Selector : ".k-expander"
+
+$K-Accordion-Menu-Background-Colour: #e94f31;
+$K-Accordion-Menu-Stop-Gradient-Colour: darken($K-Accordion-Menu-Background-Colour, 10%);
+
+// Colours for the expander:hover
+
+$K-Accordion-Menu-Hover-Background-Colour: darken($K-Accordion-Menu-Background-Colour, 10%);
+$K-Accordion-Menu-Hover-Stop-Gradient-Colour: darken($K-Accordion-Menu-Stop-Gradient-Colour, 10%);
+
+// Expand icon colours.
+
+$K-Accordion-Icon-Colour: lightgray;
+
+// The sub menu items.
+
+$K-Accordion-SubMenuItem-Background-Colour: #f7f7f7;
+$K-Accordion-SubMenuItem-Link-Colour: #676767;
+$K-Accordion-SubMenuItem-Stop-Gradient-Colour: darken($K-Accordion-SubMenuItem-Background-Colour, 10%);
+$K-Accordion-SubMenuItem-BottomBorder-Colour: lighten($K-Accordion-SubMenuItem-Background-Colour, 5%);
+$K-Accordion-SubMenuItem-Hover-Background-Colour: darken($K-Accordion-SubMenuItem-Background-Colour, 10%);
+$K-Accordion-SubItemMenu-Hover-Stop-Gradient-Colour: darken($K-Accordion-SubMenuItem-Stop-Gradient-Colour, 10%);
+
+// End of Colours 
+
+// Menu Radius.
+
+// Accordion Length (not used).
+
+$K-Accordion-Length: rem-calc(250px);
+
+//************************************************
+/* Base Styles */
+%k-accordion-base {
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 100%;
+    @include border-radius($K-Accordion-Menu-Radius);
+}
+
+%k-expander-base {
+    display: block;
+    @include background-image(linear-gradient( $K-Accordion-Menu-Background-Colour
+                                             , $K-Accordion-Menu-Stop-Gradient-Colour));
+    background-color: $K-Accordion-Menu-Background-Colour;
+    color: inherit;
+    font-size: 0.9rem;
+    text-shadow: 0 -1px 1px $K-Accordion-Text-Shadow-Colour;
+    border: 1px solid $K-Accordion-Menu-Background-Colour;
+    border-top: none;
+    padding: 0.8rem 0.8rem;
+}
+
+.k-accordion {
+    @extend %k-accordion-base;
+	color: $K-Accordion-Text-Colour;
+	background-color: $K-Accordion-Background-Colour;
+	border:none;
+	border-bottom: 4px solid $K-Accordion-Border-Bottom-Colour;
+
+    & .k-header {
+            @include background-image(linear-gradient( $K-Accordion-Background-Colour
+                                                     , $K-Accordion-Stop-Gradient-Colour));
+            background-color: inherit;
+            color: inherit;
+        	line-height: 130%;
+ 	        padding: 1rem 0.8rem;
+	        font-size: 1.2rem;
+	        font-weight: 500;
+	        text-align: center;
+
+    }
+
+    & .k-expander {
+
+        @extend %k-expander-base;        
+
+        &:hover {
+	        background-color: $K-Accordion-Menu-Hover-Background-Colour;
+            @include background-image(linear-gradient( $K-Accordion-Menu-Hover-Background-Colour
+                                                     , $K-Accordion-Menu-Hover-Stop-Gradient-Colour));
+        }
+
+        &.k-collapsed:before {
+            @extend .foundicon-plus:before;
+    	    font-size: 1.8rem;
+            font-family: "GeneralEnclosedFoundicons";
+            float: left;
+            padding-right: 0.5rem;
+    	    color: $K-Accordion-Icon-Colour;
+        }
+
+        &.k-expanded:before {
+            @extend .foundicon-minus:before;
+    	    font-size: 1.8rem;
+            font-family: "GeneralEnclosedFoundicons";
+            float: left;
+            padding-right: 0.5rem;
+    	    color: $K-Accordion-Icon-Colour;
+        }
+
+    } // Expander
+
+
+    /* Sub menus */
+    & .k-expandable {
+    
+        
+        & > * {
+            @extend %k-expander-base;        
+	        border: 1px solid $K-Accordion-SubMenuItem-BottomBorder-Colour;
+            border-top: none;
+            @include background-image(linear-gradient( $K-Accordion-SubMenuItem-Background-Colour
+                                                     , $K-Accordion-SubMenuItem-Stop-Gradient-Colour));
+	        background-color: $K-Accordion-SubMenuItem-Background-Colour;
+            color: $K-Accordion-SubMenuItem-Link-Colour;
+            font-size: .8rem;
+
+            &:hover {	
+    	        background-color: $K-Accordion-SubMenuItem-Hover-Background-Colour;
+                @include background-image( linear-gradient($K-Accordion-SubMenuItem-Hover-Background-Colour
+                                         , $K-Accordion-SubItemMenu-Hover-Stop-Gradient-Colour));
+            }
+
+            &:last-child {
+	            border-bottom: none;
+            }    
+
+            &:before {
+                @extend .foundicon-right-arrow:before;
+    	        font-size: 1.5rem;
+                font-family: "GeneralEnclosedFoundicons";
+                float: left;
+                padding-right: 0.5rem;
+	            color: $K-Accordion-Menu-Background-Colour;
+            }
+    
+        } // Sub-menus
+                
+    } // Expandable
+
+
+    // Non-expandable sibling item. 
+    & .k-static {
+        list-style: none;
+            @extend %k-expander-base;
+ 
+
+
+        &:before {
+            @extend .foundicon-right-arrow:before;
+    	    font-size: 1.8rem;
+            font-family: "GeneralEnclosedFoundicons";
+            float: left;
+            padding-right: 0.5rem;
+	        color: $K-Accordion-Icon-Colour;
+        }
+
+    } // Static
+
+} // Accordion
+
+/**************************Modal Wait ************************************************************************* 
+
+   Put up a modal wait cursor between an Ajax request and response
+
+   Start by setting display:none to make this hidden.
+   Positioned in relation to the viewport window
+   with position:fixed. Width, height, top and left. 
+   Background to 30% white with
+   animation centered, and no-repeating 
+*/
+
+.k-modal-wait {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .3 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden 
+*/
+
+//body.loading {
+//    overflow: hidden;   
+//}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible 
+*/
+
+body.loading .k-modal-wait {
+    display: block;
+}
+
+/**************************Radio Buttons ************************************************************************* 
+*
+* Example HTML declaration:
+*
+*
+*   <div id="select-search-type" class="k-radio-group k-radio-expandable"> <!-- Declare the radio buttons group. Can be expandable (only selected shown)
+*       <div class="k-radio-header">Search Type</div>           <!-- The radio button header section (optional) -->
+*	    <div class="k-radio k-radio-selected">Drug Name</div>         <!-- The initially selected radio option -->
+*	    <div class="k-radio">Drug Ingredients</div>             <!-- Another radio option (must be a sibling)
+*	    <div class="k-radio">National Drug Code</div>           <!-- etc -->
+*   </div>                                                  <!-- k-radio-button -->
+*   <script>$(document).ready(function() { k_InitializeRadio("select-search-type"); });</script> <!-- Must be initialized -->
+*/
+
+// Colours for the radio button.
+// Selector : ".k-accordion"
+
+$K-Radio-Background-Colour: #66665e;
+$K-Radio-Text-Colour: white;
+
+// Default colours
+$K-Radio-Border-Bottom-Colour: lighten($K-Radio-Background-Colour, 5%);
+$K-Radio-Stop-Gradient-Colour: darken($K-Radio-Background-Colour, 10%);
+$K-Radio-Text-Shadow-Colour: darken($K-Radio-Text-Colour, 20%);
+
+$K-Radio-Menu-Radius: 3px;
+
+// Colours for the radio selections and static
+// Selector : ".k-radio
+
+$K-Radio-Menu-Background-Colour: #e94f31;
+$K-Radio-Menu-Stop-Gradient-Colour: darken($K-Radio-Menu-Background-Colour, 10%);
+
+// Colours for .k-radio:hover
+
+$K-Radio-Menu-Hover-Background-Colour: darken($K-Radio-Menu-Background-Colour, 10%);
+$K-Radio-Menu-Hover-Stop-Gradient-Colour: darken($K-Radio-Menu-Stop-Gradient-Colour, 10%);
+
+// Expand icon colours.
+
+$K-Radio-Icon-NotSelected-Background-Colour: white;
+$K-Radio-Icon-NotSelected-Colour: lighten($K-Radio-Menu-Background-Colour, 5%);
+$K-Radio-Icon-Selected-Colour: white;
+$K-Radio-Icon-Selected-Background-Colour: white;
+
+
+// End of Colours 
+
+// Radio Length (not used).
+
+$K-Radio-Length: rem-calc(250px);
+
+//************************************************
+/* Base Styles */
+%k-radio-group-base {
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 100%;
+    @include border-radius($K-Radio-Menu-Radius);
+}
+
+%k-radio-base {
+    display: block;
+    @include background-image(linear-gradient( $K-Radio-Menu-Background-Colour
+                                             , $K-Radio-Menu-Stop-Gradient-Colour));
+    background-color: $K-Radio-Menu-Background-Colour;
+    color: inherit;
+    font-size: 0.9rem;
+    text-shadow: 0 -1px 1px $K-Radio-Text-Shadow-Colour;
+    border: 1px solid $K-Radio-Menu-Background-Colour;
+    border-top: none;
+    padding: 0.8rem 0.8rem;
+}
+
+.k-radio-group {
+    @extend %k-radio-group-base;
+	color: $K-Radio-Text-Colour;
+	background-color: $K-Radio-Background-Colour;
+	border:none;
+	border-bottom: 4px solid $K-Radio-Border-Bottom-Colour;
+
+    & .k-radio-header {
+            @include background-image(linear-gradient( $K-Radio-Background-Colour
+                                                     , $K-Radio-Stop-Gradient-Colour));
+            background-color: inherit;
+            color: inherit;
+        	line-height: 130%;
+ 	        padding: 1rem 0.8rem;
+	        font-size: 1.2rem;
+	        font-weight: 500;
+	        text-align: center;
+
+    }
+
+    & .k-radio {
+
+        @extend %k-radio-base;        
+
+        &:before {
+            @extend .fa;
+            @extend .fa-check-square-o:before;
+            @extend .fa-lg;
+            float: left;
+    	    font-size: 1.8rem;
+            margin-right: 1.2rem;
+        	color: $K-Radio-Icon-NotSelected-Colour;
+    	}
+
+        &.k-selected:before {
+    	    color: $K-Radio-Icon-Selected-Colour;
+        }
+
+        &:hover {       
+
+	        background-color: $K-Radio-Menu-Hover-Background-Colour;
+            @include background-image(linear-gradient( $K-Radio-Menu-Hover-Background-Colour
+                                                     , $K-Radio-Menu-Hover-Stop-Gradient-Colour));
+        }
+
+    } // k-radio
+
+
+    &.k-expandable .k-radio {
+
+        @extend %k-radio-base;        
+
+        &:after {
+            @extend .foundicon-minus:before;
+    	    font-size: 1.6rem;
+            font-family: "GeneralEnclosedFoundicons";
+            float: right;
+            margin-left: 0.5rem;
+            width: 1.6rem;
+    	    color: $K-Radio-Icon-NotSelected-Colour;
+        }
+
+        &.k-selected:after {
+    	    color: $K-Radio-Icon-Selected-Colour;
+        }
+
+    } // k-expandable k-radio
+
+
+    &.k-expandable.k-collapsed .k-radio{
+
+        @extend %k-radio-base;        
+        display: none;            
+
+        &.k-selected {
+    	    display: block;
+        }
+
+        &.k-selected:after {
+            @extend .foundicon-plus:before;
+    	    font-size: 1.6rem;
+            font-family: "GeneralEnclosedFoundicons";
+            float: right;
+            margin-left: 0.5rem;
+            width: 1.6rem;
+    	    color: $K-Radio-Icon-Selected-Colour;
+        }
+
+    } // k-expandable k-collapsed k-radio
+
+} // Radio group
+
+
+// Modified radio group for the drug search.
+
+
+

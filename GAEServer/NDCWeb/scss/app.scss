@@ -1,5 +1,9 @@
 @import "settings";
 @import "foundation";
+// Import the enclosed icon fonts
+@import "general_enclosed_foundicons";
+// Import the awesome fonts.
+@import "font-awesome";
 
 // Or selectively include components
 // @import
@@ -39,6 +43,13 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-// Finally add in any customized SASS classes and definitions.
+// Add in any customization of the Foundation classes and definitions.
 
 @import "customize";
+
+// Add in the Kellerberrin widget SASS code.
+
+@import "k-widgets";
+
+
+

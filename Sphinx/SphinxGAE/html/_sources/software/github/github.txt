@@ -118,8 +118,9 @@ Update the Local and (Optional!) Remote Repository on Github
 |
 
 *    Add all the updated files and directories to the local repository. 
+     The '-all' flag is required and removes the delete of all removed files.
 
-     |action| $git add .
+     |action| $git add -all .
 
 |
 
