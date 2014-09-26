@@ -2,18 +2,37 @@ application: s~kellerberrin-drugdatabase
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: no
 
 builtins:
 - remote_api: on
 
 handlers:
+
+# Redirect static file requests.
+
+- url: /bower_components
+  static_dir: html/bower_components
+
+- url: /js
+  static_dir: html/js
+
+- url: /css
+  static_dir: html/css
+
+- url: /fonts
+  static_dir: html/fonts
+
+- url: /images
+  static_dir: html/images
+
     
-- url: /html
-  static_dir: html
+# Redirect all requests to the application script.
+# Always use a secure link.
   
 - url: .*
   script: app.application
+  secure: always
 
 libraries:
 - name: webapp2

@@ -1,0 +1,17 @@
+
+material-icon {
+  margin: auto;
+  padding: 0;
+  display: block;
+  background-repeat: no-repeat no-repeat;
+  pointer-events: none;
+}
+svg, object {
+  fill: currentColor;
+  color-fill: currentColor;
+}
+
+material-class-icon {
+  // display: block;
+  // margin: 0 auto;
+}

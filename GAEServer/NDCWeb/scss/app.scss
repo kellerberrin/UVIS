@@ -1,55 +1,37 @@
-@import "settings";
-@import "foundation";
-// Import the enclosed icon fonts
-@import "general_enclosed_foundicons";
+// Include the compass utilities.
+//
+@import "compass"; 
+@import "compass/layout.scss";
+
 // Import the awesome fonts.
+
 @import "font-awesome";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+// Import the Google material primitives.
 
-// Add in any customization of the Foundation classes and definitions.
+@import "material-colors";
+@import "material";
 
-@import "customize";
+// Import local material definitions
+// Colors, app-width, etc.
 
-// Add in the Kellerberrin widget SASS code.
+@import "material-local";
+
+
+// Only using the Foundation grid.
+
+@import "foundation/components/grid";
+
+// Add in the Kellerberrin widget library.
 
 @import "k-widgets";
+
+// Import local (non-material) CSS markup.
+
+@import "k-local";
+
+
+
 
 
 

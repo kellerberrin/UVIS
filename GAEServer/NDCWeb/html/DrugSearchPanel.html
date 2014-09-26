@@ -1,0 +1,25 @@
+    <!-- ************ Search Panel Layout *******************-->
+    <div id="k-search-panel"> 
+
+        <div id="k-select-search-type" class="k-searchtype-radio-group">
+	        <div class="k-radio k-selected" data-select="name">By Name</div>
+	        <div class="k-radio" data-select="active">By Ingredient</div>
+	        <div class="k-radio" data-select="ndc">By Code (NDC)</div>
+        </div> <!-- k-radio-button -->
+
+        <div id="k-search-input">
+
+            <input id="k-search-string" type="search" name="searchstring"></input> 
+            <div id="k-search-button"></div>
+
+        </div>
+        
+        <script>
+            $(document).ready(function() { 
+                $("#k-select-search-type").data(new k_SearchRadioClass("#k-select-search-type"));
+                $("#k-search-button").click(k_postSearch); });
+        </script>
+        
+    </div> <!-- ************ Search Panel Layout *******************-->
+
+

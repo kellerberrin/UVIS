@@ -7,12 +7,6 @@
 *
 */
 //
-//
-//
-// Include the compass utilities.
-//
-@import "compass"; 
-//
 // Depends on the Foundation icon library (for now).
 //
 //
@@ -21,7 +15,7 @@
 //
 // Example HTML declaration:
 /*
-<div id="expand-menu" class="k-accordion k-unique"> <!-- Declares the k-accordion, "k-unique" means only one expanded section open at a time.
+<div id="k-expand-menu" class="k-accordion k-unique"> <!-- Declares the k-accordion, "k-unique" means only one expanded section open at a time.
 		<div class="k-header">Home</div>              <!- Accordion header --> 
 		<div class="k-expander k-expanded">Products</div> <!-- Expand button, "k-expanded" initially expands the selection. -->
 	    <div class="k-expandable">     <!-- The k-exandable section, must be the next sibling to the k-expander class -->
@@ -78,153 +72,160 @@ $K-Accordion-SubItemMenu-Hover-Stop-Gradient-Colour: darken($K-Accordion-SubMenu
 
 // End of Colours 
 
-// Menu Radius.
 
-// Accordion Length (not used).
-
-$K-Accordion-Length: rem-calc(250px);
+@mixin k-accordian-mixin {
 
 //************************************************
 /* Base Styles */
-%k-accordion-base {
-	font-weight: normal;
-	text-decoration: none;
-	line-height: 100%;
-    @include border-radius($K-Accordion-Menu-Radius);
-}
-
-%k-expander-base {
-    display: block;
-    @include background-image(linear-gradient( $K-Accordion-Menu-Background-Colour
-                                             , $K-Accordion-Menu-Stop-Gradient-Colour));
-    background-color: $K-Accordion-Menu-Background-Colour;
-    color: inherit;
-    font-size: 0.9rem;
-    text-shadow: 0 -1px 1px $K-Accordion-Text-Shadow-Colour;
-    border: 1px solid $K-Accordion-Menu-Background-Colour;
-    border-top: none;
-    padding: 0.8rem 0.8rem;
-}
-
-.k-accordion {
-    @extend %k-accordion-base;
-	color: $K-Accordion-Text-Colour;
-	background-color: $K-Accordion-Background-Colour;
-	border:none;
-	border-bottom: 4px solid $K-Accordion-Border-Bottom-Colour;
-
-    & .k-header {
-            @include background-image(linear-gradient( $K-Accordion-Background-Colour
-                                                     , $K-Accordion-Stop-Gradient-Colour));
-            background-color: inherit;
-            color: inherit;
-        	line-height: 130%;
- 	        padding: 1rem 0.8rem;
-	        font-size: 1.2rem;
-	        font-weight: 500;
-	        text-align: center;
-
+    %k-accordion-base {
+	    font-weight: normal;
+	    text-decoration: none;
+	    line-height: 100%;
+        @include border-radius($K-Accordion-Menu-Radius);
     }
 
-    & .k-expander {
+    %k-expander-base {
+        display: block;
+        @include background-image(linear-gradient( $K-Accordion-Menu-Background-Colour
+                                                 , $K-Accordion-Menu-Stop-Gradient-Colour));
+        background-color: $K-Accordion-Menu-Background-Colour;
+        color: inherit;
+        font-size: 0.9rem;
+        text-shadow: 0 -1px 1px $K-Accordion-Text-Shadow-Colour;
+        border: 1px solid $K-Accordion-Menu-Background-Colour;
+        border-top: none;
+        padding: 0.8rem 0.8rem;
+    }
 
-        @extend %k-expander-base;        
+    .k-accordion {
+        @extend %k-accordion-base;
+	    color: $K-Accordion-Text-Colour;
+	    background-color: $K-Accordion-Background-Colour;
+	    border:none;
+	    border-bottom: 4px solid $K-Accordion-Border-Bottom-Colour;
 
-        &:hover {
-	        background-color: $K-Accordion-Menu-Hover-Background-Colour;
-            @include background-image(linear-gradient( $K-Accordion-Menu-Hover-Background-Colour
-                                                     , $K-Accordion-Menu-Hover-Stop-Gradient-Colour));
+        & .k-header {
+                @include background-image(linear-gradient( $K-Accordion-Background-Colour
+                                                         , $K-Accordion-Stop-Gradient-Colour));
+                background-color: inherit;
+                color: inherit;
+            	line-height: 130%;
+ 	            padding: 1rem 0.8rem;
+	            font-size: 1.2rem;
+	            font-weight: 500;
+	            text-align: center;
+
         }
 
-        &.k-collapsed:before {
-            @extend .foundicon-plus:before;
-    	    font-size: 1.8rem;
-            font-family: "GeneralEnclosedFoundicons";
-            float: left;
-            padding-right: 0.5rem;
-    	    color: $K-Accordion-Icon-Colour;
-        }
+        & .k-expander {
 
-        &.k-expanded:before {
-            @extend .foundicon-minus:before;
-    	    font-size: 1.8rem;
-            font-family: "GeneralEnclosedFoundicons";
-            float: left;
-            padding-right: 0.5rem;
-    	    color: $K-Accordion-Icon-Colour;
-        }
+            @extend %k-expander-base;        
 
-    } // Expander
+            &:hover {
+	            background-color: $K-Accordion-Menu-Hover-Background-Colour;
+                @include background-image(linear-gradient( $K-Accordion-Menu-Hover-Background-Colour
+                                                         , $K-Accordion-Menu-Hover-Stop-Gradient-Colour));
+            }
+
+            &.k-collapsed:before {
+                @extend .fa;
+                @extend .fa-plus-square-o;
+    	        font-size: 1.8rem;
+                 float: left;
+                padding-right: 0.5rem;
+    	        color: $K-Accordion-Icon-Colour;
+            }
+
+            &.k-expanded:before {
+                @extend .fa;
+                @extend .fa-minus-square-o;
+    	        font-size: 1.8rem;
+                float: left;
+                padding-right: 0.5rem;
+    	        color: $K-Accordion-Icon-Colour;
+            }
+
+        } // Expander
 
 
     /* Sub menus */
-    & .k-expandable {
+        & .k-expandable {
+            
+            & > * {
+                @extend %k-expander-base;        
+	            border: 1px solid $K-Accordion-SubMenuItem-BottomBorder-Colour;
+                border-top: none;
+                @include background-image(linear-gradient( $K-Accordion-SubMenuItem-Background-Colour
+                                                         , $K-Accordion-SubMenuItem-Stop-Gradient-Colour));
+	            background-color: $K-Accordion-SubMenuItem-Background-Colour;
+                color: $K-Accordion-SubMenuItem-Link-Colour;
+                font-size: .8rem;
+
+                &:hover {	
+    	            background-color: $K-Accordion-SubMenuItem-Hover-Background-Colour;
+                    @include background-image( linear-gradient($K-Accordion-SubMenuItem-Hover-Background-Colour
+                                             , $K-Accordion-SubItemMenu-Hover-Stop-Gradient-Colour));
+                }
+
+                &:last-child {
+	                border-bottom: none;
+                }    
+
+                &:before {
+                    @extend .fa;
+                    @extend .fa-chevron-right;
+    	            font-size: 1.5rem;
+                    float: left;
+                    padding-right: 0.5rem;
+	                color: $K-Accordion-Menu-Background-Colour;
+                }
     
-        
-        & > * {
-            @extend %k-expander-base;        
-	        border: 1px solid $K-Accordion-SubMenuItem-BottomBorder-Colour;
-            border-top: none;
-            @include background-image(linear-gradient( $K-Accordion-SubMenuItem-Background-Colour
-                                                     , $K-Accordion-SubMenuItem-Stop-Gradient-Colour));
-	        background-color: $K-Accordion-SubMenuItem-Background-Colour;
-            color: $K-Accordion-SubMenuItem-Link-Colour;
-            font-size: .8rem;
-
-            &:hover {	
-    	        background-color: $K-Accordion-SubMenuItem-Hover-Background-Colour;
-                @include background-image( linear-gradient($K-Accordion-SubMenuItem-Hover-Background-Colour
-                                         , $K-Accordion-SubItemMenu-Hover-Stop-Gradient-Colour));
-            }
-
-            &:last-child {
-	            border-bottom: none;
-            }    
-
-            &:before {
-                @extend .foundicon-right-arrow:before;
-    	        font-size: 1.5rem;
-                font-family: "GeneralEnclosedFoundicons";
-                float: left;
-                padding-right: 0.5rem;
-	            color: $K-Accordion-Menu-Background-Colour;
-            }
-    
-        } // Sub-menus
+            } // Sub-menus
                 
-    } // Expandable
+        } // Expandable
 
 
     // Non-expandable sibling item. 
-    & .k-static {
-        list-style: none;
-            @extend %k-expander-base;
+        & .k-static {
+            list-style: none;
+                @extend %k-expander-base;
  
 
 
-        &:before {
-            @extend .foundicon-right-arrow:before;
-    	    font-size: 1.8rem;
-            font-family: "GeneralEnclosedFoundicons";
-            float: left;
-            padding-right: 0.5rem;
-	        color: $K-Accordion-Icon-Colour;
-        }
+            &:before {
+                @extend .fa;
+                @extend .fa-chevron-right;                
+    	        font-size: 1.8rem;
+                float: left;
+                padding-right: 0.5rem;
+	            color: $K-Accordion-Icon-Colour;
+            }
 
-    } // Static
+        } // Static
 
-} // Accordion
+    } // Accordion
+    
+} // Accordian mixin
 
-/**************************Modal Wait ************************************************************************* 
-
-   Put up a modal wait cursor between an Ajax request and response
-
-   Start by setting display:none to make this hidden.
-   Positioned in relation to the viewport window
-   with position:fixed. Width, height, top and left. 
-   Background to 30% white with
-   animation centered, and no-repeating 
+/*********************************************************************************************
+*
+*
+* Modal Wait.
+*
+*********************************************************************************************** 
+*
+*   Put up a modal wait cursor between an AJAX request and response.
+*
+*   Start by setting display:none to make this hidden.
+*   Positioned in relation to the viewport window
+*   with position:fixed. Width, height, top and left. 
+*   Background to 50% white with
+*   animation centered, and no-repeating 
+*
+*
 */
+
+$K-Wait-Image-Path: "../images/ajax-loader.gif";
 
 .k-modal-wait {
     display:    none;
@@ -234,10 +235,11 @@ $K-Accordion-Length: rem-calc(250px);
     left:       0;
     height:     100%;
     width:      100%;
-    background: rgba( 255, 255, 255, .3 ) 
-                url('http://i.stack.imgur.com/FhHRx.gif') 
+    background: rgba( 255, 255, 255, .5 ) 
+                url(#{$K-Wait-Image-Path}) 
                 50% 50% 
                 no-repeat;
+
 }
 
 /* When the body has the loading class, we turn
@@ -256,12 +258,19 @@ body.loading .k-modal-wait {
     display: block;
 }
 
-/**************************Radio Buttons ************************************************************************* 
+/**************************Radio Buttons Mixin ************************************************************************* 
+*
+* Example SASS declaration:
+*
+*  .k-myradio-group {
+*       @include k-radio-group;
+*       ... possible CSS modifications ...
+*   }
 *
 * Example HTML declaration:
 *
 *
-*   <div id="select-search-type" class="k-radio-group k-radio-expandable"> <!-- Declare the radio buttons group. Can be expandable (only selected shown)
+*   <div id="select-search-type" class="k-myradio-group"> <!-- Declare the radio group. -->
 *       <div class="k-radio-header">Search Type</div>           <!-- The radio button header section (optional) -->
 *	    <div class="k-radio k-radio-selected">Drug Name</div>         <!-- The initially selected radio option -->
 *	    <div class="k-radio">Drug Ingredients</div>             <!-- Another radio option (must be a sibling)
@@ -276,154 +285,511 @@ body.loading .k-modal-wait {
 $K-Radio-Background-Colour: #66665e;
 $K-Radio-Text-Colour: white;
 
-// Default colours
-$K-Radio-Border-Bottom-Colour: lighten($K-Radio-Background-Colour, 5%);
-$K-Radio-Stop-Gradient-Colour: darken($K-Radio-Background-Colour, 10%);
-$K-Radio-Text-Shadow-Colour: darken($K-Radio-Text-Colour, 20%);
-
-$K-Radio-Menu-Radius: 3px;
-
 // Colours for the radio selections and static
 // Selector : ".k-radio
 
 $K-Radio-Menu-Background-Colour: #e94f31;
-$K-Radio-Menu-Stop-Gradient-Colour: darken($K-Radio-Menu-Background-Colour, 10%);
 
 // Colours for .k-radio:hover
 
 $K-Radio-Menu-Hover-Background-Colour: darken($K-Radio-Menu-Background-Colour, 10%);
-$K-Radio-Menu-Hover-Stop-Gradient-Colour: darken($K-Radio-Menu-Stop-Gradient-Colour, 10%);
 
 // Expand icon colours.
 
-$K-Radio-Icon-NotSelected-Background-Colour: white;
 $K-Radio-Icon-NotSelected-Colour: lighten($K-Radio-Menu-Background-Colour, 5%);
-$K-Radio-Icon-Selected-Colour: white;
-$K-Radio-Icon-Selected-Background-Colour: white;
+$K-Radio-Icon-Selected-Colour: $K-Radio-Text-Colour;
+
+// End of Radio colours 
 
 
-// End of Colours 
+@mixin k-radio-group ( $MK-Radio-Background-Colour: $K-Radio-Background-Colour
+                     , $MK-Radio-Text-Colour : $K-Radio-Text-Colour
+                     , $MK-Radio-Menu-Background-Colour: $K-Radio-Menu-Background-Colour
+                     , $MK-Radio-Menu-Hover-Background-Colour: $K-Radio-Menu-Hover-Background-Colour
+                     , $MK-Radio-Icon-NotSelected-Colour: $K-Radio-Icon-NotSelected-Colour
+                     , $MK-Radio-Icon-Selected-Colour : $K-Radio-Icon-Selected-Colour) {
 
-// Radio Length (not used).
+// Virtual Base Styles
 
-$K-Radio-Length: rem-calc(250px);
 
-//************************************************
-/* Base Styles */
-%k-radio-group-base {
-	font-weight: normal;
-	text-decoration: none;
-	line-height: 100%;
-    @include border-radius($K-Radio-Menu-Radius);
-}
+    %k-radio-base {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: $MK-Radio-Menu-Background-Colour;
+        color: inherit;
+        font-size: 0.9em;
+        border-top: none;
+        padding: 0.8em 0.8em;
+    }
 
-%k-radio-base {
-    display: block;
-    @include background-image(linear-gradient( $K-Radio-Menu-Background-Colour
-                                             , $K-Radio-Menu-Stop-Gradient-Colour));
-    background-color: $K-Radio-Menu-Background-Colour;
-    color: inherit;
-    font-size: 0.9rem;
-    text-shadow: 0 -1px 1px $K-Radio-Text-Shadow-Colour;
-    border: 1px solid $K-Radio-Menu-Background-Colour;
-    border-top: none;
-    padding: 0.8rem 0.8rem;
-}
-
-.k-radio-group {
-    @extend %k-radio-group-base;
-	color: $K-Radio-Text-Colour;
-	background-color: $K-Radio-Background-Colour;
+    @extend %k-radio-base;
+	color: $MK-Radio-Text-Colour;
+	background-color: $MK-Radio-Background-Colour;
 	border:none;
-	border-bottom: 4px solid $K-Radio-Border-Bottom-Colour;
+
+
+// The menu header
 
     & .k-radio-header {
-            @include background-image(linear-gradient( $K-Radio-Background-Colour
-                                                     , $K-Radio-Stop-Gradient-Colour));
+
+
             background-color: inherit;
             color: inherit;
         	line-height: 130%;
- 	        padding: 1rem 0.8rem;
-	        font-size: 1.2rem;
+ 	        padding: 1rem 0.8em;
+	        font-size: 1.2em;
 	        font-weight: 500;
 	        text-align: center;
 
     }
 
+// Menu items
+
     & .k-radio {
 
-        @extend %k-radio-base;        
+
+        @extend %k-radio-base;
 
         &:before {
             @extend .fa;
             @extend .fa-check-square-o:before;
-            @extend .fa-lg;
-            float: left;
-    	    font-size: 1.8rem;
-            margin-right: 1.2rem;
-        	color: $K-Radio-Icon-NotSelected-Colour;
+    	    font-size: 2.0rem;
+            margin-right: 1.2em;
+        	color: $MK-Radio-Icon-NotSelected-Colour;
     	}
 
         &.k-selected:before {
-    	    color: $K-Radio-Icon-Selected-Colour;
+    	    color: $MK-Radio-Icon-Selected-Colour;
         }
 
         &:hover {       
 
-	        background-color: $K-Radio-Menu-Hover-Background-Colour;
-            @include background-image(linear-gradient( $K-Radio-Menu-Hover-Background-Colour
-                                                     , $K-Radio-Menu-Hover-Stop-Gradient-Colour));
+	        background-color: $MK-Radio-Menu-Hover-Background-Colour;
         }
 
     } // k-radio
 
+// If the menu is collapsable
 
     &.k-expandable .k-radio {
 
-        @extend %k-radio-base;        
-
         &:after {
-            @extend .foundicon-minus:before;
-    	    font-size: 1.6rem;
-            font-family: "GeneralEnclosedFoundicons";
+            @extend .fa;
+            @extend .fa-minus-square-o:before;
             float: right;
-            margin-left: 0.5rem;
-            width: 1.6rem;
-    	    color: $K-Radio-Icon-NotSelected-Colour;
+    	    font-size: 2.0rem;
+            margin-left: 0.5em;
+    	    color: $MK-Radio-Icon-NotSelected-Colour;
+
         }
 
         &.k-selected:after {
-    	    color: $K-Radio-Icon-Selected-Colour;
+
+    	    color: $MK-Radio-Icon-Selected-Colour;
+
         }
 
     } // k-expandable k-radio
 
 
-    &.k-expandable.k-collapsed .k-radio{
+} // mixin
 
-        @extend %k-radio-base;        
-        display: none;            
+//
+// The expandable radio group. Only the expanded selection is shown.
+// This is a sub-class of the k-radio-group mixin.
+//
 
-        &.k-selected {
-    	    display: block;
+$K-Radio-Max-Screensize-Expand : 900px;  // Expandable at this size and below.
+
+@mixin k-expandable-radio-group ( $MK-Radio-Background-Colour: $K-Radio-Background-Colour
+                                , $MK-Radio-Text-Colour : $K-Radio-Text-Colour
+                                , $MK-Radio-Menu-Background-Colour: $K-Radio-Menu-Background-Colour
+                                , $MK-Radio-Menu-Hover-Background-Colour: $K-Radio-Menu-Hover-Background-Colour
+                                , $MK-Radio-Icon-NotSelected-Colour: $K-Radio-Icon-NotSelected-Colour
+                                , $MK-Radio-Icon-Selected-Colour : $K-Radio-Icon-Selected-Colour
+                                , $MK-Radio-Max-Screensize-Expand : $K-Radio-Max-Screensize-Expand) {
+
+// Base Radio Style.
+
+    @include k-radio-group ( $MK-Radio-Background-Colour
+                           , $MK-Radio-Text-Colour
+                           , $MK-Radio-Menu-Background-Colour
+                           , $MK-Radio-Menu-Hover-Background-Colour
+                           , $MK-Radio-Icon-NotSelected-Colour
+                           , $MK-Radio-Icon-Selected-Colour);
+
+// Media query sets the expander buttons.
+    @media only screen and (max-width: $K-Radio-Max-Screensize-Expand) {
+
+// The menu is collapsable below a specified screen size.
+// Cannot extend the font awesome classes because of the media query
+// so just paste in the relevent markup. 
+
+        & .k-radio {
+
+            &:after {
+                content: "\f147"; // Font Awesome fa-minus-square-o icon.
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                float: right;
+                font-size: 2.0rem;    // Must use rem because IE multiplies the font size 
+                margin-left: 0.5em;
+           	    color: $MK-Radio-Icon-NotSelected-Colour;
+
+            }
+
+            &.k-selected:after {
+
+        	    color: $MK-Radio-Icon-Selected-Colour;
+
+            }
+
+        } // k-radio
+
+        &.k-collapsed .k-radio {
+
+            display: none;            
+
+            &:after {
+
+                content: "\f196";   // Font Awesome fa-plus-square-o icon.
+                display: inline-block;
+                font-family: FontAwesome; 
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                float: right;
+                font-size: 2.0rem; // Must use rem because IE multiplies the font size 
+                margin-left: 0.5em;
+           	    color: $MK-Radio-Icon-NotSelected-Colour;
+
+            }
+
+            &.k-selected {
+
+        	    display: block;
+        
+                &:after {
+
+        	        color: $MK-Radio-Icon-Selected-Colour;
+
+                }
+
+            }
+
+        } // k-collapsed k-radio
+
+    } // media query.
+
+} // mixin
+
+
+/*********************************************************************************************
+*
+*
+* Modal Dialog mixins.
+*
+*
+************************************************************************************************/
+
+@mixin k-modal-simple-dialog( $MK-Dialog-Text-Colour : black
+                            , $MK-Dialog-Background-Colour : white
+                            , $MK-Dialog-Large-Width : 50% 
+                            , $MK-Dialog-Small-Width : 90% 
+                            , $MK-Dialog-Screensize-Small: 900px) {
+
+    @include transition(all 0.4s ease);
+    background-color: $MK-Dialog-Background-Colour;
+    color: $MK-Dialog-Text-Colour;
+    margin: none;
+    margin-top: -25%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    @media only screen and (max-width: $MK-Dialog-Screensize-Small) {
+
+        margin-left: (-1.0 * ($MK-Dialog-Small-Width/2));
+        width : $MK-Dialog-Small-Width;
+        
+    }
+    @media only screen and (min-width: $MK-Dialog-Screensize-Small) {
+
+        margin-left: (-1.0 * ($MK-Dialog-Large-Width/2));
+        width : $MK-Dialog-Large-Width;
+        
+    } 
+
+
+  /* Hide using opacity. */
+    opacity: 0;
+    
+ /* Not taking any events yet */
+    pointer-events: none;
+
+    &.k-dialogActive {
+  
+        opacity: 1;
+
+    /* Clickable */
+        pointer-events: auto;
+
+    }
+
+    & #k-modal-text {
+
+        width: auto;
+        padding: 1.0em;
+        padding-top: 3.0em;
+        font-size: 1.0em;        
+        
+    }
+
+    & #k-modal-cancel {
+
+        float: right;
+        font-size: 2.0em;        
+        padding: none;
+        margin: none;
+        border: none;        
+        
+        &:after {
+        
+            @extend .fa;
+            @extend .fa-times-circle-o:before;
+        
+        }
+        
+    }
+        
+    & #k-modal-button-group {
+
+        float: left;
+        margin-bottom: 1.0em;
+
+        & #k-modal-button-1 {
+        
+            display: none;
+            margin-left: 1.0em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            width: 4.0em;
+            float: left;
+            font-size: 1.0em;        
+            text-align: center;
+
         }
 
-        &.k-selected:after {
-            @extend .foundicon-plus:before;
-    	    font-size: 1.6rem;
-            font-family: "GeneralEnclosedFoundicons";
-            float: right;
-            margin-left: 0.5rem;
-            width: 1.6rem;
-    	    color: $K-Radio-Icon-Selected-Colour;
+        & #k-modal-button-2 {
+        
+            display: none;
+            margin-left: 1.0em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            width: 4.0em;
+            float:left;
+            font-size: 1.0em;        
+            text-align: center;
+        
+        }
+// Add the .k-visible class to show the buttons.
+        & #k-modal-button-1.k-visible {
+    
+            display: block;
+
         }
 
-    } // k-expandable k-collapsed k-radio
 
-} // Radio group
+        & #k-modal-button-2.k-visible {
+    
+            display: block;
+
+        }
+
+    }
+
+}
 
 
-// Modified radio group for the drug search.
+/*********************************************************************************************
+*
+*
+* Modal Dialog with blur and shink transition effect.
+*
+*
+************************************************************************************************/
+
+
+@mixin k-modal-zoom-dialog( $MK-Dialog-Text-Colour : black
+                          , $MK-Dialog-Background-Colour : white
+                          , $MK-Dialog-Large-Width : 50% 
+                          , $MK-Dialog-Small-Width : 90% 
+                          , $MK-Dialog-Screensize-Small: $K-Screensize-Small) {
+
+    @include k-modal-simple-dialog( $MK-Dialog-Text-Colour
+                                  , $MK-Dialog-Background-Colour
+                                  , $MK-Dialog-Small-Width
+                                  , $MK-Dialog-Screensize-Small);   
+
+  /* Pre-increase to size-in */
+    @include transform(scale(1.5));
+
+
+    &.k-dialogActive {
+  
+      /* Regular size and visible */
+        @include transform(scale(1.0));
+
+    }
+
+
+}
+
+
+/*
+*  Used in the overall contents window using @extend %k-zoom-parent-window; 
+*/
+
+%k-zoom-parent-window {
+
+    @include transition(all 0.4s ease);
+    @include filter( blur(0) grayscale(0));
+
+    &.k-dialogActive  {
+
+        /* Blur and de-color */
+        @include filter(blur(5px) grayscale(50%));
+
+        /* Recede */
+        @include transform(scale(0.9));
+                
+    }
+
+}
+
+
+/*********************************************************************************************
+*
+*
+* Drop Down Memu
+*
+*
+************************************************************************************************/
+
+
+
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.k-drop-down-wrapper {
+    /* Size and position */
+    position: relative;
+    width: 9em;
+//    margin: 0 auto;
+    margin: 0.2em 0 0 1em;
+    padding: 0.3em;
+    z-index:    99;
+
+    /* Styles */
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+
+}
+
+.k-drop-down-wrapper:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: $K-ACCENT-COLOR-400 transparent;
+}
+
+.k-drop-down-wrapper .dropdown {
+  /* Size & position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    background: white;
+    border: 1px solid rgba(0,0,0,0.17);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: normal;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    list-style: none;
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+}
+.k-drop-down-wrapper .dropdown li a {
+    display: block;
+    padding: 0.3em;
+    text-decoration: none;
+    color: #8aa8bd;
+    border-bottom: 1px solid $K-ACCENT-COLOR-400;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.k-drop-down-wrapper .dropdown li i {
+    float: right;
+    color: inherit;
+}
+
+.k-drop-down-wrapper .dropdown li:first-of-type a {
+}
+
+.k-drop-down-wrapper .dropdown li:last-of-type a {
+    border: none;
+}
+
+/* Hover state */
+
+.k-drop-down-wrapper .dropdown li:hover a {
+    background: #f3f8f8;
+}
+
+/* Active state */
+
+.k-drop-down-wrapper.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+
 
 
 

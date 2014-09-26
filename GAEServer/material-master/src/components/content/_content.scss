@@ -1,0 +1,31 @@
+material-content {
+
+  display: block;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &[scroll-y] {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &[scroll-x] {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  &[scroll-xy] {
+  }
+
+  &.material-content-padding {
+    padding: 8px;
+  }
+
+  &[scroll-shrink] {
+    position: relative;
+  }
+}
+
+@media (min-width: $layout-breakpoint-sm) {
+  material-content.material-content-padding {
+    padding: 16px;
+  }
+}

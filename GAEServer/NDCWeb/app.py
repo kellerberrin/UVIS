@@ -18,12 +18,12 @@ def SingleElementArray(Array):
 
 """ Create the JinJa template directory """
 
-#TEMPLATE_DIRECTORY = 'html'
-#Template_OS_Dir = os.path.join(os.path.dirname(__file__), TEMPLATE_DIRECTORY)
+TEMPLATE_DIRECTORY = 'html'
+Template_OS_Dir = os.path.join(os.path.dirname(__file__), TEMPLATE_DIRECTORY)
 
 TEMPLATE_SEARCH_HTML = 'DrugSearch.html'
 TEMPLATE_RESULT_HTML = 'DrugResults.html'
-Template_OS_Dir = os.path.dirname(__file__)
+#Template_OS_Dir = os.path.dirname(__file__)
 
 """ Create the JinJa Environment """         
 JINJA_ENVIRONMENT = jinja2.Environment(

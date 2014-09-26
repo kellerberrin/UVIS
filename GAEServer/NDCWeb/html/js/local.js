@@ -41,7 +41,7 @@
 
         IngredientObj = { "Index" : Index , "Ingredient" : Ingredient, "Strength" : Strength, "Units" :  Units };
         
-        return (function() { consoleLog(IngredientObj); });    
+        return (function() { k_consoleLog(IngredientObj); });    
 
     }
 
@@ -167,24 +167,350 @@
         // Get values from the search form elements on the page:
         var SearchString = $("#id-string").val();
         // Send the data using JQuery post
-        k_postForm(event, "/searchdb", { "searchstring": SearchString, "searchtype": "ndc" } )
+        k_postForm("#k-display-results", event, "/searchdb", { "searchstring": SearchString, "searchtype": "ndc" } )
     }
     // Search on drug name only.
     function nameSearch(event) {
         var SearchString = $("#name-string").val();
         // Send the data using JQuery post
-        k_postForm(event, "/searchdb", { "searchstring": SearchString, "searchtype": "name" } )
+        k_postForm("#k-display-results",event, "/searchdb", { "searchstring": SearchString, "searchtype": "name" } )
     }
 
-    function postSearch(event) {
+    function k_postSearch(event) {
         // Get values from the search form elements on the page:
-        var SearchType = k_RadioGetSelection("#select-search-type");
-        var SearchString = $("#search-string").val();
+        var SearchObj = k_inputSearchValues();
         // Send the data using JQuery post
-        k_postForm(event, "/searchdb", { "searchstring": SearchString, "searchtype": SearchType } )
+        
+        if (SearchObj != null) {
+        
+            k_postForm("#k-display-results", event, "/searchdb", SearchObj );
+    
+        }
+    
     }
 
-    function localInitialization() {
+    function k_postAngularSearch(Text, Type) {
+        // Get values from the search form elements on the page:
+        var SearchObj = k_validateSearchInput(Text, Type);
+        // Send the data using JQuery post
+        
+        if (SearchObj != null) {
+        
+            k_postForm("#k-display-results", event, "/searchdb", SearchObj );
+    
+        }
+    
+    }
+
+/*********************************************************************************************
+*
+*
+* Validate the Search Input and Popup dialogs as needed.
+*
+*
+************************************************************************************************/
+
+// Validate the input values and display an appropriate dialog box if an error.
+
+    function k_inputSearchValues() {
+
+        var SearchType = $("#k-select-search-type").data().RadioButtons().k_RadioGetSelection();       
+
+        var SearchString = $("#k-search-string").val();
+
+        return k_validateSearchInput(SearchString, SearchType);
+
+    }
+
+// Search on whatever is input without validation
+
+    function k_unvalidatedSearchValues() {
+
+        var SearchType = $("#k-select-search-type").data().RadioButtons().k_RadioGetSelection();       
+
+        var SearchString = $("#k-search-string").val();
+
+        return { "searchstring": SearchString, "searchtype": SearchType };   // JSON for the post.
+
+    }
+
+// The dialog box callbacks.
+
+    function k_YesNameCallback(Event) {
+    
+        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("name");    
+        k_postForm("#k-display-results", event, "/searchdb", k_unvalidatedSearchValues());        
+    }
+
+    function k_YesNDCCallback(Event) {
+    
+        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("ndc");    
+        k_postForm("#k-display-results", event, "/searchdb", k_unvalidatedSearchValues());        
+    }
+
+    function k_YesLengthCallback(Event) {
+    
+    }
+
+    function k_NoCallback(Event) {  // No validation logic required.
+    
+        k_postForm("#k-display-results", event, "/searchdb", k_unvalidatedSearchValues());        
+    
+    }
+
+// Validate input.
+
+    function k_validateSearchInput(SearchString, SearchType) {
+    
+        var HelpText;
+        
+        var SearchLength = SearchString.length;
+        
+        var DigitArray = SearchString.match(/[0-9]/g);
+        
+        var DigitLength = (DigitArray != null) ? DigitArray.length : 0;
+                    
+        if (SearchType == "name") {
+
+            if (SearchLength == 0) {
+
+                SearchString = "Livalo";
+                $("#k-search-string").val(SearchString);                        
+
+            } else if ((2 * DigitLength) > SearchLength) {
+            
+                HelpText = "The text entered; " + "'" + SearchString + "' " 
+                         + "looks like a National Drug Code (NDC). Do you want to search 'By Code'?";
+                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
+                return null;
+            }
+        
+        } else if (SearchType  == "ndc") {
+        
+            if (SearchLength == 0) {
+
+                SearchString = "0002-4770-90";
+                $("#k-search-string").val(SearchString);
+
+            }                        
+            else if ((2 * DigitLength) <= SearchLength) {
+            
+                HelpText = "The text entered; " + "'" + SearchString + "' " 
+                         + "looks like a drug name. Do you want to search 'By Name'?";
+                k_modalYesNo(HelpText, k_YesNameCallback, k_NoCallback);
+                return null;                        
+
+            }
+            else if (DigitLength != 10) {
+            
+                HelpText = "The text entered; " + "'" + SearchString + "' " + " has " + DigitLength + " digits." 
+                           + " Most National Drug Codes (NDC) are 10 digits long. Do you want to continue the search?";
+                k_modalYesNo(HelpText, k_YesLengthCallback, k_NoCallback);
+                return null;                        
+                        
+            }
+
+        } else if (SearchType == "active") {
+        
+            if (SearchLength == 0)
+            {
+                SearchString = "Pitavastatin";
+                $("#k-search-string").val(SearchString);                        
+            }
+            else if ((2 * DigitLength) > SearchLength) {
+            
+                HelpText = "The text entered; " + "'" + SearchString + "' " 
+                         + "looks like a National Drug Code (NDC). Do you want to search 'By Code'?";
+                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
+                return null;                        
+            }
+
+        } else {
+        
+            k_consoleLog("unknown search type in k_validateSearchInput()");
+        
+        }
+
+        return { "searchstring": SearchString, "searchtype": SearchType };
+
+    }
+
+
+/*********************************************************************************************
+*
+*
+* Drug modal dialog object.
+*
+*
+************************************************************************************************/
+
+
+    function k_modalTextOnly(ModalText)
+    {
+        var Dialog = $("#k-drug-modal").data();
+        Dialog.k_DialogText(ModalText);
+        Dialog.k_DialogActive();
+        $("#k-drug-modal").data(Dialog);
+
+    }
+    function k_modalYesNo(ModalText, YesCallback, NoCallback)
+    {
+        var Dialog = $("#k-drug-modal").data();
+        Dialog.k_DialogText(ModalText);
+        Dialog.k_Button_1_Visible("Yes", YesCallback);        
+        Dialog.k_Button_2_Visible("No", NoCallback); 
+        Dialog.k_CancelCallback(NoCallback);                       
+        Dialog.k_DialogActive();
+        $("#k-drug-modal").data(Dialog);
+
+    }
+
+
+/*********************************************************************************************
+*
+*
+* Toggle the results as collapsed or expanded.
+*
+*
+************************************************************************************************/
+
+    function k_expandAll() {
+    
+        // Toggle between expanded and collpased.
+
+        if ($("#k-expansion-button").is(".k-collapsed")) {
+                
+            $("#k-expansion-button").removeClass("k-collapsed");
+        
+        } else {
+        
+
+            $("#k-expansion-button").addClass("k-collapsed");
+        
+        }
+    
+    }
+
+/*********************************************************************************************
+*
+*
+* Set up record count in the notification area.
+* If more than 1 result then display as collapsed.
+*
+*
+************************************************************************************************/
+
+    function k_drugCount(ResultsId, DrugCount) {
+            
+        var DrugCountString;
+        var MaxDrugCount = 100;
+            
+        if (DrugCount > 1) {
+                            
+            $(ResultsId).addClass("k-active-results");
+            $("#k-expansion-button").addClass("k-collapsed");            
+
+            if (DrugCount == MaxDrugCount) {
+            
+                DrugCountString =  "Search found (max) " + DrugCount + " drugs.";
+            
+            } else {
+            
+                DrugCountString =  "Search found " + DrugCount + " drugs.";
+            
+            }
+                
+        } else  if (DrugCount == 1) {
+            
+            DrugCountString = "Search found 1 drug."
+            $(ResultsId).addClass("k-active-results");            
+            $(ResultsId + " #k-expansion-button").removeClass("k-collapsed");            
+            
+        } else {
+            
+            DrugCountString = "No matching drugs."
+            $(ResultsId).removeClass("k-active-results");            
+            $("#k-expansion-button").removeClass("k-collapsed");                        
+        }            
+            
+        $("#k-notification-area").text(DrugCountString);
+                       
+    }
+
+/*********************************************************************************************
+*
+*
+* Superclass the Radio Button object.
+*
+*
+************************************************************************************************/
+
+function k_SearchRadioClass(RadioId) {
+
+    var RadioButtonClass = new k_RadioClass(RadioId);
+
+    var SetPlaceholderText = function(Selection) {
+
+        var SearchInput = $("#k-search-string");
+    
+        if (Selection == "name") {
+
+            SearchInput.attr("placeholder", "Example: 'Livalo'");
+        
+        } else if (Selection  == "ndc") {
+        
+            SearchInput.attr("placeholder", "Example: '0002-4770-90'");
+
+        } else if (Selection == "active") {
+        
+            SearchInput.attr("placeholder", "Example: 'Pitavastatin'");
+
+        } else {
+        
+            SearchInput.attr("placeholder", "");
+        
+        }
+        
+    }
+
+    SetPlaceholderText(RadioButtonClass.k_RadioGetSelection());
+    
+    RadioButtonClass.k_RadioSetCallback(function(Event) {
+        
+        SetPlaceholderText(RadioButtonClass.k_RadioGetSelection());
+                  
+    });   
+    
+    k_SearchRadioClass.prototype.RadioButtons = function() { return RadioButtonClass; }    
+
+
+}
+
+
+/*********************************************************************************************
+*
+*
+* Set up the returned AJAX results.
+* Called at the bottom of the AJAX html.
+*
+*
+************************************************************************************************/
+
+    function k_initializeResults(ResultsId, DrugCount ) {
+    
+        k_drugCount(ResultsId, DrugCount);
+    
+    }
+
+/*********************************************************************************************
+*
+*
+* Initialization - called at the bottom of the HTML body.
+*
+*
+************************************************************************************************/
+
+    function k_localInitialization() {
         //   Any general page/form initialization here.
         setSearchType("name");  // Setup the 'active' search option.
         k_initializeWaitCursor(); // Setup the wait cursor

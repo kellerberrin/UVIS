@@ -1,0 +1,58 @@
+material-sidenav {
+  position: absolute;
+
+  width: 304px;
+  bottom: 0;
+
+  background-color: white;
+
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+
+  @extend .material-sidenav-left;
+}
+
+.material-sidenav-left {
+  left: 0;
+  top: 0;
+  @include transform-translate3d(-100%, 0, 0);
+
+  &.open {
+    @include transform-translate3d(0%, 0, 0);
+    z-index: $z-index-sidenav;
+  }
+}
+
+.material-sidenav-right {
+  left: 100%;
+  top: 0;
+  @include transform-translate3d(100%, 0, 0);
+
+  &.open {
+    @include transform-translate3d(-100%, 0, 0);
+    z-index: $z-index-sidenav;
+  }
+}
+
+@media (min-width: $layout-breakpoint-md) {
+  material-sidenav {
+    position: static;
+    @include transform(translate3d(0,0,0) !important);
+  }
+
+  .material-sidenav-backdrop {
+    display: none !important;
+  }
+}
+
+/* 
+ * When sidenav is closed on small screen, show no box shadow
+ */
+@media (max-width: $layout-breakpoint-md) {
+  material-sidenav {
+    &:not(.open).material-sidenav-left,
+    &:not(.open).material-sidenav-right {
+      box-shadow: none;
+    }
+  }
+}

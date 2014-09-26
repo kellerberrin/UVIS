@@ -64,7 +64,7 @@ distribution channel.
 United States Drug Database. 
 ++++++++++++++++++++++++++++
 
-.. image:: drugdatabase/usdrugdatabase.png
+.. image:: drugdatabase/usdrugdatabase.jpg
     :width: 203px
     :height: 190px
     :align: left
@@ -81,7 +81,7 @@ manufacturers.
 |
 |
 
-.. image:: Padlock.png
+.. image:: padlock.png
     :width: 50px
     :height: 50px
     :align: left
