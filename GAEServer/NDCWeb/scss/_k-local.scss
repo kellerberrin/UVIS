@@ -1,196 +1,5 @@
 
 
-//************************************************************************************************************
-// Modified radio group for the drug search.
-//
-$K-SearchType-Radio-Background-Colour: white;
-$K-SearchType-Radio-Text-Colour: black;
-$K-SearchType-Radio-Stop-Gradient-Colour: darken($K-SearchType-Radio-Background-Colour, 10%);
-
-// Colours for the radio selections and static
-// Selector : ".k-radio
-
-$K-SearchType-Radio-Menu-Background-Colour: white;
-$K-SearchType-Radio-Menu-Stop-Gradient-Colour: darken($K-SearchType-Radio-Menu-Background-Colour, 10%);
-
-// Colours for .k-radio:hover
-
-$K-SearchType-Radio-Menu-Hover-Background-Colour: darken($K-SearchType-Radio-Menu-Background-Colour, 10%);
-$K-SearchType-Radio-Menu-Hover-Stop-Gradient-Colour: darken($K-SearchType-Radio-Menu-Stop-Gradient-Colour, 10%);
-$K-SearchType-Radio-Menu-Hover-Border: $K-SearchType-Radio-Text-Colour;
-$K-SearchType-Radio-Border-Colour: lightgray;
-
-// Expand icon colours.
-
-$K-SearchType-Radio-Icon-NotSelected-Colour: lighten($K-SearchType-Radio-Menu-Background-Colour, 5%);
-$K-SearchType-Radio-Icon-Selected-Colour: $K-SearchType-Radio-Text-Colour;
-
-// The expansion size.
-
-$K-SearchType-Radio-Max-Screensize-Expand : 900px;  // Expandable at this size and below.
-
-
-.k-searchtype-radio-group {
-    @include k-expandable-radio-group ( $K-SearchType-Radio-Background-Colour
-                                      , $K-SearchType-Radio-Text-Colour
-                                      , $K-SearchType-Radio-Menu-Background-Colour
-                                      , $K-SearchType-Radio-Menu-Hover-Background-Colour
-                                      , $K-SearchType-Radio-Icon-NotSelected-Colour
-                                      , $K-SearchType-Radio-Icon-Selected-Colour
-                                      , $K-SearchType-Radio-Max-Screensize-Expand);
-
-    border: none;
-
-    & .k-radio {       
-
-        padding: 0.6em;
-        border: 1px solid $K-SearchType-Radio-Border-Colour;
-        @include background-image(linear-gradient( $K-SearchType-Radio-Menu-Background-Colour
-                                                 , $K-SearchType-Radio-Menu-Stop-Gradient-Colour));
-
-
-        &:hover {       
-
-            @include background-image(linear-gradient( $K-SearchType-Radio-Menu-Hover-Background-Colour
-                                                     , $K-SearchType-Radio-Menu-Hover-Stop-Gradient-Colour));
-        }
-
-    }
-
-}
-
-
-
-/*********************************************************************************************
-*
-*
-* Search Panel Stuff
-*
-*
-************************************************************************************************/
-
-$K-Search-Panel-Padding-Space: 0em;
-$K-Search-Panel-Background-Colour: darken(white, 7%);
-
-
-#k-search-panel {
-
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
-    padding-right: 1.2em;
-    padding-left: 1.2em;
-    margin: none;
-    background-color: $K-Search-Panel-Background-Colour;
-
-    & #k-select-search-type {
-
-        &.k-searchtype-radio-group {
-
-            margin-bottom: 1.0em;
-        
-        }
-        
-    }
-
-    & #k-search-input {
-    
-        padding: none;
-        margin: none;
-        height: 2.2em;
-
-        & #k-search-string {
-    
-            width: 80%;
-            height: inherit;
-            margin: none;
-            float: left;
-            padding: none;
-            border: 1px solid $K-SearchType-Radio-Border-Colour;
-    
-        }
-
-        & #k-search-button {
-    
-            width: 20%;
-            height: inherit;
-            display: block;
-            float: left;
-            font-size: 0.9em;
-            text-align: center;
-            padding-top: 0.20em;
-            margin: none;
-            border: 1px solid $K-SearchType-Radio-Border-Colour;
-            @include background-image(linear-gradient( $K-SearchType-Radio-Menu-Background-Colour
-                                                     , $K-SearchType-Radio-Menu-Stop-Gradient-Colour));
-
-            &:hover {
-            
-                @include background-image(linear-gradient( $K-SearchType-Radio-Menu-Hover-Background-Colour
-                                                         , $K-SearchType-Radio-Menu-Hover-Stop-Gradient-Colour));
-            
-            }
-
-            &:before {
-                @extend .fa;
-                @extend .fa-search:before;
-        	    font-size: 2.0em;
-                margin-left: 0.2em;
-            	color: black;
-           	}
-    
-        }
-
-    }
-    
-}
-
-/*********************************************************************************************
-*
-*
-* The Top Left Panel Stuff.
-*
-*
-************************************************************************************************/
-
-#k-left-image {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-
-/*********************************************************************************************
-*
-*
-* Media queries to modify the layout based on screen size.
-*
-*
-************************************************************************************************/
-
-$K-Screensize-Small: 900px;
-
-#k-left-panel {
-
-    @media only screen and (max-width: $K-Screensize-Small) {
-
-        display: none; 
-        
-    } 
-    
-    @media only screen and (min-width: $K-Screensize-Small) {
-
-        display: block; 
-        
-    } 
-}
-
-
-
-
-
 
 /*********************************************************************************************
 *
@@ -200,7 +9,6 @@ $K-Screensize-Small: 900px;
 *
 ************************************************************************************************/
 
-$K-Menu-Vertical-Space: 1em;
 $K-Menu-Background-Colour: $K-PRIMARY-COLOR-500;
 $K-Menu-Text-Colour: white;
 
@@ -210,11 +18,22 @@ $K-Menu-Text-Colour: white;
     display: block;
     color: $K-Menu-Text-Colour;
     background-color: $K-Menu-Background-Colour;
-    margin-bottom: $K-Menu-Vertical-Space;
+    margin: none;
     
+    #k-md-search {
+    
+        position: relative;
+        top : 1.0em;
+    
+    }
+
 }
 
+#k-search-title {
 
+    padding: 0.6em;
+
+}
 
 
 /*********************************************************************************************
@@ -230,8 +49,8 @@ $K-Divider-Expand-Icon-Inactive: darken(white, 20%);
 $K-Divider-Expand-Icon-Active: darken(white, 80%);
 $K-Divider-Border: darken(white, 50%);
 $K-Divider-Notification: darken(white, 50%);
-$K-Divider-Hover-Background-Colour: $K-SearchType-Radio-Menu-Hover-Background-Colour;
-$K-Divider-Hover-Stop-Gradient-Colour: $K-SearchType-Radio-Menu-Hover-Stop-Gradient-Colour;
+$K-Divider-Hover-Background-Colour: darken($K-Divider-Expand-Icon-Inactive, 10%);
+$K-Divider-Hover-Stop-Gradient-Colour: darken($K-Divider-Hover-Background-Colour, 10%);
 
 
 #k-screen-divider {
@@ -330,6 +149,64 @@ $K-Divider-Hover-Stop-Gradient-Colour: $K-SearchType-Radio-Menu-Hover-Stop-Gradi
 }
 
 
+
+
+
+/*********************************************************************************************
+*
+* Search Page and Footer Stuff
+* Footer Stuff (Uses the Compass Mixin).
+*
+*
+************************************************************************************************/
+
+$K-Footer-Background-Colour: $K-PRIMARY-COLOR-500;
+$K-Search-Page-Width: 600px;
+
+@include sticky-footer(1.5em, "#k-search-page", "#k-layout-footer", "#k-search-footer");
+
+#k-search-footer {
+
+    margin: none;
+    text-align: center;
+    color: gray;
+    background-color: $K-Footer-Background-Colour;
+    
+}
+
+
+#k-search-page {
+
+    width: $K-Search-Page-Width; //set the page max width.
+
+}
+
+
+/*********************************************************************************************
+*
+* The Ajax area stuff
+*
+*
+************************************************************************************************/
+
+#k-display-results {
+
+    height: 700px;    // Should be done using a media query. 
+    padding : none;
+    margin: none;
+    background-image: url("../images/ScrollBackground.jpg");
+    background-position: center top;
+    background-size: 100% auto;
+
+    #k-search-results {
+    
+        height: inherit;
+    
+    }
+
+}
+
+
 /*********************************************************************************************
 *
 *
@@ -358,148 +235,22 @@ $K-Display-Drug-Border: darken(white, 20%);
         padding: 0.5em;
     }
 
+    #k-drug-ingredient-panel {
 
-}
-
-.k-drug-class-panel {
-
-    display: block;
-    background-color: $K-Display-Drug-Background;
-    border: 1px solid $K-Display-Drug-Border;    
-    margin-bottom: 1.0em;
-    margin-top: 1.0em;
-
-}
-
-.k-drug-ingredient-panel {
-
-    display: block;
-    background-color: $K-Display-Drug-Background;
-    border: 1px solid $K-Display-Drug-Border;    
-    margin-bottom: 1.0em;
-    margin-top: 1.0em;
-
-}
-
-
-
-
-
-/*********************************************************************************************
-*
-*
-* The Drug search modal dialog box.
-*
-*
-************************************************************************************************/
-
-// Modal Box colour & width 
-
-    $K-Modal-Text-Colour : black;
-    $K-Modal-Background-Colour: white;
-    $K-Modal-Border-Colour: darken(white, 20%);
-    $K-Modal-Dialog-Width: 50%;
-
-// Button colour
-
-    $K-Modal-Button-Background-Colour: white;
-    $K-Modal-Button-Stop-Gradient-Colour: darken($K-SearchType-Radio-Menu-Background-Colour, 10%);
-    $K-Modal-Button-Border-Colour: lightgray;
-
-// Colours for button hover
-
-    $K-Modal-Hover-Background-Colour: darken($K-Modal-Button-Background-Colour, 10%);
-    $K-Modal-Hover-Stop-Gradient-Colour: darken($K-Modal-Button-Stop-Gradient-Colour, 10%);
-    $K-Modal-Hover-Border: $K-Modal-Button-Border-Colour;
-
-
-#k-drug-modal {
-
-    @include k-modal-simple-dialog( $K-Modal-Text-Colour
-                                  , $K-Modal-Background-Colour
-                                  , $K-Modal-Dialog-Width );   // Include the zoom dialog box mixin
-                    
-    border: 1px solid $K-Modal-Border-Colour;    
-        
-    & #k-modal-button-group {
-
-        & #k-modal-button-1 {
-
-            border: 1px solid $K-Modal-Button-Border-Colour;    
-            @include background-image(linear-gradient( $K-Modal-Button-Background-Colour
-                                                     , $K-Modal-Button-Stop-Gradient-Colour));            
-        
-
-            &:hover {
-            
-                border: 1px solid $K-Modal-Hover-Border;    
-                @include background-image(linear-gradient( $K-Modal-Hover-Background-Colour
-                                                         , $K-Modal-Hover-Stop-Gradient-Colour));            
-            }        
-
-
-        }
-
-        & #k-modal-button-2 {
-        
-            border: 1px solid $K-Modal-Button-Border-Colour;    
-            @include background-image(linear-gradient( $K-Modal-Button-Background-Colour
-                                                     , $K-Modal-Button-Stop-Gradient-Colour));            
-
-            &:hover {
-            
-                border: 1px solid $K-Modal-Hover-Border;    
-                @include background-image(linear-gradient( $K-Modal-Hover-Background-Colour
-                                                         , $K-Modal-Hover-Stop-Gradient-Colour));            
-            }        
-        
-        }
+        display: block;
+        background-color: $K-Display-Drug-Background;
+        border: 1px solid $K-Display-Drug-Border;    
+        margin-bottom: 1.0em;
+        margin-top: 1.0em;
 
     }
 
-}
-
-
-/*********************************************************************************************
-*
-* Search Page and Footer Stuff
-* Footer Stuff (Uses the Compass Mixin).
-*
-*
-************************************************************************************************/
-
-
-@include sticky-footer(1.5em, "#k-search-page", "#k-layout-footer", "#k-search-footer");
-
-#k-search-footer {
-
-    margin-top: 0.5em;
-    text-align: center;
-    color: gray;
-    background-color: lightgray;
-    
-}
-
-
-#k-search-page {
-
-    width: 100%
 
 }
 
 
-/*********************************************************************************************
-*
-* The Ajax area stuff
-*
-*
-************************************************************************************************/
 
-#k-results-container {
 
-    background-image: url("../images/ScrollBackground.jpg");
-    background-repeat: repeat-y;
-    background-position: center;
-}
+
 
 

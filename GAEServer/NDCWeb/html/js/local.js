@@ -176,19 +176,6 @@
         k_postForm("#k-display-results",event, "/searchdb", { "searchstring": SearchString, "searchtype": "name" } )
     }
 
-    function k_postSearch(event) {
-        // Get values from the search form elements on the page:
-        var SearchObj = k_inputSearchValues();
-        // Send the data using JQuery post
-        
-        if (SearchObj != null) {
-        
-            k_postForm("#k-display-results", event, "/searchdb", SearchObj );
-    
-        }
-    
-    }
-
     function k_postAngularSearch(Text, Type) {
         // Get values from the search form elements on the page:
         var SearchObj = k_validateSearchInput(Text, Type);
@@ -197,8 +184,11 @@
         if (SearchObj != null) {
         
             k_postForm("#k-display-results", event, "/searchdb", SearchObj );
+            return SearchObj.searchstring;
     
         }
+
+        return "";
     
     }
 
@@ -210,41 +200,17 @@
 *
 ************************************************************************************************/
 
-// Validate the input values and display an appropriate dialog box if an error.
-
-    function k_inputSearchValues() {
-
-        var SearchType = $("#k-select-search-type").data().RadioButtons().k_RadioGetSelection();       
-
-        var SearchString = $("#k-search-string").val();
-
-        return k_validateSearchInput(SearchString, SearchType);
-
-    }
-
-// Search on whatever is input without validation
-
-    function k_unvalidatedSearchValues() {
-
-        var SearchType = $("#k-select-search-type").data().RadioButtons().k_RadioGetSelection();       
-
-        var SearchString = $("#k-search-string").val();
-
-        return { "searchstring": SearchString, "searchtype": SearchType };   // JSON for the post.
-
-    }
-
 // The dialog box callbacks.
 
     function k_YesNameCallback(Event) {
     
-        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("name");    
+//        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("name");    
         k_postForm("#k-display-results", event, "/searchdb", k_unvalidatedSearchValues());        
     }
 
     function k_YesNDCCallback(Event) {
     
-        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("ndc");    
+///        $("#k-select-search-type").data().RadioButtons().k_RadioSetSelection("ndc");    
         k_postForm("#k-display-results", event, "/searchdb", k_unvalidatedSearchValues());        
     }
 
@@ -275,13 +241,13 @@
             if (SearchLength == 0) {
 
                 SearchString = "Livalo";
-                $("#k-search-string").val(SearchString);                        
+//                $("#k-search-string").val(SearchString);                        
 
             } else if ((2 * DigitLength) > SearchLength) {
             
                 HelpText = "The text entered; " + "'" + SearchString + "' " 
                          + "looks like a National Drug Code (NDC). Do you want to search 'By Code'?";
-                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
+//                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
                 return null;
             }
         
@@ -290,14 +256,14 @@
             if (SearchLength == 0) {
 
                 SearchString = "0002-4770-90";
-                $("#k-search-string").val(SearchString);
+//                $("#k-search-string").val(SearchString);
 
             }                        
             else if ((2 * DigitLength) <= SearchLength) {
             
                 HelpText = "The text entered; " + "'" + SearchString + "' " 
                          + "looks like a drug name. Do you want to search 'By Name'?";
-                k_modalYesNo(HelpText, k_YesNameCallback, k_NoCallback);
+//                k_modalYesNo(HelpText, k_YesNameCallback, k_NoCallback);
                 return null;                        
 
             }
@@ -305,7 +271,7 @@
             
                 HelpText = "The text entered; " + "'" + SearchString + "' " + " has " + DigitLength + " digits." 
                            + " Most National Drug Codes (NDC) are 10 digits long. Do you want to continue the search?";
-                k_modalYesNo(HelpText, k_YesLengthCallback, k_NoCallback);
+//                k_modalYesNo(HelpText, k_YesLengthCallback, k_NoCallback);
                 return null;                        
                         
             }
@@ -315,13 +281,13 @@
             if (SearchLength == 0)
             {
                 SearchString = "Pitavastatin";
-                $("#k-search-string").val(SearchString);                        
+//                $("#k-search-string").val(SearchString);                        
             }
             else if ((2 * DigitLength) > SearchLength) {
             
                 HelpText = "The text entered; " + "'" + SearchString + "' " 
                          + "looks like a National Drug Code (NDC). Do you want to search 'By Code'?";
-                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
+//                k_modalYesNo(HelpText, k_YesNDCCallback, k_NoCallback);
                 return null;                        
             }
 
@@ -437,54 +403,6 @@
                        
     }
 
-/*********************************************************************************************
-*
-*
-* Superclass the Radio Button object.
-*
-*
-************************************************************************************************/
-
-function k_SearchRadioClass(RadioId) {
-
-    var RadioButtonClass = new k_RadioClass(RadioId);
-
-    var SetPlaceholderText = function(Selection) {
-
-        var SearchInput = $("#k-search-string");
-    
-        if (Selection == "name") {
-
-            SearchInput.attr("placeholder", "Example: 'Livalo'");
-        
-        } else if (Selection  == "ndc") {
-        
-            SearchInput.attr("placeholder", "Example: '0002-4770-90'");
-
-        } else if (Selection == "active") {
-        
-            SearchInput.attr("placeholder", "Example: 'Pitavastatin'");
-
-        } else {
-        
-            SearchInput.attr("placeholder", "");
-        
-        }
-        
-    }
-
-    SetPlaceholderText(RadioButtonClass.k_RadioGetSelection());
-    
-    RadioButtonClass.k_RadioSetCallback(function(Event) {
-        
-        SetPlaceholderText(RadioButtonClass.k_RadioGetSelection());
-                  
-    });   
-    
-    k_SearchRadioClass.prototype.RadioButtons = function() { return RadioButtonClass; }    
-
-
-}
 
 
 /*********************************************************************************************

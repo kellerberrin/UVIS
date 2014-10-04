@@ -20,6 +20,8 @@
 export UVISDIR="/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/Code/UVIS"
 #The Linux Sphinx Bin Directory
 export SPHINXBIN="/usr/bin"
+#The Linux Foundation Bin Directory (root directory for the Foundation SASS library)
+export FOUNDATIONBIN="/opt/foundation"
 #The Linux Google App engine Bin Directory
 export GOOGLEAPPBIN="/opt/google/google_appengine"
 #The local root storage location (logs & datastore) for local UVIS GAE applications

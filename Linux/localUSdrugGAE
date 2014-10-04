@@ -6,4 +6,5 @@ python $GOOGLEAPPBIN/dev_appserver.py \
   --port=$UVISUSDRUGLOCALPORT  \
   --host=$UVISUSDRUGLOCALHOST  \
   --storage_path=$UVISUSDRUGLOCALSTORAGE \
+  --admin_port=$UVISUSDRUGADMINPORT \
   $UVISUSDRUGGAEAPPPATH

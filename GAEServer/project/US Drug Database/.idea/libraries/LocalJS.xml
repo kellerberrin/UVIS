@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="LocalJS" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/../../NDCWeb/html/js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../NDCWeb/html/js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

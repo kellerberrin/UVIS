@@ -1,0 +1,16 @@
+#!/bin/bash
+# Define the Foundation UVIS environment variables 
+# and directory structure.
+# Should be run once in each terminal session
+# when working using the foundation SASS libraries.
+# Note that Foundation, Compass, Sass and NodeJS should be
+# installed on the local machine to use these libraries
+# see the Foundation website for further info.  
+
+#Foundation Sass Libraries and CSS output libraries
+#
+#The directory for the US Drug GAE specific SASS files.
+export UVISFOUNDATIONUSDRUGSASS="$UVISDIR/GAEServer/NDCWeb/scss"
+#The directory for the US Drug GAE specific generated css files 
+export UVISFOUNDATIONUSDRUGCSS="$UVISDIR/GAEServer/NDCWeb/html/css"
+

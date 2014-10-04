@@ -18,7 +18,7 @@ export UVISUSDRUGLOCALHOST="localhost"
 #The local port for the US Drug Database.
 export UVISUSDRUGLOCALPORT="9080"
 #The local admin port for the US Drug Database 
-export UVISUSDRUGADMINPORT="8000"
+export UVISUSDRUGADMINPORT="8040"
 #Local storage (logs & datastore) for the US DrugDatabase
 export UVISUSDRUGLOCALSTORAGE="$UVISGAELOCALSTORAGE/USDrugDatabase" 
 #The remote URL for the US Drug Database.

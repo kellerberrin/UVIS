@@ -1,54 +1,32 @@
 
-<material-whiteframe class="k-display-drug material-whiteframe-z1" layout layout-align="center center">
+    <material-whiteframe class="k-display-drug material-whiteframe-z1">
 
-<!-- <div class=k-display-drug> -->
+        <div id = "k-display-drug-name">
+        
+            {{ NDCEnhanced.NDCRecord.proprietaryname }}
+        
+        </div>
 
-    <div id = "k-display-drug-name">
-        {{ NDCEnhanced.NDCRecord.proprietaryname }}
-    </div>
+        <div>
 
-    <div>
+            Labeler: {{ NDCEnhanced.NDCRecord.labellername }}
 
-        Labeler: {{ NDCEnhanced.NDCRecord.labellername }}
-
-    </div>
+        </div>
                
     <!-- Have 1 or more drug ingredients -->
-    {% if NDCEnhanced.ActiveList is NotEmptyArray %}
+        {% if NDCEnhanced.ActiveList is NotEmptyArray %}
 
 
-        <div class="k-drug-ingredient-panel">
+            <div id="k-drug-ingredient-panel">
 
-            <!-- Create a count indexed ingredient form "<form id="ingredient-1" > --> 
-            <form id = {{ indexedId("ingredient", DrugCount) }} >
-                
-                <!-- Store the ingredient count in a hidden type -->            
-                <input id="active-count" type="hidden" value={{ NDCEnhanced.ActiveListSize }} />
-
-                <!-- Loop through the ingredients --> 
+            <!-- Loop through the ingredients --> 
 
                 {% set Count = 1 %}                
                 {% for Ingredient in NDCEnhanced.ActiveList %}
 
-                    <div>
-
-                        <!-- Display the drug ingredient -->
-                        <div id="submit-i" class="foundicon-plus small radius button">Strength</div>
-
-                        <script>$("#submit-i").click(ingredientSubmit( {{ Count }}
-                                                                     , "{{ Ingredient[0] }}"
-                                                                     , "{{ Ingredient[1] }}"
-                                                                     , "{{ Ingredient[2] }}"));
-                        </script>
-
-                        <!-- Store the ingredient data in the form; uses the JINJA indexed id macro
-                        <script>$("#" + {{ indexedId("ingredient", DrugCount) }}).addIngredient( "{{ Ingredient[0] }}"
-                                                                                               , "{{ Ingredient[1] }}"
-                                                                                               , "{{ Ingredient[2] }}");
-                        </script>
-                        Not working on multiple drug records -->
+                    <div> <!-- Individual ingredient -->
                         
-                        <!-- Write out the ingredient -->
+                    <!-- Write out the ingredient -->
                         {{ Ingredient[0] }}; {{ Ingredient[1] }} {{ Ingredient[2] }}
 
                         {% set Count = Count + 1 %}
@@ -57,75 +35,27 @@
 
                 {% endfor %}
                 
-            </form>
-            <!-- Set the submit JS function for the ingredient search form. -->                
-            <script>$("#" + {{ indexedId("ingredient", DrugCount) }}).submit(ingredientSearch);</script> 
+            </div> <!-- ingredient panel -->
 
-        </div> <!-- panel -->
-
-    {% endif %} <!-- 1 or more drug ingredients -->
-
+        {% endif %} <!-- 1 or more drug ingredients -->
             
-    <div>
+        <div> <!-- Dosage Route -->
         
-        Dosage / Route: {{ NDCEnhanced.NDCRecord.dosageformname }} / {{ NDCEnhanced.NDCRecord.routename }}
+            Dosage / Route: {{ NDCEnhanced.NDCRecord.dosageformname }} / {{ NDCEnhanced.NDCRecord.routename }}
 
-    </div> 
-    <div>
+        </div> <!-- Dosage Route -->
+        <div> <!-- Package -->
 
-        Package: {{ NDCEnhanced.NDCRecord.packagedescription }}
+            Package: {{ NDCEnhanced.NDCRecord.packagedescription }}
 
-    </div> 
+        </div> 
 
-    <!-- If 1 or more Pharma classes -->
-    {% if NDCEnhanced.Classes is NotEmptyArray %}
 
-        <div> 
+        <div>
 
-            <!-- If 1 Pharma class -->
-            {% if NDCEnhanced.Classes is SingleElementArray %}
-                
-                Pharma Class:   <!-- Single Pharma class label -->
-                
-            {% else %}
-            
-                Pharma Classes : <!-- Multiple Pharm class label -->
-                
-            {% endif %} 
-            
+            National Drug Code: {{ NDCEnhanced.NDCRecord.ndc }} ({{ NDCEnhanced.NDCRecord.format }})
+
         </div>
 
-            <!-- Loop through all the classes -->
-            
-        <div class="k-drug-class-panel">
-
-            {% for Class in NDCEnhanced.Classes %}
-                                
-                <div> 
- 
-                    {{ Class }} <!-- Print out the Pharma class -->
-
-                </div>
-                    
-            {% endfor %}
-
-        </div> <!-- Panel -->
-                
-    {% endif %} <!-- If 1 or more Pharma classes -->
-
-    <div>
-
-        National Drug Code: {{ NDCEnhanced.NDCRecord.ndc }} ({{ NDCEnhanced.NDCRecord.format }})
-
-    </div>
-
-    <div> 
- 
-        11 Digit NDC: {{ NDCEnhanced.NDCElevenDigits }} (5-4-2)    
-
-    </div>
-
-<!-- </div> -->
-
-</material-whiteframe>
+    </material-whiteframe>
 

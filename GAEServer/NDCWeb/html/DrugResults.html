@@ -23,32 +23,27 @@
 
     <!-- Data (AJAX) HTML section begins --> 
 
-    <div id="k-search-results">
+    <material-content id="k-search-results" class="material-content-padding">
 
-        <div class="row">
+        {% include "DrugScreenDivider.html" %} 
 
-            <div class="large-12 columns">
+        <div id="k-results-container">
 
-                {% include "DrugScreenDivider.html" %} 
+                {% set DrugCount = 0 %}    
+                {% for NDCEnhanced in NDCEnhancedArray %}
 
-                <div id="k-results-container">
-
-                    {% set DrugCount = 0 %}    
-                    {% for NDCEnhanced in NDCEnhancedArray %}
-
-                        {% set DrugCount = DrugCount + 1 %}  
-                        {% include "DrugDisplaySingle.html" %} 
+                    {% set DrugCount = DrugCount + 1 %}  
+                    {% include "DrugDisplaySingle.html" %} 
             
-                    {% endfor %}
+                {% endfor %}
 
-                </div>
+        </div>
 
-            </div>   <!-- large 12 columns -->
-
-        </div>   <!-- row -->
-
-    </div>
-    <script>$(document).ready(k_initializeResults("#k-search-results", {{ NDCEnhancedArraySize }} ));</script> 
+    </material-content>
+    <div k-search-summary="{{ NDCEnhancedArraySize }}"></div>
+    <script>
+        $(document).ready(k_initializeResults("#k-search-results", {{ NDCEnhancedArraySize }} ));
+    </script> 
                 
 <!-- End of Data (AJAX) Section -->
 

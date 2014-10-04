@@ -682,110 +682,62 @@ $K-Radio-Max-Screensize-Expand : 900px;  // Expandable at this size and below.
 ************************************************************************************************/
 
 
-
-
-*,
-*:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-
 .k-drop-down-wrapper {
     /* Size and position */
+    @include box-sizing(border-box);
+    padding: 0;
+    margin: 0;
     position: relative;
-    width: 9em;
-//    margin: 0 auto;
-    margin: 0.2em 0 0 1em;
-    padding: 0.3em;
+    overflow:visible;
     z-index:    99;
+    width: 9em;
 
-    /* Styles */
-    border: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
-    cursor: pointer;
-    outline: none;
-
-}
-
-.k-drop-down-wrapper:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    margin-top: -3px;
-    border-width: 6px 6px 0 6px;
-    border-style: solid;
-    border-color: $K-ACCENT-COLOR-400 transparent;
-}
-
-.k-drop-down-wrapper .dropdown {
-  /* Size & position */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    /* Styles */
-    background: white;
-    border: 1px solid rgba(0,0,0,0.17);
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    font-weight: normal;
-    -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
-    -ms-transition: all 0.3s ease-in;
-    -o-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-    list-style: none;
-
-    /* Hiding */
-    opacity: 0;
-    pointer-events: none;
-}
-.k-drop-down-wrapper .dropdown li a {
-    display: block;
-    padding: 0.3em;
-    text-decoration: none;
-    color: #8aa8bd;
-    border-bottom: 1px solid $K-ACCENT-COLOR-400;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-
-.k-drop-down-wrapper .dropdown li i {
-    float: right;
-    color: inherit;
-}
-
-.k-drop-down-wrapper .dropdown li:first-of-type a {
-}
-
-.k-drop-down-wrapper .dropdown li:last-of-type a {
-    border: none;
-}
-
-/* Hover state */
-
-.k-drop-down-wrapper .dropdown li:hover a {
-    background: #f3f8f8;
-}
 
 /* Active state */
 
-.k-drop-down-wrapper.active .dropdown {
-    opacity: 1;
-    pointer-events: auto;
+    &.active .dropdown {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    & .dropdown {
+  /* Size & position */
+        @include box-sizing(border-box);
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    /* Styles */
+        background: white;
+        @include transition-duration(0.3s);
+        @include transition-timing-function(ease-in);
+        @include MaterialBoxShadow(3);   // z-level = 2
+        list-style: none;
+
+    /* Hiding */
+        opacity: 0;
+        pointer-events: none;
+
+
+        & li > * {
+            display: block;
+            padding: 0.3em;
+            color: darken(white, 80%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+            @include transition-duration(0.3s);
+            @include transition-timing-function(ease-in);
+        }
+
+
+    }
+
+
 }
+
+
 
 
 

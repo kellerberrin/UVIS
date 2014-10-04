@@ -6,137 +6,75 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>US Drug Search</title>
-<!-- The JQuery function library -->
+<!-- JQuery function library and Modernizr -->
         <script src="/js/vendor/jquery.js"></script>  <!-- Important! - load this first -->
+        <script src="/js/vendor/modernizr.js"></script>
 <!-- Roboto Font -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-<!-- Angular Material Design -->
-        <link rel="stylesheet" href="/css/vendor/angular-material.css"> 
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 <!-- Local CSS stuff. specific setup -->
         <link rel="stylesheet" href="/css/app.css" />
-        <script src="/js/vendor/modernizr.js"></script>
-<!-- Kellerberrin widget and library functions - must be declared in the head -->
+<!-- Angular Material Design CSS -->
+        <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css"> 
+<!-- Angular Material Design Javascript -->
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/hammerjs/hammer.js"></script>
+        <script src="/bower_components/angular-material/angular-material.js"></script>
+<!-- Local Angular Javascript -->
+        <script src="/js/local-angular.js"></script>
+<!-- Kellerberrin widget and library functions-->
         <script src="/js/k-widgets.js"></script> 
-<!-- App specific logic - must be declared in the head -->
+<!-- App specific logic -->
         <script src="/js/local.js"></script> 
     </head>
 <!-- [END head_html] --> 
 <!-- [BEGIN body html]-->
     <body ng-app="k_DrugSearch">
 
-<!-- Angular Material Design Stuff -->
-
-        <script>
-            function k_DrugSearchCtrl($scope) {
-
-                $scope.data = { search : { text: "", type : "name" } };
-                
-                $scope.performSearch = function() {
-                    k_postAngularSearch($scope.data.search.text, $scope.data.search.type);
-//                    k_consoleLog($scope);
-                }
-            }
-        </script>
-
-
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-animate/angular-animate.js"></script>
-        <script src="/bower_components/hammerjs/hammer.js"></script>
-        <script src="/bower_components/angular-material/angular-material.js"></script>
-        <script>
-
-        // Include app dependencies on ngAnimate and ngMaterial
-
-        var k_DrugSearchModule = angular.module( "k_DrugSearch", [ "ngAnimate", "ngMaterial" ] );
-
-        k_DrugSearchModule.controller("k_DrugSearchCtrl", k_DrugSearchCtrl );
-
-        </script>
-
-        <!-- Angular Material Design Stuff -->
+        <div layout="horzontal" layout-align="space-around">
 
         <!-- ************ Top Level Page Ident *******************-->
 
-        <div id="k-search-page" ng-controller="k_DrugSearchCtrl"> 
+            <script>
+            // Angular Material Design - include app dependencies on ngAnimate and ngMaterial
+            var k_DrugSearchModule = angular.module( "k_DrugSearch", [ "ngAnimate", "ngMaterial" ] );
+            k_DrugSearchModule.controller("k_DrugSearchCtrl", k_DrugSearchCtrl );
+            </script>
 
-        <!-- ************ Header Area Layout *******************-->
-
-            <div id="k-header-area"> 
-
-                <div class="row">
-
-                    <div class="small-12 large-offset-1 large-10 columns ">
-
-                        {% include "DrugHeader.html" %}
-                
-                    </div> <!-- large-12 columns -->           
-
-                </div> <!-- row -->
-        
-            </div> <!-- ************ Header Area Layout *******************-->
-
-            <div id="k-top-panel"> <!--*********** Top Panel Layout *******************-->
-
-                <div class="row"> 
-            
-                    <div class="large-offset-1 large-5 columns">
-
-                        {% include "DrugTopLeftPanel.html" %}
-               
-                    </div> <!-- large-5 columns -->
+            <div id="k-search-page" ng-controller="k_DrugSearchCtrl"> 
+ 
    
-                    <div class="small-12 large-5 columns">
+           <!-- ************ Header Area Layout *******************-->
+
+                <div id="k-header-area"> 
+
+                    {% include "DrugHeader.html" %}
                 
-                        {% include "DrugSearchPanel.html" %}
-
-                    </div> <!-- large-5 columns -->
- 
-                    <div class="large-1 columns">
-                    </div> <!-- large-1 columns -->
-
-                </div> <!-- row -->
- 
-            </div> <!--*********** Top Panel Layout *******************-->
         
-            <div id="k-ajax-area"> <!-- ************ AJAX search data*******************-->
+                </div> <!-- ************ Header Area Layout *******************-->
+        
+                <div id="k-ajax-area"> <!-- ************ AJAX search data*******************-->
 
-                <div class = "row">
- 
-                    <div class="small-12 large-offset-1 large-10 columns">
-
-                        {% include "DrugAjax.html" %}
-
-                    </div> <!-- large-12 columns --> 
- 
-                </div> <!-- row --> 
+                    {% include "DrugAjax.html" %}
     
-            </div> <!-- ************ AJAX *******************-->
+                </div> <!-- ************ AJAX *******************-->
 
-            <div id="k-layout-footer"></div>
+                <div id="k-layout-footer"></div>
     
-        </div> <!-- ************ Top Level Page Ident *******************-->
+            </div> <!-- ************ End Top Level Page *******************-->
 
-        <div id="k-search-footer"> <!-- Footer uses the compass @mixin and is defined outside the top-level page -->
-                
-            <div class = "row">
- 
-                <div class="small-12 large-12 columns">
+        <!-- Footer uses the compass @mixin and is defined outside the top-level page -->
 
-                    &copy Copyright Kellerberrin 2014
-    
-                </div> <!-- large-12 columns --> 
- 
-            </div> <!-- row --> 
+            <div id="k-search-footer"> 
 
-        </div>
+               &copy Copyright Kellerberrin 2014
 
-        {% include "DrugModalAlerts.html" %} <!-- Modal box stuff --> 
+            </div>
+
+        </div> <!-- horizontal -->
  
 <!-- Application specific initialization. See local.js for details. -->            
         <script>$(document).ready(k_localInitialization);</script> 
-<!-- JS to Initialize Foundation -->
-        <script src="/js/foundation.min.js"></script>
-        <script src="/js/app.js"></script>    
     </body>
 <!-- [END body html]-->
 </html>

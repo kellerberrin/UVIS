@@ -2,29 +2,43 @@
     <!-- Defines the header are of the Drug Search application -->
 
     <nav id="k-drug-toolbar">
-                     
+
         <material-toolbar class="material-medium">
-        <div>
-            <div layout="horizontal">
-                <div style= "padding: 0.6em;">Drug Search </div>
-		            <div id="dd" class="k-drop-down-wrapper material-theme-light-blue" tabindex="1">
-			            <span>By Name</span>
-				        <ul class="dropdown">
-				            <li><a href="#">By Name</a></li>
-						    <li><a href="#">By Ingredient</a></li>
-						    <li><a href="#">By Code (NDC)</a></li>
-					    </ul>
-				    </div>
-            </div> <!-- Horizontal -->
-		</div>
+
             <div class="material-toolbar-tools">
+                    
+                <div id="k-search-title">Search by</div>
+
+    		    <material-button id="k-searchtype-dropdown" 
+    		                     class="k-drop-down-wrapper material-button-raised material-theme-light-blue" 
+    		                     ng-click="updateType()"
+    		                     layout="horizontal" >
+                    <div layout="horizontal">
+        			    <span>Name</span>
+                        <material-icon icon="/images/icons/caret-down-24.svg" style="width: 24px; height: 24px;"></material-icon>
+                    </div> <!-- Horizontal -->
+    		        <ul class="dropdown">
+    				    <li><material-button>Name</material-button></li>
+    				    <li><material-button>Ingredient</material-button></li>
+    				    <li><material-button>Code (NDC)</material-button></li>
+    			    </ul>
+                </material-button>
+            
+            </div> <!-- Horizontal -->
+
+            <div class="material-toolbar-tools">
+
                 <material-input-group class="material-input-group-inverted">
-                    <material-input type="search" ng-model="data.search.text"></material-input>
+                    <label for="k-md-searchtext">Enter Search Text</label>                    
+                    <material-input id="k-md-searchtext" type="search" ng-model="model.search.text"></material-input>
                 </material-input-group>
+
                 <material-button id="k-md-search" ng-click="performSearch()" class="material-button-fab material-theme-light-blue">
                     <material-icon icon="/images/icons/search24.svg" style="width: 24px; height: 24px;"></material-icon>
                 </material-button>
+
             </div>
+
         </material-toolbar>
 
     </nav>                    
