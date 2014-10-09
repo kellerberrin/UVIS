@@ -131,8 +131,20 @@ Update the Local and (Optional!) Remote Repository on Github
 |
 
 *   (Optional!) Push the local repository onto the remote (public!) Github.
+    Note the '-u' flag.
 
-    |action| $git push origin master
+    -u, --set-upstream
+           For every branch that is up to date or successfully pushed, add
+           upstream (tracking) reference, used by argument-less git-pull(1)
+           and other commands. For more information, see branch.<name>.merge
+           in git-config(1).
+
+    This only needs to be done once and allows the integrated git CVS function
+    in Webstorm with the existing git setup.
+
+    |action| $git push -u origin master (once)
+
+    |action| $git push origin master (after that)
 
 |
 

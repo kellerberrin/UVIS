@@ -1,1 +1,0 @@
-Dividers, created with the `<material-divider>` directive.

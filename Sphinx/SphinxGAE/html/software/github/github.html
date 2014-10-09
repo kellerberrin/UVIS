@@ -232,8 +232,26 @@ The &#8216;-all&#8217; flag is required and removes the delete of all removed fi
 <div class="line"><br /></div>
 </div>
 <ul>
-<li><p class="first">(Optional!) Push the local repository onto the remote (public!) Github.</p>
-<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git push origin master</p>
+<li><p class="first">(Optional!) Push the local repository onto the remote (public!) Github.
+Note the &#8216;-u&#8217; flag.</p>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-u</span>, <span class="option">--set-upstream</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td><p class="first last">For every branch that is up to date or successfully pushed, add
+upstream (tracking) reference, used by argument-less git-pull(1)
+and other commands. For more information, see branch.&lt;name&gt;.merge
+in git-config(1).</p>
+</td></tr>
+</tbody>
+</table>
+<p>This only needs to be done once and allows the integrated git CVS function
+in Webstorm with the existing git setup.</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git push -u origin master (once)</p>
+<p><a class="reference internal" href="../../_images/emphasize3.png"><img alt="action" src="../../_images/emphasize3.png" style="width: 20pt; height: 20pt;" /></a> $git push origin master (after that)</p>
 </li>
 </ul>
 <div class="line-block">

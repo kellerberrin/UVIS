@@ -254,98 +254,27 @@ body.loading .k-modal-wait {
 *
 *
 ************************************************************************************************/
-/* line 16, ../../scss/_k-local.scss */
+/* line 17, ../../scss/_k-local.scss */
 #k-drug-toolbar {
   display: block;
   color: white;
   background-color: #3f51b5;
   margin: none;
 }
-/* line 23, ../../scss/_k-local.scss */
+/* line 24, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-md-search {
   position: relative;
   top: 1.0em;
 }
 
-/* line 32, ../../scss/_k-local.scss */
+/* line 33, ../../scss/_k-local.scss */
 #k-search-title {
   padding: 0.6em;
 }
 
-/*********************************************************************************************
-*
-*
-* The screen divider.
-*
-*
-************************************************************************************************/
-/* line 56, ../../scss/_k-local.scss */
-#k-screen-divider {
-  height: 2.0em;
-  padding: none;
-  margin: none;
-  border: none;
-  margin-top: 0.6em;
-  border-bottom: 1px solid gray;
-  /* #k-expansion-button */
-  /* #k-expansion-button.k-collapsed */
-}
-/* line 65, ../../scss/_k-local.scss */
-#k-screen-divider #k-expansion-button {
-  float: left;
-  display: none;
-  /* Display when .k-active-results set in JS (below) */
-  padding: none;
-  margin: none;
-  border: none;
-  color: #333333;
-  /* #k-expand-all-icon  */
-  /* #k-expand-all-text  */
-}
-/* line 74, ../../scss/_k-local.scss */
-#k-screen-divider #k-expansion-button:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b3b3b3), color-stop(100%, #999999));
-  background-image: -webkit-linear-gradient(#b3b3b3, #999999);
-  background-image: -moz-linear-gradient(#b3b3b3, #999999);
-  background-image: -o-linear-gradient(#b3b3b3, #999999);
-  background-image: linear-gradient(#b3b3b3, #999999);
-}
-/* line 81, ../../scss/_k-local.scss */
-#k-screen-divider #k-expansion-button #k-expand-all-icon {
-  float: left;
-  font-size: 2.0em;
-  padding: none;
-  margin: none;
-  margin-right: 0.2em;
-}
-/* line 98, ../../scss/_k-local.scss */
-#k-screen-divider #k-expansion-button #k-expand-all-text {
-  float: left;
-  border: none;
-  padding: none;
-  margin: none;
-  margin-top: 0.5em;
-  margin-right: 1.0em;
-  font-size: 0.9em;
-  text-align: left;
-}
-/* line 124, ../../scss/_k-local.scss */
-#k-screen-divider #k-notification-area {
-  float: left;
-  border: none;
-  padding: none;
-  margin: none;
-  margin-top: 0.5em;
-  margin-left: 1.5em;
-  font-size: 0.9em;
-  color: gray;
-}
-
-/* #k-screen-divider */
-/* Display when .k-active-results */
-/* line 143, ../../scss/_k-local.scss */
-#k-search-results.k-active-results #k-expansion-button {
-  display: block;
+/* line 43, ../../scss/_k-local.scss */
+#k-md-searchtext {
+  color: white;
 }
 
 /*********************************************************************************************
@@ -380,7 +309,7 @@ html, body {
   height: 1.5em;
 }
 
-/* line 168, ../../scss/_k-local.scss */
+/* line 62, ../../scss/_k-local.scss */
 #k-search-footer {
   margin: none;
   text-align: center;
@@ -388,7 +317,7 @@ html, body {
   background-color: #3f51b5;
 }
 
-/* line 178, ../../scss/_k-local.scss */
+/* line 72, ../../scss/_k-local.scss */
 #k-search-page {
   width: 600px;
 }
@@ -399,7 +328,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 192, ../../scss/_k-local.scss */
+/* line 89, ../../scss/_k-local.scss */
 #k-display-results {
   height: 700px;
   padding: none;
@@ -408,7 +337,7 @@ html, body {
   background-position: center top;
   background-size: 100% auto;
 }
-/* line 201, ../../scss/_k-local.scss */
+/* line 98, ../../scss/_k-local.scss */
 #k-display-results #k-search-results {
   height: inherit;
 }
@@ -420,7 +349,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 222, ../../scss/_k-local.scss */
+/* line 119, ../../scss/_k-local.scss */
 .k-display-drug {
   display: block;
   background-color: white;
@@ -428,14 +357,14 @@ html, body {
   margin-bottom: 2.0em;
   margin-top: 2.0em;
 }
-/* line 230, ../../scss/_k-local.scss */
+/* line 127, ../../scss/_k-local.scss */
 .k-display-drug #k-display-drug-name {
   width: 100%;
   background-color: #c5cae9;
   font-size: 1.2em;
   padding: 0.5em;
 }
-/* line 238, ../../scss/_k-local.scss */
+/* line 135, ../../scss/_k-local.scss */
 .k-display-drug #k-drug-ingredient-panel {
   display: block;
   background-color: white;

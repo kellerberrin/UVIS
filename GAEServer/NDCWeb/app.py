@@ -7,6 +7,7 @@ import jinja2
 import webapp2
 
 from drugdatabase import ReadNDCDatabase
+from drugdatabase import ReadNDCDatabaseJSON
 
 def NotEmptyArray(Array):
     "Simple Custom Tests for JinJa. Tests for Empty Array"
@@ -44,21 +45,28 @@ SearchArray = []
 
 def DisplayResults(SearchText, SearchType, SearchArray, RequestHandler) :
 
-        "Write out results"
+    "Write out results"
 
-        TemplateValues = ReadNDCDatabase(SearchText, SearchType, SearchArray)
+    TemplateValues = ReadNDCDatabase(SearchText, SearchType, SearchArray)
                 
-        Template = JINJA_ENVIRONMENT.get_template(TEMPLATE_RESULT_HTML)        
+    Template = JINJA_ENVIRONMENT.get_template(TEMPLATE_RESULT_HTML)
 
-        RequestHandler.response.write(Template.render(TemplateValues))
+    RequestHandler.response.write(Template.render(TemplateValues))
 
-        
-        
+
+def ReturnResultsJSON(SearchText, SearchType, SearchArray, RequestHandler) :
+
+    "Stream JSON Result Object"
+
+    RequestHandler.response.write(ReadNDCDatabaseJSON(SearchText, SearchType, SearchArray))
+
+
 class SearchPage(webapp2.RequestHandler):
     def get(self):
         " Display the search page. "
 
         template = JINJA_ENVIRONMENT.get_template(TEMPLATE_SEARCH_HTML)        
+
         self.response.write(template.render())
 
 
@@ -82,6 +90,27 @@ class GetSearchString(webapp2.RequestHandler):
  
         DisplayResults(SearchText, SearchType, SearchArray, self) 
         		                                 
+
+class GetSearchStringJSON(webapp2.RequestHandler):
+
+    def post(self):
+        " Callback to handle NDC search keys posted by the HTML search form."
+        global SearchText
+        global SearchType
+        global SearchArray
+
+        SearchText = self.request.get('searchstring')
+        SearchType = self.request.get('searchtype')
+
+        if SearchType=="ndc":
+            SearchText = SearchText.replace("-","")
+        else:
+            SearchText = SearchText.upper()
+
+        SearchText = SearchText.strip()
+
+        ReturnResultsJSON(SearchText, SearchType, SearchArray, self)
+
 
 class GetNDC(webapp2.RequestHandler):
 
@@ -136,6 +165,7 @@ class GetIngredients(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', SearchPage),
     ('/searchdb', GetSearchString),
+    ('/searchdbjson', GetSearchStringJSON),
     ('/selectndc', GetNDC),
     ('/searchingredients', GetIngredients),
 ], debug=True)

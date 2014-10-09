@@ -9,15 +9,16 @@
 *
 ************************************************************************************************/
 
-$K-Menu-Background-Colour: $K-PRIMARY-COLOR-500;
-$K-Menu-Text-Colour: white;
+$K-Menu-Background-color: $K-PRIMARY-COLOR-500;
+$K-Menu-Text-color: white;
+$K-Input-Text-Color: white;
 
 
 #k-drug-toolbar {
 
     display: block;
-    color: $K-Menu-Text-Colour;
-    background-color: $K-Menu-Background-Colour;
+    color: $K-Menu-Text-color;
+    background-color: $K-Menu-Background-color;
     margin: none;
     
     #k-md-search {
@@ -36,121 +37,14 @@ $K-Menu-Text-Colour: white;
 }
 
 
-/*********************************************************************************************
-*
-*
-* The screen divider.
-*
-*
-************************************************************************************************/
+// Set the the input text colors.
 
 
-$K-Divider-Expand-Icon-Inactive: darken(white, 20%);
-$K-Divider-Expand-Icon-Active: darken(white, 80%);
-$K-Divider-Border: darken(white, 50%);
-$K-Divider-Notification: darken(white, 50%);
-$K-Divider-Hover-Background-Colour: darken($K-Divider-Expand-Icon-Inactive, 10%);
-$K-Divider-Hover-Stop-Gradient-Colour: darken($K-Divider-Hover-Background-Colour, 10%);
+#k-md-searchtext {
 
-
-#k-screen-divider {
-    
-    height: 2.0em;
-    padding: none;
-    margin: none;
-    border: none;
-    margin-top: 0.6em;
-    border-bottom: 1px solid $K-Divider-Border;  
-
-    & #k-expansion-button {
-        
-        float: left;
-        display: none; /* Display when .k-active-results set in JS (below) */    
-        padding: none;
-        margin: none;
-        border: none;
-        color: $K-Divider-Expand-Icon-Active;                
-
-        &:hover {
-            
-            @include background-image(linear-gradient( $K-Divider-Hover-Background-Colour
-                                                     , $K-Divider-Hover-Stop-Gradient-Colour));            
-        }        
-        
-        
-        & #k-expand-all-icon {
-         	        
-            float: left;
-            font-size: 2.0em;
-            padding: none;
-            margin: none;
-            margin-right: 0.2em;
-           
-            &:before {
-
-                @extend .fa;
-                @extend .fa-minus-square-o;
-
-    	    }
-                        
-        } /* #k-expand-all-icon  */
-        
-        & #k-expand-all-text {
-    
-            float: left;
-            border: none;
-            padding: none;
-            margin: none;
-            margin-top: 0.5em;
-            margin-right: 1.0em;
-            font-size: 0.9em;
-            text-align: left;
-            
-        } /* #k-expand-all-text  */                   
-
-    } /* #k-expansion-button */
-        
-    & #k-expansion-button.k-collapsed #k-expand-all-icon {
-    
-        &:before {
-
-                @extend .fa;
-                @extend .fa-plus-square-o;
-
-        }            
-                   
-    } /* #k-expansion-button.k-collapsed */
-        
-    & #k-notification-area {
-
-        float: left;
-        border: none;
-        padding: none;
-        margin: none;
-        margin-top: 0.5em;
-        margin-left: 1.5em;
-        font-size: 0.9em;
-        color: $K-Divider-Notification;
-    }
-    
-} /* #k-screen-divider */
-
-
-/* Display when .k-active-results */ 
-
-#k-search-results.k-active-results {   
-
-    & #k-expansion-button {
-
-        display: block;    
-    
-    }
+  color: $K-Input-Text-Color;
 
 }
-
-
-
-
 
 /*********************************************************************************************
 *
@@ -160,7 +54,7 @@ $K-Divider-Hover-Stop-Gradient-Colour: darken($K-Divider-Hover-Background-Colour
 *
 ************************************************************************************************/
 
-$K-Footer-Background-Colour: $K-PRIMARY-COLOR-500;
+$K-Footer-Background-color: $K-PRIMARY-COLOR-500;
 $K-Search-Page-Width: 600px;
 
 @include sticky-footer(1.5em, "#k-search-page", "#k-layout-footer", "#k-search-footer");
@@ -170,7 +64,7 @@ $K-Search-Page-Width: 600px;
     margin: none;
     text-align: center;
     color: gray;
-    background-color: $K-Footer-Background-Colour;
+    background-color: $K-Footer-Background-color;
     
 }
 
@@ -180,6 +74,9 @@ $K-Search-Page-Width: 600px;
     width: $K-Search-Page-Width; //set the page max width.
 
 }
+
+
+
 
 
 /*********************************************************************************************

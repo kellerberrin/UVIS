@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/DrugScreenDivider.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/local-angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/vendor/fastclick.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/vendor/jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/vendor/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/vendor/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/vendor/placeholder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_customize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_settings.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/config/build.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/config/karma-sauce.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/config/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/config/test-utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/css/highlightjs-github.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/css/layout-demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/css/tab_demos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/flex-cell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/full-width-header-menu-footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/horizontal-vertical-layout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/keylines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/layout-order.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/layout-padding-offsets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/layout-padding-percents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/layout-padding.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/demo/layout/utility-attributes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/angular.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/bg9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/bgWhitePaper.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/docArrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_access_time_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_arrow_back_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_chevron_right_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_comment_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_insert_drive_file_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_label_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_launch_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_menu_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_more_vert_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_people_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_photo_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_play_arrow_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_refresh_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/ic_visibility_24px.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/icons/separator.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/list/60.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/logo-bradgreen@2x.fw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/logo-bradgreen@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/logo-maxlynch@2x.fw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/logo-maxlynch@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/logo-thomasburleson@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/quote.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/testimonial-hampton@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/testimonial-holly@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/testimonials/testimonial-james@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/img/washedout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/js/demoInclude.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/js/highlight-angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/js/highlight.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/home.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/layout-alignment.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/layout-container.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/layout-grid.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/layout-options.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/template/view-source.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/app/version.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/file-readers/json.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/processors/components-generate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/processors/jsdoc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/tag-defs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/component.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/components-data.template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/demo/template.file" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/api.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/componentGroup.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/directive.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/filter.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/function.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/input.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/module.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/object.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/provider.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/service.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/api/type.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/base.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/events.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/macros.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/methods.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/params.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/properties.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/returns.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/lib/this.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/ngdoc/overview.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/readme.template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/templates/template.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/docs/util/ngModuleData.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/scripts/bower-release.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/scripts/release.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/scripts/travis-build-init.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/scripts/utils.inc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/animate/_effects.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/animate/effects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/animate/inkCssRipple.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/animate/noEffect.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/backdrop/_backdrop.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/buttons.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/buttons/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/_card.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/card.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/card.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/card/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/_checkbox.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/checkbox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/checkbox.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/checkbox/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/_content.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/content.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/content.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/content/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/_dialog.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/demo1/my-dialog.tmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/dialog.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/dialog/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/_divider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/divider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/divider/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/icon/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/icon/_icon.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/icon/icon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/icon/icon.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/icon/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/_linearProgress.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/linearProgress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/linearProgress.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/linearProgress/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/list.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/list/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/_radio-button.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/radioButton.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/radioButton/radioButton.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/_sidenav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/sidenav.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/sidenav/sidenav.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/_slider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/slider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/slider/slider.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/_switch.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/switch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/switch/switch.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo2/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/demos/demo2/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/inkBarDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/paginationDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/tabItemController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/tabItemDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/tabsController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/js/tabsDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/tabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/tabs/tabs.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/_textField.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/textField.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/textField/textField.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/_toast.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/demo1/toast-template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/toast.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toast/toast.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/_toolbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/demo1/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/demo2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/demo2/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/demo2/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/toolbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/toolbar/toolbar.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/_whiteframe.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/demo1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/demo1/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/module.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/components/whiteframe/whiteframe.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/constant.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/_layout.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/_structure.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/_table.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/theme/_colors.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/theme/_fonts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/theme/_theme.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/theme/_utils.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/style/theme/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/util/iterator.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/util/iterator.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/core/util/util.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/main.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/aria/aria.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/attrBind/attrBind.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/compiler/compiler.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/compiler/compiler.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/decorators.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/registry/registry.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/src/services/registry/registry.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/start-hook.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../material-master/watch-hook.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/US Drug Database.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/libraries/AngularJS.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/libraries/LocalJS.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../US Drug Database/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/github/github.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/github/github.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/CHANGELOG.md" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/Gruntfile.coffee" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.py" afterPath="$PROJECT_DIR$/../../NDCWeb/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.yaml" afterPath="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/github/github.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/github/github.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/github/github.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/github/github.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/github/github.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/github/github.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.min.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/hammer.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/package.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/hammerjs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
+    </list>
+    <ignored path="US Drug Database.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="US Drug Database" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="angular-controllers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.28605768" vertical-offset="266" max-vertical-offset="1170">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
+              <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrugResults.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="900">
+              <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-local.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.8148148" vertical-offset="131" max-vertical-offset="2862">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrugHeader.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugHeader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.0" vertical-offset="144" max-vertical-offset="936">
+              <caret line="32" column="51" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_material-local.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="540">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrugSearch.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.4814816" vertical-offset="221" max-vertical-offset="1548">
+              <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrugAjax.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugAjax.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../NDCWeb/ndb_json.py" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/app.py" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local-angular.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="431" />
+    <option name="y" value="2" />
+    <option name="width" value="1400" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
+    <property name="options.lastSelected" value="File.Encoding" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="92" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="122" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="122" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1032" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="103" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="118" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="119" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1028" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../NDCWeb/html/js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="" />
+      <created>1412231442567</created>
+      <updated>1412231442567</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First Commit from Webstorm (no changes)">
+      <created>1412389426962</created>
+      <updated>1412389426962</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="431" y="2" width="1400" height="1053" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="First Commit from Webstorm (no changes)" />
+    <MESSAGE value="JSON service working - code rearranged" />
+    <MESSAGE value="Angular Material 0.40 - Toast Notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Angular Material 0.40 - Toast Notifications" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="US Drug Database" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="US Drug Database" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value=".idea" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/drugdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3996">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3330" max-vertical-offset="7974">
+          <caret line="185" column="61" selection-start-line="185" selection-start-column="52" selection-end-line="185" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1044">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2664">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/drugdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3996">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1008">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1008">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1008">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1008">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1008">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="11124">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1008">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="1008">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1008">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1728" max-vertical-offset="11124">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="7812">
+          <caret line="185" column="61" selection-start-line="185" selection-start-column="52" selection-end-line="185" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/github/github.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0740743" vertical-offset="4120" max-vertical-offset="5850">
+          <caret line="238" column="1" selection-start-line="238" selection-start-column="1" selection-end-line="238" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="3204">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/drugdatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3573" max-vertical-offset="4662">
+          <caret line="222" column="38" selection-start-line="222" selection-start-column="38" selection-end-line="222" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="900">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="684">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3726">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugAjax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="832">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="819">
+          <caret line="0" column="12865" selection-start-line="0" selection-start-column="12865" selection-end-line="0" selection-end-column="12865" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12332112" vertical-offset="5749" max-vertical-offset="8208">
+          <caret line="325" column="25" selection-start-line="325" selection-start-column="25" selection-end-line="325" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41758242" vertical-offset="0" max-vertical-offset="819">
+          <caret line="23" column="97" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="540">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8148148" vertical-offset="131" max-vertical-offset="2862">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.0" vertical-offset="144" max-vertical-offset="936">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4814816" vertical-offset="221" max-vertical-offset="1548">
+          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/DrugResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="900">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
+          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28605768" vertical-offset="266" max-vertical-offset="1170">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

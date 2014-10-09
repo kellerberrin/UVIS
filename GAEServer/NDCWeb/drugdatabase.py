@@ -1,5 +1,6 @@
 import os
 import logging
+import json
 
 
 from google.appengine.api import users
@@ -26,9 +27,43 @@ class NDCLookup(ndb.Model):
 
     
 class EnhancedNDCLookup :   
-    pass
-        
-        
+
+    def __init__(self):
+        self.NDCRecord = NDCLookup()   # ndb object
+        self.NDCElevenDigits = ""    # string
+        self.ActiveList = []         # list of strings
+        self.ActiveListSize = 0      # integer
+        self.Classes = []            # list of strings
+
+    def ConvertToDict(self):
+        dict = self.NDCRecord.to_dict()
+        dict.update({ "NDCElevenDigits" : self.NDCElevenDigits })
+        dict.update({ "ActiveList" : self.ActiveList } )
+        dict.update({ "ActiveListSize" : self.ActiveListSize })
+        dict.update({ "Classes" : self.Classes })
+        return dict;
+
+
+
+# JSON Conversion class for EnhancedNDCLookup
+
+class JSONClassEncoder(json.JSONEncoder):   # subclass the JSONEncoder class to handle ndb derived objects.
+
+    def default(self, obj):   # overrides the default function for the JSON conversion of non-simple types
+        # Convert objects to a dictionary of their representation
+
+        dict = { "__class__": obj.__class__.__name__,
+              "__module__":obj.__module__,
+              }
+
+        if isinstance(obj, EnhancedNDCLookup) :
+            dict.update(obj.ConvertToDict())
+        else :
+            dict.update(obj.__dict__)
+        return dict
+
+
+
 NDCSEARCHEXAMPLE = "Enter a 10 Digit NDC, Example: '0002477090' or '0002-4770-90'."
 GENERICSEARCHEXAMPLE = "Enter a Drug Name, Example 'Livalo' (case insensitive)."
 ACTIVESEARCHEXAMPLE = "Enter an Active Ingredient, Example 'Pitavastatin' (case insensitive)."	
@@ -185,7 +220,7 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     else : 
         SearchError = True
         SearchType = "name"
-        SearchExampleText = NDCSEARCHEXAMPLE
+        SearchExampleText = GENERICSEARCHEXAMPLE
         
     if not(SearchError) : NDCRecords = qNDC.fetch(limit=100)
 
@@ -214,3 +249,13 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     return JINJATemplatValues
                                
 
+def ReadNDCDatabaseJSON(searchtext, searchtype, searcharray):
+
+    if searchtype=="ndc":
+            searchtext = searchtext.replace("-", "")
+    else:
+            searchtext = searchtext.upper()
+
+    searchtext = searchtext.strip()
+
+    return JSONClassEncoder().encode(ReadNDCDatabase(searchtext, searchtype, searcharray))

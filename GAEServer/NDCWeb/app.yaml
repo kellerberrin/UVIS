@@ -26,7 +26,13 @@ handlers:
 - url: /images
   static_dir: html/images
 
-    
+# Library requests.
+# Endpoints for datastore search handler
+
+- url: /_ah/spi/.*
+  script: library.application
+
+# Standard web requests.
 # Redirect all requests to the application script.
 # Always use a secure link.
   
@@ -39,3 +45,7 @@ libraries:
   version: latest
 - name: jinja2
   version: latest  
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: latest

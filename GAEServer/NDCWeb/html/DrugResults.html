@@ -25,8 +25,6 @@
 
     <material-content id="k-search-results" class="material-content-padding">
 
-        {% include "DrugScreenDivider.html" %} 
-
         <div id="k-results-container">
 
                 {% set DrugCount = 0 %}    
@@ -40,11 +38,7 @@
         </div>
 
     </material-content>
-    <div k-search-summary="{{ NDCEnhancedArraySize }}"></div>
-    <script>
-        $(document).ready(k_initializeResults("#k-search-results", {{ NDCEnhancedArraySize }} ));
-    </script> 
-                
+
 <!-- End of Data (AJAX) Section -->
 
 {% endautoescape %}
