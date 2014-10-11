@@ -26,6 +26,10 @@ handlers:
 - url: /images
   static_dir: html/images
 
+- url: /partial
+  static_dir: html/partial
+
+
 # Library requests.
 # Endpoints for datastore search handler
 
@@ -43,8 +47,6 @@ handlers:
 libraries:
 - name: webapp2
   version: latest
-- name: jinja2
-  version: latest  
 - name: pycrypto
   version: latest
 - name: endpoints

@@ -1,0 +1,91 @@
+<!-- The HTML 5 page begins -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<!-- [START head_html] -->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>US Drug Search</title>
+    <!-- JQuery function library and Modernizr -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Important! - load this first -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- Roboto Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+    <!-- Local CSS stuff. specific setup -->
+    <link rel="stylesheet" href="/css/app.css"/>
+    <!-- Angular Material Design CSS -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <!-- Angular & Material Design Javascript -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/hammerjs/hammer.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <!-- Local Angular Javascript -->
+    <script src="/js/angular-app.js"></script>
+    <script src="/js/angular-controllers.js"></script>
+    <script src="/js/angular-directives.js"></script>
+    <script src="/js/angular-services.js"></script>
+    <!-- Google Endpoint client -->
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <!-- Kellerberrin widget and library functions-->
+    <script src="/js/k-widgets.js"></script>
+    <!-- Non Angular App specific logic -->
+    <script src="/js/local.js"></script>
+</head>
+<!-- [END head_html] -->
+<!-- [BEGIN body html]-->
+<body ng-app="USDrugSearchApp">
+
+<div ng-controller="DrugSearchCtrl">
+
+<div layout="horzontal" layout-align="space-around">
+
+    <!-- ************ Top Level Page Ident *******************-->
+
+    <div id="k-search-page">
+
+        <!-- ************ Header Area Layout *******************-->
+
+        <div ng-include src=" 'partial/DrugHeader.html' "></div>
+
+        <!-- ************ End Header Area Layout *******************-->
+
+        <!-- ************ Display Results Area *******************-->
+
+        <div ng-include src=" 'partial/DisplayResults.html' "></div>
+
+        <!-- ************ End Display Results Area *******************-->
+
+        <div class="k-modal-wait">
+        </div>
+        <!-- Modal wait cursor -->
+
+        <div id="k-layout-footer"></div>
+
+    </div>
+
+    <!-- ************ End Top Level Page *******************-->
+    <!-- Footer uses the compass @mixin "sticky-footer" and is defined outside the top-level page -->
+
+    <div id="k-search-footer">
+
+        &copy Copyright Kellerberrin 2014
+
+    </div>
+
+</div>
+
+</div>
+<!-- horizontal -->
+
+
+
+<!-- Application specific initialization. See local.js for details. -->
+<script>$(document).ready(k_localInitialization);</script>
+</body>
+<!-- [END body html]-->
+</html>

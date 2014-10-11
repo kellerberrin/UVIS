@@ -1,0 +1,39 @@
+<!-- Retrieves and verifies the search data of the Drug Search application -->
+<div id="k-header-area" ng-controller="DrugSearchParams">
+
+    <nav id="k-drug-toolbar">
+
+        <material-toolbar class="material-medium">
+
+            <div class="material-toolbar-tools">
+
+                <div id="k-search-title">Search by</div>
+
+                <select id="k-md-searchtype" ng-model="search.selectedsearchtype"
+                        ng-options="s.typeprompt for s in searchtypes"
+                        class="material-theme-light-blue">
+                </select>
+
+            </div>
+
+            <!-- Horizontal -->
+
+            <div class="material-toolbar-tools">
+
+                <material-input-group class="material-input-group-inverted">
+                    <label for="k-md-searchtext">Enter Search Text</label>
+                    <material-input id="k-md-searchtext" type="search" ng-model="search.searchtext"></material-input>
+                </material-input-group>
+
+                <material-button id="k-md-search" ng-click="getParamsSearch()"
+                                 class="material-button-fab material-theme-light-blue">
+                    <material-icon icon="/images/icons/search24.svg" style="width: 24px; height: 24px;"></material-icon>
+                </material-button>
+
+            </div>
+
+        </material-toolbar>
+
+    </nav>
+
+</div>

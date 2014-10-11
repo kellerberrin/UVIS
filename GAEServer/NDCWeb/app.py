@@ -3,39 +3,17 @@ import urllib
 import logging
 
 
-import jinja2
 import webapp2
 
 from drugdatabase import ReadNDCDatabase
 from drugdatabase import ReadNDCDatabaseJSON
 
-def NotEmptyArray(Array):
-    "Simple Custom Tests for JinJa. Tests for Empty Array"
-    return len(Array) > 0    
+""" Create the HTML directory """
 
-def SingleElementArray(Array):
-    "Simple Custom Test for JinJa. Tests for Single Element Array"
-    return len(Array) == 1    
-
-""" Create the JinJa template directory """
-
+TEMPLATE_SEARCH_HTML = 'index.html'
 TEMPLATE_DIRECTORY = 'html'
-Template_OS_Dir = os.path.join(os.path.dirname(__file__), TEMPLATE_DIRECTORY)
-
-TEMPLATE_SEARCH_HTML = 'DrugSearch.html'
-TEMPLATE_RESULT_HTML = 'DrugResults.html'
-#Template_OS_Dir = os.path.dirname(__file__)
-
-""" Create the JinJa Environment """         
-JINJA_ENVIRONMENT = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(Template_OS_Dir),
-    extensions=['jinja2.ext.autoescape'],
-    autoescape=True)
-    
-""" Register the utility functions with JinJa """         
-JINJA_ENVIRONMENT.tests["NotEmptyArray"] = NotEmptyArray
-JINJA_ENVIRONMENT.tests["SingleElementArray"] = SingleElementArray
-        
+TEMPLATE_OS_DIR = os.path.join(os.path.dirname(__file__), TEMPLATE_DIRECTORY)
+TEMPLATE_SEARCH_PATH = os.path.join(TEMPLATE_OS_DIR, TEMPLATE_SEARCH_HTML)
 
 """ Global variables used to implement an NDC database search """         
 SearchText = ""
@@ -43,31 +21,21 @@ SearchType = "name"
 SearchArray = []
 
 
-def DisplayResults(SearchText, SearchType, SearchArray, RequestHandler) :
-
-    "Write out results"
-
-    TemplateValues = ReadNDCDatabase(SearchText, SearchType, SearchArray)
-                
-    Template = JINJA_ENVIRONMENT.get_template(TEMPLATE_RESULT_HTML)
-
-    RequestHandler.response.write(Template.render(TemplateValues))
-
 
 def ReturnResultsJSON(SearchText, SearchType, SearchArray, RequestHandler) :
 
-    "Stream JSON Result Object"
+    """Stream JSON Result Object"""
 
     RequestHandler.response.write(ReadNDCDatabaseJSON(SearchText, SearchType, SearchArray))
 
 
 class SearchPage(webapp2.RequestHandler):
     def get(self):
-        " Display the search page. "
+        """ Display the search index page. """
 
-        template = JINJA_ENVIRONMENT.get_template(TEMPLATE_SEARCH_HTML)        
+        handle = open(TEMPLATE_SEARCH_PATH, "r")
 
-        self.response.write(template.render())
+        self.response.write(handle.read())
 
 
 class GetSearchString(webapp2.RequestHandler):
@@ -81,14 +49,14 @@ class GetSearchString(webapp2.RequestHandler):
         SearchText = self.request.get('searchstring')
         SearchType = self.request.get('searchtype')
         
-        if SearchType=="ndc":
-            SearchText = SearchText.replace("-","")
+        if SearchType == "ndc":
+            SearchText = SearchText.replace("-", "")
         else:
             SearchText = SearchText.upper()
   
         SearchText = SearchText.strip()
  
-        DisplayResults(SearchText, SearchType, SearchArray, self) 
+        SearchPage(self)
         		                                 
 
 class GetSearchStringJSON(webapp2.RequestHandler):
@@ -109,7 +77,7 @@ class GetSearchStringJSON(webapp2.RequestHandler):
 
         SearchText = SearchText.strip()
 
-        ReturnResultsJSON(SearchText, SearchType, SearchArray, self)
+        SearchPage(self)
 
 
 class GetNDC(webapp2.RequestHandler):
@@ -126,8 +94,8 @@ class GetNDC(webapp2.RequestHandler):
 
         SearchType = "ndc"
   
-        DisplayResults(SearchText, SearchType, SearchArray, self) 
-		
+        SearchPage(self)
+
 
 class GetIngredients(webapp2.RequestHandler):
 
@@ -159,7 +127,7 @@ class GetIngredients(webapp2.RequestHandler):
             SearchArray.append(SearchTuple)
             i = i + 1
          
-        DisplayResults(SearchText, SearchType, SearchArray, self) 
+        SearchPage(self)
 
 		
 application = webapp2.WSGIApplication([

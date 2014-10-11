@@ -4,49 +4,31 @@
 
 var USDrugControllers = angular.module("USDrugControllers", []);
 
+// Top level controller - contains all the drug data.
+
     USDrugControllers.controller("DrugSearchCtrl",
         [ "$scope"
         , "$materialToast"
-        , "USDrugDatabase"
         , "USDrugEndPoints"
-        , function DrugSearchCtrl($scope, $materialToast, USDrugDatabase, USDrugEndPoints) {
+        , function DrugSearchCtrl($scope, $materialToast, USDrugEndPoints) {
 
-            $scope.view = {};
-            $scope.model = {};
 
-            $scope.view.searchtype = new k_DropDown($("#k-searchtype-dropdown"));
-                
-            $scope.model.search  =  { text: ""
-                                    , type : "name"
-                                    , typelist : [ "name", "active", "ndc"]
-                                    , textpromptlist : ["name","active","ndc"]  };
-
-            $scope.model.search.prompt = $scope.model.search.textpromptlist[0];
-
-                
-            $scope.performSearch = function() {
-
-                $scope.model.search.text = k_postAngularSearch($scope.model.search.text, $scope.model.search.type);
-                $scope.requestTime = Date.now();
-                var searchParams = {searchstring : $scope.model.search.text , searchtype : $scope.model.search.type};
+            $scope.performSearch = function(searchParams) {
+                k_consoleLog(searchParams);
+                var requestTime = Date.now();
                 USDrugEndPoints.typeSearch(searchParams, function(data) {
-                    $scope.resultTime = Date.now();
                     $scope.requestResults = data;
-                    $scope.resultToast();
+                    k_consoleLog($scope.requestResults);
+                    var milliseconds = Date.now() - requestTime;
+                    $scope.resultToast(milliseconds);
                 });
 
             };
 
-            $scope.updateType = function() {
-
-                $scope.model.search.type = $scope.model.search.typelist[$scope.view.searchtype.getIndex()];
-
-            };
- 
-            $scope.resultToast = function() {
+            $scope.resultToast = function(milliseconds) {
 
                 var ToastText =  "Search found " + $scope.requestResults.NDCEnhancedArraySize + " drugs "
-                                 + "(" + (($scope.resultTime - $scope.requestTime) / 1000) + " secs)";
+                                 + "(" + (milliseconds / 1000) + " secs)";
 
                 var ToastOptions = { template: "<material-toast>" + ToastText + "</material-toast>", duration: 3000 };
 
@@ -54,6 +36,35 @@ var USDrugControllers = angular.module("USDrugControllers", []);
 
             }
 
-
         }]);
 
+// This controller is used to retrieve and verify search data.
+
+    USDrugControllers.controller("DrugSearchParams", [ "$scope", function DrugSearchParams($scope) {
+
+        // Define the search types.
+
+        $scope.searchtypes  =  [ { type : "name", typeprompt : "Name", defaulttext : "Livalo" }
+            , { type : "active", typeprompt : "Ingredient", defaulttext : "Pitavastatin" }
+            , { type : "ndc" , typeprompt : "Code (NDC)" , defaulttext : "0002-4772-90" } ];
+
+        // Setup the default search object bound to the select and input elements
+
+        $scope.search = { selectedsearchtype : $scope.searchtypes[0],
+                          searchtext : $scope.searchtypes[0].defaulttext };
+
+        // Verify the input variables and perform the search
+
+        $scope.getParamsSearch = function() {
+
+            var searchParams = { searchstring : $scope.search.searchtext
+                               , searchtype : $scope.search.selectedsearchtype.type };
+// todo: check the search parameters here.
+
+            // Call the search function defined in the parent scope.
+
+            $scope.performSearch(searchParams);
+
+        }
+
+    }]);
