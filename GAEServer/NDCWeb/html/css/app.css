@@ -100,46 +100,6 @@ body {
 </div> <!-- k-accordion -->
 <script>$(document).ready(function() { k_InitializeAccordian("expand-menu"); });</script> <!-- Must be initialized -->
 */
-/*********************************************************************************************
-*
-*
-* Modal Wait.
-*
-*********************************************************************************************** 
-*
-*   Put up a modal wait cursor between an AJAX request and response.
-*
-*   Start by setting display:none to make this hidden.
-*   Positioned in relation to the viewport window
-*   with position:fixed. Width, height, top and left. 
-*   Background to 50% white with
-*   animation centered, and no-repeating 
-*
-*
-*/
-/* line 230, ../../scss/_k-widgets.scss */
-.k-modal-wait {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.5) url(../images/ajax-loader.gif) 50% 50% no-repeat;
-}
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden 
-*/
-/* Anytime the body has the loading class, our
-   modal element will be visible 
-*/
-/* line 257, ../../scss/_k-widgets.scss */
-body.loading .k-modal-wait {
-  display: block;
-}
-
 /**************************Radio Buttons Mixin ************************************************************************* 
 *
 * Example SASS declaration:
@@ -184,7 +144,7 @@ body.loading .k-modal-wait {
 *
 *
 ************************************************************************************************/
-/* line 685, ../../scss/_k-widgets.scss */
+/* line 635, ../../scss/_k-widgets.scss */
 .k-drop-down-wrapper {
   /* Size and position */
   -webkit-box-sizing: border-box;
@@ -198,12 +158,12 @@ body.loading .k-modal-wait {
   width: 9em;
   /* Active state */
 }
-/* line 698, ../../scss/_k-widgets.scss */
+/* line 648, ../../scss/_k-widgets.scss */
 .k-drop-down-wrapper.active .dropdown {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 703, ../../scss/_k-widgets.scss */
+/* line 653, ../../scss/_k-widgets.scss */
 .k-drop-down-wrapper .dropdown {
   /* Size & position */
   -webkit-box-sizing: border-box;
@@ -231,7 +191,7 @@ body.loading .k-modal-wait {
   opacity: 0;
   pointer-events: none;
 }
-/* line 725, ../../scss/_k-widgets.scss */
+/* line 675, ../../scss/_k-widgets.scss */
 .k-drop-down-wrapper .dropdown li > * {
   display: block;
   padding: 0.3em;
@@ -247,6 +207,11 @@ body.loading .k-modal-wait {
   transition-timing-function: ease-in;
 }
 
+/****************************************************************************************************
+*
+*  Set the theme colors
+*
+****************************************************************************************************/
 /*********************************************************************************************
 *
 *
@@ -254,27 +219,108 @@ body.loading .k-modal-wait {
 *
 *
 ************************************************************************************************/
-/* line 17, ../../scss/_k-local.scss */
+/* line 21, ../../scss/_k-local.scss */
 #k-drug-toolbar {
   display: block;
   color: white;
   background-color: #3f51b5;
   margin: none;
+  padding: none;
 }
-/* line 24, ../../scss/_k-local.scss */
-#k-drug-toolbar #k-md-search {
-  position: relative;
-  top: 1.0em;
+/* line 29, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-icon-toolbar {
+  background-color: #1a237e;
+  margin: none;
+  padding: none;
+  height: 3.0em;
 }
-
-/* line 33, ../../scss/_k-local.scss */
-#k-search-title {
+/* line 36, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-icon-toolbar #k-icon-toolbar-tools {
+  margin: none;
+  padding: none;
+  padding-top: 1.0em;
+  height: 2.0em;
+}
+/* line 43, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-icon-toolbar #k-icon-toolbar-tools #k-icon-toolbar-title {
+  color: #ff80ab;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+/* line 55, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: none;
+  padding: none;
+  height: 5.0em;
+}
+/* line 62, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-type-toolbar {
+  margin: none;
+  padding: none;
+  height: 2.0em;
+}
+/* line 68, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-title {
   padding: 0.6em;
 }
-
-/* line 43, ../../scss/_k-local.scss */
-#k-md-searchtext {
+/* line 74, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-md-searchtype {
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+/* line 83, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar {
+  margin: none;
+  padding: none;
+  height: 3.0em;
+}
+/* line 91, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-searchtext {
   color: white;
+}
+/* line 97, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-search {
+  position: relative;
+  top: 1.0em;
+  background-color: #03a9f4;
+}
+/* line 103, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-search.searchactive {
+  background-color: #ff80ab;
+}
+
+/*********************************************************************************************
+*
+*
+* Modal Wait.
+*
+***********************************************************************************************
+*
+*   Put up a modal wait cursor between an endpoint request and response.
+*
+*   Start by setting display:none to make this hidden.
+*   Positioned in relation to the viewport window
+*   with position:fixed. Width, height, top and left.
+*   Background to 50% white with
+*   animation centered, and no-repeating
+*
+*
+*************************************************************************************************/
+/* line 137, ../../scss/_k-local.scss */
+#k-modal-wait {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5) url(/images/ajax-loader.gif) 50% 50% no-repeat;
+}
+/* line 150, ../../scss/_k-local.scss */
+#k-modal-wait.searchactive {
+  display: block;
 }
 
 /*********************************************************************************************
@@ -309,7 +355,7 @@ html, body {
   height: 1.5em;
 }
 
-/* line 62, ../../scss/_k-local.scss */
+/* line 172, ../../scss/_k-local.scss */
 #k-search-footer {
   margin: none;
   text-align: center;
@@ -317,9 +363,17 @@ html, body {
   background-color: #3f51b5;
 }
 
-/* line 72, ../../scss/_k-local.scss */
-#k-search-page {
-  width: 600px;
+@media only screen and (max-width: 600px) {
+  /* line 181, ../../scss/_k-local.scss */
+  #k-search-page {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* line 181, ../../scss/_k-local.scss */
+  #k-search-page {
+    width: 600px;
+  }
 }
 
 /*********************************************************************************************
@@ -328,16 +382,16 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 89, ../../scss/_k-local.scss */
+/* line 204, ../../scss/_k-local.scss */
 #k-display-results {
   height: 700px;
   padding: none;
   margin: none;
-  background-image: url("../images/ScrollBackground.jpg");
+  background-image: url("/images/ScrollBackground.jpg");
   background-position: center top;
   background-size: 100% auto;
 }
-/* line 98, ../../scss/_k-local.scss */
+/* line 213, ../../scss/_k-local.scss */
 #k-display-results #k-search-results {
   height: inherit;
 }
@@ -349,7 +403,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 119, ../../scss/_k-local.scss */
+/* line 232, ../../scss/_k-local.scss */
 .k-display-drug {
   display: block;
   background-color: white;
@@ -357,14 +411,14 @@ html, body {
   margin-bottom: 2.0em;
   margin-top: 2.0em;
 }
-/* line 127, ../../scss/_k-local.scss */
+/* line 240, ../../scss/_k-local.scss */
 .k-display-drug #k-display-drug-name {
   width: 100%;
   background-color: #c5cae9;
   font-size: 1.2em;
   padding: 0.5em;
 }
-/* line 135, ../../scss/_k-local.scss */
+/* line 248, ../../scss/_k-local.scss */
 .k-display-drug #k-drug-ingredient-panel {
   display: block;
   background-color: white;

@@ -1,11 +1,25 @@
 <!-- Retrieves and verifies the search data of the Drug Search application -->
-<div id="k-header-area" ng-controller="DrugSearchParams">
 
-    <nav id="k-drug-toolbar">
+    <div id="k-drug-toolbar" ng-controller="DrugSearchParams">
 
-        <material-toolbar class="material-medium">
+        <material-toolbar id="k-icon-toolbar">
+            <div id="k-icon-toolbar-tools" class="material-toolbar-tools">
+                <material-button class="material-theme-light-blue">
+                    <img src="/images/icons/white_bars24.svg" width="24" height="24">
+                </material-button>
+                <span id="k-icon-toolbar-title" flex>PharmCat</span>
+                <material-button class="material-theme-light-blue">
+                    <img src="/images/icons/white_barcode24.svg" width="24" height="24">
+                </material-button>
+                <material-button class="material-theme-light-blue">
+                    <img src="/images/icons/white_search24.svg" width="24" height="24">
+                </material-button>
+            </div>
+        </material-toolbar>
 
-            <div class="material-toolbar-tools">
+        <material-toolbar id="k-search-toolbar" scroll-shrink class="material-medium">
+
+            <div id="k-search-type-toolbar" class="material-toolbar-tools">
 
                 <div id="k-search-title">Search by</div>
 
@@ -18,7 +32,7 @@
 
             <!-- Horizontal -->
 
-            <div class="material-toolbar-tools">
+            <div id="k-search-text-toolbar" class="material-toolbar-tools">
 
                 <material-input-group class="material-input-group-inverted">
                     <label for="k-md-searchtext">Enter Search Text</label>
@@ -26,14 +40,13 @@
                 </material-input-group>
 
                 <material-button id="k-md-search" ng-click="getParamsSearch()"
-                                 class="material-button-fab material-theme-light-blue">
-                    <material-icon icon="/images/icons/search24.svg" style="width: 24px; height: 24px;"></material-icon>
+                                 class="material-button-fab"
+                                 ng-class="{ searchactive: searchactive}">
+                    <img src="/images/icons/search24.svg" width="24" height="24">
                 </material-button>
 
             </div>
 
         </material-toolbar>
 
-    </nav>
-
-</div>
+    </div>

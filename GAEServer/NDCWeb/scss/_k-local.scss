@@ -1,5 +1,5 @@
 
-
+@import "material-local";
 
 /*********************************************************************************************
 *
@@ -9,42 +9,152 @@
 *
 ************************************************************************************************/
 
+$K-Top-Menu-Background-color: $K-PRIMARY-COLOR-900;
 $K-Menu-Background-color: $K-PRIMARY-COLOR-500;
+$K-Toolbar-Title-color: $K-ACCENT-COLOR-100;
+$K-SearchButton-Active-color: $K-ACCENT-COLOR-100;
+$K-SearchButton-Inactive-color: $md-light-blue-500;
 $K-Menu-Text-color: white;
 $K-Input-Text-Color: white;
-
+$K-Icon-Color: white;
 
 #k-drug-toolbar {
 
-    display: block;
-    color: $K-Menu-Text-color;
-    background-color: $K-Menu-Background-color;
+  display: block;
+  color: $K-Menu-Text-color;
+  background-color: $K-Menu-Background-color;
+  margin: none;
+  padding: none;
+
+  & #k-icon-toolbar {
+
+    background-color: $K-Top-Menu-Background-color;
     margin: none;
-    
-    #k-md-search {
-    
-        position: relative;
-        top : 1.0em;
-    
+    padding: none;
+    height: 3.0em;
+
+    & #k-icon-toolbar-tools {
+
+      margin: none;
+      padding: none;
+      padding-top: 1.0em;
+      height: 2.0em;
+
+      & #k-icon-toolbar-title {
+
+        color: $K-Toolbar-Title-color;
+        font-weight: 700;
+        font-size: 1.5em;
+
+      }
+
     }
 
+  }
+
+  & #k-search-toolbar {
+
+    @include MaterialBoxShadow(2);
+    margin: none;
+    padding: none;
+    height: 5.0em;
+
+    & #k-search-type-toolbar {
+
+      margin: none;
+      padding: none;
+      height: 2.0em;
+
+      & #k-search-title {
+
+        padding: 0.6em;
+
+      }
+
+      & #k-md-searchtype {
+
+        border: none;
+        @include MaterialBoxShadow(2);
+
+      }
+
+    }
+
+    & #k-search-text-toolbar {
+
+      margin: none;
+      padding: none;
+      height: 3.0em;
+
+      // Set the the input text colors.
+
+      & #k-md-searchtext {
+
+        color: $K-Input-Text-Color;
+
+      }
+
+      & #k-md-search {
+
+        position: relative;
+        top: 1.0em;
+        background-color: $K-SearchButton-Inactive-color;
+
+        &.searchactive {   // Important! this class is set when the endpoints request is active.
+
+          background-color: $K-SearchButton-Active-color;
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
-#k-search-title {
+/*********************************************************************************************
+*
+*
+* Modal Wait.
+*
+***********************************************************************************************
+*
+*   Put up a modal wait cursor between an endpoint request and response.
+*
+*   Start by setting display:none to make this hidden.
+*   Positioned in relation to the viewport window
+*   with position:fixed. Width, height, top and left.
+*   Background to 50% white with
+*   animation centered, and no-repeating
+*
+*
+*************************************************************************************************/
 
-    padding: 0.6em;
+$K-Wait-Image-Path: "/images/ajax-loader.gif";
+
+#k-modal-wait {
+  display:    none;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 255, 255, 255, .5 )
+  url(#{$K-Wait-Image-Path})
+  50% 50%
+  no-repeat;
+
+  &.searchactive {  // Important! this class is set (also see above) when the endpoints request is active.
+
+    display: block;
+
+  }
 
 }
 
-
-// Set the the input text colors.
-
-
-#k-md-searchtext {
-
-  color: $K-Input-Text-Color;
-
-}
 
 /*********************************************************************************************
 *
@@ -61,23 +171,28 @@ $K-Search-Page-Width: 600px;
 
 #k-search-footer {
 
-    margin: none;
-    text-align: center;
-    color: gray;
-    background-color: $K-Footer-Background-color;
-    
-}
+  margin: none;
+  text-align: center;
+  color: gray;
+  background-color: $K-Footer-Background-color;
 
+}
 
 #k-search-page {
 
-    width: $K-Search-Page-Width; //set the page max width.
+  @media only screen and (max-width: $K-Search-Page-Width) {
+
+    width: 100%;
+
+  }
+
+  @media only screen and (min-width: $K-Search-Page-Width) {
+
+    width: $K-Search-Page-Width;
+
+  }
 
 }
-
-
-
-
 
 /*********************************************************************************************
 *
@@ -88,21 +203,20 @@ $K-Search-Page-Width: 600px;
 
 #k-display-results {
 
-    height: 700px;    // Should be done using a media query. 
-    padding : none;
-    margin: none;
-    background-image: url("../images/ScrollBackground.jpg");
-    background-position: center top;
-    background-size: 100% auto;
+  height: 700px; // Should be done using a media query.
+  padding: none;
+  margin: none;
+  background-image: url("/images/ScrollBackground.jpg");
+  background-position: center top;
+  background-size: 100% auto;
 
-    #k-search-results {
-    
-        height: inherit;
-    
-    }
+  & #k-search-results {
+
+    height: inherit;
+
+  }
 
 }
-
 
 /*********************************************************************************************
 *
@@ -115,39 +229,31 @@ $K-Search-Page-Width: 600px;
 $K-Display-Drug-Background: white;
 $K-Display-Drug-Border: darken(white, 20%);
 
-
 .k-display-drug {
 
-        display: block;
-        background-color: $K-Display-Drug-Background;
-        border: 1px solid $K-Display-Drug-Border;    
-        margin-bottom: 2.0em;
-        margin-top: 2.0em;
+  display: block;
+  background-color: $K-Display-Drug-Background;
+  border: 1px solid $K-Display-Drug-Border;
+  margin-bottom: 2.0em;
+  margin-top: 2.0em;
 
-    #k-display-drug-name {
-    
-        width: 100%;
-        background-color: $K-PRIMARY-COLOR-100;
-         font-size: 1.2em;
-        padding: 0.5em;
-    }
+  & #k-display-drug-name {
 
-    #k-drug-ingredient-panel {
+    width: 100%;
+    background-color: $K-PRIMARY-COLOR-100;
+    font-size: 1.2em;
+    padding: 0.5em;
+  }
 
-        display: block;
-        background-color: $K-Display-Drug-Background;
-        border: 1px solid $K-Display-Drug-Border;    
-        margin-bottom: 1.0em;
-        margin-top: 1.0em;
+  & #k-drug-ingredient-panel {
 
-    }
+    display: block;
+    background-color: $K-Display-Drug-Background;
+    border: 1px solid $K-Display-Drug-Border;
+    margin-bottom: 1.0em;
+    margin-top: 1.0em;
 
+  }
 
 }
-
-
-
-
-
-
 

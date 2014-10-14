@@ -11,7 +11,7 @@
     <!-- Important! - load this first -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- Roboto Font -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
     <!-- Local CSS stuff. specific setup -->
     <link rel="stylesheet" href="/css/app.css"/>
     <!-- Angular Material Design CSS -->
@@ -40,48 +40,50 @@
 <!-- [BEGIN body html]-->
 <body ng-app="USDrugSearchApp">
 
-<div ng-controller="DrugSearchCtrl">
-
 <div layout="horzontal" layout-align="space-around">
 
-    <!-- ************ Top Level Page Ident *******************-->
+    <div id="k-page-control" ng-controller="DrugSearchCtrl">
 
-    <div id="k-search-page">
 
-        <!-- ************ Header Area Layout *******************-->
+        <!-- ************ Top Level Page Ident *******************-->
 
-        <div ng-include src=" 'partial/DrugHeader.html' "></div>
+        <div id="k-search-page">
 
-        <!-- ************ End Header Area Layout *******************-->
+            <!-- ************ Header Area Layout *******************-->
 
-        <!-- ************ Display Results Area *******************-->
+            <div ng-include src=" 'partial/DrugHeader.html' "></div>
 
-        <div ng-include src=" 'partial/DisplayResults.html' "></div>
+            <!-- ************ End Header Area Layout *******************-->
 
-        <!-- ************ End Display Results Area *******************-->
+            <!-- ************ Display Results Area *******************-->
 
-        <div class="k-modal-wait">
+            <div ng-include src=" 'partial/DisplayResults.html' "></div>
+
+            <!-- ************ End Display Results Area *******************-->
+
+            <!-- Modal wait cursor -->
+            <div id="k-modal-wait" ng-class="{searchactive: searchactive}">
+            </div>
+            <!-- End Modal wait cursor -->
+
+            <div id="k-layout-footer"></div>
+
         </div>
-        <!-- Modal wait cursor -->
 
-        <div id="k-layout-footer"></div>
+        <!-- ************ End Top Level Page *******************-->
+        <!-- Footer uses the compass @mixin "sticky-footer" and is defined outside the top-level page -->
 
-    </div>
+        <div id="k-search-footer">
 
-    <!-- ************ End Top Level Page *******************-->
-    <!-- Footer uses the compass @mixin "sticky-footer" and is defined outside the top-level page -->
+            &copy Copyright Kellerberrin 2014
 
-    <div id="k-search-footer">
+        </div>
 
-        &copy Copyright Kellerberrin 2014
 
-    </div>
+    </div> <!-- Controller -->
 
-</div>
 
-</div>
-<!-- horizontal -->
-
+</div> <!-- Horizontal -->
 
 
 <!-- Application specific initialization. See local.js for details. -->

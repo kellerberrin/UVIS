@@ -1,12 +1,7 @@
 import os
-import urllib
 import logging
-
-
 import webapp2
 
-from drugdatabase import ReadNDCDatabase
-from drugdatabase import ReadNDCDatabaseJSON
 
 """ Create the HTML directory """
 
@@ -20,13 +15,6 @@ SearchText = ""
 SearchType = "name"
 SearchArray = []
 
-
-
-def ReturnResultsJSON(SearchText, SearchType, SearchArray, RequestHandler) :
-
-    """Stream JSON Result Object"""
-
-    RequestHandler.response.write(ReadNDCDatabaseJSON(SearchText, SearchType, SearchArray))
 
 
 class SearchPage(webapp2.RequestHandler):
@@ -133,7 +121,6 @@ class GetIngredients(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ('/', SearchPage),
     ('/searchdb', GetSearchString),
-    ('/searchdbjson', GetSearchStringJSON),
     ('/selectndc', GetNDC),
     ('/searchingredients', GetIngredients),
 ], debug=True)
