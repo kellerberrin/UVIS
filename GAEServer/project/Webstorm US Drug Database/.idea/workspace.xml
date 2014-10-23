@@ -2,21 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/drugimages.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader.1.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader.1.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gitignore (1)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/copyright/Apache_Licence_2_0.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/copyright/profiles_settings.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/dictionaries/kellerberrin.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/scopes/scope_settings.1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/shopper_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/vaint_launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/vaint_validate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/vaint_launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/vaint_validate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/vaint_launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/vaint_validate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/share_via_barcode.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/shopper_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/vaint_launcher_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/vaint_validate.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-land/encode.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-land/share.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-ldpi-v4/capture.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/bookmark_picker_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/capture.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/encode.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/help.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/history_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents_header.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/share.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/capture.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/encode.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/history.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/raw/beep.ogg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ar/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-bg/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ca/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-cs/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-da/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-de/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-el/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-es/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-eu/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-fi/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-fr/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-he/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-hi/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-hu/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-id/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-it/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-iw/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ja/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ko/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-nl/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-pl/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-pt/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ru/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sk/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sl/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sv/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-tr/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-zh-rCN/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-zh-rTW/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values/values.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/xml/preferences.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader-upload-progress.sql3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv.old" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/TestNDCDatabase.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-widgets.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-widgets.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/build/intermediates/model_data.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/usdrugdatabase.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/usdrugdatabase.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/US Drug Database.iml" afterPath="$PROJECT_DIR$/.idea/US Drug Database.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" afterPath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/app.iml" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.py" afterPath="$PROJECT_DIR$/../../NDCWeb/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradlew" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradlew" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/index.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/library.py" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/local.properties" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/usdrugdatabase.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/usdrugdatabase.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/usdrugdatabase.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/usdrugdatabase.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,41 +143,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="angular-services.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="3024">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="local.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="k-widgets.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="11124">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_k-widgets.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6666665" vertical-offset="3582" max-vertical-offset="12654">
-              <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3470" max-vertical-offset="4608">
+              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,18 +156,18 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.333334" vertical-offset="648" max-vertical-offset="1782">
-              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="594" max-vertical-offset="1782">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_k-local.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_k-local.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28447205" vertical-offset="2183" max-vertical-offset="4770">
-              <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+            <state vertical-scroll-proportion="-18.481482" vertical-offset="4469" max-vertical-offset="5472">
+              <caret line="276" column="17" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -104,18 +176,18 @@
       <file leaf-file-name="_material-colors.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667" vertical-offset="1458" max-vertical-offset="5112">
-              <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="5112">
+              <caret line="73" column="23" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayResults.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DisplayResults.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1206">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.49192548" vertical-offset="0" max-vertical-offset="1314">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -124,8 +196,8 @@
       <file leaf-file-name="angular-controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="2448">
-              <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2610">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -134,8 +206,18 @@
       <file leaf-file-name="DrugHeader.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.814816" vertical-offset="239" max-vertical-offset="1044">
-              <caret line="43" column="69" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="71" />
+            <state vertical-scroll-proportion="-17.814816" vertical-offset="203" max-vertical-offset="1008">
+              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-services.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3366">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,17 +247,18 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/DrugAjax.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/DisplayResults.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/DialogTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
       </list>
     </option>
   </component>
@@ -252,8 +335,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.sass.extensions.compass.CompassConfigurableProvider$1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
+    <property name="options.lastSelected" value="appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -367,7 +450,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1595136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -424,6 +507,70 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3024">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3816">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1854">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2111" max-vertical-offset="5022">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="5112">
+          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="1206">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="2448">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="239" max-vertical-offset="1044">
+          <caret line="43" column="69" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="810">
@@ -436,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="558">
           <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -484,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="378">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -547,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="378">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -582,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2664">
@@ -600,41 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3996">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="11268">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="11124">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -698,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="594">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,86 +828,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="558">
           <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1206">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="2448">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667" vertical-offset="1458" max-vertical-offset="5112">
-          <caret line="97" column="28" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="5112">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="3024">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="11124">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.814816" vertical-offset="239" max-vertical-offset="1044">
-          <caret line="43" column="69" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6666665" vertical-offset="3582" max-vertical-offset="12654">
-          <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3366">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.333334" vertical-offset="648" max-vertical-offset="1782">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1782">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3470" max-vertical-offset="4608">
+          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2610">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.814816" vertical-offset="203" max-vertical-offset="1008">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28447205" vertical-offset="2183" max-vertical-offset="4770">
-          <caret line="134" column="21" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+        <state vertical-scroll-proportion="-18.481482" vertical-offset="4469" max-vertical-offset="5472">
+          <caret line="276" column="17" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49192548" vertical-offset="0" max-vertical-offset="1314">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
           <folding />
         </state>
       </provider>

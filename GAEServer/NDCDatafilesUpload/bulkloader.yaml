@@ -32,6 +32,7 @@ transformers:
 
     - property: nonproprietaryname
       external_name: NONPROPRIETARYNAME
+      import_transform: "lambda x: x[:450]"
 
     - property: dosageformname
       external_name: DOSAGEFORMNAME
@@ -67,4 +68,23 @@ transformers:
 
     - property: packagedescription
       external_name: PACKAGEDESCRIPTION
-      import_transform: "lambda x: x[:256]"
+      import_transform: "lambda x: x[:450]"
+
+    - property: ninedigitndc
+      external_name: NINE_DIGIT_NDC
+
+    - property: smallimageurl
+      external_name: SMALL_IMAGE_URL
+
+    - property: largeimageurl
+      external_name: LARGE_IMAGE_URL
+
+    - property: ndcnineimagecodes
+      external_name: NDCNINE_IMAGECODES
+      import_transform: transformers.CommaDelimiter()
+
+    - property: ndcelevendigit
+      external_name: ELEVEN_DIGIT_NDC
+
+    - property: rxcui
+      external_name: RXCUI

@@ -13,30 +13,49 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
         , { typeSearch: { method: "POST"
                         , params: {searchstring: "@searchstring", searchtype: "@searchtype"}
-                        , transformResponse: function (data, dataHeaders) {
+                        , transformResponse: function (jsonData, dataHeaders) {
 
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
 // This code looks fragile because it assumes the API response will be in a specific format.
 // todo: add exception handling and error handling here to gracefully fail with suitable messages.
 
-                    if (typeof data == "string") {
-                        var obj1 = angular.fromJson(data)
+                    var parsedData = new k_clientDrugData();
+                    if (typeof jsonData == "string") {
+                        var obj1 = angular.fromJson(jsonData);
                         if (typeof obj1.resultMessage == "string") {
-                            return angular.fromJson(obj1.resultMessage)
-                        }
-                        else {
-                            return data;
+                            var obj2 = angular.fromJson(obj1.resultMessage);
+                            // k_consoleLog(obj2);
+                            parsedData.parseJsonData(obj2);
                         }
                     }
-                    else {
-                        return data;
-                    }
+                    return { drugArray: parsedData.drugDataArray };
                 }
             }
         }
     );
 
 }]);
+
+
+// Download image details.
+
+USDrugServices.factory("NLMRxImageAPI", ["$resource", function ($resource) {
+
+    return $resource("/_ah/api/searchUSdrugs/v1/imageSearch"
+
+        , {   }    // default arguments
+
+        , { getImageURL: { method: "POST", params: {ndc: "@ndc", resolution: "@resolution"} }
+
+
+        }
+
+    );
+
+}]);
+
+
+
 
 
 USDrugServices.factory("USDrugValidateInput", [ function () {

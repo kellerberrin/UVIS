@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>THe FDA Download &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../../../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../counterfeit/counterfeit.html">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>THe FDA Download</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/software/usdrugdatabase/FDAdownload/FDAdownload.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <span class="target" id="fdadownloaddoc"></span><div class="section" id="the-fda-download">
+<h1>THe FDA Download<a class="headerlink" href="#the-fda-download" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>The National Drug Code Database Background Information available is here:
+<a class="reference external" href="http://www.fda.gov/drugs/developmentapprovalprocess/ucm070829">http://www.fda.gov/drugs/developmentapprovalprocess/ucm070829</a></p>
+<p>The downloaded &#8220;product.txt&#8221; and &#8220;package.text&#8221; are downloaded and merged into a CSV
+using a python program launched from a linux bash script.</p>
+<div class="section" id="the-product-table-fda">
+<h2>The Product Table (FDA)<a class="headerlink" href="#the-product-table-fda" title="Permalink to this headline">¶</a></h2>
+<p>The fields of the Product Table are available in a CSV file and are:</p>
+<ol class="arabic simple">
+<li>ProductID   Text/string. &#8220;0002-1200_4322f73b-3cb5-4e67-a909-0725bbe666c3&#8221;</li>
+</ol>
+<blockquote>
+<div>ProductID is a concatenation of the NDCproduct code and SPL documentID. It is included to help prevent duplicate rows
+from appearing when joining the product and package files together. It has no regulatory value or significance.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>ProductNDC www.fda.gov/edrls1 under Structured Product Labeling Resources.   Text/string. (primary key) &#8220;0002-1200&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>The labeler code and product code segments of the National Drug Code number, separated by a hyphen.
+Asterisks are no longer used or included within the product code segment to indicate certain configurations of the NDC.</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>ProductTypeName  Text/string. &#8220;HUMAN PRESCRIPTION DRUG&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>Indicates the type of product, such as Human Prescription Drug or Human OTC Drug. This data element corresponds to the
+“Document Type” of the SPL submission for the listing. The complete list of codes and translations can be found at</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><strong>ProprietaryName Text/string. &#8220;Amyvid&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>Also known as the trade name. It is the name of the product chosen by the labeler.</div></blockquote>
+<ol class="arabic simple" start="5">
+<li>ProprietaryNameSuffix NULL Text/string.</li>
+</ol>
+<blockquote>
+<div>A suffix to the proprietary name, a value here should be appended to the ProprietaryName field to obtain the complete name
+of the product. This suffix is often used to distinguish characteristics of a product such as extended release (“XR”) or
+sleep aid (“PM”). Although many companies follow certain naming conventions for suffices, there is no recognized standard.</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><strong>NonProprietaryName Text/string. MV  &#8220;Florbetapir F 18&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>Sometimes called the generic name, this is usually the active ingredient(s) of the product.</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><strong>DosageFormName Text/string. &#8220;INJECTION, SOLUTION&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>The translation of the DosageForm Code submitted by the firm. The complete list of codes and translations can be found
+www.fda.gov/edrls2 under Structured Product Labeling Resources.</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><strong>RouteName  Text/string.  &#8220;INTRAVENOUS&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>The translation of the Route Code submitted by the firm, indicating route of administration.
+The complete list of codes and translations can be found at www.fda.gov/edrls3 under Structured Product Labeling Resources.</div></blockquote>
+<ol class="arabic simple" start="9">
+<li>StartMarketingDate Text/string. [Include format] &#8220;20120601&#8221;</li>
+</ol>
+<blockquote>
+<div>This is the date that the labeler indicates was the start of its marketing of the drug product.</div></blockquote>
+<ol class="arabic simple" start="10">
+<li>EndMarketingDate  NULL Text/string. [Include format]</li>
+</ol>
+<blockquote>
+<div>This is the date the product will no longer be available on the market. If a product is no longer being manufactured,
+in most cases, the FDA recommends firms use the expiration date of the last lot produced as the EndMarketingDate, to reflect
+the potential for drug product to remain available after manufacturing has ceased. Products that are the subject of
+ongoing manufacturing will not ordinarily have any EndMarketingDate. Products with a value in the EndMarketingDate will be
+removed from the NDC Directory when the EndMarketingDate is reached.</div></blockquote>
+<ol class="arabic simple" start="11">
+<li>MarketingCategoryName Text/string. &#8220;NDA&#8221;</li>
+</ol>
+<blockquote>
+<div>Product types are broken down into several potential Marketing Categories, such as NDA/ANDA/BLA, OTC Monograph, or Unapproved Drug. One and only one Marketing Category may be chosen for a product, not all marketing categories are available to all product types. Currently, only final marketed product categories are included.  The complete list of codes and translations can be found at www.fda.gov/edrls4 under Structured Product Labeling Resources.</div></blockquote>
+<ol class="arabic simple" start="12">
+<li><strong>ApplicationNumber    NULL Text/string.   &#8220;NDA202008&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>This corresponds to the NDA, ANDA, or BLA number reported by the labeler for products which have the
+corresponding Marketing Category designated. If the designated Marketing Category is OTC Monograph Final or OTC Monograph
+Not Final, then the Application number will be the CFR citation corresponding to the appropriate Monograph (e.g. “part 341”).
+For unapproved drugs, this field will be null.</div></blockquote>
+<ol class="arabic simple" start="13">
+<li><strong>LabelerName Text/string. &#8220;Eli Lilly and Company&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>Name of Company corresponding to the labeler code segment of the ProductNDC.</div></blockquote>
+<ol class="arabic simple" start="14">
+<li><strong>SubstanceName   Text/string. MV  &#8220;FLUOXETINE HYDROCHLORIDE; OLANZAPINE&#8221; If more than one substance, then each substance is separated by a semicolon.</strong></li>
+</ol>
+<blockquote>
+<div>This is the active ingredient list. Each ingredient name is the preferred term of the UNII code submitted.</div></blockquote>
+<ol class="arabic simple" start="15">
+<li><strong>StrengthNumber Text/string. MV &#8220;25; 3&#8221; If more than one substance, then each strength is separated by a semicolon.</strong></li>
+</ol>
+<blockquote>
+<div>These are the strength values (to be used with units below) of each active ingredient, listed in the same order as the
+SubstanceName field above.</div></blockquote>
+<ol class="arabic simple" start="16">
+<li><strong>StrengthUnit  Text/string. MV &#8220;mg/1; mg/1&#8221; If more than one substance, then each strength unit  is separated by a semicolon.</strong></li>
+</ol>
+<blockquote>
+<div>These are the units to be used with the strength values above, listed in the same order as the SubstanceName and SubstanceNumber.</div></blockquote>
+<ol class="arabic simple" start="17">
+<li><strong>Pharm_Classes Text/string. MV &#8220;Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>These are the reported pharmacological class categories corresponding to the SubstanceNames listed above.</div></blockquote>
+<ol class="arabic simple" start="18">
+<li>DEASchedule Text/string.</li>
+</ol>
+<blockquote>
+<div>This is the assigned DEA Schedule number as reported by the labeler. Values are CI, CII, CIII, CIV, and CV.</div></blockquote>
+<p><strong>The fields used in the US Drug Database are as follows: 2,3,4,6,7,8,12,13,14,15,16,17.</strong></p>
+</div>
+<div class="section" id="the-package-file-fda">
+<h2>The Package File (FDA)<a class="headerlink" href="#the-package-file-fda" title="Permalink to this headline">¶</a></h2>
+<p>These two fields are concatenated onto the front of the package field.</p>
+<ol class="arabic simple">
+<li>ProductID  Text/string. &#8220;0002-1200_4322f73b-3cb5-4e67-a909-0725bbe666c3&#8221;</li>
+</ol>
+<blockquote>
+<div>ProductID is a concatenation of the NDCproduct code and SPL documentID. It is included to help prevent duplicate
+rows from appearing when joining the product and package files together.  It has no regulatory value or significance.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>ProductNDC  Text/string.  &#8220;0002-1200&#8221;</li>
+</ol>
+<blockquote>
+<div>The labeler code and product code segments of the National Drug Code number, separated by a hyphen. Asterisks
+are no longer used or included within the product code segment to indicate certain configurations of the NDC.</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><strong>NDCPackageCode Text/string   &#8220;0002-1200-10&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>The labeler code, product code, and package code segments of the National Drug Code number, separated by hyphens.
+Asterisks are no longer used or included within the product and package code segments to indicate certain configurations of the NDC.</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><strong>PackageDescription   Text/string  &#8220;1 VIAL, MULTI-DOSE in 1 CAN (0002-1200-10)  &gt; 10 mL in 1 VIAL, MULTI-DOSE&#8221;</strong></li>
+</ol>
+<blockquote>
+<div>A description of the size and type of packaging in sentence form. Multilevel packages will have the descriptions
+concatenated together.  For example: 4 BOTTLES in 1 CARTON/100 TABLETS in 1 BOTTLE.</div></blockquote>
+</div>
+<div class="section" id="the-composite-csv-file-layout">
+<h2>The composite CSV file Layout.<a class="headerlink" href="#the-composite-csv-file-layout" title="Permalink to this headline">¶</a></h2>
+<p>A CSV data file is created from the a composite of the FDA product and package files
+above. In particular, the product file is &#8216;joined&#8217; with the package file using the
+partial NDC code in the product file. This join is then projected onto the fields listed below.
+Two additional fields are also generated (first two fields).</p>
+<p>Field List.</p>
+<p>Need to add 2 additional fields</p>
+<ol class="arabic simple">
+<li><strong>NDC</strong> &#8220;text&#8221; the 10 digit NDC string (primary key)</li>
+</ol>
+<blockquote>
+<div>This is created from the NDCPackageCode field of the package file by removing the hyphens.</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><strong>FORMAT</strong> Format the labeller string, product, package format e.g. &#8220;4-4-2&#8221;.</li>
+</ol>
+<blockquote>
+<div>The Format code is determined from the hyphen spacing in the  NDCPackageCode field of the package file.</div></blockquote>
+<ol class="arabic" start="3">
+<li><p class="first"><strong>PRODUCTTYPENAME</strong> Field 3. Product File; ProductTypeName  Text/string. &#8220;HUMAN PRESCRIPTION DRUG&#8221;</p>
+</li>
+<li><p class="first"><strong>PROPRIETARYNAME</strong> Field 4. Product File; ProprietaryName Text/string. &#8220;Amyvid&#8221;</p>
+</li>
+<li><p class="first"><strong>NONPROPRIETARYNAME</strong> Field 6. Product File; NonProprietaryName Text/string. MV  &#8220;Florbetapir F 18&#8221;</p>
+</li>
+<li><p class="first"><strong>DOSAGEFORMNAME</strong> Field 7. Product File; DosageFormName Text/string. &#8220;INJECTION, SOLUTION&#8221;</p>
+</li>
+<li><p class="first"><strong>ROUTENAME</strong> Field 8. Product File; RouteName  Text/string.  &#8220;INTRAVENOUS&#8221;</p>
+</li>
+<li><p class="first"><strong>APPLICATIONNUMBER</strong> Field 12. Product File; ApplicationNumber    NULL Text/string.   &#8220;NDA202008&#8221;</p>
+</li>
+<li><p class="first"><strong>LABELERNAME</strong> Field 13. Product File; LabelerName Text/string. &#8220;Eli Lilly and Company&#8221;</p>
+</li>
+<li><p class="first"><strong>SUBSTANCENAME</strong> Field 14. Product File; SubstanceName Text/string. MV  &#8220;FLUOXETINE HYDROCHLORIDE; OLANZAPINE&#8221; If more than one substance, then each substance is separated by a semicolon.</p>
+</li>
+<li><p class="first"><strong>ACTIVE_NUMERATOR_STRENGTH</strong> Field 15. Product File; StrengthNumber Text/string. MV &#8220;25; 3&#8221; If more than one substance, then each strength is separated by a semicolon.</p>
+</li>
+<li><p class="first"><strong>ACTIVE_INGRED_UNIT</strong> Field 16. Product File; StrengthUnit  Text/string. MV &#8220;mg/1; mg/1&#8221; If more than one substance, then each strength unit  is separated by a semicolon.</p>
+</li>
+<li><p class="first"><strong>PHARM_CLASSES</strong> Field 17. Product File; Pharm_Classes Text string. If more than one substance, then each strength is separated by a comma. Example, MV &#8220;Atypical Antipsychotic [EPC],Serotonin Reuptake Inhibitor [EPC],Serotonin Uptake Inhibitors [MoA]&#8221;</p>
+</li>
+<li><p class="first"><strong>PACKAGEDESCRIPTION</strong> Field 4. Package File; PackageDescription   Text/string  &#8220;1 VIAL, MULTI-DOSE in 1 CAN (0002-1200-10)  &gt; 10 mL in 1 VIAL, MULTI-DOSE&#8221;</p>
+</li>
+<li><p class="first"><strong>NINE_DIGIT_NDC</strong> The standardised 9-Digit NDC, first five digits are the labeler code and the final four digits are the product code.</p>
+<p>This is calculated from the NDCPackageCode (field 3) in the package file.</p>
+</li>
+<li><p class="first"><strong>SMALL_IMAGE_URL</strong> The small image URL (120 pixels) at the National Library of Medicine repository. This is retrieved from the
+National Library of Medicine image API &#8220;C3PI RxImageAccess RESTful Web API&#8221;</p>
+<p>Documentation is available at: <a class="reference external" href="http://rximage.nlm.nih.gov/docs/doku.php">http://rximage.nlm.nih.gov/docs/doku.php</a>  If no image is available, then the
+empty string &#8220;&#8221; is used as a placeholder.</p>
+</li>
+<li><p class="first"><strong>LARGE_IMAGE_URL</strong> The large image URL (800 pixels) at the National Library of Medicine repository. This is retrieved from the
+National Library of Medicine image API &#8220;C3PI RxImageAccess RESTful Web API&#8221;</p>
+<p>Documentation is available at: <a class="reference external" href="http://rximage.nlm.nih.gov/docs/doku.php">http://rximage.nlm.nih.gov/docs/doku.php</a>  If no image is available, then the
+empty string &#8220;&#8221; is used as a placeholder.</p>
+</li>
+<li><p class="first"><strong>NDCNINE_IMAGECODES</strong> A list of NDC9 Codes that share the same drug images. This field is populated by the rximage download and is initially
+blank (&#8220;&#8221;)</p>
+</li>
+<li><p class="first"><strong>ELEVEN_DIGIT_NDC</strong> The standardised 11-Digit NDC, first five digits are the labeler code, the next four digits are the product code
+and the final 2 are the package code.</p>
+</li>
+<li><p class="first"><strong>RXCUI</strong> The <strong>rxcui</strong> that corresponds to this 11-digit NDC. This code is not unique to a NDC code.
+This code is populated from the downloaded NLM files (or the online NLM RXNORM API) and initially
+has the value (&#8220;&#8221;).</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-the-csv-file">
+<h2>Creating the CSV file.<a class="headerlink" href="#creating-the-csv-file" title="Permalink to this headline">¶</a></h2>
+<p>The python file &#8220;rawNDCfiles.py&#8221; in directory &#8220;NDCDatafilesUpload&#8221; reads the FDA Product and Package files
+and produces the composite CSV file described above. This CSV file is then uploaded into the GAE datastore
+using the bulkloader function.</p>
+<p>The zip file (NDC Database File) containing the package.txt and product.txt files is available on the FDA website on the
+&#8220;National Drug Code Directory&#8221; at the the url: <a class="reference external" href="http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm">http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm</a></p>
+<p>The following ENVIRONMENT variables are set in &#8220;workenv UVIS&#8221; and used by &#8220;rawNDCfiles.py&#8221; (actual paths will vary
+on different development computers).</p>
+<ol class="arabic">
+<li><p class="first">UVISUSDRUGRAWNDCDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles</p>
+<p>This environment variable identifies the data directory for &#8220;rawNDCfiles.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATAPACKAGE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/package.txt</p>
+<p>This environment variable identifies the downloaded FDA package file.</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATALOGFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/processrawNDCfiles.log</p>
+<p>This environment variable identifies the log file of  &#8220;rawNDCfiles.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATAPRODUCT=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/product.txt</p>
+<p>This environment variable identifies the downloaded FDA product file.</p>
+</li>
+<li><p class="first">UVISUSDRUGDATAFILE=&lt;path&gt;/UVIS/GAEServer/NDCDatafilesUpload/csvupload/NDCDatabase.csv</p>
+<p>This environment variable identifies the created CSV file.</p>
+</li>
+</ol>
+<p><strong>Executing the CSV creation program.</strong></p>
+<ul>
+<li><p class="first"><strong>processrawNDCfiles</strong> - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
+from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
+the bulkloader tool (see the <strong>bulkloader</strong> Linux command).</p>
+<p><a class="reference internal" href="../../../_images/emphasize1.png"><img alt="action" src="../../../_images/emphasize1.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $processrawNDCfiles</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

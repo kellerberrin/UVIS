@@ -31,8 +31,6 @@
     <script src="/js/angular-services.js"></script>
     <!-- Google Endpoint client -->
     <script src="https://apis.google.com/js/client.js?onload=init"></script>
-    <!-- Kellerberrin widget and library functions-->
-    <script src="/js/k-widgets.js"></script>
     <!-- Non Angular App specific logic -->
     <script src="/js/local.js"></script>
 </head>
@@ -63,6 +61,11 @@
 
             <!-- Modal wait cursor -->
             <div id="k-modal-wait" ng-class="{searchactive: searchactive}">
+                <div id="k-wait-box">
+                    <material-circular-progress id="k-material-progress" mode="indeterminate">
+                    </material-circular-progress>
+                    Searching ...
+                </div>
             </div>
             <!-- End Modal wait cursor -->
 
@@ -85,9 +88,6 @@
 
 </div> <!-- Horizontal -->
 
-
-<!-- Application specific initialization. See local.js for details. -->
-<script>$(document).ready(k_localInitialization);</script>
 </body>
 <!-- [END body html]-->
 </html>

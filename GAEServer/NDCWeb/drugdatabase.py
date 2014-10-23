@@ -1,10 +1,13 @@
 import os
 import logging
 import json
+import time
 
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
+
+from drugimages import getImageURLs
 
 
 class NDCLookup(ndb.Model):
@@ -24,6 +27,14 @@ class NDCLookup(ndb.Model):
     activeingredientunit = ndb.StringProperty(repeated=True)
     pharmclasses = ndb.StringProperty(repeated=True)
     packagedescription = ndb.StringProperty()		
+    ninedigitndc = ndb.StringProperty()
+    smallimageurl = ndb.StringProperty()
+    largeimageurl = ndb.StringProperty()
+    ndcnineimagecodes = ndb.StringProperty(repeated=True)
+    ndcelevendigit = ndb.StringProperty()
+    rxcui = ndb.StringProperty()
+
+
 
     
 class EnhancedNDCLookup :   
@@ -186,9 +197,32 @@ def NDCElevenDigitFormat(NDC, Format) :
     FormatNDC = LabellerCode + "-" + ProductCode + "-" + PackageCode
     return FormatNDC
 
+
+def processImageDatabase(checkpoint):
+
+    qAll= NDCLookup.query()
+    RecordCount = 0
+
+    for NDCRecord in qAll:
+        if RecordCount >= checkpoint:
+            ImageURL = getImageURLs(NDCTenDigitFormat(NDCRecord.ndc, NDCRecord.format))
+            if (ImageURL[0] != "") or (ImageURL[1] != ""):
+                NDCRecord.smallimageurl = ImageURL[0]
+                NDCRecord.largeimageurl = ImageURL[1]
+                NDCRecord.put()
+                logging.info("Put() NDCRecord: ndc %s, smallurl: %s, largeurl: %s", NDCRecord.ndc, NDCRecord.smallimageurl, NDCRecord.largeimageurl)
+
+        RecordCount += 1
+        if RecordCount % 100 == 0:
+            logging.info("NDCModel Processed Records: %d", RecordCount)
+
+    logging.info("Final - NDCModel Processed Records: %d", RecordCount)
+
+    return "Final - NDCModel Processed Image Records:" + str(RecordCount) + "\n"
+
     
 def ReadNDCDatabase(SearchText, SearchType, SearchArray):
-    " Read the NDC database from the Google App Engine Kind NDCLookup"
+    """ Read the NDC database from the Google App Engine Kind NDCLookup"""
 
     NDCRecords = []
     NDCElevenDigits = ""
@@ -196,8 +230,12 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     
     if SearchType=="ndc":
         SearchExampleText = NDCSEARCHEXAMPLE
-        SearchError = not(SearchText.isdigit()) or len(SearchText) != 10  
-        qNDC = NDCLookup.query(NDCLookup.ndc == SearchText)
+        SearchError = False
+        CleanNDC = SearchText.replace("-", "")
+        if len(CleanNDC) == 9:
+            qNDC = NDCLookup.query(NDCLookup.ninedigitndc == CleanNDC)
+        else:
+            qNDC = NDCLookup.query(NDCLookup.ndc == CleanNDC)
 
     elif SearchType=="name" :
         SearchExampleText = GENERICSEARCHEXAMPLE
@@ -240,13 +278,13 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
         NDCEnhancedArray.append(NDCEnhanced)
             
                    
-    JINJATemplatValues = { 'NDCEnhancedArray' : NDCEnhancedArray,
-                           'NDCEnhancedArraySize' : len(NDCEnhancedArray),
-                           'TypeExample' : SearchExampleText, 
-                           'SearchText' : SearchText, 
-                           'SearchType' : SearchType }
+    TemplateValues = { 'NDCEnhancedArray' : NDCEnhancedArray,
+                    'NDCEnhancedArraySize' : len(NDCEnhancedArray),
+                    'TypeExample' : SearchExampleText,
+                    'SearchText' : SearchText,
+                    'SearchType' : SearchType }
 
-    return JINJATemplatValues
+    return TemplateValues
                                
 
 def ReadNDCDatabaseJSON(searchtext, searchtype, searcharray):

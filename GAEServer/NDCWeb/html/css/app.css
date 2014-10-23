@@ -74,139 +74,6 @@ body {
 *  Set the theme colors
 *
 ****************************************************************************************************/
-/* 
-*
-* Copyright Kellerberrin 2014.
-*
-* k-widgets SASS widget library 
-* The corrsponding Javascript library is "k-widgets.js".
-*
-*/
-/*
-<div id="k-expand-menu" class="k-accordion k-unique"> <!-- Declares the k-accordion, "k-unique" means only one expanded section open at a time.
-		<div class="k-header">Home</div>              <!- Accordion header --> 
-		<div class="k-expander k-expanded">Products</div> <!-- Expand button, "k-expanded" initially expands the selection. -->
-	    <div class="k-expandable">     <!-- The k-exandable section, must be the next sibling to the k-expander class -->
-		    <div>Widgets</div>      <!-- Sub-menu items that are initially expanded -->
-			<div>Menus</div>
-		    <div>Products</div>
-		</div>
-		<div class="k-expander">Company</div>
-		<div class="k-expandable">
-		    <div>About</div>
-			<a href="#">Location</a>
-		</div>
-		<div class="k-static">Contact</div> <!-- Non-expandable sibling menu item. -->
-</div> <!-- k-accordion -->
-<script>$(document).ready(function() { k_InitializeAccordian("expand-menu"); });</script> <!-- Must be initialized -->
-*/
-/**************************Radio Buttons Mixin ************************************************************************* 
-*
-* Example SASS declaration:
-*
-*  .k-myradio-group {
-*       @include k-radio-group;
-*       ... possible CSS modifications ...
-*   }
-*
-* Example HTML declaration:
-*
-*
-*   <div id="select-search-type" class="k-myradio-group"> <!-- Declare the radio group. -->
-*       <div class="k-radio-header">Search Type</div>           <!-- The radio button header section (optional) -->
-*	    <div class="k-radio k-radio-selected">Drug Name</div>         <!-- The initially selected radio option -->
-*	    <div class="k-radio">Drug Ingredients</div>             <!-- Another radio option (must be a sibling)
-*	    <div class="k-radio">National Drug Code</div>           <!-- etc -->
-*   </div>                                                  <!-- k-radio-button -->
-*   <script>$(document).ready(function() { k_InitializeRadio("select-search-type"); });</script> <!-- Must be initialized -->
-*/
-/*********************************************************************************************
-*
-*
-* Modal Dialog mixins.
-*
-*
-************************************************************************************************/
-/*********************************************************************************************
-*
-*
-* Modal Dialog with blur and shink transition effect.
-*
-*
-************************************************************************************************/
-/*
-*  Used in the overall contents window using @extend %k-zoom-parent-window; 
-*/
-/*********************************************************************************************
-*
-*
-* Drop Down Memu
-*
-*
-************************************************************************************************/
-/* line 635, ../../scss/_k-widgets.scss */
-.k-drop-down-wrapper {
-  /* Size and position */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  overflow: visible;
-  z-index: 99;
-  width: 9em;
-  /* Active state */
-}
-/* line 648, ../../scss/_k-widgets.scss */
-.k-drop-down-wrapper.active .dropdown {
-  opacity: 1;
-  pointer-events: auto;
-}
-/* line 653, ../../scss/_k-widgets.scss */
-.k-drop-down-wrapper .dropdown {
-  /* Size & position */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* Styles */
-  background: white;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  list-style: none;
-  /* Hiding */
-  opacity: 0;
-  pointer-events: none;
-}
-/* line 675, ../../scss/_k-widgets.scss */
-.k-drop-down-wrapper .dropdown li > * {
-  display: block;
-  padding: 0.3em;
-  color: #333333;
-  box-shadow: inset 0 1px 0 white;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
-}
-
 /****************************************************************************************************
 *
 *  Set the theme colors
@@ -307,7 +174,7 @@ body {
 *
 *
 *************************************************************************************************/
-/* line 137, ../../scss/_k-local.scss */
+/* line 140, ../../scss/_k-local.scss */
 #k-modal-wait {
   display: none;
   position: fixed;
@@ -316,9 +183,38 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5) url(/images/ajax-loader.gif) 50% 50% no-repeat;
+  background: rgba(255, 255, 255, 0.3) url(/images/ajax-loader.gif) 50% 50% no-repeat;
 }
-/* line 150, ../../scss/_k-local.scss */
+/* line 153, ../../scss/_k-local.scss */
+#k-modal-wait #k-wait-box {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1a237e;
+  color: #1a237e;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+/* line 164, ../../scss/_k-local.scss */
+#k-modal-wait #k-wait-box #k-material-progress {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #ff80ab;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 177, ../../scss/_k-local.scss */
 #k-modal-wait.searchactive {
   display: block;
 }
@@ -355,7 +251,7 @@ html, body {
   height: 1.5em;
 }
 
-/* line 172, ../../scss/_k-local.scss */
+/* line 199, ../../scss/_k-local.scss */
 #k-search-footer {
   margin: none;
   text-align: center;
@@ -364,13 +260,13 @@ html, body {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 181, ../../scss/_k-local.scss */
+  /* line 208, ../../scss/_k-local.scss */
   #k-search-page {
     width: 100%;
   }
 }
 @media only screen and (min-width: 600px) {
-  /* line 181, ../../scss/_k-local.scss */
+  /* line 208, ../../scss/_k-local.scss */
   #k-search-page {
     width: 600px;
   }
@@ -382,7 +278,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 204, ../../scss/_k-local.scss */
+/* line 231, ../../scss/_k-local.scss */
 #k-display-results {
   height: 700px;
   padding: none;
@@ -391,7 +287,7 @@ html, body {
   background-position: center top;
   background-size: 100% auto;
 }
-/* line 213, ../../scss/_k-local.scss */
+/* line 240, ../../scss/_k-local.scss */
 #k-display-results #k-search-results {
   height: inherit;
 }
@@ -403,7 +299,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 232, ../../scss/_k-local.scss */
+/* line 259, ../../scss/_k-local.scss */
 .k-display-drug {
   display: block;
   background-color: white;
@@ -411,14 +307,22 @@ html, body {
   margin-bottom: 2.0em;
   margin-top: 2.0em;
 }
-/* line 240, ../../scss/_k-local.scss */
+/* line 267, ../../scss/_k-local.scss */
 .k-display-drug #k-display-drug-name {
   width: 100%;
   background-color: #c5cae9;
   font-size: 1.2em;
   padding: 0.5em;
 }
-/* line 248, ../../scss/_k-local.scss */
+/* line 275, ../../scss/_k-local.scss */
+.k-display-drug #k-display-drug-image {
+  display: none;
+}
+/* line 279, ../../scss/_k-local.scss */
+.k-display-drug #k-display-drug-image.hasimage {
+  display: block;
+}
+/* line 287, ../../scss/_k-local.scss */
 .k-display-drug #k-drug-ingredient-panel {
   display: block;
   background-color: white;

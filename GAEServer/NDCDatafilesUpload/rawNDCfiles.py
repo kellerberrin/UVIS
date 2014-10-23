@@ -8,7 +8,11 @@ import sys
 import logging
 from datetime import datetime, date
 
-class PackageClass :
+# Place holder for the NLM image file URLS.
+
+
+
+class PackageClass:
 
     def __init__(self, TabbedString):
 
@@ -24,7 +28,7 @@ class PackageClass :
         self.PACKAGEDESCRIPTION = StringArray[3].strip()	
 
 
-class ProductClass :
+class ProductClass:
 
     def __init__(self, TabbedString):
 
@@ -55,6 +59,7 @@ class ProductClass :
         
 
 global Logger
+
 
 def SetupLogging() :
     "Set up Python logging to console and log file" 
@@ -94,6 +99,7 @@ def SetupLogging() :
     return
 
 # Read all the records in an FDA RAW package file.
+
 
 def ReadAllPackageRecords() :
     "Reads all the NDC Package.txt records (lines) into an array of strings."
@@ -155,6 +161,7 @@ def ReadAllProductRecords() :
 
 # Convenience function to return a format string from a dash "-" separated NDC
 
+
 def NDCFormat(NDCCode) :
 # Find the first dash
     First = NDCCode.find("-")
@@ -166,6 +173,73 @@ def NDCFormat(NDCCode) :
 
     Format = str(First) + "-" + str(LastIndex) + "-" + str(PackIndex)
     return Format        
+
+
+def NDCNineDigitFormat(NDC, Format) :
+    """Utility function generates an 9-digit formatted National Drug Code"""
+    CleanNDC = NDC.replace("-", "")
+
+    if len(CleanNDC) != 10:
+        Logger.error("Unable to determine 9 Digit NDC for %s - '000000000' returned", NDC)
+        return "000000000"
+
+    LabellerSize = int(Format[0])
+    ProductSize = int(Format[2])
+
+    LabellerCode = CleanNDC[:LabellerSize]
+    ProductCode = CleanNDC[LabellerSize:(LabellerSize + ProductSize)]
+    PackageCode = CleanNDC[(LabellerSize + ProductSize):]
+
+    if Format == "4-4-2" :
+        LabellerCode = "0" + LabellerCode
+    elif Format == "5-3-2" :
+        ProductCode = "0" + ProductCode
+    elif Format == "5-4-1" :
+        PackageCode = "0" + PackageCode
+    else:
+        Logger.error("Unable to determine 9 Digit NDC for %s - '000000000' returned", NDC)
+        return "000000000"
+
+    FormatNDC = LabellerCode + ProductCode
+    return FormatNDC
+
+
+def NDCNineDigit(NDC):
+    return NDCNineDigitFormat(NDC, NDCFormat(NDC))
+
+
+def NDCElevenDigitFormat(NDC, Format) :
+    """Utility function generates an 11-digit formatted National Drug Code"""
+    CleanNDC = NDC.replace("-", "")
+
+    if len(CleanNDC) != 10:
+        Logger.error("Unable to determine 11 Digit NDC for %s - '000000000' returned", NDC)
+        return "000000000"
+
+    LabellerSize = int(Format[0])
+    ProductSize = int(Format[2])
+
+    LabellerCode = CleanNDC[:LabellerSize]
+    ProductCode = CleanNDC[LabellerSize:(LabellerSize + ProductSize)]
+    PackageCode = CleanNDC[(LabellerSize + ProductSize):]
+
+    if Format == "4-4-2" :
+        LabellerCode = "0" + LabellerCode
+    elif Format == "5-3-2" :
+        ProductCode = "0" + ProductCode
+    elif Format == "5-4-1" :
+        PackageCode = "0" + PackageCode
+    else:
+        Logger.error("Unable to determine 11 Digit NDC for %s - '000000000' returned", NDC)
+        return "000000000"
+
+    FormatNDC = LabellerCode + ProductCode + PackageCode
+    return FormatNDC
+
+
+def NDCElevenDigit(NDC):
+    return NDCElevenDigitFormat(NDC, NDCFormat(NDC))
+
 
 # Function to write the csv header
 
@@ -184,11 +258,19 @@ def WriteHeader(CSVFile) :
                 + '"' + 'ACTIVE_NUMERATOR_STRENGTH' + '"' + ',' \
                 + '"' + 'ACTIVE_INGRED_UNIT' + '"' + ',' \
                 + '"' + 'PHARM_CLASSES' + '"' + ',' \
-                + '"' + 'PACKAGEDESCRIPTION' + '"' + '\n'
+                + '"' + 'PACKAGEDESCRIPTION' + '"' + ',' \
+                + '"' + 'NINE_DIGIT_NDC' + '"' + ',' \
+                + '"' + 'SMALL_IMAGE_URL' + '"' + ',' \
+                + '"' + 'LARGE_IMAGE_URL' + '"' + ',' \
+                + '"' + 'NDCNINE_IMAGECODES' + '"' + ',' \
+                + '"' + 'ELEVEN_DIGIT_NDC' + '"' + ',' \
+                + '"' + 'RXCUI' + '"' + '\n'
 
     CSVFile.write(HeaderString) 
 
 # Check if still marketed and is a prescription drug.
+
+
 def ValidDrugRecord(Product) :
 
     if Product.PRODUCTTYPENAME != "HUMAN PRESCRIPTION DRUG" :
@@ -219,10 +301,11 @@ def ValidDrugRecord(Product) :
 
 # Function to write a csv line. 
 
-def WriteCSVLine(CSVFile, Product, Package) :
+
+def WriteCSVLine(CSVFile, Product, Package):
 
 # Check if still marketed and is a prescription drug.
-    if ValidDrugRecord(Product) :
+    if ValidDrugRecord(Product):
     
         LineString = '"' + Package.NDCPACKAGECODE.replace('-','') + '"' + ',' \
                     + '"' + NDCFormat(Package.NDCPACKAGECODE) + '"' + ',' \
@@ -237,11 +320,18 @@ def WriteCSVLine(CSVFile, Product, Package) :
                     + '"' + Product.ACTIVE_NUMERATOR_STRENGTH + '"' + ',' \
                     + '"' + Product.ACTIVE_INGRED_UNIT + '"' + ',' \
                     + '"' + Product.PHARM_CLASSES + '"' + ',' \
-                    + '"' + Package.PACKAGEDESCRIPTION + '"' + '\n'
+                    + '"' + Package.PACKAGEDESCRIPTION + '"' + ',' \
+                    + '"' + NDCNineDigit(Package.NDCPACKAGECODE) + '"' + ',' \
+                    + '"' + "" + '"' + ',' \
+                    + '"' + "" + '"' + ',' \
+                    + '"' + "" + '"' + ',' \
+                    + '"' + NDCElevenDigit(Package.NDCPACKAGECODE) + '"' + ',' \
+                    + '"' + "" + '"' + '\n'
 
         CSVFile.write(LineString) 
 
 # Function to process both files.
+
 
 def ProcessRawNDCFiles() :
     "Process the raw Package.txt and Product.txt files into a csv file."
@@ -283,12 +373,14 @@ def ProcessRawNDCFiles() :
 
     WriteHeader(CSVFile)
 
+    RecordCount = 0
     for Package in PackageList :
         Product = ProductDict.get(Package.PRODUCTNDC)
 # Check that we found something and write a line.
         if Product == None :
             Logger.error("Package NDC: %s , Could not find Product Code: %s", Package.NDCPACKAGECODE, Package.PRODUCTNDC)
-        else :
+        else:
+            RecordCount += 1
             WriteCSVLine(CSVFile, Product, Package)
 
 # Close the file
@@ -301,6 +393,8 @@ def ProcessRawNDCFiles() :
     Logger.info("Product Record Count: %d", len(ProductRecords))
     Logger.info("Package Class Count: %d", len(PackageList))
     Logger.info("Product Dictionary Count: %d", len(ProductDict))
+    Logger.info("CSV Record Count: %d", RecordCount)
+
 
 # Run the module to process both files.
 

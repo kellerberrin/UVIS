@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>THE NLM Drug Image API &mdash; UVIS</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="UVIS" href="../../../index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../../../index.html" class="fa fa-home"> Kellerberrin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact/contact.html">Contact Kellerberrin Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../counterfeit/counterfeit.html">Validated Inventory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#serialization">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#location">Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#trust-hierarchy">Trust Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#prototype-screen-shots">Prototype Screen Shots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../counterfeit/counterfeit.html#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Kellerberrin</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>THE NLM Drug Image API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../../../_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <span class="target" id="nlmimagedownloaddoc"></span><div class="section" id="the-nlm-drug-image-api">
+<h1>THE NLM Drug Image API<a class="headerlink" href="#the-nlm-drug-image-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="downloading-csv-data-from-the-national-library-of-medicine">
+<h2>Downloading CSV Data from the National Library of Medicine<a class="headerlink" href="#downloading-csv-data-from-the-national-library-of-medicine" title="Permalink to this headline">¶</a></h2>
+<p>The application reads all the NDCs defined in the US drug database and
+downloads any visual information on the drugs.</p>
+<p>The NLM has a drug image API available here:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://rximage.nlm.nih.gov/docs/doku.php">http://rximage.nlm.nih.gov/docs/doku.php</a></p>
+<p>A web application has been created to harvest this data.</p>
+<p>At the moment this is designed to be run from a web browser connected to the
+local US drug database instance with the following address:</p>
+<p><a class="reference external" href="http://localhost:9080/runimageupdate?checkpoint=9100">http://localhost:9080/runimageupdate?checkpoint=9100</a></p>
+<p>Where:</p>
+<ol class="arabic simple">
+<li><strong>localhost:9080</strong> is the the current URL address of the US drug database application.</li>
+<li><strong>runimageupdate</strong> is the handler defined in the &#8216;app.py&#8217; source file.</li>
+<li><strong>checkpoint=9100</strong> restarts the downloader from a particular sequential NDC record which has
+been previously checkpointed.</li>
+</ol>
+</div></blockquote>
+<p>Important note - this is a temporary function that updates the GAE datastore directly. It will be replaced
+with a Python function that reads the NLM API and then updates the CSV file that is then uploaded to the
+production database. This replacement Python function will run on the command line independently of the local GAE.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Kellerberrin Software.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

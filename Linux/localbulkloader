@@ -1,0 +1,14 @@
+#!/bin/bash
+# The uploader batch file.
+# The the db_filename file checkpoints and restarts the batch upload after a 
+# problem with a large upload. Delete this db file when the upload is complete.
+# The local URL ("http://localhost:9080") must match the URL assigned to the
+# local US Drug Database application. 
+
+echo "UVISUSDRUGDATAPATH:" $UVISUSDRUGDATAPATH
+echo "UVISUSDRUGDATAFILE:" $UVISUSDRUGDATAFILE
+echo "UVISUSDRUGDATASTOREKIND:" $UVISUSDRUGDATASTOREKIND
+echo "UVISUSDRUGDATALOCALURL:" $UVISUSDRUGDATALOCALURL
+echo "UVISUSDRUGDATALOCALCHECKPOINT:" $UVISUSDRUGDATALOCALCHECKPOINT
+
+python $GOOGLEAPPBIN/appcfg.py upload_data --config_file=$UVISUSDRUGDATAPATH  --filename=$UVISUSDRUGDATAFILE --kind=$UVISUSDRUGDATASTOREKIND --url=$UVISUSDRUGDATALOCALURL --db_filename=$UVISUSDRUGDATALOCALCHECKPOINT

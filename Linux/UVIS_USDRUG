@@ -42,18 +42,16 @@ export UVISUSDRUGDATALOCALURL="http://${UVISUSDRUGLOCALHOST}:${UVISUSDRUGLOCALPO
 #The USDrug REMOTE Datastore URL.
 export UVISUSDRUGDATAREMOTEURL="$UVISUSDRUGURL/_ah/remote_api"
 #The uploader checkpoint database. Used for re-starting the upload. 
-export UVISUSDRUGDATACHECKPOINT="$UVISUSDRUGDATA/bulkloader-upload-progress.sql3"
+export UVISUSDRUGDATALOCALCHECKPOINT="$UVISUSDRUGDATA/bulkloader-local-upload-progress.sql3"
+#The uploader checkpoint database. Used for re-starting the upload. 
+export UVISUSDRUGDATAREMOTECHECKPOINT="$UVISUSDRUGDATA/bulkloader-remote-upload-progress.sql3"
+
 
 #The USDrug Datastore Size (change this for FULL or TEST)
 #If set to the FULL file then uploads all the data (150,000 records)
 #If set to the TEST file then just uploads the test data (100 records) 
 export UVISUSDRUGDATAFILE="$UVISUSDRUGFULLDATAFILE"  #Currently set to FULL
 
-#The USDrug ACTIVE Datastore URL (change this for LOCAL or REMOTE)
-#If set to the REMOTE URL then uploads data to the remote GAE DATASTORE
-#If set to the LOCAL URL then uploads data to LOCAL DATASTORE 
-export UVISUSDRUGDATAACTIVEURL="$UVISUSDRUGDATALOCALURL"  #Currently set to LOCAL
-#
 
 # Raw US Drug Data Processing. See kellerberrin-doc.appspot.com for further details.
 # These environment variables are used by Python software that converts the files downloaded 

@@ -2,28 +2,34 @@
 
     <material-content id="k-search-results" class="material-content-padding">
 
-        <div id="k-results-container" ng-repeat="NDCEnhanced in requestResults.NDCEnhancedArray">
+        <div id="k-results-container" ng-repeat="drugRecord in requestResults.drugArray track by $index">
 
             <material-whiteframe class="k-display-drug material-whiteframe-z1">
 
                 <div id="k-display-drug-name">
 
-                    {{ NDCEnhanced.proprietaryname }}
+                    {{ drugRecord.name }}
 
                 </div>
 
                 <div>
 
-                    Labeler: {{ NDCEnhanced.labellername }}
+                    Labeler: {{ drugRecord.labeler }}
 
                 </div>
 
-                <div id="k-drug-ingredient-panel" ng-repeat="Ingredient in NDCEnhanced.ActiveList">
+                <div id="k-display-drug-image" ng-class="{ hasimage: drugRecord.hasimage}">
+
+                    <img ng-src="{{drugRecord.smallimageurl}}">
+
+                </div>
+
+                <div id="k-drug-ingredient-panel" ng-repeat="Ingredient in drugRecord.activeArray track by $index">
 
                     <div> <!-- Individual ingredient -->
 
                         <!-- Write out the ingredient -->
-                        {{ Ingredient[0] }}; {{ Ingredient[1] }} {{ Ingredient[2] }}
+                        {{ Ingredient.activeName }}; {{ Ingredient.strength }} {{ Ingredient.units }}
 
                     </div>
 
@@ -32,21 +38,21 @@
 
                 <div> <!-- Dosage Route -->
 
-                    Dosage / Route: {{ NDCEnhanced.dosageformname }} / {{ NDCEnhanced.routename }}
+                    Dosage / Route: {{ drugRecord.dosage }} / {{ drugRecord.route }}
 
                 </div>
                 <!-- Dosage Route -->
 
                 <div> <!-- Package -->
 
-                    Package: {{ NDCEnhanced.packagedescription }}
+                    Package: {{ drugRecord.package }}
 
                 </div>
 
 
                 <div>
 
-                    National Drug Code: {{ NDCEnhanced.ndc }} ({{ NDCEnhanced.format }})
+                    National Drug Code: {{ drugRecord.ndc }} ({{ drugRecord.format }})
 
                 </div>
 

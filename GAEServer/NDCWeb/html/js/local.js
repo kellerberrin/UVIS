@@ -10,8 +10,15 @@
 */
 
 
+// Ensures that logging is available and logs to debug console.
+function k_consoleLog(LogArgs) {
+    if (window.console && console.log) {
+        console.log(LogArgs);
+    }
+}
 
-// Store the parameters for an ingredient search.
+// todo:: remove this code.
+
 
     function ingredientSubmit(Index, Ingredient, Strength, Units) {
 
@@ -142,8 +149,7 @@
 /*********************************************************************************************
 *
 *
-* Set up record count in the notification area.
-* If more than 1 result then display as collapsed.
+* Set up record count text in the notification area.
 *
 *
 ************************************************************************************************/
@@ -181,19 +187,73 @@
     }
 
 
-
 /*********************************************************************************************
-*
-*
-* Initialization - called at the bottom of the HTML body.
-*
-*
-************************************************************************************************/
+ *
+ *
+ * Define the standard data structures used on the client side.
+ * Convert from the returned JSON structure to the client structure.
+ *
+ *
+ ************************************************************************************************/
 
-    function k_localInitialization() {
-        //   Any general page/form initialization here.
-        setSearchType("name");  // Setup the 'active' search option.
-        k_initializeWaitCursor(); // Setup the wait cursor
+
+function k_clientDrugData()
+{
+
+    this.drugDataArray = [];
+
+    this.parseJsonData = function(endPointData) {
+
+
+        for (var i = 0; i< endPointData.NDCEnhancedArray.length; i++) {
+
+            var drugRecord = {}; // Beware the dreaded deep copy bug.
+            var ndcEnhanced = endPointData.NDCEnhancedArray[i];
+
+            drugRecord.ndc = ndcEnhanced.hasOwnProperty("ndc") ? ndcEnhanced.ndc : "";
+            drugRecord.name = ndcEnhanced.hasOwnProperty("proprietaryname") ? ndcEnhanced.proprietaryname : "";
+            drugRecord.labeler = ndcEnhanced.hasOwnProperty("labellername") ? ndcEnhanced.labellername : "";
+            drugRecord.dosage = ndcEnhanced.hasOwnProperty("dosageformname") ? ndcEnhanced.dosageformname : "";
+            drugRecord.route = ndcEnhanced.hasOwnProperty("routename") ? ndcEnhanced.routename : "";
+            drugRecord.package = ndcEnhanced.hasOwnProperty("packagedescription") ? ndcEnhanced.packagedescription : "";
+            drugRecord.format = ndcEnhanced.hasOwnProperty("format") ? ndcEnhanced.format : "";
+            drugRecord.smallimageurl = ndcEnhanced.hasOwnProperty("smallimageurl") ? ndcEnhanced.smallimageurl : "";
+            drugRecord.largeimageurl = ndcEnhanced.hasOwnProperty("largeimageurl") ? ndcEnhanced.largeimageurl : "";
+            drugRecord.hasimage = (drugRecord.smallimageurl != "No Image");  // Set to true if drug images exist.
+
+            drugRecord.activeArray = [];
+
+            if (ndcEnhanced.hasOwnProperty("ActiveList")) {
+
+                if (ndcEnhanced.ActiveList instanceof Array) {
+
+                    for (var j = 0; j < ndcEnhanced.ActiveList.length; j++) {
+
+                        var active = ndcEnhanced.ActiveList[j];
+                        var activeRecord = {};
+
+                        if (active instanceof Array) {
+
+                            activeRecord.activeName = active[0];
+                            activeRecord.strength = active[1];
+                            activeRecord.units = active[2];
+
+                            drugRecord.activeArray.push(activeRecord);
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            this.drugDataArray.push(drugRecord);
+
+        }
+
     }
+
+}
 
 

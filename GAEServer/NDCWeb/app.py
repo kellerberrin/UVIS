@@ -2,6 +2,7 @@ import os
 import logging
 import webapp2
 
+from drugdatabase import processImageDatabase
 
 """ Create the HTML directory """
 
@@ -9,6 +10,7 @@ TEMPLATE_SEARCH_HTML = 'index.html'
 TEMPLATE_DIRECTORY = 'html'
 TEMPLATE_OS_DIR = os.path.join(os.path.dirname(__file__), TEMPLATE_DIRECTORY)
 TEMPLATE_SEARCH_PATH = os.path.join(TEMPLATE_OS_DIR, TEMPLATE_SEARCH_HTML)
+
 
 """ Global variables used to implement an NDC database search """         
 SearchText = ""
@@ -24,6 +26,16 @@ class SearchPage(webapp2.RequestHandler):
         handle = open(TEMPLATE_SEARCH_PATH, "r")
 
         self.response.write(handle.read())
+
+
+class RunImageUpdate(webapp2.RequestHandler):
+    def get(self):
+        """ Display the search index page. """
+
+        checkpoint = self.request.get("checkpoint")
+        logging.info("Image update starts at checkpoint: %s", checkpoint)
+        self.response.write(processImageDatabase(int(checkpoint)))
+
 
 
 class GetSearchString(webapp2.RequestHandler):
@@ -123,5 +135,6 @@ application = webapp2.WSGIApplication([
     ('/searchdb', GetSearchString),
     ('/selectndc', GetNDC),
     ('/searchingredients', GetIngredients),
+    ('/runimageupdate', RunImageUpdate),
 ], debug=True)
 

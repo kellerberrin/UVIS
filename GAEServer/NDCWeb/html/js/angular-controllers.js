@@ -10,7 +10,8 @@ USDrugControllers.controller("DrugSearchCtrl",
     [ "$scope"
         , "$materialToast"
         , "USDrugEndPoints"
-        , function DrugSearchCtrl($scope, $materialToast, USDrugEndPoints) {
+        , "NLMRxImageAPI"
+        , function DrugSearchCtrl($scope, $materialToast, USDrugEndPoints, NLMRxImageAPI) {
 
         $scope.searchactive = false;
 
@@ -19,6 +20,7 @@ USDrugControllers.controller("DrugSearchCtrl",
             $scope.searchactive = true;
             USDrugEndPoints.typeSearch(searchParams, function (data) {
                 $scope.requestResults = data;
+                k_consoleLog(data);
                 $scope.searchactive = false;
                 var milliseconds = Date.now() - requestTime;
                 $scope.resultToast(milliseconds);
@@ -26,12 +28,19 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         };
 
+        $scope.getImageData = function (drugRecord) {
+            var imageParams = { ndc: drugRecord.ndc, resolution: 120 };
+            NLMRxImageAPI.getImageURL(imageParams, function (data) {
+                k_consoleLog(data);
+                drugRecord.imageData = data;
+            });
+
+        };
+
         $scope.resultToast = function (milliseconds) {
 
-            var ToastText = k_drugCount($scope.requestResults.NDCEnhancedArraySize, milliseconds);
-
+            var ToastText = k_drugCount($scope.requestResults.drugArray.length, milliseconds);
             var ToastOptions = { template: "<material-toast>" + ToastText + "</material-toast>", duration: 3000 };
-
             $materialToast.show(ToastOptions);
 
         }
