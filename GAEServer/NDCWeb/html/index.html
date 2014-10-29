@@ -8,7 +8,7 @@
     <title>US Drug Search</title>
     <!-- JQuery function library and Modernizr -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Important! - load this first -->
+    <!-- Important! - load before angular libraries -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- Roboto Font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
@@ -24,6 +24,11 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/hammerjs/hammer.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css">
+    <!-- Magnific Popup core JS file -->
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
     <!-- Local Angular Javascript -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
@@ -60,13 +65,7 @@
             <!-- ************ End Display Results Area *******************-->
 
             <!-- Modal wait cursor -->
-            <div id="k-modal-wait" ng-class="{searchactive: searchactive}">
-                <div id="k-wait-box">
-                    <material-circular-progress id="k-material-progress" mode="indeterminate">
-                    </material-circular-progress>
-                    Searching ...
-                </div>
-            </div>
+            <div id="k-modal-wait" ng-class="{searchactive: searchactive}"></div>
             <!-- End Modal wait cursor -->
 
             <div id="k-layout-footer"></div>

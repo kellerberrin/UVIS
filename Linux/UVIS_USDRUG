@@ -33,10 +33,8 @@ export UVISUSDRUGDATASTOREKIND="NDCLookup"
 export UVISUSDRUGDATA="$UVISDIR/GAEServer/NDCDatafilesUpload"
 #The path for the USDrug Database Data files (specifies bulkloader.yaml)
 export UVISUSDRUGDATAPATH="$UVISUSDRUGDATA/bulkloader.yaml"
-#The FULL (150,000 records) USDrug Database Data .csv file to be uploaded.
-export UVISUSDRUGFULLDATAFILE="$UVISUSDRUGDATA/csvupload/NDCDatabase.csv"
-#The TEST (100 records) USDrug Database Data .csv file to be uploaded.
-export UVISUSDRUGTESTDATAFILE="$UVISUSDRUGDATA/csvupload/TestNDCDatabase.csv"
+#The FULL (100,000 records) USDrug Database Data .csv file to be uploaded.
+export UVISUSDRUGFULLDATAFILE="$UVISUSDRUGDATA/csvupload/NDCImageDatabase.csv"
 #The USDrug LOCAL Datastore URL.
 export UVISUSDRUGDATALOCALURL="http://${UVISUSDRUGLOCALHOST}:${UVISUSDRUGLOCALPORT}/_ah/remote_api"
 #The USDrug REMOTE Datastore URL.
@@ -47,9 +45,7 @@ export UVISUSDRUGDATALOCALCHECKPOINT="$UVISUSDRUGDATA/bulkloader-local-upload-pr
 export UVISUSDRUGDATAREMOTECHECKPOINT="$UVISUSDRUGDATA/bulkloader-remote-upload-progress.sql3"
 
 
-#The USDrug Datastore Size (change this for FULL or TEST)
-#If set to the FULL file then uploads all the data (150,000 records)
-#If set to the TEST file then just uploads the test data (100 records) 
+#If set to the FULL file then uploads all the data (100,000 records)
 export UVISUSDRUGDATAFILE="$UVISUSDRUGFULLDATAFILE"  #Currently set to FULL
 
 
@@ -65,5 +61,25 @@ export UVISUSDRUGRAWDATAPRODUCT="$UVISUSDRUGRAWNDCDIR/product.txt"
 # The raw package file. This file is tab delimited between records (1 record per line).
 export UVISUSDRUGRAWDATAPACKAGE="$UVISUSDRUGRAWNDCDIR/package.txt"
 # The raw data python log file.
-export UVISUSDRUGRAWDATALOGFILE="$UVISUSDRUGRAWNDCDIR/processrawNDCfiles.log"
+export UVISUSDRUGRAWDATALOGFILE="$UVISUSDRUGDATA/csvupload/processrawNDCfiles.log"
+
+# The main directory for files and logs of the National LIbrary of Medicine RxImage download.
+export UVISUSDRUGIMAGEDIR="$UVISUSDRUGDATA"
+# The image download python log file.
+export UVISUSDRUGIMAGELOGFILE="$UVISUSDRUGIMAGEDIR/csvupload/harvestrximages.log"
+# The csv file that has been augmented with image data.
+export UVISUSDRUGIMAGEDATAFILE="$UVISUSDRUGIMAGEDIR/csvupload/NDCImageDatabase.csv"
+# The csv file with checkpointed image data.
+export UVISUSDRUGIMAGECHECKPOINT="$UVISUSDRUGIMAGEDIR/csvupload/ImageCheckpoint.csv"
+# The maxiumum number of RxImage requests per second
+export UVISUSDRUGIMAGEMAXRATE="3"
+# The URL of the RxImage API
+export UVISUSDRUGIMAGEURL="http://rximage.nlm.nih.gov/api/rximage/1/rxbase"  
+# The URL of the RxNorm RxCui lookup API (Json)
+export UVISUSDRUGRXCUIURL="http://rxnav.nlm.nih.gov/REST/rxcui.json"  
+
+
+
+
+
 

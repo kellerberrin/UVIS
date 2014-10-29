@@ -5,21 +5,75 @@
     :width: 20pt
     :height: 20pt
     
-THe FDA Download
+The FDA Download
 ================
 
 |
-|
-|
-|    
     
 
 The National Drug Code Database Background Information available is here:
 `<http://www.fda.gov/drugs/developmentapprovalprocess/ucm070829>`_
 
 
+The zip file (NDC Database File) containing the package.txt and product.txt files is available on the FDA website on the
+"National Drug Code Directory" at the the url: http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm
+
 The downloaded "product.txt" and "package.text" are downloaded and merged into a CSV
 using a python program launched from a linux bash script.
+
+**Executing the CSV creation program.**
+
+*    **processrawNDCfiles** - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
+     from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
+     the bulkloader tool (see the **bulkloader** Linux command).
+
+     |action| (UVIS) $processrawNDCfiles
+
+
+
+
+Creating the CSV file.
+++++++++++++++++++++++
+
+The python file "rawNDCfiles.py" in directory "NDCDatafilesUpload" reads the FDA Product and Package files
+and produces the composite CSV file described above. This CSV file is then uploaded into the GAE datastore
+using the bulkloader function.
+
+
+The Environment Variables
++++++++++++++++++++++++++
+
+
+The following ENVIRONMENT variables are set in "workenv UVIS" and used by "rawNDCfiles.py" (actual paths will vary
+on different development computers).
+
+1.  UVISUSDRUGRAWNDCDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+    /Data/RawNDCDataFiles
+
+    This environment variable identifies the data directory for "rawNDCfiles.py"
+
+2.  UVISUSDRUGRAWDATAPACKAGE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+    /Data/RawNDCDataFiles/package.txt
+
+    This environment variable identifies the downloaded FDA package file.
+
+3.  UVISUSDRUGRAWDATALOGFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+    /Data/RawNDCDataFiles/processrawNDCfiles.log
+
+    This environment variable identifies the log file of  "rawNDCfiles.py"
+
+4.  UVISUSDRUGRAWDATAPRODUCT=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+    /Data/RawNDCDataFiles/product.txt
+
+    This environment variable identifies the downloaded FDA product file.
+
+5.  UVISUSDRUGDATAFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/UVIS
+                       /GAEServer/NDCDatafilesUpload/csvupload/NDCDatabase.csv
+
+    This environment variable identifies the created CSV file.
+
+
+
 
 
 The Product Table (FDA)
@@ -216,54 +270,4 @@ Need to add 2 additional fields
 20. **RXCUI** The **rxcui** that corresponds to this 11-digit NDC. This code is not unique to a NDC code.
     This code is populated from the downloaded NLM files (or the online NLM RXNORM API) and initially
     has the value ("").
-
-
-
-Creating the CSV file.
-++++++++++++++++++++++
-
-The python file "rawNDCfiles.py" in directory "NDCDatafilesUpload" reads the FDA Product and Package files
-and produces the composite CSV file described above. This CSV file is then uploaded into the GAE datastore
-using the bulkloader function.
-
-
-The zip file (NDC Database File) containing the package.txt and product.txt files is available on the FDA website on the
-"National Drug Code Directory" at the the url: http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm
-
-
-The following ENVIRONMENT variables are set in "workenv UVIS" and used by "rawNDCfiles.py" (actual paths will vary
-on different development computers).
-
-1.  UVISUSDRUGRAWNDCDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-    /Data/RawNDCDataFiles
-
-    This environment variable identifies the data directory for "rawNDCfiles.py"
-
-2.  UVISUSDRUGRAWDATAPACKAGE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-    /Data/RawNDCDataFiles/package.txt
-
-    This environment variable identifies the downloaded FDA package file.
-
-3.  UVISUSDRUGRAWDATALOGFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-    /Data/RawNDCDataFiles/processrawNDCfiles.log
-
-    This environment variable identifies the log file of  "rawNDCfiles.py"
-
-4.  UVISUSDRUGRAWDATAPRODUCT=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-    /Data/RawNDCDataFiles/product.txt
-
-    This environment variable identifies the downloaded FDA product file.
-
-5.  UVISUSDRUGDATAFILE=<path>/UVIS/GAEServer/NDCDatafilesUpload/csvupload/NDCDatabase.csv
-
-    This environment variable identifies the created CSV file.
-
-**Executing the CSV creation program.**
-
-*    **processrawNDCfiles** - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
-     from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
-     the bulkloader tool (see the **bulkloader** Linux command).
-
-     |action| (UVIS) $processrawNDCfiles
-
 

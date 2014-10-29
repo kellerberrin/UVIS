@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>THE NLM Drug Image API &mdash; UVIS</title>
+  <title>THE NLM Drug Image and RxCui API &mdash; UVIS</title>
   
 
   
@@ -89,7 +89,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../../index.html">Docs</a> &raquo;</li>
       
-    <li>THE NLM Drug Image API</li>
+    <li>THE NLM Drug Image and RxCui API</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="../../../_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" rel="nofollow"> View page source</a>
@@ -100,30 +100,82 @@
 </div>
           <div role="main">
             
-  <span class="target" id="nlmimagedownloaddoc"></span><div class="section" id="the-nlm-drug-image-api">
-<h1>THE NLM Drug Image API<a class="headerlink" href="#the-nlm-drug-image-api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="downloading-csv-data-from-the-national-library-of-medicine">
-<h2>Downloading CSV Data from the National Library of Medicine<a class="headerlink" href="#downloading-csv-data-from-the-national-library-of-medicine" title="Permalink to this headline">¶</a></h2>
+  <span class="target" id="nlmimagedownloaddoc"></span><div class="section" id="the-nlm-drug-image-and-rxcui-api">
+<h1>THE NLM Drug Image and RxCui API<a class="headerlink" href="#the-nlm-drug-image-and-rxcui-api" title="Permalink to this headline">¶</a></h1>
+<p>This program should run after the <strong>processrawNDCfiles</strong> program
+has created a new &#8220;NDCDatabase.csv&#8221; file.</p>
+<p>If the &#8220;ImageCheckpoint.csv&#8221; file is present with previously harvested data then only new NDCs will need to be
+updated.</p>
+<div class="section" id="downloading-rximage-and-rxcui-data-from-the-national-library-of-medicine">
+<h2>Downloading RxImage and RxCui data from the National Library of Medicine<a class="headerlink" href="#downloading-rximage-and-rxcui-data-from-the-national-library-of-medicine" title="Permalink to this headline">¶</a></h2>
 <p>The application reads all the NDCs defined in the US drug database and
-downloads any visual information on the drugs.</p>
+downloads any required visual information on the drugs.</p>
 <p>The NLM has a drug image API available here:</p>
 <blockquote>
-<div><p><a class="reference external" href="http://rximage.nlm.nih.gov/docs/doku.php">http://rximage.nlm.nih.gov/docs/doku.php</a></p>
-<p>A web application has been created to harvest this data.</p>
-<p>At the moment this is designed to be run from a web browser connected to the
-local US drug database instance with the following address:</p>
-<p><a class="reference external" href="http://localhost:9080/runimageupdate?checkpoint=9100">http://localhost:9080/runimageupdate?checkpoint=9100</a></p>
-<p>Where:</p>
-<ol class="arabic simple">
-<li><strong>localhost:9080</strong> is the the current URL address of the US drug database application.</li>
-<li><strong>runimageupdate</strong> is the handler defined in the &#8216;app.py&#8217; source file.</li>
-<li><strong>checkpoint=9100</strong> restarts the downloader from a particular sequential NDC record which has
-been previously checkpointed.</li>
-</ol>
+<div><a class="reference external" href="http://rximage.nlm.nih.gov/docs/doku.php">http://rximage.nlm.nih.gov/docs/doku.php</a></div></blockquote>
+<p>Documentation for the RxNorm API is here:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://rxnav.nlm.nih.gov/RxNormAPIs.html">http://rxnav.nlm.nih.gov/RxNormAPIs.html</a></p>
+<p>A python application &#8220;getrximages.py&#8221; has been created to harvest this data.</p>
 </div></blockquote>
-<p>Important note - this is a temporary function that updates the GAE datastore directly. It will be replaced
-with a Python function that reads the NLM API and then updates the CSV file that is then uploaded to the
-production database. This replacement Python function will run on the command line independently of the local GAE.</p>
+<p>This is wrapped in a linux bash command &#8220;harvestRxImages&#8221;.</p>
+<p><strong>Executing the RxImage harvest program.</strong></p>
+<ul>
+<li><p class="first"><strong>harvertRxImages</strong> Harvests the RxImage API from the National Library of Medicine.
+If the intermediate download file &#8220;ImageCheckpoint.csv&#8221; is present. The harvest program
+only gets NDCs that are in &#8220;NDCDatabase.csv&#8221; but not in &#8220;ImageCheckpoint.csv&#8221;.
+If no &#8220;ImageCheckpoint.csv&#8221; is present than the download starts at the first record (NDC code)
+in &#8220;NDCDatabase.csv&#8221;.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../../../_images/emphasize5.png"><img alt="action" src="../../../_images/emphasize5.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $harvestRxImages</p>
+</div></blockquote>
+</li>
+</ul>
+<p>The following ENVIRONMENT variables are set in &#8220;workenv UVIS&#8221; and used by &#8220;getrximages.py&#8221; (actual paths will vary
+on different development computers).</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>UVISUSDRUGIMAGEDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/UVIS</dt>
+<dd><p class="first last">/GAEServer/NDCDatafilesUpload</p>
+</dd>
+</dl>
+<p>This environment variable identifies the data directory for &#8220;getrximages.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGIMAGELOGFILE=$UVISUSDRUGIMAGEDIR/harvestrximages.log</p>
+<p>This environment variable identifies the log file of  &#8220;harvestrximages.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGDATAFILE=$UVISUSDRUGIMAGEDIR/csvupload/NDCDatabase.csv</p>
+<p>This environment variable identifies the raw CSV file created using <strong>processrawNDCfiles</strong>.
+This file is read and the NDC codes in the file are compared to NDC codes in UVISUSDRUGIMAGECHECKPOINT.
+Only NDC codes that are present in this file but not present UVISUSDRUGIMAGECHECKPOINT are then queried
+on the RxImage API. Only NDCs in this file are eventually written to UVISUSDRUGIMAGEDATAFILE.</p>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">UVISUSDRUGIMAGEDATAFILE=$UVISUSDRUGIMAGEDIR/csvupload/NDCImageDatabase.csv</p>
+<p>This environment variable creates a new file with the same format as the NDCDatabase.csv file
+but with the image fields populated. <strong>Note that the file is
+recreated each time the image download is run.</strong> This file will eventually be uploaded to the GAE Datastore.</p>
+<p>If the checkpoint file below exists then this file is pre-populated to the point that RxImage requests begin.</p>
+</li>
+<li><p class="first">UVISUSDRUGIMAGECHECKPOINT=$UVISUSDRUGIMAGEDIR/csvupload/ImageCheckpoint.csv</p>
+<p>If this file exists then it assumed that an image download has already occurred. The file is then read
+and closed. The NDCs in the file are then compared to the NDCs in the UVISUSDRUGDATAFILE (NDCDatabase.csv).
+Only NDCs present in UVISUSDRUGDATAFILE but not present in UVISUSDRUGIMAGECHECKPOINT are scheduled to
+be harvested from RxImage. Once the list of NDCs to be harvested has been generated the file is closed
+and reopened with &#8220;append&#8221; and the new image data is appended to end of the file.</p>
+<p>Note - to force the <strong>harvestrximages</strong> program harvest all NDC codes then simply delete this file.</p>
+</li>
+<li><p class="first">UVISUSDRUGIMAGEMAXRATE=3</p>
+<p>A throttle that sets the maximum number of queries per second so the RxImage API hosted by NLM is not over-loaded.</p>
+</li>
+<li><p class="first">UVISUSDRUGIMAGEURL=http://rximage.nlm.nih.gov/api/rximage/1/rxbase</p>
+<p>The URL of the RxImage API hosted by the NLM.</p>
+</li>
+<li><p class="first">UVISUSDRUGRXCUIURL=http://rxnav.nlm.nih.gov/REST/rxcui.json</p>
+<p>The URL of the RxCui NDC lookup function of the RxNorm API</p>
+</li>
+</ol>
 </div>
 </div>
 

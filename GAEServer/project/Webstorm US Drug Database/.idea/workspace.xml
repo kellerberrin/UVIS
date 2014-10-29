@@ -2,117 +2,153 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/drugimages.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader.1.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader.1.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gitignore (1)" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/copyright/Apache_Licence_2_0.1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/copyright/profiles_settings.1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/dictionaries/kellerberrin.1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.idea/scopes/scope_settings.1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/shopper_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/vaint_launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-hdpi-v4/vaint_validate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/vaint_launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xhdpi-v4/vaint_validate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/vaint_launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable-xxhdpi-v4/vaint_validate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/share_via_barcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/shopper_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/vaint_launcher_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/drawable/vaint_validate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-land/encode.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-land/share.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout-ldpi-v4/capture.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/bookmark_picker_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/capture.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/encode.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/help.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/history_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents_header.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/search_book_contents_list_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/layout/share.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/capture.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/encode.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/menu/history.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/raw/beep.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ar/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-bg/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ca/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-cs/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-da/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-de/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-el/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-es/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-eu/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-fi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-fr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-he/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-hi/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-hu/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-id/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-it/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-iw/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ja/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ko/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-nl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-pl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-pt/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-ru/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sk/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sl/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-sv/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-tr/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-zh-rCN/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values-zh-rTW/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/res/debug/xml/preferences.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader-upload-progress.sql3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv.old" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/TestNDCDatabase.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/getrximages.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/logfile.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/local_bulkloader.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/remote_bulkloader.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/drugimages.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/adapters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/api.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/auth.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/cacert.pem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/certs.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/compat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/cookies.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/exceptions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/hooks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/README.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/big5freq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/big5prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/chardetect.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/chardistribution.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/charsetgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/charsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/codingstatemachine.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/compat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/constants.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/cp949prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/escprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/escsm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/eucjpprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/euckrfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/euckrprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/euctwfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/euctwprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/gb2312freq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/gb2312prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/hebrewprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/jisfreq.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/jpcntx.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langbulgarianmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langcyrillicmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langgreekmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langhebrewmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langhungarianmodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/langthaimodel.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/latin1prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/mbcharsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/mbcsgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/mbcssm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/sbcharsetprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/sbcsgroupprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/sjisprober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/universaldetector.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/chardet/utf8prober.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/_collections.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/connection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/connectionpool.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/contrib/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/exceptions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/filepost.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/packages/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/packages/ordered_dict.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/packages/six.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/poolmanager.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/request.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/response.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/connection.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/request.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/response.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/retry.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/ssl_.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/timeout.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/packages/urllib3/util/url.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/sessions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/status_codes.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/structures.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/libs/requests/utils.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/FDAdownload/FDAdownload.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/FDAdownload/FDAdownload.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/.gradle/1.12/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/usdrugdatabase.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/usdrugdatabase.doctree" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/FDAdownload/FDAdownload.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/FDAdownload/FDAdownload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/FDAdownload/FDAdownload.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/FDAdownload/FDAdownload.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/FDAdownload/FDAdownload.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/FDAdownload/FDAdownload.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/README.md" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" afterPath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/angular-animate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/angular-aria.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/angular-aria.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/angular-aria.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/angular-aria.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular-csp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/angular-resource.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/angular-route.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/app.iml" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.py" afterPath="$PROJECT_DIR$/../../NDCWeb/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-animate/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-aria/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-resource/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-route/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradlew" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/gradlew" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/index.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/library.py" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/local.properties" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" afterPath="$PROJECT_DIR$/../../../Android/AndroidStudio/BarCodeReader/app/build/intermediates/incremental/mergeAssets/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" />
@@ -143,11 +179,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="local.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_k-local.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.962963" vertical-offset="2368" max-vertical-offset="6498">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3470" max-vertical-offset="4608">
-              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22604422" vertical-offset="3470" max-vertical-offset="4644">
+              <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -156,38 +202,28 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="594" max-vertical-offset="1782">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="1764">
+              <caret line="28" column="15" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_k-local.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
+      <file leaf-file-name="DialogTemplate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.481482" vertical-offset="4469" max-vertical-offset="5472">
-              <caret line="276" column="17" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
+            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="558">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_material-colors.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss">
+      <file leaf-file-name="DialogImageTemplate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="5112">
-              <caret line="73" column="23" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayResults.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49192548" vertical-offset="0" max-vertical-offset="1314">
-              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="360">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -196,8 +232,8 @@
       <file leaf-file-name="angular-controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2610">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2556">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,9 +242,21 @@
       <file leaf-file-name="DrugHeader.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.814816" vertical-offset="203" max-vertical-offset="1008">
-              <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+            <state vertical-scroll-proportion="-23.148148" vertical-offset="329" max-vertical-offset="1116">
+              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-material.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="68472" max-vertical-offset="106992">
+              <caret line="3804" column="17" selection-start-line="3804" selection-start-column="4" selection-end-line="3804" selection-end-column="17" />
+              <folding>
+                <marker date="1413496067000" expanded="false" signature="79689:79707" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -216,8 +264,18 @@
       <file leaf-file-name="angular-services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3366">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="3870">
+              <caret line="191" column="51" selection-start-line="191" selection-start-column="37" selection-end-line="191" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayResults.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.0" vertical-offset="126" max-vertical-offset="1854">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -248,25 +306,26 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/DrugSearch.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/DisplayResults.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/DialogTemplate.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/k-widgets.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="431" />
+    <option name="x" value="386" />
     <option name="y" value="2" />
-    <option name="width" value="1400" />
-    <option name="height" value="1053" />
+    <option name="width" value="1257" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -328,6 +387,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -335,7 +426,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NDCWeb/scss/_k-widgets.scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
     <property name="options.lastSelected" value="appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -443,14 +534,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="431" y="2" width="1400" height="1053" extended-state="0" />
+    <frame x="386" y="2" width="1257" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1595136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17768924" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -507,22 +598,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3024">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3816">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1854">
@@ -824,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="5112">
@@ -839,58 +907,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3366">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="68472" max-vertical-offset="106992">
+          <caret line="3804" column="17" selection-start-line="3804" selection-start-column="4" selection-end-line="3804" selection-end-column="17" />
+          <folding>
+            <marker date="1413496067000" expanded="false" signature="79689:79707" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.148148" vertical-offset="329" max-vertical-offset="1116">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1782">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.666666" vertical-offset="0" max-vertical-offset="1764">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3470" max-vertical-offset="4608">
-          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="558">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="2610">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.814816" vertical-offset="203" max-vertical-offset="1008">
-          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="3870">
+          <caret line="191" column="51" selection-start-line="191" selection-start-column="37" selection-end-line="191" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.481482" vertical-offset="4469" max-vertical-offset="5472">
-          <caret line="276" column="17" selection-start-line="276" selection-start-column="17" selection-end-line="276" selection-end-column="17" />
+        <state vertical-scroll-proportion="-12.962963" vertical-offset="2368" max-vertical-offset="6498">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="360">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49192548" vertical-offset="0" max-vertical-offset="1314">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        <state vertical-scroll-proportion="-12.0" vertical-offset="126" max-vertical-offset="1854">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="2556">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22604422" vertical-offset="3470" max-vertical-offset="4644">
+          <caret line="212" column="36" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
           <folding />
         </state>
       </provider>

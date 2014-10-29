@@ -1,13 +1,9 @@
-import os
 import logging
 import json
-import time
 
 
-from google.appengine.api import users
 from google.appengine.ext import ndb
 
-from drugimages import getImageURLs
 
 
 class NDCLookup(ndb.Model):
@@ -197,28 +193,6 @@ def NDCElevenDigitFormat(NDC, Format) :
     FormatNDC = LabellerCode + "-" + ProductCode + "-" + PackageCode
     return FormatNDC
 
-
-def processImageDatabase(checkpoint):
-
-    qAll= NDCLookup.query()
-    RecordCount = 0
-
-    for NDCRecord in qAll:
-        if RecordCount >= checkpoint:
-            ImageURL = getImageURLs(NDCTenDigitFormat(NDCRecord.ndc, NDCRecord.format))
-            if (ImageURL[0] != "") or (ImageURL[1] != ""):
-                NDCRecord.smallimageurl = ImageURL[0]
-                NDCRecord.largeimageurl = ImageURL[1]
-                NDCRecord.put()
-                logging.info("Put() NDCRecord: ndc %s, smallurl: %s, largeurl: %s", NDCRecord.ndc, NDCRecord.smallimageurl, NDCRecord.largeimageurl)
-
-        RecordCount += 1
-        if RecordCount % 100 == 0:
-            logging.info("NDCModel Processed Records: %d", RecordCount)
-
-    logging.info("Final - NDCModel Processed Records: %d", RecordCount)
-
-    return "Final - NDCModel Processed Image Records:" + str(RecordCount) + "\n"
 
     
 def ReadNDCDatabase(SearchText, SearchType, SearchArray):

@@ -64,8 +64,8 @@ These files are downloaded as zip file and processed into csv file to uploaded i
 |
 
 
-Downloading and processing the National Library of Medicine (NLM) Image Files.
-------------------------------------------------------------------------------
+Downloading the National Library of Medicine (NLM) Image Files and RxCui Identifiers for RxNorm
+-----------------------------------------------------------------------------------------------
 
 
 .. image:: nlm.png
@@ -75,7 +75,9 @@ Downloading and processing the National Library of Medicine (NLM) Image Files.
     :target: NLMimagedownload/NLMimagedownload.html
 
 
-:ref:`Downloading the image files from the NLM online API<nlmimagedownloaddoc>`
-Solid drug (pill) image URLs are downloaded from the NLM online API using a python script.
-The image URLS are used to decorate the csv file generated from the "package.txt" and "product.txt"
-down loaded from the FDA.
+:ref:`Downloading the image files and RxCui from the NLM online APIs<nlmimagedownloaddoc>`
+Solid drug (pill) image URLs and all RxCuis are downloaded from the NLM online APIs using a python script.
+The resultant data is used to decorate the csv file generated from the "package.txt" and "product.txt"
+down loaded from the FDA. A checkpoint file is also generated so that the downloaded data can be stored
+for later updates (only new NDCs will need to be updated).
+

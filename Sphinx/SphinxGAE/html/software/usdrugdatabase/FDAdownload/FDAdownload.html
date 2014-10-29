@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>THe FDA Download &mdash; UVIS</title>
+  <title>The FDA Download &mdash; UVIS</title>
   
 
   
@@ -89,7 +89,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../../index.html">Docs</a> &raquo;</li>
       
-    <li>THe FDA Download</li>
+    <li>The FDA Download</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="../../../_sources/software/usdrugdatabase/FDAdownload/FDAdownload.txt" rel="nofollow"> View page source</a>
@@ -101,17 +101,60 @@
           <div role="main">
             
   <span class="target" id="fdadownloaddoc"></span><div class="section" id="the-fda-download">
-<h1>THe FDA Download<a class="headerlink" href="#the-fda-download" title="Permalink to this headline">¶</a></h1>
+<h1>The FDA Download<a class="headerlink" href="#the-fda-download" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <p>The National Drug Code Database Background Information available is here:
 <a class="reference external" href="http://www.fda.gov/drugs/developmentapprovalprocess/ucm070829">http://www.fda.gov/drugs/developmentapprovalprocess/ucm070829</a></p>
+<p>The zip file (NDC Database File) containing the package.txt and product.txt files is available on the FDA website on the
+&#8220;National Drug Code Directory&#8221; at the the url: <a class="reference external" href="http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm">http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm</a></p>
 <p>The downloaded &#8220;product.txt&#8221; and &#8220;package.text&#8221; are downloaded and merged into a CSV
 using a python program launched from a linux bash script.</p>
+<p><strong>Executing the CSV creation program.</strong></p>
+<ul>
+<li><p class="first"><strong>processrawNDCfiles</strong> - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
+from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
+the bulkloader tool (see the <strong>bulkloader</strong> Linux command).</p>
+<p><a class="reference internal" href="../../../_images/emphasize1.png"><img alt="action" src="../../../_images/emphasize1.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $processrawNDCfiles</p>
+</li>
+</ul>
+<div class="section" id="creating-the-csv-file">
+<h2>Creating the CSV file.<a class="headerlink" href="#creating-the-csv-file" title="Permalink to this headline">¶</a></h2>
+<p>The python file &#8220;rawNDCfiles.py&#8221; in directory &#8220;NDCDatafilesUpload&#8221; reads the FDA Product and Package files
+and produces the composite CSV file described above. This CSV file is then uploaded into the GAE datastore
+using the bulkloader function.</p>
+</div>
+<div class="section" id="the-environment-variables">
+<h2>The Environment Variables<a class="headerlink" href="#the-environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>The following ENVIRONMENT variables are set in &#8220;workenv UVIS&#8221; and used by &#8220;rawNDCfiles.py&#8221; (actual paths will vary
+on different development computers).</p>
+<ol class="arabic">
+<li><p class="first">UVISUSDRUGRAWNDCDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles</p>
+<p>This environment variable identifies the data directory for &#8220;rawNDCfiles.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATAPACKAGE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/package.txt</p>
+<p>This environment variable identifies the downloaded FDA package file.</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATALOGFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/processrawNDCfiles.log</p>
+<p>This environment variable identifies the log file of  &#8220;rawNDCfiles.py&#8221;</p>
+</li>
+<li><p class="first">UVISUSDRUGRAWDATAPRODUCT=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
+/Data/RawNDCDataFiles/product.txt</p>
+<p>This environment variable identifies the downloaded FDA product file.</p>
+</li>
+<li><dl class="first docutils">
+<dt>UVISUSDRUGDATAFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/UVIS</dt>
+<dd><p class="first last">/GAEServer/NDCDatafilesUpload/csvupload/NDCDatabase.csv</p>
+</dd>
+</dl>
+<p>This environment variable identifies the created CSV file.</p>
+</li>
+</ol>
+</div>
 <div class="section" id="the-product-table-fda">
 <h2>The Product Table (FDA)<a class="headerlink" href="#the-product-table-fda" title="Permalink to this headline">¶</a></h2>
 <p>The fields of the Product Table are available in a CSV file and are:</p>
@@ -317,45 +360,6 @@ This code is populated from the downloaded NLM files (or the online NLM RXNORM A
 has the value (&#8220;&#8221;).</p>
 </li>
 </ol>
-</div>
-<div class="section" id="creating-the-csv-file">
-<h2>Creating the CSV file.<a class="headerlink" href="#creating-the-csv-file" title="Permalink to this headline">¶</a></h2>
-<p>The python file &#8220;rawNDCfiles.py&#8221; in directory &#8220;NDCDatafilesUpload&#8221; reads the FDA Product and Package files
-and produces the composite CSV file described above. This CSV file is then uploaded into the GAE datastore
-using the bulkloader function.</p>
-<p>The zip file (NDC Database File) containing the package.txt and product.txt files is available on the FDA website on the
-&#8220;National Drug Code Directory&#8221; at the the url: <a class="reference external" href="http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm">http://www.fda.gov/Drugs/InformationOnDrugs/ucm142438.htm</a></p>
-<p>The following ENVIRONMENT variables are set in &#8220;workenv UVIS&#8221; and used by &#8220;rawNDCfiles.py&#8221; (actual paths will vary
-on different development computers).</p>
-<ol class="arabic">
-<li><p class="first">UVISUSDRUGRAWNDCDIR=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-/Data/RawNDCDataFiles</p>
-<p>This environment variable identifies the data directory for &#8220;rawNDCfiles.py&#8221;</p>
-</li>
-<li><p class="first">UVISUSDRUGRAWDATAPACKAGE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-/Data/RawNDCDataFiles/package.txt</p>
-<p>This environment variable identifies the downloaded FDA package file.</p>
-</li>
-<li><p class="first">UVISUSDRUGRAWDATALOGFILE=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-/Data/RawNDCDataFiles/processrawNDCfiles.log</p>
-<p>This environment variable identifies the log file of  &#8220;rawNDCfiles.py&#8221;</p>
-</li>
-<li><p class="first">UVISUSDRUGRAWDATAPRODUCT=/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active
-/Data/RawNDCDataFiles/product.txt</p>
-<p>This environment variable identifies the downloaded FDA product file.</p>
-</li>
-<li><p class="first">UVISUSDRUGDATAFILE=&lt;path&gt;/UVIS/GAEServer/NDCDatafilesUpload/csvupload/NDCDatabase.csv</p>
-<p>This environment variable identifies the created CSV file.</p>
-</li>
-</ol>
-<p><strong>Executing the CSV creation program.</strong></p>
-<ul>
-<li><p class="first"><strong>processrawNDCfiles</strong> - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
-from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
-the bulkloader tool (see the <strong>bulkloader</strong> Linux command).</p>
-<p><a class="reference internal" href="../../../_images/emphasize1.png"><img alt="action" src="../../../_images/emphasize1.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $processrawNDCfiles</p>
-</li>
-</ul>
 </div>
 </div>
 

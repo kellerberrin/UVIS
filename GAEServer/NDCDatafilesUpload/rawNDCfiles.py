@@ -1,113 +1,42 @@
 #!/usr/bin/python
 #
-# Copyright: 	Kellerberrin
+# Copyright: 	Kellerberrin 2014
 # Author:	James McCulloch
 #
 import os
 import sys
-import logging
 from datetime import datetime, date
 
-# Place holder for the NLM image file URLS.
+import logfile  # local logger setup
+import CSVrecords  # Local record definitions.
+
+
+###########################################################################################################
+## Application starts here.
+###########################################################################################################
 
 
 
-class PackageClass:
-
-    def __init__(self, TabbedString):
-
-        StringArray = TabbedString.split("\t")
-#    Check that we have the correct number of fields (4).    
-        if len(StringArray) != 4 :
-            Logger.error("Package file record: %s, bad field count: %d", TabbedString, len(StringArray))
-            sys.exit()    # Terminate with extreme prejudice        
-
-        self.PRODUCTID = StringArray[0].strip()		
-        self.PRODUCTNDC = StringArray[1].strip()		
-        self.NDCPACKAGECODE = StringArray[2].strip()		
-        self.PACKAGEDESCRIPTION = StringArray[3].strip()	
-
-
-class ProductClass:
-
-    def __init__(self, TabbedString):
-
-        StringArray = TabbedString.split("\t")
-#    Check that we have the correct number of fields (18).    
-        if len(StringArray) != 18 :
-            Logger.error("Product file record: %s, bad field count: %d", TabbedString, len(StringArray))
-            sys.exit()    # Terminate with extreme prejudice        
-
-        self.PRODUCTID = StringArray[0].strip()	
-        self.PRODUCTNDC = StringArray[1].strip()		
-        self.PRODUCTTYPENAME = StringArray[2].strip()		
-        self.PROPRIETARYNAME = StringArray[3].strip()		
-        self.PROPRIETARYNAMESUFFIX = StringArray[4].strip()		
-        self.NONPROPRIETARYNAME = StringArray[5].strip()		
-        self.DOSAGEFORMNAME = StringArray[6].strip()		
-        self.ROUTENAME = StringArray[7].strip()		
-        self.STARTMARKETINGDATE = StringArray[8].strip()		
-        self.ENDMARKETINGDATE = StringArray[9].strip()		
-        self.MARKETINGCATEGORYNAME = StringArray[10].strip()		
-        self.APPLICATIONNUMBER = StringArray[11].strip()		
-        self.LABELERNAME = StringArray[12].strip()		
-        self.SUBSTANCENAME = StringArray[13].strip()		
-        self.ACTIVE_NUMERATOR_STRENGTH = StringArray[14].strip()		
-        self.ACTIVE_INGRED_UNIT = StringArray[15].strip()		
-        self.PHARM_CLASSES = StringArray[16].strip()		
-        self.DEASCHEDULE = StringArray[17].strip()	
-        
-
-global Logger
-
-
-def SetupLogging() :
-    "Set up Python logging to console and log file" 
-
-    global Logger
-
-    Logger = logging.getLogger(__name__)
-    Logger.setLevel(logging.INFO)
-
-# Create a console log
-
-    ConsoleLog = logging.StreamHandler()
-    ConsoleLog.setLevel(logging.DEBUG)
-
-# Create a logging format and add to the logging streams
-
-    LogFormat = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    ConsoleLog.setFormatter(LogFormat)
-
-# Add the console log stream to the logger
-
-    Logger.addHandler(ConsoleLog)
-
-# Create a file handler
+def SetupLogging():
+    """Set up Python logging to console and log file"""
 
     LogFileName = os.getenv("UVISUSDRUGRAWDATALOGFILE")
-    if LogFileName == None :
-        Logger.error("Log file environment variable 'UVISUSDRUGRAWDATALOGFILE' is undefined")
-        return
+    if LogFileName is None:
+        print("Log file environment variable 'UVISUSDRUGRAWDATALOGFILE' is undefined")
+        sys.exit()    # Terminate with extreme prejudice
 
-    FileLog = logging.FileHandler(LogFileName)
-    FileLog.setLevel(logging.DEBUG)
-    FileLog.setFormatter(LogFormat)
+    return logfile.setupfilelogging(LogFileName)
 
-    Logger.addHandler(FileLog)
-
-    return
+# Define a logger for this program
+Logger = SetupLogging()
 
 # Read all the records in an FDA RAW package file.
 
-
-def ReadAllPackageRecords() :
-    "Reads all the NDC Package.txt records (lines) into an array of strings."
-
-    RecordArray = []
+def ReadAllPackageRecords():
+    """Reads all the NDC Package.txt records (lines) into an array of strings."""
 
     PackageFileName = os.getenv("UVISUSDRUGRAWDATAPACKAGE")
-    if PackageFileName == None :
+    if PackageFileName == None:
 
         Logger.error("Environment variable 'UVISUSDRUGRAWDATAPACKAGE' must be defined")
         sys.exit()    # Terminate with extreme prejudice        
@@ -116,7 +45,7 @@ def ReadAllPackageRecords() :
 
     PackageFile = open(PackageFileName, "r")
 
-    if PackageFile.closed :
+    if PackageFile.closed:
 
         Logger.error("Unable to open package file: %s", PackageFileName)
         sys.exit()    # Terminate with extreme prejudice        
@@ -131,13 +60,11 @@ def ReadAllPackageRecords() :
     return RecordArray[1:]
 
 
-def ReadAllProductRecords() :
-    "Reads all the NDC Product.txt records (lines) into an array of strings."
-
-    RecordArray = []
+def ReadAllProductRecords():
+    """Reads all the NDC Product.txt records (lines) into an array of strings."""
 
     ProductFileName = os.getenv("UVISUSDRUGRAWDATAPRODUCT")
-    if ProductFileName == None :
+    if ProductFileName == None:
 
         Logger.error("Environment variable 'UVISUSDRUGRAWDATAPRODUCT' must be defined")
         sys.exit()    # Terminate with extreme prejudice        
@@ -146,7 +73,7 @@ def ReadAllProductRecords() :
 
     ProductFile = open(ProductFileName, "r")
 
-    if ProductFile.closed :
+    if ProductFile.closed:
         Logger.error("Unable to open product file: %s", ProductFileName)
         sys.exit()    # Terminate with extreme prejudice        
 
@@ -158,115 +85,6 @@ def ReadAllProductRecords() :
 # Remove the header first line 
 
     return RecordArray[1:]
-
-# Convenience function to return a format string from a dash "-" separated NDC
-
-
-def NDCFormat(NDCCode) :
-# Find the first dash
-    First = NDCCode.find("-")
-# Find the last dash
-    Last = NDCCode.rfind("-")
-# Adjust the index counts 
-    LastIndex = Last-First-1
-    PackIndex = 10 - First - LastIndex
-
-    Format = str(First) + "-" + str(LastIndex) + "-" + str(PackIndex)
-    return Format        
-
-
-def NDCNineDigitFormat(NDC, Format) :
-    """Utility function generates an 9-digit formatted National Drug Code"""
-    CleanNDC = NDC.replace("-", "")
-
-    if len(CleanNDC) != 10:
-        Logger.error("Unable to determine 9 Digit NDC for %s - '000000000' returned", NDC)
-        return "000000000"
-
-    LabellerSize = int(Format[0])
-    ProductSize = int(Format[2])
-
-    LabellerCode = CleanNDC[:LabellerSize]
-    ProductCode = CleanNDC[LabellerSize:(LabellerSize + ProductSize)]
-    PackageCode = CleanNDC[(LabellerSize + ProductSize):]
-
-    if Format == "4-4-2" :
-        LabellerCode = "0" + LabellerCode
-    elif Format == "5-3-2" :
-        ProductCode = "0" + ProductCode
-    elif Format == "5-4-1" :
-        PackageCode = "0" + PackageCode
-    else:
-        Logger.error("Unable to determine 9 Digit NDC for %s - '000000000' returned", NDC)
-        return "000000000"
-
-    FormatNDC = LabellerCode + ProductCode
-    return FormatNDC
-
-
-def NDCNineDigit(NDC):
-    return NDCNineDigitFormat(NDC, NDCFormat(NDC))
-
-
-def NDCElevenDigitFormat(NDC, Format) :
-    """Utility function generates an 11-digit formatted National Drug Code"""
-    CleanNDC = NDC.replace("-", "")
-
-    if len(CleanNDC) != 10:
-        Logger.error("Unable to determine 11 Digit NDC for %s - '000000000' returned", NDC)
-        return "000000000"
-
-    LabellerSize = int(Format[0])
-    ProductSize = int(Format[2])
-
-    LabellerCode = CleanNDC[:LabellerSize]
-    ProductCode = CleanNDC[LabellerSize:(LabellerSize + ProductSize)]
-    PackageCode = CleanNDC[(LabellerSize + ProductSize):]
-
-    if Format == "4-4-2" :
-        LabellerCode = "0" + LabellerCode
-    elif Format == "5-3-2" :
-        ProductCode = "0" + ProductCode
-    elif Format == "5-4-1" :
-        PackageCode = "0" + PackageCode
-    else:
-        Logger.error("Unable to determine 11 Digit NDC for %s - '000000000' returned", NDC)
-        return "000000000"
-
-    FormatNDC = LabellerCode + ProductCode + PackageCode
-    return FormatNDC
-
-
-def NDCElevenDigit(NDC):
-    return NDCElevenDigitFormat(NDC, NDCFormat(NDC))
-
-
-# Function to write the csv header
-
-def WriteHeader(CSVFile) :
-
-    HeaderString = '"' + 'NDC' + '"' + ',' \
-                + '"' + 'FORMAT' + '"' + ','  \
-                + '"' + 'PRODUCTTYPENAME' + '"' + ',' \
-                + '"' + 'PROPRIETARYNAME' + '"' + ',' \
-                + '"' + 'NONPROPRIETARYNAME' + '"' + ',' \
-                + '"' + 'DOSAGEFORMNAME' + '"' + ',' \
-                + '"' + 'ROUTENAME' + '"' + ',' \
-                + '"' + 'APPLICATIONNUMBER' + '"' + ',' \
-                + '"' + 'LABELERNAME' + '"' + ',' \
-                + '"' + 'SUBSTANCENAME' + '"' + ',' \
-                + '"' + 'ACTIVE_NUMERATOR_STRENGTH' + '"' + ',' \
-                + '"' + 'ACTIVE_INGRED_UNIT' + '"' + ',' \
-                + '"' + 'PHARM_CLASSES' + '"' + ',' \
-                + '"' + 'PACKAGEDESCRIPTION' + '"' + ',' \
-                + '"' + 'NINE_DIGIT_NDC' + '"' + ',' \
-                + '"' + 'SMALL_IMAGE_URL' + '"' + ',' \
-                + '"' + 'LARGE_IMAGE_URL' + '"' + ',' \
-                + '"' + 'NDCNINE_IMAGECODES' + '"' + ',' \
-                + '"' + 'ELEVEN_DIGIT_NDC' + '"' + ',' \
-                + '"' + 'RXCUI' + '"' + '\n'
-
-    CSVFile.write(HeaderString) 
 
 # Check if still marketed and is a prescription drug.
 
@@ -294,9 +112,9 @@ def ValidDrugRecord(Product) :
 
 #    Logger.info("ENDMARKETINGDATE %s, Calculated Date %s", Product.ENDMARKETINGDATE, EndDate.isoformat())
 
-    if EndDate > Today :
+    if EndDate > Today:
         return True
-    else :
+    else:
         return False 
 
 # Function to write a csv line. 
@@ -305,36 +123,24 @@ def ValidDrugRecord(Product) :
 def WriteCSVLine(CSVFile, Product, Package):
 
 # Check if still marketed and is a prescription drug.
-    if ValidDrugRecord(Product):
-    
-        LineString = '"' + Package.NDCPACKAGECODE.replace('-','') + '"' + ',' \
-                    + '"' + NDCFormat(Package.NDCPACKAGECODE) + '"' + ',' \
-                    + '"' + Product.PRODUCTTYPENAME + '"' + ',' \
-                    + '"' + Product.PROPRIETARYNAME + '"' + ',' \
-                    + '"' + Product.NONPROPRIETARYNAME + '"' + ',' \
-                    + '"' + Product.DOSAGEFORMNAME + '"' + ',' \
-                    + '"' + Product.ROUTENAME + '"' + ',' \
-                    + '"' + Product.APPLICATIONNUMBER + '"' + ',' \
-                    + '"' + Product.LABELERNAME + '"' + ',' \
-                    + '"' + Product.SUBSTANCENAME + '"' + ',' \
-                    + '"' + Product.ACTIVE_NUMERATOR_STRENGTH + '"' + ',' \
-                    + '"' + Product.ACTIVE_INGRED_UNIT + '"' + ',' \
-                    + '"' + Product.PHARM_CLASSES + '"' + ',' \
-                    + '"' + Package.PACKAGEDESCRIPTION + '"' + ',' \
-                    + '"' + NDCNineDigit(Package.NDCPACKAGECODE) + '"' + ',' \
-                    + '"' + "" + '"' + ',' \
-                    + '"' + "" + '"' + ',' \
-                    + '"' + "" + '"' + ',' \
-                    + '"' + NDCElevenDigit(Package.NDCPACKAGECODE) + '"' + ',' \
-                    + '"' + "" + '"' + '\n'
 
-        CSVFile.write(LineString) 
+    RecordWrite = False
+
+    if ValidDrugRecord(Product):
+
+        RecordWrite = True
+
+        RawCSVRecord = CSVrecords.RawCSVClass(Product, Package)
+
+        CSVFile.write(RawCSVRecord.WriteRawCSV())
+
+    return RecordWrite
 
 # Function to process both files.
 
 
 def ProcessRawNDCFiles() :
-    "Process the raw Package.txt and Product.txt files into a csv file."
+    """Process the raw Package.txt and Product.txt files into a csv file."""
 
     ProductDict = {}
     PackageList = []
@@ -354,34 +160,36 @@ def ProcessRawNDCFiles() :
 
     CSVFile = open(CSVFileName, "w")
 
-    if CSVFile.closed :
+    if CSVFile.closed:
         Logger.error("Unable to open output csv file: %s", CSVFileName)
         sys.exit()    # Terminate with extreme prejudice        
 
 # Create the product dictionary
 
-    for Record in ProductRecords :
-        Product = ProductClass(Record)
+    for Record in ProductRecords:
+        Product = CSVrecords.ProductClass(Record)
         ProductDict.update( { Product.PRODUCTNDC : Product } )
 
 #Create the package list
 
-    for Record in PackageRecords :
-        PackageList.append(PackageClass(Record)) 
+    for Record in PackageRecords:
+        PackageList.append(CSVrecords.PackageClass(Record))
 
 # For each package look up a product.
 
-    WriteHeader(CSVFile)
+    CSVFile.write(CSVrecords.RawCSVClass.WriteHeader())
 
     RecordCount = 0
-    for Package in PackageList :
+    for Package in PackageList:
         Product = ProductDict.get(Package.PRODUCTNDC)
 # Check that we found something and write a line.
         if Product == None :
             Logger.error("Package NDC: %s , Could not find Product Code: %s", Package.NDCPACKAGECODE, Package.PRODUCTNDC)
         else:
-            RecordCount += 1
-            WriteCSVLine(CSVFile, Product, Package)
+            if WriteCSVLine(CSVFile, Product, Package):
+                RecordCount += 1
+
+
 
 # Close the file
 
@@ -399,6 +207,5 @@ def ProcessRawNDCFiles() :
 # Run the module to process both files.
 
 if __name__ == "__main__":
-    SetupLogging()
     ProcessRawNDCFiles()
  

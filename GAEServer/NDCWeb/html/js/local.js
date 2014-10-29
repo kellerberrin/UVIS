@@ -210,6 +210,8 @@ function k_clientDrugData()
             var drugRecord = {}; // Beware the dreaded deep copy bug.
             var ndcEnhanced = endPointData.NDCEnhancedArray[i];
 
+            k_consoleLog(ndcEnhanced)
+
             drugRecord.ndc = ndcEnhanced.hasOwnProperty("ndc") ? ndcEnhanced.ndc : "";
             drugRecord.name = ndcEnhanced.hasOwnProperty("proprietaryname") ? ndcEnhanced.proprietaryname : "";
             drugRecord.labeler = ndcEnhanced.hasOwnProperty("labellername") ? ndcEnhanced.labellername : "";
@@ -219,7 +221,7 @@ function k_clientDrugData()
             drugRecord.format = ndcEnhanced.hasOwnProperty("format") ? ndcEnhanced.format : "";
             drugRecord.smallimageurl = ndcEnhanced.hasOwnProperty("smallimageurl") ? ndcEnhanced.smallimageurl : "";
             drugRecord.largeimageurl = ndcEnhanced.hasOwnProperty("largeimageurl") ? ndcEnhanced.largeimageurl : "";
-            drugRecord.hasimage = (drugRecord.smallimageurl != "No Image");  // Set to true if drug images exist.
+            drugRecord.hasimage = (drugRecord.smallimageurl != "");  // Set to true if drug images exist.
 
             drugRecord.activeArray = [];
 

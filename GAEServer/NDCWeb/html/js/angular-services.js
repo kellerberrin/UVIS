@@ -24,7 +24,6 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
                         var obj1 = angular.fromJson(jsonData);
                         if (typeof obj1.resultMessage == "string") {
                             var obj2 = angular.fromJson(obj1.resultMessage);
-                            // k_consoleLog(obj2);
                             parsedData.parseJsonData(obj2);
                         }
                     }
@@ -35,26 +34,6 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
     );
 
 }]);
-
-
-// Download image details.
-
-USDrugServices.factory("NLMRxImageAPI", ["$resource", function ($resource) {
-
-    return $resource("/_ah/api/searchUSdrugs/v1/imageSearch"
-
-        , {   }    // default arguments
-
-        , { getImageURL: { method: "POST", params: {ndc: "@ndc", resolution: "@resolution"} }
-
-
-        }
-
-    );
-
-}]);
-
-
 
 
 
@@ -139,12 +118,12 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
 
 USDrugServices.factory("USDrugShowDialog",
 
-    [ "$materialDialog"
-        , function ($materialDialog) {
+    [ "$mdDialog"
+        , function ($mdDialog) {
 
         function DisplayYesNoDialog(message, yesFunc, noFunc, dismissFunc) {
 
-            $materialDialog.show({
+            $mdDialog.show({
                 templateUrl: "/partial/DialogTemplate.html", resolve: { message: function () {
                     return message;
                 }, yesFunc: function () {
@@ -152,20 +131,20 @@ USDrugServices.factory("USDrugShowDialog",
                 }, noFunc: function () {
                     return noFunc;
                 } }, controller: [ "$scope"
-                    , "$materialDialog"
+                    , "$mdDialog"
                     , "message"
                     , "yesFunc"
                     , "noFunc"
-                    , function ($scope, $materialDialog, message, yesFunc, noFunc) {
+                    , function ($scope, $mdDialog, message, yesFunc, noFunc) {
 
                         $scope.dialog = { message: message };
 
                         $scope.yesDialog = function () {
-                            $materialDialog.hide(yesFunc);
+                            $mdDialog.hide(yesFunc);
                         };
 
                         $scope.noDialog = function () {
-                            $materialDialog.hide(noFunc);
+                            $mdDialog.hide(noFunc);
                         };
 
                     }]
@@ -177,5 +156,54 @@ USDrugServices.factory("USDrugShowDialog",
         return { DisplayYesNoDialog: DisplayYesNoDialog };
 
     }]);
+
+
+
+USDrugServices.factory("USDrugImageDialog",
+
+    [ "$mdDialog"
+        , function ($mdDialog) {
+
+        function DisplayImageDialog(imageURL, searchFunc, dismissFunc) {
+
+            $mdDialog.show({
+                templateUrl: "/partial/DialogImageTemplate.html", resolve: { imageURL: function () {
+                    return imageURL;
+                }, searchFunc: function () {
+                    return searchFunc;
+                } }, controller: [ "$scope"
+                    , "$mdDialog"
+                    , "imageURL"
+                    , "searchFunc"
+                    , function ($scope, $mdDialog, imageURL, searchFunc) {
+
+                        $scope.dialog = { imageURL: imageURL };
+
+                        $scope.searchDialog = function () {
+                            $mdDialog.hide(searchFunc);
+                        };
+
+                    }]
+            }).then(function (responseFunc) {
+                responseFunc();
+            }, dismissFunc);
+        }
+
+        return { DisplayImageDialog: DisplayImageDialog };
+
+    }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

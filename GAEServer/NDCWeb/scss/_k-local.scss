@@ -63,17 +63,24 @@ $K-Icon-Color: white;
 
       margin: none;
       padding: none;
-      height: 2.0em;
+      border: none;
+      height: 2em;
 
       & #k-search-title {
 
-        padding: 0.6em;
+        margin: none;
+        margin-left: 0.75em;
+        padding: none;
+        height: 1.5em;
 
       }
 
       & #k-md-searchtype {
 
         border: none;
+        margin-left: 0.75em;
+        padding: none;
+        height: 1.5em;
         @include MaterialBoxShadow(2);
 
       }
@@ -84,19 +91,32 @@ $K-Icon-Color: white;
 
       margin: none;
       padding: none;
-      height: 3.0em;
+      border: none;
+      height: 3em;
 
       // Set the the input text colors.
 
       & #k-md-searchtext {
 
+        height: 3em;
+        margin-left: em;
         color: $K-Input-Text-Color;
+
+        // Important the material design tag md-text=float
+        // expands to a directive with a nested <input> tag
+        // To reach this tag we need to specify the (implied) child tag type.
+        & input {
+
+          color: $K-Input-Text-Color;
+
+        }
 
       }
 
       & #k-md-search {
 
         position: relative;
+        margin-left: 0.75em;
         top: 1.0em;
         background-color: $K-SearchButton-Inactive-color;
 
@@ -113,6 +133,43 @@ $K-Icon-Color: white;
   }
 
 }
+
+// Image popup.
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0;
+}
+/* Offset the image search button */
+
+.k-image-search {
+
+  position: relative;
+  margin-left: 0.75em;
+  top: -1.5em;
+  background-image:url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-color: $K-SearchButton-Inactive-color;
+
+  &.searchactive {   // Important! this class is set when the endpoints request is active.
+
+    background-color: $K-SearchButton-Active-color;
+
+  }
+
+}
+
 
 /*********************************************************************************************
 *

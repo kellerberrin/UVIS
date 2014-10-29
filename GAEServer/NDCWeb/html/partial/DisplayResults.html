@@ -1,10 +1,10 @@
 <div id="k-display-results">
 
-    <material-content id="k-search-results" class="material-content-padding">
+    <md-content id="k-search-results" class="md-content-padding">
 
         <div id="k-results-container" ng-repeat="drugRecord in requestResults.drugArray track by $index">
 
-            <material-whiteframe class="k-display-drug material-whiteframe-z1">
+            <md-whiteframe class="k-display-drug md-whiteframe-z1">
 
                 <div id="k-display-drug-name">
 
@@ -20,7 +20,37 @@
 
                 <div id="k-display-drug-image" ng-class="{ hasimage: drugRecord.hasimage}">
 
-                    <img ng-src="{{drugRecord.smallimageurl}}">
+                    <a href="#" title="Search on Drug Image" ng-click="imageDialog(drugRecord)">
+                        <img ng-src="{{drugRecord.smallimageurl}}">
+                    </a>
+                    <a class="drug-image-popup" ng-href="{{drugRecord.largeimageurl}}" title="Search on Drug Image">
+                        <img ng-src="{{drugRecord.smallimageurl}}">
+                    </a>
+
+                    <script>
+                        $(".drug-image-popup").magnificPopup({
+
+                            type: "image",
+                            // closeOnContentClick: true,
+                            mainClass: "mfp-img-mobile",
+                            image: {
+                            verticalFit: true,
+                            titleSrc: function(item) {
+                                   k_consoleLog(item)
+                                    return  "<div layout='horizontal'>"
+                                            + "<div>Search on Drug Image</div>"
+                                            + "<md-button"
+                                            + " ng-click='getParamsSearch()' "
+                                            + " ng-class='{ searchactive : searchactive }' "
+                                            + "class='k-image-search md-button-fab'>"
+                                            + "</md-button>"
+                                            + "</div>";
+                                }
+
+                            }
+
+                        });
+                    </script>
 
                 </div>
 
@@ -56,12 +86,12 @@
 
                 </div>
 
-            </material-whiteframe>
+            </md-whiteframe>
 
         </div>
         <!-- ng-repeat -->
 
-    </material-content>
+    </md-content>
 
 </div>
 <!-- ************ AJAX *******************-->

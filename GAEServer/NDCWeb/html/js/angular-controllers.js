@@ -8,10 +8,10 @@ var USDrugControllers = angular.module("USDrugControllers", []);
 
 USDrugControllers.controller("DrugSearchCtrl",
     [ "$scope"
-        , "$materialToast"
+        , "$mdToast"
         , "USDrugEndPoints"
-        , "NLMRxImageAPI"
-        , function DrugSearchCtrl($scope, $materialToast, USDrugEndPoints, NLMRxImageAPI) {
+        , "USDrugImageDialog"
+        , function DrugSearchCtrl($scope, $mdToast, USDrugEndPoints, USDrugIMageDialog) {
 
         $scope.searchactive = false;
 
@@ -28,20 +28,17 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         };
 
-        $scope.getImageData = function (drugRecord) {
-            var imageParams = { ndc: drugRecord.ndc, resolution: 120 };
-            NLMRxImageAPI.getImageURL(imageParams, function (data) {
-                k_consoleLog(data);
-                drugRecord.imageData = data;
-            });
-
-        };
-
         $scope.resultToast = function (milliseconds) {
 
             var ToastText = k_drugCount($scope.requestResults.drugArray.length, milliseconds);
-            var ToastOptions = { template: "<material-toast>" + ToastText + "</material-toast>", duration: 3000 };
-            $materialToast.show(ToastOptions);
+            var ToastOptions = { template: "<md-toast>" + ToastText + "</md-toast>", duration: 3000 };
+            $mdToast.show(ToastOptions);
+
+        }
+
+        $scope.imageDialog = function (drugRecord) {
+
+            USDrugIMageDialog.DisplayImageDialog(drugRecord.largeimageurl, function() { k_consoleLog(drugRecord) }, function() {})
 
         }
 

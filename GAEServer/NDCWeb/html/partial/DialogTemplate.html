@@ -1,25 +1,25 @@
-<head/><material-dialog aria-label="US Drug Dialog">
+<head/><md-dialog aria-label="US Drug Dialog">
 
-    <material-content class="dialog-content">
-        <material-subheader class="sticky-no-effect">Input Correction</material-subheader>
+    <md-content class="dialog-content">
+        <md-subheader class="sticky-no-effect">Input Correction</md-subheader>
 
         <p>{{ dialog.message }}</p>
 
-    </material-content>
+    </md-content>
 
     <div class="dialog-actions">
-        <material-button href="http://kellerberrin-doc.appspot.com"
+        <md-button href="http://kellerberrin-doc.appspot.com"
                          target="_blank"
-                         class="material-button-colored" hide show-md>
+                         class="md-button-colored" hide show-md>
             More Info
-        </material-button>
+        </md-button>
         <span flex></span>
-        <material-button ng-click="yesDialog()" class="material-theme-green">
+        <md-button ng-click="yesDialog()" class="md-theme-green">
         <span>Yes</span>
-        </material-button>
-        <material-button ng-click="noDialog()" class="material-theme-red">
+        </md-button>
+        <md-button ng-click="noDialog()" class="md-theme-red">
         <span>No</span>
-        </material-button>
+        </md-button>
     </div>
 
-</material-dialog>
+</md-dialog>

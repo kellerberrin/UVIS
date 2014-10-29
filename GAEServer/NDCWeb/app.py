@@ -2,7 +2,6 @@ import os
 import logging
 import webapp2
 
-from drugdatabase import processImageDatabase
 
 """ Create the HTML directory """
 
@@ -26,16 +25,6 @@ class SearchPage(webapp2.RequestHandler):
         handle = open(TEMPLATE_SEARCH_PATH, "r")
 
         self.response.write(handle.read())
-
-
-class RunImageUpdate(webapp2.RequestHandler):
-    def get(self):
-        """ Display the search index page. """
-
-        checkpoint = self.request.get("checkpoint")
-        logging.info("Image update starts at checkpoint: %s", checkpoint)
-        self.response.write(processImageDatabase(int(checkpoint)))
-
 
 
 class GetSearchString(webapp2.RequestHandler):
@@ -135,6 +124,5 @@ application = webapp2.WSGIApplication([
     ('/searchdb', GetSearchString),
     ('/selectndc', GetNDC),
     ('/searchingredients', GetIngredients),
-    ('/runimageupdate', RunImageUpdate),
 ], debug=True)
 

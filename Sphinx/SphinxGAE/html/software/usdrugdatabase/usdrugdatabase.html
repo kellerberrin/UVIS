@@ -134,13 +134,14 @@ These files are downloaded as zip file and processed into csv file to uploaded i
 <div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="downloading-and-processing-the-national-library-of-medicine-nlm-image-files">
-<h2>Downloading and processing the National Library of Medicine (NLM) Image Files.<a class="headerlink" href="#downloading-and-processing-the-national-library-of-medicine-nlm-image-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="downloading-the-national-library-of-medicine-nlm-image-files-and-rxcui-identifiers-for-rxnorm">
+<h2>Downloading the National Library of Medicine (NLM) Image Files and RxCui Identifiers for RxNorm<a class="headerlink" href="#downloading-the-national-library-of-medicine-nlm-image-files-and-rxcui-identifiers-for-rxnorm" title="Permalink to this headline">¶</a></h2>
 <a class="reference external image-reference" href="NLMimagedownload/NLMimagedownload.html"><img alt="../../_images/nlm.png" class="align-left" src="../../_images/nlm.png" style="width: 300px; height: 40px;" /></a>
-<p><a class="reference internal" href="NLMimagedownload/NLMimagedownload.html#nlmimagedownloaddoc"><em>Downloading the image files from the NLM online API</em></a>
-Solid drug (pill) image URLs are downloaded from the NLM online API using a python script.
-The image URLS are used to decorate the csv file generated from the &#8220;package.txt&#8221; and &#8220;product.txt&#8221;
-down loaded from the FDA.</p>
+<p><a class="reference internal" href="NLMimagedownload/NLMimagedownload.html#nlmimagedownloaddoc"><em>Downloading the image files and RxCui from the NLM online APIs</em></a>
+Solid drug (pill) image URLs and all RxCuis are downloaded from the NLM online APIs using a python script.
+The resultant data is used to decorate the csv file generated from the &#8220;package.txt&#8221; and &#8220;product.txt&#8221;
+down loaded from the FDA. A checkpoint file is also generated so that the downloaded data can be stored
+for later updates (only new NDCs will need to be updated).</p>
 </div>
 </div>
 

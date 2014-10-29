@@ -2,49 +2,55 @@
 
 <div id="k-drug-toolbar" ng-controller="DrugSearchParams">
 
-    <material-toolbar id="k-icon-toolbar">
-        <div id="k-icon-toolbar-tools" class="material-toolbar-tools">
-            <material-button class="material-theme-light-blue">
+    <md-toolbar id="k-icon-toolbar">
+
+        <div id="k-icon-toolbar-tools" class="md-toolbar-tools">
+
+            <md-button class="md-theme-light-blue">
                 <img src="/images/icons/white_bars24.svg" width="24" height="24">
-            </material-button>
+            </md-button>
+
             <span id="k-icon-toolbar-title" flex>PharmCat</span>
-            <material-button class="material-theme-light-blue">
+
+            <md-button class="md-theme-light-blue">
                 <img src="/images/icons/white_barcode24.svg" width="24" height="24">
-            </material-button>
-            <material-button class="material-theme-light-blue">
+            </md-button>
+
+            <md-button class="md-theme-light-blue">
                 <img src="/images/icons/white_search24.svg" width="24" height="24">
-            </material-button>
+            </md-button>
+
         </div>
-    </material-toolbar>
 
-    <material-toolbar id="k-search-toolbar" scroll-shrink class="material-medium">
+    </md-toolbar>
 
-        <div id="k-search-type-toolbar" class="material-toolbar-tools">
+    <md-toolbar id="k-search-toolbar">
+
+        <div id="k-search-type-toolbar" class="md-toolbar-tools">
 
             <div id="k-search-title">Search by</div>
 
             <select id="k-md-searchtype" ng-model="search.selectedsearchtype"
                     ng-options="s.typeprompt for s in searchtypes"
-                    class="material-theme-light-blue">
+                    class="md-theme-light-blue">
             </select>
 
         </div>
 
         <!-- Horizontal -->
 
-        <div id="k-search-text-toolbar" class="material-toolbar-tools">
+        <div id="k-search-text-toolbar" class="md-toolbar-tools">
 
-            <material-input-group class="material-input-group-inverted">
-                <label for="k-md-searchtext">Enter Search Text</label>
-                <material-input id="k-md-searchtext" type="search" ng-model="search.searchtext"></material-input>
-            </material-input-group>
-            <material-button id="k-md-search" ng-click="getParamsSearch()"
-                             class="material-button-fab"
-                             ng-class="{ searchactive: searchactive}">
+            <md-text-float id="k-md-searchtext" label="Enter Search Text" ng-model="search.searchtext"></md-text-float>
+
+            <md-button id="k-md-search" ng-click="getParamsSearch()"
+                             class="md-button-fab"
+                             ng-class="{ searchactive : searchactive }">
                 <img src="/images/icons/search24.svg" width="24" height="24">
-            </material-button>
+            </md-button>
+
         </div>
 
-    </material-toolbar>
+    </md-toolbar>
 
 </div>
