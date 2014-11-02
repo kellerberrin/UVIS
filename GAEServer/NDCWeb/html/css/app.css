@@ -86,7 +86,7 @@ body {
 *
 *
 ************************************************************************************************/
-/* line 21, ../../scss/_k-local.scss */
+/* line 20, ../../scss/_k-local.scss */
 #k-drug-toolbar {
   display: block;
   color: white;
@@ -94,48 +94,48 @@ body {
   margin: none;
   padding: none;
 }
-/* line 29, ../../scss/_k-local.scss */
+/* line 28, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-icon-toolbar {
   background-color: #1a237e;
   margin: none;
   padding: none;
   height: 3.0em;
 }
-/* line 36, ../../scss/_k-local.scss */
+/* line 35, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-icon-toolbar #k-icon-toolbar-tools {
   margin: none;
   padding: none;
   padding-top: 1.0em;
   height: 2.0em;
 }
-/* line 43, ../../scss/_k-local.scss */
+/* line 42, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-icon-toolbar #k-icon-toolbar-tools #k-icon-toolbar-title {
   color: #ff80ab;
   font-weight: 700;
   font-size: 1.5em;
 }
-/* line 55, ../../scss/_k-local.scss */
+/* line 54, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: none;
   padding: none;
   height: 5.0em;
 }
-/* line 62, ../../scss/_k-local.scss */
+/* line 61, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar {
   margin: none;
   padding: none;
   border: none;
   height: 2em;
 }
-/* line 69, ../../scss/_k-local.scss */
+/* line 68, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-title {
   margin: none;
   margin-left: 0.75em;
   padding: none;
   height: 1.5em;
 }
-/* line 78, ../../scss/_k-local.scss */
+/* line 77, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-md-searchtype {
   border: none;
   margin-left: 0.75em;
@@ -143,69 +143,85 @@ body {
   height: 1.5em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-/* line 90, ../../scss/_k-local.scss */
+/* line 89, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar {
   margin: none;
   padding: none;
   border: none;
   height: 3em;
 }
-/* line 99, ../../scss/_k-local.scss */
+/* line 98, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-searchtext {
   height: 3em;
-  margin-left: em;
+  margin-left: 0.75em;
   color: white;
 }
-/* line 108, ../../scss/_k-local.scss */
+/* line 107, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-searchtext input {
   color: white;
 }
-/* line 116, ../../scss/_k-local.scss */
+/* line 115, ../../scss/_k-local.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-search {
   position: relative;
   margin-left: 0.75em;
   top: 1.0em;
-  background-color: #03a9f4;
-}
-/* line 123, ../../scss/_k-local.scss */
-#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-search.searchactive {
-  background-color: #ff80ab;
-}
-
-/* padding-bottom and top for image */
-/* line 139, ../../scss/_k-local.scss */
-.mfp-no-margins img.mfp-img {
-  padding: 0;
-}
-
-/* position of shadow behind the image */
-/* line 143, ../../scss/_k-local.scss */
-.mfp-no-margins .mfp-figure:after {
-  top: 0;
-  bottom: 0;
-}
-
-/* padding for main container */
-/* line 148, ../../scss/_k-local.scss */
-.mfp-no-margins .mfp-container {
-  padding: 0;
-}
-
-/* Offset the image search button */
-/* line 153, ../../scss/_k-local.scss */
-.k-image-search {
-  position: relative;
-  margin-left: 0.75em;
-  top: -1.5em;
   background-image: url("/images/icons/search24.svg");
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 165, ../../scss/_k-local.scss */
-.k-image-search.searchactive {
+/* line 127, ../../scss/_k-local.scss */
+#k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-md-search.searchactive {
   background-color: #ff80ab;
+}
+
+/*********************************************************************************************
+*
+* Modal Image Dialog - Display a larger drug image (800px) with an option to search for
+* drugs with the same image (same drug).
+*
+***********************************************************************************************/
+/* line 151, ../../scss/_k-local.scss */
+#k-image-display-dialog {
+  max-width: 100%;
+  margin: none;
+  padding: none;
+}
+/* line 161, ../../scss/_k-local.scss */
+#k-image-display-dialog #k-image-title-bar #k-image-attribution {
+  margin-left: 1.5em;
+  font-size: 0.7em;
+}
+/* line 169, ../../scss/_k-local.scss */
+#k-image-display-dialog #k-image-title-bar #k-image-dialog-dismiss {
+  position: relative;
+  top: -1em;
+  left: 1em;
+  background-image: url("/images/icons/times.svg");
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ff80ab;
+}
+/* line 185, ../../scss/_k-local.scss */
+#k-image-display-dialog #k-image-dialog-content {
+  margin: none;
+  padding: none;
+}
+/* line 196, ../../scss/_k-local.scss */
+#k-image-display-dialog #k-image-search-bar #k-image-search-text {
+  margin-left: 1em;
+}
+/* line 202, ../../scss/_k-local.scss */
+#k-image-display-dialog #k-image-search-bar #k-image-search {
+  position: relative;
+  margin-left: 0.75em;
+  top: -1em;
+  background-image: url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*********************************************************************************************
@@ -225,7 +241,7 @@ body {
 *
 *
 *************************************************************************************************/
-/* line 197, ../../scss/_k-local.scss */
+/* line 241, ../../scss/_k-local.scss */
 #k-modal-wait {
   display: none;
   position: fixed;
@@ -234,38 +250,9 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.3) url(/images/ajax-loader.gif) 50% 50% no-repeat;
+  background: rgba(255, 255, 255, 0.3);
 }
-/* line 210, ../../scss/_k-local.scss */
-#k-modal-wait #k-wait-box {
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #1a237e;
-  color: #1a237e;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  border-radius: 25px;
-}
-/* line 221, ../../scss/_k-local.scss */
-#k-modal-wait #k-wait-box #k-material-progress {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  color: #ff80ab;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-/* line 234, ../../scss/_k-local.scss */
+/* line 251, ../../scss/_k-local.scss */
 #k-modal-wait.searchactive {
   display: block;
 }
@@ -302,7 +289,7 @@ html, body {
   height: 1.5em;
 }
 
-/* line 256, ../../scss/_k-local.scss */
+/* line 273, ../../scss/_k-local.scss */
 #k-search-footer {
   margin: none;
   text-align: center;
@@ -311,13 +298,13 @@ html, body {
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 265, ../../scss/_k-local.scss */
+  /* line 282, ../../scss/_k-local.scss */
   #k-search-page {
     width: 100%;
   }
 }
 @media only screen and (min-width: 600px) {
-  /* line 265, ../../scss/_k-local.scss */
+  /* line 282, ../../scss/_k-local.scss */
   #k-search-page {
     width: 600px;
   }
@@ -329,7 +316,7 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 288, ../../scss/_k-local.scss */
+/* line 305, ../../scss/_k-local.scss */
 #k-display-results {
   height: 700px;
   padding: none;
@@ -338,7 +325,7 @@ html, body {
   background-position: center top;
   background-size: 100% auto;
 }
-/* line 297, ../../scss/_k-local.scss */
+/* line 314, ../../scss/_k-local.scss */
 #k-display-results #k-search-results {
   height: inherit;
 }
@@ -350,34 +337,227 @@ html, body {
 *
 *
 ************************************************************************************************/
-/* line 316, ../../scss/_k-local.scss */
+/* line 334, ../../scss/_k-local.scss */
 .k-display-drug {
   display: block;
   background-color: white;
-  border: 1px solid #cccccc;
+  border: 1px solid #b3b3b3;
   margin-bottom: 2.0em;
   margin-top: 2.0em;
+  /*******************************************************************************
+  * Display Drug Name
+  ********************************************************************************/
+  /*******************************************************************************
+  * Display Drug Image and Price Information
+  ********************************************************************************/
+  /*******************************************************************************
+  * Display Active Ingredient
+  ********************************************************************************/
+  /*******************************************************************************
+  * Display Package
+  ********************************************************************************/
+  /*******************************************************************************
+  * Display NDC
+  ********************************************************************************/
 }
-/* line 324, ../../scss/_k-local.scss */
-.k-display-drug #k-display-drug-name {
-  width: 100%;
+/* line 346, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar {
+  margin: none;
+  border: none;
+  padding: none;
   background-color: #c5cae9;
-  font-size: 1.2em;
-  padding: 0.5em;
+  width: 100%;
 }
-/* line 332, ../../scss/_k-local.scss */
-.k-display-drug #k-display-drug-image {
+/* line 354, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar .k-display-name-search {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  margin-left: -0.75em;
+  top: -1em;
+  opacity: 0.4;
+  background-image: url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #03a9f4;
+}
+/* line 367, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar .k-display-name-search.searchactive {
+  background-color: #ff80ab;
+}
+/* line 374, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar .k-display-name-search:hover {
+  opacity: 1.0;
+}
+/* line 382, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar .k-display-drug-name {
+  font-size: 1.5em;
+  padding: 0.1em;
+  border: none;
+  margin: none;
+  line-height: 105%;
+}
+/* line 392, ../../scss/_k-local.scss */
+.k-display-drug .k-display-header-bar .k-display-labeler-name {
+  font-size: 1em;
+  padding: 0.1em;
+  border: none;
+  margin: none;
+  line-height: 105%;
+}
+/* line 407, ../../scss/_k-local.scss */
+.k-display-drug .k-display-image-price {
+  margin: none;
+  padding: none;
+  border: none;
+}
+/* line 413, ../../scss/_k-local.scss */
+.k-display-drug .k-display-image-price .k-display-drug-image {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 5px;
+  padding: 3px;
   display: none;
 }
-/* line 336, ../../scss/_k-local.scss */
-.k-display-drug #k-display-drug-image.hasimage {
+/* line 421, ../../scss/_k-local.scss */
+.k-display-drug .k-display-image-price .k-display-drug-image:hover {
+  -webkit-transform: translate(0px, -1px);
+  -moz-transform: translate(0px, -1px);
+  -ms-transform: translate(0px, -1px);
+  -o-transform: translate(0px, -1px);
+  transform: translate(0px, -1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+/* line 428, ../../scss/_k-local.scss */
+.k-display-drug .k-display-image-price .k-display-drug-image.hasimage {
   display: block;
 }
-/* line 344, ../../scss/_k-local.scss */
-.k-display-drug #k-drug-ingredient-panel {
-  display: block;
-  background-color: white;
-  border: 1px solid #cccccc;
-  margin-bottom: 1.0em;
-  margin-top: 1.0em;
+/* line 434, ../../scss/_k-local.scss */
+.k-display-drug .k-display-image-price .k-display-drug-image .k-display-image-container {
+  margin: none;
+  padding: none;
+  border: none;
+}
+/* line 450, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients {
+  background-color: #ffccde;
+  width: 100%;
+}
+/* line 455, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-active-label {
+  height: 2em;
+}
+/* line 459, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  margin-left: -0.75em;
+  top: -0.65em;
+  opacity: 0.4;
+  background-image: url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #03a9f4;
+}
+/* line 473, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.searchactive {
+  background-color: #ff80ab;
+}
+/* line 480, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search:hover {
+  opacity: 1.0;
+}
+/* line 488, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-label-text {
+  margin: none;
+  margin-top: 0.1em;
+  border: none;
+  padding: 0.1em;
+  font-size: 1.2em;
+  text-align: center;
+}
+/* line 502, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-ingredient-panel {
+  margin: none;
+  padding-bottom: 0.5em;
+}
+/* line 508, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line {
+  margin-left: 2em;
+}
+/* line 517, ../../scss/_k-local.scss */
+.k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength {
+  margin-left: 1.0em;
+}
+/* line 533, ../../scss/_k-local.scss */
+.k-display-drug .k-display-package-container {
+  width: 100%;
+}
+/* line 537, ../../scss/_k-local.scss */
+.k-display-drug .k-display-package-container .k-display-package-description {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  margin-left: 2.0em;
+  margin-right: 1.0em;
+  border: none;
+  padding: 0.1em;
+  font-size: 0.9em;
+}
+/* line 555, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container {
+  margin: none;
+  border: none;
+  padding: none;
+  background-color: #c5cae9;
+  width: 100%;
+}
+/* line 563, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc9-search {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  margin-left: -0.75em;
+  top: -1em;
+  opacity: 0.4;
+  background-image: url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #03a9f4;
+}
+/* line 576, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc9-search.searchactive {
+  background-color: #ff80ab;
+}
+/* line 583, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc9-search:hover {
+  opacity: 1.0;
+}
+/* line 591, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc-title {
+  font-size: 1.2em;
+  padding: 0.1em;
+  border: none;
+  margin: none;
+  line-height: 105%;
+}
+/* line 601, ../../scss/_k-local.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc-value {
+  font-size: 1em;
+  padding: 0.1em;
+  border: none;
+  margin: none;
+  line-height: 105%;
 }

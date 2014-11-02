@@ -37,6 +37,38 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
 
 
+USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource) {
+
+    return $resource("/_ah/api/searchUSdrugs/v1/forwardPrompt"   //url
+
+        , {   }    // default arguments
+
+        , { typeSearch: { method: "POST"
+            , params: {promptstring: "@promptstring", promptsize: "@promptsize"}
+            , transformResponse: function (jsonData, dataHeaders) {
+
+// Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
+// This code looks fragile because it assumes the API response will be in a specific format.
+// todo: add exception handling and error handling here to gracefully fail with suitable messages.
+
+                obj2 = {};
+                if (typeof jsonData == "string") {
+                    var obj1 = angular.fromJson(jsonData);
+                    if (typeof obj1.resultMessage == "string") {
+                        var obj2 = angular.fromJson(obj1.resultMessage);
+                    }
+                }
+                return { promptArray: obj2 };
+            }
+        }
+        }
+    );
+
+}]);
+
+
+
+
 USDrugServices.factory("USDrugValidateInput", [ function () {
 
     function Validate(searchParams, success, failure) {
@@ -171,7 +203,10 @@ USDrugServices.factory("USDrugImageDialog",
                     return imageURL;
                 }, searchFunc: function () {
                     return searchFunc;
-                } }, controller: [ "$scope"
+                }, dismissFunc: function () {
+                    return dismissFunc;
+                } }
+                , controller: [ "$scope"
                     , "$mdDialog"
                     , "imageURL"
                     , "searchFunc"
@@ -181,6 +216,9 @@ USDrugServices.factory("USDrugImageDialog",
 
                         $scope.searchDialog = function () {
                             $mdDialog.hide(searchFunc);
+                        };
+                        $scope.dismissDialog = function () {
+                            $mdDialog.hide(dismissFunc);
                         };
 
                     }]

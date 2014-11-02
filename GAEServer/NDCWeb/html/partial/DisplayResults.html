@@ -4,87 +4,128 @@
 
         <div id="k-results-container" ng-repeat="drugRecord in requestResults.drugArray track by $index">
 
-            <md-whiteframe class="k-display-drug md-whiteframe-z1">
+            <md-whiteframe class="k-display-drug md-whiteframe-z2">
 
-                <div id="k-display-drug-name">
+                <div class="k-display-header-bar" layout="horizontal">
 
-                    {{ drugRecord.name }}
+                    <md-button ng-click="nameSearch(drugRecord.name)"
+                               class="k-display-name-search md-button-fab"
+                               ng-class="{ searchactive : searchactive }">
+                    </md-button>
 
-                </div>
+                    <div class="k-display-name-label">
 
-                <div>
+                        <div class="k-display-drug-name">
 
-                    Labeler: {{ drugRecord.labeler }}
+                            {{ drugRecord.name }}
 
-                </div>
+                        </div>
 
-                <div id="k-display-drug-image" ng-class="{ hasimage: drugRecord.hasimage}">
+                        <div class="k-display-labeler-name">
 
-                    <a href="#" title="Search on Drug Image" ng-click="imageDialog(drugRecord)">
-                        <img ng-src="{{drugRecord.smallimageurl}}">
-                    </a>
-                    <a class="drug-image-popup" ng-href="{{drugRecord.largeimageurl}}" title="Search on Drug Image">
-                        <img ng-src="{{drugRecord.smallimageurl}}">
-                    </a>
+                            {{ drugRecord.labeler }}
 
-                    <script>
-                        $(".drug-image-popup").magnificPopup({
+                        </div>
 
-                            type: "image",
-                            // closeOnContentClick: true,
-                            mainClass: "mfp-img-mobile",
-                            image: {
-                            verticalFit: true,
-                            titleSrc: function(item) {
-                                   k_consoleLog(item)
-                                    return  "<div layout='horizontal'>"
-                                            + "<div>Search on Drug Image</div>"
-                                            + "<md-button"
-                                            + " ng-click='getParamsSearch()' "
-                                            + " ng-class='{ searchactive : searchactive }' "
-                                            + "class='k-image-search md-button-fab'>"
-                                            + "</md-button>"
-                                            + "</div>";
-                                }
-
-                            }
-
-                        });
-                    </script>
+                    </div>
 
                 </div>
 
-                <div id="k-drug-ingredient-panel" ng-repeat="Ingredient in drugRecord.activeArray track by $index">
+                <div class="k-display-image-price" layout="horizontal">
 
-                    <div> <!-- Individual ingredient -->
+                    <div class="k-display-drug-image" ng-class="{ hasimage: drugRecord.hasimage}">
 
-                        <!-- Write out the ingredient -->
-                        {{ Ingredient.activeName }}; {{ Ingredient.strength }} {{ Ingredient.units }}
+                        <a href="#" title="Search on Drug Image"
+                           class="k-display-image-container"
+                           ng-click="imageDialog(drugRecord)">
+                            <img ng-src="{{drugRecord.smallimageurl}}">
+                        </a>
+
+                    </div>
+
+                    <div flex></div>
+
+                </div>
+
+                <!-- Active Ingredients -->
+
+                <div class="k-display-active-ingredients">
+
+                    <div class="k-display-active-label" layout="horizontal">
+
+                        <md-button ng-click="nameSearch(drugRecord.name)"
+                                   class="k-display-active-search md-button-fab"
+                                   ng-class="{ searchactive : searchactive }">
+                        </md-button>
+
+                        <div class="k-display-active-label-text">Active Ingredients</div>
+                        <div flex></div>
+
+                    </div>
+
+
+                    <div class="k-display-ingredient-panel"
+                         ng-repeat="Ingredient in drugRecord.activeArray track by $index">
+
+                        <div class="k-display-ingredient-line" layout="horizontal">
+
+                            <div class="k-display-ingredient-name">
+                                <!-- Write out the ingredient -->
+                                {{ Ingredient.activeName }}
+
+                            </div>
+
+                            <div class="k-display-ingredient-strength">
+
+                                {{ Ingredient.strength }} {{ Ingredient.units }}
+
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
                 <!-- ingredient panel -->
 
-                <div> <!-- Dosage Route -->
 
-                    Dosage / Route: {{ drugRecord.dosage }} / {{ drugRecord.route }}
+                <div class="k-display-package-container"> <!-- Package -->
 
-                </div>
-                <!-- Dosage Route -->
+                    <div class="k-display-package-description">
 
-                <div> <!-- Package -->
+                        {{ drugRecord.package }}
 
-                    Package: {{ drugRecord.package }}
+                    </div>
 
                 </div>
+                <!-- Package -->
 
 
-                <div>
+                <div class="k-display-ndc-container" layout="horizontal"> <!-- NDC -->
 
-                    National Drug Code: {{ drugRecord.ndc }} ({{ drugRecord.format }})
+                    <md-button ng-click="ndc9Search(drugRecord.ndc9)"
+                               class="k-display-ndc9-search md-button-fab"
+                               ng-class="{ searchactive : searchactive }">
+                    </md-button>
+
+                    <div class="k-display-ndc-label">
+
+                        <div class="k-display-ndc-title">
+
+                            National Drug Code
+
+                        </div>
+
+                        <div class="k-display-ndc-value">
+
+                            {{ drugRecord.ndc }} ({{ drugRecord.format }})
+
+                        </div>
+
+                    </div>
 
                 </div>
+                <!-- NDC -->
 
             </md-whiteframe>
 

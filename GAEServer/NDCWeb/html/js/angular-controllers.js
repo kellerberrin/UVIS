@@ -18,15 +18,36 @@ USDrugControllers.controller("DrugSearchCtrl",
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
             $scope.searchactive = true;
-            USDrugEndPoints.typeSearch(searchParams, function (data) {
+            USDrugEndPoints.typeSearch(searchParams
+                , function (data) {
                 $scope.requestResults = data;
-                k_consoleLog(data);
                 $scope.searchactive = false;
                 var milliseconds = Date.now() - requestTime;
                 $scope.resultToast(milliseconds);
+            }
+            , function(error) {
+
+                $scope.searchactive = false;
+                $scope.requestResults = [];
+                k_consoleLog(["USDrugEndPoints - error", error]);
+
             });
 
         };
+
+        $scope.nameSearch = function (name) {
+
+            var searchParams = { searchstring: name, searchtype: "name" };
+            $scope.performSearch(searchParams);
+
+        }
+
+        $scope.ndc9Search = function (ndc9) {
+
+            var searchParams = { searchstring: ndc9, searchtype: "ndc" };
+            $scope.performSearch(searchParams);
+
+        }
 
         $scope.resultToast = function (milliseconds) {
 
@@ -38,7 +59,12 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.imageDialog = function (drugRecord) {
 
-            USDrugIMageDialog.DisplayImageDialog(drugRecord.largeimageurl, function() { k_consoleLog(drugRecord) }, function() {})
+            USDrugIMageDialog.DisplayImageDialog(drugRecord.largeimageurl, function() { // Search on NDC9s
+                var searchParams = { searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image" };
+                $scope.performSearch(searchParams);
+                }
+                , function() {   // Do nothing on dialog dismiss.
+                })
 
         }
 
@@ -50,7 +76,8 @@ USDrugControllers.controller("DrugSearchParams",
     [ "$scope"
         , "USDrugValidateInput"
         , "USDrugShowDialog"
-        , function DrugSearchParams($scope, USDrugValidateInput, USDrugShowDialog) {
+        , "USDrugForwardPrompt"
+        , function DrugSearchParams($scope, USDrugValidateInput, USDrugShowDialog, USDrugForwardPrompt) {
 
         // Define the search types.
 
@@ -107,7 +134,36 @@ USDrugControllers.controller("DrugSearchParams",
 
                 });
 
-        }
+        };
+
+        $scope.getForwardPrompt = function() {
+
+            if ($scope.search.searchtext.length > 0) {
+
+                var promptParams = { promptstring: $scope.search.searchtext, promptsize: "10" };
+                var requestTime = Date.now();
+                k_consoleLog(["ForwardPrompt", promptParams]);
+                USDrugForwardPrompt.typeSearch(promptParams
+                , function (promptArray) {
+
+                    $scope.promptArray = promptArray;
+                    var milliseconds = Date.now() - requestTime;
+                    k_consoleLog([promptArray, { milliseconds : milliseconds}]);
+
+                }
+                , function(error) {
+
+                    $scope.searchactive = false;
+                    $scope.requestResults = [];
+                    k_consoleLog(["USDrugForwardPrompt - error", error]);
+
+                });
+
+
+            }
+
+        };
+
 
         $scope.resetSearchType = function (type) {
 

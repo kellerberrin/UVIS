@@ -41,12 +41,16 @@
 
         <div id="k-search-text-toolbar" class="md-toolbar-tools">
 
-            <md-text-float id="k-md-searchtext" label="Enter Search Text" ng-model="search.searchtext"></md-text-float>
+            <md-text-float id="k-md-searchtext"
+                           label="Enter Search Text"
+                           ng-keypress="($event.which === 13)?getParamsSearch():getForwardPrompt()"
+                           ng-model="search.searchtext">
+            </md-text-float>
 
-            <md-button id="k-md-search" ng-click="getParamsSearch()"
-                             class="md-button-fab"
-                             ng-class="{ searchactive : searchactive }">
-                <img src="/images/icons/search24.svg" width="24" height="24">
+            <md-button id="k-md-search"
+                       class="md-button-fab"
+                       ng-click="getParamsSearch()"
+                       ng-class="{ searchactive : searchactive }">
             </md-button>
 
         </div>

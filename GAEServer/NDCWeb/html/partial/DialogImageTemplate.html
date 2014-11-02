@@ -1,14 +1,25 @@
-<head/><md-dialog aria-label="US Drug Image Dialog">
+<head/>
 
-    <md-content class="dialog-content">
+<md-dialog id="k-image-display-dialog" aria-label="US Drug Image Dialog">
+
+    <div id="k-image-title-bar" layout="horizontal">
+
+        <div id="k-image-attribution">Images Courtesy of the US National Library of Medicine</div>
+        <div flex></div>
+        <md-button id="k-image-dialog-dismiss" ng-click="dismissDialog()" class="md-button-fab"></md-button>
+
+    </div>
+
+    <md-content id="k-image-dialog-content" class="dialog-content">
 
         <img ng-src="{{dialog.imageURL}}">
 
     </md-content>
 
-    <div layout="horizontal">
-        <div>Search on Drug Image</div>
-        <md-button ng-click="searchDialog()" class="k-image-search md-button-fab"></md-button>
+    <div id="k-image-search-bar" layout="horizontal">
+        <div id="k-image-search-text">Search on Drug Image</div>
+        <md-button id="k-image-search" ng-click="searchDialog()" class="md-button-fab md-theme-light-blue"></md-button>
+        <div flex></div>
     </div>
 
 </md-dialog>
