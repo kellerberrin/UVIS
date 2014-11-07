@@ -47,6 +47,7 @@
                            ng-model="search.searchtext">
             </md-text-float>
 
+
             <md-button id="k-md-search"
                        class="md-button-fab"
                        ng-click="getParamsSearch()"
@@ -56,5 +57,31 @@
         </div>
 
     </md-toolbar>
+
+
+    <div id="k-search-prompt-anchor">
+
+        <md-content id="k-search-searchprompt" class="md-padding">
+
+            <div id="k-search-prompt-list">
+
+                <div class="k-search-prompt-array" ng-repeat="prompt in promptArray">
+
+                    <div class="k-search-prompt-item" ng-click="nameSearch(prompt)">
+
+                        {{ prompt }}
+
+                    </div>
+
+                    <md-divider></md-divider>
+
+                </div>
+
+            </div>
+
+        </md-content>
+
+    </div>
+
 
 </div>

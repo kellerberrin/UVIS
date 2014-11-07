@@ -276,3 +276,25 @@ $md-blue-grey-700: #455a64;
 $md-blue-grey-800: #37474f;
 $md-blue-grey-900: #263238;
 
+/**************************************************************************
+*
+* Text Colors (Black)
+*
+***************************************************************************/
+
+$md-black-dividers: darken(white, 12%);
+$md-black-hint-text: darken(white, 26%);
+$md-black-secondary-text: darken(white, 54%);
+$md-black-primary-Text: darken(white, 87%);
+
+
+/**************************************************************************
+*
+* Text Colors (White)
+*
+***************************************************************************/
+
+$md-white-secondary-text: darken(white, 30%);
+$md-white-primary-Text: white;
+
+

@@ -6,6 +6,8 @@
 
             <md-whiteframe class="k-display-drug md-whiteframe-z2">
 
+                <!-- Name and Company -->
+
                 <div class="k-display-header-bar" layout="horizontal">
 
                     <md-button ng-click="nameSearch(drugRecord.name)"
@@ -31,6 +33,12 @@
 
                 </div>
 
+                <!-- Name and Company -->
+
+                <md-divider></md-divider>
+
+                <!-- Image and Price -->
+
                 <div class="k-display-image-price" layout="horizontal">
 
                     <div class="k-display-drug-image" ng-class="{ hasimage: drugRecord.hasimage}">
@@ -47,15 +55,19 @@
 
                 </div>
 
+                <!-- Image and Price -->
+
+                <md-divider></md-divider>
+
                 <!-- Active Ingredients -->
 
                 <div class="k-display-active-ingredients">
 
                     <div class="k-display-active-label" layout="horizontal">
 
-                        <md-button ng-click="nameSearch(drugRecord.name)"
+                        <md-button ng-click="ingredientSearch(drugRecord)"
                                    class="k-display-active-search md-button-fab"
-                                   ng-class="{ searchactive : searchactive }">
+                                   ng-class="{ searchactive : searchactive , validselection : validSelection(drugRecord) }">
                         </md-button>
 
                         <div class="k-display-active-label-text">Active Ingredients</div>
@@ -69,17 +81,23 @@
 
                         <div class="k-display-ingredient-line" layout="horizontal">
 
-                            <div class="k-display-ingredient-name">
+                            <md-button class="k-display-ingredient-name"
+                                 ng-click="Ingredient.activeselected = !Ingredient.activeselected"
+                                 ng-class="{ activeselected : Ingredient.activeselected }">
                                 <!-- Write out the ingredient -->
                                 {{ Ingredient.activeName }}
+                                <img class="k-display-ingredient-name-icon"
+                                     src="/images/icons/search24.svg" width="12px" height="12px"/>
+                            </md-button>
 
-                            </div>
-
-                            <div class="k-display-ingredient-strength">
-
+                            <md-button class="k-display-ingredient-strength"
+                                 ng-click="Ingredient.strengthselected = !Ingredient.strengthselected"
+                                 ng-class="{ strengthselected : (Ingredient.strengthselected && Ingredient.activeselected) }">
+                                <!-- Write out the strength -->
                                 {{ Ingredient.strength }} {{ Ingredient.units }}
-
-                            </div>
+                                <img class="k-display-ingredient-strength-icon"
+                                     src="/images/icons/search24.svg" width="12px" height="12px"/>
+                            </md-button>
 
                         </div>
 
@@ -88,8 +106,11 @@
                 </div>
                 <!-- ingredient panel -->
 
+                <md-divider></md-divider>
 
-                <div class="k-display-package-container"> <!-- Package -->
+                <!-- Package -->
+
+                <div class="k-display-package-container">
 
                     <div class="k-display-package-description">
 
@@ -100,8 +121,11 @@
                 </div>
                 <!-- Package -->
 
+                <md-divider></md-divider>
 
-                <div class="k-display-ndc-container" layout="horizontal"> <!-- NDC -->
+                <!-- NDC -->
+
+                <div class="k-display-ndc-container" layout="horizontal">
 
                     <md-button ng-click="ndc9Search(drugRecord.ndc9)"
                                class="k-display-ndc9-search md-button-fab"
@@ -125,6 +149,7 @@
                     </div>
 
                 </div>
+
                 <!-- NDC -->
 
             </md-whiteframe>

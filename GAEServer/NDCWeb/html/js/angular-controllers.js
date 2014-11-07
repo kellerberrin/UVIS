@@ -40,14 +40,38 @@ USDrugControllers.controller("DrugSearchCtrl",
             var searchParams = { searchstring: name, searchtype: "name" };
             $scope.performSearch(searchParams);
 
-        }
+        };
+
+        $scope.ingredientSearch = function (drugRecord) {
+
+            if ($scope.validSelection(drugRecord)) {
+
+                var validJSON = JSON.stringify(drugRecord.activeArray);
+                var searchParams = { searchstring: validJSON, searchtype: "ingredient" };
+                $scope.performSearch(searchParams);
+
+            }
+
+        };
+
+        $scope.validSelection = function (drugRecord) {
+
+            var validSelection = false;
+            for (var i = 0;  i < drugRecord.activeArray.length; i++) {
+
+                validSelection = validSelection || drugRecord.activeArray[i].activeselected;
+            }
+
+            return validSelection;
+
+        };
 
         $scope.ndc9Search = function (ndc9) {
 
             var searchParams = { searchstring: ndc9, searchtype: "ndc" };
             $scope.performSearch(searchParams);
 
-        }
+        };
 
         $scope.resultToast = function (milliseconds) {
 
@@ -55,7 +79,7 @@ USDrugControllers.controller("DrugSearchCtrl",
             var ToastOptions = { template: "<md-toast>" + ToastText + "</md-toast>", duration: 3000 };
             $mdToast.show(ToastOptions);
 
-        }
+        };
 
         $scope.imageDialog = function (drugRecord) {
 
@@ -142,13 +166,13 @@ USDrugControllers.controller("DrugSearchParams",
 
                 var promptParams = { promptstring: $scope.search.searchtext, promptsize: "10" };
                 var requestTime = Date.now();
-                k_consoleLog(["ForwardPrompt", promptParams]);
                 USDrugForwardPrompt.typeSearch(promptParams
-                , function (promptArray) {
+                , function (data) {
 
-                    $scope.promptArray = promptArray;
+                    $scope.promptArray = data.promptArray;
                     var milliseconds = Date.now() - requestTime;
-                    k_consoleLog([promptArray, { milliseconds : milliseconds}]);
+                    k_consoleLog({ milliseconds : milliseconds});
+                    k_consoleLog(promptArray);
 
                 }
                 , function(error) {

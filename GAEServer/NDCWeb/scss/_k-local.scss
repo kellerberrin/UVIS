@@ -137,6 +137,48 @@ $K-Icon-Color: white;
 
   }
 
+  & #k-search-prompt-anchor {
+
+    position: relative;
+
+    & #k-search-searchprompt {
+
+      @include MaterialBoxShadow(2);
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      width: 20em;
+      background-color: white;
+      z-index: 9;
+
+      & .k-search-prompt-array {
+
+        & .k-search-prompt-item {
+
+          position: relative;
+          width: 100%;
+          text-align: left;
+          padding-left: 1.5em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          color: $md-black-primary-Text;
+          cursor: pointer;
+
+          &:hover {
+
+            @include MaterialBoxShadow(2);
+            color: $K-SearchButton-Inactive-color;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
 /*********************************************************************************************
@@ -246,7 +288,10 @@ $K-Material-Wait-color: $K-ACCENT-COLOR-100;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, .3); // white url(#{$K-Wait-Image-Path}) //spinning image 50% 50% // centred no-repeat;
+  background-color: rgba(255, 255, 255, .3); //white
+  background-image: url(#{$K-Wait-Image-Path}); //spinning image
+  background-position: 50% 50%; // centered
+  background-repeat: no-repeat; // only once
 
   &.searchactive {
     // Important! this class is set (see above also) when the endpoints request is active.
@@ -329,7 +374,6 @@ $K-Search-Page-Width: 600px;
 
 $K-Display-Drug-Background: white;
 $K-Display-Drug-Border: darken(white, 30%);
-$K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
 .k-display-drug {
 
@@ -447,6 +491,10 @@ $K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
   * Display Active Ingredient
   ********************************************************************************/
 
+  $K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
+  $K-Display-Active-Selected-Color: lighten($K-ACCENT-COLOR-100, 10%);
+
+
   & .k-display-active-ingredients {
 
     background-color: $K-Display-Active-Color;
@@ -477,7 +525,7 @@ $K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
         }
 
-        &:hover {
+        &.validselection:hover {
 
           opacity: 1.0;
 
@@ -512,11 +560,50 @@ $K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
         & .k-display-ingredient-name {
 
+          background-color: $K-Display-Active-Color;
+
+          & .k-display-ingredient-name-icon {
+
+            opacity: 0;
+
+          }
+
+          &.activeselected{   // Selected for an ingredient search
+
+            background-color: $K-Display-Active-Selected-Color;
+
+            & .k-display-ingredient-name-icon {
+
+              opacity: 0.7;
+
+            }
+
+          }
+
         }
 
         & .k-display-ingredient-strength {
 
           margin-left: 1.0em;
+          background-color: $K-Display-Active-Color;
+
+          & .k-display-ingredient-strength-icon {
+
+            opacity: 0;
+
+          }
+
+          &.strengthselected { // Selected for an ingredient search
+
+            background-color: $K-Display-Active-Selected-Color;
+
+            & .k-display-ingredient-strength-icon {
+
+              opacity: 0.7;
+
+            }
+
+          }
 
         }
 

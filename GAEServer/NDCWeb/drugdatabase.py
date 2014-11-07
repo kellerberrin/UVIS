@@ -112,33 +112,38 @@ def RemoveEmptyStrings(StringList) :
     return ResultList
 
 
-def IngredientQuery(SearchArray) :
+def IngredientQuery(searchString) :
     """Create a datastore active ingredient search query"""
     Index = 0
     Condition = 0
     QueryString = ""
-    while Index < len(SearchArray) :
 
-        IngredientTuple = SearchArray[Index]
- 
-        if IngredientTuple[0] == "strength":
+    # Convert JSON string to an array
+
+    searchArray = json.JSONDecoder().decode(searchString)
+
+    for ingredient in searchArray:
+
+        print(ingredient)
+
+        if ingredient["strengthselected"] and ingredient["activeselected"]:
             if Condition == 0:
                 QueryString += " WHERE "
             else:
                 QueryString += " AND "
 
-            QueryString += "substancelist = " + "'" + IngredientTuple[1] + "'"
-            QueryString += " AND activenumeratorstrength = " + "'" + IngredientTuple[2] + "'"
-            QueryString += " AND activeingredientunit = " + "'" + IngredientTuple[3] + "'"
+            QueryString += "substancelist = " + "'" + ingredient["activeName"].upper() + "'"
+            QueryString += " AND activenumeratorstrength = " + "'" + ingredient["strength"] + "'"
+            QueryString += " AND activeingredientunit = " + "'" + ingredient["units"] + "'"
             Condition += 1
 
-        elif IngredientTuple[0] == "include":
+        elif ingredient["activeselected"]:
             if Condition == 0:
                 QueryString += " WHERE "
             else:
                 QueryString += " AND "
 
-            QueryString += "substancelist = " + "'" + IngredientTuple[1] + "'"
+            QueryString += "substancelist = " + "'" + ingredient["activeName"].upper() + "'"
             Condition += 1
 
         Index += 1
@@ -172,10 +177,10 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     NDCRecords = []
     NDCEnhancedArray = []
 
-    SearchText = SearchText.upper()
-    SearchText = SearchText.strip()
 
     if SearchType=="ndc":
+        SearchText = SearchText.upper()
+        SearchText = SearchText.strip()
         SearchError = False
         CleanNDC = SearchText.replace("-", "")
         if len(CleanNDC) == 9:
@@ -184,22 +189,28 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
             qNDC = NDCLookup.query(NDCLookup.ndc == CleanNDC)
 
     elif SearchType == "name":
+        SearchText = SearchText.upper()
+        SearchText = SearchText.strip()
         SearchError = len(SearchText) == 0
         qNDC = NDCLookup.query(NDCLookup.proprietaryname == SearchText)
 
     elif SearchType == "ingredient":
-        QueryString = IngredientQuery(SearchArray)
+        QueryString = IngredientQuery(SearchText)
         logging.info('Executing Ingredient Search: %s', QueryString)
         SearchError = len(QueryString) == 0              
         qNDC= NDCLookup.gql(QueryString)
 
     elif SearchType == "image":
+        SearchText = SearchText.upper()
+        SearchText = SearchText.strip()
         QueryString = NDC9ArrayQuery(SearchText)
         logging.info("Executing NDC9 Search: %s", QueryString)
         SearchError = len(QueryString) == 0
         qNDC= NDCLookup.gql(QueryString)
 
     elif SearchType == "active":
+        SearchText = SearchText.upper()
+        SearchText = SearchText.strip()
         SearchError = len(SearchText) == 0
         qNDC = NDCLookup.query(NDCLookup.substancename == SearchText)
  
