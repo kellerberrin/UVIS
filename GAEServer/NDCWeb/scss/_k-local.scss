@@ -16,26 +16,28 @@ $K-SearchButton-Inactive-color: $md-light-blue-500;
 $K-Menu-Text-color: white;
 $K-Input-Text-Color: white;
 $K-Icon-Color: white;
+$K-Prompt-Type_color: $K-PRIMARY-COLOR-700;
+$K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
 #k-drug-toolbar {
 
   display: block;
   color: $K-Menu-Text-color;
   background-color: $K-Menu-Background-color;
-  margin: none;
-  padding: none;
+  margin: 0;
+  padding: 0;
 
   & #k-icon-toolbar {
 
     background-color: $K-Top-Menu-Background-color;
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     height: 3.0em;
 
     & #k-icon-toolbar-tools {
 
-      margin: none;
-      padding: none;
+      margin: 0;
+      padding: 0;
       padding-top: 1.0em;
       height: 2.0em;
 
@@ -54,22 +56,22 @@ $K-Icon-Color: white;
   & #k-search-toolbar {
 
     @include MaterialBoxShadow(2);
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     height: 5.0em;
 
     & #k-search-type-toolbar {
 
-      margin: none;
-      padding: none;
+      margin: 0;
+      padding: 0;
       border: none;
       height: 2em;
 
       & #k-search-title {
 
-        margin: none;
+        margin: 0;
         margin-left: 0.75em;
-        padding: none;
+        padding: 0;
         height: 1.5em;
 
       }
@@ -78,7 +80,7 @@ $K-Icon-Color: white;
 
         border: none;
         margin-left: 0.75em;
-        padding: none;
+        padding: 0;
         height: 1.5em;
         @include MaterialBoxShadow(2);
 
@@ -88,8 +90,8 @@ $K-Icon-Color: white;
 
     & #k-search-text-toolbar {
 
-      margin: none;
-      padding: none;
+      margin: 0;
+      padding: 0;
       border: none;
       height: 3em;
 
@@ -124,7 +126,7 @@ $K-Icon-Color: white;
 
         background-color: $K-SearchButton-Inactive-color;
 
-        &.searchactive {
+        &.searchActive {
           // Important! this class is set when the endpoints request is active.
 
           background-color: $K-SearchButton-Active-color;
@@ -141,7 +143,7 @@ $K-Icon-Color: white;
 
     position: relative;
 
-    & #k-search-searchprompt {
+    & #k-search-prompt-container {
 
       @include MaterialBoxShadow(2);
       position: absolute;
@@ -151,23 +153,138 @@ $K-Icon-Color: white;
       background-color: white;
       z-index: 9;
 
-      & .k-search-prompt-array {
+      & #k-search-history-list {
 
-        & .k-search-prompt-item {
+        display: none;
 
-          position: relative;
-          width: 100%;
-          text-align: left;
-          padding-left: 1.5em;
-          padding-top: 0.5em;
-          padding-bottom: 0.5em;
+        &.historyActive{
+
+          display: block;
+
+        }
+
+        & .k-search-history-title {
+
           color: $md-black-primary-Text;
-          cursor: pointer;
+          text-align: center;
+          padding: 0.3em;
+          background-color: $K-Prompt-History-Title-Color;
+
+        }
+
+        & .k-search-history-array {
+
+          @include transition(all 0.25s ease-in-out);
 
           &:hover {
 
             @include MaterialBoxShadow(2);
+            @include translate(0px, -2px);
             color: $K-SearchButton-Inactive-color;
+
+          }
+
+          & .k-search-history-item {
+
+            position: relative;
+            width: 100%;
+            text-align: left;
+            color: $md-black-primary-Text;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+
+              color: $K-SearchButton-Inactive-color;
+
+            }
+
+            & .k-search-history-type {
+
+              width: 100%;
+              color: $K-Prompt-Type_color;
+              font-size: 0.7em;
+              font-weight: 700;
+              padding-left: 0.5em;
+              padding-top: 0.1em;
+              padding-bottom: 0.0em;
+
+            }
+
+            & .k-search-history-value {
+
+              width: 100%;
+              padding-left: 1.5em;
+              padding-top: 0em;
+              padding-bottom: 0.2em;
+
+            }
+
+          }
+
+        }
+
+      }
+
+      & #k-search-prompt-list {
+
+        display: none;
+
+        &.promptActive{
+
+          display: block;
+
+        }
+
+        & .k-search-prompt-array {
+
+          @include transition(all 0.25s ease-in-out);
+
+          &:hover {
+
+            @include MaterialBoxShadow(2);
+            @include translate(0px, -2px);
+            color: $K-SearchButton-Inactive-color;
+
+          }
+
+          & .k-search-prompt-item {
+
+            position: relative;
+            width: 100%;
+            text-align: left;
+            color: $md-black-primary-Text;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+
+              color: $K-SearchButton-Inactive-color;
+
+            }
+
+            & .k-search-prompt-type {
+
+              width: 100%;
+              color: $K-Prompt-Type_color;
+              font-size: 0.7em;
+              font-weight: 700;
+              padding-left: 0.5em;
+              padding-top: 0.1em;
+              padding-bottom: 0.0em;
+
+            }
+
+            & .k-search-prompt-value {
+
+              width: 100%;
+              padding-left: 1.5em;
+              padding-top: 0em;
+              padding-bottom: 0.2em;
+
+            }
 
           }
 
@@ -194,8 +311,8 @@ $K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
   // dialog box
 
   max-width: 100%;
-  margin: none;
-  padding: none;
+  margin: 0;
+  padding: 0;
 
   #k-image-title-bar {
     // Search area
@@ -227,8 +344,8 @@ $K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
   #k-image-dialog-content {
     // image context area
 
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
 
   }
 
@@ -317,7 +434,7 @@ $K-Search-Page-Width: 600px;
 
 #k-search-footer {
 
-  margin: none;
+  margin: 0;
   text-align: center;
   color: gray;
   background-color: $K-Footer-Background-color;
@@ -350,8 +467,8 @@ $K-Search-Page-Width: 600px;
 #k-display-results {
 
   height: 700px; // Should be done using a media query.
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   background-image: url("/images/ScrollBackground.jpg");
   background-position: center top;
   background-size: 100% auto;
@@ -389,9 +506,9 @@ $K-Display-Drug-Border: darken(white, 30%);
 
   & .k-display-header-bar {
 
-    margin: none;
+    margin: 0;
     border: none;
-    padding: none;
+    padding: 0;
     background-color: $K-PRIMARY-COLOR-100;
     width: 100%;
 
@@ -428,7 +545,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       font-size: 1.5em;
       padding: 0.1em;
       border: none;
-      margin: none;
+      margin: 0;
       line-height: 105%;
 
     }
@@ -438,7 +555,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       font-size: 1em;
       padding: 0.1em;
       border: none;
-      margin: none;
+      margin: 0;
       line-height: 105%;
     }
 
@@ -450,8 +567,8 @@ $K-Display-Drug-Border: darken(white, 30%);
 
   & .k-display-image-price {
 
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     border: none;
 
     & .k-display-drug-image {
@@ -477,8 +594,8 @@ $K-Display-Drug-Border: darken(white, 30%);
 
       & .k-display-image-container {
 
-        margin: none;
-        padding: none;
+        margin: 0;
+        padding: 0;
         border: none;
 
       }
@@ -536,7 +653,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       & .k-display-active-label-text {
         // Active Ingedient title text
 
-        margin: none;
+        margin: 0;
         margin-top: 0.1em;
         border: none;
         padding: 0.1em;
@@ -550,7 +667,7 @@ $K-Display-Drug-Border: darken(white, 30%);
     & .k-display-ingredient-panel {
       // Container for active ingredients.
 
-      margin: none;
+      margin: 0;
       padding-bottom: 0.5em;
 
       & .k-display-ingredient-line {
@@ -641,9 +758,9 @@ $K-Display-Drug-Border: darken(white, 30%);
 
   & .k-display-ndc-container {
 
-    margin: none;
+    margin: 0;
     border: none;
-    padding: none;
+    padding: 0;
     background-color: $K-PRIMARY-COLOR-100;
     width: 100%;
 
@@ -680,7 +797,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       font-size: 1.2em;
       padding: 0.1em;
       border: none;
-      margin: none;
+      margin: 0;
       line-height: 105%;
 
     }
@@ -690,7 +807,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       font-size: 1em;
       padding: 0.1em;
       border: none;
-      margin: none;
+      margin: 0;
       line-height: 105%;
     }
 

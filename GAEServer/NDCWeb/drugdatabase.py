@@ -124,8 +124,6 @@ def IngredientQuery(searchString) :
 
     for ingredient in searchArray:
 
-        print(ingredient)
-
         if ingredient["strengthselected"] and ingredient["activeselected"]:
             if Condition == 0:
                 QueryString += " WHERE "
@@ -196,7 +194,7 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
 
     elif SearchType == "ingredient":
         QueryString = IngredientQuery(SearchText)
-        logging.info('Executing Ingredient Search: %s', QueryString)
+        logging.info("Executing Ingredient Search: %s", QueryString)
         SearchError = len(QueryString) == 0              
         qNDC= NDCLookup.gql(QueryString)
 

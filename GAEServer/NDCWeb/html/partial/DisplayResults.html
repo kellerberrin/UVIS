@@ -2,7 +2,7 @@
 
     <md-content id="k-search-results" class="md-content-padding">
 
-        <div id="k-results-container" ng-repeat="drugRecord in requestResults.drugArray track by $index">
+        <div id="k-results-container" ng-repeat="drugRecord in results.drugArray track by $index">
 
             <md-whiteframe class="k-display-drug md-whiteframe-z2">
 
@@ -12,7 +12,7 @@
 
                     <md-button ng-click="nameSearch(drugRecord.name)"
                                class="k-display-name-search md-button-fab"
-                               ng-class="{ searchactive : searchactive }">
+                               ng-class="{ searchactive : results.searchActive }">
                     </md-button>
 
                     <div class="k-display-name-label">
@@ -67,7 +67,7 @@
 
                         <md-button ng-click="ingredientSearch(drugRecord)"
                                    class="k-display-active-search md-button-fab"
-                                   ng-class="{ searchactive : searchactive , validselection : validSelection(drugRecord) }">
+                                   ng-class="{ searchactive : results.searchActive , validselection : validSelection(drugRecord) }">
                         </md-button>
 
                         <div class="k-display-active-label-text">Active Ingredients</div>
@@ -129,7 +129,7 @@
 
                     <md-button ng-click="ndc9Search(drugRecord.ndc9)"
                                class="k-display-ndc9-search md-button-fab"
-                               ng-class="{ searchactive : searchactive }">
+                               ng-class="{ searchactive : results.searchActive }">
                     </md-button>
 
                     <div class="k-display-ndc-label">

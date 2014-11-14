@@ -5,6 +5,200 @@
 var USDrugServices = angular.module("USDrugServices", ["ngResource"]);
 
 
+
+
+/* Drug result arrays scope injection */
+
+USDrugServices.factory("DrugArray", function () {
+
+    return { drugArray : []
+           , searchActive: false
+    };
+
+});
+
+
+/* Type ahead prompts and search history scope injection */
+
+USDrugServices.factory("SearchPrompts", function () {
+
+    var historyArray = [];
+    var promptArray = [];
+    var blankSearch = { searchstring : "", searchtype : "name"};   // A blank search if no available search history.
+    var currentSearch = blankSearch; // The current active search.
+    var historyActive = false; // Set when the search history is active
+    var promptActive = false; // Set when type-ahead prompt is active
+    var focusActive = false;
+
+    // Define the text input search types.
+
+    var searchTypes = [
+        {type: "name", typeprompt: "Name", defaulttext: "Livalo"},
+        {type: "active", typeprompt: "Ingredient", defaulttext: "Pitavastatin"},
+        {type: "ndc", typeprompt: "Code (NDC)", defaulttext: "0002-4772-90"}
+    ];
+
+    var displaySearch = { selectedsearchtype: searchTypes[0], searchtext: "" };
+
+    var getdisplaytype = function (type) {  // Given a parameter search type, return the appropriate text input search type
+
+        if (type == "name") {
+
+            return searchTypes[0];
+
+        } else if (type == "active") {
+
+            return searchTypes[1];
+
+        } else if (type == "ndc") {
+
+            return searchTypes[2];
+
+        } else {  // Should not happen
+
+            k_consoleLog("get display prompt - Badtype");
+            return searchTypes[0];
+
+        }
+
+    };
+
+
+    var textdisplaytype = function (type) {  // Given a search type; check if this a text input search.
+
+        return (type == "name" || type == "active" || type == "ndc");
+
+    };
+
+
+    var paramToTextSearch = function (paramSearch) { // note the the new values are assigned to the displaySearch
+        // object, because the current object is bound to the text search HTML.
+
+        if (textdisplaytype(paramSearch.searchtype)) { // Setup the displayed search
+
+            displaySearch.selectedsearchtype = getdisplaytype(paramSearch.searchtype);
+            displaySearch.searchtext = paramSearch.searchstring;
+
+        }
+        else { // Otherwise blank out the search fields
+
+            displaySearch.selectedsearchtype = getdisplaytype(blankSearch.searchtype); //Deep copy
+            displaySearch.searchtext = blankSearch.searchstring;
+
+        }
+
+    };
+
+
+    var setpromptstatus = function() {
+
+        if (focusActive) {
+
+            historyActive = true;
+
+        }
+        else {
+
+            historyActive =false;
+
+        }
+
+    };
+
+
+    return {
+
+        getdisplaysearch : function() {
+
+            return displaySearch;
+
+        },
+
+        getsearchtypes : function() {
+
+            return searchTypes;
+
+        },
+
+        setnamepromptarray : function(nameArray) {
+
+            promptArray = [];
+
+            for (var i = 0; i < nameArray.length; i++) {
+
+                var promptSearch = { searchstring : nameArray[i], searchtype : "name"};
+                promptArray.push(promptSearch);
+
+            }
+
+        },
+
+        getdisplaytype: getdisplaytype,
+
+        setfocus: function(focus) {
+
+            focusActive = focus;
+            setpromptstatus();
+
+        },
+
+        gethistoryactive: function() {
+
+            return historyActive;
+
+        },
+
+        gethistoryarray: function() {
+
+
+            return historyArray;
+
+        },
+
+        getpromptactive: function() {
+
+            return promptActive;
+
+        },
+
+        getpromptarray: function() {
+
+
+            return promptArray;
+
+        },
+
+        clearpromptarray : function() {
+
+
+            promptArray = [];
+
+        },
+
+        gettcurrentsearch : function() {
+
+            return currentSearch;
+
+        },
+
+        setcurrentsearch : function(searchParams) {
+
+            currentSearch = searchParams;
+            // Set the displayed text search (if applicable)
+            paramToTextSearch(searchParams);
+
+        },
+
+        addtohistory : function(searchParams) {
+
+                historyArray.unshift(searchParams);
+
+        }
+    };
+
+});
+
+
 USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
     return $resource("/_ah/api/searchUSdrugs/v1/typeSearch"   //url

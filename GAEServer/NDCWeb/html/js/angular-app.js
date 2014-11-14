@@ -12,4 +12,3 @@ var USDrugSearchApp = angular.module("USDrugSearchApp",
       "USDrugServices"
 ]);
 
-

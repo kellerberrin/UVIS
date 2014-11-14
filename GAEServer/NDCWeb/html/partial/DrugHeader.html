@@ -30,8 +30,9 @@
 
             <div id="k-search-title">Search by</div>
 
-            <select id="k-md-searchtype" ng-model="search.selectedsearchtype"
-                    ng-options="s.typeprompt for s in searchtypes"
+            <select id="k-md-searchtype"
+                    ng-model="search.selectedsearchtype"
+                    ng-options="s.typeprompt for s in prompts.getsearchtypes()"
                     class="md-theme-light-blue">
             </select>
 
@@ -43,7 +44,7 @@
 
             <md-text-float id="k-md-searchtext"
                            label="Enter Search Text"
-                           ng-keypress="($event.which === 13)?getParamsSearch():getForwardPrompt()"
+                           ng-keyup="($event.which === 13)?getParamsSearch():getForwardPrompt()"
                            ng-model="search.searchtext">
             </md-text-float>
 
@@ -51,7 +52,7 @@
             <md-button id="k-md-search"
                        class="md-button-fab"
                        ng-click="getParamsSearch()"
-                       ng-class="{ searchactive : searchactive }">
+                       ng-class="{ searchActive : results.searchActive }">
             </md-button>
 
         </div>
@@ -61,15 +62,60 @@
 
     <div id="k-search-prompt-anchor">
 
-        <md-content id="k-search-searchprompt" class="md-padding">
+        <md-content id="k-search-prompt-container" class="md-padding">
 
-            <div id="k-search-prompt-list">
+            <div id="k-search-history-list"
+                 ng-class="{ historyActive : prompts.gethistoryactive() }">
 
-                <div class="k-search-prompt-array" ng-repeat="prompt in promptArray">
+                <div class="k-search-history-title">Search History</div>
 
-                    <div class="k-search-prompt-item" ng-click="nameSearch(prompt)">
+                <div class="k-search-history-array"
+                     ng-repeat="history in prompts.gethistoryarray() track by $index">
 
-                        {{ prompt }}
+                    <div class="k-search-history-item"
+                         ng-click="performSearch(history)">
+
+                        <div class="k-search-history-type">
+
+                            {{ prompts.getdisplaytype(history.searchtype).typeprompt }}
+
+                        </div>
+
+                        <div class="k-search-history-value">
+
+                            {{ history.searchstring }}
+
+                        </div>
+
+                    </div>
+
+                    <md-divider></md-divider>
+
+                </div>
+
+            </div>
+
+
+            <div id="k-search-prompt-list"
+                ng-class="{ promptActive : prompts.getpromptactive() }">
+
+                <div class="k-search-prompt-array"
+                     ng-repeat="prompt in prompts.getpromptarray() track by $index">
+
+                    <div class="k-search-prompt-item"
+                         ng-click="performSearch(prompt)">
+
+                        <div class="k-search-prompt-type">
+
+                            {{ prompts.getdisplaytype(prompt.searchtype).typeprompt }}
+
+                        </div>
+
+                        <div class="k-search-prompt-value">
+
+                            {{ prompt.searchstring }}
+
+                        </div>
 
                     </div>
 
@@ -82,6 +128,5 @@
         </md-content>
 
     </div>
-
 
 </div>
