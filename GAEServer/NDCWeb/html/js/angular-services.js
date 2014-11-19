@@ -20,7 +20,7 @@ USDrugServices.factory("DrugArray", function () {
 
 /* Type ahead prompts and search history scope injection */
 
-USDrugServices.factory("SearchPrompts", function () {
+USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDrugForwardPrompt) {
 
     var historyArray = [];
     var promptArray = [];
@@ -28,7 +28,7 @@ USDrugServices.factory("SearchPrompts", function () {
     var currentSearch = blankSearch; // The current active search.
     var historyActive = false; // Set when the search history is active
     var promptActive = false; // Set when type-ahead prompt is active
-    var focusActive = false;
+    var focusActive = false; // Does the input text widget have focus
 
     // Define the text input search types.
 
@@ -38,7 +38,7 @@ USDrugServices.factory("SearchPrompts", function () {
         {type: "ndc", typeprompt: "Code (NDC)", defaulttext: "0002-4772-90"}
     ];
 
-    var displaySearch = { selectedsearchtype: searchTypes[0], searchtext: "" };
+    var displaySearch = { selectedsearchtype: searchTypes[0], searchtext: "" };  // This object is bound to the input HTML
 
     var getdisplaytype = function (type) {  // Given a parameter search type, return the appropriate text input search type
 
@@ -62,7 +62,6 @@ USDrugServices.factory("SearchPrompts", function () {
         }
 
     };
-
 
     var textdisplaytype = function (type) {  // Given a search type; check if this a text input search.
 
@@ -90,16 +89,93 @@ USDrugServices.factory("SearchPrompts", function () {
     };
 
 
+    var setfocus = function(focus) {
+
+        focusActive = focus;
+
+    };
+
+
     var setpromptstatus = function() {
 
         if (focusActive) {
 
             historyActive = true;
+            if (displaySearch.searchtext.length > 0) {
+
+                promptActive = true;
+
+            } else {
+
+                promptActive = false;
+
+            }
 
         }
         else {
 
             historyActive =false;
+            promptActive = false;
+
+        }
+
+        if (promptActive) {
+
+            getForwardPrompt();
+
+        }
+
+    };
+
+    var getForwardPrompt = function () {
+
+        k_consoleLog(displaySearch);
+
+        if (displaySearch.searchtext.length > 0) {
+
+            var promptParams = {promptstring: displaySearch.searchtext, prompttype: displaySearch.selectedsearchtype.type, promptsize: "10"};
+            var requestTime = Date.now();
+            USDrugForwardPrompt.typeSearch(promptParams
+                , function (data) {
+
+                    setpromptarray(data.promptArray, promptParams.prompttype);
+                    var milliseconds = Date.now() - requestTime;
+                    k_consoleLog({milliseconds: milliseconds});
+                    k_consoleLog(data.promptArray);
+
+                }
+                , function (error) {
+
+                    clearpromptarray();
+                    k_consoleLog(["USDrugForwardPrompt - error", error]);
+
+                });
+
+
+        }
+        else {
+
+            clearpromptarray();
+
+        }
+
+    };
+
+    var clearpromptarray  = function() {
+
+
+        promptArray = [];
+
+    };
+
+    var setpromptarray = function(nameArray, type) {
+
+        clearpromptarray();
+
+        for (var i = 0; i < nameArray.length; i++) {
+
+            var promptSearch = { searchstring : nameArray[i], searchtype : type};
+            promptArray.push(promptSearch);
 
         }
 
@@ -114,33 +190,25 @@ USDrugServices.factory("SearchPrompts", function () {
 
         },
 
-        getsearchtypes : function() {
+        getdisplaytype : function(type) {
+
+            return getdisplaytype(type);
+
+        },
+
+        getsearchtypes: function() {
 
             return searchTypes;
 
         },
 
-        setnamepromptarray : function(nameArray) {
-
-            promptArray = [];
-
-            for (var i = 0; i < nameArray.length; i++) {
-
-                var promptSearch = { searchstring : nameArray[i], searchtype : "name"};
-                promptArray.push(promptSearch);
-
-            }
-
-        },
-
-        getdisplaytype: getdisplaytype,
-
         setfocus: function(focus) {
 
-            focusActive = focus;
-            setpromptstatus();
+            setfocus(focus);
 
         },
+
+        setpromptstatus: setpromptstatus,
 
         gethistoryactive: function() {
 
@@ -168,19 +236,6 @@ USDrugServices.factory("SearchPrompts", function () {
 
         },
 
-        clearpromptarray : function() {
-
-
-            promptArray = [];
-
-        },
-
-        gettcurrentsearch : function() {
-
-            return currentSearch;
-
-        },
-
         setcurrentsearch : function(searchParams) {
 
             currentSearch = searchParams;
@@ -191,12 +246,12 @@ USDrugServices.factory("SearchPrompts", function () {
 
         addtohistory : function(searchParams) {
 
-                historyArray.unshift(searchParams);
+            historyArray.unshift(searchParams);
 
         }
     };
 
-});
+}]);
 
 
 USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
@@ -238,7 +293,7 @@ USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource)
         , {   }    // default arguments
 
         , { typeSearch: { method: "POST"
-            , params: {promptstring: "@promptstring", promptsize: "@promptsize"}
+            , params: {promptstring: "@promptstring", prompttype: "@prompttype", promptsize: "@promptsize"}
             , transformResponse: function (jsonData, dataHeaders) {
 
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).

@@ -2,24 +2,32 @@
 
 <md-dialog id="k-image-display-dialog" aria-label="US Drug Image Dialog">
 
-    <div id="k-image-title-bar" layout="horizontal">
+    <div layout="vertical">
 
-        <div id="k-image-attribution">Images Courtesy of the US National Library of Medicine</div>
-        <div flex></div>
-        <md-button id="k-image-dialog-dismiss" ng-click="dismissDialog()" class="md-button-fab"></md-button>
+        <div id="k-image-title-bar" layout="horizontal">
 
-    </div>
+            <div id="k-image-attribution">Images Courtesy of the US National Library of Medicine</div>
+            <div flex></div>
+            <md-button id="k-image-dialog-dismiss" ng-click="dismissDialog()"
+                       class="md-fab">
+            </md-button>
 
-    <md-content id="k-image-dialog-content" class="dialog-content">
+        </div>
 
-        <img ng-src="{{dialog.imageURL}}">
+        <md-content id="k-image-dialog-content" class="dialog-content">
 
-    </md-content>
+            <img ng-src="{{dialog.imageURL}}">
 
-    <div id="k-image-search-bar" layout="horizontal">
-        <div id="k-image-search-text">Search on Drug Image</div>
-        <md-button id="k-image-search" ng-click="searchDialog()" class="md-button-fab md-theme-light-blue"></md-button>
-        <div flex></div>
+        </md-content>
+
+        <div id="k-image-search-bar" layout="horizontal">
+            <div id="k-image-search-text">Search on Drug Image</div>
+            <md-button id="k-image-search" ng-click="searchDialog()"
+                       class="md-fab">
+            </md-button>
+            <div flex></div>
+        </div>
+
     </div>
 
 </md-dialog>

@@ -4,6 +4,8 @@
 
 var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
+
+
     USDrugDirectives.directive("kSearchSummary", function() {
 
         return {
@@ -89,3 +91,55 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
         };
     }]);
 
+
+/****************************************************************************
+ *
+ * Handle focusin and focusout events
+ * Usage :  k-focusin="aFunction($event)"
+ * Usage :  k-focusout="aFunction($event)"
+ *
+ ****************************************************************************/
+
+
+    USDrugDirectives.directive("kFocusin", ["$parse", function($parse) {
+
+        return function (scope, element, attr) {
+
+            var fn = $parse(attr["kFocusin"]);
+
+            element.bind("focusin", function (event) {
+
+                scope.$apply(function () {
+
+                    fn(scope, {$event: event});
+
+                });
+
+            });
+
+        }
+
+
+    }]);
+
+
+    USDrugDirectives.directive("kFocusout", ["$parse", function($parse) {
+
+        return function(scope, element, attr) {
+
+                var fn = $parse(attr["kFocusout"]);
+
+                element.bind("focusout", function (event) {
+
+                    scope.$apply(function () {
+
+                        fn(scope, {$event: event});
+
+                    });
+
+                });
+
+            }
+
+
+    }]);

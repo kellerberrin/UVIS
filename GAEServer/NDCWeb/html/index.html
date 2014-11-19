@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/app.css"/>
     <!-- Angular Material Design CSS -->
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
-    <!-- Angular & Material Design Javascript -->
+    <!-- Angular Libraries -->
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
@@ -24,7 +24,6 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/hammerjs/hammer.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
-
     <!-- Local Angular Javascript -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
@@ -39,49 +38,35 @@
 <!-- [BEGIN body html]-->
 <body ng-app="USDrugSearchApp">
 
-<div layout="horzontal" layout-align="space-around">
+<div id="k-total-page-width">
 
-    <div id="k-page-control" ng-controller="DrugSearchCtrl">
+    <!-- ************ Top Level Page Ident *******************-->
 
+    <div id="k-search-page" ng-controller="DrugSearchCtrl">
 
-        <!-- ************ Top Level Page Ident *******************-->
+        <!-- ************ Header Area Layout *******************-->
 
-        <div id="k-search-page">
+        <div ng-include src=" 'partial/DrugHeader.html' "></div>
 
-            <!-- ************ Header Area Layout *******************-->
+        <!-- ************ End Header Area Layout *******************-->
 
-            <div ng-include src=" 'partial/DrugHeader.html' "></div>
+        <!-- ************ Display Results Area *******************-->
 
-            <!-- ************ End Header Area Layout *******************-->
+        <div ng-include src=" 'partial/DisplayResults.html' "></div>
 
-            <!-- ************ Display Results Area *******************-->
+        <!-- ************ End Display Results Area *******************-->
 
-            <div ng-include src=" 'partial/DisplayResults.html' "></div>
+        <!-- Modal wait cursor -->
+        <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>
+        <!-- End Modal wait cursor -->
 
-            <!-- ************ End Display Results Area *******************-->
+        <div id="k-search-footer">&copy Copyright Kellerberrin 2014</div>
 
-            <!-- Modal wait cursor -->
-            <div id="k-modal-wait" ng-class="{searchactive: searchactive}"></div>
-            <!-- End Modal wait cursor -->
-
-            <div id="k-layout-footer"></div>
-
-        </div>
-
-        <!-- ************ End Top Level Page *******************-->
-        <!-- Footer uses the compass @mixin "sticky-footer" and is defined outside the top-level page -->
-
-        <div id="k-search-footer">
-
-            &copy Copyright Kellerberrin 2014
-
-        </div>
+    </div> <!-- ************ End Top Level Page *******************-->
 
 
-    </div> <!-- Controller -->
-
-
-</div> <!-- Horizontal -->
+</div>
+<!-- Horizontal -->
 
 </body>
 <!-- [END body html]-->
