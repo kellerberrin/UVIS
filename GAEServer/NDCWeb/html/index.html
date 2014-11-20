@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/app.css"/>
     <!-- Angular Material Design CSS -->
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
-    <!-- Angular & Material Design Javascript -->
+    <!-- Angular Libraries -->
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
@@ -24,7 +24,6 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/hammerjs/hammer.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
-
     <!-- Local Angular Javascript -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
@@ -61,7 +60,7 @@
             <!-- ************ End Display Results Area *******************-->
 
             <!-- Modal wait cursor -->
-            <div id="k-modal-wait" ng-class="{searchactive: searchactive}"></div>
+            <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>
             <!-- End Modal wait cursor -->
 
             <div id="k-layout-footer"></div>
@@ -78,10 +77,12 @@
         </div>
 
 
-    </div> <!-- Controller -->
+    </div>
+    <!-- Controller -->
 
 
-</div> <!-- Horizontal -->
+</div>
+<!-- Horizontal -->
 
 </body>
 <!-- [END body html]-->

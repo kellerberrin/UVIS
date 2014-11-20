@@ -198,4 +198,29 @@ body {
 }
 
 
+/*
+* The fab class for material buttons.
+*/
+
+.material-fab {
+
+    @include MaterialBoxShadow(2);
+    @include transition(all 0.25s ease-in-out);
+    border:none;
+    font-size:1.5em;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    opacity: 0.75;
+
+    &:hover {
+
+        @include MaterialBoxShadow(3);
+        @include translate(0px, -2px);
+        opacity: 1.0;
+
+    }
+
+}
 

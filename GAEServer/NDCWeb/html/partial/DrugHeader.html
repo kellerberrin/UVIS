@@ -6,17 +6,21 @@
 
         <div id="k-icon-toolbar-tools" class="md-toolbar-tools">
 
-            <md-button class="md-theme-light-blue">
+            <md-button id="k-menu-icon-button"
+                       class="md-primary"
+                       aria-label="PharmCat Menu">
                 <img src="/images/icons/white_bars24.svg" width="24" height="24">
             </md-button>
 
             <span id="k-icon-toolbar-title" flex>PharmCat</span>
 
-            <md-button class="md-theme-light-blue">
+            <md-button id="k-icon-barcode-button"
+                       aria-label="Barcode">
                 <img src="/images/icons/white_barcode24.svg" width="24" height="24">
             </md-button>
 
-            <md-button class="md-theme-light-blue">
+            <md-button id="k-icon-search-button"
+                       aria-label="Search Menu">
                 <img src="/images/icons/white_search24.svg" width="24" height="24">
             </md-button>
 
@@ -30,10 +34,9 @@
 
             <div id="k-search-title">Search by</div>
 
-            <select id="k-md-searchtype"
+            <select id="k-search-searchtype"
                     ng-model="search.selectedsearchtype"
-                    ng-options="s.typeprompt for s in prompts.getsearchtypes()"
-                    class="md-theme-light-blue">
+                    ng-options="s.typeprompt for s in prompts.getsearchtypes()">
             </select>
 
         </div>
@@ -42,62 +45,40 @@
 
         <div id="k-search-text-toolbar" class="md-toolbar-tools">
 
-            <md-text-float id="k-md-searchtext"
+            <md-text-float id="k-search-searchtext"
                            label="Enter Search Text"
-                           ng-keyup="($event.which === 13)?getParamsSearch():getForwardPrompt()"
-                           ng-model="search.searchtext">
+                           ng-model="search.searchtext"
+                           ng-keyup="inputkeystroke($event)"
+                           k-focusin="inputactive()"
+                           k-focusout="inputinactive()">
             </md-text-float>
 
-
-            <md-button id="k-md-search"
-                       class="md-button-fab"
+            <button id="k-md-search"
+                       class="material-fab"
                        ng-click="getParamsSearch()"
-                       ng-class="{ searchActive : results.searchActive }">
-            </md-button>
+                       ng-class="{ searchActive : results.searchActive }"
+                       aria-label="">
+            </button>
 
         </div>
 
     </md-toolbar>
 
-
     <div id="k-search-prompt-anchor">
 
-        <md-content id="k-search-prompt-container" class="md-padding">
-
-            <div id="k-search-history-list"
-                 ng-class="{ historyActive : prompts.gethistoryactive() }">
-
-                <div class="k-search-history-title">Search History</div>
-
-                <div class="k-search-history-array"
-                     ng-repeat="history in prompts.gethistoryarray() track by $index">
-
-                    <div class="k-search-history-item"
-                         ng-click="performSearch(history)">
-
-                        <div class="k-search-history-type">
-
-                            {{ prompts.getdisplaytype(history.searchtype).typeprompt }}
-
-                        </div>
-
-                        <div class="k-search-history-value">
-
-                            {{ history.searchstring }}
-
-                        </div>
-
-                    </div>
-
-                    <md-divider></md-divider>
-
-                </div>
-
-            </div>
-
+        <div id="k-search-prompt-container">
 
             <div id="k-search-prompt-list"
                 ng-class="{ promptActive : prompts.getpromptactive() }">
+
+                <div id="k-search-prompt-title" layout="horizontal">
+                    <div flex></div>
+                    <div>Auto Search</div>
+                    <div flex></div>
+                    <md-button id="k-search-prompt-dismiss"
+                               class="md-fab">
+                    </md-button>
+                </div>
 
                 <div class="k-search-prompt-array"
                      ng-repeat="prompt in prompts.getpromptarray() track by $index">
@@ -125,7 +106,42 @@
 
             </div>
 
-        </md-content>
+            <div id="k-search-history-list"
+                 ng-class="{ historyActive : prompts.gethistoryactive() }">
+
+                <div id="k-search-history-title" layout="horizontal">
+                    <div flex></div>
+                    <div>Search History</div>
+                    <div flex></div>
+                </div>
+
+                <div class="k-search-history-array"
+                     ng-repeat="history in prompts.gethistoryarray() track by $index">
+
+                    <div class="k-search-history-item"
+                         ng-click="performSearch(history)">
+
+                        <div class="k-search-history-type">
+
+                            {{ prompts.getdisplaytype(history.searchtype).typeprompt }}
+
+                        </div>
+
+                        <div class="k-search-history-value">
+
+                            {{ history.searchstring }}
+
+                        </div>
+
+                    </div>
+
+                    <md-divider></md-divider>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 

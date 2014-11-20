@@ -32,7 +32,8 @@ class DrugSearchResult(messages.Message):
 class ForwardPromptArgs(messages.Message):
     """Extract the drug database search arguments."""
     promptstring = messages.StringField(1, required=True)
-    promptsize = messages.StringField(2, required=True)
+    prompttype = messages.StringField(2, required=True)
+    promptsize = messages.StringField(3, required=True)
 
 
 class ForwardPromptResult(messages.Message):
@@ -61,7 +62,8 @@ class SearchUSDrugsApi(remote.Service):
     FORWARD_PROMPT_RESOURCE = endpoints.ResourceContainer(
         ForwardPromptArgs,
         promptstring=messages.StringField(1, required=True),
-        promptsize=messages.StringField(2, required=True)
+        prompttype=messages.StringField(2, required=True),
+        promptsize=messages.StringField(3, required=True)
     )
 
     @endpoints.method(FORWARD_PROMPT_RESOURCE
@@ -70,7 +72,9 @@ class SearchUSDrugsApi(remote.Service):
                       , http_method="POST"
                       , name="forwardPrompt")
     def forwardprompt_implementation(self, request):
-        return ForwardPromptResult(resultMessage=ForwardPromptJSON(request.promptstring, request.promptsize))
+        return ForwardPromptResult(resultMessage=ForwardPromptJSON(request.promptstring,
+                                                                   request.prompttype,
+                                                                   request.promptsize))
 
 
 application = endpoints.api_server([SearchUSDrugsApi],  restricted=False)

@@ -23,11 +23,11 @@ USDrugControllers.controller("DrugSearchCtrl",
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
 
-
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
             $scope.results.searchActive = true;
             $scope.prompts.setcurrentsearch(searchParams);
+            k_consoleLog(searchParams);
             USDrugEndPoints.typeSearch(searchParams
                 , function (data) {
                     $scope.results.drugArray = data.drugArray;
@@ -36,7 +36,6 @@ USDrugControllers.controller("DrugSearchCtrl",
                         $scope.prompts.addtohistory(searchParams);
                     }
                     $scope.results.searchActive = false;
-                    $scope.prompts.clearpromptarray();
                     var milliseconds = Date.now() - requestTime;
                     $scope.resultToast(milliseconds);
                 }
@@ -44,7 +43,6 @@ USDrugControllers.controller("DrugSearchCtrl",
 
                     $scope.results.searchActive = false;
                     $scope.results.drugArray = [];
-                    $scope.prompts.clearpromptarray();
                     k_consoleLog(["USDrugEndPoints - error", error]);
 
                 });
@@ -119,17 +117,14 @@ USDrugControllers.controller("DrugSearchParams",
         , "SearchPrompts"
         , "USDrugValidateInput"
         , "USDrugShowDialog"
-        , "USDrugForwardPrompt"
         , function DrugSearchParams($scope,
                                     DrugArray,
                                     SearchPrompts,
                                     USDrugValidateInput,
-                                    USDrugShowDialog,
-                                    USDrugForwardPrompt) {
+                                    USDrugShowDialog) {
 
         $scope.results = DrugArray;  // Injected array of drugs.
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-
 
         // Setup the default search object bound to the select and input elements
 
@@ -175,33 +170,29 @@ USDrugControllers.controller("DrugSearchParams",
 
         };
 
-
-        $scope.getForwardPrompt = function () {
-
-            if ($scope.search.searchtext.length > 0) {
-
-                var promptParams = {promptstring: $scope.search.searchtext, promptsize: "10"};
-                var requestTime = Date.now();
-                USDrugForwardPrompt.typeSearch(promptParams
-                    , function (data) {
-
-                        $scope.prompts.setnamepromptarray(data.promptArray);
-                        var milliseconds = Date.now() - requestTime;
-                        k_consoleLog({milliseconds: milliseconds});
-                        k_consoleLog(data.promptArray);
-
-                    }
-                    , function (error) {
-
-                        $scope.prompts.clearpromptarray();
-                        $scope.searchactive = false;
-                        $scope.results.drugArray = [];
-                        k_consoleLog(["USDrugForwardPrompt - error", error]);
-
-                    });
+        $scope.inputkeystroke = function(event) {
 
 
+            if (event.which === 13) {  // Check if a 'return' key stroke.
+                $scope.getParamsSearch();
             }
+            else {
+                $scope.prompts.setpromptstatus();
+            }
+
+        };
+
+        $scope.inputactive = function() {
+
+            $scope.prompts.setfocus(true);
+            $scope.prompts.setpromptstatus();
+
+        };
+
+        $scope.inputinactive = function() {
+
+            $scope.prompts.setfocus(false);
+            $scope.prompts.setpromptstatus();
 
         };
 

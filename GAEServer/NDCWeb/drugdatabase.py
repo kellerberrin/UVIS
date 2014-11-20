@@ -243,42 +243,105 @@ def ReadNDCDatabaseJSON(searchtext, searchtype, searcharray):
     return JSONClassEncoder().encode(ReadNDCDatabase(searchtext, searchtype, searcharray))
 
 
-def ForwardPromptJSON(forwardprompt, maxpromptsize):
+def ForwardPromptJSON(forwardprompt, prompttype, maxpromptsize):
 
     promptArray = []
     cleanPromptArray = []
-    QueryString = "SELECT DISTINCT proprietaryname  FROM NDCLookup WHERE proprietaryname >= '" \
-                  + forwardprompt.upper() + "' LIMIT " + maxpromptsize
+
+    if prompttype == "name":
+
+        QueryString = "SELECT DISTINCT proprietaryname  FROM NDCLookup WHERE proprietaryname >= '" \
+                      + forwardprompt.upper() + "' LIMIT " + maxpromptsize
+
+    elif prompttype == "ndc":
+
+        forwardprompt = forwardprompt.replace("-", "")
+        QueryString = "SELECT ndc, format FROM NDCLookup WHERE ndc >= '" \
+                      + forwardprompt.upper() + "' LIMIT " + maxpromptsize
+
+    elif prompttype == "active":
+
+        QueryString = "SELECT DISTINCT substancename  FROM NDCLookup WHERE substancename >= '" \
+                      + forwardprompt.upper() + "' LIMIT " + maxpromptsize
 
     # This Query is fast in production (~100 ms) and unacceptably slow in development (~100000 ms).
     # So the query is by-passed in development to prevent performance bottlenecks.
     if developmentEnvironment():
-        promptArray = [ "Livalo"
-                       , "Live Oak"
-                       , "Live Oak Pollen"
-                       , "Liver Tonic"
-                       , "Lmd In Dextrose"
-                       , "Lmd In Sodium Choride"
-                       , "Lo Loestrin Fe"
-                       , "Lo Minastrin Fe"
-                       , "Lo/ovril-28"
-                       , "Loblolly Pine" ]
+
+        if prompttype == "name":
+
+            promptArray = [ "Livalo",
+                            "Live Oak",
+                            "Live Oak Pollen",
+                            "Liver Tonic",
+                            "Lmd In Dextrose",
+                            "Lmd In Sodium Choride",
+                            "Lo Loestrin Fe",
+                            "Lo Minastrin Fe",
+                            "Lo/ovril-28",
+                            "Loblolly Pine" ]
+
+        elif prompttype == "ndc":
+
+            promptArray = [ "0002-1200-10",
+                            "0002-1200-30",
+                            "0002-1200-50",
+                            "0002-1407-01",
+                            "0002-1433-61",
+                            "0002-1433-80",
+                            "0002-1434-61",
+                            "0002-1434-80",
+                            "0002-1975-61",
+                            "0002-1975-90"]
+
+        elif prompttype == "active":
+
+            promptArray = [["Licorice"],
+                           ["Lidocaine"],
+                           ["Lidocaine;"],
+                           ["Light"],
+                           ["Ligustrum"],
+                           ["Lilium"],
+                           ["Lima"],
+                           ["Lime"],
+                           ["Linaclotide"],
+                           ["Linagliptin"]]
+
+
     else:
 
         qNDC = ndb.gql(QueryString)
         NDCRecords = qNDC.fetch(limit=int(maxpromptsize))
 
         for NDCRecord in NDCRecords:
-            promptArray.append(NDCRecord.proprietaryname)
+
+            if prompttype == "name":
+                promptArray.append(NDCRecord.proprietaryname)
+
+            elif prompttype == "ndc":
+                promptArray.append(NDCTenDigitFormat(NDCRecord.ndc, NDCRecord.format))
+
+            elif prompttype == "active":
+                promptArray.append(NDCRecord.substancename)
 
     # Strip out any prompts that do not match the prompt string.
-
     for prompt in promptArray:
 
-        if prompt.upper().find(forwardprompt.upper(), 0, len(forwardprompt)) == 0:
+        if prompttype == "name":
+            if prompt.upper().find(forwardprompt.upper(), 0, len(forwardprompt)) == 0:
+                cleanPromptArray.append(prompt.title())
 
-            cleanPromptArray.append(prompt.title())
+        elif prompttype == "ndc":
 
+            cleanNDC = prompt.replace("-", "")
+            if cleanNDC.find(forwardprompt.upper(), 0, len(forwardprompt)) == 0:
+                cleanPromptArray.append(prompt.title())
+
+        elif prompttype == "active":
+            # The prompt record is a list of active ingredients, so iterate through the list.
+            for activeItem in prompt:
+                if activeItem.upper().find(forwardprompt.upper(), 0, len(forwardprompt)) == 0:
+                    cleanPromptArray.append(activeItem.title())
 
     logging.info("Prompt Query:%s, Prompt Query Result:%s",  QueryString, cleanPromptArray)
 

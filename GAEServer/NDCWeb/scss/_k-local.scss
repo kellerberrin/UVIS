@@ -11,6 +11,7 @@
 $K-Top-Menu-Background-color: $K-PRIMARY-COLOR-900;
 $K-Menu-Background-color: $K-PRIMARY-COLOR-500;
 $K-Toolbar-Title-color: $K-ACCENT-COLOR-100;
+$K-Toolbar-Icon-Background-Color: $md-light-blue-500;
 $K-SearchButton-Active-color: $K-ACCENT-COLOR-100;
 $K-SearchButton-Inactive-color: $md-light-blue-500;
 $K-Menu-Text-color: white;
@@ -18,6 +19,12 @@ $K-Input-Text-Color: white;
 $K-Icon-Color: white;
 $K-Prompt-Type_color: $K-PRIMARY-COLOR-700;
 $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
+$K-Prompt-Prompt-Title-Color: lighten($md-light-blue-500, 15%);
+$K-History-Item-Active-Color: $K-ACCENT-COLOR-100;
+$K-Prompt-Item-Active-Color: $md-light-blue-500;
+$K-Search-Prompt-Dismiss-Color: lighten($K-ACCENT-COLOR-100, 15%);
+$K-Search-Type-Color: white;
+$K-Search-Type-Background-Color: $md-light-blue-500;
 
 #k-drug-toolbar {
 
@@ -41,11 +48,29 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
       padding-top: 1.0em;
       height: 2.0em;
 
+      & #k-menu-icon-button {
+
+        background-color: $K-Toolbar-Icon-Background-Color;
+
+      }
+
       & #k-icon-toolbar-title {
 
         color: $K-Toolbar-Title-color;
         font-weight: 700;
         font-size: 1.5em;
+
+      }
+
+      & #k-icon-barcode-button {
+
+        background-color: $K-Toolbar-Icon-Background-Color;
+
+      }
+
+      & #k-icon-search-button {
+
+        background-color: $K-Toolbar-Icon-Background-Color;
 
       }
 
@@ -59,6 +84,7 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
     margin: 0;
     padding: 0;
     height: 5.0em;
+    background-color: $K-Menu-Background-color;
 
     & #k-search-type-toolbar {
 
@@ -76,13 +102,16 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
       }
 
-      & #k-md-searchtype {
+      & #k-search-searchtype {
 
         border: none;
         margin-left: 0.75em;
         padding: 0;
         height: 1.5em;
         @include MaterialBoxShadow(2);
+        color: $K-Search-Type-Color;
+        background-color: $K-Search-Type-Background-Color;
+        cursor: pointer;
 
       }
 
@@ -97,18 +126,41 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
       // Set the the input text colors.
 
-      & #k-md-searchtext {
+      & #k-search-searchtext {
 
         height: 3em;
         margin-left: 0.75em;
-        color: $K-Input-Text-Color;
 
-        // Important the material design tag md-text=float
-        // expands to a directive with a nested <input> tag
-        // To reach this tag we need to specify the (implied) child tag type.
+        // Important! The material design tag md-text=float
+        // expands to a directive with a nested <input> and <label> tags
+        // To reach these tags we need to specify the (implied) child tag type.
+
+        & label {
+
+          color: $K-Search-Type-Background-Color;
+
+        }
+
         & input {
 
           color: $K-Input-Text-Color;
+          border-bottom: solid 2px $K-Search-Type-Background-Color;
+
+        }
+
+        &.md-input-focused {
+
+          & input {
+
+            border-bottom: solid 2px $K-Input-Text-Color;
+
+          }
+
+          & label {
+
+            color: $K-Input-Text-Color;
+
+          }
 
         }
 
@@ -123,7 +175,6 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
-
         background-color: $K-SearchButton-Inactive-color;
 
         &.searchActive {
@@ -145,95 +196,44 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
     & #k-search-prompt-container {
 
-      @include MaterialBoxShadow(2);
+      @include MaterialBoxShadow(3);
       position: absolute;
       top: 1em;
       left: 1em;
       width: 20em;
       background-color: white;
-      z-index: 9;
-
-      & #k-search-history-list {
-
-        display: none;
-
-        &.historyActive{
-
-          display: block;
-
-        }
-
-        & .k-search-history-title {
-
-          color: $md-black-primary-Text;
-          text-align: center;
-          padding: 0.3em;
-          background-color: $K-Prompt-History-Title-Color;
-
-        }
-
-        & .k-search-history-array {
-
-          @include transition(all 0.25s ease-in-out);
-
-          &:hover {
-
-            @include MaterialBoxShadow(2);
-            @include translate(0px, -2px);
-            color: $K-SearchButton-Inactive-color;
-
-          }
-
-          & .k-search-history-item {
-
-            position: relative;
-            width: 100%;
-            text-align: left;
-            color: $md-black-primary-Text;
-            cursor: pointer;
-            padding: 0;
-            margin: 0;
-
-            &:hover {
-
-              color: $K-SearchButton-Inactive-color;
-
-            }
-
-            & .k-search-history-type {
-
-              width: 100%;
-              color: $K-Prompt-Type_color;
-              font-size: 0.7em;
-              font-weight: 700;
-              padding-left: 0.5em;
-              padding-top: 0.1em;
-              padding-bottom: 0.0em;
-
-            }
-
-            & .k-search-history-value {
-
-              width: 100%;
-              padding-left: 1.5em;
-              padding-top: 0em;
-              padding-bottom: 0.2em;
-
-            }
-
-          }
-
-        }
-
-      }
 
       & #k-search-prompt-list {
 
         display: none;
 
-        &.promptActive{
+        &.promptActive {
 
           display: block;
+
+        }
+
+        & #k-search-prompt-title {
+
+          color: $md-black-primary-Text;
+          text-align: center;
+          height: 2em;
+          background-color: $K-Prompt-Prompt-Title-Color;
+          padding-top: 0.3em;
+          padding-bottom: 0.3em;
+
+          & #k-search-prompt-dismiss {
+
+            position: relative;
+            top: -0.3em;
+            left: 0.8em;
+            background-image: url("/images/icons/times.svg");
+            background-size: 36px 36px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $K-Search-Prompt-Dismiss-Color;
+
+          }
 
         }
 
@@ -261,7 +261,7 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 
             &:hover {
 
-              color: $K-SearchButton-Inactive-color;
+              color: $K-Prompt-Item-Active-Color;
 
             }
 
@@ -285,6 +285,80 @@ $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
               padding-bottom: 0.2em;
 
             }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    & #k-search-history-list {
+
+      display: none;
+
+      &.historyActive {
+
+        display: block;
+
+      }
+
+      & #k-search-history-title {
+
+        color: $md-black-primary-Text;
+        text-align: center;
+        padding: 0.3em;
+        background-color: $K-Prompt-History-Title-Color;
+
+      }
+
+      & .k-search-history-array {
+
+        @include transition(all 0.25s ease-in-out);
+
+        &:hover {
+
+          @include MaterialBoxShadow(2);
+          @include translate(0px, -2px);
+          color: $K-SearchButton-Inactive-color;
+
+        }
+
+        & .k-search-history-item {
+
+          position: relative;
+          width: 100%;
+          text-align: left;
+          color: $md-black-primary-Text;
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+
+          &:hover {
+
+            color: $K-History-Item-Active-Color;
+
+          }
+
+          & .k-search-history-type {
+
+            width: 100%;
+            color: $K-Prompt-Type_color;
+            font-size: 0.7em;
+            font-weight: 700;
+            padding-left: 0.5em;
+            padding-top: 0.1em;
+            padding-bottom: 0.0em;
+
+          }
+
+          & .k-search-history-value {
+
+            width: 100%;
+            padding-left: 1.5em;
+            padding-top: 0em;
+            padding-bottom: 0.2em;
 
           }
 
@@ -326,7 +400,7 @@ $K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
     }
 
     #k-image-dialog-dismiss {
-      // The search button
+      // The dismiss button
 
       position: relative;
       top: -1em;
@@ -464,20 +538,15 @@ $K-Search-Page-Width: 600px;
 *
 ************************************************************************************************/
 
-#k-display-results {
+#k-search-results {
 
   height: 700px; // Should be done using a media query.
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
   background-image: url("/images/ScrollBackground.jpg");
   background-position: center top;
   background-size: 100% auto;
-
-  & #k-search-results {
-
-    height: inherit;
-
-  }
 
 }
 
@@ -497,8 +566,10 @@ $K-Display-Drug-Border: darken(white, 30%);
   display: block;
   background-color: $K-Display-Drug-Background;
   border: 1px solid $K-Display-Drug-Border;
-  margin-bottom: 2.0em;
-  margin-top: 2.0em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
 
   /*******************************************************************************
   * Display Drug Name
@@ -535,6 +606,7 @@ $K-Display-Drug-Border: darken(white, 30%);
       &:hover {
 
         opacity: 1.0;
+        background-color: $K-SearchButton-Inactive-color;
 
       }
 
@@ -611,7 +683,6 @@ $K-Display-Drug-Border: darken(white, 30%);
   $K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
   $K-Display-Active-Selected-Color: lighten($K-ACCENT-COLOR-100, 10%);
 
-
   & .k-display-active-ingredients {
 
     background-color: $K-Display-Active-Color;
@@ -645,6 +716,7 @@ $K-Display-Drug-Border: darken(white, 30%);
         &.validselection:hover {
 
           opacity: 1.0;
+          background-color: $K-SearchButton-Inactive-color;
 
         }
 
@@ -685,7 +757,8 @@ $K-Display-Drug-Border: darken(white, 30%);
 
           }
 
-          &.activeselected{   // Selected for an ingredient search
+          &.activeselected {
+            // Selected for an ingredient search
 
             background-color: $K-Display-Active-Selected-Color;
 
@@ -710,7 +783,8 @@ $K-Display-Drug-Border: darken(white, 30%);
 
           }
 
-          &.strengthselected { // Selected for an ingredient search
+          &.strengthselected {
+            // Selected for an ingredient search
 
             background-color: $K-Display-Active-Selected-Color;
 
@@ -784,9 +858,10 @@ $K-Display-Drug-Border: darken(white, 30%);
 
       }
 
-      &:hover {
+      &.focus {
 
         opacity: 1.0;
+        background-color: $K-SearchButton-Inactive-color;
 
       }
 
