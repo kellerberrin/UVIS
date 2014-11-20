@@ -552,33 +552,13 @@ $K-Material-Wait-color: $K-ACCENT-COLOR-100;
 
 /*********************************************************************************************
 *
-* Search Page and Footer Stuff
-* Footer Stuff (Uses the Compass Mixin).
-*
+* Top Level Search Page (index.html) and Footer Stuff
 *
 ************************************************************************************************/
 
 $K-Footer-Background-color: $K-PRIMARY-COLOR-500;
 $K-Search-Page-Width: 600px;
 
-// @include sticky-footer(1.5em, "#k-search-page", "#k-layout-footer", "#k-search-footer");
-
-#k-layout-footer {
-
-  margin: 0;
-  padding: 0;
-
-}
-
-#k-search-footer {
-
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  color: gray;
-  background-color: $K-Footer-Background-color;
-
-}
 
 #k-total-page-width {
 
@@ -604,12 +584,41 @@ $K-Search-Page-Width: 600px;
 
   }
 
+  & #k-include-drug-header {
+
+    margin: 0;
+    padding : 0;
+    border: none;
+    width: 100%;
+
+  }
+
+
+  & #k-include-display-results{
+
+    margin: 0;
+    padding : 0;
+    border: none;
+    width: 100%;
+  }
+
+  & #k-search-footer {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    background-color: $K-Footer-Background-color;
+
+  }
+
 }
+
 
 /*********************************************************************************************
 *
-* The Ajax area stuff
-*
+* The search result display area, including background.
 *
 ************************************************************************************************/
 
@@ -619,12 +628,14 @@ $K-Search-Page-Width: 600px;
   width: 100%;
   padding: 0;
   margin: 0;
+  border: none;
   overflow-y: scroll;
   background-image: url("/images/ScrollBackground.jpg");
   background-position: center top;
   background-size: 100% auto;
 
 }
+
 
 /*********************************************************************************************
 *
