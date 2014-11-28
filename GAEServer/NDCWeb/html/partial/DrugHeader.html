@@ -45,22 +45,19 @@
             <input id="k-search-searchtext"
                    type="text"
                    autocomplete="no"
-                   onclick="this.value='';"
-                   onfocus="this.select()"
-                   onblur="this.value=!this.value?'Enter Search Text':this.value;"
                    value="Enter Search Text"
                    class="k-input-text"
                    ng-model="search.searchtext"
                    ng-keyup="inputkeystroke($event)"
                    k-focusin="inputactive()"
-                   k-focusout="inputinactive()">
+                   k-focusout="delayinactive()">
             </input>
 
-            <button id="k-md-search"
+            <button id="k-perform-search"
                     class="k-material-fab"
                     ng-click="getParamsSearch()"
                     ng-class="{ searchActive : results.searchActive }"
-                    aria-label="">
+                    aria-label="Perform Drug Search">
             </button>
 
         </div>
@@ -69,18 +66,19 @@
 
     <div id="k-search-prompt-anchor">
 
-        <div id="k-search-prompt-container">
+        <div id="k-search-prompt-container"
+            ng-class="{ searchPromptActive : prompts.getsearchpromptactive() }">
+
+            <button id="k-search-prompt-dismiss"
+                    class="k-material-fab"
+                    ng-click="inputinactive()">
+            </button>
 
             <div id="k-search-prompt-list"
                  ng-class="{ promptActive : prompts.getpromptactive() }">
 
-                <div id="k-search-prompt-title" layout="horizontal">
-                    <div></div>
-                    <div>Auto Search</div>
-                    <div></div>
-                    <md-button id="k-search-prompt-dismiss"
-                               class="md-fab">
-                    </md-button>
+                <div id="k-search-prompt-title">
+                    <div>Search Ahead</div>
                 </div>
 
                 <div class="k-search-prompt-array"
@@ -103,7 +101,7 @@
 
                     </div>
 
-                    <md-divider></md-divider>
+                    <div class="k-divider"></div>
 
                 </div>
 
@@ -112,10 +110,8 @@
             <div id="k-search-history-list"
                  ng-class="{ historyActive : prompts.gethistoryactive() }">
 
-                <div id="k-search-history-title" layout="horizontal">
-                    <div flex></div>
+                <div id="k-search-history-title">
                     <div>Search History</div>
-                    <div flex></div>
                 </div>
 
                 <div class="k-search-history-array"
@@ -132,13 +128,13 @@
 
                         <div class="k-search-history-value">
 
-                            {{ history.searchstring }}
+                            {{ history.displayhistorytext }}
 
                         </div>
 
                     </div>
 
-                    <md-divider></md-divider>
+                    <div class="k-divider"></div>
 
                 </div>
 

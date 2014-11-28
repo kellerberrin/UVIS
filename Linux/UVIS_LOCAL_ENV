@@ -11,6 +11,10 @@
 # then the script UVIS_TURING_ENV is executed which defines the UVIS development 
 # environment for the TURING development computer.
 
+# Define the development email account (for use when uplading to GAE)
+
+export UVISDEVEMAILACCOUNT="james.duncan.mcculloch@gmail.com"
+
 # The TURING development environment is currently defined.
 
 export UVISLOCALENVIRONMENT="UVIS_TURING_ENV"

@@ -4,5 +4,6 @@
 # Google Application Engine
 
 echo "UVISUSDRUGGAE:" $UVISUSDRUGGAE
+echo "UVISDEVEMAILACCOUNT:" $UVISDEVEMAILACCOUNT
 
-python $GOOGLEAPPBIN/appcfg.py --verbose update $UVISUSDRUGGAE
+python $GOOGLEAPPBIN/appcfg.py --verbose --email=$UVISDEVEMAILACCOUNT update $UVISUSDRUGGAE

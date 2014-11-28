@@ -49,6 +49,7 @@ class SearchUSDrugsApi(remote.Service):
         RequestSearchArgs,
         searchstring=messages.StringField(1, required=True),
         searchtype=messages.StringField(2, required=True)
+
     )
 
     @endpoints.method(REQUEST_SEARCH_RESOURCE
@@ -57,7 +58,9 @@ class SearchUSDrugsApi(remote.Service):
                       , http_method="POST"
                       , name="typeSearch")
     def search_implementation(self, request):
-        return DrugSearchResult(resultMessage=ReadNDCDatabaseJSON(request.searchstring, request.searchtype, []))
+        return DrugSearchResult(resultMessage=ReadNDCDatabaseJSON(request.searchstring,
+                                                                  request.searchtype,
+                                                                  100))
 
     FORWARD_PROMPT_RESOURCE = endpoints.ResourceContainer(
         ForwardPromptArgs,

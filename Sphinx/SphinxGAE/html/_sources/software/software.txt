@@ -15,6 +15,7 @@ Software Documentation
     linux/linux
     github/github
     usdrugdatabase/usdrugdatabase
+    dns/dns
 
     
     
@@ -49,7 +50,6 @@ Sphinx
 |
 |
 |
-|
 
 
 Linux (Mac) Bash Environment 
@@ -64,7 +64,6 @@ Linux (Mac) Bash Environment
 :ref:`Linux (Mac) Bash Environment<linuxdoc>` The Bash shell scripts for the UVIS development environment.
 
 
-|
 |
 |
 |
@@ -86,7 +85,6 @@ UVIS Github Repository
 |
 |
 |
-|
 
 
 US Drug Database 
@@ -102,3 +100,21 @@ US Drug Database
 :ref:`US Drug Database Documentation<usdrugdatabasedoc>` The United States Food and Drug Administration (FDA) database 
 is placed on-line to provide a convenient lookup function for US drug consumers wishing to find equivalent drugs and generics.
 
+|
+|
+|
+|
+
+
+DNS Management
+++++++++++++++
+
+
+.. image:: dns/dns.jpg
+    :width: 104px
+    :height: 95px
+    :align: left
+    :target: dns/dns.html
+
+:ref:`DNS Management<dnsmanagementdoc>` Management and aliasing of the DNS entries used by this documentation and the FDA
+database.

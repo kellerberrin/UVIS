@@ -17,16 +17,17 @@ handlers:
 - url: /html/software
   static_dir: html/software
   login: admin
-  secure: always  
   auth_fail_action: redirect
-  
+#  secure: always
+
+
 - url: /html
   static_dir: html
-  secure: always
+#  secure: always
 
 - url: /.*
   script: gae_sphinx.py
-  secure: always
+#  secure: always
  
 libraries:
 - name: webapp2

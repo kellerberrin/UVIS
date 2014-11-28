@@ -33,26 +33,22 @@ export UVISUSDRUGDATASTOREKIND="NDCLookup"
 export UVISUSDRUGDATA="$UVISDIR/GAEServer/NDCDatafilesUpload"
 #The path for the USDrug Database Data files (specifies bulkloader.yaml)
 export UVISUSDRUGDATAPATH="$UVISUSDRUGDATA/bulkloader.yaml"
-#The FULL (100,000 records) USDrug Database Data .csv file to be uploaded.
-export UVISUSDRUGFULLDATAFILE="$UVISUSDRUGDATA/csvupload/NDCImageDatabase.csv"
+#The FULL (100,000 records+Images) USDrug Database Data .csv file to be uploaded.
+export UVISUSDRUGDATAUPLOADFILE="$UVISUSDRUGDATA/csvupload/NDCImageDatabase.csv"
 #The USDrug LOCAL Datastore URL.
 export UVISUSDRUGDATALOCALURL="http://${UVISUSDRUGLOCALHOST}:${UVISUSDRUGLOCALPORT}/_ah/remote_api"
 #The USDrug REMOTE Datastore URL.
 export UVISUSDRUGDATAREMOTEURL="$UVISUSDRUGURL/_ah/remote_api"
 #The uploader checkpoint database. Used for re-starting the upload. 
-export UVISUSDRUGDATALOCALCHECKPOINT="$UVISUSDRUGDATA/bulkloader-local-upload-progress.sql3"
+export UVISUSDRUGDATALOCALCHECKPOINT="$UVISUSDRUGDATA/csvupload/bulkloader-local-upload-progress.sql3"
 #The uploader checkpoint database. Used for re-starting the upload. 
-export UVISUSDRUGDATAREMOTECHECKPOINT="$UVISUSDRUGDATA/bulkloader-remote-upload-progress.sql3"
-
-
-#If set to the FULL file then uploads all the data (100,000 records)
-export UVISUSDRUGDATAFILE="$UVISUSDRUGFULLDATAFILE"  #Currently set to FULL
+export UVISUSDRUGDATAREMOTECHECKPOINT="$UVISUSDRUGDATA/csvupload/bulkloader-remote-upload-progress.sql3"
 
 
 # Raw US Drug Data Processing. See kellerberrin-doc.appspot.com for further details.
 # These environment variables are used by Python software that converts the files downloaded 
 # from the US Food & Drug Administration (FDA) website to .csv files that can be uploaded 
-# into the GAE datastore using the bulkloader software.
+# into the GAE datastore using the bulkloader software after being annotated with image information.
 
 # The directory for the raw NDC data files 
 export UVISUSDRUGRAWNDCDIR="$UVISDATADIR/RawNDCDataFiles"
@@ -62,8 +58,12 @@ export UVISUSDRUGRAWDATAPRODUCT="$UVISUSDRUGRAWNDCDIR/product.txt"
 export UVISUSDRUGRAWDATAPACKAGE="$UVISUSDRUGRAWNDCDIR/package.txt"
 # The raw data python log file.
 export UVISUSDRUGRAWDATALOGFILE="$UVISUSDRUGDATA/csvupload/processrawNDCfiles.log"
+#If set to the FULL file then uploads all the data (100,000 records)
+export UVISUSDRUGDATAFILE="$UVISUSDRUGDATA/csvupload/NDCDatabase.csv"
+
 
 # The main directory for files and logs of the National LIbrary of Medicine RxImage download.
+
 export UVISUSDRUGIMAGEDIR="$UVISUSDRUGDATA"
 # The image download python log file.
 export UVISUSDRUGIMAGELOGFILE="$UVISUSDRUGIMAGEDIR/csvupload/harvestrximages.log"

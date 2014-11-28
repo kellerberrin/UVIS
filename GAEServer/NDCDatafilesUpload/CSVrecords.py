@@ -307,11 +307,11 @@ def NDCNineDigitFormat(NDC, Format) :
     ProductCode = CleanNDC[LabellerSize:(LabellerSize + ProductSize)]
     PackageCode = CleanNDC[(LabellerSize + ProductSize):]
 
-    if Format == "4-4-2" :
+    if Format == "4-4-2":
         LabellerCode = "0" + LabellerCode
-    elif Format == "5-3-2" :
+    elif Format == "5-3-2":
         ProductCode = "0" + ProductCode
-    elif Format == "5-4-1" :
+    elif Format == "5-4-1":
         PackageCode = "0" + PackageCode
     else:
         Logger.error("Unable to determine 9 Digit NDC for %s - '000000000' returned", NDC)

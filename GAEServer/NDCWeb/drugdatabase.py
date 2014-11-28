@@ -57,7 +57,7 @@ class JSONClassEncoder(json.JSONEncoder):   # subclass the JSONEncoder class to 
 
 
 def NDCTenDigitFormat(NDC, Format):
-    "Utility function generates a 10-digit formatted National Drug Code"
+    """Utility function generates a 10-digit formatted National Drug Code"""
     CleanNDC = NDC.replace("-", "")
 
     if len(CleanNDC) != 10 :
@@ -87,7 +87,7 @@ def ActiveList(Substances, Strengths, Units):
     StrengthList = RemoveEmptyStrings(StrengthList)
     UnitList = RemoveEmptyStrings(UnitList)
 
-    if len(SubstanceList) != len(StrengthList) or len(StrengthList) != len(UnitList) :
+    if len(SubstanceList) != len(StrengthList) or len(StrengthList) != len(UnitList):
         logging.error('Different Sized Lists, len(Substance):%d, len(Strength):%d, len(Unit):%d',  len(SubstanceList), len(StrengthList), len(UnitList) )
         return ActiveList
 
@@ -152,7 +152,8 @@ def IngredientQuery(searchString) :
 def NDC9ArrayQuery(SearchText):
 
     Condition = 0
-    NDC9Array = SearchText.split(",")
+    CleanNDC = SearchText.replace("-", "")
+    NDC9Array = CleanNDC.split(",")
     QueryString = "WHERE ninedigitndc IN ("
 
     for NDC9 in NDC9Array:
@@ -169,7 +170,7 @@ def NDC9ArrayQuery(SearchText):
     return QueryString
 
 
-def ReadNDCDatabase(SearchText, SearchType, SearchArray):
+def ReadNDCDatabase(SearchText, SearchType, SearchSize):
     """ Read the NDC database from the Google App Engine Kind NDCLookup"""
 
     NDCRecords = []
@@ -215,7 +216,7 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
     else:
         SearchError = True
 
-    if not(SearchError) : NDCRecords = qNDC.fetch(limit=100)
+    if not(SearchError) : NDCRecords = qNDC.fetch(limit=SearchSize)
 
     for NDCRecord in NDCRecords:
         NDCRecord.ndc = NDCTenDigitFormat(NDCRecord.ndc, NDCRecord.format)
@@ -231,16 +232,17 @@ def ReadNDCDatabase(SearchText, SearchType, SearchArray):
         NDCRecord.substancelist = substancelist
 
 
-    TemplateValues = {'NDCRecordArray': NDCRecords,
-                    'SearchText': SearchText,
-                    'SearchType': SearchType}
+    TemplateValues = {"NDCRecordArray": NDCRecords,
+                      "SearchText": SearchText,
+                      "SearchType": SearchType,
+                      "SearchSize": SearchSize}
 
     return TemplateValues
                                
 
-def ReadNDCDatabaseJSON(searchtext, searchtype, searcharray):
+def ReadNDCDatabaseJSON(searchtext, searchtype, searchsize):
 
-    return JSONClassEncoder().encode(ReadNDCDatabase(searchtext, searchtype, searcharray))
+    return JSONClassEncoder().encode(ReadNDCDatabase(searchtext, searchtype, searchsize))
 
 
 def ForwardPromptJSON(forwardprompt, prompttype, maxpromptsize):

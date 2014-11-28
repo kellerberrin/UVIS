@@ -2,11 +2,6 @@
  *
  * Copyright Kellerberrin 2014.
  *
- * Java script functions for the FDA drug database application.
- * The script 'DrugSearch.html' performs the inital search
- * The script 'DrugResults.html' uses JinJa to format the returned database results
- * These results are returned as an AJAX update. See these HTML files for usage and 'id=' definitions.
- *
  */
 
 
@@ -17,133 +12,6 @@ function k_consoleLog(LogArgs) {
     }
 }
 
-// todo:: remove this code.
-
-
-function ingredientSubmit(Index, Ingredient, Strength, Units) {
-
-    IngredientObj = { "Index": Index, "Ingredient": Ingredient, "Strength": Strength, "Units": Units };
-
-    return (function () {
-        k_consoleLog(IngredientObj);
-    });
-
-}
-
-
-function ingredientSearch(event) {
-
-    var ArgObj = {};
-
-    // Get the number of search ingredients.
-    var NumIngredients = $("#active-count").val();
-    var IntNumIngredients = Number(NumIngredients);
-
-    ArgObj["active-count"] = NumIngredients;
-
-    var IndexStr = "";
-    var ValStr = "";
-
-    // Get the ingredient search arguments
-    for (i = 1; i <= IntNumIngredients; i++) {
-
-        IndexStr = "searchtype-" + i.toString();
-        ValStr = $("#" + IndexStr).val();
-        ArgObj[IndexStr] = ValStr;
-
-        IndexStr = "ingredient-" + i.toString();
-        ValStr = $("#" + IndexStr).val();
-        ArgObj[IndexStr] = ValStr;
-
-        IndexStr = "strength-" + i.toString();
-        ValStr = $("#" + IndexStr).val();
-        ArgObj[IndexStr] = ValStr;
-
-        IndexStr = "units-" + i.toString();
-        ValStr = $("#" + IndexStr).val();
-        ArgObj[IndexStr] = ValStr;
-    }
-
-    k_consoleLog(ArgObj);
-
-    postForm(event, "/searchingredients", ArgObj)
-}
-
-// JQ plugin to store ingredient data as an array of objects in a form.
-// { Ingredient : "IngredientValue", Strength : "StrengthValue", Units :  "UnitValue" }
-// Place inside the JinJa ingredient loop.
-// Use: <script>$("#form-id").addIngredient("Ingredient", "Strength", "Unit");</script>
-
-(function ($) {
-
-    $.fn.addIngredient = function (IngredientStr, StrengthStr, UnitStr) {
-
-        var IngredientArrayObj = $(this).data("IngredientArray");
-
-        if (IngredientArrayObj == undefined) {
-
-            $(this).data({ IngredientArray: [] });  // If the data object is undefined then create it.
-
-            IngredientArrayObj = $(this).data();
-
-        }
-
-        var IngredientObj = { Ingredient: IngredientStr, Strength: StrengthStr, Unit: UnitStr };
-
-        IngredientArrayObj.IngredientArray.push(IngredientObj);
-
-    }; // addIngredient function.
-
-})(jQuery); // Define as a JQ plugin.
-
-// JQ plugin to get the ingredient data as an array of ingredient objects.
-// Use: <script>$var IngredientArray = ("#form-id").getIngredient();</script>
-
-(function ($) {
-
-    $.fn.getIngredient = function () {
-
-        var IngredientArray = $(this).data("IngredientArray");
-
-        if (IngredientArray == undefined) {
-
-            return [];  // If the data object is undefined then return the empty list
-
-        }
-
-        return IngredientArray;
-
-    }; // getIngredient function.
-
-})(jQuery); // Define as a JQ plugin.
-
-
-// JQ plugin to submit ingredient forms.
-
-(function ($) {
-
-    $.fn.autosubmit = function () {
-
-        this.submit(function (event) {
-            var form = $(this);
-            $.ajax({
-                type: form.attr('method'),
-                url: form.attr('action'),
-                data: form.serialize()
-            }).done(function () {
-                // Optionally alert the user of success here...
-            }).fail(function () {
-                // Optionally alert the user of an error here...
-            }); // ajax call
-            event.preventDefault();
-        });  // The event function
-    } // The autosubmit function
-})(jQuery); // Define as a JQ plugin.
-
-// Add a 'data-autosubmit' tag to the form and then set the property by calling:
-// 
-// $(function() { $('form[data-autosubmit]').autosubmit(); });
-//
 
 
 /*********************************************************************************************
@@ -218,7 +86,9 @@ function k_clientDrugData() {
             drugRecord.format = NDCRecord.hasOwnProperty("format") ? NDCRecord.format : "";
             drugRecord.smallimageurl = NDCRecord.hasOwnProperty("smallimageurl") ? NDCRecord.smallimageurl : "";
             drugRecord.largeimageurl = NDCRecord.hasOwnProperty("largeimageurl") ? NDCRecord.largeimageurl : "";
-            drugRecord.ndc9 = NDCRecord.hasOwnProperty("ninedigitndc") ? NDCRecord.ninedigitndc : "";
+            drugRecord.ndc9 = k_NDC9Format(NDCRecord.hasOwnProperty("ninedigitndc") ? NDCRecord.ninedigitndc : "");
+            drugRecord.ndc11 = k_NDC11Format(NDCRecord.hasOwnProperty("ndcelevendigit") ? NDCRecord.ndcelevendigit : "");
+            drugRecord.ndc11package = k_NDC11PackageSuffix(NDCRecord.hasOwnProperty("ndcelevendigit") ? NDCRecord.ndcelevendigit : "");
             drugRecord.hasimage = (drugRecord.smallimageurl != "");  // Set to true if drug images exist.
 
             var ndc9ImageStringArray = NDCRecord.hasOwnProperty("ndcnineimagecodes") ? NDCRecord.ndcnineimagecodes : "";
@@ -239,8 +109,6 @@ function k_clientDrugData() {
 
             drugRecord.activeArray = [];
 
-
-
             if (NDCRecord.hasOwnProperty("substancelist")
                 && NDCRecord.hasOwnProperty("activenumeratorstrength")
                 && NDCRecord.hasOwnProperty("activeingredientunit")) {
@@ -254,15 +122,19 @@ function k_clientDrugData() {
 
                         for (var j = 0; j < NDCRecord.substancelist.length; j++) {
 
-                            var activeRecord = {};
+                            if (NDCRecord.substancelist[j].length > 0) {
 
-                            activeRecord.activeName = NDCRecord.substancelist[j];
-                            activeRecord.activeselected = true;
-                            activeRecord.strength = NDCRecord.activenumeratorstrength[j];
-                            activeRecord.strengthselected = true;
-                            activeRecord.units = NDCRecord.activeingredientunit[j];
+                                var activeRecord = {};
 
-                            drugRecord.activeArray.push(activeRecord);
+                                activeRecord.activeName = NDCRecord.substancelist[j];
+                                activeRecord.activeselected = true;
+                                activeRecord.strength = NDCRecord.activenumeratorstrength[j];
+                                activeRecord.strengthselected = true;
+                                activeRecord.units = NDCRecord.activeingredientunit[j];
+
+                                drugRecord.activeArray.push(activeRecord);
+
+                            }
 
                         }
 
@@ -283,6 +155,8 @@ function k_clientDrugData() {
 
             }
 
+            drugRecord.hasActive = (drugRecord.activeArray.length > 0);
+
             this.drugDataArray.push(drugRecord);
 
         }
@@ -290,6 +164,8 @@ function k_clientDrugData() {
     }
 
 }
+
+
 
 
 function k_NDC9SearchArray(Record) {
@@ -311,3 +187,38 @@ function k_NDC9SearchArray(Record) {
 
 }
 
+function k_NDC11PackageSuffix(NDC11Code) {
+
+    return NDC11Code.substring(9);
+
+}
+
+
+function k_NDC11Format(NDC11Code) {
+
+    if (NDC11Code.length != 11) {
+
+        return NDC11Code;
+
+    }
+
+    var FormattedNDC11 = k_NDC9Format(NDC11Code.substring(0,9)) + "-" + k_NDC11PackageSuffix(NDC11Code);
+
+    return FormattedNDC11;
+
+}
+
+
+function k_NDC9Format(NDC9Code) {
+
+    if (NDC9Code.length != 9) {
+
+        return NDC9Code;
+
+    }
+
+    var FormattedNDC9 = NDC9Code.substring(0, 5) + "-" + NDC9Code.substring(5);
+
+    return FormattedNDC9;
+
+}

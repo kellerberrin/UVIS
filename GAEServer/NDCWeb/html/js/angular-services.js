@@ -22,8 +22,12 @@ USDrugServices.factory("DrugArray", function () {
 
 USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDrugForwardPrompt) {
 
-    var historyArray = [];
-    var promptArray = [];
+    var historyArray = [];  // History of searches
+    var totalPromptCount = 10;
+    var displayHistoryArrayCount = 3;
+    var displayHistoryArray=[]; // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
+    var promptArray = [];  // Search ahead prompts
+    var displayPromptArray = [];  // Displayed prompts, Length = min(10-displayHistoryArray, promptArray.length))
     var blankSearch = { searchstring : "", searchtype : "name"};   // A blank search if no available search history.
     var currentSearch = blankSearch; // The current active search.
     var historyActive = false; // Set when the search history is active
@@ -35,7 +39,9 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
     var searchTypes = [
         {type: "name", typeprompt: "Name", defaulttext: "Livalo"},
         {type: "active", typeprompt: "Ingredient", defaulttext: "Pitavastatin"},
-        {type: "ndc", typeprompt: "Code (NDC)", defaulttext: "0002-4772-90"}
+        {type: "ndc", typeprompt: "Code (NDC)", defaulttext: "0002-4772-90"},
+        {type: "ingredient", typeprompt: "Ingredient (Extended+)", defaulttext: "Pitavastatin"},
+        {type: "image", typeprompt: "Image Search (NDC9+)", defaulttext: "00002-4772"}
     ];
 
     var displaySearch = { selectedsearchtype: searchTypes[0], searchtext: "" };  // This object is bound to the input HTML
@@ -54,12 +60,39 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
             return searchTypes[2];
 
+        } else if (type == "ingredient") {
+
+            return searchTypes[3];
+
+        } else if (type == "image") {
+
+            return searchTypes[4];
+
         } else {  // Should not happen
 
             k_consoleLog("get display prompt - Badtype");
             return searchTypes[0];
 
         }
+
+    };
+
+
+    var getdisplayarray = function() {
+
+        var displayTypeArray = [];
+
+        for (var i = 0; i < searchTypes.length; i++) {
+
+            if (textdisplaytype(searchTypes[i].type)) {
+
+                displayTypeArray.push(searchTypes[i]);
+
+            }
+
+        }
+
+        return displayTypeArray;
 
     };
 
@@ -81,7 +114,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
         }
         else { // Otherwise blank out the search fields
 
-            displaySearch.selectedsearchtype = getdisplaytype(blankSearch.searchtype); //Deep copy
+            displaySearch.selectedsearchtype = getdisplaytype(blankSearch.searchtype);
             displaySearch.searchtext = blankSearch.searchstring;
 
         }
@@ -108,6 +141,8 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
             } else {
 
                 promptActive = false;
+                promptArray = [];
+                setdisplaypromptarrays();
 
             }
 
@@ -116,6 +151,12 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
             historyActive =false;
             promptActive = false;
+
+        }
+
+        if (historyActive && historyArray.length == 0) {
+
+            historyActive = false;
 
         }
 
@@ -139,6 +180,12 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
                 , function (data) {
 
                     setpromptarray(data.promptArray, promptParams.prompttype);
+                    setdisplaypromptarrays();
+                    if (promptArray.length == 0) {
+
+                        promptActive = false;
+
+                    }
                     var milliseconds = Date.now() - requestTime;
                     k_consoleLog({milliseconds: milliseconds});
                     k_consoleLog(data.promptArray);
@@ -181,6 +228,86 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
     };
 
+    var setdisplaypromptarrays = function() {
+
+        // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
+
+        displayHistoryArray = [];
+
+        for (var i = 0; i < historyArray.length; i++) {
+
+            if (i >= Math.max(displayHistoryArrayCount, totalPromptCount - promptArray.length)) break;
+
+            displayHistoryArray.push(historyArray[i]);
+
+        }
+
+        // Update the display history array with user friendly text prompts
+
+        for (i = 0; i < displayHistoryArray.length; i++) {
+
+            var historyItem = displayHistoryArray[i];
+
+            displayHistoryArray[i] = historyDisplayText(historyItem);
+
+        }
+
+        // Displayed prompts, Length = min(10-displayHistoryArray.length, promptArray.length))
+
+        displayPromptArray = [];
+
+        for (i = 0; i < promptArray.length; i++) {
+
+            if (i >= totalPromptCount - displayHistoryArray.length) break;
+
+            displayPromptArray.push(promptArray[i]);
+
+        }
+
+    };
+
+
+    var historyDisplayText = function (historyItem) {
+
+        historyItem["displayhistorytext"] = historyItem.searchstring;
+        var type = historyItem.searchtype;
+
+        if (type == "ingredient") {
+            var ingredientSearch = JSON.parse(historyItem.searchstring);
+            for(var i = 0; i< ingredientSearch.length; i++) {
+
+                if (ingredientSearch[i].activeselected) {
+
+                    var displayHistoryText = ingredientSearch[i].activeName + " ";
+
+                    if (ingredientSearch[i].strengthselected) {
+
+                        displayHistoryText += ingredientSearch[i].strength + " " + ingredientSearch[i].units;
+
+                    }
+
+                    displayHistoryText += " +";
+                    historyItem["displayhistorytext"] = displayHistoryText;
+                    break;
+
+                }
+            }
+
+        } else if (type == "image") {
+
+            var NDC9Array = historyItem.searchstring.split(",");
+            if (NDC9Array.length > 0) {
+
+                var displayHistoryText = k_NDC9Format(NDC9Array[0]) + " +";
+                historyItem["displayhistorytext"] = displayHistoryText;
+
+            }
+
+        }
+
+        return historyItem;
+
+    };
 
     return {
 
@@ -196,11 +323,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
         },
 
-        getsearchtypes: function() {
-
-            return searchTypes;
-
-        },
+        getsearchtypes: getdisplayarray,
 
         setfocus: function(focus) {
 
@@ -209,6 +332,12 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
         },
 
         setpromptstatus: setpromptstatus,
+
+        getsearchpromptactive: function() {
+
+            return historyActive || promptActive;
+
+        },
 
         gethistoryactive: function() {
 
@@ -219,7 +348,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
         gethistoryarray: function() {
 
 
-            return historyArray;
+            return displayHistoryArray;
 
         },
 
@@ -232,7 +361,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
         getpromptarray: function() {
 
 
-            return promptArray;
+            return displayPromptArray;
 
         },
 
@@ -247,6 +376,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
         addtohistory : function(searchParams) {
 
             historyArray.unshift(searchParams);
+            setdisplaypromptarrays();
 
         }
     };
@@ -361,10 +491,10 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
                 failure({ searchstring: SearchString, searchtype: "name" }, HelpText);
                 return;
             }
-            else if (DigitLength != 10) {
+            else if (DigitLength != 10 && DigitLength != 9 && DigitLength != 11) {
 
                 HelpText = "The text entered; " + "'" + SearchString + "' " + " has " + DigitLength + " digits."
-                    + " Most National Drug Codes (NDC) are 10 digits long. Do you want to continue the search?";
+                    + " Most National Drug Codes are 11 (NDC11) or 10 (NDC10) or 9 (NDC9) digits long. Do you want to continue the search?";
                 failure({ searchstring: SearchString, searchtype: SearchType }, HelpText);
                 return;
             }

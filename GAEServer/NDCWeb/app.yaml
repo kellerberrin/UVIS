@@ -32,14 +32,15 @@ handlers:
 
 # Library requests.
 # Endpoints for datastore search handler
+# Always use a secure link (endpoints requires an SSL connection).
 
 - url: /_ah/spi/.*
   script: library.application
+  secure: always
 
 # Standard web requests.
 # Redirect all requests to the application script.
-# Always use a secure link.
-  
+
 - url: .*
   script: app.application
   secure: always

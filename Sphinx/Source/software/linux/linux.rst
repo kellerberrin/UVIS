@@ -112,32 +112,58 @@ The Scripts
 
 |
 
-6.   **reldir** - Not executed directly. Not important - changes the UVIS environment shell prompt.
+6.   **harvestRxImages** Harvests the RxImage API from the National Library of Medicine.
+    If the intermediate download file "ImageCheckpoint.csv" is present. The harvest program
+    only gets NDCs that are in "NDCDatabase.csv" but not in "ImageCheckpoint.csv".
+    If no "ImageCheckpoint.csv" is present than the download starts at the first record (NDC code)
+    in "NDCDatabase.csv".
+
+     |action| (UVIS) $harvestRxImages
+
+|
+
+7.   **reldir** - Not executed directly. Not important - changes the UVIS environment shell prompt.
      Should be replaced with a prompt script based on sed.
 
 |
 
-7.   **sphinxmake** - Generate a new version of the Sphinx html documentation from the '.rst' source files.
+8.   **sphinxmake** - Generate a new version of the Sphinx html documentation from the '.rst' source files.
 
      |action| (UVIS) $sphinxmake html     
 
 |
 
-8.   **uploadsphinxGAE** - Upload the current local version of the Sphinx documentation to the remote GAE server.
+9.   **uploadsphinxGAE** - Upload the current local version of the Sphinx documentation to the remote GAE server.
      This documentation can be viewed on a web browser at 'http://kellerberrin-doc.appspot.com'.
 
-     |action| (UVIS) $uploadsphinxGAE 
+     |action| (UVIS) $uploadsphinxGAE
 
 |
 
-9.   **uploadUSdrugGAE** - Upload the current local version of the US drug database to the remote GAE server.
+10.   **rollbacksphinxGAE** - rollback any failed upgrade of the Sphinx documentation to the remote GAE server.
+     Typically this must be done if there is a network failure during an upgrade.
+     This documentation can be viewed on a web browser at 'http://kellerberrin-doc.appspot.com'.
+
+     |action| (UVIS) $rollbacksphinxGAE
+
+|
+
+11.  **uploadUSdrugGAE** - Upload the current local version of the US drug database to the remote GAE server.
      This application can be viewed on a web browser at 'http://kellerberrin-drugdatabase.appspot.com'.
 
-     |action| (UVIS) $uploadUSdrugGAE 
+     |action| (UVIS) $uploadUSdrugGAE
 
 |
 
-10.   **UVIS** - Not executed directly. Defines all the environment variables needed by the UVIS development environment.
+12.  **rollbackUSdrugGAE** - rollback any failed upgrade of the US drug Database documentation to the remote GAE server.
+     Typically this must be done if there is a network failure during an upgrade.
+     This documentation can be viewed on a web browser at 'http://kellerberrin-database.appspot.com'.
+
+     |action| (UVIS) $rollbackUSdrugGAE
+
+|
+
+13.  **UVIS** - Not executed directly. Defines all the environment variables needed by the UVIS development environment.
      The following 3 sub-scripts are executed in order. Do not modify this script for different development environments 
      (nodify UVIS_LOCAL_ENV below).
 
@@ -150,31 +176,31 @@ The Scripts
 
 |
 
-11.  **UVIS_SPHINX** - Not executed directly. Defines all the environment variables needed by the Sphinx development environment.
+14.  **UVIS_SPHINX** - Not executed directly. Defines all the environment variables needed by the Sphinx development environment.
      This script is run from the **UVIS** script above. Modify this script to modify the Sphinx environment.
 
 
 |
 
-12.  **UVIS_USDRUG** - Not executed directly. Defines all the environment variables needed by the US drug development environment.
+15.  **UVIS_USDRUG** - Not executed directly. Defines all the environment variables needed by the US drug development environment.
      This script is run from the **UVIS** script above. Modify this script to modify the US drug environment.
 
 |
 
-13.  **UVIS_LOCAL_ENV** - Not executed directly. Defines all the **local** computer environment (directories) needed by the UVIS
+16.  **UVIS_LOCAL_ENV** - Not executed directly. Defines all the **local** computer environment (directories) needed by the UVIS
      development environment. This script is run from the **UVIS** script above.
      **Important** - this file must be changed for different development computers (two lines only). See the comments in the script.
 
 |
 
-14.  **UVIS_TURING_ENV**, **UVIS_JACOD_ENV**, etc - Not executed directly. One of these scripts is run from **UVIS_LOCAL_ENV** above.
+17.  **UVIS_TURING_ENV**, **UVIS_JACOD_ENV**, etc - Not executed directly. One of these scripts is run from **UVIS_LOCAL_ENV** above.
      Defines the environment variables (directories) needed by the UVIS development environment for a particular computer. 
      For example; UVIS_TURING_ENV defines the UVIS environment for the Turing (desktop) environment (approx 4-6 directories). 
      The UVIS_LOCAL_ENV script selects which of these environments is in current use. See the comments in the script. 
 
 |
 
-15.  **workenv** - Setup the UVIS development environment. Must be run in each terminal session '$workenv UVIS'.
+18.  **workenv** - Setup the UVIS development environment. Must be run in each terminal session '$workenv UVIS'.
      Creates a child shell, defines the UVIS environment variables and changes the prompt. Exit by executing '$exit' and
      returning to the original (parent) shell. 
 

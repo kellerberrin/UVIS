@@ -30,7 +30,7 @@ Kellerberrin software is a technical software developer. We are interested
 in mathematical software, particularly the applied use of cryptographic techniques for
 authentication.
 
-Our delivery platforms are the Web (Javascript, Python and JinJa), Android (Java) and
+Our delivery platforms are the Web (Javascript, AngularJS, Css3, Sass, HTML5), Android (Java) and
 Google App Engine (Python). We also have considerable experience with real-time C++ in
 financial markets.  
 

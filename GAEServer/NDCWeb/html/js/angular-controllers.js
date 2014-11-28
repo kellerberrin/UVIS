@@ -27,7 +27,7 @@ USDrugControllers.controller("DrugSearchCtrl",
             var requestTime = Date.now();
             $scope.results.searchActive = true;
             $scope.prompts.setcurrentsearch(searchParams);
-            k_consoleLog(searchParams);
+            searchParams["searchsize"] = 100;  // Set the max searchsize to 100 for now.
             USDrugEndPoints.typeSearch(searchParams
                 , function (data) {
                     $scope.results.drugArray = data.drugArray;
@@ -186,6 +186,12 @@ USDrugControllers.controller("DrugSearchParams",
 
             $scope.prompts.setfocus(true);
             $scope.prompts.setpromptstatus();
+
+        };
+
+        $scope.delayinactive = function() {
+
+            setTimeout($scope.inputinactive, 100);
 
         };
 

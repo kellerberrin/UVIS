@@ -35,7 +35,7 @@ This is wrapped in a linux bash command "harvestRxImages".
 
 **Executing the RxImage harvest program.**
 
-*   **harvertRxImages** Harvests the RxImage API from the National Library of Medicine.
+*   **harvestRxImages** Harvests the RxImage API from the National Library of Medicine.
     If the intermediate download file "ImageCheckpoint.csv" is present. The harvest program
     only gets NDCs that are in "NDCDatabase.csv" but not in "ImageCheckpoint.csv".
     If no "ImageCheckpoint.csv" is present than the download starts at the first record (NDC code)

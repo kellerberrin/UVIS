@@ -35,34 +35,46 @@ def dateListToString(format,delimiter):
 
 #Convert to a clean list of semi-colon delimited strings.
 
-def SemiDelimiter() :
-    def semiDelimiter(String) :
+def SemiDelimiter():
+    def semiDelimiter(String):
         StringList = String.split(";")
         CleanList = []
-        for String in StringList :
-            if len(String) >= 0 : CleanList.append(String.strip())
+        for String in StringList:
+            if len(String) >= 0:
+                String = String.strip()
+                String = String.strip(";")
+                CleanList.append(String)
         return CleanList
     return semiDelimiter
 
 #Convert to a clean list of comma delimited strings.
 
-def CommaDelimiter() :
-    def commaDelimiter(String) :
+def CommaDelimiter():
+    def commaDelimiter(String):
         StringList = String.split(",")
         CleanList = []
-        for String in StringList :
-            if len(String) >= 0 : CleanList.append(String.strip())
+        for String in StringList:
+            if len(String) >= 0:
+                String = String.strip()
+                String = String.strip(";")
+                CleanList.append(String)
         return CleanList
     return commaDelimiter
 
 #Convert to a clean list of space  delimited strings, remove commas
 
-def SpaceDelimiter() :
+def SpaceDelimiter():
     def spaceDelimiter(String) :
         StringList = String.split(" ")
         CleanList = []
-        for String in StringList :
-            String.replace(";","")
-            if len(String) >= 0 : CleanList.append(String.strip())
+        for String in StringList:
+            String = String.strip()
+            String = String.strip(";")  # strip off any commas and semi-colons, colons etc.
+            String = String.strip(",")
+            String = String.strip(":")
+            String = String.strip("-")
+            String = String.strip("_")
+            if len(String) >= 0:
+                CleanList.append(String)
         return CleanList
     return spaceDelimiter
