@@ -20,7 +20,7 @@
 
 .k-active-button {
 
-  @include MaterialBoxShadow(2);
+  @include K-MaterialBoxShadow(2);
   @include transition(all 0.25s ease-in-out);
   @include border-radius(4px);
   border: none;
@@ -29,7 +29,7 @@
 
   &:hover {
 
-    @include MaterialBoxShadow(3);
+    @include K-MaterialBoxShadow(3);
     @include translate(0px, -2px);
 
   }
@@ -82,7 +82,7 @@ $K-Search-Toolbar-Height: 4em;
 
 #k-drug-toolbar {
 
-  @include MaterialBoxShadow(2);
+  @include K-MaterialBoxShadow(2);
   position: relative;
   z-index: 9;
   width: 100%;
@@ -269,7 +269,7 @@ $K-Search-Toolbar-Height: 4em;
 
     & #k-search-prompt-container {
 
-      @include MaterialBoxShadow(3);
+      @include K-MaterialBoxShadow(3);
       @include transition(all 0.25s ease-in-out);
       display: none;
       position: absolute;
@@ -324,7 +324,7 @@ $K-Search-Toolbar-Height: 4em;
 
           &:hover {
 
-            @include MaterialBoxShadow(2);
+            @include K-MaterialBoxShadow(2);
             @include translate(0px, -2px);
             color: $K-SearchButton-Inactive-color;
 
@@ -403,7 +403,7 @@ $K-Search-Toolbar-Height: 4em;
 
         &:hover {
 
-          @include MaterialBoxShadow(2);
+          @include K-MaterialBoxShadow(2);
           @include translate(0px, -2px);
           color: $K-SearchButton-Inactive-color;
 
@@ -704,7 +704,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
 .k-display-drug {
 
-  @include MaterialBoxShadow(2);
+  @include K-MaterialBoxShadow(2);
   display: block;
   background-color: $K-Display-Drug-Background;
   border: 1px solid $K-Display-Drug-Border;
@@ -791,7 +791,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
     & .k-display-drug-image {
 
       @include transition(all 0.25s ease-in-out);
-      @include MaterialBoxShadow(1);
+      @include K-MaterialBoxShadow(1);
       display: none;
       margin: 5px;
       cursor: pointer;
@@ -799,7 +799,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
       &:hover {
 
         @include translate(0px, -1px);
-        @include MaterialBoxShadow(2);
+        @include K-MaterialBoxShadow(2);
 
       }
 

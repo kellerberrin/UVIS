@@ -14,6 +14,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
     <!-- Local CSS stuff. specific setup -->
     <link rel="stylesheet" href="/css/app.css"/>
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css">
     <!-- Angular Material Design CSS -->
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
     <!-- Angular Libraries -->
@@ -25,6 +27,7 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/hammerjs/hammer.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <!-- Local Angular Javascript -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
@@ -39,10 +42,17 @@
 <!-- [BEGIN body html]-->
 <body ng-app="USDrugSearchApp">
 
-<div id="k-total-page-width">
+<!--[if lt IE 9]>
+<p>You are using an <strong>outdated</strong> browser.
+    Pharmcat will not function correctly.
+    Please consider upgrading your browser.</p>
+<![endif]-->
 
-    <!-- ************ Top Level Page Ident *******************-->
-    <div id="k-search-page" ng-controller="DrugSearchCtrl">
+<!-- 100% Horizontal Width -->
+<div id="k-total-page-width" ng-controller="DrugSearchCtrl">
+
+    <!-- PharmCat Page (max 600 px width) -->
+     <div id="k-search-page">
 
         <!-- ************ Header Area Layout *******************-->
         <div ng-include id="k-include-drug-header" src=" 'partial/DrugHeader.html' "></div>
@@ -52,19 +62,19 @@
         <div ng-include id="k-include-display-results" src=" 'partial/DisplayResults.html' "></div>
         <!-- ************ End Display Results Area *******************-->
 
-        <!-- Modal wait cursor -->
-        <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>
-        <!-- End Modal wait cursor -->
-
         <!-- Footer-->
         <div id="k-search-footer">&copy Copyright Kellerberrin 2014</div>
         <!-- End Footer-->
 
     </div>
-    <!-- ************ End Top Level Page *******************-->
+    <!-- End PharmCat Page (max 600 px width) -->
+
+    <!-- Modal wait cursor -->
+    <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>
+    <!-- End Modal wait cursor -->
 
 </div>
-<!-- Horizontal -->
+<!-- End 100% Horizontal Width -->
 
 </body>
 <!-- [END body html]-->

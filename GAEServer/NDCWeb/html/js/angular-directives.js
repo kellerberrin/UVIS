@@ -94,6 +94,70 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
 /****************************************************************************
  *
+ * A general purpose dialog directive
+ *
+ ****************************************************************************/
+
+
+    USDrugDirectives.directive('kModalDialog', function() {
+
+        return {
+
+            restrict: "E",
+
+            scope: false,
+
+            replace: true, // Replace with the template below
+
+            transclude: true, // we want to insert custom content inside the directive
+
+            link: function(scope, element, attrs) {
+
+                scope.displayDialog = true;
+
+                scope.dialogStyle = {};
+
+                if (attrs.show) {
+
+                    scope.dislayDialog = attrs.show;
+                    k_consoleLog(["setShow", scope])
+
+                }
+
+                if (attrs.width) {
+
+                    scope.dialogStyle.width = attrs.width;
+
+                }
+
+                if (attrs.height) {
+
+                    scope.dialogStyle.height = attrs.height;
+                }
+
+                scope.dismissDialog = function() {
+
+                    k_consoleLog(["dismissDialog", scope])
+                    scope.displayDialog = false;
+
+               };
+
+            },
+
+        template:  "<div class='k-material-modal' ng-show='displayDialog'>" +
+                        "<div class='k-material-modal-overlay' ng-click='dismissDialog()'></div>" +
+                        "<div class='k-material-modal-dialog'>" +
+                            "<div class='k-material-modal-content'></div>" +
+                        "</div>"+
+                   "</div>"
+
+        }; // end of return
+
+    }); // end of directive.
+
+
+/****************************************************************************
+ *
  * Handle focusin and focusout events
  * Usage :  k-focusin="aFunction($event)"
  * Usage :  k-focusout="aFunction($event)"

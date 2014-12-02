@@ -43,9 +43,13 @@
                      ng-class="{ hasimage: drugRecord.hasimage}"
                      ng-click="imageDialog(drugRecord)">
 
+
                     <img class="k-display-small-image" ng-src="{{drugRecord.smallimageurl}}">
 
                 </div>
+
+                <k-modal-dialog show="false" width="80%" height="60%">
+                </k-modal-dialog>
 
             </div>
 
