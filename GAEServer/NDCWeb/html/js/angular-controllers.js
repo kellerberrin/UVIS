@@ -22,7 +22,9 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-        $scope.displayImageDialog = { show: false}; // Set the dialog boxes.
+        $scope.displayImageDialog = { show: false }; // Set the image dialog box.
+        $scope.displaySearchDialog = { show: false }; // Set the image dialog box.
+        $scope.displayErrorDialog = { show: false }; // Set the server error dialog box.
 
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
@@ -44,6 +46,8 @@ USDrugControllers.controller("DrugSearchCtrl",
 
                     $scope.results.searchActive = false;
                     $scope.results.drugArray = [];
+                    $scope.displayErrorDialog = { show: true
+                                                  error: error };
                     k_consoleLog(["USDrugEndPoints - error", error]);
 
                 });
@@ -96,23 +100,23 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         };
 
-        $scope.imageDialog = function (drugRecord) {
+        $scope.showImageDialog = function (drugRecord) {
 
-            $scope.displayImageDialog = { show: true}; // Set the dialog boxes.
+            var searchParams = {searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image"};
 
-            USDrugImageDialog.DisplayImageDialog(drugRecord.largeimageurl,
+            $scope.displayImageDialog = { show: true, // Display the dialog box
+                                          imageurl: drugRecord.largeimageurl, // Set the hi-res image
+                                          searchParams: searchParams, // Image search parameters
+                                          dialogStyle: { width : "100%", "max-width" : "100px" }  };  // Optional dialog styling
 
-                function () { // Search on NDC9s
-                    var searchParams = {searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image"};
-                    $scope.performSearch(searchParams);
-                },
+        };
 
-                function () {}   // Do nothing on dialog dismiss.
+        $scope.imageSearch = function (drugRecord) {
 
-            )
+            $scope.displayImageDialog.show =false; // Close dialog box
+            $scope.performSearch($scope.displayImageDialog.searchParams); // Perform search
 
-        }
-
+        };
 
     }]);
 
@@ -154,28 +158,30 @@ USDrugControllers.controller("DrugSearchParams",
                 }
                 , function (searchParams, reason) { // validation failed. Offer an Alternative.
 
-                    USDrugShowDialog.DisplayYesNoDialog(reason
-                        , function () { //Yes
 
-                            $scope.performSearch(searchParams);
+                    $scope.displaySearchDialog = { show: true,  // Show the search dialog box.
+                                                  reason : reason, // Reason for the dialog
+                                                  searchParams: searchParams  };
 
-                        }
-                        , function () { // No
-
-                            searchParams.searchtype = $scope.search.selectedsearchtype.type;
-                            $scope.performSearch(searchParams);
-
-                        }
-                        , function () { //Dismiss - No
-
-                            searchParams.searchtype = $scope.search.selectedsearchtype.type;
-                            $scope.performSearch(searchParams);
-
-                        });
 
                 });
 
         };
+
+        $scope.performSearchAnyway = function() { // Called by the search dialog
+
+            $scope.performSearch($scope.displaySearchDialog.searchParams);
+
+        };
+
+        $scope.acceptValidation = function() {  // Called by the search dialog
+
+            var searchParams = $scope.displaySearchDialog.searchParams;
+            searchParams.searchtype = $scope.search.selectedsearchtype.type;
+            $scope.performSearch(searchParams);
+
+        };
+
 
         $scope.inputkeystroke = function(event) {
 

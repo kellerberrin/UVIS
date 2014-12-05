@@ -95,6 +95,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 /****************************************************************************
  *
  * A general purpose dialog directive
+ * todo: shift to a material specific source file.
  *
  ****************************************************************************/
 
@@ -105,28 +106,13 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
             restrict: "E",
 
-            scope: { displayDialog: "=displaydialog" },   // Parent scope (beware of camel case conversion).
+            scope: { displayDialog: "=displaydialog" },   // Isolate Scope (only for template below).
 
             replace: true, // Replace with the template below
 
             transclude: true, // we want to insert custom content inside the directive
 
             link: function(scope, element, attrs) {
-
-                scope.dialogStyle = {};
-
-                if (attrs.width) {
-
-                    scope.dialogStyle.width = attrs.width;
-
-                }
-
-                if (attrs.height) {
-
-                    scope.dialogStyle.height = attrs.height;
-                }
-
-                k_consoleLog(["Dialog Directive Scope", scope]);
 
                 scope.dismissDialog = function() {
 
@@ -139,7 +125,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
         template:  "<div class='k-material-modal' ng-show='displayDialog.show'>" +
                         "<div class='k-material-modal-overlay'>" +
-                            "<div class='k-material-modal-dialog' ng-style='dialogStyle'>" +
+                            "<div class='k-material-modal-dialog' ng-style='displayDialog.dialogStyle'>" +
                                 "<button class='k-material-dialog-dismiss k-material-fab' ng-click='dismissDialog()'>" +
                                 "</button>" +
                                 "<div class='k-material-modal-content' ng-transclude>" +

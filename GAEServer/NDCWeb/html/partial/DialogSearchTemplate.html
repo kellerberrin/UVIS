@@ -1,0 +1,16 @@
+
+<k-modal-dialog id="k-search-dialog" displaydialog="displaySearchDialog">
+
+    <div id="k-search-dialog-heading">Confirm Search</div>
+
+    <div id="k-search-dialog-text">{{ displaySearchDialog.reason }}</div>
+
+
+    <div class="k-search-dialog-actions">
+
+        <button ng-click="performSearchAnyway()">Yes</button>
+        <button ng-click="acceptValidation()">No</button>
+
+    </div>
+
+</k-modal-dialog>

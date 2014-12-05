@@ -79,7 +79,6 @@ $K-Search-Type-Background-Color: $md-light-blue-500;
 $K-Icon-Toolbar-Height: 40px;
 $K-Search-Toolbar-Height: 4em;
 
-
 #k-drug-toolbar {
 
   @include K-MaterialBoxShadow(2);
@@ -471,46 +470,55 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 #k-image-display-dialog {
   // dialog box
 
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
   margin: 0;
-  padding: 0;
 
-  #k-image-title-bar {
-    // Search area
+  #k-image-attribution {
+    // NLM attribution text
 
-    #k-image-attribution {
-      // NLM attribution text
-
-      margin-left: 1.5em;
-      font-size: 0.7em;
-
-    }
+    margin-left: 1.5em;
+    font-size: 0.7em;
 
   }
 
   #k-image-dialog-content {
     // image context area
 
+    overflow: auto;
     margin: 0;
     padding: 0;
+
+    #k-dialog-image {
+
+      width: 100%;
+      height: 100%;
+
+    }
 
   }
 
   #k-image-search-bar {
-    // Search area
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: lavender;
 
     #k-image-search-text {
 
-      margin-left: 1em;
+      margin: 0 0 0 1em;
+      padding: 0;
 
     }
 
     #k-image-search {
       // The search button
 
-      position: relative;
-      margin-left: 0.75em;
-      top: -1em;
+      position: absolute;
+      top: -0.7em;
+      right: -0.7em;
       background-image: url("/images/icons/search24.svg");
       background-size: 24px 24px;
       background-repeat: no-repeat;
@@ -644,18 +652,19 @@ $K-Base-1EM-Pixel-Font-Size: 16;
 $K-Header-Footer-Height: 50;
 $K-Total-Page-Height: ($K-Minimum-Search-Page-Height + $K-Header-Footer-Height);
 
-
 #k-search-results {
 
-  @media only screen and (max-height: $K-Total-Page-Height) { // <= $K-Search-Page-Height
+  @media only screen and (max-height: $K-Total-Page-Height) {
+    // <= $K-Search-Page-Height
 
-    height: $K-Minimum-Search-Page-Height;   // Minimum search page height.
+    height: $K-Minimum-Search-Page-Height; // Minimum search page height.
 
   }
 
-  @media only screen and (min-height: $K-Total-Page-Height) {    // >= $K-Search-Page-Height
+  @media only screen and (min-height: $K-Total-Page-Height) {
+    // >= $K-Search-Page-Height
 
-    height: ($K-Minimum-Search-Page-Height + $K-Header-Footer-Height);  // Expanded search page height
+    height: ($K-Minimum-Search-Page-Height + $K-Header-Footer-Height); // Expanded search page height
 
   }
 
@@ -687,7 +696,6 @@ $K-Display-Active-Selected-Color: lighten($K-ACCENT-COLOR-100, 10%);
 $K-Display-Package-Background: white;
 $K-Display-NDC-Background: $K-PRIMARY-COLOR-100;
 $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
-
 
 .k-display-drug {
 
@@ -772,8 +780,6 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
     padding: 0;
     border: none;
     background-color: $K-Display-Image-Price-Background;
-
-
 
     & .k-display-drug-image {
 
@@ -1032,7 +1038,6 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
       @include flex-wrap(wrap);
       margin-left: 2.5rem;
 
-
       & .k-display-ndc {
 
         @include display-flex;
@@ -1059,7 +1064,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
           margin: 0;
           line-height: 105%;
 
-          & .k-display-ndc-format{
+          & .k-display-ndc-format {
 
             font-size: 0.7em;
 
@@ -1074,7 +1079,6 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
         @include display-flex;
         @include flex-direction(column);
         @include align-items(flex-start);
-
 
         & .k-display-ndc11-title {
 
@@ -1107,7 +1111,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
           }
 
-          & .k-display-ndc11-format{
+          & .k-display-ndc11-format {
 
             font-size: 0.7em;
 

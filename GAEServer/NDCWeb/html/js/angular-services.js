@@ -447,7 +447,6 @@ USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource)
 
 
 
-
 USDrugServices.factory("USDrugValidateInput", [ function () {
 
     function Validate(searchParams, success, failure) {
@@ -527,90 +526,7 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
 }]);
 
 
-USDrugServices.factory("USDrugShowDialog",
 
-    [ "$mdDialog"
-        , function ($mdDialog) {
-
-        function DisplayYesNoDialog(message, yesFunc, noFunc, dismissFunc) {
-
-            $mdDialog.show({
-                templateUrl: "/partial/DialogTemplate.html", resolve: { message: function () {
-                    return message;
-                }, yesFunc: function () {
-                    return yesFunc;
-                }, noFunc: function () {
-                    return noFunc;
-                } }, controller: [ "$scope"
-                    , "$mdDialog"
-                    , "message"
-                    , "yesFunc"
-                    , "noFunc"
-                    , function ($scope, $mdDialog, message, yesFunc, noFunc) {
-
-                        $scope.dialog = { message: message };
-
-                        $scope.yesDialog = function () {
-                            $mdDialog.hide(yesFunc);
-                        };
-
-                        $scope.noDialog = function () {
-                            $mdDialog.hide(noFunc);
-                        };
-
-                    }]
-            }).then(function (responseFunc) {
-                responseFunc();
-            }, dismissFunc);
-        }
-
-        return { DisplayYesNoDialog: DisplayYesNoDialog };
-
-    }]);
-
-
-
-USDrugServices.factory("USDrugImageDialog", function () {
-
-        function DisplayImageDialog(imageURL, searchFunc, dismissFunc) {
-
-/*
-            $mdDialog.show({
-                templateUrl: "/partial/DialogImageTemplate.html", resolve: { imageURL: function () {
-                    return imageURL;
-                }, searchFunc: function () {
-                    return searchFunc;
-                }, dismissFunc: function () {
-                    return dismissFunc;
-                } }
-                , controller: [ "$scope"
-                    , "$mdDialog"
-                    , "imageURL"
-                    , "searchFunc"
-                    , function ($scope, $mdDialog, imageURL, searchFunc) {
-
-                        $scope.dialog = { imageURL: imageURL };
-
-                        $scope.searchDialog = function () {
-                            $mdDialog.hide(searchFunc);
-                        };
-                        $scope.dismissDialog = function () {
-                            $mdDialog.hide(dismissFunc);
-                        };
-
-                    }]
-            }).then(function (responseFunc) {
-                responseFunc();
-            }, dismissFunc);
-*/
-
-            searchFunc();
-
-        }
-
-        return { DisplayImageDialog: DisplayImageDialog };
-
-    });
 
 
 

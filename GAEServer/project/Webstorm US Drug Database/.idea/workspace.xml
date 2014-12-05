@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.doctree" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogSearchTemplate.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-local.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/app.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/app.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/dns/dns.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/dns/dns.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/libraries/Google_App_Engine_SDK.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/dns/dns.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/dns/dns.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/dns/dns.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/dns/dns.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/index.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="US Drug Database.iws" />
@@ -51,21 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_material-local.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material-local.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="660">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_material.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.965517" vertical-offset="5165" max-vertical-offset="6160">
-              <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
+            <state vertical-scroll-proportion="-13.620689" vertical-offset="5505" max-vertical-offset="6200">
+              <caret line="295" column="29" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -74,18 +55,18 @@
       <file leaf-file-name="app.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="680">
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="680">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-controllers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="angular-controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38674033" vertical-offset="1740" max-vertical-offset="4380">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="4500">
+              <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -94,11 +75,21 @@
       <file leaf-file-name="angular-directives.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1776" max-vertical-offset="4220">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="649" max-vertical-offset="3940">
+              <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
               <folding>
-                <marker date="1417752521003" expanded="true" signature="414:434" placeholder="..." />
+                <marker date="1417781409159" expanded="true" signature="414:434" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-local.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-33.86207" vertical-offset="8958" max-vertical-offset="22700">
+              <caret line="497" column="5" selection-start-line="497" selection-start-column="5" selection-end-line="497" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,11 +97,21 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.51724" vertical-offset="865" max-vertical-offset="1840">
-              <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
+            <state vertical-scroll-proportion="-8.793103" vertical-offset="1045" max-vertical-offset="1980">
+              <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
               <folding>
-                <marker date="1417752190546" expanded="true" signature="2282:2423" placeholder="..." />
+                <marker date="1417780735642" expanded="true" signature="2282:2427" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DialogErrorTemplate.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23021583" vertical-offset="0" max-vertical-offset="695">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,18 +119,8 @@
       <file leaf-file-name="angular-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="11640" max-vertical-offset="12680">
-              <caret line="586" column="33" selection-start-line="586" selection-start-column="33" selection-end-line="586" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular-material.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="68980">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5549" max-vertical-offset="11000">
+              <caret line="448" column="0" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,8 +129,8 @@
       <file leaf-file-name="DisplayResults.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6896552" vertical-offset="120" max-vertical-offset="3880">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.965517" vertical-offset="660" max-vertical-offset="3880">
+              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -148,8 +139,8 @@
       <file leaf-file-name="DialogImageTemplate.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="840">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="580">
+              <caret line="0" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -180,15 +171,17 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
         <option value="$PROJECT_DIR$/../../../../../../../../Google Drive/Kellerberrin/Software/Active/Code/UVIS/GAEServer/NDCWeb/html/scss/_material.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html" />
       </list>
     </option>
   </component>
@@ -242,7 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,6 +323,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,14 +369,10 @@
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -391,6 +380,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -460,12 +453,12 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -485,9 +478,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17988394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -536,7 +529,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1833" max-vertical-offset="2700">
           <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
           <folding>
-            <marker date="1417752521003" expanded="true" signature="414:434" placeholder="..." />
+            <marker date="1417781409159" expanded="true" signature="414:434" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -584,7 +577,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1833" max-vertical-offset="2700">
           <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
           <folding>
-            <marker date="1417752521003" expanded="true" signature="414:434" placeholder="..." />
+            <marker date="1417781409159" expanded="true" signature="414:434" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -794,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="558">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/local.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2841" max-vertical-offset="4140">
@@ -826,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4480" max-vertical-offset="22620">
-          <caret line="435" column="34" selection-start-line="435" selection-start-column="34" selection-end-line="435" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material-local.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="660">
@@ -844,16 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="680">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="680">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.965517" vertical-offset="5165" max-vertical-offset="6160">
-          <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -866,54 +836,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.51724" vertical-offset="865" max-vertical-offset="1840">
-          <caret line="73" column="43" selection-start-line="73" selection-start-column="43" selection-end-line="73" selection-end-column="43" />
-          <folding>
-            <marker date="1417752190546" expanded="true" signature="2282:2423" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11640" max-vertical-offset="12680">
-          <caret line="586" column="33" selection-start-line="586" selection-start-column="33" selection-end-line="586" selection-end-column="33" />
+        <state vertical-scroll-proportion="-33.86207" vertical-offset="8958" max-vertical-offset="22700">
+          <caret line="497" column="5" selection-start-line="497" selection-start-column="5" selection-end-line="497" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1776" max-vertical-offset="4220">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <marker date="1417752521003" expanded="true" signature="414:434" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.827586" vertical-offset="0" max-vertical-offset="840">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="580">
+          <caret line="0" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6896552" vertical-offset="120" max-vertical-offset="3880">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.965517" vertical-offset="660" max-vertical-offset="3880">
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.620689" vertical-offset="5505" max-vertical-offset="6200">
+          <caret line="295" column="29" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.793103" vertical-offset="1045" max-vertical-offset="1980">
+          <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
+          <folding>
+            <marker date="1417780735642" expanded="true" signature="2282:2427" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="649" max-vertical-offset="3940">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <marker date="1417781409159" expanded="true" signature="414:434" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5549" max-vertical-offset="11000">
+          <caret line="448" column="0" selection-start-line="448" selection-start-column="0" selection-end-line="448" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38674033" vertical-offset="1740" max-vertical-offset="4380">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="640" max-vertical-offset="4500">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23021583" vertical-offset="0" max-vertical-offset="695">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>

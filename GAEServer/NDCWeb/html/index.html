@@ -43,7 +43,7 @@
 <body ng-app="USDrugSearchApp">
 
 <!--[if lt IE 9]>
-<p>You are using an <strong>outdated</strong> browser.
+<p>You are using an <strong>outdated</strong> web browser.
     Pharmcat will not function correctly.
     Please consider upgrading your browser.</p>
 <![endif]-->
@@ -70,9 +70,16 @@
     <!-- End PharmCat Page (max 600 px width) -->
 
     <!-- The Search Image Dialog Box -->
-    <div id="k-image-dialog-anchor"
-         ng-include src=" 'partial/DialogImageTemplate.html' "></div>
+    <div id="k-image-dialog-anchor" ng-include src=" 'partial/DialogImageTemplate.html' "></div>
     <!-- End Image Search Dialog Box -->
+
+    <!-- The Input Dialog Box -->
+    <div id="k-input-dialog-anchor" ng-include src=" 'partial/DialogSearchTemplate.html' "></div>
+    <!-- End Input Dialog Box -->
+
+    <!-- The Request Error Dialog Box -->
+    <div id="k-request-error-dialog-anchor" ng-include src=" 'partial/DialogErrorTemplate.html' "></div>
+    <!-- End Request Error Dialog Box -->
 
     <!-- Modal wait cursor -->
     <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>

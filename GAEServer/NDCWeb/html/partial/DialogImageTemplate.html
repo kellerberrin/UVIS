@@ -1,34 +1,21 @@
-<k-modal-dialog id="k-display-search-image-dialog"
-                displaydialog="displayImageDialog"
-                width="50%"
-                height="30%">
+<k-modal-dialog id="k-display-search-image-dialog" displaydialog="displayImageDialog">
 
     <div id="k-image-display-dialog">
 
-        <div layout="vertical">
+        <div id="k-image-attribution">Image Courtesy of the US National Library of Medicine</div>
 
-            <div id="k-image-title-bar" layout="horizontal">
+        <div id="k-image-dialog-content">
 
-                <div id="k-image-attribution">Image Courtesy of the US National Library of Medicine</div>
-                <div flex></div>
+            <img id="k-dialog-image" ng-src="{{displayImageDialog.imageurl}}">
 
-            </div>
+        </div>
 
-            <div id="k-image-dialog-content" class="dialog-content">
-
-                <img ng-src="{{dialog.imageURL}}">
-
-            </div>
-
-            <div id="k-image-search-bar" layout="horizontal">
-                <div id="k-image-search-text">Search on Drug Image</div>
-                <button id="k-image-search"
-                        class="k-material-fab"
-                        ng-click="searchDialog()">
-                </button>
-                <div flex></div>
-            </div>
-
+        <div id="k-image-search-bar">
+            <span id="k-image-search-text">Search on Drug Image</span>
+            <button id="k-image-search"
+                    class="k-material-fab"
+                    ng-click="imageSearch(displayImageDialog.searchParams)">
+            </button>
         </div>
 
     </div>
