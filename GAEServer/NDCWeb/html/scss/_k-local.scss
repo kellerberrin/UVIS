@@ -466,7 +466,7 @@ $K-Search-Toolbar-Height: 4em;
 *
 ***********************************************************************************************/
 
-$K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
+$K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 
 #k-image-display-dialog {
   // dialog box
@@ -483,20 +483,6 @@ $K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
 
       margin-left: 1.5em;
       font-size: 0.7em;
-
-    }
-
-    #k-image-dialog-dismiss {
-      // The dismiss button
-
-      position: relative;
-      top: -1em;
-      left: 1em;
-      background-image: url("/images/icons/times.svg");
-      background-size: 36px 36px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: $K-ImageDialog-dismiss-color;
 
     }
 
@@ -529,6 +515,7 @@ $K-ImageDialog-dismiss-color: $K-ACCENT-COLOR-100;
       background-size: 24px 24px;
       background-repeat: no-repeat;
       background-position: center;
+      background-color: $K-ImageDialog-Search-Inactive-color;
 
     }
 

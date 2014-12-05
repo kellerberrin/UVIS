@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="compass-library">
     <CLASSES>
-      <root url="file:///var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3" />
+      <root url="file:///var/lib/gems/1.9.1/gems/compass-core-1.0.1" />
     </CLASSES>
     <SOURCES />
   </library>

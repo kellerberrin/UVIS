@@ -22,6 +22,7 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
+        $scope.displayImageDialog = { show: false}; // Set the dialog boxes.
 
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
@@ -97,12 +98,18 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.imageDialog = function (drugRecord) {
 
-            USDrugImageDialog.DisplayImageDialog(drugRecord.largeimageurl, function () { // Search on NDC9s
+            $scope.displayImageDialog = { show: true}; // Set the dialog boxes.
+
+            USDrugImageDialog.DisplayImageDialog(drugRecord.largeimageurl,
+
+                function () { // Search on NDC9s
                     var searchParams = {searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image"};
                     $scope.performSearch(searchParams);
-                }
-                , function () {   // Do nothing on dialog dismiss.
-                })
+                },
+
+                function () {}   // Do nothing on dialog dismiss.
+
+            )
 
         }
 

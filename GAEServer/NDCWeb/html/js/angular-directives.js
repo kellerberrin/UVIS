@@ -105,7 +105,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
             restrict: "E",
 
-            scope: false,
+            scope: { displayDialog: "=displaydialog" },   // Parent scope (beware of camel case conversion).
 
             replace: true, // Replace with the template below
 
@@ -113,16 +113,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
             link: function(scope, element, attrs) {
 
-                scope.displayDialog = true;
-
                 scope.dialogStyle = {};
-
-                if (attrs.show) {
-
-                    scope.dislayDialog = attrs.show;
-                    k_consoleLog(["setShow", scope])
-
-                }
 
                 if (attrs.width) {
 
@@ -135,19 +126,25 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
                     scope.dialogStyle.height = attrs.height;
                 }
 
+                k_consoleLog(["Dialog Directive Scope", scope]);
+
                 scope.dismissDialog = function() {
 
+                    scope.displayDialog.show = false;
                     k_consoleLog(["dismissDialog", scope])
-                    scope.displayDialog = false;
 
                };
 
             },
 
-        template:  "<div class='k-material-modal' ng-show='displayDialog'>" +
-                        "<div class='k-material-modal-overlay' ng-click='dismissDialog()'></div>" +
-                        "<div class='k-material-modal-dialog'>" +
-                            "<div class='k-material-modal-content'></div>" +
+        template:  "<div class='k-material-modal' ng-show='displayDialog.show'>" +
+                        "<div class='k-material-modal-overlay'>" +
+                            "<div class='k-material-modal-dialog' ng-style='dialogStyle'>" +
+                                "<button class='k-material-dialog-dismiss k-material-fab' ng-click='dismissDialog()'>" +
+                                "</button>" +
+                                "<div class='k-material-modal-content' ng-transclude>" +
+                                "</div>" +
+                            "</div>" +
                         "</div>"+
                    "</div>"
 

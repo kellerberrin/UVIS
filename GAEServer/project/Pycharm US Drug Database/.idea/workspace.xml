@@ -2,147 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aa6dc1f-4180-4c69-aa6f-a2d1aef94bb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material-colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material-local.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/app.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/config.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/harvestrximages.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_hover-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_link-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_unstyled-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-widgets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_css3.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_typography.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_grid-background.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_sticky-footer.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_stretching.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_alternating-rows-and-columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_borders.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_appearance.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-clip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-origin.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_border-radius.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_filter.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_font-face.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_hyphenation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_opacity.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_regions.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_shared.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_text-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_transform.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_transition.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_user-interface.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_inline-block-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_inline-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_min.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_tag-cloud.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/7a07f3ec7c2c7e8c0e017bbedd9e2910a1a38226/_contrast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/82ae8723b581d3c297f30a38c2ee644b8e588a43/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_color.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_general.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_ellipsis.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_force-wrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_nowrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/fcdd17271bcb04d48e76890287cd878601ac8e6d/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/fcdd17271bcb04d48e76890287cd878601ac8e6d/_sprite-img.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/.sass-cache/fd6eec70fac68d497655d0953422b42bd84aeca0/_compass.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_material-colors.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_material-local.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/_material.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../NDCWeb/scss/config.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCImageDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCImageDatabase.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.gzip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/index.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/index.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/linux/linux.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/software.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/software.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/FDAdownload/FDAdownload.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/FDAdownload/FDAdownload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/GAEdatabase/GAEdatabase.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/ImageCheckpoint.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/ImageCheckpoint.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/usdrugdatabase/NLMimagedownload/NLMimagedownload.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/US Drug Database.iml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/US Drug Database.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS_LOCAL_ENV" afterPath="$PROJECT_DIR$/../../../Linux/UVIS_LOCAL_ENV" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" afterPath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.yaml" afterPath="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/app.yaml" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/harvestRxImages" afterPath="$PROJECT_DIR$/../../../Linux/harvestRxImages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/index.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/index.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/index.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/index.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/index.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/library.py" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/linux/linux.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/linux/linux.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/linux/linux.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/localbulkloader" afterPath="$PROJECT_DIR$/../../../Linux/localbulkloader" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/remotebulkloader" afterPath="$PROJECT_DIR$/../../../Linux/remotebulkloader" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/software.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/software.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/software.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/software.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/software.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/software.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/uploadUSdrugGAE" afterPath="$PROJECT_DIR$/../../../Linux/uploadUSdrugGAE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/uploadsphinxGAE" afterPath="$PROJECT_DIR$/../../../Linux/uploadsphinxGAE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/usdrugdatabase/usdrugdatabase.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Project/Sphinx/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../Sphinx/Project/Sphinx/.idea/workspace.xml" />
     </list>
     <ignored path="Pycharm US Drug Database.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -205,11 +75,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="4122" max-vertical-offset="6390">
               <caret line="229" column="51" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
-              <folding>
-                <marker date="1416890176497" expanded="true" signature="7962:8097" placeholder="SELECT DISTI..NDCLookup..." />
-                <marker date="1416890176497" expanded="true" signature="8225:8334" placeholder="SELECT ndc, ..NDCLookup..." />
-                <marker date="1416890176497" expanded="true" signature="8410:8541" placeholder="SELECT DISTI..NDCLookup..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -237,8 +103,8 @@
       <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1062">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1062">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -247,7 +113,7 @@
       <file leaf-file-name="transformers.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1548">
+            <state vertical-scroll-proportion="-309.5" vertical-offset="731" max-vertical-offset="1548">
               <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
               <folding />
             </state>
@@ -257,8 +123,8 @@
       <file leaf-file-name="dns.rst" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63171357" vertical-offset="100" max-vertical-offset="1062">
-              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.6939722" vertical-offset="505" max-vertical-offset="1170">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -267,8 +133,8 @@
       <file leaf-file-name="bulkloader.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1728">
-              <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1728">
+              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -310,10 +176,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="425" />
-    <option name="y" value="4" />
+    <option name="x" value="178" />
     <option name="width" value="1422" />
-    <option name="height" value="1003" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -357,7 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,6 +246,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -510,6 +375,23 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Pycharm US Drug Database" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="127.0.0.1" />
+      <option name="browserUrl" value="" />
+      <option name="additionalOptions" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -532,40 +414,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Pycharm US Drug Database" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="host" value="127.0.0.1" />
-      <option name="browserUrl" value="" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Pycharm US Drug Database" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="docs" factoryName="Docutils task">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -584,7 +432,21 @@
       <option name="docutils_open_in_browser" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Pycharm US Drug Database" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -608,6 +470,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -694,8 +559,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="425" y="4" width="1422" height="1003" extended-state="0" />
-    <editor active="true" />
+    <frame x="178" y="0" width="1422" height="875" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1023,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,18 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1062">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="583" max-vertical-offset="1728">
-          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1728">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1087,26 +943,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="6300">
           <caret line="229" column="51" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
-          <folding>
-            <marker date="1416890176497" expanded="true" signature="7962:8097" placeholder="SELECT DISTI..NDCLookup..." />
-            <marker date="1416890176497" expanded="true" signature="8225:8334" placeholder="SELECT ndc, ..NDCLookup..." />
-            <marker date="1416890176497" expanded="true" signature="8410:8541" placeholder="SELECT DISTI..NDCLookup..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1548">
+        <state vertical-scroll-proportion="-309.5" vertical-offset="731" max-vertical-offset="1548">
           <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1062">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63171357" vertical-offset="100" max-vertical-offset="1062">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.6939722" vertical-offset="505" max-vertical-offset="1170">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>

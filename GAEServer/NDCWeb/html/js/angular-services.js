@@ -570,13 +570,11 @@ USDrugServices.factory("USDrugShowDialog",
 
 
 
-USDrugServices.factory("USDrugImageDialog",
-
-    [ "$mdDialog"
-        , function ($mdDialog) {
+USDrugServices.factory("USDrugImageDialog", function () {
 
         function DisplayImageDialog(imageURL, searchFunc, dismissFunc) {
 
+/*
             $mdDialog.show({
                 templateUrl: "/partial/DialogImageTemplate.html", resolve: { imageURL: function () {
                     return imageURL;
@@ -604,11 +602,15 @@ USDrugServices.factory("USDrugImageDialog",
             }).then(function (responseFunc) {
                 responseFunc();
             }, dismissFunc);
+*/
+
+            searchFunc();
+
         }
 
         return { DisplayImageDialog: DisplayImageDialog };
 
-    }]);
+    });
 
 
 
