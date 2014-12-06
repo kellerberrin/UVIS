@@ -12,18 +12,15 @@ USDrugControllers.controller("DrugSearchCtrl",
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugEndPoints"
-        , "USDrugImageDialog"
         , function DrugSearchCtrl($scope,
                                   $mdToast,
                                   DrugArray,
                                   SearchPrompts,
-                                  USDrugEndPoints,
-                                  USDrugImageDialog) {
+                                  USDrugEndPoints) {
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
         $scope.displayImageDialog = { show: false }; // Set the image dialog box.
-        $scope.displaySearchDialog = { show: false }; // Set the image dialog box.
         $scope.displayErrorDialog = { show: false }; // Set the server error dialog box.
 
         $scope.performSearch = function (searchParams) {
@@ -46,7 +43,7 @@ USDrugControllers.controller("DrugSearchCtrl",
 
                     $scope.results.searchActive = false;
                     $scope.results.drugArray = [];
-                    $scope.displayErrorDialog = { show: true
+                    $scope.displayErrorDialog = { show: true,
                                                   error: error };
                     k_consoleLog(["USDrugEndPoints - error", error]);
 
@@ -127,15 +124,14 @@ USDrugControllers.controller("DrugSearchParams",
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugValidateInput"
-        , "USDrugShowDialog"
         , function DrugSearchParams($scope,
                                     DrugArray,
                                     SearchPrompts,
-                                    USDrugValidateInput,
-                                    USDrugShowDialog) {
+                                    USDrugValidateInput) {
 
         $scope.results = DrugArray;  // Injected array of drugs.
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
+        $scope.displaySearchDialog = { show: false }; // Set the image dialog box.
 
         // Setup the default search object bound to the select and input elements
 
@@ -158,11 +154,11 @@ USDrugControllers.controller("DrugSearchParams",
                 }
                 , function (searchParams, reason) { // validation failed. Offer an Alternative.
 
-
                     $scope.displaySearchDialog = { show: true,  // Show the search dialog box.
                                                   reason : reason, // Reason for the dialog
                                                   searchParams: searchParams  };
 
+                    k_consoleLog(["Display Search Dialog", $scope.displaySearchDialog]);
 
                 });
 
