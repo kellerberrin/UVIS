@@ -231,6 +231,72 @@ body {
 }
 
 
+/*******************************************************************************************************************
+*
+* The class for k-material-raised-buttons.
+*
+********************************************************************************************************************/
+
+.k-material-raised-button {
+
+    @include K-MaterialBoxShadow(2);
+    @include transition(all 0.25s ease-in-out);
+    @include border-radius(4px);
+    border: none;
+    margin: auto auto;
+    padding: 0;
+
+    &:hover {
+
+        @include K-MaterialBoxShadow(3);
+        @include translate(0px, -2px);
+
+    }
+
+}
+
+
+
+/*******************************************************************************************************************
+*
+* The class for k-material-flat-buttons.
+*
+********************************************************************************************************************/
+
+.k-material-flat-button {
+
+    @include transition(all 0.25s ease-in-out);
+    @include border-radius(4px);
+    border: none;
+    margin: auto auto;
+    padding: 0;
+
+    &:hover {
+
+        @include K-MaterialBoxShadow(1);
+        @include translate(0px, -1px);
+
+    }
+
+}
+
+
+/**************************************************************************************************************
+*
+* A simple line divider object.
+*
+***************************************************************************************************************/
+
+$K-Divider-Color: $md-grey-400;
+.k-material-divider {
+
+    display: block;
+    width: 100%;
+    border-top: 1px solid $K-Divider-Color;
+    margin: 0;
+}
+
+
 /****************************************************************************************************
 *
 * The dialog classes for material popup dialogs.
@@ -270,7 +336,7 @@ $K-Dialog-dismiss-color: $md-pink-a100;
             top: 50%;
             left: 50%;
             max-width: 95%;
-            max-height: 75%;
+            max-height: 95%;
             background-color: white;
 
             /* Throw a shadow */

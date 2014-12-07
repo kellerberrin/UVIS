@@ -1,8 +1,10 @@
 @import "material-local";
 
-/*
+/*************************************************************************************************************
+*
 * Global definitions (don't use defaults)
-*/
+*
+*************************************************************************************************************/
 
 * {
   margin: 0;
@@ -14,48 +16,11 @@
   @include box-sizing(border-box);
 }
 
-/*
-* The class for k-active-buttons.
-*/
-
-.k-active-button {
-
-  @include K-MaterialBoxShadow(2);
-  @include transition(all 0.25s ease-in-out);
-  @include border-radius(4px);
-  border: none;
-  margin: auto auto;
-  padding: 0;
-
-  &:hover {
-
-    @include K-MaterialBoxShadow(3);
-    @include translate(0px, -2px);
-
-  }
-
-}
-
-/*
-* A simple line divider object.
-*/
-
-$K-Divider-Color: $md-grey-400;
-.k-divider {
-
-  display: block;
-  width: 100%;
-  border-top: 1px solid $K-Divider-Color;
-  margin: 0;
-}
-
-/*********************************************************************************************
+/*****************************************************************************************************************
 *
+* Menu Bar, search ahead and history
 *
-* Menu Bar Stuff
-*
-*
-************************************************************************************************/
+******************************************************************************************************************/
 
 $K-Top-Menu-Background-color: $K-PRIMARY-COLOR-900;
 $K-Menu-Background-color: $K-PRIMARY-COLOR-500;
@@ -308,7 +273,7 @@ $K-Search-Toolbar-Height: 4em;
 
         & #k-search-prompt-title {
 
-          color: $md-black-primary-Text;
+          color: $md-black-primary-text;
           text-align: center;
           height: 2em;
           background-color: $K-Prompt-Prompt-Title-Color;
@@ -334,7 +299,7 @@ $K-Search-Toolbar-Height: 4em;
             position: relative;
             width: 100%;
             text-align: left;
-            color: $md-black-primary-Text;
+            color: $md-black-primary-text;
             cursor: pointer;
             padding: 0;
             margin: 0;
@@ -389,7 +354,7 @@ $K-Search-Toolbar-Height: 4em;
 
       & #k-search-history-title {
 
-        color: $md-black-primary-Text;
+        color: $md-black-primary-text;
         text-align: center;
         padding: 0.3em;
         background-color: $K-Prompt-History-Title-Color;
@@ -413,7 +378,7 @@ $K-Search-Toolbar-Height: 4em;
           position: relative;
           width: 100%;
           text-align: left;
-          color: $md-black-primary-Text;
+          color: $md-black-primary-text;
           cursor: pointer;
           padding: 0;
           margin: 0;
@@ -501,14 +466,15 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 
   #k-image-search-bar {
 
+    display: inline-block; /* older browsers */
+    @include display-flex(inline-flex);
     position: relative;
     margin: 0;
     padding: 0;
-    background-color: lavender;
 
     #k-image-search-text {
 
-      margin: 0 0 0 1em;
+      margin: 0 1em 0 1em;
       padding: 0;
 
     }
@@ -518,7 +484,7 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 
       position: absolute;
       top: -0.7em;
-      right: -0.7em;
+      right: -2em;
       background-image: url("/images/icons/search24.svg");
       background-size: 24px 24px;
       background-repeat: no-repeat;
@@ -533,6 +499,64 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 
 /*********************************************************************************************
 *
+* Modal Search Dialog - Verify user input
+*
+***********************************************************************************************/
+
+$K-Search-Confirm-Color: $md-green-500;
+$K-Search-Modify-Color: $md-red-500;
+
+#k-search-dialog-content {
+
+  #k-search-dialog-heading {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.2em;
+    margin: 2rem 0 2rem 0;
+    color: $md-black-display-text;
+
+  }
+
+  #k-search-dialog-text {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 2rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-search-dialog-actions {
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+    width: 100%;
+    padding: 0.5rem;
+
+    #k-search-dialog-confirm {
+
+      padding: 0.4em;
+      margin: 0 1rem 0 0;
+      background-color: $K-Search-Confirm-Color;
+
+    }
+
+    #k-search-dialog-modify {
+
+      padding: 0.4em;
+      margin: 0 1rem 0 0;
+      background-color: $K-Search-Modify-Color;
+
+    }
+
+  }
+
+}
+
+/*********************************************************************************************
 *
 * Modal Wait.
 *
@@ -543,9 +567,8 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 *   Start by setting display:none to make this hidden.
 *   Positioned in relation to the viewport window
 *   with position:fixed. Width, height, top and left.
-*   Background to 50% white with
+*   Background to 30% white with
 *   animation centered, and no-repeating
-*
 *
 *************************************************************************************************/
 
@@ -575,11 +598,11 @@ $K-Material-Wait-color: $K-ACCENT-COLOR-100;
 
 }
 
-/*********************************************************************************************
+/************************************************************************************************************
 *
 * Top Level Search Page (index.html) and Footer Stuff
 *
-************************************************************************************************/
+************************************************************************************************************/
 
 $K-Footer-Background-color: $K-PRIMARY-COLOR-500;
 $K-Search-Page-Width: 600px;
@@ -640,11 +663,11 @@ $K-Footer-Height: 1.4em;
 
 }
 
-/*********************************************************************************************
+/***************************************************************************************************************
 *
 * The search result display area, including background.
 *
-************************************************************************************************/
+****************************************************************************************************************/
 
 $K-Minimum-Search-Page-Height: 700px;
 $K-Base-1EM-Pixel-Font-Size: 16;
@@ -679,13 +702,13 @@ $K-Total-Page-Height: ($K-Minimum-Search-Page-Height + $K-Header-Footer-Height);
 
 }
 
-/*********************************************************************************************
+/**************************************************************************************************************
 *
 *
 * Drug Search Results Container classes.
 *
 *
-************************************************************************************************/
+**************************************************************************************************************/
 
 $K-Display-Drug-Background: white;
 $K-Display-Drug-Border: darken(white, 30%);

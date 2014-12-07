@@ -282,10 +282,11 @@ $md-blue-grey-900: #263238;
 *
 ***************************************************************************/
 
-$md-black-dividers: darken(white, 12%);
-$md-black-hint-text: darken(white, 26%);
-$md-black-secondary-text: darken(white, 54%);
-$md-black-primary-Text: darken(white, 87%);
+$md-black-dividers: rgba(0,0,0, 12%);
+$md-black-hint-text: rgba(0,0,0, 26%);
+$md-black-secondary-text: rgba(0,0,0, 54%);
+$md-black-display-text: rgba(0,0,0, 54%);
+$md-black-primary-text: rgba(0,0,0, 87%);
 
 
 /**************************************************************************

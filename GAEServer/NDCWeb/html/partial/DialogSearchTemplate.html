@@ -1,18 +1,25 @@
-<k-modal-dialog id="k-search-dialog" displaydialog="displaySearchDialog">
+<k-material-dialog id="k-search-dialog" displaydialog="displaySearchDialog">
 
     <div id="k-search-dialog-content">
 
-        <div id="k-search-dialog-heading">Confirm Search</div>
+        <div id="k-search-dialog-heading"><span>Confirm or Modify Search</span></div>
 
         <div id="k-search-dialog-text">{{ displaySearchDialog.reason }}</div>
 
-        <div class="k-search-dialog-actions">
+        <div class="k-material-divider"></div>
 
-            <button id="k-search-dialog-yes" ng-click="performSearchAnyway()">Yes</button>
-            <button id="k-search-dialog-no" ng-click="acceptValidation()">No</button>
+        <div id="k-search-dialog-actions">
+
+            <button id="k-search-dialog-confirm"
+                    class="k-material-flat-button"
+                    ng-click="performSearchAnyway()">Confirm</button>
+
+            <button id="k-search-dialog-modify"
+                    class="k-material-flat-button"
+                    ng-click="acceptValidation()">Modify</button>
 
         </div>
 
     </div>
 
-</k-modal-dialog>
+</k-material-dialog>

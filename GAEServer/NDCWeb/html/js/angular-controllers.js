@@ -12,16 +12,20 @@ USDrugControllers.controller("DrugSearchCtrl",
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugEndPoints"
+        , "ImageSearchDialog"
+        , "SearchErrorDialog"
         , function DrugSearchCtrl($scope,
                                   $mdToast,
                                   DrugArray,
                                   SearchPrompts,
-                                  USDrugEndPoints) {
+                                  USDrugEndPoints,
+                                  ImageSearchDialog,
+                                  SearchErrorDialog  ) {
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-        $scope.displayImageDialog = { show: false }; // Set the image dialog box.
-        $scope.displayErrorDialog = { show: false }; // Set the server error dialog box.
+        $scope.displayImageDialog = ImageSearchDialog.initialize(); // Link the image dialog box to this scope.
+        $scope.displayErrorDialog = SearchErrorDialog.initialize(); // Link the server error dialog box to this scope.
 
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
@@ -43,8 +47,7 @@ USDrugControllers.controller("DrugSearchCtrl",
 
                     $scope.results.searchActive = false;
                     $scope.results.drugArray = [];
-                    $scope.displayErrorDialog = { show: true,
-                                                  error: error };
+                    SearchErrorDialog.displayError(error);
                     k_consoleLog(["USDrugEndPoints - error", error]);
 
                 });
@@ -100,18 +103,13 @@ USDrugControllers.controller("DrugSearchCtrl",
         $scope.showImageDialog = function (drugRecord) {
 
             var searchParams = {searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image"};
-
-            $scope.displayImageDialog = { show: true, // Display the dialog box
-                                          imageurl: drugRecord.largeimageurl, // Set the hi-res image
-                                          searchParams: searchParams, // Image search parameters
-                                          dialogStyle: { width : "100%", "max-width" : "100px" }  };  // Optional dialog styling
+            ImageSearchDialog.displayImage(drugRecord.largeimageurl, searchParams);
 
         };
 
         $scope.imageSearch = function (drugRecord) {
 
-            $scope.displayImageDialog.show =false; // Close dialog box
-            $scope.performSearch($scope.displayImageDialog.searchParams); // Perform search
+            $scope.performSearch(ImageSearchDialog.searchImage()); // Perform search
 
         };
 
@@ -124,14 +122,16 @@ USDrugControllers.controller("DrugSearchParams",
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugValidateInput"
+        , "ConfirmSearchDialog"
         , function DrugSearchParams($scope,
                                     DrugArray,
                                     SearchPrompts,
-                                    USDrugValidateInput) {
+                                    USDrugValidateInput,
+                                    ConfirmSearchDialog) {
 
         $scope.results = DrugArray;  // Injected array of drugs.
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-        $scope.displaySearchDialog = { show: false }; // Set the image dialog box.
+        $scope.displaySearchDialog = ConfirmSearchDialog.initialize(); // Set the image dialog box.
 
         // Setup the default search object bound to the select and input elements
 
@@ -152,13 +152,9 @@ USDrugControllers.controller("DrugSearchParams",
                     $scope.performSearch(searchParams);
 
                 }
-                , function (searchParams, reason) { // validation failed. Offer an Alternative.
+                , function (modifiedSearchParams, reason) { // validation failed. Offer an Alternative.
 
-                    $scope.displaySearchDialog = { show: true,  // Show the search dialog box.
-                                                  reason : reason, // Reason for the dialog
-                                                  searchParams: searchParams  };
-
-                    k_consoleLog(["Display Search Dialog", $scope.displaySearchDialog]);
+                    ConfirmSearchDialog.displayConfirm(reason, searchParams, modifiedSearchParams);
 
                 });
 
@@ -166,15 +162,13 @@ USDrugControllers.controller("DrugSearchParams",
 
         $scope.performSearchAnyway = function() { // Called by the search dialog
 
-            $scope.performSearch($scope.displaySearchDialog.searchParams);
+            $scope.performSearch(ConfirmSearchDialog.searchParams());
 
         };
 
         $scope.acceptValidation = function() {  // Called by the search dialog
 
-            var searchParams = $scope.displaySearchDialog.searchParams;
-            searchParams.searchtype = $scope.search.selectedsearchtype.type;
-            $scope.performSearch(searchParams);
+            $scope.performSearch(ConfirmSearchDialog.modifiedSearchParams());
 
         };
 

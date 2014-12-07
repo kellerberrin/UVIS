@@ -13,7 +13,7 @@ var Material = angular.module( "Material", []);
  ****************************************************************************/
 
 
-    Material.directive('kModalDialog', function() {
+    Material.directive('kMaterialDialog', function() {
 
         return {
 

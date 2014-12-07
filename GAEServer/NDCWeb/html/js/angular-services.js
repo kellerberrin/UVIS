@@ -471,7 +471,7 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
             } else if ((2 * DigitLength) > SearchLength) {
 
                 HelpText = "The text entered; " + "'" + SearchString + "' "
-                    + "looks like a National Drug Code (NDC). Do you want to search by 'Code (NDC)'?";
+                    + "looks like a National Drug Code (NDC). Modify to search by 'Code (NDC)'?";
                 failure({ searchstring: SearchString, searchtype: "ndc" }, HelpText);
                 return;
             }
@@ -486,15 +486,15 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
             else if ((2 * DigitLength) <= SearchLength) {
 
                 HelpText = "The text entered; " + "'" + SearchString + "' "
-                    + "looks like a drug name. Do you want to search by 'Name'?";
+                    + "looks like a drug name. Modify to search by 'Name'?";
                 failure({ searchstring: SearchString, searchtype: "name" }, HelpText);
                 return;
             }
             else if (DigitLength != 10 && DigitLength != 9 && DigitLength != 11) {
 
                 HelpText = "The text entered; " + "'" + SearchString + "' " + " has " + DigitLength + " digits."
-                    + " Most National Drug Codes are 11 (NDC11) or 10 (NDC10) or 9 (NDC9) digits long. Do you want to continue the search?";
-                failure({ searchstring: SearchString, searchtype: SearchType }, HelpText);
+                    + " Most National Drug Codes are 11 (NDC11) or 10 (NDC10) or 9 (NDC9) digits long. Modify to search by 'Name'?";
+                failure({ searchstring: SearchString, searchtype: "name" }, HelpText);
                 return;
             }
 
@@ -506,7 +506,7 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
             else if ((2 * DigitLength) > SearchLength) {
 
                 HelpText = "The text entered; " + "'" + SearchString + "' "
-                    + "looks like a National Drug Code (NDC). Do you want to search by 'Code (NDC)'?";
+                    + "looks like a National Drug Code (NDC). Modify to search by 'Code (NDC)'?";
                 failure({ searchstring: SearchString, searchtype: "ndc" }, HelpText);
                 return;
             }
@@ -527,7 +527,113 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
 
 
 
+USDrugServices.factory("ImageSearchDialog", function () {
 
+    var imageSearchDialog = { show: false, // Display the dialog box
+                               imageurl: '', // Set the hi-res image
+                               searchParams: null, // Image search parameters
+                               dialogStyle: { width : "95%", "max-width" : "600px" }  }; // Set the dialog width
+
+
+    return {
+
+        initialize: function() {
+
+            return imageSearchDialog;
+
+        },
+
+        displayImage : function(image, searchParams) {
+
+            imageSearchDialog.imageurl = image;
+            imageSearchDialog.searchParams = searchParams;
+            imageSearchDialog.show = true;
+
+        },
+
+        searchImage: function() {
+
+            imageSearchDialog.show = false;
+            return imageSearchDialog.searchParams;
+
+        }
+
+
+    }
+
+});
+
+
+
+USDrugServices.factory("ConfirmSearchDialog", function () {
+
+    var confirmSearchDialog = { show: false, // Display the dialog box
+                                reason: null, // Set the error message
+                                searchParams : null,
+                                modifiedSearchParams: null,
+                                dialogStyle: { width : "80%", "max-width" : "500px" }}; // Set the dialog width
+
+    return {
+
+        initialize: function() {
+
+            return confirmSearchDialog;
+
+        },
+
+        displayConfirm : function(reason, searchParams, modifiedSearchParams) {
+
+            confirmSearchDialog.reason = reason;
+            confirmSearchDialog.searchParams = searchParams;
+            confirmSearchDialog.modifiedSearchParams = modifiedSearchParams;
+            confirmSearchDialog.show = true;
+
+        },
+
+        searchParams: function() {
+
+            confirmSearchDialog.show = false;
+            return confirmSearchDialog.searchParams;
+
+        },
+
+        modifiedSearchParams: function() {
+
+            confirmSearchDialog.show = false;
+            return confirmSearchDialog.modifiedSearchParams;
+
+        }
+
+
+    }
+
+});
+
+
+USDrugServices.factory("SearchErrorDialog", function () {
+
+    var searchErrorDialog = { show: false, // Display the dialog box
+                              error: null, // Set the error message
+                              dialogStyle: { width : "80%", "max-width" : "400px" }}; // Set the dialog width
+
+    return {
+
+        initialize: function() {
+
+            return searchErrorDialog;
+
+        },
+
+        displayError : function(error) {
+
+            searchErrorDialog.error = error;
+            searchErrorDialog.show = true;
+
+        }
+
+    }
+
+});
 
 
 
