@@ -31,7 +31,7 @@ USDrugControllers.controller("DrugSearchCtrl",
             var requestTime = Date.now();
             $scope.results.searchActive = true;
             $scope.prompts.setcurrentsearch(searchParams);
-            searchParams["searchsize"] = 100;  // Set the max searchsize to 100 for now.
+            searchParams.searchsize = 100;  // Set the max searchsize to 100 for now.
             USDrugEndPoints.typeSearch(searchParams
                 , function (data) {
                     $scope.results.drugArray = data.drugArray;
@@ -146,29 +146,36 @@ USDrugControllers.controller("DrugSearchParams",
                 searchtype: $scope.search.selectedsearchtype.type
             };
 
-            USDrugValidateInput.Validate(searchParams
-                , function (searchParams) {  // validation successful
+            USDrugValidateInput.Validate(searchParams,
+
+                function (searchParams) {  // validation successful
 
                     $scope.performSearch(searchParams);
 
+                },
+
+                function (modifiedSearchParams, reason) { // validation failed. Offer an Alternative.
+
+                    ConfirmSearchDialog.displayConfirm(reason).then(   // Resolve a promise
+
+                        function(modified) {
+
+                            if (modified) {
+
+                                $scope.performSearch(modifiedSearchParams);
+
+                            } else {
+
+                                $scope.performSearch(searchParams);
+
+                            }
+
+                        }
+
+                    )
+
                 }
-                , function (modifiedSearchParams, reason) { // validation failed. Offer an Alternative.
-
-                    ConfirmSearchDialog.displayConfirm(reason, searchParams, modifiedSearchParams);
-
-                });
-
-        };
-
-        $scope.performSearchAnyway = function() { // Called by the search dialog
-
-            $scope.performSearch(ConfirmSearchDialog.searchParams());
-
-        };
-
-        $scope.acceptValidation = function() {  // Called by the search dialog
-
-            $scope.performSearch(ConfirmSearchDialog.modifiedSearchParams());
+            );
 
         };
 

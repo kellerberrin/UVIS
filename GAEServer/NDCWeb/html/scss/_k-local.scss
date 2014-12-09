@@ -556,6 +556,60 @@ $K-Search-Modify-Color: $md-red-500;
 
 }
 
+
+/*********************************************************************************************
+*
+* Modal Error Dialog
+*
+***********************************************************************************************/
+
+
+#k-error-dialog-content {
+
+  #k-error-dialog-heading {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.2em;
+    margin: 2rem 0 2rem 0;
+    color: $md-black-display-text;
+
+  }
+
+  #k-error-dialog-status {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1.2em;
+    margin: 2rem 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-error-dialog-text {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-error-dialog-action {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+
+}
+
+
 /*********************************************************************************************
 *
 * Modal Wait.

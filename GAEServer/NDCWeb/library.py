@@ -23,7 +23,6 @@ class RequestSearchArgs(messages.Message):
     searchstring = messages.StringField(1, required=True)
     searchtype = messages.StringField(2, required=True)
 
-
 class DrugSearchResult(messages.Message):
     """Return the json object"""
     resultMessage = messages.StringField(1)
@@ -48,7 +47,7 @@ class SearchUSDrugsApi(remote.Service):
     REQUEST_SEARCH_RESOURCE = endpoints.ResourceContainer(
         RequestSearchArgs,
         searchstring=messages.StringField(1, required=True),
-        searchtype=messages.StringField(2, required=True)
+        searchtype=messages.StringField(2, required=True),
 
     )
 

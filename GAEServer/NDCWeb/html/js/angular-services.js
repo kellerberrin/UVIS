@@ -391,7 +391,7 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
         , {   }    // default arguments
 
         , { typeSearch: { method: "POST"
-                        , params: {searchstring: "@searchstring", searchtype: "@searchtype"}
+                        , params: {searchstring: "@searchstring", searchtype: "@searchtype", searchsize: "@searchsize" }
                         , transformResponse: function (jsonData, dataHeaders) {
 
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
@@ -565,13 +565,22 @@ USDrugServices.factory("ImageSearchDialog", function () {
 
 
 
-USDrugServices.factory("ConfirmSearchDialog", function () {
+USDrugServices.factory("ConfirmSearchDialog", [ "$q", function ($q) {
+
 
     var confirmSearchDialog = { show: false, // Display the dialog box
                                 reason: null, // Set the error message
-                                searchParams : null,
-                                modifiedSearchParams: null,
                                 dialogStyle: { width : "80%", "max-width" : "500px" }}; // Set the dialog width
+    var deferred = null;
+
+    var modifySearch = function(modify) {
+
+        confirmSearchDialog.show = false;
+        deferred.resolve(modify);
+
+    };
+
+    confirmSearchDialog.modifySearch = modifySearch;
 
     return {
 
@@ -581,40 +590,60 @@ USDrugServices.factory("ConfirmSearchDialog", function () {
 
         },
 
-        displayConfirm : function(reason, searchParams, modifiedSearchParams) {
+        displayConfirm : function(reason) {
 
-            confirmSearchDialog.reason = reason;
-            confirmSearchDialog.searchParams = searchParams;
-            confirmSearchDialog.modifiedSearchParams = modifiedSearchParams;
-            confirmSearchDialog.show = true;
+            deferred = $q.defer();  // Reset the promise.
 
-        },
+            confirmSearchDialog.reason = reason; // Display the reason in the dialog.
+            confirmSearchDialog.show = true; //show the dialog
 
-        searchParams: function() {
-
-            confirmSearchDialog.show = false;
-            return confirmSearchDialog.searchParams;
-
-        },
-
-        modifiedSearchParams: function() {
-
-            confirmSearchDialog.show = false;
-            return confirmSearchDialog.modifiedSearchParams;
+            return deferred.promise; // Return the promise.
 
         }
 
-
     }
 
-});
+}]);
 
 
 USDrugServices.factory("SearchErrorDialog", function () {
 
     var searchErrorDialog = { show: false, // Display the dialog box
-                              error: null, // Set the error message
                               dialogStyle: { width : "80%", "max-width" : "400px" }}; // Set the dialog width
+
+    var generalAction = "Action. Ensure that you are using a modern browser (Microsoft; at least IE 10)." +
+                        " Check your internet connection and retry.";
+
+    var connectionAction = "Action. Confirm that you have a valid internet connection or phone signal and retry.";
+
+    var seterrortext = function (error) {
+
+        searchErrorDialog.status = "Server Error " + error.status;
+        searchErrorDialog.action = generalAction;
+
+        if (error.status == 0) {
+
+            searchErrorDialog.status = "No Connection";
+            searchErrorDialog.statusText = "Internet Communication Problem";
+            searchErrorDialog.action = connectionAction;
+
+        }
+        else if (error.status == 500) {
+
+            searchErrorDialog.status = "Server Error " + error.status;
+            searchErrorDialog.statusText = "Unknown Internal Error";
+            searchErrorDialog.action = generalAction;
+
+        }
+        else {
+
+            searchErrorDialog.status = "Server Error " + error.status;
+            searchErrorDialog.statusText = error.statusText;
+            searchErrorDialog.action = generalAction;
+
+        }
+
+    };
 
     return {
 
@@ -626,7 +655,7 @@ USDrugServices.factory("SearchErrorDialog", function () {
 
         displayError : function(error) {
 
-            searchErrorDialog.error = error;
+            seterrortext(error);
             searchErrorDialog.show = true;
 
         }

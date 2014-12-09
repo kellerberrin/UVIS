@@ -30,7 +30,6 @@ var Material = angular.module( "Material", []);
                 scope.dismissDialog = function() {
 
                     scope.displayDialog.show = false;
-                    k_consoleLog(["dismissDialog", scope])
 
                };
 

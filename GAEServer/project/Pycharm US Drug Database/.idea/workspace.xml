@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aa6dc1f-4180-4c69-aa6f-a2d1aef94bb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-local.scssc" afterPath="$PROJECT_DIR$/../../NDCWeb/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-local.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogSearchTemplate.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogSearchTemplate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" afterPath="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-local.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-material.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" afterPath="$PROJECT_DIR$/../../NDCWeb/html/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/library.py" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" />
     </list>
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="library.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="library.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/library.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1602">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30448222" vertical-offset="883" max-vertical-offset="1530">
+              <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -103,7 +103,7 @@
       <file leaf-file-name="app.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/app.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1062">
+            <state vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1062">
               <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
@@ -113,17 +113,17 @@
       <file leaf-file-name="transformers.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-309.5" vertical-offset="731" max-vertical-offset="1548">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1548">
               <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dns.rst" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dns.rst" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6939722" vertical-offset="505" max-vertical-offset="1170">
+            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1170">
               <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
@@ -168,10 +168,10 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/index.yaml" />
         <option value="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" />
         <option value="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/library.py" />
         <option value="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
         <option value="$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py" />
         <option value="$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/library.py" />
       </list>
     </option>
   </component>
@@ -222,8 +222,23 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pycharm US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Google App Engine SDK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Pycharm US Drug Database" />
@@ -246,7 +261,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -559,8 +573,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="178" y="0" width="1422" height="875" extended-state="1" />
-    <editor active="false" />
+    <frame x="178" y="0" width="1422" height="875" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -915,14 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1548">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/bulkloader.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1728">
@@ -949,7 +955,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCDatafilesUpload/transformers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-309.5" vertical-offset="731" max-vertical-offset="1548">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1548">
           <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
           <folding />
         </state>
@@ -965,8 +971,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../Sphinx/Source/software/dns/dns.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6939722" vertical-offset="505" max-vertical-offset="1170">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1170">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30448222" vertical-offset="883" max-vertical-offset="1530">
+          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
           <folding />
         </state>
       </provider>
