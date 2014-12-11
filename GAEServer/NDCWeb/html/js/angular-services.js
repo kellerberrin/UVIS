@@ -1,15 +1,19 @@
 "use strict";
 
+
+(function (window, angular, undefined) {
+
+
 /* Services */
 
-var USDrugServices = angular.module("USDrugServices", ["ngResource"]);
+var drugSearchServices = angular.module("drugSearchServices", ["ngResource"]);
 
 
 
 
 /* Drug result arrays scope injection */
 
-USDrugServices.factory("DrugArray", function () {
+drugSearchServices.factory("DrugArray", function () {
 
     return { drugArray : []
            , searchActive: false
@@ -20,7 +24,7 @@ USDrugServices.factory("DrugArray", function () {
 
 /* Type ahead prompts and search history scope injection */
 
-USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDrugForwardPrompt) {
+drugSearchServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDrugForwardPrompt) {
 
     var historyArray = [];  // History of searches
     var totalPromptCount = 10;
@@ -70,7 +74,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
         } else {  // Should not happen
 
-            k_consoleLog("get display prompt - Badtype");
+            utilityModule.k_consoleLog("get display prompt - Badtype");
             return searchTypes[0];
 
         }
@@ -170,7 +174,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
     var getForwardPrompt = function () {
 
-        k_consoleLog(displaySearch);
+        utilityModule.k_consoleLog(displaySearch);
 
         if (displaySearch.searchtext.length > 0) {
 
@@ -187,14 +191,14 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 
                     }
                     var milliseconds = Date.now() - requestTime;
-                    k_consoleLog({milliseconds: milliseconds});
-                    k_consoleLog(data.promptArray);
+                    utilityModule.k_consoleLog({milliseconds: milliseconds});
+                    utilityModule.k_consoleLog(data.promptArray);
 
                 }
                 , function (error) {
 
                     clearpromptarray();
-                    k_consoleLog(["USDrugForwardPrompt - error", error]);
+                    utilityModule.k_consoleLog(["USDrugForwardPrompt - error", error]);
 
                 });
 
@@ -298,7 +302,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
             var NDC9Array = historyItem.searchstring.split(",");
             if (NDC9Array.length > 0) {
 
-                var displayHistoryText = k_NDC9Format(NDC9Array[0]) + " +";
+                var displayHistoryText = utilityModule.k_NDC9Format(NDC9Array[0]) + " +";
                 historyItem["displayhistorytext"] = displayHistoryText;
 
             }
@@ -384,7 +388,7 @@ USDrugServices.factory("SearchPrompts", [ "USDrugForwardPrompt", function (USDru
 }]);
 
 
-USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
+drugSearchServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
     return $resource("/_ah/api/searchUSdrugs/v1/typeSearch"   //url
 
@@ -396,9 +400,8 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
 // This code looks fragile because it assumes the API response will be in a specific format.
-// todo: add exception handling and error handling here to gracefully fail with suitable messages.
 
-                    var parsedData = new k_clientDrugData();
+                    var parsedData = new utilityModule.K_clientDrugData();
                     if (typeof jsonData == "string") {
                         var obj1 = angular.fromJson(jsonData);
                         if (typeof obj1.resultMessage == "string") {
@@ -416,7 +419,7 @@ USDrugServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
 
 
 
-USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource) {
+drugSearchServices.factory("USDrugForwardPrompt", ["$resource", function ($resource) {
 
     return $resource("/_ah/api/searchUSdrugs/v1/forwardPrompt"   //url
 
@@ -428,7 +431,6 @@ USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource)
 
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
 // This code looks fragile because it assumes the API response will be in a specific format.
-// todo: add exception handling and error handling here to gracefully fail with suitable messages.
 
                 obj2 = {};
                 if (typeof jsonData == "string") {
@@ -447,7 +449,7 @@ USDrugServices.factory("USDrugForwardPrompt", ["$resource", function ($resource)
 
 
 
-USDrugServices.factory("USDrugValidateInput", [ function () {
+drugSearchServices.factory("USDrugValidateInput", [ function () {
 
     function Validate(searchParams, success, failure) {
 
@@ -513,7 +515,7 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
 
         } else {
 
-            k_consoleLog("unknown search type in USDrugValidateInput.Validate");
+            utilityModule.k_consoleLog("unknown search type in USDrugValidateInput.Validate");
 
         }
 
@@ -527,7 +529,7 @@ USDrugServices.factory("USDrugValidateInput", [ function () {
 
 
 
-USDrugServices.factory("ImageSearchDialog", function () {
+drugSearchServices.factory("ImageSearchDialog", function () {
 
     var imageSearchDialog = { show: false, // Display the dialog box
                                imageurl: '', // Set the hi-res image
@@ -558,14 +560,13 @@ USDrugServices.factory("ImageSearchDialog", function () {
 
         }
 
-
     }
 
 });
 
 
 
-USDrugServices.factory("ConfirmSearchDialog", [ "$q", function ($q) {
+drugSearchServices.factory("ConfirmSearchDialog", [ "$q", function ($q) {
 
 
     var confirmSearchDialog = { show: false, // Display the dialog box
@@ -606,20 +607,18 @@ USDrugServices.factory("ConfirmSearchDialog", [ "$q", function ($q) {
 }]);
 
 
-USDrugServices.factory("SearchErrorDialog", function () {
+drugSearchServices.factory("SearchErrorDialog", function () {
 
     var searchErrorDialog = { show: false, // Display the dialog box
                               dialogStyle: { width : "80%", "max-width" : "400px" }}; // Set the dialog width
 
-    var generalAction = "Action. Ensure that you are using a modern browser (Microsoft; at least IE 10)." +
+    var generalAction = "Action. Ensure that you are using a modern browser (Windows - Internet Explorer version 10 or higher)." +
                         " Check your internet connection and retry.";
 
     var connectionAction = "Action. Confirm that you have a valid internet connection or phone signal and retry.";
 
     var seterrortext = function (error) {
 
-        searchErrorDialog.status = "Server Error " + error.status;
-        searchErrorDialog.action = generalAction;
 
         if (error.status == 0) {
 
@@ -660,9 +659,14 @@ USDrugServices.factory("SearchErrorDialog", function () {
 
         }
 
+
     }
 
 });
+
+
+})(window, window.angular);
+
 
 
 

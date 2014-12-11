@@ -2,11 +2,14 @@
 
 /* Controllers */
 
-var USDrugControllers = angular.module("USDrugControllers", []);
+(function (window, angular, undefined) {
+
+
+var drugSearchControllers = angular.module("drugSearchControllers", []);
 
 // Top level controller - contains all the drug data.
 
-USDrugControllers.controller("DrugSearchCtrl",
+drugSearchControllers.controller("DisplayController",
     ["$scope"
         , "$mdToast"
         , "DrugArray"
@@ -14,13 +17,13 @@ USDrugControllers.controller("DrugSearchCtrl",
         , "USDrugEndPoints"
         , "ImageSearchDialog"
         , "SearchErrorDialog"
-        , function DrugSearchCtrl($scope,
-                                  $mdToast,
-                                  DrugArray,
-                                  SearchPrompts,
-                                  USDrugEndPoints,
-                                  ImageSearchDialog,
-                                  SearchErrorDialog  ) {
+        , function DisplayController($scope,
+                                        $mdToast,
+                                        DrugArray,
+                                        SearchPrompts,
+                                        USDrugEndPoints,
+                                        ImageSearchDialog,
+                                        SearchErrorDialog  ) {
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
@@ -48,7 +51,7 @@ USDrugControllers.controller("DrugSearchCtrl",
                     $scope.results.searchActive = false;
                     $scope.results.drugArray = [];
                     SearchErrorDialog.displayError(error);
-                    k_consoleLog(["USDrugEndPoints - error", error]);
+                    utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
 
                 });
 
@@ -94,7 +97,7 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.resultToast = function (milliseconds) {
 
-            var ToastText = k_drugCount($scope.results.drugArray.length, milliseconds);
+            var ToastText = utilityModule.k_drugCount($scope.results.drugArray.length, milliseconds);
             var ToastOptions = {template: "<md-toast>" + ToastText + "</md-toast>", duration: 3000};
             $mdToast.show(ToastOptions);
 
@@ -102,7 +105,7 @@ USDrugControllers.controller("DrugSearchCtrl",
 
         $scope.showImageDialog = function (drugRecord) {
 
-            var searchParams = {searchstring: k_NDC9SearchArray(drugRecord), searchtype: "image"};
+            var searchParams = {searchstring: utilityModule.k_NDC9SearchArray(drugRecord), searchtype: "image"};
             ImageSearchDialog.displayImage(drugRecord.largeimageurl, searchParams);
 
         };
@@ -117,13 +120,13 @@ USDrugControllers.controller("DrugSearchCtrl",
 
 // This controller is used to retrieve and verify search data.
 
-USDrugControllers.controller("DrugSearchParams",
+drugSearchControllers.controller("SearchController",
     ["$scope"
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugValidateInput"
         , "ConfirmSearchDialog"
-        , function DrugSearchParams($scope,
+        , function SearchController($scope,
                                     DrugArray,
                                     SearchPrompts,
                                     USDrugValidateInput,
@@ -214,3 +217,5 @@ USDrugControllers.controller("DrugSearchParams",
 
 
     }]);
+
+})(window, window.angular);

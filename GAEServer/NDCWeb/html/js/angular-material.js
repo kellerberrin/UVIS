@@ -2,7 +2,10 @@
 
 /* Directives */
 
-var Material = angular.module( "Material", []);
+(function (window, angular, undefined) {
+
+
+var materialComponents = angular.module( "materialComponents", []);
 
 
 
@@ -13,7 +16,7 @@ var Material = angular.module( "Material", []);
  ****************************************************************************/
 
 
-    Material.directive('kMaterialDialog', function() {
+    materialComponents.directive('kMaterialDialog', function() {
 
         return {
 
@@ -27,27 +30,20 @@ var Material = angular.module( "Material", []);
 
             link: function(scope, element, attrs) {
 
-                scope.dismissDialog = function() {
+                scope.dismissDialog =function() {
 
                     scope.displayDialog.show = false;
 
-               };
+                }
 
             },
 
-        template:  "<div class='k-material-modal' ng-show='displayDialog.show'>" +
-                        "<div class='k-material-modal-overlay'>" +
-                            "<div class='k-material-modal-dialog' ng-style='displayDialog.dialogStyle'>" +
-                                "<button class='k-material-dialog-dismiss k-material-fab' ng-click='dismissDialog()'>" +
-                                "</button>" +
-                                "<div class='k-material-modal-content' ng-transclude>" +
-                                "</div>" +
-                            "</div>" +
-                        "</div>"+
-                   "</div>"
+            templateUrl: "partial/MaterialDialogTemplate.html"
 
         }; // end of return
 
     }); // end of directive.
 
 
+
+})(window, window.angular);

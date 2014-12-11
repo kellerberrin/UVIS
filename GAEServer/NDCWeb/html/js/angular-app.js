@@ -2,14 +2,17 @@
 
 /* Modules used by the app */
 
-var USDrugSearchApp = angular.module("USDrugSearchApp",
-    [ "ngAnimate",
-      "ngAria",
-      "ngMaterial",
-      "Material",
-      "ngResource",
-      "USDrugControllers",
-      "USDrugDirectives",
-      "USDrugServices"
-]);
+(function (window, angular, undefined) {
 
+  var drugSearchApp = angular.module("drugSearchApp",
+      ["ngAnimate",
+        "ngAria",
+        "ngMaterial",
+        "ngResource",
+        "materialComponents",
+        "drugSearchControllers",
+        "drugSearchDirectives",
+        "drugSearchServices"
+      ]);
+
+})(window, window.angular);

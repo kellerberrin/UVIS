@@ -6,18 +6,16 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>US Drug Search</title>
+    <!-- Roboto Font -->
+<!--    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'> -->
+    <!-- Local CSS stuff. specific setup -->
+    <link rel="stylesheet" href="/css/app.css"/>
+    <!-- Angular Material Design CSS -->
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
     <!-- JQuery function library and Modernizr -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Important! - load before angular libraries -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- Roboto Font -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
-    <!-- Local CSS stuff. specific setup -->
-    <link rel="stylesheet" href="/css/app.css"/>
-    <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css">
-    <!-- Angular Material Design CSS -->
-    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
     <!-- Angular Libraries -->
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
@@ -27,7 +25,6 @@
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/hammerjs/hammer.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
-    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <!-- Local Angular Javascript -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
@@ -41,7 +38,7 @@
 </head>
 <!-- [END head_html] -->
 <!-- [BEGIN body html]-->
-<body ng-app="USDrugSearchApp">
+<body ng-app="drugSearchApp">
 
 <!--[if lt IE 9]>
 <p>You are using an <strong>outdated</strong> web browser.
@@ -50,7 +47,7 @@
 <![endif]-->
 
 <!-- 100% Horizontal Width -->
-<div id="k-total-page-width" ng-controller="DrugSearchCtrl">
+<div id="k-total-page-width" ng-controller="DisplayController">
 
     <!-- PharmCat Page (max 600 px width) -->
      <div id="k-search-page">

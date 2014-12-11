@@ -2,11 +2,15 @@
 
 /* Directives */
 
-var USDrugDirectives = angular.module( "USDrugDirectives", []);
+
+(function (window, angular, undefined) {
+
+
+var drugSearchDirectives = angular.module( "drugSearchDirectives", []);
 
 
 
-    USDrugDirectives.directive("kSearchSummary", function() {
+    drugSearchDirectives.directive("kSearchSummary", function() {
 
         return {
 
@@ -52,7 +56,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
  ****************************************************************************/
 
 
-    USDrugDirectives.constant("keyCodes", {
+    drugSearchDirectives.constant("keyCodes", {
         esc: 27,
         space: 32,
         enter: 13,
@@ -65,10 +69,10 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
         numlock: 144
     });
 
-    USDrugDirectives.directive("keyBind", ["keyCodes", function (keyCodes) {
+    drugSearchDirectives.directive("keyBind", ["keyCodes", function (keyCodes) {
         function map(obj) {
             var mapped = {};
-            k_consoleLog(["map", obj]);
+            utilityModule.k_consoleLog(["map", obj]);
             for (var key in obj) {
                 var action = obj[key];
                 if (keyCodes.hasOwnProperty(key)) {
@@ -79,7 +83,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
         }
 
         return function (scope, element, attrs) {
-            k_consoleLog(["key-bind executes", keyCodes, scope, element, attrs]);
+            utilityModule.k_consoleLog(["key-bind executes", keyCodes, scope, element, attrs]);
             var bindings = map(scope.$eval(attrs.keyBind));
             element.bind("keydown keypress", function (event) {
                 if (bindings.hasOwnProperty(event.which)) {
@@ -101,7 +105,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
  ****************************************************************************/
 
 
-    USDrugDirectives.directive("kFocusin", ["$parse", function($parse) {
+    drugSearchDirectives.directive("kFocusin", ["$parse", function($parse) {
 
         return function (scope, element, attr) {
 
@@ -123,7 +127,7 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
     }]);
 
 
-    USDrugDirectives.directive("kFocusout", ["$parse", function($parse) {
+    drugSearchDirectives.directive("kFocusout", ["$parse", function($parse) {
 
         return function(scope, element, attr) {
 
@@ -143,3 +147,6 @@ var USDrugDirectives = angular.module( "USDrugDirectives", []);
 
 
     }]);
+
+
+})(window, window.angular);
