@@ -53,6 +53,7 @@ $K-Search-Toolbar-Height: 4em;
 
     @include display-flex;
     @include flex-direction(row);
+    @include justify-content(flex-start);
     height: $K-Icon-Toolbar-Height;
     width: 100%;
     background-color: $K-Top-Menu-Background-color;
@@ -72,6 +73,7 @@ $K-Search-Toolbar-Height: 4em;
 
     #k-icon-toolbar-title {
 
+      @include flex-grow(2);
       color: $K-Toolbar-Title-color;
       font-weight: 700;
       font-size: 1.8em;

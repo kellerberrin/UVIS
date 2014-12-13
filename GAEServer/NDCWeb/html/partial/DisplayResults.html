@@ -8,10 +8,10 @@
 
             <div class="k-display-header-bar">
 
-                <button ng-click="nameSearch(drugRecord.name)"
+                <div ng-click="nameSearch(drugRecord.name)"
                         class="k-display-name-search k-material-fab"
                         ng-class="{ searchactive : results.searchActive }">
-                </button>
+                </div>
 
                 <div class="k-display-name-label">
 
@@ -61,10 +61,10 @@
 
                 <div class="k-display-active-label">
 
-                    <button ng-click="ingredientSearch(drugRecord)"
+                    <div ng-click="ingredientSearch(drugRecord)"
                             class="k-display-active-search k-material-fab"
                             ng-class="{ searchactive : results.searchActive , validselection : validSelection(drugRecord) }">
-                    </button>
+                    </div>
 
                     <div class="k-display-active-label-text">Active Ingredients</div>
 
@@ -74,25 +74,25 @@
                 <div class="k-display-ingredient-panel"
                      ng-repeat="Ingredient in drugRecord.activeArray track by $index">
 
-                    <div class="k-display-ingredient-line" layout="horizontal">
+                    <div class="k-display-ingredient-line">
 
-                        <button class="k-display-ingredient-name k-material-raised-button"
+                        <div class="k-display-ingredient-name k-material-raised-button"
                                 ng-click="Ingredient.activeselected = !Ingredient.activeselected"
                                 ng-class="{ activeselected : Ingredient.activeselected }">
                             <!-- Write out the ingredient -->
                             {{ Ingredient.activeName }}
                             <img class="k-display-ingredient-name-icon"
                                  src="/images/icons/search24.svg" width="12px" height="12px"/>
-                        </button>
+                        </div>
 
-                        <button class="k-display-ingredient-strength k-material-raised-button"
+                        <div class="k-display-ingredient-strength k-material-raised-button"
                                 ng-click="Ingredient.strengthselected = !Ingredient.strengthselected"
                                 ng-class="{ strengthselected : (Ingredient.strengthselected && Ingredient.activeselected) }">
                             <!-- Write out the strength -->
                             {{ Ingredient.strength }} {{ Ingredient.units }}
                             <img class="k-display-ingredient-strength-icon"
                                  src="/images/icons/search24.svg" width="12px" height="12px"/>
-                        </button>
+                        </div>
 
                     </div>
 
@@ -122,10 +122,10 @@
 
             <div class="k-display-ndc-container">
 
-                <button ng-click="ndc9Search(drugRecord.ndc9)"
+                <div ng-click="ndc9Search(drugRecord.ndc9)"
                         class="k-display-ndc9-search k-material-fab"
                         ng-class="{ searchactive : results.searchActive }">
-                </button>
+                </div>
 
                 <div class="k-display-ndc-label">
 

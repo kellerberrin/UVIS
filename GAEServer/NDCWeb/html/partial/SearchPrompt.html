@@ -1,8 +1,8 @@
 <!-- The search prompt popup -->
 
-<k-material-popup id="k-search-prompt-popup" displayPopup="displaySearchPrompt">
+<k-material-popup id="k-search-prompt-popup" displayPopup="prompts.displaysearchprompt()">
 
-    <div id="k-search-prompt-container">
+    <div id="k-search-prompt-container" ng-controller="SearchPromptController">
 
         <div id="k-search-prompt-list"
              ng-class="{ promptActive : prompts.getpromptactive() }">

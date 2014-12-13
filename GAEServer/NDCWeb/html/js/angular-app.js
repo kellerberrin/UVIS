@@ -4,13 +4,14 @@
 
 var drugSearchApp = (function (window, angular, undefined) {
 
-  angular.module("drugSearchApp",
-      ["ngAnimate",
-        "ngResource",
-        "materialComponents",
-        "drugSearchControllers",
-        "drugSearchDirectives",
-        "drugSearchServices"
-      ]);
+    angular.module("drugSearchApp",
+        [   "ngAnimate",
+            "ngResource",
+            "materialComponents",
+            "drugSearchControllers",
+            "drugSearchDirectives",
+            "drugSearchServices",
+            "searchPrompt"
+        ]);
 
 })(window, window.angular);

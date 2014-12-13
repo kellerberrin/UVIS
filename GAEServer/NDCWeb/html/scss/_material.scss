@@ -243,6 +243,7 @@ body {
   border: none;
   margin: auto auto;
   padding: 0;
+  cursor: pointer;
 
   &:hover {
 
@@ -266,6 +267,7 @@ body {
   border: none;
   margin: auto auto;
   padding: 0;
+  cursor: pointer;
 
   &:hover {
 
@@ -385,7 +387,6 @@ $K-Material-Dismiss-Color: $md-pink-a100;
 
   /* Throw a shadow */
   @include K-MaterialBoxShadow(4);
-  @include transition(all 0.25s ease-in-out);
 
   .k-material-toast-dismiss {
     // The dismiss button
@@ -430,7 +431,6 @@ $K-Material-Dismiss-Color: $md-pink-a100;
 
   /* Throw a shadow */
   @include K-MaterialBoxShadow(4);
-  @include transition(all 0.25s ease-in-out);
 
   .k-material-popup-dismiss {
     // The dismiss button
