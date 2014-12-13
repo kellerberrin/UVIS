@@ -6,35 +6,25 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>US Drug Search</title>
-    <!-- Roboto Font -->
-<!--    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'> -->
-    <!-- Local CSS stuff. specific setup -->
+    <!-- Local CSS  -->
     <link rel="stylesheet" href="/css/app.css"/>
-    <!-- Angular Material Design CSS -->
-    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
     <!-- JQuery function library and Modernizr -->
+    <!-- Important! - load before Angular Libraries -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Important! - load before angular libraries -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- Angular Libraries -->
     <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/angular-route/angular-route.js"></script>
-    <script src="/bower_components/hammerjs/hammer.js"></script>
-    <script src="/bower_components/angular-material/angular-material.js"></script>
-    <!-- Local Angular Javascript -->
+    <!-- Local Angular Code -->
     <script src="/js/angular-app.js"></script>
     <script src="/js/angular-controllers.js"></script>
     <script src="/js/angular-directives.js"></script>
     <script src="/js/angular-services.js"></script>
     <script src="/js/angular-material.js"></script>
-    <!-- Google Endpoint client -->
-    <script src="https://apis.google.com/js/client.js?onload=init"></script>
     <!-- Non Angular App specific logic -->
-    <script src="/js/local.js"></script>
+    <script src="/js/utility.js"></script>
 </head>
 <!-- [END head_html] -->
 <!-- [BEGIN body html]-->
@@ -68,12 +58,16 @@
     <!-- End PharmCat Page (max 600 px width) -->
 
     <!-- The Search Image Dialog Box -->
-    <div id="k-image-dialog-anchor" ng-include src=" 'partial/DialogImageTemplate.html' "></div>
+    <div id="k-image-dialog-anchor" ng-include src=" 'partial/ImageDialog.html' "></div>
     <!-- End Image Search Dialog Box -->
 
     <!-- The Request Error Dialog Box -->
-    <div id="k-request-error-dialog-anchor" ng-include src=" 'partial/DialogErrorTemplate.html' "></div>
+    <div id="k-request-error-dialog-anchor" ng-include src=" 'partial/ErrorDialog.html' "></div>
     <!-- End Request Error Dialog Box -->
+
+    <!-- The Search Toast -->
+    <div id="k-search-toast-anchor" ng-include src=" 'partial/SearchToast.html' "></div>
+    <!-- End Search Toast -->
 
     <!-- Modal wait cursor -->
     <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>

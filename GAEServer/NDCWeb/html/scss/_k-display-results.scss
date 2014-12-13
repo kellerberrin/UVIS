@@ -1,0 +1,475 @@
+@import "material-local";
+@import "material";
+
+/*************************************************************************************************************
+*
+* Global definitions (don't use defaults)
+*
+*************************************************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+
+
+/**************************************************************************************************************
+*
+*
+* Drug Search Results Container classes.
+*
+*
+**************************************************************************************************************/
+
+$K-Display-Drug-Background: white;
+$K-Display-Drug-Border: darken(white, 30%);
+$K-Display-Name-Background: $K-PRIMARY-COLOR-100;
+$K-Display-Image-Price-Background: white;
+$K-Display-Active-Color: lighten($K-ACCENT-COLOR-100, 15%);
+$K-Display-Active-Selected-Color: lighten($K-ACCENT-COLOR-100, 10%);
+$K-Display-Package-Background: white;
+$K-Display-NDC-Background: $K-PRIMARY-COLOR-100;
+$K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
+
+.k-display-drug {
+
+  @include K-MaterialBoxShadow(2);
+  display: block;
+  background-color: $K-Display-Drug-Background;
+  border: 1px solid $K-Display-Drug-Border;
+  margin: 2em 1em 2em 1em;
+
+  /*******************************************************************************
+  * Display Drug Name
+  ********************************************************************************/
+
+  & .k-display-header-bar {
+
+    position: relative;
+    margin: 0;
+    border: none;
+    padding: 0;
+    background-color: $K-Display-Name-Background;
+    width: 100%;
+
+    & .k-display-name-search {
+
+      @include transition(all 0.25s ease-in-out);
+      position: absolute;
+      left: -0.75em;
+      top: -1em;
+      opacity: 0.4;
+      background-image: url("/images/icons/search24.svg");
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-SearchButton-Inactive-color;
+
+      &.searchactive {
+        // Important! this class is set when the endpoints request is active.
+
+        background-color: $K-SearchButton-Active-color;
+
+      }
+
+      &:hover {
+
+        opacity: 1.0;
+
+      }
+
+    }
+
+    & .k-display-drug-name {
+
+      font-size: 1.5em;
+      padding: 0.1em 1rem 0.1em 2.5rem;
+      border: none;
+      margin: 0;
+      line-height: 105%;
+
+    }
+
+    & .k-display-labeler-name {
+
+      font-size: 1em;
+      padding: 0.1em 1rem 0.1em 2.5em;
+      border: none;
+      margin: 0;
+      line-height: 105%;
+    }
+
+  }
+
+  /*******************************************************************************
+  * Display Drug Image and Price Information
+  ********************************************************************************/
+
+  & .k-display-image-price {
+
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: $K-Display-Image-Price-Background;
+
+    & .k-display-drug-image {
+
+      @include transition(all 0.25s ease-in-out);
+      @include K-MaterialBoxShadow(1);
+      display: none;
+      margin: 5px;
+      cursor: pointer;
+
+      &:hover {
+
+        @include translate(0px, -1px);
+        @include K-MaterialBoxShadow(2);
+
+      }
+
+      &.hasimage {
+
+        display: block;
+
+      }
+
+      & .k-display-small-image {
+
+        float: left;
+        margin: 3px;
+
+      }
+
+    }
+
+  }
+
+  /*******************************************************************************
+  * Display Active Ingredient
+  ********************************************************************************/
+
+  & .k-display-active-ingredients {
+
+    display: none;
+    position: relative;
+    background-color: $K-Display-Active-Color;
+    width: 100%;
+
+    &.hasactive {
+
+      display: block;
+
+    }
+
+    & .k-display-active-label {
+
+      height: 2em;
+
+      & .k-display-active-search {
+        // Active ingredient search button
+
+        @include transition(all 0.25s ease-in-out);
+        position: absolute;
+        margin-left: -0.75em;
+        top: -0.65em;
+        opacity: 0;
+        background-image: url("/images/icons/search24.svg");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $K-SearchButton-Inactive-color;
+
+        &.validselection {
+
+          opacity: 0.4;
+
+        }
+
+        &.searchactive {
+          // Important! this class is set when the endpoints request is active.
+
+          background-color: $K-SearchButton-Active-color;
+
+        }
+
+        &:hover {
+
+          opacity: 1.0;
+
+        }
+
+      }
+
+      & .k-display-active-label-text {
+        // Active Ingedient title text
+
+        width: 100%;
+        margin: 0;
+        border: none;
+        padding: 0.1em 1rem 0.1em 2.5rem;
+        font-size: 1.2em;
+
+      }
+
+    }
+
+    & .k-display-ingredient-panel {
+      // Container for active ingredients.
+
+      width: 100%;
+      font-size: 1.0em;
+      margin: 0;
+      padding-bottom: 0.5em;
+
+      & .k-display-ingredient-line {
+        // Individual active ingredient line.
+
+        @include display-flex;
+        @include flex-direction(row);
+        width: 100%;
+        font-size: inherit;
+
+        & .k-display-ingredient-name {
+
+          float: left;
+          max-width: 75%;
+          font-size: inherit;
+          margin: 0.2em 0 0 2.3rem;
+          padding: 0.2em 0.2em 0.2em 0.2rem;
+          background-color: $K-Display-Active-Color;
+
+          & .k-display-ingredient-name-icon {
+
+            opacity: 0;
+
+          }
+
+          &.activeselected {
+            // Selected for an ingredient search
+
+            background-color: $K-Display-Active-Selected-Color;
+
+            & .k-display-ingredient-name-icon {
+
+              opacity: 0.7;
+
+            }
+
+          }
+
+        }
+
+        & .k-display-ingredient-strength {
+
+          float: left;
+          max-width: 35%;
+          font-size: inherit;
+          margin: 0.2em 0 0 0.8rem;
+          padding: 0.2em 0 0.2em 0.2rem;
+          background-color: $K-Display-Active-Color;
+
+          & .k-display-ingredient-strength-icon {
+
+            opacity: 0;
+
+          }
+
+          &.strengthselected {
+            // Selected for an ingredient search
+
+            background-color: $K-Display-Active-Selected-Color;
+
+            & .k-display-ingredient-strength-icon {
+
+              opacity: 0.7;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  /*******************************************************************************
+  * Display Package
+  ********************************************************************************/
+
+  & .k-display-package-container {
+
+    width: 100%;
+    background-color: $K-Display-Package-Background;
+
+    & .k-display-package-description {
+
+      padding: 0.3em 1.0rem 0.3em 2.5rem;
+      border: none;
+      margin: 0;
+      font-size: 0.9em;
+
+    }
+
+  }
+
+  /*******************************************************************************
+  * Display NDC
+  ********************************************************************************/
+
+  & .k-display-ndc-container {
+
+    position: relative;
+    margin: 0;
+    border: none;
+    padding: 0;
+    background-color: $K-Display-NDC-Background;
+    width: 100%;
+
+    & .k-display-ndc9-search {
+
+      @include transition(all 0.25s ease-in-out);
+      position: absolute;
+      margin-left: -0.75em;
+      top: -1em;
+      opacity: 0.4;
+      background-image: url("/images/icons/search24.svg");
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-SearchButton-Inactive-color;
+
+      &.searchactive {
+        // Important! this class is set when the endpoints request is active.
+
+        background-color: $K-SearchButton-Active-color;
+
+      }
+
+      &:hover {
+
+        opacity: 1.0;
+
+      }
+
+    }
+
+    & .k-display-ndc-title {
+
+      font-size: 1.2em;
+      padding: 0.1em 1rem 0.1em 2.5rem;
+      border: none;
+      margin: 0;
+      line-height: 105%;
+
+    }
+
+    & .k-display-ndc-codes {
+
+      display: inline-block; /* non-flexbox browsers */
+      @include display-flex(inline-flex);
+      @include align-items(center);
+      @include justify-content(flex-start);
+      @include flex-wrap(wrap);
+      margin-left: 2.5rem;
+
+      & .k-display-ndc {
+
+        @include display-flex;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        margin-right: 1em;
+
+        & .k-display-ndc-title {
+
+          color: $K-Display-NDC-Title-Color;
+          font-size: 0.7em;
+          font-weight: 700;
+          padding: 0.1em 0 0.1em 0;
+          border: none;
+          margin: 0;
+
+        }
+
+        & .k-display-ndc-value {
+
+          font-size: 1em;
+          padding: 0.1em 0 0.1em 0;
+          border: none;
+          margin: 0;
+          line-height: 105%;
+
+          & .k-display-ndc-format {
+
+            font-size: 0.7em;
+
+          }
+
+        }
+
+      }
+
+      & .k-display-ndc11 {
+
+        @include display-flex;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+
+        & .k-display-ndc11-title {
+
+          color: $K-Display-NDC-Title-Color;
+          font-size: 0.7em;
+          font-weight: 700;
+          padding: 0.1em 0 0.1em 0;
+          border: none;
+          margin: 0;
+
+          & .k-display-ndc11-package {
+
+            font-weight: 500;
+
+          }
+
+        }
+
+        & .k-display-ndc11-value {
+
+          font-size: 1.0em;
+          padding: 0.1em 0 0.1em 0;
+          border: none;
+          margin: 0;
+          line-height: 105%;
+
+          & .k-display-ndc11-ndc9 {
+
+            font-weight: 700;
+
+          }
+
+          & .k-display-ndc11-format {
+
+            font-size: 0.7em;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

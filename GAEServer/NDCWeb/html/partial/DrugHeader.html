@@ -3,33 +3,31 @@
 <div id="k-drug-toolbar" ng-controller="SearchController">
 
     <!-- The Input Dialog Box -->
-    <div id="k-input-dialog-anchor" ng-include src=" 'partial/DialogSearchTemplate.html' "></div>
+    <div id="k-input-dialog-anchor" ng-include src=" 'partial/SearchDialog.html' "></div>
     <!-- End Input Dialog Box -->
 
-    <nav id="k-icon-toolbar-tools">
+    <div id="k-icon-toolbar-tools">
 
-        <button id="k-menu-icon-button"
+        <div id="k-menu-icon-button"
                 class="k-active-button"
                 aria-label="PharmCat Menu">
-        </button>
+        </div>
 
         <span id="k-icon-toolbar-title">PharmCat</span>
 
-        <!-- The following 2 buttons are in reverse order because they are floated right -->
-
-        <button id="k-icon-search-button"
-                class="k-active-button"
-                aria-label="Search Menu">
-        </button>
-
-        <button id="k-icon-barcode-button"
+        <div id="k-icon-barcode-button"
                 class="k-active-button"
                 aria-label="Scan Barcode">
-        </button>
+        </div>
 
-    </nav>
+        <div id="k-icon-search-button"
+                class="k-active-button"
+                aria-label="Search Menu">
+        </div>
 
-    <nav id="k-search-toolbar">
+    </div>
+
+    <div id="k-search-toolbar">
 
         <div id="k-search-type-toolbar">
 
@@ -37,7 +35,8 @@
 
             <select id="k-search-searchtype"
                     ng-model="search.selectedsearchtype"
-                    ng-options="s.typeprompt for s in prompts.getsearchtypes()">
+                    ng-options="s.typeprompt for s in prompts.getsearchtypes()"
+                    aria-label="Select Search Type">
             </select>
 
         </div>
@@ -54,98 +53,23 @@
                    ng-model="search.searchtext"
                    ng-keyup="inputkeystroke($event)"
                    k-focusin="inputactive()"
-                   k-focusout="delayinactive()">
+                   k-focusout="delayinactive()"
+                   aria-label="Search Text Input">
             </input>
 
-            <button id="k-perform-search"
-                    class="k-material-fab"
-                    ng-click="getParamsSearch()"
-                    ng-class="{ searchActive : results.searchActive }"
-                    aria-label="Perform Drug Search">
-            </button>
-
-        </div>
-
-    </nav>
-
-    <div id="k-search-prompt-anchor">
-
-        <div id="k-search-prompt-container"
-            ng-class="{ searchPromptActive : prompts.getsearchpromptactive() }">
-
-            <button id="k-search-prompt-dismiss"
-                    class="k-material-fab"
-                    ng-click="inputinactive()">
-            </button>
-
-            <div id="k-search-prompt-list"
-                 ng-class="{ promptActive : prompts.getpromptactive() }">
-
-                <div id="k-search-prompt-title">
-                    <div>Search Ahead</div>
-                </div>
-
-                <div class="k-search-prompt-array"
-                     ng-repeat="prompt in prompts.getpromptarray() track by $index">
-
-                    <div class="k-search-prompt-item"
-                         ng-click="performSearch(prompt)">
-
-                        <div class="k-search-prompt-type">
-
-                            {{ prompts.getdisplaytype(prompt.searchtype).typeprompt }}
-
-                        </div>
-
-                        <div class="k-search-prompt-value">
-
-                            {{ prompt.searchstring }}
-
-                        </div>
-
-                    </div>
-
-                    <div class="k-divider"></div>
-
-                </div>
-
-            </div>
-
-            <div id="k-search-history-list"
-                 ng-class="{ historyActive : prompts.gethistoryactive() }">
-
-                <div id="k-search-history-title">
-                    <div>Search History</div>
-                </div>
-
-                <div class="k-search-history-array"
-                     ng-repeat="history in prompts.gethistoryarray() track by $index">
-
-                    <div class="k-search-history-item"
-                         ng-click="performSearch(history)">
-
-                        <div class="k-search-history-type">
-
-                            {{ prompts.getdisplaytype(history.searchtype).typeprompt }}
-
-                        </div>
-
-                        <div class="k-search-history-value">
-
-                            {{ history.displayhistorytext }}
-
-                        </div>
-
-                    </div>
-
-                    <div class="k-divider"></div>
-
-                </div>
-
+            <div id="k-perform-search"
+                 class="k-material-fab"
+                 ng-click="getParamsSearch()"
+                 ng-class="{ searchActive : results.searchActive }"
+                 aria-label="Perform Drug Search">
             </div>
 
         </div>
 
     </div>
+
+    <!-- The Search Prompt Popup -->
+    <div id="k-search-prompt-anchor" ng-include src=" 'partial/SearchPrompt.html' "></div>
+    <!-- End Search Prompt Popup -->
 
 </div>

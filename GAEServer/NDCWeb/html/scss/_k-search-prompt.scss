@@ -1,0 +1,194 @@
+@import "material-local";
+@import "material";
+
+/*************************************************************************************************************
+*
+* Global definitions (don't use defaults)
+*
+*************************************************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+/*****************************************************************************************************************
+*
+* Menu Bar, search ahead and history
+*
+******************************************************************************************************************/
+
+$K-Prompt-Type-Color: $K-PRIMARY-COLOR-700;
+$K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
+$K-Prompt-Prompt-Title-Color: $K-PRIMARY-COLOR-100;
+$K-History-Item-Active-Color: $K-ACCENT-COLOR-100;
+$K-Prompt-Item-Active-Color: $md-light-blue-500;
+$K-Search-Prompt-Dismiss-Color: $K-ACCENT-COLOR-100;
+$K-Search-Type-Color: white;
+$K-Search-Type-Background-Color: $md-light-blue-500;
+
+#k-search-prompt-container {
+
+  background-color: white;
+
+  #k-search-prompt-list {
+
+    display: none;
+
+    &.promptActive {
+
+      display: block;
+
+    }
+
+    #k-search-prompt-title {
+
+      color: $md-black-primary-text;
+      text-align: center;
+      height: 2em;
+      background-color: $K-Prompt-Prompt-Title-Color;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+
+    }
+
+    .k-search-prompt-array {
+
+      @include transition(all 0.25s ease-in-out);
+
+      &:hover {
+
+        @include K-MaterialBoxShadow(2);
+        @include translate(0px, -2px);
+        color: $K-SearchButton-Inactive-color;
+
+      }
+
+      .k-search-prompt-item {
+
+        position: relative;
+        width: 100%;
+        text-align: left;
+        color: $md-black-primary-text;
+        cursor: pointer;
+
+        &:hover {
+
+          color: $K-Prompt-Item-Active-Color;
+
+        }
+
+        .k-search-prompt-type {
+
+          width: 100%;
+          color: $K-Prompt-Type-Color;
+          font-size: 0.7em;
+          font-weight: 700;
+          padding-left: 0.5em;
+          padding-top: 0.1em;
+          padding-bottom: 0.0em;
+
+        }
+
+        .k-search-prompt-value {
+
+          width: 100%;
+          padding-left: 1.5em;
+          padding-top: 0;
+          padding-bottom: 0.2em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#k-search-history-list {
+
+  display: none;
+
+  &.historyActive {
+
+    display: block;
+
+  }
+
+  #k-search-history-title {
+
+    color: $md-black-primary-text;
+    text-align: center;
+    padding: 0.3em;
+    background-color: $K-Prompt-History-Title-Color;
+
+  }
+
+  .k-search-history-array {
+
+    @include transition(all 0.25s ease-in-out);
+
+    &:hover {
+
+      @include K-MaterialBoxShadow(2);
+      @include translate(0px, -2px);
+      color: $K-SearchButton-Inactive-color;
+
+    }
+
+    .k-search-history-item {
+
+      position: relative;
+      width: 100%;
+      text-align: left;
+      color: $md-black-primary-text;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+
+      &:hover {
+
+        color: $K-History-Item-Active-Color;
+
+      }
+
+      .k-search-history-type {
+
+        width: 100%;
+        color: $K-Prompt-Type-Color;
+        font-size: 0.7em;
+        font-weight: 700;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.0em;
+
+      }
+
+      .k-search-history-value {
+
+        width: 100%;
+        padding-left: 1.5em;
+        padding-top: 0;
+        padding-bottom: 0.2em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+    }
+
+  }
+
+}
+

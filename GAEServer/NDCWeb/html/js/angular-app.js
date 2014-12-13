@@ -2,12 +2,10 @@
 
 /* Modules used by the app */
 
-(function (window, angular, undefined) {
+var drugSearchApp = (function (window, angular, undefined) {
 
-  var drugSearchApp = angular.module("drugSearchApp",
+  angular.module("drugSearchApp",
       ["ngAnimate",
-        "ngAria",
-        "ngMaterial",
         "ngResource",
         "materialComponents",
         "drugSearchControllers",

@@ -11,30 +11,32 @@ var drugSearchControllers = angular.module("drugSearchControllers", []);
 
 drugSearchControllers.controller("DisplayController",
     ["$scope"
-        , "$mdToast"
         , "DrugArray"
         , "SearchPrompts"
         , "USDrugEndPoints"
         , "ImageSearchDialog"
         , "SearchErrorDialog"
+        , "SearchToast"
         , function DisplayController($scope,
-                                        $mdToast,
                                         DrugArray,
                                         SearchPrompts,
                                         USDrugEndPoints,
                                         ImageSearchDialog,
-                                        SearchErrorDialog  ) {
+                                        SearchErrorDialog,
+                                        SearchToast) {
 
         $scope.results = DrugArray; // Injected array of drugs
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
         $scope.displayImageDialog = ImageSearchDialog.initialize(); // Link the image dialog box to this scope.
         $scope.displayErrorDialog = SearchErrorDialog.initialize(); // Link the server error dialog box to this scope.
+        $scope.displaySearchToast = SearchToast.initialize(); // Link the search toast to this scope.
+
 
         $scope.performSearch = function (searchParams) {
             var requestTime = Date.now();
             $scope.results.searchActive = true;
             $scope.prompts.setcurrentsearch(searchParams);
-            searchParams.searchsize = 100;  // Set the max searchsize to 100 for now.
+            searchParams.searchsize = 100;  // Set the max search size to 100 for now.
             USDrugEndPoints.typeSearch(searchParams
                 , function (data) {
                     $scope.results.drugArray = data.drugArray;
@@ -98,8 +100,7 @@ drugSearchControllers.controller("DisplayController",
         $scope.resultToast = function (milliseconds) {
 
             var ToastText = utilityModule.k_drugCount($scope.results.drugArray.length, milliseconds);
-            var ToastOptions = {template: "<md-toast>" + ToastText + "</md-toast>", duration: 3000};
-            $mdToast.show(ToastOptions);
+            SearchToast.displayToast(ToastText);
 
         };
 
@@ -121,20 +122,23 @@ drugSearchControllers.controller("DisplayController",
 // This controller is used to retrieve and verify search data.
 
 drugSearchControllers.controller("SearchController",
-    ["$scope"
-        , "DrugArray"
-        , "SearchPrompts"
-        , "USDrugValidateInput"
-        , "ConfirmSearchDialog"
-        , function SearchController($scope,
+    ["$scope",
+         "DrugArray",
+         "SearchPrompts",
+         "USDrugValidateInput",
+         "ConfirmSearchDialog",
+         "SearchPromptPopup",
+         function SearchController($scope,
                                     DrugArray,
                                     SearchPrompts,
                                     USDrugValidateInput,
-                                    ConfirmSearchDialog) {
+                                    ConfirmSearchDialog,
+                                    SearchPromptPopup) {
 
         $scope.results = DrugArray;  // Injected array of drugs.
         $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
         $scope.displaySearchDialog = ConfirmSearchDialog.initialize(); // Set the image dialog box.
+        $scope.displaySearchPrompt = SearchPromptPopup.initialize();
 
         // Setup the default search object bound to the select and input elements
 

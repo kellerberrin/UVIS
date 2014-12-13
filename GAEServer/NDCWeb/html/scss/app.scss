@@ -4,22 +4,17 @@
 @import "compass/layout.scss";
 @import "compass/css3";
 
-// Import the awesome fonts.
-
-//@import "font-awesome";
-
-// Import the Google material primitives.
-
-@import "material";
-
-// Import local material definitions
-// Colors, app-width, etc.
-
-@import "material-local";
 
 // Import local (non-material) CSS markup.
 
-@import "k-local";
+// @import "k-local";
+
+@import "k-top-level";
+@import "k-dialog-toast";
+@import "k-menu-input";
+@import "k-search-prompt";
+@import "k-display-results";
+
 
 
 
