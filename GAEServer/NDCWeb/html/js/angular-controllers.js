@@ -35,7 +35,6 @@
             $scope.performSearch = function (searchParams) {
                 var requestTime = Date.now();
                 $scope.results.searchActive = true;
-                $scope.prompts.setcurrentsearch(searchParams);
                 searchParams.searchsize = 100;  // Set the max search size to 100 for now.
                 USDrugEndPoints.typeSearch(searchParams
                     , function (data) {
@@ -124,32 +123,72 @@
         ["$scope",
             "DrugArray",
             "SearchPrompts",
+            "InputSearchTypes",
             "USDrugValidateInput",
             "ConfirmSearchDialog",
             function SearchController($scope,
                                       DrugArray,
                                       SearchPrompts,
+                                      InputSearchTypes,
                                       USDrugValidateInput,
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
                 $scope.displaySearchDialog = ConfirmSearchDialog.initialize(); // Set the image dialog box.
+                $scope.searchTypes = InputSearchTypes; // Search type service.
 
-                // Setup the default search object bound to the select and input elements
+                $scope.blankSearchParams =  {
+                        searchstring: "",
+                        searchtype: "name"
+                    };
 
-                $scope.search = $scope.prompts.getdisplaysearch();
+                $scope.getSearchParams = function () {
+
+                    return {
+                        searchstring: $scope.search.searchtext,
+                        searchtype: $scope.search.selectedsearchtype.type
+                    };
+
+                };
+
+                $scope.setSearchParams = function (searchParams) {
+
+                    if (InputSearchTypes.textdisplaytype(searchParams.searchtype)) { // Setup the displayed search
+
+                        $scope.search = {};
+                        $scope.search.searchtext = searchParams.searchstring;
+                        $scope.search.selectedsearchtype = InputSearchTypes.getdisplaytype(searchParams.searchtype);
+
+                    }
+                    else { // Otherwise blank out the search fields
+
+                        $scope.setSearchParams($scope.blankSearchParams);
+
+                    }
+
+                };
+
+                // default search type.
+
+                $scope.setSearchParams($scope.blankSearchParams);
+
+                // Setup a callback to modify the input search fields and perform
+                // an unverified search from the prompt popup.
+
+                $scope.promptSearch = function(searchParams) {
+
+                    $scope.setSearchParams(searchParams);
+                    $scope.performSearch(searchParams);
+
+                };
 
                 // Verify the input variables and perform the search
 
                 $scope.getParamsSearch = function () {
 
-                    var searchParams = {
-                        searchstring: $scope.search.searchtext,
-                        searchtype: $scope.search.selectedsearchtype.type
-                    };
 
-                    USDrugValidateInput.Validate(searchParams,
+                    USDrugValidateInput.Validate($scope.getSearchParams(),
 
                         function (searchParams) {  // validation successful
 
@@ -189,15 +228,15 @@
                         $scope.getParamsSearch();
                     }
                     else {
-                        $scope.prompts.setpromptstatus();
+                        SearchPrompts.setPromptStatus(true, $scope.getSearchParams());
                     }
 
                 };
 
                 $scope.inputactive = function () {
 
-                    $scope.prompts.setfocus(true);
-                    $scope.prompts.setpromptstatus();
+
+                    SearchPrompts.setPromptStatus(true, $scope.getSearchParams());
 
                 };
 
@@ -209,8 +248,7 @@
 
                 $scope.inputinactive = function () {
 
-                    $scope.prompts.setfocus(false);
-                    $scope.prompts.setpromptstatus();
+                    SearchPrompts.setPromptStatus(false, $scope.getSearchParams());
 
                 };
 

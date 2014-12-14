@@ -23,6 +23,7 @@
 *
 ******************************************************************************************************************/
 
+$K-Prompt-History-Border: $K-PRIMARY-COLOR-500;
 $K-Prompt-Type-Color: $K-PRIMARY-COLOR-700;
 $K-Prompt-History-Title-Color: lighten($K-ACCENT-COLOR-100, 15%);
 $K-Prompt-Prompt-Title-Color: $K-PRIMARY-COLOR-100;
@@ -32,11 +33,17 @@ $K-Search-Prompt-Dismiss-Color: $K-ACCENT-COLOR-100;
 $K-Search-Type-Color: white;
 $K-Search-Type-Background-Color: $md-light-blue-500;
 
+
+
+
 #k-search-prompt-container {
+
+  border: solid 2px $K-Prompt-History-Border;
 
   #k-search-prompt-list {
 
     display: none;
+    border: solid 2px $K-Prompt-Prompt-Title-Color;
 
     &.promptActive {
 
@@ -111,76 +118,77 @@ $K-Search-Type-Background-Color: $md-light-blue-500;
 
   }
 
-}
+  #k-search-history-list {
 
-#k-search-history-list {
+    display: none;
+    border: solid 2px $K-Prompt-History-Title-Color;
 
-  display: none;
+    &.historyActive {
 
-  &.historyActive {
-
-    display: block;
-
-  }
-
-  #k-search-history-title {
-
-    color: $md-black-primary-text;
-    text-align: center;
-    padding: 0.3em;
-    background-color: $K-Prompt-History-Title-Color;
-
-  }
-
-  .k-search-history-array {
-
-    @include transition(all 0.25s ease-in-out);
-
-    &:hover {
-
-      @include K-MaterialBoxShadow(2);
-      @include translate(0px, -2px);
-      color: $K-SearchButton-Inactive-color;
+      display: block;
 
     }
 
-    .k-search-history-item {
+    #k-search-history-title {
 
-      position: relative;
-      width: 100%;
-      text-align: left;
       color: $md-black-primary-text;
-      cursor: pointer;
-      padding: 0;
-      margin: 0;
+      text-align: center;
+      padding: 0.3em;
+      background-color: $K-Prompt-History-Title-Color;
+
+    }
+
+    .k-search-history-array {
+
+      @include transition(all 0.25s ease-in-out);
 
       &:hover {
 
-        color: $K-History-Item-Active-Color;
+        @include K-MaterialBoxShadow(2);
+        @include translate(0px, -2px);
+        color: $K-SearchButton-Inactive-color;
 
       }
 
-      .k-search-history-type {
+      .k-search-history-item {
 
+        position: relative;
         width: 100%;
-        color: $K-Prompt-Type-Color;
-        font-size: 0.7em;
-        font-weight: 700;
-        padding-left: 0.5em;
-        padding-top: 0.1em;
-        padding-bottom: 0.0em;
+        text-align: left;
+        color: $md-black-primary-text;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
 
-      }
+        &:hover {
 
-      .k-search-history-value {
+          color: $K-History-Item-Active-Color;
 
-        width: 100%;
-        padding-left: 1.5em;
-        padding-top: 0;
-        padding-bottom: 0.2em;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        }
+
+        .k-search-history-type {
+
+          width: 100%;
+          color: $K-Prompt-Type-Color;
+          font-size: 0.7em;
+          font-weight: 700;
+          padding-left: 0.5em;
+          padding-top: 0.1em;
+          padding-bottom: 0.0em;
+
+        }
+
+        .k-search-history-value {
+
+          width: 100%;
+          padding-left: 1.5em;
+          padding-top: 0;
+          padding-bottom: 0.2em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+
+        }
 
       }
 
@@ -189,4 +197,5 @@ $K-Search-Type-Background-Color: $md-light-blue-500;
   }
 
 }
+
 

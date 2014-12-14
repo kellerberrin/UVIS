@@ -1,11 +1,11 @@
 <!-- The search prompt popup -->
 
-<k-material-popup id="k-search-prompt-popup" displayPopup="prompts.displaysearchprompt()">
+<k-material-popup id="k-search-prompt-popup" displayPopup="prompts.displaySearchPrompt()">
 
     <div id="k-search-prompt-container" ng-controller="SearchPromptController">
 
         <div id="k-search-prompt-list"
-             ng-class="{ promptActive : prompts.getpromptactive() }">
+             ng-class="{ promptActive : prompts.promptActive() }">
 
             <div id="k-search-prompt-title">
                 <div>Search Ahead</div>
@@ -15,11 +15,11 @@
                  ng-repeat="prompt in prompts.getpromptarray() track by $index">
 
                 <div class="k-search-prompt-item"
-                     ng-click="performSearch(prompt)">
+                     ng-click="promptSearch(prompt)">
 
                     <div class="k-search-prompt-type">
 
-                        {{ prompts.getdisplaytype(prompt.searchtype).typeprompt }}
+                        {{ types.getdisplaytype(prompt.searchtype).typeprompt }}
 
                     </div>
 
@@ -31,14 +31,14 @@
 
                 </div>
 
-                <div class="k-divider"></div>
+                <div class="k-material-divider"></div>
 
             </div>
 
         </div>
 
         <div id="k-search-history-list"
-             ng-class="{ historyActive : prompts.gethistoryactive() }">
+             ng-class="{ historyActive : prompts.historyActive() }">
 
             <div id="k-search-history-title">
                 <div>Search History</div>
@@ -48,11 +48,11 @@
                  ng-repeat="history in prompts.gethistoryarray() track by $index">
 
                 <div class="k-search-history-item"
-                     ng-click="performSearch(history)">
+                     ng-click="promptSearch(history)">
 
                     <div class="k-search-history-type">
 
-                        {{ prompts.getdisplaytype(history.searchtype).typeprompt }}
+                        {{ types.getdisplaytype(history.searchtype).typeprompt }}
 
                     </div>
 
@@ -64,7 +64,7 @@
 
                 </div>
 
-                <div class="k-divider"></div>
+                <div class="k-material-divider"></div>
 
             </div>
 

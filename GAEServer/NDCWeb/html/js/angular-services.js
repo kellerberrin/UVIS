@@ -304,6 +304,90 @@
     });
 
 
+    drugSearchServices.factory("InputSearchTypes", function () {
+
+
+        var displayTypeArray = [];
+
+        // Define the text input search types.
+
+        var searchTypes = [
+            {type: "name", typeprompt: "Name", defaulttext: "Livalo"},
+            {type: "active", typeprompt: "Ingredient", defaulttext: "Pitavastatin"},
+            {type: "ndc", typeprompt: "Code (NDC)", defaulttext: "0002-4772-90"},
+            {type: "ingredient", typeprompt: "Ingredient (Extended+)", defaulttext: "Pitavastatin"},
+            {type: "image", typeprompt: "Image Search (NDC9+)", defaulttext: "00002-4772"}
+        ];
+
+        var getdisplaytype = function (type) {  // Given a parameter search type, return the appropriate text input search type
+
+            if (type == "name") {
+
+                return searchTypes[0];
+
+            } else if (type == "active") {
+
+                return searchTypes[1];
+
+            } else if (type == "ndc") {
+
+                return searchTypes[2];
+
+            } else if (type == "ingredient") {
+
+                return searchTypes[3];
+
+            } else if (type == "image") {
+
+                return searchTypes[4];
+
+            } else {  // Should not happen
+
+                utilityModule.k_consoleLog("get display prompt - Badtype");
+                return searchTypes[0];
+
+            }
+
+        };
+
+
+        var getTypesArray = function () {
+
+            displayTypeArray = [];
+
+            for (var i = 0; i < searchTypes.length; i++) {
+
+                if (textdisplaytype(searchTypes[i].type)) {
+
+                    displayTypeArray.push(searchTypes[i]);
+
+                }
+
+            }
+
+            return displayTypeArray;
+
+        };
+
+        var textdisplaytype = function (type) {  // Given a search type; check if this a text input search.
+
+            return (type == "name" || type == "active" || type == "ndc");
+
+        };
+
+
+        return {
+
+            getdisplaytype : getdisplaytype,
+
+            getTypesArray : getTypesArray,
+
+            textdisplaytype : textdisplaytype
+
+        };
+
+    });
+
 })(window, window.angular);
 
 

@@ -145,15 +145,12 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 248, ../scss/_material.scss */
+/* line 247, ../scss/_material.scss */
 .k-material-raised-button:hover {
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -169,21 +166,18 @@ body {
 * The class for k-material-flat-buttons.
 *
 ********************************************************************************************************************/
-/* line 263, ../scss/_material.scss */
+/* line 262, ../scss/_material.scss */
 .k-material-flat-button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 272, ../scss/_material.scss */
+/* line 270, ../scss/_material.scss */
 .k-material-flat-button:hover {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -199,7 +193,7 @@ body {
 * A simple line divider object.
 *
 ***************************************************************************************************************/
-/* line 288, ../scss/_material.scss */
+/* line 286, ../scss/_material.scss */
 .k-material-divider {
   display: block;
   width: 100%;
@@ -212,7 +206,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 304, ../scss/_material.scss */
+/* line 302, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -222,7 +216,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 314, ../scss/_material.scss */
+/* line 312, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -233,7 +227,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 325, ../scss/_material.scss */
+/* line 323, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -256,7 +250,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 342, ../scss/_material.scss */
+/* line 340, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -267,7 +261,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 356, ../scss/_material.scss */
+/* line 354, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
   width: 100%;
   height: 100%;
@@ -278,7 +272,7 @@ body {
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 375, ../scss/_material.scss */
+/* line 373, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -297,7 +291,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 391, ../scss/_material.scss */
+/* line 389, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -308,7 +302,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 405, ../scss/_material.scss */
+/* line 403, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -316,10 +310,10 @@ body {
 
 /****************************************************************************************************
 *
-* The toast classes for material toasts.
+* The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 420, ../scss/_material.scss */
+/* line 418, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -334,7 +328,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 435, ../scss/_material.scss */
+/* line 433, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -345,10 +339,12 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 449, ../scss/_material.scss */
+/* line 447, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
+  background-color: white;
+  color: black;
 }
 
 /*************************************************************************************************************
@@ -633,15 +629,12 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 248, ../scss/_material.scss */
+/* line 247, ../scss/_material.scss */
 .k-material-raised-button:hover {
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -657,21 +650,18 @@ body {
 * The class for k-material-flat-buttons.
 *
 ********************************************************************************************************************/
-/* line 263, ../scss/_material.scss */
+/* line 262, ../scss/_material.scss */
 .k-material-flat-button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 272, ../scss/_material.scss */
+/* line 270, ../scss/_material.scss */
 .k-material-flat-button:hover {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -687,7 +677,7 @@ body {
 * A simple line divider object.
 *
 ***************************************************************************************************************/
-/* line 288, ../scss/_material.scss */
+/* line 286, ../scss/_material.scss */
 .k-material-divider {
   display: block;
   width: 100%;
@@ -700,7 +690,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 304, ../scss/_material.scss */
+/* line 302, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -710,7 +700,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 314, ../scss/_material.scss */
+/* line 312, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -721,7 +711,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 325, ../scss/_material.scss */
+/* line 323, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -744,7 +734,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 342, ../scss/_material.scss */
+/* line 340, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -755,7 +745,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 356, ../scss/_material.scss */
+/* line 354, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
   width: 100%;
   height: 100%;
@@ -766,7 +756,7 @@ body {
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 375, ../scss/_material.scss */
+/* line 373, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -785,7 +775,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 391, ../scss/_material.scss */
+/* line 389, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -796,7 +786,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 405, ../scss/_material.scss */
+/* line 403, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -804,10 +794,10 @@ body {
 
 /****************************************************************************************************
 *
-* The toast classes for material toasts.
+* The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 420, ../scss/_material.scss */
+/* line 418, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -822,7 +812,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 435, ../scss/_material.scss */
+/* line 433, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -833,10 +823,12 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 449, ../scss/_material.scss */
+/* line 447, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
+  background-color: white;
+  color: black;
 }
 
 /*************************************************************************************************************
@@ -1002,13 +994,13 @@ body {
 * Search Toast
 *
 ***********************************************************************************************/
-/* line 219, ../scss/_k-dialog-toast.scss */
+/* line 218, ../scss/_k-dialog-toast.scss */
 #k-search-toast-content {
   height: 100%;
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 225, ../scss/_k-dialog-toast.scss */
+/* line 224, ../scss/_k-dialog-toast.scss */
 #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1em;
@@ -1163,15 +1155,12 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 248, ../scss/_material.scss */
+/* line 247, ../scss/_material.scss */
 .k-material-raised-button:hover {
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -1187,21 +1176,18 @@ body {
 * The class for k-material-flat-buttons.
 *
 ********************************************************************************************************************/
-/* line 263, ../scss/_material.scss */
+/* line 262, ../scss/_material.scss */
 .k-material-flat-button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 272, ../scss/_material.scss */
+/* line 270, ../scss/_material.scss */
 .k-material-flat-button:hover {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -1217,7 +1203,7 @@ body {
 * A simple line divider object.
 *
 ***************************************************************************************************************/
-/* line 288, ../scss/_material.scss */
+/* line 286, ../scss/_material.scss */
 .k-material-divider {
   display: block;
   width: 100%;
@@ -1230,7 +1216,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 304, ../scss/_material.scss */
+/* line 302, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -1240,7 +1226,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 314, ../scss/_material.scss */
+/* line 312, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -1251,7 +1237,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 325, ../scss/_material.scss */
+/* line 323, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1274,7 +1260,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 342, ../scss/_material.scss */
+/* line 340, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1285,7 +1271,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 356, ../scss/_material.scss */
+/* line 354, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
   width: 100%;
   height: 100%;
@@ -1296,7 +1282,7 @@ body {
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 375, ../scss/_material.scss */
+/* line 373, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1315,7 +1301,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 391, ../scss/_material.scss */
+/* line 389, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1326,7 +1312,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 405, ../scss/_material.scss */
+/* line 403, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -1334,10 +1320,10 @@ body {
 
 /****************************************************************************************************
 *
-* The toast classes for material toasts.
+* The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 420, ../scss/_material.scss */
+/* line 418, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1352,7 +1338,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 435, ../scss/_material.scss */
+/* line 433, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1363,10 +1349,12 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 449, ../scss/_material.scss */
+/* line 447, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
+  background-color: white;
+  color: black;
 }
 
 /*************************************************************************************************************
@@ -1701,15 +1689,12 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 248, ../scss/_material.scss */
+/* line 247, ../scss/_material.scss */
 .k-material-raised-button:hover {
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -1725,21 +1710,18 @@ body {
 * The class for k-material-flat-buttons.
 *
 ********************************************************************************************************************/
-/* line 263, ../scss/_material.scss */
+/* line 262, ../scss/_material.scss */
 .k-material-flat-button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 272, ../scss/_material.scss */
+/* line 270, ../scss/_material.scss */
 .k-material-flat-button:hover {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -1755,7 +1737,7 @@ body {
 * A simple line divider object.
 *
 ***************************************************************************************************************/
-/* line 288, ../scss/_material.scss */
+/* line 286, ../scss/_material.scss */
 .k-material-divider {
   display: block;
   width: 100%;
@@ -1768,7 +1750,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 304, ../scss/_material.scss */
+/* line 302, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -1778,7 +1760,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 314, ../scss/_material.scss */
+/* line 312, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -1789,7 +1771,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 325, ../scss/_material.scss */
+/* line 323, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1812,7 +1794,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 342, ../scss/_material.scss */
+/* line 340, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1823,7 +1805,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 356, ../scss/_material.scss */
+/* line 354, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
   width: 100%;
   height: 100%;
@@ -1834,7 +1816,7 @@ body {
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 375, ../scss/_material.scss */
+/* line 373, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1853,7 +1835,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 391, ../scss/_material.scss */
+/* line 389, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1864,7 +1846,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 405, ../scss/_material.scss */
+/* line 403, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -1872,10 +1854,10 @@ body {
 
 /****************************************************************************************************
 *
-* The toast classes for material toasts.
+* The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 420, ../scss/_material.scss */
+/* line 418, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1890,7 +1872,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 435, ../scss/_material.scss */
+/* line 433, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1901,10 +1883,12 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 449, ../scss/_material.scss */
+/* line 447, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
+  background-color: white;
+  color: black;
 }
 
 /*************************************************************************************************************
@@ -1931,15 +1915,20 @@ body {
 * Menu Bar, search ahead and history
 *
 ******************************************************************************************************************/
-/* line 37, ../scss/_k-search-prompt.scss */
+/* line 39, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container {
+  border: solid 2px #3f51b5;
+}
+/* line 43, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list {
   display: none;
+  border: solid 2px #c5cae9;
 }
-/* line 41, ../scss/_k-search-prompt.scss */
+/* line 48, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list.promptActive {
   display: block;
 }
-/* line 47, ../scss/_k-search-prompt.scss */
+/* line 54, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title {
   color: black;
   text-align: center;
@@ -1948,14 +1937,14 @@ body {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
 }
-/* line 58, ../scss/_k-search-prompt.scss */
+/* line 65, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 62, ../scss/_k-search-prompt.scss */
+/* line 69, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -1966,7 +1955,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 70, ../scss/_k-search-prompt.scss */
+/* line 77, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item {
   position: relative;
   width: 100%;
@@ -1974,11 +1963,11 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 78, ../scss/_k-search-prompt.scss */
+/* line 85, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item:hover {
   color: #03a9f4;
 }
-/* line 84, ../scss/_k-search-prompt.scss */
+/* line 91, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-type {
   width: 100%;
   color: #303f9f;
@@ -1988,7 +1977,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 96, ../scss/_k-search-prompt.scss */
+/* line 103, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-value {
   width: 100%;
   padding-left: 1.5em;
@@ -1998,31 +1987,31 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-
-/* line 116, ../scss/_k-search-prompt.scss */
-#k-search-history-list {
+/* line 121, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list {
   display: none;
-}
-/* line 120, ../scss/_k-search-prompt.scss */
-#k-search-history-list.historyActive {
-  display: block;
+  border: solid 2px #ffccde;
 }
 /* line 126, ../scss/_k-search-prompt.scss */
-#k-search-history-list #k-search-history-title {
+#k-search-prompt-container #k-search-history-list.historyActive {
+  display: block;
+}
+/* line 132, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list #k-search-history-title {
   color: black;
   text-align: center;
   padding: 0.3em;
   background-color: #ffccde;
 }
-/* line 135, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array {
+/* line 141, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 139, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array:hover {
+/* line 145, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2032,8 +2021,8 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 147, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array .k-search-history-item {
+/* line 153, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item {
   position: relative;
   width: 100%;
   text-align: left;
@@ -2042,12 +2031,12 @@ body {
   padding: 0;
   margin: 0;
 }
-/* line 157, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array .k-search-history-item:hover {
+/* line 163, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item:hover {
   color: #ff80ab;
 }
-/* line 163, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-type {
+/* line 169, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-type {
   width: 100%;
   color: #303f9f;
   font-size: 0.7em;
@@ -2056,8 +2045,8 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 175, ../scss/_k-search-prompt.scss */
-#k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-value {
+/* line 181, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-value {
   width: 100%;
   padding-left: 1.5em;
   padding-top: 0;
@@ -2214,15 +2203,12 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 248, ../scss/_material.scss */
+/* line 247, ../scss/_material.scss */
 .k-material-raised-button:hover {
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -2238,21 +2224,18 @@ body {
 * The class for k-material-flat-buttons.
 *
 ********************************************************************************************************************/
-/* line 263, ../scss/_material.scss */
+/* line 262, ../scss/_material.scss */
 .k-material-flat-button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   border: none;
   margin: auto auto;
   padding: 0;
   cursor: pointer;
 }
-/* line 272, ../scss/_material.scss */
+/* line 270, ../scss/_material.scss */
 .k-material-flat-button:hover {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -2268,7 +2251,7 @@ body {
 * A simple line divider object.
 *
 ***************************************************************************************************************/
-/* line 288, ../scss/_material.scss */
+/* line 286, ../scss/_material.scss */
 .k-material-divider {
   display: block;
   width: 100%;
@@ -2281,7 +2264,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 304, ../scss/_material.scss */
+/* line 302, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -2291,7 +2274,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 314, ../scss/_material.scss */
+/* line 312, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -2302,7 +2285,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 325, ../scss/_material.scss */
+/* line 323, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2325,7 +2308,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 342, ../scss/_material.scss */
+/* line 340, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2336,7 +2319,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 356, ../scss/_material.scss */
+/* line 354, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
   width: 100%;
   height: 100%;
@@ -2347,7 +2330,7 @@ body {
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 375, ../scss/_material.scss */
+/* line 373, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2366,7 +2349,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 391, ../scss/_material.scss */
+/* line 389, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2377,7 +2360,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 405, ../scss/_material.scss */
+/* line 403, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -2385,10 +2368,10 @@ body {
 
 /****************************************************************************************************
 *
-* The toast classes for material toasts.
+* The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 420, ../scss/_material.scss */
+/* line 418, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2403,7 +2386,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 435, ../scss/_material.scss */
+/* line 433, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2414,10 +2397,12 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 449, ../scss/_material.scss */
+/* line 447, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
+  background-color: white;
+  color: black;
 }
 
 /*************************************************************************************************************

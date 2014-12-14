@@ -35,7 +35,7 @@
 
             <select id="k-search-searchtype"
                     ng-model="search.selectedsearchtype"
-                    ng-options="s.typeprompt for s in prompts.getsearchtypes()"
+                    ng-options="s.typeprompt for s in searchTypes.getTypesArray()"
                     aria-label="Select Search Type">
             </select>
 
@@ -52,8 +52,8 @@
                    class="k-input-text"
                    ng-model="search.searchtext"
                    ng-keyup="inputkeystroke($event)"
-                   k-focusin="inputactive()"
-                   k-focusout="delayinactive()"
+                   ng-focus="inputactive()"
+                   ng-blur="delayinactive()"
                    aria-label="Search Text Input">
             </input>
 
@@ -69,6 +69,7 @@
     </div>
 
     <!-- The Search Prompt Popup -->
+    <!-- Important! The popup is positioned relative to this element -->
     <div id="k-search-prompt-anchor" ng-include src=" 'partial/SearchPrompt.html' "></div>
     <!-- End Search Prompt Popup -->
 
