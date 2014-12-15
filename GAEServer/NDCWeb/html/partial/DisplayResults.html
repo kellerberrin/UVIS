@@ -1,6 +1,6 @@
-<div id="k-search-results">
+<div id="k-search-results" ng-controller="ResultsController">
 
-    <div id="k-results-container" ng-repeat="drugRecord in results.drugArray track by $index">
+    <div id="k-results-container" ng-repeat="drugRecord in results.getDrugArray() track by $index">
 
         <div class="k-display-drug">
 
@@ -8,9 +8,9 @@
 
             <div class="k-display-header-bar">
 
-                <div ng-click="nameSearch(drugRecord.name)"
+                <div ng-click="drugSearch.nameSearch(drugRecord.name)"
                         class="k-display-name-search k-material-fab"
-                        ng-class="{ searchactive : results.searchActive }">
+                        ng-class="{ searchactive : results.getSearchActive() }">
                 </div>
 
                 <div class="k-display-name-label">
@@ -61,9 +61,9 @@
 
                 <div class="k-display-active-label">
 
-                    <div ng-click="ingredientSearch(drugRecord)"
+                    <div ng-click="drugSearch.ingredientSearch(drugRecord)"
                             class="k-display-active-search k-material-fab"
-                            ng-class="{ searchactive : results.searchActive , validselection : validSelection(drugRecord) }">
+                            ng-class="{ searchactive : results.getSearchActive() , validselection : validSelection(drugRecord) }">
                     </div>
 
                     <div class="k-display-active-label-text">Active Ingredients</div>
@@ -122,9 +122,9 @@
 
             <div class="k-display-ndc-container">
 
-                <div ng-click="ndc9Search(drugRecord.ndc9)"
+                <div ng-click="drugSearch.ndc9Search(drugRecord.ndc9)"
                         class="k-display-ndc9-search k-material-fab"
-                        ng-class="{ searchactive : results.searchActive }">
+                        ng-class="{ searchactive : results.getSearchActive() }">
                 </div>
 
                 <div class="k-display-ndc-label">

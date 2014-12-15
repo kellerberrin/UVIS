@@ -1,10 +1,10 @@
-<k-material-dialog id="k-search-dialog" displaydialog="displaySearchDialog">
+<k-material-dialog id="k-search-dialog" displaydialog="searchDialog.initialize()">
 
     <div id="k-search-dialog-content">
 
         <div id="k-search-dialog-heading"><span>Confirm or Modify Search</span></div>
 
-        <div id="k-search-dialog-text">{{ displaySearchDialog.reason }}</div>
+        <div id="k-search-dialog-text">{{ searchDialog.reason() }}</div>
 
         <div class="k-material-divider"></div>
 
@@ -12,11 +12,11 @@
 
             <button id="k-search-dialog-confirm"
                     class="k-material-flat-button"
-                    ng-click="displaySearchDialog.modifySearch(false)">Confirm</button>
+                    ng-click="searchDialog.modifySearch(false)">Confirm</button>
 
             <button id="k-search-dialog-modify"
                     class="k-material-flat-button"
-                    ng-click="displaySearchDialog.modifySearch(true)">Modify</button>
+                    ng-click="searchDialog.modifySearch(true)">Modify</button>
 
         </div>
 

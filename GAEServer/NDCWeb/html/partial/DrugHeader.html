@@ -2,9 +2,6 @@
 
 <div id="k-drug-toolbar" ng-controller="SearchController">
 
-    <!-- The Input Dialog Box -->
-    <div id="k-input-dialog-anchor" ng-include src=" 'partial/SearchDialog.html' "></div>
-    <!-- End Input Dialog Box -->
 
     <div id="k-icon-toolbar-tools">
 
@@ -60,7 +57,7 @@
             <div id="k-perform-search"
                  class="k-material-fab"
                  ng-click="getParamsSearch()"
-                 ng-class="{ searchActive : results.searchActive }"
+                 ng-class="{ searchActive : results.getSearchActive() }"
                  aria-label="Perform Drug Search">
             </div>
 

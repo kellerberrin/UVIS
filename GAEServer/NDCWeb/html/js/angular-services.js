@@ -6,52 +6,7 @@
 
     /* Services */
 
-    var drugSearchServices = angular.module("drugSearchServices", ["ngResource"]);
-
-
-    /* Drug result arrays scope injection */
-
-    drugSearchServices.factory("DrugArray", function () {
-
-        return {
-            drugArray: []
-            , searchActive: false
-        };
-
-    });
-
-
-
-    drugSearchServices.factory("USDrugEndPoints", ["$resource", function ($resource) {
-
-        return $resource("/_ah/api/searchUSdrugs/v1/typeSearch"   //url
-
-            , {}    // default arguments
-
-            , {
-                typeSearch: {
-                    method: "POST"
-                    , params: {searchstring: "@searchstring", searchtype: "@searchtype", searchsize: "@searchsize"}
-                    , transformResponse: function (jsonData, dataHeaders) {
-
-// Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
-// This code looks fragile because it assumes the API response will be in a specific format.
-
-                        var parsedData = new utilityModule.K_clientDrugData();
-                        if (typeof jsonData == "string") {
-                            var obj1 = angular.fromJson(jsonData);
-                            if (typeof obj1.resultMessage == "string") {
-                                var obj2 = angular.fromJson(obj1.resultMessage);
-                                parsedData.parseJsonData(obj2);
-                            }
-                        }
-                        return {drugArray: parsedData.drugDataArray};
-                    }
-                }
-            }
-        );
-
-    }]);
+    var drugSearchServices = angular.module("drugSearchServices", []);
 
 
     drugSearchServices.factory("USDrugValidateInput", [function () {
@@ -133,7 +88,7 @@
     }]);
 
 
-    drugSearchServices.factory("ImageSearchDialog", function () {
+    drugSearchServices.factory("ImageSearchDialog", [ "DrugSearch", function (DrugSearch) {
 
         var imageSearchDialog = {
             show: false, // Display the dialog box
@@ -159,16 +114,21 @@
 
             },
 
+            getImage : function() {
+
+                return imageSearchDialog.imageurl;
+
+            },
+
             searchImage: function () {
 
                 imageSearchDialog.show = false;
-                return imageSearchDialog.searchParams;
-
+                DrugSearch.performSearch(imageSearchDialog.searchParams);
             }
 
         }
 
-    });
+    }]);
 
 
     drugSearchServices.factory("ConfirmSearchDialog", ["$q", function ($q) {
@@ -180,15 +140,6 @@
             dialogStyle: {width: "80%", "max-width": "500px"}
         }; // Set the dialog width
         var deferred = null;
-
-        var modifySearch = function (modify) {
-
-            confirmSearchDialog.show = false;
-            deferred.resolve(modify);
-
-        };
-
-        confirmSearchDialog.modifySearch = modifySearch;
 
         return {
 
@@ -207,9 +158,22 @@
 
                 return deferred.promise; // Return the promise.
 
+            },
+
+            modifySearch : function (modify) {
+
+                confirmSearchDialog.show = false;
+                deferred.resolve(modify);
+
+            },
+
+            reason: function() {
+
+                return confirmSearchDialog.reason;
+
             }
 
-        }
+    }
 
     }]);
 
@@ -266,36 +230,23 @@
                 seterrortext(error);
                 searchErrorDialog.show = true;
 
-            }
+            },
 
+            status : function() {
 
-        }
-
-    });
-
-
-    drugSearchServices.factory("SearchToast", function () {
-
-        var displayToast = {
-            show: false, // Display the dialog box
-            timeOut: 3500, // Timeout in milliseconds
-            searchMessage: "", // Set the hi-res image
-            toastStyle: {width: "80%", "max-width": "400px"}
-        }; // Set the toast width
-
-
-        return {
-
-            initialize: function () {
-
-                return displayToast;
+                return searchErrorDialog.status;
 
             },
 
-            displayToast: function (message) {
+            statusText : function() {
 
-                displayToast.searchMessage = message;
-                displayToast.show = true;
+                return searchErrorDialog.statusText;
+
+            },
+
+            action : function() {
+
+                return searchErrorDialog.action;
 
             }
 

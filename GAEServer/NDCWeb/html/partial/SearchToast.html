@@ -1,8 +1,8 @@
-<k-material-toast id="k-search-toast" displayToast="displaySearchToast">
+<k-material-toast id="k-search-toast" displayToast="searchToast.initialize()">
 
     <div id="k-search-toast-content">
 
-        <div id="k-search-toast-message">{{ displaySearchToast.searchMessage }}</div>
+        <div id="k-search-toast-message">{{ searchToast.message() }}</div>
 
     </div>
 

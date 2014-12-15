@@ -25,9 +25,11 @@
 
     /* Type ahead prompts and search history scope injection */
 
-    searchPrompt.factory("SearchPrompts", ["USDrugForwardPrompt",
-        "SearchPromptPopup",
-        function (USDrugForwardPrompt, SearchPromptPopup) {
+    searchPrompt.factory("SearchPrompts",
+        ["ReadForwardPrompts",
+            "SearchPromptPopup",
+            function (ReadForwardPrompts,
+                      SearchPromptPopup) {
 
             var historyArray = [];  // History of searches
             var totalPromptCount = 10;
@@ -90,7 +92,7 @@
 
                 var requestTime = Date.now();
 
-                USDrugForwardPrompt.typeSearch(promptParams,
+                ReadForwardPrompts.typeSearch(promptParams,
 
                     function (data) {
 
@@ -208,7 +210,7 @@
 
             return {
 
-                displaySearchPrompt: function() {
+                displaySearchPrompt: function () {
                     return SearchPromptPopup.initialize();  // Active the Popup to display search prompts
                 },
 
@@ -230,7 +232,7 @@
                     return displayPromptArray;
                 },
 
-                addtohistory: function (searchParams) {
+                addToHistory: function (searchParams) {
 
                     historyArray.unshift(searchParams);
                     setdisplaypromptarrays();
@@ -243,7 +245,7 @@
         }]);
 
 
-    searchPrompt.factory("USDrugForwardPrompt", ["$resource", function ($resource) {
+    searchPrompt.factory("ReadForwardPrompts", ["$resource", function ($resource) {
 
         return $resource("/_ah/api/searchUSdrugs/v1/forwardPrompt"   //url
 

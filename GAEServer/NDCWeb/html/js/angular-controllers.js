@@ -7,141 +7,47 @@
 
     var drugSearchControllers = angular.module("drugSearchControllers", []);
 
-// Top level controller - contains all the drug data.
+// Top level controller - handles dialog boxes and wait cursor.
 
     drugSearchControllers.controller("DisplayController",
-        ["$scope"
-            , "DrugArray"
-            , "SearchPrompts"
-            , "USDrugEndPoints"
-            , "ImageSearchDialog"
-            , "SearchErrorDialog"
-            , "SearchToast"
-            , function DisplayController($scope,
-                                         DrugArray,
-                                         SearchPrompts,
-                                         USDrugEndPoints,
-                                         ImageSearchDialog,
-                                         SearchErrorDialog,
-                                         SearchToast) {
+        ["$scope",
+            "ImageSearchDialog",
+            "ConfirmSearchDialog",
+            "SearchErrorDialog",
+            function DisplayController($scope,
+                                       ImageSearchDialog,
+                                       ConfirmSearchDialog,
+                                       SearchErrorDialog) {
 
-            $scope.results = DrugArray; // Injected array of drugs
-            $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-            $scope.displayImageDialog = ImageSearchDialog.initialize(); // Link the image dialog box to this scope.
-            $scope.displayErrorDialog = SearchErrorDialog.initialize(); // Link the server error dialog box to this scope.
-            $scope.displaySearchToast = SearchToast.initialize(); // Link the search toast to this scope.
+                $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
+                $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
+                $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
 
-
-            $scope.performSearch = function (searchParams) {
-                var requestTime = Date.now();
-                $scope.results.searchActive = true;
-                searchParams.searchsize = 100;  // Set the max search size to 100 for now.
-                USDrugEndPoints.typeSearch(searchParams
-                    , function (data) {
-                        $scope.results.drugArray = data.drugArray;
-                        if (data.drugArray.length > 0) {
-                            $scope.prompts.addtohistory(searchParams);
-                        }
-                        $scope.results.searchActive = false;
-                        var milliseconds = Date.now() - requestTime;
-                        $scope.resultToast(milliseconds);
-                    }
-                    , function (error) {
-
-                        $scope.results.searchActive = false;
-                        $scope.results.drugArray = [];
-                        SearchErrorDialog.displayError(error);
-                        utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
-
-                    });
-
-            };
-
-            $scope.nameSearch = function (name) {
-
-                var searchParams = {searchstring: name, searchtype: "name"};
-                $scope.performSearch(searchParams);
-
-            };
-
-            $scope.ingredientSearch = function (drugRecord) {
-
-                if ($scope.validSelection(drugRecord)) {
-
-                    var validJSON = JSON.stringify(drugRecord.activeArray);
-                    var searchParams = {searchstring: validJSON, searchtype: "ingredient"};
-                    $scope.performSearch(searchParams);
-
-                }
-
-            };
-
-            $scope.validSelection = function (drugRecord) {
-
-                var validSelection = false;
-                for (var i = 0; i < drugRecord.activeArray.length; i++) {
-
-                    validSelection = validSelection || drugRecord.activeArray[i].activeselected;
-                }
-
-                return validSelection;
-
-            };
-
-            $scope.ndc9Search = function (ndc9) {
-
-                var searchParams = {searchstring: ndc9, searchtype: "ndc"};
-                $scope.performSearch(searchParams);
-
-            };
-
-            $scope.resultToast = function (milliseconds) {
-
-                var ToastText = utilityModule.k_drugCount($scope.results.drugArray.length, milliseconds);
-                SearchToast.displayToast(ToastText);
-
-            };
-
-            $scope.showImageDialog = function (drugRecord) {
-
-                var searchParams = {searchstring: utilityModule.k_NDC9SearchArray(drugRecord), searchtype: "image"};
-                ImageSearchDialog.displayImage(drugRecord.largeimageurl, searchParams);
-
-            };
-
-            $scope.imageSearch = function (drugRecord) {
-
-                $scope.performSearch(ImageSearchDialog.searchImage()); // Perform search
-
-            };
-
-        }]);
+            }]);
 
 // This controller is used to retrieve and verify search data.
 
     drugSearchControllers.controller("SearchController",
         ["$scope",
             "DrugArray",
+            "DrugSearch",
             "SearchPrompts",
             "InputSearchTypes",
             "USDrugValidateInput",
             "ConfirmSearchDialog",
             function SearchController($scope,
                                       DrugArray,
+                                      DrugSearch,
                                       SearchPrompts,
                                       InputSearchTypes,
                                       USDrugValidateInput,
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
-                $scope.prompts = SearchPrompts; // injected array of type-ahead and history prompts
-                $scope.displaySearchDialog = ConfirmSearchDialog.initialize(); // Set the image dialog box.
+                $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service.
-
-                $scope.blankSearchParams =  {
-                        searchstring: "",
-                        searchtype: "name"
-                    };
+                $scope.drugSearch = DrugSearch; // Search type service.
+                $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
 
                 $scope.getSearchParams = function () {
 
@@ -176,10 +82,10 @@
                 // Setup a callback to modify the input search fields and perform
                 // an unverified search from the prompt popup.
 
-                $scope.promptSearch = function(searchParams) {
+                $scope.promptSearch = function (searchParams) {
 
                     $scope.setSearchParams(searchParams);
-                    $scope.performSearch(searchParams);
+                    DrugSearch.performSearch(searchParams);
 
                 };
 
@@ -187,12 +93,14 @@
 
                 $scope.getParamsSearch = function () {
 
+                    var searchParams = $scope.getSearchParams();
 
-                    USDrugValidateInput.Validate($scope.getSearchParams(),
+                    USDrugValidateInput.Validate(searchParams,
 
-                        function (searchParams) {  // validation successful
+                        function (validatedSearchParams) {  // validation successful
 
-                            $scope.performSearch(searchParams);
+                            $scope.setSearchParams(validatedSearchParams);
+                            DrugSearch.performSearch(validatedSearchParams);
 
                         },
 
@@ -204,11 +112,12 @@
 
                                     if (modified) {
 
-                                        $scope.performSearch(modifiedSearchParams);
+                                        $scope.setSearchParams(modifiedSearchParams);
+                                        DrugSearch.performSearch(modifiedSearchParams);
 
                                     } else {
 
-                                        $scope.performSearch(searchParams);
+                                        DrugSearch.performSearch(searchParams);
 
                                     }
 
@@ -254,5 +163,44 @@
 
 
             }]);
+
+
+// This controller is used to display results and execute result searches.
+
+    drugSearchControllers.controller("ResultsController",
+        ["$scope",
+            "DrugArray",
+            "DrugSearch",
+            "ImageSearchDialog",
+            function SearchController($scope,
+                                      DrugArray,
+                                      DrugSearch,
+                                      ImageSearchDialog) {
+
+                $scope.results = DrugArray;  // Injected array of drugs.
+                $scope.drugSearch = DrugSearch; // Search type service.
+
+                $scope.validSelection = function (drugRecord) {
+
+                    var validSelection = false;
+                    for (var i = 0; i < drugRecord.activeArray.length; i++) {
+
+                        validSelection = validSelection || drugRecord.activeArray[i].activeselected;
+                    }
+
+                    return validSelection;
+
+                };
+
+                $scope.showImageDialog = function (drugRecord) {
+
+                    var searchParams = {searchstring: utilityModule.k_NDC9SearchArray(drugRecord), searchtype: "image"};
+                    ImageSearchDialog.displayImage(drugRecord.largeimageurl, searchParams);
+
+                };
+
+
+            }]);
+
 
 })(window, window.angular);

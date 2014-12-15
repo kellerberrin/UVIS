@@ -1,12 +1,12 @@
-<k-material-dialog id="k-error-dialog" displaydialog="displayErrorDialog">
+<k-material-dialog id="k-error-dialog" displaydialog="errorDialog.initialize()">
 
     <div id="k-error-dialog-content">
 
-        <div id="k-error-dialog-status">{{ displayErrorDialog.status }}</div>
+        <div id="k-error-dialog-status">{{ errorDialog.status() }}</div>
 
-        <div id="k-error-dialog-text">{{ displayErrorDialog.statusText }}</div>
+        <div id="k-error-dialog-text">{{ errorDialog.statusText() }}</div>
 
-        <div id="k-error-dialog-action">{{ displayErrorDialog.action }}</div>
+        <div id="k-error-dialog-action">{{ errorDialog.action() }}</div>
 
     </div>
 

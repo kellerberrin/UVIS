@@ -11,6 +11,7 @@ var drugSearchApp = (function (window, angular, undefined) {
             "drugSearchControllers",
             "drugSearchDirectives",
             "drugSearchServices",
+            "searchServices",
             "searchPrompt"
         ]);
 

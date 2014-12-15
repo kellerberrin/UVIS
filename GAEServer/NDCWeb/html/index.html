@@ -24,6 +24,7 @@
     <script src="/js/angular-services.js"></script>
     <script src="/js/angular-material.js"></script>
     <script src="/js/search-prompt.js"></script>
+    <script src="/js/search-services.js"></script>
     <!-- Non Angular App specific logic -->
     <script src="/js/utility.js"></script>
 </head>
@@ -66,12 +67,16 @@
     <div id="k-request-error-dialog-anchor" ng-include src=" 'partial/ErrorDialog.html' "></div>
     <!-- End Request Error Dialog Box -->
 
+    <!-- The Input Dialog Box -->
+    <div id="k-input-dialog-anchor" ng-include src=" 'partial/SearchDialog.html' "></div>
+    <!-- End Input Dialog Box -->
+
     <!-- The Search Toast -->
     <div id="k-search-toast-anchor" ng-include src=" 'partial/SearchToast.html' "></div>
     <!-- End Search Toast -->
 
     <!-- Modal wait cursor -->
-    <div id="k-modal-wait" ng-class="{searchactive: results.searchActive}"></div>
+    <div id="k-modal-wait" ng-class="{searchactive: results.getSearchActive()}"></div>
     <!-- End Modal wait cursor -->
 
 </div>
