@@ -7,8 +7,8 @@
     /* Services */
 
     var searchServices = angular.module("searchServices", ["ngResource",
-                                                            "searchPrompt",
-                                                            "drugSearchServices" ]);
+        "searchPrompt",
+        "drugSearchServices"]);
 
     /* Drug result arrays scope injection */
 
@@ -18,31 +18,31 @@
         var searchActive = false;
         var maxRecords = 100;
 
-        var getMaxRecords = function() {
+        var getMaxRecords = function () {
 
             return maxRecords;
 
         };
 
-        var setSearchActive = function(active) {
+        var setSearchActive = function (active) {
 
             searchActive = active;
 
         };
 
-        var getSearchActive = function() {
+        var getSearchActive = function () {
 
             return searchActive;
 
         };
 
-        var setDrugArray = function(array) {
+        var setDrugArray = function (array) {
 
             drugArray = array;
 
         };
 
-        var getDrugArray = function() {
+        var getDrugArray = function () {
 
             return drugArray;
 
@@ -57,98 +57,12 @@
 
             getSearchActive: getSearchActive,
 
-            setDrugArray : setDrugArray,
+            setDrugArray: setDrugArray,
 
-            getDrugArray : getDrugArray
+            getDrugArray: getDrugArray
         };
 
     });
-
-
-    searchServices.factory("DrugSearch", ["DrugArray",
-                                        "SearchEndPoints",
-                                        "SearchPrompts",
-                                        "SearchToast",
-                                        "SearchErrorDialog",
-                                        function (DrugArray,
-                                                SearchEndPoints,
-                                                SearchToast,
-                                                SearchPrompts,
-                                                SearchErrorDialog) {
-
-
-        var performSearch = function (searchParams) {
-
-            var requestTime = Date.now();
-            DrugArray.setSearchActive(true);
-            searchParams.searchsize = DrugArray.getMaxRecords();  // Set the max search size to 100 for now.
-
-            SearchEndPoints.typeSearch(searchParams,
-
-                 function (data) {
-                    DrugArray.setDrugArray(data.drugArray);
-                    if (data.drugArray.length > 0) {
-                        SearchPrompts.addToHistory(searchParams);
-                    }
-                    DrugArray.setSearchActive(false);
-                    var milliseconds = Date.now() - requestTime;
-                    resultToast(milliseconds);
-                },
-
-                 function (error) {
-
-                    DrugArray.setSearchActive(false);
-                    DrugArray.setDrugArray([]);
-                    SearchErrorDialog.displayError(error);
-                    utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
-
-                });
-
-        };
-
-        var nameSearch = function (name) {
-
-            var searchParams = {searchstring: name, searchtype: "name"};
-            performSearch(searchParams);
-
-        };
-
-        var ingredientSearch = function (drugRecord) {
-
-            var validJSON = JSON.stringify(drugRecord.activeArray);
-            var searchParams = {searchstring: validJSON, searchtype: "ingredient"};
-            performSearch(searchParams);
-
-        };
-
-
-        var ndc9Search = function (ndc9) {
-
-            var searchParams = {searchstring: ndc9, searchtype: "ndc"};
-            performSearch(searchParams);
-
-        };
-
-        var resultToast = function (milliseconds) {
-
-            var ToastText = utilityModule.k_drugCount(DrugArray.getDrugArray().length, milliseconds);
-            SearchToast.displayToast(ToastText);
-
-        };
-
-        return {
-
-            performSearch: performSearch,
-
-            nameSearch: nameSearch,
-
-            ingredientSearch: ingredientSearch,
-
-            ndc9Search: ndc9Search
-
-        };
-
-    }]);
 
 
     searchServices.factory("SearchEndPoints", ["$resource", function ($resource) {
@@ -208,7 +122,7 @@
 
             },
 
-            message : function() {
+            message: function () {
 
                 return displayToast.searchMessage;
 
@@ -217,6 +131,92 @@
         }
 
     });
+
+
+    searchServices.factory("DrugSearch", ["DrugArray",
+                                            "SearchEndPoints",
+                                            "SearchToast",
+                                            "SearchPrompts",
+                                            "SearchErrorDialog",
+        function (DrugArray,
+                  SearchEndPoints,
+                  SearchToast,
+                  SearchPrompts,
+                  SearchErrorDialog) {
+
+
+            var performSearch = function (searchParams) {
+
+                var requestTime = Date.now();
+                DrugArray.setSearchActive(true);
+                searchParams.searchsize = DrugArray.getMaxRecords();  // Set the max search size to 100 for now.
+
+                SearchEndPoints.typeSearch(searchParams,
+
+                    function (data) {
+                        DrugArray.setDrugArray(data.drugArray);
+                        if (data.drugArray.length > 0) {
+                            SearchPrompts.addToHistory(searchParams);
+                        }
+                        DrugArray.setSearchActive(false);
+                        var milliseconds = Date.now() - requestTime;
+                        resultToast(milliseconds);
+                    },
+
+                    function (error) {
+
+                        DrugArray.setSearchActive(false);
+                        DrugArray.setDrugArray([]);
+                        SearchErrorDialog.displayError(error);
+                        utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
+
+                    });
+
+            };
+
+            var nameSearch = function (name) {
+
+                var searchParams = {searchstring: name, searchtype: "name"};
+                performSearch(searchParams);
+
+            };
+
+            var ingredientSearch = function (drugRecord) {
+
+                var validJSON = JSON.stringify(drugRecord.activeArray);
+                var searchParams = {searchstring: validJSON, searchtype: "ingredient"};
+                performSearch(searchParams);
+
+            };
+
+
+            var ndc9Search = function (ndc9) {
+
+                var searchParams = {searchstring: ndc9, searchtype: "ndc"};
+                performSearch(searchParams);
+
+            };
+
+            var resultToast = function (milliseconds) {
+
+                var ToastText = utilityModule.k_drugCount(DrugArray.getDrugArray().length, milliseconds);
+                SearchToast.displayToast(ToastText);
+
+            };
+
+            return {
+
+                performSearch: performSearch,
+
+                nameSearch: nameSearch,
+
+                ingredientSearch: ingredientSearch,
+
+                ndc9Search: ndc9Search
+
+            };
+
+        }]);
 
 
 })(window, window.angular);

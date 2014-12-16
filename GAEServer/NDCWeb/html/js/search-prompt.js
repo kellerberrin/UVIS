@@ -26,65 +26,245 @@
     /* Type ahead prompts and search history scope injection */
 
     searchPrompt.factory("SearchPrompts",
-        ["ReadForwardPrompts",
+        ["GetForwardPrompts",
             "SearchPromptPopup",
-            function (ReadForwardPrompts,
+            function (GetForwardPrompts,
                       SearchPromptPopup) {
 
-            var historyArray = [];  // History of searches
-            var totalPromptCount = 10;
-            var displayHistoryArrayCount = 3;
-            var displayHistoryArray = []; // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
-            var promptArray = [];  // Search ahead prompts
-            var displayPromptArray = [];  // Displayed prompts, Length = min(10-displayHistoryArray, promptArray.length))
-            var historyActive = false; // Set when the search history is active
-            var promptActive = false; // Set when type-ahead prompt is active
-            var focusActive = false; // Does the text input have focus
+                var historyArray = [];  // History of searches
+                var totalPromptCount = 10;
+                var displayHistoryArrayCount = 3;
+                var displayHistoryArray = []; // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
+                var promptArray = [];  // Search ahead prompts
+                var displayPromptArray = [];  // Displayed prompts, Length = min(10-displayHistoryArray, promptArray.length))
+                var historyActive = false; // Set when the search history is active
+                var promptActive = false; // Set when type-ahead prompt is active
+                var focusActive = false; // Does the text input have focus
 
 
-            var setPromptStatus = function (focus, searchParams) {
+                var setPromptStatus = function (focus, searchParams) {
 
 
-                focusActive = focus;
+                    focusActive = focus;
 
-                if (focus && searchParams.searchstring.length > 0) {
+                    if (focus && searchParams.searchstring.length > 0) {
 
-                    getForwardPrompt(searchParams);
+                        GetForwardPrompts.getForwardPrompt(searchParams).then(
 
-                } else {
+                            function (array) {
 
-                    promptArray = [];
+                                promptArray = array;
+                                setDisplayPromptArrays();
+                                setFocusStatus(focusActive);
 
-                }
+                            }
 
-                setFocusStatus(focusActive);
+                        );
 
-            };
+                    } else {
+
+                        promptArray = [];
+
+                    }
+
+                    setFocusStatus(focusActive);
+
+                };
 
 
-            var setFocusStatus = function (focus) {
+                var setFocusStatus = function (focus) {
 
-                if (focus) {
+                    if (focus) {
 
 
-                    promptActive = promptArray.length > 0;
-                    historyActive = historyArray.length > 0;
+                        promptActive = promptArray.length > 0;
+                        historyActive = historyArray.length > 0;
 
-                }
-                else {
+                    }
+                    else {
 
-                    historyActive = false;
-                    promptActive = false;
+                        historyActive = false;
+                        promptActive = false;
 
-                }
+                    }
 
-                SearchPromptPopup.togglePopup(historyActive || promptActive);
+                    SearchPromptPopup.togglePopup(historyActive || promptActive);
 
-            };
+                };
 
-            var getForwardPrompt = function (forwardParams) {
 
-                var promptParams = {
+                var setDisplayPromptArrays = function () {
+
+                    // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
+
+                    displayHistoryArray = [];
+
+                    for (var i = 0; i < historyArray.length; i++) {
+
+                        if (i >= Math.max(displayHistoryArrayCount, totalPromptCount - promptArray.length)) break;
+
+                        displayHistoryArray.push(historyArray[i]);
+
+                    }
+
+                    // Update the display history array with user friendly text prompts
+
+                    for (i = 0; i < displayHistoryArray.length; i++) {
+
+                        var historyItem = displayHistoryArray[i];
+
+                        displayHistoryArray[i] = historyDisplayText(historyItem);
+
+                    }
+
+                    // Displayed prompts, Length = min(10-displayHistoryArray.length, promptArray.length))
+
+                    displayPromptArray = [];
+
+                    for (i = 0; i < promptArray.length; i++) {
+
+                        if (i >= totalPromptCount - displayHistoryArray.length) break;
+
+                        displayPromptArray.push(promptArray[i]);
+
+                    }
+
+                };
+
+
+                var historyDisplayText = function (historyItem) {
+
+                    historyItem.displayhistorytext = historyItem.searchstring;
+                    var type = historyItem.searchtype;
+
+                    if (type == "ingredient") {
+                        var ingredientSearch = JSON.parse(historyItem.searchstring);
+                        for (var i = 0; i < ingredientSearch.length; i++) {
+
+                            if (ingredientSearch[i].activeselected) {
+
+                                var displayHistoryText = ingredientSearch[i].activeName + " ";
+
+                                if (ingredientSearch[i].strengthselected) {
+
+                                    displayHistoryText += ingredientSearch[i].strength + " " + ingredientSearch[i].units;
+
+                                }
+
+                                displayHistoryText += " +";
+                                historyItem.displayhistorytext = displayHistoryText;
+                                break;
+
+                            }
+                        }
+
+                    } else if (type == "image") {
+
+                        var NDC9Array = historyItem.searchstring.split(",");
+                        if (NDC9Array.length > 0) {
+
+                            displayHistoryText = utilityModule.k_NDC9Format(NDC9Array[0]) + " +";
+                            historyItem.displayhistorytext = displayHistoryText;
+
+                        }
+
+                    }
+
+                    return historyItem;
+
+                };
+
+                return {
+
+                    displaySearchPrompt: function () {
+                        return SearchPromptPopup.initialize();  // Initialize the Popup to display search prompts
+                    },
+
+                    promptActive: function () {
+                        return promptActive;
+                    },
+
+                    historyActive: function () {
+                        return historyActive;
+                    },
+
+                    setPromptStatus: setPromptStatus,
+
+                    getHistoryArray: function () {
+                        return displayHistoryArray;
+                    },
+
+                    getPromptArray: function () {
+                        return displayPromptArray;
+                    },
+
+                    addToHistory: function (searchParams) {
+
+                        historyArray.unshift(searchParams);
+                        setDisplayPromptArrays();
+                        setFocusStatus(focusActive);
+
+                    }
+
+                };
+
+            }]);
+
+
+    searchPrompt.factory("PromptCache", function () {
+
+        var cachedPrompt = { inCache: false, promptArray: [] };
+
+        var lookupPromptCache = function(forwardParams) {
+
+            return cachedPrompt;
+
+        }
+
+        return {
+
+
+            lookupPromptCache: lookupPromptCache
+
+        };
+
+    });
+
+
+    searchPrompt.factory("GetForwardPrompts", ["ReadForwardPrompts",
+                                                "$q",
+                                                "PromptCache",
+                                                "SearchErrorDialog",
+                                                function (ReadForwardPrompts,
+                                                          $q,
+                                                          PromptCache,
+                                                          SearchErrorDialog) {
+
+        var deferred = null;
+
+        var setPromptArray = function (searchStringArray, type) {
+
+            var promptArray = [];
+
+            for (var i = 0; i < searchStringArray.length; i++) {
+
+                var promptSearch = {searchstring: searchStringArray[i], searchtype: type};
+                promptArray.push(promptSearch);
+
+            }
+
+            return promptArray;
+
+        };
+
+        var getForwardPrompt = function (forwardParams) {
+
+            var promptArray = [];
+            deferred = $q.defer();  // Reset the promise;
+
+            var readPrompts = function(forwardParams) {
+
+                var promptParamsSize = {
                     promptstring: forwardParams.searchstring,
                     prompttype: forwardParams.searchtype,
                     promptsize: "10"
@@ -92,157 +272,52 @@
 
                 var requestTime = Date.now();
 
-                ReadForwardPrompts.typeSearch(promptParams,
+                ReadForwardPrompts.typeSearch(promptParamsSize,
 
                     function (data) {
 
-                        setpromptarray(data.promptArray, promptParams.prompttype);
-                        setdisplaypromptarrays();
-                        setFocusStatus(focusActive);
+                        promptArray = setPromptArray(data.promptArray, forwardParams.prompttype);
                         var milliseconds = Date.now() - requestTime;
                         utilityModule.k_consoleLog([{milliseconds: milliseconds}, data.promptArray]);
+                        deferred.resolve(promptArray);
 
                     },
 
                     function (error) {
 
                         promptArray = [];
-                        utilityModule.k_consoleLog(["USDrugForwardPrompt - error", error]);
+                        deferred.resolve(promptArray);
+                        SearchErrorDialog.displayError(error);
 
                     });
 
-
             };
 
-            var setpromptarray = function (searchStringArray, type) {
+            var cachedPrompt =  PromptCache.lookupPromptCache(forwardParams);
 
-                promptArray = [];
+            if (cachedPrompt.inCache) {
 
-                for (var i = 0; i < searchStringArray.length; i++) {
+                promptArray = cachedPrompt.promptArray;
+                deferred.resolve(promptArray);
 
-                    var promptSearch = {searchstring: searchStringArray[i], searchtype: type};
-                    promptArray.push(promptSearch);
+            }
+            else {
 
-                }
+                readPrompts(forwardParams);
 
-            };
+            }
 
-            var setdisplaypromptarrays = function () {
+            return deferred.promise; // return a promise
 
-                // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
+        };
 
-                displayHistoryArray = [];
+        return {
 
-                for (var i = 0; i < historyArray.length; i++) {
+            getForwardPrompt: getForwardPrompt
 
-                    if (i >= Math.max(displayHistoryArrayCount, totalPromptCount - promptArray.length)) break;
+        };
 
-                    displayHistoryArray.push(historyArray[i]);
-
-                }
-
-                // Update the display history array with user friendly text prompts
-
-                for (i = 0; i < displayHistoryArray.length; i++) {
-
-                    var historyItem = displayHistoryArray[i];
-
-                    displayHistoryArray[i] = historyDisplayText(historyItem);
-
-                }
-
-                // Displayed prompts, Length = min(10-displayHistoryArray.length, promptArray.length))
-
-                displayPromptArray = [];
-
-                for (i = 0; i < promptArray.length; i++) {
-
-                    if (i >= totalPromptCount - displayHistoryArray.length) break;
-
-                    displayPromptArray.push(promptArray[i]);
-
-                }
-
-            };
-
-
-            var historyDisplayText = function (historyItem) {
-
-                historyItem.displayhistorytext = historyItem.searchstring;
-                var type = historyItem.searchtype;
-
-                if (type == "ingredient") {
-                    var ingredientSearch = JSON.parse(historyItem.searchstring);
-                    for (var i = 0; i < ingredientSearch.length; i++) {
-
-                        if (ingredientSearch[i].activeselected) {
-
-                            var displayHistoryText = ingredientSearch[i].activeName + " ";
-
-                            if (ingredientSearch[i].strengthselected) {
-
-                                displayHistoryText += ingredientSearch[i].strength + " " + ingredientSearch[i].units;
-
-                            }
-
-                            displayHistoryText += " +";
-                            historyItem.displayhistorytext = displayHistoryText;
-                            break;
-
-                        }
-                    }
-
-                } else if (type == "image") {
-
-                    var NDC9Array = historyItem.searchstring.split(",");
-                    if (NDC9Array.length > 0) {
-
-                        displayHistoryText = utilityModule.k_NDC9Format(NDC9Array[0]) + " +";
-                        historyItem.displayhistorytext = displayHistoryText;
-
-                    }
-
-                }
-
-                return historyItem;
-
-            };
-
-            return {
-
-                displaySearchPrompt: function () {
-                    return SearchPromptPopup.initialize();  // Active the Popup to display search prompts
-                },
-
-                promptActive: function () {
-                    return promptActive;
-                },
-
-                historyActive: function () {
-                    return historyActive;
-                },
-
-                setPromptStatus: setPromptStatus,
-
-                gethistoryarray: function () {
-                    return displayHistoryArray;
-                },
-
-                getpromptarray: function () {
-                    return displayPromptArray;
-                },
-
-                addToHistory: function (searchParams) {
-
-                    historyArray.unshift(searchParams);
-                    setdisplaypromptarrays();
-                    setFocusStatus(focusActive);
-
-                }
-
-            };
-
-        }]);
+    }]);
 
 
     searchPrompt.factory("ReadForwardPrompts", ["$resource", function ($resource) {

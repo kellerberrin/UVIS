@@ -14,14 +14,18 @@
             "ImageSearchDialog",
             "ConfirmSearchDialog",
             "SearchErrorDialog",
+            "SearchToast",
             function DisplayController($scope,
                                        ImageSearchDialog,
                                        ConfirmSearchDialog,
-                                       SearchErrorDialog) {
+                                       SearchErrorDialog,
+                                       SearchToast) {
 
                 $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
                 $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
+                $scope.searchToast = SearchToast; // Link the server error dialog box to this scope.
+
 
             }]);
 
@@ -45,8 +49,8 @@
 
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
-                $scope.searchTypes = InputSearchTypes; // Search type service.
-                $scope.drugSearch = DrugSearch; // Search type service.
+                $scope.searchTypes = InputSearchTypes; // Search type service
+                $scope.drugSearch = DrugSearch; // Performs the actual drug search
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
 
                 $scope.getSearchParams = function () {

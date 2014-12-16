@@ -8,11 +8,11 @@ var drugSearchApp = (function (window, angular, undefined) {
         [   "ngAnimate",
             "ngResource",
             "materialComponents",
-            "drugSearchControllers",
             "drugSearchDirectives",
             "drugSearchServices",
-            "searchServices",
-            "searchPrompt"
+            "searchPrompt",
+            "drugSearchControllers",
+            "searchServices"
         ]);
 
 })(window, window.angular);

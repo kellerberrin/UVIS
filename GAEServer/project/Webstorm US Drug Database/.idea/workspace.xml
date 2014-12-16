@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/ErrorDialog.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/ErrorDialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/ImageDialog.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/ImageDialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchDialog.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchDialog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/index.html" afterPath="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" afterPath="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="US Drug Database.iws" />
@@ -44,67 +34,37 @@
       <file leaf-file-name="angular-controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3409" max-vertical-offset="4240">
-              <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1860" max-vertical-offset="4320">
+              <caret line="133" column="17" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageDialog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/ImageDialog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.862069" vertical-offset="0" max-vertical-offset="580">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayResults.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="21.310345" vertical-offset="3078" max-vertical-offset="3880">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search-prompt.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search-prompt.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6520">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39381152" vertical-offset="5720" max-vertical-offset="8020">
+              <caret line="300" column="46" selection-start-line="300" selection-start-column="46" selection-end-line="300" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchDialog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchDialog.html">
+      <file leaf-file-name="SearchPrompt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="620">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-24.827587" vertical-offset="120" max-vertical-offset="1600">
+              <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.78417265" vertical-offset="985" max-vertical-offset="1860">
+            <state vertical-scroll-proportion="0.0" vertical-offset="985" max-vertical-offset="1860">
               <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
               <folding>
                 <marker date="1418635071201" expanded="true" signature="1502:1647" placeholder="..." />
@@ -116,8 +76,38 @@
       <file leaf-file-name="angular-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7260">
-              <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="7260">
+              <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-material.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-material.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1736" max-vertical-offset="2520">
+              <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-directives.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3160">
+              <caret line="74" column="38" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-dialog-toast.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-dialog-toast.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4105" max-vertical-offset="4800">
+              <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -126,18 +116,18 @@
       <file leaf-file-name="search-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="4860">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2940" max-vertical-offset="4860">
+              <caret line="169" column="2" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorDialog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/ErrorDialog.html">
+      <file leaf-file-name="SearchToast.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="380">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -189,19 +179,19 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-search-prompt.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_k-dialog-toast.scss" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DrugHeader.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/ImageDialog.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/index.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchDialog.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/ErrorDialog.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html" />
+        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js" />
       </list>
     </option>
   </component>
@@ -457,13 +447,33 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="145" y="0" width="1434" height="875" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17946927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -485,11 +495,11 @@
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -716,19 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1331" max-vertical-offset="3160">
-          <caret line="74" column="38" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-display-results.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6896552" vertical-offset="4620" max-vertical-offset="9620">
           <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,27 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-dialog-toast.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2545" max-vertical-offset="4800">
-          <caret line="202" column="0" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_material.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4985" max-vertical-offset="9240">
           <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.241379" vertical-offset="60" max-vertical-offset="1600">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,19 +798,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-material.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1736" max-vertical-offset="2520">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/MaterialPopupTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3793104" vertical-offset="0" max-vertical-offset="340">
           <caret line="2" column="83" selection-start-line="2" selection-start-column="83" selection-end-line="2" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,17 +813,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="300">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchDialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.586207" vertical-offset="0" max-vertical-offset="620">
+        <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="620">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -856,75 +823,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/ErrorDialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.965517" vertical-offset="0" max-vertical-offset="380">
+        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="380">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/ImageDialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.862069" vertical-offset="0" max-vertical-offset="580">
+        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="580">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3409" max-vertical-offset="4240">
-          <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/DisplayResults.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.310345" vertical-offset="3078" max-vertical-offset="3880">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3078" max-vertical-offset="3880">
           <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6520">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7260">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="4860">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchToast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.78417265" vertical-offset="985" max-vertical-offset="1860">
+        <state vertical-scroll-proportion="0.0" vertical-offset="985" max-vertical-offset="1860">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
           <folding>
             <marker date="1418635071201" expanded="true" signature="1502:1647" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1736" max-vertical-offset="2520">
+          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3160">
+          <caret line="74" column="38" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/scss/_k-dialog-toast.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4105" max-vertical-offset="4800">
+          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/partial/SearchPrompt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.827587" vertical-offset="120" max-vertical-offset="1600">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1980" max-vertical-offset="4320">
+          <caret line="133" column="17" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2940" max-vertical-offset="4860">
+          <caret line="169" column="2" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/angular-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="7260">
+          <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../NDCWeb/html/js/search-prompt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39381152" vertical-offset="5720" max-vertical-offset="8020">
+          <caret line="300" column="46" selection-start-line="300" selection-start-column="46" selection-end-line="300" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
