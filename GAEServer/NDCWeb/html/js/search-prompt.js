@@ -50,15 +50,14 @@
                     if (focus && searchParams.searchstring.length > 0) {
 
                         GetForwardPrompts.getForwardPrompt(searchParams).then(
-
                             function (array) {
 
                                 promptArray = array;
                                 setDisplayPromptArrays();
                                 setFocusStatus(focusActive);
+                                utilityModule.k_consoleLog(["promptArray", promptArray]);
 
                             }
-
                         );
 
                     } else {
@@ -213,18 +212,52 @@
 
     searchPrompt.factory("PromptCache", function () {
 
-        var cachedPrompt = { inCache: false, promptArray: [] };
+        var cachedPrompt = {inCache: false, promptArray: []};
+        var cacheArray = [];
+        var cacheForwardParams = {};
 
-        var lookupPromptCache = function(forwardParams) {
+        var lookupPromptCache = function (forwardParams) {
+
+            cachedPrompt.inCache = false;
+            cachedPrompt.promptArray = [];
+
+            for (var i = 0;  i < cacheArray.length; i++) {
+
+                cacheForwardParams = cacheArray[i].forwardParams;
+
+                if (cacheForwardParams.searchstring == forwardParams.searchstring
+                && cacheForwardParams.searchtype == forwardParams.searchtype) {
+
+                    cachedPrompt.inCache = true;
+                    cachedPrompt.promptArray = cacheArray[i].promptArray;
+                    break;
+                }
+
+            }
 
             return cachedPrompt;
 
-        }
+        };
+
+        var addToPromptCache = function(cachedPrompt) {
+
+
+            cacheArray.unshift(cachedPrompt);
+
+            if (cacheArray.length > 100) {
+
+
+                cacheArray.pop();
+
+            }
+
+        };
 
         return {
 
+            lookupPromptCache: lookupPromptCache,
 
-            lookupPromptCache: lookupPromptCache
+            addToPromptCache : addToPromptCache
 
         };
 
@@ -232,37 +265,56 @@
 
 
     searchPrompt.factory("GetForwardPrompts", ["ReadForwardPrompts",
-                                                "$q",
-                                                "PromptCache",
-                                                "SearchErrorDialog",
-                                                function (ReadForwardPrompts,
-                                                          $q,
-                                                          PromptCache,
-                                                          SearchErrorDialog) {
+        "$q",
+        "PromptCache",
+        "SearchErrorDialog",
+        function (ReadForwardPrompts,
+                  $q,
+                  PromptCache,
+                  SearchErrorDialog) {
 
-        var deferred = null;
 
-        var setPromptArray = function (searchStringArray, type) {
+            var deferred = null;
+            var readDeferred = null;
 
-            var promptArray = [];
+            var getForwardPrompt = function (forwardParams) {
 
-            for (var i = 0; i < searchStringArray.length; i++) {
+                var promptArray = [];
 
-                var promptSearch = {searchstring: searchStringArray[i], searchtype: type};
-                promptArray.push(promptSearch);
+                deferred = $q.defer();  // Reset the promise;
 
-            }
+                var cachedPrompt = PromptCache.lookupPromptCache(forwardParams);
 
-            return promptArray;
+                if (cachedPrompt.inCache) {
 
-        };
+                    promptArray = cachedPrompt.promptArray;
+                    deferred.resolve(promptArray);
 
-        var getForwardPrompt = function (forwardParams) {
+                }
+                else {
 
-            var promptArray = [];
-            deferred = $q.defer();  // Reset the promise;
+                    readPrompts(forwardParams).then(
 
-            var readPrompts = function(forwardParams) {
+                        function(promptArray) {
+
+                            utilityModule.k_consoleLog(["forwardParams",forwardParams]);
+                            PromptCache.addToPromptCache({forwardParams : forwardParams, promptArray: promptArray});
+                            deferred.resolve(promptArray);
+
+                        }
+
+                    );
+
+                }
+
+                return deferred.promise; // return a promise
+
+            };
+
+            var readPrompts = function (forwardParams) {
+
+                var promptArray = [];
+                readDeferred = $q.defer();
 
                 var promptParamsSize = {
                     promptstring: forwardParams.searchstring,
@@ -276,48 +328,51 @@
 
                     function (data) {
 
-                        promptArray = setPromptArray(data.promptArray, forwardParams.prompttype);
+                        promptArray = setPromptArray(data.promptArray, promptParamsSize.prompttype);
                         var milliseconds = Date.now() - requestTime;
-                        utilityModule.k_consoleLog([{milliseconds: milliseconds}, data.promptArray]);
-                        deferred.resolve(promptArray);
+                        utilityModule.k_consoleLog([{milliseconds: milliseconds}, promptArray]);
+                        readDeferred.resolve(promptArray);
 
                     },
 
                     function (error) {
 
                         promptArray = [];
-                        deferred.resolve(promptArray);
+                        readDeferred.resolve(promptArray);
                         SearchErrorDialog.displayError(error);
 
-                    });
+                    }
+
+                );
+
+                return readDeferred.promise; // Return the promise
 
             };
 
-            var cachedPrompt =  PromptCache.lookupPromptCache(forwardParams);
 
-            if (cachedPrompt.inCache) {
+            var setPromptArray = function (searchStringArray, type) {
 
-                promptArray = cachedPrompt.promptArray;
-                deferred.resolve(promptArray);
+                var promptArray = [];
 
-            }
-            else {
+                for (var i = 0; i < searchStringArray.length; i++) {
 
-                readPrompts(forwardParams);
+                    var promptSearch = {searchstring: searchStringArray[i], searchtype: type};
+                    promptArray.push(promptSearch);
 
-            }
+                }
 
-            return deferred.promise; // return a promise
+                return promptArray;
 
-        };
+            };
 
-        return {
 
-            getForwardPrompt: getForwardPrompt
+            return {
 
-        };
+                getForwardPrompt: getForwardPrompt
 
-    }]);
+            };
+
+        }]);
 
 
     searchPrompt.factory("ReadForwardPrompts", ["$resource", function ($resource) {
