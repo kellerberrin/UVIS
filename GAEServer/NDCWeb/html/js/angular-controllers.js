@@ -11,16 +11,19 @@
 
     drugSearchControllers.controller("DisplayController",
         ["$scope",
+            "DrugArray",
             "ImageSearchDialog",
             "ConfirmSearchDialog",
             "SearchErrorDialog",
             "SearchToast",
             function DisplayController($scope,
+                                       DrugArray,
                                        ImageSearchDialog,
                                        ConfirmSearchDialog,
                                        SearchErrorDialog,
                                        SearchToast) {
 
+                $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
                 $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
@@ -93,6 +96,10 @@
 
                 };
 
+                // Setup a callback to update the input fields after a search.
+
+                DrugArray.setInputCallback($scope.setSearchParams);
+
                 // Verify the input variables and perform the search
 
                 $scope.getParamsSearch = function () {
@@ -148,7 +155,7 @@
 
                 $scope.inputactive = function () {
 
-
+                    utilityModule.k_consoleLog("Input Active");
                     SearchPrompts.setPromptStatus(true, $scope.getSearchParams());
 
                 };
@@ -161,6 +168,7 @@
 
                 $scope.inputinactive = function () {
 
+                    utilityModule.k_consoleLog("Input InActive");
                     SearchPrompts.setPromptStatus(false, $scope.getSearchParams());
 
                 };
@@ -175,14 +183,19 @@
         ["$scope",
             "DrugArray",
             "DrugSearch",
+            "SearchPrompts",
             "ImageSearchDialog",
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
+                                      SearchPrompts,
                                       ImageSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Search type service.
+                $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
+
+                // Disable the active ingredient search if no ingredient selected.
 
                 $scope.validSelection = function (drugRecord) {
 
@@ -195,6 +208,8 @@
                     return validSelection;
 
                 };
+
+                // Show the image dialog box.
 
                 $scope.showImageDialog = function (drugRecord) {
 

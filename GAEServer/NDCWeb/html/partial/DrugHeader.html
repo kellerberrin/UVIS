@@ -45,12 +45,11 @@
             <input id="k-search-searchtext"
                    type="text"
                    autocomplete="no"
-                   value="Enter Search Text"
                    class="k-input-text"
                    ng-model="search.searchtext"
                    ng-keyup="inputkeystroke($event)"
-                   ng-focus="inputactive()"
-                   ng-blur="delayinactive()"
+                   k-focusin="inputactive()"
+                   k-focusout="delayinactive()"
                    aria-label="Search Text Input">
             </input>
 

@@ -8,7 +8,11 @@
 
     var searchPrompt = angular.module("searchPrompt", ["ngResource"]);
 
-    /* The Search Prompt Controller */
+    /*********************************************************************************************
+     *
+     * The Search Prompt Controller for the prompt popup
+     *
+     *********************************************************************************************/
 
     searchPrompt.controller("SearchPromptController",
         ["$scope",
@@ -23,7 +27,11 @@
 
             }]);
 
-    /* Type ahead prompts and search history scope injection */
+    /*********************************************************************************************
+     *
+     * Connects the prompt search to the popup and the text input widget.
+     *
+     *********************************************************************************************/
 
     searchPrompt.factory("SearchPrompts",
         ["GetForwardPrompts",
@@ -47,6 +55,7 @@
 
                     focusActive = focus;
 
+
                     if (focus && searchParams.searchstring.length > 0) {
 
                         GetForwardPrompts.getForwardPrompt(searchParams).then(
@@ -55,7 +64,7 @@
                                 promptArray = array;
                                 setDisplayPromptArrays();
                                 setFocusStatus(focusActive);
-                                utilityModule.k_consoleLog(["promptArray", promptArray]);
+                                utilityModule.k_consoleLog(["getForwardPrompt", promptArray]);
 
                             }
                         );
@@ -66,6 +75,7 @@
 
                     }
 
+                    utilityModule.k_consoleLog(["getPromptStatus", searchParams, focusActive]);
                     setFocusStatus(focusActive);
 
                 };
@@ -87,6 +97,7 @@
 
                     }
 
+                    utilityModule.k_consoleLog(["togglePopup", historyActive || promptActive]);
                     SearchPromptPopup.togglePopup(historyActive || promptActive);
 
                 };
@@ -210,6 +221,13 @@
             }]);
 
 
+    /*********************************************************************************************
+     *
+     * The prompt search cache
+     *
+     *********************************************************************************************/
+
+
     searchPrompt.factory("PromptCache", function () {
 
         var cachedPrompt = {inCache: false, promptArray: []};
@@ -262,6 +280,12 @@
         };
 
     });
+
+    /*********************************************************************************************
+     *
+     * Cached prompt search read
+     *
+     *********************************************************************************************/
 
 
     searchPrompt.factory("GetForwardPrompts", ["ReadForwardPrompts",
@@ -374,6 +398,12 @@
 
         }]);
 
+    /*********************************************************************************************
+     *
+     * The prompt search endpoint for remote database reads.
+     *
+     *********************************************************************************************/
+
 
     searchPrompt.factory("ReadForwardPrompts", ["$resource", function ($resource) {
 
@@ -405,11 +435,17 @@
 
     }]);
 
+    /*********************************************************************************************
+     *
+     * The prompt search popup to display prompts.
+     *
+     *********************************************************************************************/
 
     searchPrompt.factory("SearchPromptPopup", function () {
 
         var displayPopup = {
-            show: false, // Display the dialog box
+            show: false,
+            showPopup: {display: true}, // Display the dialog box
             popupStyle: {width: "18em", top: "1em", left: "1em"}
         }; // Set the toast width
 
@@ -423,7 +459,14 @@
 
             togglePopup: function (displayFlag) {
 
+                displayPopup.showPopup.display = displayFlag;
                 displayPopup.show = displayFlag;
+                utilityModule.k_consoleLog(["togglePopup.displayPopup",
+                    displayPopup,
+                    "displayFlag",
+                    displayFlag,
+                    "immediate",
+                    displayPopup.show ? "True" : "False"]);
 
             }
 

@@ -10,13 +10,20 @@
         "searchPrompt",
         "drugSearchServices"]);
 
-    /* Drug result arrays scope injection */
+
+    /*********************************************************************************************
+     *
+     * This object contains the current search state
+     *
+     *********************************************************************************************/
+
 
     searchServices.factory("DrugArray", function () {
 
         var drugArray = [];
         var searchActive = false;
         var maxRecords = 100;
+        var searchParamsCallback = null;
 
         var getMaxRecords = function () {
 
@@ -48,6 +55,21 @@
 
         };
 
+        var setInputCallback = function (setSearchParams) {
+
+            searchParamsCallback = setSearchParams;
+
+        };
+
+        var setSearchParams = function (searchParams) {
+
+            if (searchParamsCallback != null) {
+
+                searchParamsCallback(searchParams);
+
+            }
+
+        };
 
         return {
 
@@ -59,10 +81,184 @@
 
             setDrugArray: setDrugArray,
 
-            getDrugArray: getDrugArray
+            getDrugArray: getDrugArray,
+
+            setInputCallback: setInputCallback,
+
+            setSearchParams: setSearchParams
         };
 
     });
+
+    /*********************************************************************************************
+     *
+     * The drug search cache
+     *
+     *********************************************************************************************/
+
+    searchServices.factory("SearchCache", function () {
+
+        var cachedSearch = {inCache: false, drugArray: []};
+        var cacheArray = [];
+        var cacheSearchParams = {};
+
+        var lookupSearchCache = function (searchParams) {
+
+            cachedSearch.inCache = false;
+            cachedSearch.drugArray = [];
+
+            for (var i = 0; i < cacheArray.length; i++) {
+
+                cacheSearchParams = cacheArray[i].searchParams;
+
+                if (cacheSearchParams.searchstring == searchParams.searchstring
+                    && cacheSearchParams.searchtype == searchParams.searchtype) {
+
+                    cachedSearch.inCache = true;
+                    cachedSearch.drugArray = cacheArray[i].drugArray;
+                    break;
+                }
+
+            }
+
+            return cachedSearch;
+
+        };
+
+        var addToSearchCache = function (cachedSearch) {
+
+
+            cacheArray.unshift(cachedSearch);
+
+            if (cacheArray.length > 100) {
+
+
+                cacheArray.pop();
+
+            }
+
+        };
+
+        return {
+
+            lookupSearchCache: lookupSearchCache,
+
+            addToSearchCache: addToSearchCache
+
+        };
+
+    });
+
+    /*********************************************************************************************
+     *
+     * Cached search for drugs.
+     *
+     *********************************************************************************************/
+
+    searchServices.factory("CachedDrugSearch", ["SearchEndPoints",
+                                                "SearchCache",
+                                                "DrugArray",
+                                                "SearchToast",
+                                                "SearchPrompts",
+                                                "SearchErrorDialog",
+                                                function (SearchEndPoints,
+                                                          SearchCache,
+                                                          DrugArray,
+                                                          SearchToast,
+                                                          SearchPrompts,
+                                                          SearchErrorDialog) {
+
+            var getDrugArray = function (searchParams) {
+
+                var cachedSearch = SearchCache.lookupSearchCache(searchParams);
+
+                if (cachedSearch.inCache) {
+
+                    DrugArray.setSearchActive(true);
+
+                    DrugArray.setDrugArray(cachedSearch.drugArray);
+
+                    if (cachedSearch.drugArray.length > 0) {
+                        SearchPrompts.addToHistory(searchParams);
+                    }
+                    DrugArray.setSearchParams(searchParams);
+
+                    DrugArray.setSearchActive(false);
+
+                    resultToast(-1); // Negative value shows cache hit.
+
+                }
+                else {
+
+                    readDrugs(searchParams);
+
+                }
+
+            };
+
+            var readDrugs = function (searchParams) {
+
+                var requestTime = Date.now();
+                var searchParamsSize = searchParams;
+                searchParamsSize.searchsize = DrugArray.getMaxRecords();  // Set the max search size to 100 for now.
+
+                DrugArray.setSearchActive(true);
+
+                SearchEndPoints.typeSearch(searchParamsSize,
+
+                    function (data) {
+
+                        DrugArray.setDrugArray(data.drugArray);
+                        DrugArray.setSearchActive(false);
+                        SearchCache.addToSearchCache({searchParams: searchParams, drugArray: data.drugArray});
+
+                        if (data.drugArray.length > 0) {
+                            SearchPrompts.addToHistory(searchParams);
+                        }
+
+                        DrugArray.setSearchParams(searchParams);
+
+                        var milliseconds = Date.now() - requestTime;
+                        resultToast(milliseconds);
+                        utilityModule.k_consoleLog([{milliseconds: milliseconds}, data]);
+
+                    },
+
+                    function (error) {
+
+                        DrugArray.setSearchActive(false);
+                        DrugArray.setDrugArray([]);
+                        SearchErrorDialog.displayError(error);
+                        utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
+
+                    }
+
+                );
+
+            };
+
+
+            var resultToast = function (milliseconds) {
+
+                var ToastText = utilityModule.k_drugCount(DrugArray.getDrugArray().length, milliseconds);
+                SearchToast.displayToast(ToastText);
+
+            };
+
+
+            return {
+
+                getDrugArray: getDrugArray
+
+            };
+
+        }]);
+
+    /*********************************************************************************************
+     *
+     * Search for drugs using the remote database.
+     *
+     *********************************************************************************************/
 
 
     searchServices.factory("SearchEndPoints", ["$resource", function ($resource) {
@@ -96,6 +292,11 @@
 
     }]);
 
+    /*********************************************************************************************
+     *
+     * A popup toast to summarize the search results.
+     *
+     *********************************************************************************************/
 
     searchServices.factory("SearchToast", function () {
 
@@ -132,45 +333,18 @@
 
     });
 
+    /*********************************************************************************************
+     *
+     * Specification of different drug search types.
+     *
+     *********************************************************************************************/
 
-    searchServices.factory("DrugSearch", ["DrugArray",
-                                            "SearchEndPoints",
-                                            "SearchToast",
-                                            "SearchPrompts",
-                                            "SearchErrorDialog",
-        function (DrugArray,
-                  SearchEndPoints,
-                  SearchToast,
-                  SearchPrompts,
-                  SearchErrorDialog) {
+    searchServices.factory("DrugSearch", [ "CachedDrugSearch", function (CachedDrugSearch) {
 
 
             var performSearch = function (searchParams) {
 
-                var requestTime = Date.now();
-                DrugArray.setSearchActive(true);
-                searchParams.searchsize = DrugArray.getMaxRecords();  // Set the max search size to 100 for now.
-
-                SearchEndPoints.typeSearch(searchParams,
-
-                    function (data) {
-                        DrugArray.setDrugArray(data.drugArray);
-                        if (data.drugArray.length > 0) {
-                            SearchPrompts.addToHistory(searchParams);
-                        }
-                        DrugArray.setSearchActive(false);
-                        var milliseconds = Date.now() - requestTime;
-                        resultToast(milliseconds);
-                    },
-
-                    function (error) {
-
-                        DrugArray.setSearchActive(false);
-                        DrugArray.setDrugArray([]);
-                        SearchErrorDialog.displayError(error);
-                        utilityModule.k_consoleLog(["USDrugEndPoints - error", error]);
-
-                    });
+                CachedDrugSearch.getDrugArray(searchParams);
 
             };
 
@@ -197,12 +371,6 @@
 
             };
 
-            var resultToast = function (milliseconds) {
-
-                var ToastText = utilityModule.k_drugCount(DrugArray.getDrugArray().length, milliseconds);
-                SearchToast.displayToast(ToastText);
-
-            };
 
             return {
 

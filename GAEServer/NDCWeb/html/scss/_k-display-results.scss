@@ -181,16 +181,17 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
         position: absolute;
         margin-left: -0.75em;
         top: -0.65em;
-        opacity: 0;
+        opacity: 0.4;
         background-image: url("/images/icons/search24.svg");
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
         background-color: $K-SearchButton-Inactive-color;
+        display: none;
 
         &.validselection {
 
-          opacity: 0.4;
+          display: block;
 
         }
 
@@ -201,7 +202,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
         }
 
-        &:hover {
+        &.validselection:hover {
 
           opacity: 1.0;
 

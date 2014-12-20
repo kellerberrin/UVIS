@@ -54,7 +54,16 @@ var utilityModule = (function (window, angular, undefined) {
             DrugCountString = "No matching drugs.";
         }
 
-        DrugCountString = DrugCountString + " (" + (milliseconds / 1000) + " secs)";
+        if (milliseconds >= 0 ) {
+
+            DrugCountString = DrugCountString + " (" + (milliseconds / 1000) + " secs)";
+
+        } else {
+
+
+            DrugCountString = DrugCountString + " (cache)";
+
+        }
 
         return DrugCountString;
 
