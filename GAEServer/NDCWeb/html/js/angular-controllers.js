@@ -5,11 +5,18 @@
 (function (window, angular, undefined) {
 
 
-    var drugSearchControllers = angular.module("drugSearchControllers", []);
+    var searchControllers = angular.module("kSearchControllers", []);
 
-// Top level controller - handles dialog boxes and wait cursor.
 
-    drugSearchControllers.controller("DisplayController",
+    /*********************************************************************************************
+     *
+     * Top level controller - handles dialog boxes and wait cursor.
+     * defined in Index.html
+     *
+     *********************************************************************************************/
+
+
+    searchControllers.controller("DisplayController",
         ["$scope",
             "DrugArray",
             "ImageSearchDialog",
@@ -32,22 +39,30 @@
 
             }]);
 
-// This controller is used to retrieve and verify search data.
 
-    drugSearchControllers.controller("SearchController",
+    /*********************************************************************************************
+     *
+     * Search Input controller - handles input from the search input and search requests
+     * from the search toolbar.
+     * Defined in DrugHeader.html
+     *
+     *********************************************************************************************/
+
+
+    searchControllers.controller("SearchController",
         ["$scope",
             "DrugArray",
             "DrugSearch",
             "SearchPrompts",
             "InputSearchTypes",
-            "USDrugValidateInput",
+            "ValidateInput",
             "ConfirmSearchDialog",
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
                                       SearchPrompts,
                                       InputSearchTypes,
-                                      USDrugValidateInput,
+                                      ValidateInput,
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
@@ -106,7 +121,7 @@
 
                     var searchParams = $scope.getSearchParams();
 
-                    USDrugValidateInput.Validate(searchParams,
+                    ValidateInput.Validate(searchParams,
 
                         function (validatedSearchParams) {  // validation successful
 
@@ -176,10 +191,36 @@
 
             }]);
 
+    /*********************************************************************************************
+     *
+     * The Search Prompt Controller for the prompt popup.
+     * Defined in SearchPrompt.html
+     *
+     *********************************************************************************************/
 
-// This controller is used to display results and execute result searches.
+    searchControllers.controller("SearchPromptController",
+        ["$scope",
+            "SearchPrompts",
+            "InputSearchTypes",
+            function SearchPromptController($scope,
+                                            SearchPrompts,
+                                            InputSearchTypes) {
 
-    drugSearchControllers.controller("ResultsController",
+                $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
+                $scope.types = InputSearchTypes;
+
+            }]);
+
+
+    /*********************************************************************************************
+     *
+     * Search Display controller - displays results from a search and handles result searches.
+     * Defined in DrugResults.html
+     *
+     *********************************************************************************************/
+
+
+    searchControllers.controller("ResultsController",
         ["$scope",
             "DrugArray",
             "DrugSearch",

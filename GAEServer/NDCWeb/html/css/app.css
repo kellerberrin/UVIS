@@ -286,7 +286,6 @@ body {
   max-width: 95%;
   max-height: 95%;
   background-color: white;
-  /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -770,7 +769,6 @@ body {
   max-width: 95%;
   max-height: 95%;
   background-color: white;
-  /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -994,18 +992,135 @@ body {
 * Search Toast
 *
 ***********************************************************************************************/
-/* line 218, ../scss/_k-dialog-toast.scss */
-#k-search-toast-content {
+@-moz-keyframes toast-slide-in-out {
+  0% {
+    -moz-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  10% {
+    -moz-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  90% {
+    -moz-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes toast-slide-in-out {
+  0% {
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  90% {
+    -webkit-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+}
+@keyframes toast-slide-in-out {
+  0% {
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  10% {
+    -moz-transform: translate(-50%, -200px);
+    -ms-transform: translate(-50%, -200px);
+    -webkit-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  90% {
+    -moz-transform: translate(-50%, -200px);
+    -ms-transform: translate(-50%, -200px);
+    -webkit-transform: translate(-50%, -200px);
+    transform: translate(-50%, -200px);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+}
+/* line 255, ../scss/_k-dialog-toast.scss */
+#k-search-toast {
+  /* A centered div above the overlay with a box shadow. */
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 10000;
+  bottom: -200px;
+  left: 50%;
+  width: 400px;
+  max-width: 80%;
+  height: 60px;
+  opacity: 0;
+}
+/* line 271, ../scss/_k-dialog-toast.scss */
+#k-search-toast.toastShow {
+  -moz-animation: toast-slide-in-out 10s linear;
+  -webkit-animation: toast-slide-in-out 10s linear;
+  animation: toast-slide-in-out 10s linear;
+}
+/* line 277, ../scss/_k-dialog-toast.scss */
+#k-search-toast #k-search-toast-content {
+  /* Throw a shadow */
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-border-radius-topleft: 3em;
+  -webkit-border-top-left-radius: 3em;
+  border-top-left-radius: 3em;
+  -moz-border-radius-bottomleft: 3em;
+  -webkit-border-bottom-left-radius: 3em;
+  border-bottom-left-radius: 3em;
   height: 100%;
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 224, ../scss/_k-dialog-toast.scss */
-#k-search-toast-content #k-search-toast-message {
+/* line 288, ../scss/_k-dialog-toast.scss */
+#k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
-  padding: 1em;
+  padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
+}
+/* line 300, ../scss/_k-dialog-toast.scss */
+#k-search-toast #k-search-toast-dismiss {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  background-image: url("/images/icons/times.svg");
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ff80ab;
 }
 
 /****************************************************************************************************
@@ -1296,7 +1411,6 @@ body {
   max-width: 95%;
   max-height: 95%;
   background-color: white;
-  /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1830,7 +1944,6 @@ body {
   max-width: 95%;
   max-height: 95%;
   background-color: white;
-  /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -2344,7 +2457,6 @@ body {
   max-width: 95%;
   max-height: 95%;
   background-color: white;
-  /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);

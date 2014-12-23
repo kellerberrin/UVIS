@@ -5,7 +5,7 @@
 (function (window, angular, undefined) {
 
 
-var materialComponents = angular.module( "materialComponents", []);
+var materialComponents = angular.module( "kMaterialComponents", []);
 
 
 

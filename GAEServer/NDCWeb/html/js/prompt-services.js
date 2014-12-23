@@ -6,26 +6,8 @@
 
     /* The Search Prompt */
 
-    var searchPrompt = angular.module("searchPrompt", ["ngResource"]);
+    var searchPrompt = angular.module("kSearchPrompt", ["ngResource"]);
 
-    /*********************************************************************************************
-     *
-     * The Search Prompt Controller for the prompt popup
-     *
-     *********************************************************************************************/
-
-    searchPrompt.controller("SearchPromptController",
-        ["$scope",
-            "SearchPrompts",
-            "InputSearchTypes",
-            function SearchPromptController($scope,
-                                            SearchPrompts,
-                                            InputSearchTypes) {
-
-                $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
-                $scope.types = InputSearchTypes;
-
-            }]);
 
     /*********************************************************************************************
      *
@@ -435,44 +417,6 @@
 
     }]);
 
-    /*********************************************************************************************
-     *
-     * The prompt search popup to display prompts.
-     *
-     *********************************************************************************************/
-
-    searchPrompt.factory("SearchPromptPopup", function () {
-
-        var displayPopup = {
-            show: false,
-            showPopup: {display: true}, // Display the dialog box
-            popupStyle: {width: "18em", top: "1em", left: "1em"}
-        }; // Set the toast width
-
-        return {
-
-            initialize: function () {
-
-                return displayPopup;
-
-            },
-
-            togglePopup: function (displayFlag) {
-
-                displayPopup.showPopup.display = displayFlag;
-                displayPopup.show = displayFlag;
-                utilityModule.k_consoleLog(["togglePopup.displayPopup",
-                    displayPopup,
-                    "displayFlag",
-                    displayFlag,
-                    "immediate",
-                    displayPopup.show ? "True" : "False"]);
-
-            }
-
-        }
-
-    });
 
 
 })(window, window.angular);

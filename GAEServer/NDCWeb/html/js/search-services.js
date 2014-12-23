@@ -6,9 +6,7 @@
 
     /* Services */
 
-    var searchServices = angular.module("searchServices", ["ngResource",
-        "searchPrompt",
-        "drugSearchServices"]);
+    var searchServices = angular.module("kSearchServices", ["ngResource", "kSearchPrompt"]);
 
 
     /*********************************************************************************************
@@ -292,46 +290,6 @@
 
     }]);
 
-    /*********************************************************************************************
-     *
-     * A popup toast to summarize the search results.
-     *
-     *********************************************************************************************/
-
-    searchServices.factory("SearchToast", function () {
-
-        var displayToast = {
-            show: false, // Display the dialog box
-            timeOut: 3500, // Timeout in milliseconds
-            searchMessage: "", // Set the hi-res image
-            toastStyle: {width: "80%", "max-width": "400px"}
-        }; // Set the toast width
-
-
-        return {
-
-            initialize: function () {
-
-                return displayToast;
-
-            },
-
-            displayToast: function (message) {
-
-                displayToast.searchMessage = message;
-                displayToast.show = true;
-
-            },
-
-            message: function () {
-
-                return displayToast.searchMessage;
-
-            }
-
-        }
-
-    });
 
     /*********************************************************************************************
      *

@@ -2,17 +2,18 @@
 
 /* Modules used by the app */
 
-var drugSearchApp = (function (window, angular, undefined) {
+(function (window, angular, undefined) {
 
-    angular.module("drugSearchApp",
+    var drugSearchApp = angular.module("kSearchApp",
         [   "ngAnimate",
             "ngResource",
-            "materialComponents",
-            "drugSearchDirectives",
-            "drugSearchServices",
-            "searchPrompt",
-            "drugSearchControllers",
-            "searchServices"
+            "kMaterialComponents",
+            "kSearchDirectives",
+            "kInputServices",
+            "kDialogServices",
+            "kSearchPrompt",
+            "kSearchControllers",
+            "kSearchServices"
         ]);
 
 })(window, window.angular);

@@ -213,22 +213,103 @@ $K-Search-Modify-Color: $md-red-500;
 
 $K-Search-Toast-Background-color: $K-PRIMARY-COLOR-500;
 $K-Search-Toast-Text-color: $md-white-primary-Text;
+$K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
 
-#k-search-toast-content {
+@include keyframes(toast-slide-in-out) {
 
-  height: 100%;
-  width: 100%;
-  background-color: $K-Search-Toast-Background-color;
+  0% {
 
-  #k-search-toast-message {
-
-    width: 100%;
-    padding: 1em;
-    font-size: 1em;
-    color: $K-Search-Toast-Text-color;
+    @include translate(-50%, 0px);
+    opacity: 0;
 
   }
-  
+
+  10% {
+
+
+    @include translate(-50%, -200px);
+    opacity: 1;
+
+  }
+
+  90% {
+
+
+    @include translate(-50%, -200px);
+    opacity: 1;
+
+  }
+
+  100% {
+
+
+    @include translate(-50%, 0px);
+    opacity: 0;
+
+  }
+}
+
+
+
+#k-search-toast {
+
+  /* A centered div above the overlay with a box shadow. */
+
+  @include translate(-50%, -50%);
+  position: absolute;
+  z-index: 10000;
+  bottom: -200px;
+  left: 50%;
+  width: 400px;
+  max-width: 80%;
+  height: 60px;
+  opacity: 0;
+
+  // animation
+
+  &.toastShow {
+
+    @include animation(toast-slide-in-out 10s linear);
+
+  }
+
+  #k-search-toast-content {
+
+    /* Throw a shadow */
+    @include K-MaterialBoxShadow(4);
+    @include border-left-radius(3em);
+    height: 100%;
+    width: 100%;
+    background-color: $K-Search-Toast-Background-color;
+
+
+
+    #k-search-toast-message {
+
+      width: 100%;
+      padding: 1.5em 1em 1em 2em;
+      font-size: 1em;
+      color: $K-Search-Toast-Text-color;
+
+    }
+
+
+  }
+
+  #k-search-toast-dismiss {
+    // The dismiss button
+
+    position: absolute;
+    top: 0;
+    right: -30px;
+    background-image: url("/images/icons/times.svg");
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $K-Search-Toast-Dismiss-Color;
+
+  }
+
 }
 

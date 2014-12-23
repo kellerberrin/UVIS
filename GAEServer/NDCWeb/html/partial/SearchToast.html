@@ -1,4 +1,4 @@
-<k-material-toast id="k-search-toast" displayToast="searchToast.initialize()">
+<div id="k-search-toast" ng-class="{ toastShow: searchToast.show() }">
 
     <div id="k-search-toast-content">
 
@@ -6,4 +6,9 @@
 
     </div>
 
-</k-material-toast>
+    <div id="k-search-toast-dismiss"
+         class="k-material-fab"
+         ng-click="searchToast.dismissToast()">
+    </div>
+
+</div>

@@ -9,8 +9,14 @@
 
 var utilityModule = (function (window, angular, undefined) {
 
+    /*********************************************************************************************
+     *
+     *
+     * Ensures that logging is available and logs to debug console.
+     *
+     *
+     ************************************************************************************************/
 
-// Ensures that logging is available and logs to debug console.
     var k_consoleLog = function (LogArgs) {
 
         if (window.console && console.log) {
@@ -72,10 +78,8 @@ var utilityModule = (function (window, angular, undefined) {
 
     /*********************************************************************************************
      *
-     *
      * Define the standard data structures used on the client side.
      * Convert from the returned JSON structure to the client structure.
-     *
      *
      ************************************************************************************************/
 
@@ -180,6 +184,11 @@ var utilityModule = (function (window, angular, undefined) {
 
     };
 
+    /*********************************************************************************************
+     *
+     *  Routines to manipulate NDC codes.
+     *
+     ************************************************************************************************/
 
     var k_NDC9SearchArray = function (Record) {
 
@@ -235,6 +244,13 @@ var utilityModule = (function (window, angular, undefined) {
         return FormattedNDC9;
 
     };
+
+    /*********************************************************************************************
+     *
+     *
+     * Make the Utility routines public.
+     *
+     ************************************************************************************************/
 
     return { // Public methods.
 
