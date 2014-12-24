@@ -201,14 +201,19 @@
      *
      *********************************************************************************************/
 
-    dialogServices.factory("SearchToast", function () {
+    dialogServices.factory("SearchToast", [ "$interval", function ($interval) {
 
         var displaySearchToast = {
             show: false, // Display the dialog box
-            timeOut: 3500, // Timeout in milliseconds
+            timeOut: 4000, // Timeout in milliseconds
             searchMessage: "" // Set the search message
         }; // Set the toast width
 
+        var dismissToast = function() {
+
+            displaySearchToast.show = false;
+
+        };
 
         return {
 
@@ -216,6 +221,7 @@
 
                 displaySearchToast.searchMessage = message;
                 displaySearchToast.show = true;
+                $interval( dismissToast, displaySearchToast.timeOut, 1, true);
 
             },
 
@@ -231,15 +237,11 @@
 
             },
 
-            dismissToast : function() {
-
-                displaySearchToast.show = false;
-
-            }
+            dismissToast : dismissToast
 
         }
 
-    });
+    }]);
 
     /*********************************************************************************************
      *
@@ -252,7 +254,6 @@
 
         var displayPopup = {
             show: false,
-            showPopup: {display: true}, // Display the dialog box
             popupStyle: {width: "18em", top: "1em", left: "1em"}
         }; // Set the toast width
 
@@ -266,7 +267,6 @@
 
             togglePopup: function (displayFlag) {
 
-                displayPopup.showPopup.display = displayFlag;
                 displayPopup.show = displayFlag;
                 utilityModule.k_consoleLog(["togglePopup.displayPopup",
                     displayPopup,

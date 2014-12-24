@@ -216,27 +216,30 @@ $K-Search-Toast-Text-color: $md-white-primary-Text;
 $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
 
-@include keyframes(toast-slide-in-out) {
+@include keyframes(toast-slide-in) {
 
   0% {
 
-    @include translate(-50%, 0px);
+    @include translate(-50%, 200px);
     opacity: 0;
 
   }
 
-  10% {
+  100% {
 
-
-    @include translate(-50%, -200px);
+    @include translate(-50%, 0px);
     opacity: 1;
 
   }
 
-  90% {
+}
+
+@include keyframes(toast-slide-out) {
+
+  0% {
 
 
-    @include translate(-50%, -200px);
+    @include translate(-50%, 0px);
     opacity: 1;
 
   }
@@ -244,35 +247,50 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
   100% {
 
 
-    @include translate(-50%, 0px);
+    @include translate(-50%, 200px);
     opacity: 0;
 
   }
-}
 
+}
 
 
 #k-search-toast {
 
   /* A centered div above the overlay with a box shadow. */
 
-  @include translate(-50%, -50%);
+  @include translate(-50%, 0%);
   position: absolute;
   z-index: 10000;
-  bottom: -200px;
+  bottom: 0px;
   left: 50%;
   width: 400px;
   max-width: 80%;
   height: 60px;
-  opacity: 0;
+  opacity: 1;
 
   // animation
 
-  &.toastShow {
+  &.ng-hide-remove, &.ng-hide-add {
+    /* remember, the .hg-hide class is added to element
+       when the active class is added causing it to appear
+       as hidden. Therefore set the styling to display=block
+       so that the hide animation is visible */
+    display:block!important;
+  }
 
-    @include animation(toast-slide-in-out 10s linear);
+  &.ng-hide-add {
+
+    @include animation(toast-slide-out 0.5s ease-in-out);
 
   }
+
+  &.ng-hide-remove {
+
+    @include animation(toast-slide-in 0.5s ease-in-out);
+
+  }
+
 
   #k-search-toast-content {
 
