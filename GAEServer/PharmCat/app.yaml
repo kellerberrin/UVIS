@@ -1,4 +1,4 @@
-application: s~kellerberrin-drugdatabase
+application: s~kellerberrin-pharmcat
 version: 1
 runtime: python27
 api_version: 1
@@ -30,20 +30,11 @@ handlers:
   static_dir: html/partial
 
 
-# Library requests.
-# Endpoints for datastore search handler
-# Always use a secure link (endpoints requires an SSL connection).
-
-- url: /_ah/spi/.*
-  script: library.application
-  secure: always
-
 # Standard web requests.
 # Redirect all requests to the application script.
 
 - url: .*
   script: app.application
-  secure: always
 
 libraries:
 - name: webapp2

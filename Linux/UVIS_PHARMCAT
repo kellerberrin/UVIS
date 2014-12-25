@@ -1,0 +1,31 @@
+#!/bin/bash
+# Define the environment variables for the
+# PharmCat web application.
+# Should be run once in each terminal session
+# when working on UVIS US drug software.
+# It is run autmatically by the 'workenv UVIS' script  
+
+
+#PharmCat
+#The PharmCat GAE application name (defined in app.yaml)
+export UVISPHARMCATAPPNAME="s~kellerberrin-pharmcat"
+#The directory for the Pharmcat app.yaml.
+export UVISPHARMCATGAE="$UVISDIR/GAEServer/PharmCat"
+#The directory and name for the Pharmcat Web Application (app name is defined in app.yaml)
+export UVISPHARMCATGAEAPPPATH="$UVISPHARMCATGAE/app.yaml"
+#The local URL for the US Drug database
+export UVISPHARMCATLOCALHOST="localhost"
+#The local port for the US Drug Database.
+export UVISPHARMCATLOCALPORT="9090"
+#The local admin port for the US Drug Database 
+export UVISPHARMCATADMINPORT="8050"
+#Local storage (logs & datastore) for the US DrugDatabase
+export UVISPHARMCATLOCALSTORAGE="$UVISGAELOCALSTORAGE/PharmCat" 
+#The remote URL for Pharmcat.
+export UVISPHARMCATURL="http://kellerberrin-pharmcat.appspot.com"
+
+
+
+
+
+

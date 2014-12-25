@@ -22,7 +22,7 @@ source UVIS_USDRUG
 
 source UVIS_SPHINX
 
-# Define the environment variables for the Foundation SASS application.
+# Define the environment variables for the PharmCat web application.
 
-source UVIS_FOUNDATION
+source UVIS_PHARMCAT
 

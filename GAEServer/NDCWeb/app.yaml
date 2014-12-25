@@ -1,0 +1,27 @@
+application: s~kellerberrin-drugdatabase
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: no
+
+builtins:
+- remote_api: on
+
+handlers:
+
+# Library requests.
+# Endpoints for datastore search handler
+# Always use a secure link (endpoints requires an SSL connection).
+
+- url: /_ah/spi/.*
+  script: library.application
+  secure: always
+
+
+libraries:
+- name: webapp2
+  version: latest
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: latest

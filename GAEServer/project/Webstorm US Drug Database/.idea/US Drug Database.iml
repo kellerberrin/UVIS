@@ -11,8 +11,7 @@
     </option>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../NDCWeb/html" />
-    <content url="file://$MODULE_DIR$/../../NDCWeb/scss" />
+    <content url="file://$MODULE_DIR$/../../PharmCat/html" />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

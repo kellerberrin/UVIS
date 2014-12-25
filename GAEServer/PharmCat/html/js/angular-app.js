@@ -20,8 +20,8 @@
      *
      * This factory sets up all the application wide constants.
      * In addition, it defines if the application is in Test mode (uses the local database at
-     * "http:localhost:9080") or in Production (uses the database endpoints at
-     * "https:kellerberrin-drugdatabase.appspot.com").
+     * "http://localhost:9080") or in Production (uses the database endpoints at
+     * "https://kellerberrin-drugdatabase.appspot.com").
      * Note that either environment = "Test" or environment = "Production" must be commented out.
      *
      *********************************************************************************************/
@@ -50,7 +50,7 @@
 
         var promptCacheSize = 100;
         var promptMaxResults = 10;
-        var searchcacheSize = 100;
+        var searchCacheSize = 100;
         var searchMaxResults = 100;
 
         return {
@@ -77,9 +77,9 @@
                 return promptMaxResults;
             },
 
-            searchcacheSize : function() {
+            searchCacheSize : function() {
 
-                return searchcacheSize;
+                return searchCacheSize;
 
             },
 

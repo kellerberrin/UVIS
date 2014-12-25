@@ -120,7 +120,7 @@
 
             cacheArray.unshift(cachedSearch);
 
-            if (cacheArray.length > AppConfig.searchcacheSize()) {
+            if (cacheArray.length > AppConfig.searchCacheSize()) {
 
 
                 cacheArray.pop();
