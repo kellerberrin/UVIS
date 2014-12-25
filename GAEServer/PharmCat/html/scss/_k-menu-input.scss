@@ -1,0 +1,223 @@
+@import "material-local";
+@import "material";
+
+/*************************************************************************************************************
+*
+* Global definitions (don't use defaults)
+*
+*************************************************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+* {
+  @include box-sizing(border-box);
+}
+
+/*****************************************************************************************************************
+*
+* Menu Bar, search ahead and history
+*
+******************************************************************************************************************/
+
+$K-Top-Menu-Background-color: $K-PRIMARY-COLOR-900;
+$K-Menu-Background-color: $K-PRIMARY-COLOR-500;
+$K-Toolbar-Title-color: $K-ACCENT-COLOR-100;
+$K-Toolbar-Icon-Background-Color: $md-light-blue-500;
+$K-SearchButton-Active-color: $K-ACCENT-COLOR-100;
+$K-SearchButton-Inactive-color: $md-light-blue-500;
+$K-Menu-Text-color: white;
+$K-Input-Text-Color: white;
+$K-Input-Border-Color: $K-PRIMARY-COLOR-900;
+$K-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
+$K-Icon-Color: white;
+$K-Search-Type-Color: white;
+$K-Search-Type-Background-Color: $md-light-blue-500;
+$K-Icon-Toolbar-Height: 40px;
+$K-Search-Toolbar-Height: 4em;
+
+#k-drug-toolbar {
+
+  @include K-MaterialBoxShadow(2);
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  color: $K-Menu-Text-color;
+  background-color: $K-Menu-Background-color;
+
+  #k-icon-toolbar-tools {
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    height: $K-Icon-Toolbar-Height;
+    width: 100%;
+    background-color: $K-Top-Menu-Background-color;
+
+    #k-menu-icon-button {
+
+      height: 30px;
+      width: 30px;
+      margin: 5px 10px 5px 10px;
+      background-image: url("/images/icons/white_bars24.svg");
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-Toolbar-Icon-Background-Color;
+
+    }
+
+    #k-icon-toolbar-title {
+
+      @include flex-grow(2);
+      color: $K-Toolbar-Title-color;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin: auto 10px;
+
+    }
+
+    #k-icon-barcode-button {
+
+      height: 30px;
+      width: 30px;
+      margin: 5px 10px 5px 10px;
+      background-image: url("/images/icons/white_barcode24.svg");
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-Toolbar-Icon-Background-Color;
+
+    }
+
+    #k-icon-search-button {
+
+      height: 30px;
+      width: 30px;
+      margin: 5px 10px 5px 10px;
+      background-image: url("/images/icons/white_search24.svg");
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-Toolbar-Icon-Background-Color;
+
+    }
+
+  }
+
+  #k-search-toolbar {
+
+    @include display-flex;
+    @include flex-direction(column);
+    font-size: 1.3em;
+    height: $K-Search-Toolbar-Height;
+    width: 100%;
+    background-color: $K-Menu-Background-color;
+
+    #k-search-type-toolbar {
+
+      @include display-flex;
+      @include flex-direction(row);
+      font-size: inherit;
+      width: 100%;
+      height: 2em;
+
+      #k-search-title {
+
+        font-size: inherit;
+        height: 1.5em;
+        text-align: left;
+        margin: 0.5em 0 0 0.75em;
+
+      }
+
+      #k-search-searchtype {
+
+        @include border-radius(4px);
+        font-size: inherit;
+        margin: 0.3em 0 0 0.5em;
+        height: 1.5em;
+        color: $K-Search-Type-Color;
+        background-color: $K-Search-Type-Background-Color;
+        border: solid 2px $K-Input-Border-Color;
+        cursor: pointer;
+
+        &:focus, &:hover {
+
+          border-color: $K-Input-Active-Border-Color;
+
+        }
+
+      }
+
+    }
+
+    #k-search-text-toolbar {
+
+      @include display-flex;
+      @include flex-direction(row);
+      position: relative;
+      font-size: inherit;
+      width: 100%;
+      height: 2em;
+      padding: 0;
+
+      // Set the the input text colors.
+
+      #k-search-searchtext {
+
+        @include border-radius(4px);
+        font-size: inherit;
+        height: 1.5em;
+        width: 13em;
+        margin: 0.2em 0 0 0.75em;
+        padding: 0 0 0 0.3em;
+        color: $K-Input-Text-Color;
+        border: solid 2px $K-Input-Border-Color;
+        background-color: $K-Search-Type-Background-Color;
+
+        &:focus, &:hover {
+
+          border-color: $K-Input-Active-Border-Color;
+
+        }
+
+      }
+
+      #k-perform-search {
+
+        position: absolute;
+        font-size: inherit;
+        margin: 0 0 0 0.5em;
+        top: -0.4em;
+        background-image: url("/images/icons/search24.svg");
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $K-SearchButton-Inactive-color;
+
+        &.searchActive {
+          // Important! this class is set when the endpoints request is active.
+
+          background-color: $K-SearchButton-Active-color;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  #k-search-prompt-anchor {
+
+    position: relative;
+
+  }
+
+}
+

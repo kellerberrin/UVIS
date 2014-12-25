@@ -1,0 +1,74 @@
+<!-- The search prompt popup -->
+
+<k-material-popup id="k-search-prompt-popup" displaypopup="prompts.displaySearchPrompt()">
+
+    <div id="k-search-prompt-container" ng-controller="SearchPromptController">
+
+        <div id="k-search-prompt-list"
+             ng-class="{ promptActive : prompts.promptActive() }">
+
+            <div id="k-search-prompt-title">
+                <div>Search Ahead</div>
+            </div>
+
+            <div class="k-search-prompt-array"
+                 ng-repeat="prompt in prompts.getPromptArray() track by $index">
+
+                <div class="k-search-prompt-item" ng-click="promptSearch(prompt)">
+
+                    <div class="k-search-prompt-type">
+
+                        {{ types.getdisplaytype(prompt.searchtype).typeprompt }}
+
+                    </div>
+
+                    <div class="k-search-prompt-value">
+
+                        {{ prompt.searchstring }}
+
+                    </div>
+
+                </div>
+
+                <div class="k-material-divider"></div>
+
+            </div>
+
+        </div>
+
+        <div id="k-search-history-list"
+             ng-class="{ historyActive : prompts.historyActive() }">
+
+            <div id="k-search-history-title">
+                <div>Search History</div>
+            </div>
+
+            <div class="k-search-history-array"
+                 ng-repeat="history in prompts.getHistoryArray() track by $index">
+
+                <div class="k-search-history-item" ng-click="promptSearch(history)">
+
+                    <div class="k-search-history-type">
+
+                        {{ types.getdisplaytype(history.searchtype).typeprompt }}
+
+                    </div>
+
+                    <div class="k-search-history-value">
+
+                        {{ history.displayhistorytext }}
+
+                    </div>
+
+                </div>
+
+                <div class="k-material-divider"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</k-material-popup>
+

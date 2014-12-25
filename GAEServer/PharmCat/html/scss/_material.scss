@@ -1,0 +1,456 @@
+/*
+*
+* This file implements the SASS primitives for the implementation of the Google Material Design Specification
+* 
+*
+*/
+@import "material-colors";
+
+/****************************************************************************************************
+*
+*  Google size unit Sass functions.
+*
+****************************************************************************************************/
+
+/*
+*  Density-independent pixel ($K-DP) to pixels (returned).
+*  Needs the DPI ($K-DPI) of the screen as an input. 
+*  A dp-pixel is a notational pixel on a 160 dpi screen.
+*  Dip should always be used for layout in GM design.
+*/
+
+@function K-DiptoPx($K-DP, $K-DPI: 160.0) {
+
+  @return round(($K-DP * $K-DPI) / 160.0);
+
+}
+
+@function K-PxtoDip($K-PX, $K-DPI: 160.0) {
+
+  @return round(($K-PX * 160.0) / $K-DPI);
+
+}
+
+/*
+* Scale independent pixels (Sip) to pixels. 
+* Sip also incorporate any additional user (or designer) 
+* modification of font scaling. Sip should used always
+* be used with font scaling (K-FS) in GM design.  
+*/
+
+@function K-SiptoPx($K-SP, $K-DPI: 160.0, $K-FS: 1.0) {
+
+  @return round(($K-SP * $K-DPI * $K-FS) / 160.0);
+
+}
+
+@function K-PxtoSip($K-PX, $K-DPI: 160.0, $K-FS: 1.0) {
+
+  @return round(($K-PX * 160.0) / ($K-DPI * $K-FS));
+
+}
+
+/*
+*
+* Utility function to convert pixels to em where $K-FSize is 
+* the default font size (default 16 px)
+*
+*/
+
+@function K-PxtoEm($K-PX, $K-FSize: 16.0) {
+
+  @return (K-PX / $K-FSize);
+
+}
+
+/****************************************************************************************************
+*
+*  Google layout grid stuff.
+*
+****************************************************************************************************/
+
+// Screen pixels
+
+$K-XLARGE-SCREEN-MIN-WIDTH-PIXELS: 1440;
+// Virtual large screen size.
+$K-LARGE-SCREEN-WIDTH-PIXELS: 1024;
+// Virtual large screen size.
+$K-MEDIUM-SCREEN-WIDTH-PIXELS: 768;
+// Virtual medium screen size.
+$K-SMALL-SCREEN-WIDTH-PIXELS: 480;
+// Virtual small screen size.
+
+//Device resolution
+
+$K-XLARGE-SCREEN-DPI: 96;
+// Standard 24inch desktop monitor
+$K-LARGE-SCREEN-DPI: 128;
+// Apple Macbook Air
+$K-MEDIUM-SCREEN-DPI: 300;
+// Google Nexus 10
+$K-SMALL-SCREEN-DPI: 318;
+// Google Nexus 4
+
+// Device Independent Pixels
+
+$K-XLARGE-SCREEN-MIN-DIP: 864;
+// Standard 24inch desktop monitor
+$K-LARGE-SCREEN-MIN-DIP: 820;
+// Apple Macbook Air
+$K-MEDIUM-SCREEN-MIN-DIP: 1440;
+// Google Nexus 10
+$K-SMALL-SCREEN-MIN-DIP: 900;
+// Google Nexus 4
+
+// 8dp Grid Units.
+
+$K-XLARGE-SCREEN-MIN-GRID: 108;
+// Standard 24inch desktop monitor
+$K-LARGE-SCREEN-MIN-GRID: 102;
+// Apple Macbook Air
+$K-MEDIUM-SCREEN-MIN-GRID: 180;
+// Google Nexus 10
+$K-SMALL-SCREEN-MIN-GRID: 112;
+// Google Nexus 4
+
+@function K-DiptoGrid($K-DP) {
+
+  @return round($K-DP / 8.0);
+
+}
+
+@function K-GridtoDip($K-DP) {
+
+  @return round($K-DP * 8.0);
+
+}
+
+// Application Margin (in dips) - see Google Material layout documentation.
+// This is where contents starts. 
+// However menu bars etc extend the full width of the application.
+
+$K-XLARGE-SCREEN-APP-MARGIN: 32;
+// Standard 24inch desktop monitor
+$K-LARGE-SCREEN-APP-MARGIN: 32;
+// Apple Macbook Air
+$K-MEDIUM-SCREEN-APP-MARGIN: 24;
+// Google Nexus 10
+$K-SMALL-SCREEN-APP-MARGIN: 16;
+// Google Nexus 4
+
+// Default Application Size (in grids).
+
+$K-DEFAULT-APPLICATION-SIZE: 96;
+
+/****************************************************************************************************
+*
+*  Set Roboto as the body font.
+*
+****************************************************************************************************/
+
+body {
+
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+/**
+ * A mixin which helps you to add depth to elements according to the Google Material Design spec:
+ * http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality
+ *
+ * Please note that the values given in the specification cannot be used as is. To create the same visual experience
+ * the blur parameter has to be doubled.
+ *
+ *
+ * Example usage:
+ *
+ * .card {
+ *     width: 95px;
+ *     height: 95px;
+ *     background: #f4f4f4;
+ *     -webkit-transition: all 250ms;
+ *     -moz-transition: all 250ms;
+ *     transition: all 250ms;
+ *     @include MaterialBoxShadow(1);
+ *     &:hover {
+ *         @include MaterialBoxShadow(3);
+ *         -webkit-transform: translateY(-5px);
+ *         -moz-transform: translateY(-5px);
+ *         transform: translateY(-5px);
+ *     }
+ * }
+ *
+ */
+
+@mixin K-MaterialBoxShadow($K-Zlevel: 1) {
+
+  @if $K-Zlevel == 1 {
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24));
+
+  } @else if $K-Zlevel == 2 {
+    @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23));
+
+  } @else if $K-Zlevel == 3 {
+    @include box-shadow(0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23));
+
+  } @else if $K-Zlevel == 4 {
+    @include box-shadow(0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22));
+  } @else if $K-Zlevel == 5 {
+    @include box-shadow(0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22));
+  }
+}
+
+/****************************************************************************************************
+*
+* The fab class for material buttons.
+*
+*****************************************************************************************************/
+
+.k-material-fab {
+
+  @include K-MaterialBoxShadow(2);
+  @include transition(all 0.25s ease-in-out);
+  @include border-radius(50%);
+  border: none;
+  font-size: 1.5em;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  opacity: 0.75;
+  cursor: pointer;
+
+  &:hover {
+
+    @include K-MaterialBoxShadow(3);
+    @include translate(0px, -2px);
+    opacity: 1.0;
+
+  }
+
+}
+
+/*******************************************************************************************************************
+*
+* The class for k-material-raised-buttons.
+*
+********************************************************************************************************************/
+
+.k-material-raised-button {
+
+  @include K-MaterialBoxShadow(2);
+  @include transition(all 0.25s ease-in-out);
+  border: none;
+  margin: auto auto;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+
+    @include K-MaterialBoxShadow(3);
+    @include translate(0px, -2px);
+
+  }
+
+}
+
+/*******************************************************************************************************************
+*
+* The class for k-material-flat-buttons.
+*
+********************************************************************************************************************/
+
+.k-material-flat-button {
+
+  @include transition(all 0.25s ease-in-out);
+  border: none;
+  margin: auto auto;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+
+    @include K-MaterialBoxShadow(1);
+    @include translate(0px, -1px);
+
+  }
+
+}
+
+/**************************************************************************************************************
+*
+* A simple line divider object.
+*
+***************************************************************************************************************/
+
+$K-Divider-Color: $md-grey-400;
+.k-material-divider {
+
+  display: block;
+  width: 100%;
+  border-top: 1px solid $K-Divider-Color;
+  margin: 0;
+}
+
+/****************************************************************************************************
+*
+* The dialog classes for material popup dialogs.
+*
+*****************************************************************************************************/
+
+$K-Material-Dismiss-Color: $md-pink-a100;
+
+.k-material-modal {
+
+  /* A translucent div that covers the whole screen */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .k-material-modal-overlay {
+
+    /* A translucent div that covers the whole screen */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .k-material-modal-dialog {
+
+      /* A centered div above the overlay with a box shadow. */
+
+      position: absolute;
+      z-index: 10000;
+      @include translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      max-width: 95%;
+      max-height: 95%;
+      background-color: white;
+
+      /* Throw a shadow */
+      @include K-MaterialBoxShadow(3);
+      @include transition(all 0.25s ease-in-out);
+
+      .k-material-dialog-dismiss {
+        // The dismiss button
+
+        position: absolute;
+        top: -0.6em;
+        right: -0.6em;
+        background-image: url("/images/icons/times.svg");
+        background-size: 36px 36px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $K-Material-Dismiss-Color;
+
+      }
+
+      .k-material-modal-content {
+
+        width: 100%;
+        height: 100%;
+
+      }
+
+    }
+
+  }
+
+}
+
+/****************************************************************************************************
+*
+* The toast classes for material toasts.
+*
+*****************************************************************************************************/
+
+.k-material-toast {
+
+  /* A centered div above the overlay with a box shadow. */
+
+  position: absolute;
+  z-index: 10000;
+  @include translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  max-width: 95%;
+  max-height: 95%;
+  background-color: white;
+
+  @include K-MaterialBoxShadow(4);
+
+
+  .k-material-toast-dismiss {
+    // The dismiss button
+
+    position: absolute;
+    top: -0.6em;
+    right: -0.6em;
+    background-image: url("/images/icons/times.svg");
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $K-Material-Dismiss-Color;
+
+  }
+
+  .k-material-toast-content {
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+}
+
+/****************************************************************************************************
+*
+* The popup class for material popups.
+*
+*****************************************************************************************************/
+
+.k-material-popup {
+
+  /* A centered div above the overlay with a box shadow. */
+
+  position: absolute;
+  z-index: 10000;
+  top: 0; // default modified in js
+  left: 0; // default modified in js
+  max-width: 95%;
+  max-height: 95%;
+  background-color: rgba(255,255,255,1);
+
+  /* Throw a shadow */
+  @include K-MaterialBoxShadow(4);
+
+  .k-material-popup-dismiss {
+    // The dismiss button
+
+    position: absolute;
+    top: -0.6em;
+    right: -0.6em;
+    background-image: url("/images/icons/times.svg");
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $K-Material-Dismiss-Color;
+
+  }
+
+  .k-material-popup-content {
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: $md-black-primary-text;
+
+  }
+
+}

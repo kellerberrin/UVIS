@@ -1,0 +1,72 @@
+<!-- Retrieves and verifies the search data of the Drug Search application -->
+
+<div id="k-drug-toolbar" ng-controller="SearchController">
+
+
+    <div id="k-icon-toolbar-tools">
+
+        <div id="k-menu-icon-button"
+                class="k-material-flat-button"
+                aria-label="PharmCat Menu">
+        </div>
+
+        <span id="k-icon-toolbar-title">PharmCat</span>
+
+        <div id="k-icon-barcode-button"
+                class="k-material-flat-button"
+                aria-label="Scan Barcode">
+        </div>
+
+        <div id="k-icon-search-button"
+                class="k-material-flat-button"
+                aria-label="Search Menu">
+        </div>
+
+    </div>
+
+    <div id="k-search-toolbar">
+
+        <div id="k-search-type-toolbar">
+
+            <div id="k-search-title">Search by</div>
+
+            <select id="k-search-searchtype"
+                    ng-model="search.selectedsearchtype"
+                    ng-options="s.typeprompt for s in searchTypes.getTypesArray()"
+                    aria-label="Select Search Type">
+            </select>
+
+        </div>
+
+        <!-- Horizontal -->
+
+        <div id="k-search-text-toolbar">
+
+            <input id="k-search-searchtext"
+                   type="text"
+                   autocomplete="no"
+                   class="k-input-text"
+                   ng-model="search.searchtext"
+                   ng-keyup="inputkeystroke($event)"
+                   k-focusin="inputactive()"
+                   k-focusout="delayinactive()"
+                   aria-label="Search Text Input">
+            </input>
+
+            <div id="k-perform-search"
+                 class="k-material-fab"
+                 ng-click="getParamsSearch()"
+                 ng-class="{ searchActive : results.getSearchActive() }"
+                 aria-label="Perform Drug Search">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- The Search Prompt Popup -->
+    <!-- Important! The popup is positioned relative to this element -->
+    <div id="k-search-prompt-anchor" ng-include src=" 'partial/SearchPrompt.html' "></div>
+    <!-- End Search Prompt Popup -->
+
+</div>

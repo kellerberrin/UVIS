@@ -1,0 +1,333 @@
+@import "material-local";
+@import "material";
+
+/*************************************************************************************************************
+*
+* Global definitions (don't use defaults)
+*
+*************************************************************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+
+/*********************************************************************************************
+*
+* Modal Image Dialog - Display a larger drug image (800px) with an option to search for
+* drugs with the same image (same drug).
+*
+***********************************************************************************************/
+
+$K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
+
+#k-image-display-dialog {
+  // dialog box
+
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+
+  #k-image-attribution {
+    // NLM attribution text
+
+    margin-left: 1.5em;
+    font-size: 0.7em;
+
+  }
+
+  #k-image-dialog-content {
+    // image context area
+
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+
+    #k-dialog-image {
+
+      width: 100%;
+      height: 100%;
+
+    }
+
+  }
+
+  #k-image-search-bar {
+
+    display: inline-block; /* older browsers */
+    @include display-flex(inline-flex);
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    #k-image-search-text {
+
+      margin: 0 1em 0 1em;
+      padding: 0;
+
+    }
+
+    #k-image-search {
+      // The search button
+
+      position: absolute;
+      top: -0.7em;
+      right: -2em;
+      background-image: url("/images/icons/search24.svg");
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-ImageDialog-Search-Inactive-color;
+
+    }
+
+  }
+
+}
+
+/*********************************************************************************************
+*
+* Modal Search Dialog - Verify user input
+*
+***********************************************************************************************/
+
+$K-Search-Confirm-Color: $md-green-500;
+$K-Search-Modify-Color: $md-red-500;
+
+#k-search-dialog-content {
+
+  #k-search-dialog-heading {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.2em;
+    margin: 2rem 0 2rem 0;
+    color: $md-black-display-text;
+
+  }
+
+  #k-search-dialog-text {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 2rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-search-dialog-actions {
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+    width: 100%;
+    padding: 0.5rem;
+
+    #k-search-dialog-confirm {
+
+      padding: 0.4em;
+      margin: 0 1rem 0 0;
+      background-color: $K-Search-Confirm-Color;
+
+    }
+
+    #k-search-dialog-modify {
+
+      padding: 0.4em;
+      margin: 0 1rem 0 0;
+      background-color: $K-Search-Modify-Color;
+
+    }
+
+  }
+
+}
+
+
+/*********************************************************************************************
+*
+* Modal Error Dialog
+*
+***********************************************************************************************/
+
+
+#k-error-dialog-content {
+
+  #k-error-dialog-heading {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.2em;
+    margin: 2rem 0 2rem 0;
+    color: $md-black-display-text;
+
+  }
+
+  #k-error-dialog-status {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1.2em;
+    margin: 2rem 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-error-dialog-text {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-error-dialog-action {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+}
+
+
+/*********************************************************************************************
+*
+* Search Toast
+*
+***********************************************************************************************/
+
+
+$K-Search-Toast-Background-color: $K-PRIMARY-COLOR-500;
+$K-Search-Toast-Text-color: $md-white-primary-Text;
+$K-Search-Toast-Dismiss-Color: $md-pink-a100;
+
+
+@include keyframes(toast-slide-in) {
+
+  0% {
+
+    @include translate(-50%, 200px);
+    opacity: 0;
+
+  }
+
+  100% {
+
+    @include translate(-50%, 0px);
+    opacity: 1;
+
+  }
+
+}
+
+@include keyframes(toast-slide-out) {
+
+  0% {
+
+
+    @include translate(-50%, 0px);
+    opacity: 1;
+
+  }
+
+  100% {
+
+
+    @include translate(-50%, 200px);
+    opacity: 0;
+
+  }
+
+}
+
+
+#k-search-toast {
+
+  /* A centered div above the overlay with a box shadow. */
+
+  @include translate(-50%, 0%);
+  position: absolute;
+  z-index: 10000;
+  bottom: 0px;
+  left: 50%;
+  width: 400px;
+  max-width: 80%;
+  height: 60px;
+  opacity: 1;
+
+  // animation
+
+  &.ng-hide-remove, &.ng-hide-add {
+    /* remember, the .hg-hide class is added to element
+       when the active class is added causing it to appear
+       as hidden. Therefore set the styling to display=block
+       so that the hide animation is visible */
+    display:block!important;
+  }
+
+  &.ng-hide-add {
+
+    @include animation(toast-slide-out 0.5s ease-in-out);
+
+  }
+
+  &.ng-hide-remove {
+
+    @include animation(toast-slide-in 0.5s ease-in-out);
+
+  }
+
+
+  #k-search-toast-content {
+
+    /* Throw a shadow */
+    @include K-MaterialBoxShadow(4);
+    @include border-left-radius(3em);
+    height: 100%;
+    width: 100%;
+    background-color: $K-Search-Toast-Background-color;
+
+
+
+    #k-search-toast-message {
+
+      width: 100%;
+      padding: 1.5em 1em 1em 2em;
+      font-size: 1em;
+      color: $K-Search-Toast-Text-color;
+
+    }
+
+
+  }
+
+  #k-search-toast-dismiss {
+    // The dismiss button
+
+    position: absolute;
+    top: 0;
+    right: -30px;
+    background-image: url("/images/icons/times.svg");
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $K-Search-Toast-Dismiss-Color;
+
+  }
+
+}
+

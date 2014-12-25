@@ -1,0 +1,23 @@
+<k-material-dialog id="k-display-search-image-dialog" displaydialog="imageDialog.initialize()">
+
+    <div id="k-image-display-dialog">
+
+        <div id="k-image-attribution">Image Courtesy of the US National Library of Medicine</div>
+
+        <div id="k-image-dialog-content">
+
+            <img id="k-dialog-image" ng-src="{{imageDialog.getImage()}}">
+
+        </div>
+
+        <div id="k-image-search-bar">
+            <div id="k-image-search-text">Search on Drug Image</div>
+            <div id="k-image-search"
+                    class="k-material-fab"
+                    ng-click="imageDialog.searchImage()">
+            </div>
+        </div>
+
+    </div>
+
+</k-material-dialog>
