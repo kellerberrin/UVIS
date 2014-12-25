@@ -210,7 +210,7 @@
      *********************************************************************************************/
 
 
-    searchPrompt.factory("PromptCache", function () {
+    searchPrompt.factory("PromptCache", ["AppConfig", function (AppConfig) {
 
         var cachedPrompt = {inCache: false, promptArray: []};
         var cacheArray = [];
@@ -244,7 +244,7 @@
 
             cacheArray.unshift(cachedPrompt);
 
-            if (cacheArray.length > 100) {
+            if (cacheArray.length > AppConfig.promptCacheSize()) {
 
 
                 cacheArray.pop();
@@ -261,7 +261,7 @@
 
         };
 
-    });
+    }]);
 
     /*********************************************************************************************
      *
@@ -270,11 +270,13 @@
      *********************************************************************************************/
 
 
-    searchPrompt.factory("GetForwardPrompts", ["ReadForwardPrompts",
+    searchPrompt.factory("GetForwardPrompts", ["AppConfig",
+        "ReadForwardPrompts",
         "$q",
         "PromptCache",
         "SearchErrorDialog",
-        function (ReadForwardPrompts,
+        function (AppConfig,
+                  ReadForwardPrompts,
                   $q,
                   PromptCache,
                   SearchErrorDialog) {
@@ -325,7 +327,7 @@
                 var promptParamsSize = {
                     promptstring: forwardParams.searchstring,
                     prompttype: forwardParams.searchtype,
-                    promptsize: "10"
+                    promptsize: AppConfig.promptMaxResults().toString()
                 };
 
                 var requestTime = Date.now();
@@ -387,9 +389,9 @@
      *********************************************************************************************/
 
 
-    searchPrompt.factory("ReadForwardPrompts", ["$resource", function ($resource) {
+    searchPrompt.factory("ReadForwardPrompts", ["AppConfig", "$resource", function (AppConfig, $resource) {
 
-        return $resource("/_ah/api/searchUSdrugs/v1/forwardPrompt"   //url
+        return $resource(AppConfig.promptDatabaseURL()   //url
 
             , {}    // default arguments
 

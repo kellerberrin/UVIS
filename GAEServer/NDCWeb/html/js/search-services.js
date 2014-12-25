@@ -20,14 +20,8 @@
 
         var drugArray = [];
         var searchActive = false;
-        var maxRecords = 100;
         var searchParamsCallback = null;
 
-        var getMaxRecords = function () {
-
-            return maxRecords;
-
-        };
 
         var setSearchActive = function (active) {
 
@@ -71,8 +65,6 @@
 
         return {
 
-            getMaxRecords: getMaxRecords,
-
             setSearchActive: setSearchActive,
 
             getSearchActive: getSearchActive,
@@ -94,7 +86,7 @@
      *
      *********************************************************************************************/
 
-    searchServices.factory("SearchCache", function () {
+    searchServices.factory("SearchCache", ["AppConfig", function (AppConfig) {
 
         var cachedSearch = {inCache: false, drugArray: []};
         var cacheArray = [];
@@ -128,7 +120,7 @@
 
             cacheArray.unshift(cachedSearch);
 
-            if (cacheArray.length > 100) {
+            if (cacheArray.length > AppConfig.searchcacheSize()) {
 
 
                 cacheArray.pop();
@@ -145,7 +137,7 @@
 
         };
 
-    });
+    }]);
 
     /*********************************************************************************************
      *
@@ -153,13 +145,15 @@
      *
      *********************************************************************************************/
 
-    searchServices.factory("CachedDrugSearch", ["SearchEndPoints",
+    searchServices.factory("CachedDrugSearch", ["AppConfig",
+                                                "SearchEndPoints",
                                                 "SearchCache",
                                                 "DrugArray",
                                                 "SearchToast",
                                                 "SearchPrompts",
                                                 "SearchErrorDialog",
-                                                function (SearchEndPoints,
+                                                function (AppConfig,
+                                                          SearchEndPoints,
                                                           SearchCache,
                                                           DrugArray,
                                                           SearchToast,
@@ -198,7 +192,7 @@
 
                 var requestTime = Date.now();
                 var searchParamsSize = searchParams;
-                searchParamsSize.searchsize = DrugArray.getMaxRecords();  // Set the max search size to 100 for now.
+                searchParamsSize.searchsize = AppConfig.searchMaxResults().toString();  // Set the max search size to 100 for now.
 
                 DrugArray.setSearchActive(true);
 
@@ -259,9 +253,11 @@
      *********************************************************************************************/
 
 
-    searchServices.factory("SearchEndPoints", ["$resource", function ($resource) {
+    searchServices.factory("SearchEndPoints", ["AppConfig",
+                                            "$resource",
+                                            function (AppConfig,$resource) {
 
-        return $resource("/_ah/api/searchUSdrugs/v1/typeSearch"   //url
+        return $resource( AppConfig.searchDatabaseURL()   //url
 
             , {}    // default arguments
 
