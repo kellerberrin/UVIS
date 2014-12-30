@@ -7,9 +7,35 @@
         <div id="k-search-prompt-list"
              ng-class="{ promptActive : prompts.promptActive() }">
 
+            <!-- The Prompt Title -->
+
             <div id="k-search-prompt-title">
-                <div>Search Ahead</div>
+
+                <div id="k-search-prompt-key">
+
+                    {{ prompts.currentPrompt() }}
+
+                </div>
+
+                <div id="k-search-prompt-text">Search Ahead</div>
+
             </div>
+
+            <!-- Prompt progress bar is active during prompt read -->
+
+            <div id="k-prompt-progress-container" ng-show=" prompts.readPromptsActive() ">
+
+                <div id="k-prompt-progress-bar">
+
+                    <div id="k-prompt-progress-gradient-1"></div>
+
+                    <div id="k-prompt-progress-gradient-2"></div>
+
+                </div>
+
+            </div>
+
+            <!-- The array of prompts -->
 
             <div class="k-search-prompt-array"
                  ng-repeat="prompt in prompts.getPromptArray() track by $index">

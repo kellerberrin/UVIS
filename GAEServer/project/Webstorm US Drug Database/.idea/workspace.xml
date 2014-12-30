@@ -2,582 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/app.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/app.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/drugdatabase.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/09bb2b3ab3b1dfb3573d9e52852b50a0f8a268ef/_alternating-rows-and-columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/09bb2b3ab3b1dfb3573d9e52852b50a0f8a268ef/_borders.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/09bb2b3ab3b1dfb3573d9e52852b50a0f8a268ef/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/0ea6fc62d77276aaafbb5a29dbfed48c4a8d4df1/_compass.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/10d707cef739f3f2eae67070a538697dee4583b2/_ellipsis.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/10d707cef739f3f2eae67070a538697dee4583b2/_force-wrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/10d707cef739f3f2eae67070a538697dee4583b2/_nowrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/10d707cef739f3f2eae67070a538697dee4583b2/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13b3bedb20fffdbc4c4c9881d3604f1258f7064a/_css3.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13b3bedb20fffdbc4c4c9881d3604f1258f7064a/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13b3bedb20fffdbc4c4c9881d3604f1258f7064a/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13b3bedb20fffdbc4c4c9881d3604f1258f7064a/_typography.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13b3bedb20fffdbc4c4c9881d3604f1258f7064a/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13d503d084237a4fff34f8052fdb65260d7a1afa/_grid-background.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13d503d084237a4fff34f8052fdb65260d7a1afa/_sticky-footer.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/13d503d084237a4fff34f8052fdb65260d7a1afa/_stretching.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_min.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/17f944903a477bc9da483e8668a24ea1e1707770/_tag-cloud.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/1a2e75c26a83e56f62a8e1b0c34c4c208128b59d/_grid-background.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/1a2e75c26a83e56f62a8e1b0c34c4c208128b59d/_sticky-footer.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/1a2e75c26a83e56f62a8e1b0c34c4c208128b59d/_stretching.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/20e5513883c8689b4640571bb39623a72b539cbf/_ellipsis.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/20e5513883c8689b4640571bb39623a72b539cbf/_force-wrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/20e5513883c8689b4640571bb39623a72b539cbf/_nowrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/20e5513883c8689b4640571bb39623a72b539cbf/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/2dac35df034aadad9e17c648af14f65e9b9e6299/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/2dac35df034aadad9e17c648af14f65e9b9e6299/_sprite-img.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3586e6117594f676965da1265977b40396ac4256/_color.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3586e6117594f676965da1265977b40396ac4256/_general.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3586e6117594f676965da1265977b40396ac4256/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3586e6117594f676965da1265977b40396ac4256/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/37264ea8ee3d5d4984fc6129827e57e7ff357959/_alternating-rows-and-columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/37264ea8ee3d5d4984fc6129827e57e7ff357959/_borders.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/37264ea8ee3d5d4984fc6129827e57e7ff357959/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3b5147cf863e9be7b4cdb076c72c471b07a0849b/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3b5147cf863e9be7b4cdb076c72c471b07a0849b/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3b5147cf863e9be7b4cdb076c72c471b07a0849b/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3b5147cf863e9be7b4cdb076c72c471b07a0849b/_units.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/3b5147cf863e9be7b4cdb076c72c471b07a0849b/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_min.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/5095cd0f6d0bf0a64e847b0fbe64ca71ea09fcdb/_tag-cloud.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/54c20ac37983cffc538372fff69aff5fd6a6081d/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/54c20ac37983cffc538372fff69aff5fd6a6081d/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/54c20ac37983cffc538372fff69aff5fd6a6081d/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/54c20ac37983cffc538372fff69aff5fd6a6081d/_units.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/54c20ac37983cffc538372fff69aff5fd6a6081d/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/7cca6204cdd4858469099b88b5649792007c57b5/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/7e185a5ee67d3c8ef2a1b4bf9edade98e6023e06/_brightness.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/7e185a5ee67d3c8ef2a1b4bf9edade98e6023e06/_contrast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_animation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_appearance.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_background-clip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_background-origin.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_border-radius.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_box-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_deprecated-support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_filter.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_flexbox.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_font-face.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_hyphenation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_opacity.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_regions.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_text-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_transform.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_transition.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/81922216df9c15216fab0aac73b6822a0c88a95c/_user-interface.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/83f4ff3320060503202962bc0498b6c2d4be569d/_hover-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/83f4ff3320060503202962bc0498b6c2d4be569d/_link-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/83f4ff3320060503202962bc0498b6c2d4be569d/_unstyled-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/84eb4809fe6abfb802b77da292c158e3f8cb1658/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/84eb4809fe6abfb802b77da292c158e3f8cb1658/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/84eb4809fe6abfb802b77da292c158e3f8cb1658/_inline-block-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/84eb4809fe6abfb802b77da292c158e3f8cb1658/_inline-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8550544ca5db787ed5cc3681eea52fbb647d3cc1/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8550544ca5db787ed5cc3681eea52fbb647d3cc1/_sprite-img.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-dialog-toast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-display-results.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-menu-input.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-search-prompt.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_k-top-level.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/_material.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/85782d093c4ec37a07f7278a20488910dd5be487/app.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8f647c6b4f0f43011051d78bd92bd10caa6adaf9/_css3.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8f647c6b4f0f43011051d78bd92bd10caa6adaf9/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8f647c6b4f0f43011051d78bd92bd10caa6adaf9/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8f647c6b4f0f43011051d78bd92bd10caa6adaf9/_typography.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/8f647c6b4f0f43011051d78bd92bd10caa6adaf9/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/9f1478a52e8047ae96bbae6e5f83d9935b5f6f66/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a0fcb2eab53a8ab7152a410fdf9d51815a28b30a/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a0fcb2eab53a8ab7152a410fdf9d51815a28b30a/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a0fcb2eab53a8ab7152a410fdf9d51815a28b30a/_inline-block-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a0fcb2eab53a8ab7152a410fdf9d51815a28b30a/_inline-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a4df36ef75dac3a9b521841a5a5f32647bae9135/_hover-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a4df36ef75dac3a9b521841a5a5f32647bae9135/_link-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/a4df36ef75dac3a9b521841a5a5f32647bae9135/_unstyled-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/ad254196a82b337ff16bc050873aafbcd78de98a/_color.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/ad254196a82b337ff16bc050873aafbcd78de98a/_general.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/ad254196a82b337ff16bc050873aafbcd78de98a/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/ad254196a82b337ff16bc050873aafbcd78de98a/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/af891038aa6b8c6394f8105619e5c9587fcccbad/_compass.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/c99dc324e7fa1ee9e395aa7946013d77810cb420/_brightness.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/c99dc324e7fa1ee9e395aa7946013d77810cb420/_contrast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_animation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_appearance.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_background-clip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_background-origin.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_border-radius.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_box-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_deprecated-support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_filter.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_flexbox.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_font-face.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_hyphenation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_opacity.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_regions.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_text-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_transform.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_transition.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/.sass-cache/d011a45e2763f90a37120075f0a730deca0a7cc5/_user-interface.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/angular-animate.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-animate/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/angular-cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/angular-cookies.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/angular-cookies.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-cookies/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/angular-resource.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/angular-resource.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular-resource/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/angular/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/dist/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/dist/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/dist/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/parseJSON.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/ajax/xhr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes/attr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes/classes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes/prop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/attributes/val.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/callbacks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core/access.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core/parseHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core/ready.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/curCSS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/defaultDisplay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/swap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/var/isHidden.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/data/Data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/data/accepts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/data/var/data_priv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/data/var/data_user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/deprecated.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/dimensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/effects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/effects/Tween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/event/alias.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/event/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/exports/amd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/exports/global.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/manipulation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/manipulation/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/offset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/outro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/queue/delay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/selector-native.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/selector-sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/selector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/serialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/sizzle/dist/sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/traversing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/arr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/class2type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/hasOwn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/indexOf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/pnum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/push.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/rnotwhite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/slice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/strundefined.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/var/toString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/jquery/src/wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/.fuse_hidden0000019400000002" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/a-download.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/audio-audiodata-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/audio-webaudio-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/battery-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/battery-level.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/blob-constructor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/canvas-todataurl-type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/contenteditable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/contentsecuritypolicy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/contextmenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/cors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-backgroundposition-shorthand.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-backgroundposition-xy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-backgroundrepeat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-backgroundsizecover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-boxsizing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-calc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-cubicbezierrange.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-displayrunin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-displaytable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-filters.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-hyphens.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-lastchild.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-mask.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-mediaqueries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-objectfit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-overflow-scrolling.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-pointerevents.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-positionsticky.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-regions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-remunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-resize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-scrollbars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-shapes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-subpixelfont.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-supports.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-userselect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-vhunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-vmaxunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-vminunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/css-vwunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/custom-protocol-handler.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dataview-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dom-classlist.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dom-createElement-attrs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dom-dataset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/dom-microdata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-datalist.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-details.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-output.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-progress-meter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-ruby.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-time.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/elem-track.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/emoji.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/es5-strictmode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/event-deviceorientation-motion.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/exif-orientation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/file-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/file-filesystem.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-fileinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-formattribute.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-inputnumber-l10n.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-placeholder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-speechinput.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/forms-validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/fullscreen-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/gamepad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/getusermedia.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/ie8compat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/iframe-sandbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/iframe-seamless.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/iframe-srcdoc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/img-apng.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/img-webp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/json.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/lists-reversed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/mathml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/network-connection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/network-eventsource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/network-xhr2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/notification.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/performance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/pointerlock-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/quota-management-api.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/requestanimationframe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/script-async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/script-defer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/style-scoped.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/svg-filters.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/unicode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/url-data-uri.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/userdata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/vibration.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/web-intents.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/webgl-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/websockets-binary.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/window-framed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/workers-blobworkers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/workers-dataworkers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/feature-detects/workers-sharedworkers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/grunt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/media/Modernizr 2 Logo.ai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/media/Modernizr 2 Logo.eps" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/media/Modernizr 2 Logo.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/media/Modernizr 2 Logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/media/Modernizr 2 Logo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/modernizr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/basic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/Windsong-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/Windsong-webfont.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/Windsong-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/Windsong-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/Windsong-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/apng_test.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/before-after.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/form_validation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/ga.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/green5x5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/hashchange.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/mathml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/mathml_ref.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/modernizr-1.7.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/png_alpha_result.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/pushstate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/red30x30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/ruby.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/stroked-text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/svg-html-blur.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/svg-img.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/svg-img.svg.1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/svg_blur.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/table.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/text-shadow1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/text-shadow2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/windsong_font.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/caniuse_files/xhtml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/basic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/dumpdata.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/lib/detect-global.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/lib/jquery-1.7b2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/lib/jsonselect.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/lib/polyfills.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/lib/uaparser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/setup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/unit-caniuse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/js/unit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/qunit/qunit.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/qunit/qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/bower_components/modernizr/test/qunit/run-qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/config.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/css/.fuse_hidden000003e400000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/ScrollBackground.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/ScrollBackground1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/USDrugDatabase.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/ajax-loader-blue.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/ajax-loader-orange.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/barcode24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/caret-down-24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/circular-load.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_access_time_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_arrow_back_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_chevron_right_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_comment_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_insert_drive_file_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_label_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_launch_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_menu_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_more_vert_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_people_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_photo_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_play_arrow_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_refresh_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/ic_visibility_24px.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/search24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/separator.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/times.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/white_barcode24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/white_bars24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/icons/white_search24.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/medherbs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/pills-image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/images/tree_wheat_large.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/.fuse_hidden00000ddc00000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/.fuse_hidden00000ddc00000003" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/.fuse_hidden00000fd400000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/angular-app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/angular-controllers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/angular-directives.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/angular-material.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/dialog-services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/input-services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/prompt-services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/search-services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/js/utility.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/DisplayResults.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/DrugHeader.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/ErrorDialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/ImageDialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/MaterialDialogTemplate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/MaterialPopupTemplate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/MaterialToastTemplate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/SearchDialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/SearchPrompt.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/partial/SearchToast.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_hover-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_link-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/1234e9e810d11875caf200d55b8b8989a37976dd/_unstyled-link.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_links.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_lists.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_text.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/266d95ef935b6cfd086a6d672e8753ad78dd74dc/_vertical_rhythm.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_k-widgets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-colors.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material-local.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/_material.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/27c7eb1c8e314bba0db3d729ab895034fa77a4cf/app.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_css3.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_support.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_typography.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/3a1963fdb3eeca5382e695071b74c3c9a404eb3e/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_grid-background.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_sticky-footer.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/46b3e9e559756e3e02aa6613837b5778e6b319c8/_stretching.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_alternating-rows-and-columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_borders.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/5f3dce2e5c5857d66e6a5f5c696a8caf4ea9b2f7/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_appearance.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-clip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-origin.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_background-size.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_border-radius.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box-sizing.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_box.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_columns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_filter.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_font-face.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_hyphenation.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_images.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_inline-block.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_opacity.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_regions.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_shared.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_text-shadow.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_transform.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_transition.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/64091be0183a8f1171b6cebd3260572a71e920fb/_user-interface.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_bullets.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_horizontal-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_inline-block-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/648454761ef0e3687ef45cdb1729c664c05b1715/_inline-list.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_clearfix.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_float.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_hacks.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_min.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/75dc1fbbb834d52f4c47d11b6506d8c17da89ded/_tag-cloud.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/7a07f3ec7c2c7e8c0e017bbedd9e2910a1a38226/_contrast.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/82ae8723b581d3c297f30a38c2ee644b8e588a43/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_color.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_general.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/9a94f71e1e595f1f57b52a19bc4d4e5afdc14577/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_ellipsis.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_force-wrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_nowrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/dc7509bb807d7e9b454fc4112514a8f731f2b72e/_replacement.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/fcdd17271bcb04d48e76890287cd878601ac8e6d/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/fcdd17271bcb04d48e76890287cd878601ac8e6d/_sprite-img.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/.sass-cache/fd6eec70fac68d497655d0953422b42bd84aeca0/_compass.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_k-dialog-toast.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_k-display-results.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_k-menu-input.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_k-search-prompt.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_k-top-level.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_material-colors.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_material-local.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/_material.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/html/scss/app.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/index.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../EndPoints/library.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/drugdatabase.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/index.yaml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/library.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/US Drug Database.iml" afterPath="$PROJECT_DIR$/.idea/US Drug Database.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS" afterPath="$PROJECT_DIR$/../../../Linux/UVIS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/PromptProgress.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/app.yaml" afterPath="$PROJECT_DIR$/../../PharmCat/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/search-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/search-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" afterPath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/library.py" afterPath="$PROJECT_DIR$/../../NDCWeb/library.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="US Drug Database.iws" />
@@ -602,11 +41,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
+      <file leaf-file-name="angular-controllers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="5560">
+              <caret line="214" column="63" selection-start-line="214" selection-start-column="63" selection-end-line="214" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-search-prompt.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.586206" vertical-offset="1880" max-vertical-offset="5760">
+              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-dialog-toast.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.172414" vertical-offset="5260" max-vertical-offset="6820">
+              <caret line="285" column="44" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-material.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2600">
+              <caret line="76" column="47" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prompt-services.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43541363" vertical-offset="1940" max-vertical-offset="10940">
+              <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -615,18 +94,48 @@
       <file leaf-file-name="angular-app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2060">
-              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3220">
+              <caret line="28" column="33" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search-services.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DisplayResults.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3880">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromptProgress.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/PromptProgress.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="360">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchPrompt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.586207" vertical-offset="120" max-vertical-offset="2120">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8125" vertical-offset="2040" max-vertical-offset="7300">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="7300">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -645,17 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_material.scss" />
-        <option value="$PROJECT_DIR$/../../../../../../../../Google Drive/Kellerberrin/Software/Active/Code/UVIS/GAEServer/NDCWeb/html/bower_components/angular-material/angular-material.css" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/scss/app.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/scss/_k-local.scss" />
-        <option value="$PROJECT_DIR$/../../../../../../../../Google Drive/Kellerberrin/Software/Active/Code/UVIS/GAEServer/NDCWeb/html/scss/_material.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/bower_components/angular-material/angular-material.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogTemplate.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/js/material.js" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogImageTemplate.html" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/scss/_material-colors.scss" />
-        <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogSearchTemplate.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/DialogTempltae.html" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/local.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/partial/DialogErrorTemplate.html" />
@@ -694,8 +192,19 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/prompt-services.js" />
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/app.yaml" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/search-services.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/index.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/PromptProgress.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" />
       </list>
     </option>
   </component>
@@ -703,10 +212,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="281" />
-    <option name="y" value="46" />
-    <option name="width" value="1245" />
-    <option name="height" value="804" />
+    <option name="x" value="280" />
+    <option name="y" value="11" />
+    <option name="width" value="1243" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -750,16 +259,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -806,8 +305,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="US Drug Database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -946,7 +491,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="281" y="46" width="1245" height="804" extended-state="0" />
+    <frame x="280" y="11" width="1243" height="853" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -954,7 +499,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20675784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20709105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1038,9 +583,164 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1000">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2980">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="5520">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3820" max-vertical-offset="6940">
+          <caret line="205" column="23" selection-start-line="204" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="7300">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="9660">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1000">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2000" max-vertical-offset="2880">
+          <caret line="121" column="22" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5520">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3940" max-vertical-offset="6940">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="7300">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="9660">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1000">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1880" max-vertical-offset="2520">
+          <caret line="94" column="7" selection-start-line="94" selection-start-column="7" selection-end-line="94" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="5480">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6940">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="7300">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="9660">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1000">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2060">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7300">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1069,22 +769,208 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-top-level.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3440">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="4580">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2060">
-          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.5172415" vertical-offset="1100" max-vertical-offset="1880">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <marker date="1419921295704" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5500">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialToastTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/input-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="105.0" vertical-offset="3150" max-vertical-offset="3920">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.966667" vertical-offset="4721" max-vertical-offset="7100">
+          <caret line="278" column="37" selection-start-line="278" selection-start-column="37" selection-end-line="278" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="287.5862" vertical-offset="8340" max-vertical-offset="9240">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material-local.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="689">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchToast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.655172" vertical-offset="0" max-vertical-offset="400">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1651" max-vertical-offset="2340">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material-colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6140">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5172415" vertical-offset="2189" max-vertical-offset="9660">
+          <caret line="116" column="18" selection-start-line="116" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="2600">
+          <caret line="76" column="47" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.172414" vertical-offset="5260" max-vertical-offset="6820">
+          <caret line="285" column="44" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.586206" vertical-offset="1880" max-vertical-offset="5760">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/PromptProgress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.206897" vertical-offset="0" max-vertical-offset="360">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.586207" vertical-offset="120" max-vertical-offset="2120">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3880">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8125" vertical-offset="2040" max-vertical-offset="7300">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="7300">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="5560">
+          <caret line="214" column="63" selection-start-line="214" selection-start-column="63" selection-end-line="214" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="3220">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43541363" vertical-offset="1940" max-vertical-offset="10940">
+          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
           <folding />
         </state>
       </provider>

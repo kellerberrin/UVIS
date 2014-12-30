@@ -941,12 +941,14 @@ body {
   padding: 0.4em;
   margin: 0 1rem 0 0;
   background-color: #259b24;
+  font-size: 1rem;
 }
-/* line 142, ../scss/_k-dialog-toast.scss */
+/* line 143, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-modify {
   padding: 0.4em;
   margin: 0 1rem 0 0;
   background-color: #e51c23;
+  font-size: 1rem;
 }
 
 /*********************************************************************************************
@@ -954,7 +956,7 @@ body {
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 164, ../scss/_k-dialog-toast.scss */
+/* line 166, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -962,7 +964,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 174, ../scss/_k-dialog-toast.scss */
+/* line 176, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -970,7 +972,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 184, ../scss/_k-dialog-toast.scss */
+/* line 186, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -978,7 +980,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 194, ../scss/_k-dialog-toast.scss */
+/* line 196, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1072,7 +1074,7 @@ body {
     opacity: 0;
   }
 }
-/* line 258, ../scss/_k-dialog-toast.scss */
+/* line 260, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1088,27 +1090,27 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 274, ../scss/_k-dialog-toast.scss */
+/* line 276, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
-  /* remember, the .hg-hide class is added to element
+  /* The .hg-hide class is added to element
      when the active class is added causing it to appear
-     as hidden. Therefore set the styling to display=block
+     as hidden. Therefore set the styling to display:block
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 282, ../scss/_k-dialog-toast.scss */
+/* line 284, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 288, ../scss/_k-dialog-toast.scss */
+/* line 290, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 295, ../scss/_k-dialog-toast.scss */
+/* line 297, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1124,14 +1126,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 306, ../scss/_k-dialog-toast.scss */
+/* line 307, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 318, ../scss/_k-dialog-toast.scss */
+/* line 320, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;
@@ -2045,39 +2047,142 @@ body {
 
 /*****************************************************************************************************************
 *
-* Menu Bar, search ahead and history
+* Search ahead and history
 *
 ******************************************************************************************************************/
-/* line 39, ../scss/_k-search-prompt.scss */
+/*****************************************************************************************************************
+*
+* Animated Prompt Progress Bar.
+*
+******************************************************************************************************************/
+@-moz-keyframes prompt-progress-bar {
+  0% {
+    -moz-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+  }
+  100% {
+    -moz-transform: translate(0%, 0px);
+    transform: translate(0%, 0px);
+  }
+}
+@-webkit-keyframes prompt-progress-bar {
+  0% {
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0px);
+    transform: translate(0%, 0px);
+  }
+}
+@keyframes prompt-progress-bar {
+  0% {
+    -moz-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
+  }
+  100% {
+    -moz-transform: translate(0%, 0px);
+    -ms-transform: translate(0%, 0px);
+    -webkit-transform: translate(0%, 0px);
+    transform: translate(0%, 0px);
+  }
+}
+/* line 59, ../scss/_k-search-prompt.scss */
+#k-prompt-progress-container {
+  height: 2px;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 65, ../scss/_k-search-prompt.scss */
+#k-prompt-progress-container #k-prompt-progress-bar {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -moz-animation: prompt-progress-bar 1s linear infinite;
+  -webkit-animation: prompt-progress-bar 1s linear infinite;
+  animation: prompt-progress-bar 1s linear infinite;
+  height: 100%;
+  width: 200%;
+}
+/* line 74, ../scss/_k-search-prompt.scss */
+#k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-1 {
+  height: 100%;
+  width: 50%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNmNTFiNSIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZjUxYjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(63, 81, 181, 0.3)), color-stop(100%, #3f51b5));
+  background-image: -moz-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
+  background-image: -webkit-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
+  background-image: linear-gradient(to right, rgba(63, 81, 181, 0.3), #3f51b5);
+}
+/* line 82, ../scss/_k-search-prompt.scss */
+#k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-2 {
+  height: 100%;
+  width: 50%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNmNTFiNSIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzZjUxYjUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(63, 81, 181, 0.3)), color-stop(100%, #3f51b5));
+  background-image: -moz-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
+  background-image: -webkit-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
+  background-image: linear-gradient(to right, rgba(63, 81, 181, 0.3), #3f51b5);
+}
+
+/*****************************************************************************************************************
+*
+* The progress and history container markup.
+*
+******************************************************************************************************************/
+/* line 100, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container {
   border: solid 2px #3f51b5;
 }
-/* line 43, ../scss/_k-search-prompt.scss */
+/* line 104, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list {
   display: none;
   border: solid 2px #c5cae9;
 }
-/* line 48, ../scss/_k-search-prompt.scss */
+/* line 109, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list.promptActive {
   display: block;
 }
-/* line 54, ../scss/_k-search-prompt.scss */
+/* line 115, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title {
-  color: black;
-  text-align: center;
-  height: 2em;
   background-color: #c5cae9;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
 }
-/* line 65, ../scss/_k-search-prompt.scss */
+/* line 119, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-key {
+  color: #303f9f;
+  width: 100%;
+  font-size: 0.7em;
+  font-weight: 700;
+  padding-left: 0.5em;
+  padding-top: 0.1em;
+  padding-bottom: 0.0em;
+}
+/* line 131, ../scss/_k-search-prompt.scss */
+#k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-text {
+  color: black;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0.2em;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 146, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 69, ../scss/_k-search-prompt.scss */
+/* line 150, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2088,7 +2193,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 77, ../scss/_k-search-prompt.scss */
+/* line 158, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item {
   position: relative;
   width: 100%;
@@ -2096,11 +2201,11 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 85, ../scss/_k-search-prompt.scss */
+/* line 166, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item:hover {
   color: #03a9f4;
 }
-/* line 91, ../scss/_k-search-prompt.scss */
+/* line 172, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-type {
   width: 100%;
   color: #303f9f;
@@ -2110,7 +2215,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 103, ../scss/_k-search-prompt.scss */
+/* line 184, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-value {
   width: 100%;
   padding-left: 1.5em;
@@ -2120,30 +2225,30 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 121, ../scss/_k-search-prompt.scss */
+/* line 202, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list {
   display: none;
   border: solid 2px #ffccde;
 }
-/* line 126, ../scss/_k-search-prompt.scss */
+/* line 207, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list.historyActive {
   display: block;
 }
-/* line 132, ../scss/_k-search-prompt.scss */
+/* line 213, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list #k-search-history-title {
   color: black;
   text-align: center;
   padding: 0.3em;
   background-color: #ffccde;
 }
-/* line 141, ../scss/_k-search-prompt.scss */
+/* line 222, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 145, ../scss/_k-search-prompt.scss */
+/* line 226, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2154,7 +2259,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 153, ../scss/_k-search-prompt.scss */
+/* line 234, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item {
   position: relative;
   width: 100%;
@@ -2164,11 +2269,11 @@ body {
   padding: 0;
   margin: 0;
 }
-/* line 163, ../scss/_k-search-prompt.scss */
+/* line 244, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item:hover {
   color: #ff80ab;
 }
-/* line 169, ../scss/_k-search-prompt.scss */
+/* line 250, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-type {
   width: 100%;
   color: #303f9f;
@@ -2178,7 +2283,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 181, ../scss/_k-search-prompt.scss */
+/* line 262, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-value {
   width: 100%;
   padding-left: 1.5em;
@@ -2640,14 +2745,19 @@ body {
 /* line 114, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price {
   position: relative;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
   width: 100%;
   margin: 0;
   padding: 0;
   border: none;
   background-color: white;
 }
-/* line 124, ../scss/_k-display-results.scss */
+/* line 126, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2660,7 +2770,7 @@ body {
   margin: 5px;
   cursor: pointer;
 }
-/* line 132, ../scss/_k-display-results.scss */
+/* line 134, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image:hover {
   -moz-transform: translate(0px, -1px);
   -ms-transform: translate(0px, -1px);
@@ -2670,31 +2780,30 @@ body {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-/* line 139, ../scss/_k-display-results.scss */
+/* line 141, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image.hasimage {
   display: block;
 }
-/* line 145, ../scss/_k-display-results.scss */
+/* line 147, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image .k-display-small-image {
-  float: left;
   margin: 3px;
 }
-/* line 160, ../scss/_k-display-results.scss */
+/* line 161, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients {
   display: none;
   position: relative;
   background-color: #ffccde;
   width: 100%;
 }
-/* line 167, ../scss/_k-display-results.scss */
+/* line 168, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients.hasactive {
   display: block;
 }
-/* line 173, ../scss/_k-display-results.scss */
+/* line 174, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label {
   height: 2em;
 }
-/* line 177, ../scss/_k-display-results.scss */
+/* line 178, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2711,19 +2820,19 @@ body {
   background-color: #03a9f4;
   display: none;
 }
-/* line 192, ../scss/_k-display-results.scss */
+/* line 193, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.validselection {
   display: block;
 }
-/* line 198, ../scss/_k-display-results.scss */
+/* line 199, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.searchactive {
   background-color: #ff80ab;
 }
-/* line 205, ../scss/_k-display-results.scss */
+/* line 206, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.validselection:hover {
   opacity: 1.0;
 }
-/* line 213, ../scss/_k-display-results.scss */
+/* line 214, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-label-text {
   width: 100%;
   margin: 0;
@@ -2731,14 +2840,14 @@ body {
   padding: 0.1em 1rem 0.1em 2.5rem;
   font-size: 1.2em;
 }
-/* line 226, ../scss/_k-display-results.scss */
+/* line 227, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel {
   width: 100%;
   font-size: 1.0em;
   margin: 0;
   padding-bottom: 0.5em;
 }
-/* line 234, ../scss/_k-display-results.scss */
+/* line 235, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line {
   display: -webkit-flex;
   display: flex;
@@ -2747,7 +2856,7 @@ body {
   width: 100%;
   font-size: inherit;
 }
-/* line 242, ../scss/_k-display-results.scss */
+/* line 243, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name {
   float: left;
   max-width: 75%;
@@ -2756,19 +2865,19 @@ body {
   padding: 0.2em 0.2em 0.2em 0.2rem;
   background-color: #ffccde;
 }
-/* line 251, ../scss/_k-display-results.scss */
+/* line 252, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name .k-display-ingredient-name-icon {
   opacity: 0;
 }
-/* line 257, ../scss/_k-display-results.scss */
+/* line 258, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name.activeselected {
   background-color: #ffb3cd;
 }
-/* line 262, ../scss/_k-display-results.scss */
+/* line 263, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name.activeselected .k-display-ingredient-name-icon {
   opacity: 0.7;
 }
-/* line 272, ../scss/_k-display-results.scss */
+/* line 273, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength {
   float: left;
   max-width: 35%;
@@ -2777,31 +2886,31 @@ body {
   padding: 0.2em 0 0.2em 0.2rem;
   background-color: #ffccde;
 }
-/* line 281, ../scss/_k-display-results.scss */
+/* line 282, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength .k-display-ingredient-strength-icon {
   opacity: 0;
 }
-/* line 287, ../scss/_k-display-results.scss */
+/* line 288, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength.strengthselected {
   background-color: #ffb3cd;
 }
-/* line 292, ../scss/_k-display-results.scss */
+/* line 293, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength.strengthselected .k-display-ingredient-strength-icon {
   opacity: 0.7;
 }
-/* line 312, ../scss/_k-display-results.scss */
+/* line 313, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-package-container {
   width: 100%;
   background-color: white;
 }
-/* line 317, ../scss/_k-display-results.scss */
+/* line 318, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-package-container .k-display-package-description {
   padding: 0.3em 1.0rem 0.3em 2.5rem;
   border: none;
   margin: 0;
   font-size: 0.9em;
 }
-/* line 332, ../scss/_k-display-results.scss */
+/* line 333, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container {
   position: relative;
   margin: 0;
@@ -2810,7 +2919,7 @@ body {
   background-color: #c5cae9;
   width: 100%;
 }
-/* line 341, ../scss/_k-display-results.scss */
+/* line 342, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2826,15 +2935,15 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 354, ../scss/_k-display-results.scss */
+/* line 355, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search.searchactive {
   background-color: #ff80ab;
 }
-/* line 361, ../scss/_k-display-results.scss */
+/* line 362, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search:hover {
   opacity: 1.0;
 }
-/* line 369, ../scss/_k-display-results.scss */
+/* line 370, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-title {
   font-size: 1.2em;
   padding: 0.1em 1rem 0.1em 2.5rem;
@@ -2842,7 +2951,7 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 379, ../scss/_k-display-results.scss */
+/* line 380, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes {
   display: inline-block;
   /* non-flexbox browsers */
@@ -2856,7 +2965,7 @@ body {
   flex-wrap: wrap;
   margin-left: 2.5rem;
 }
-/* line 388, ../scss/_k-display-results.scss */
+/* line 389, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc {
   display: -webkit-flex;
   display: flex;
@@ -2866,7 +2975,7 @@ body {
   align-items: flex-start;
   margin-right: 1em;
 }
-/* line 395, ../scss/_k-display-results.scss */
+/* line 396, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-title {
   color: #303f9f;
   font-size: 0.7em;
@@ -2875,7 +2984,7 @@ body {
   border: none;
   margin: 0;
 }
-/* line 406, ../scss/_k-display-results.scss */
+/* line 407, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-value {
   font-size: 1em;
   padding: 0.1em 0 0.1em 0;
@@ -2883,11 +2992,11 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 414, ../scss/_k-display-results.scss */
+/* line 415, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-value .k-display-ndc-format {
   font-size: 0.7em;
 }
-/* line 424, ../scss/_k-display-results.scss */
+/* line 425, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 {
   display: -webkit-flex;
   display: flex;
@@ -2896,7 +3005,7 @@ body {
   -webkit-align-items: flex-start;
   align-items: flex-start;
 }
-/* line 430, ../scss/_k-display-results.scss */
+/* line 431, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-title {
   color: #303f9f;
   font-size: 0.7em;
@@ -2905,11 +3014,11 @@ body {
   border: none;
   margin: 0;
 }
-/* line 439, ../scss/_k-display-results.scss */
+/* line 440, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-title .k-display-ndc11-package {
   font-weight: 500;
 }
-/* line 447, ../scss/_k-display-results.scss */
+/* line 448, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value {
   font-size: 1.0em;
   padding: 0.1em 0 0.1em 0;
@@ -2917,11 +3026,11 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 455, ../scss/_k-display-results.scss */
+/* line 456, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value .k-display-ndc11-ndc9 {
   font-weight: 700;
 }
-/* line 461, ../scss/_k-display-results.scss */
+/* line 462, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value .k-display-ndc11-format {
   font-size: 0.7em;
 }

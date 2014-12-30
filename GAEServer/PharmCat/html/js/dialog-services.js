@@ -195,6 +195,47 @@
 
     /*********************************************************************************************
      *
+     * A dialog to display any errors from the search endpoints.
+     * Defined at the top level in Index.html
+     *
+     *********************************************************************************************/
+
+    dialogServices.factory("IncompatibleDialog", function () {
+
+        var incompatibilityText = "Sorry - PharmCat is Incompatible with your Web Broswer.";
+        var explanation = "PharmCat requires an up-to-date or recent Web Browser version";
+        var action = "Action: Install the latest version of your favorite Web Browser and rerun PharmCat";
+
+        var incompatibleDialog = {
+            show: false, // Display the dialog box
+            dialogStyle: {width: "80%", "max-width": "400px"}, // Set the dialog width
+            incompatibilityText : incompatibilityText,
+            explanation : explanation,
+            action : action
+        };
+
+
+        return {
+
+            initialize: function () {
+
+                return incompatibleDialog;
+
+            },
+
+            displayIncompatible: function (error) {
+
+                incompatibleDialog.show = true;
+
+            }
+
+        }
+
+    });
+
+
+    /*********************************************************************************************
+     *
      * A popup toast to summarize the search results.
      * Defined at the top level in Index.html
      * Note that this is NOT inherited from a material toast type.
@@ -209,6 +250,8 @@
             searchMessage: "" // Set the search message
         }; // Set the toast width
 
+        var intervalPromise = null;
+
         var dismissToast = function() {
 
             displaySearchToast.show = false;
@@ -219,9 +262,15 @@
 
             displayToast: function (message) {
 
+                if (intervalPromise != null) {
+
+                    $interval.cancel(intervalPromise);
+
+                }
+
                 displaySearchToast.searchMessage = message;
                 displaySearchToast.show = true;
-                $interval( dismissToast, displaySearchToast.timeOut, 1, true);
+                intervalPromise = $interval( dismissToast, displaySearchToast.timeOut, 1, true);
 
             },
 

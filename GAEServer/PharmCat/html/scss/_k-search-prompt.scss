@@ -19,7 +19,7 @@
 
 /*****************************************************************************************************************
 *
-* Menu Bar, search ahead and history
+* Search ahead and history
 *
 ******************************************************************************************************************/
 
@@ -32,9 +32,70 @@ $K-Prompt-Item-Active-Color: $md-light-blue-500;
 $K-Search-Prompt-Dismiss-Color: $K-ACCENT-COLOR-100;
 $K-Search-Type-Color: white;
 $K-Search-Type-Background-Color: $md-light-blue-500;
+$K-Prompt-Progress-Color: $K-PRIMARY-COLOR-500;
 
+/*****************************************************************************************************************
+*
+* Animated Prompt Progress Bar.
+*
+******************************************************************************************************************/
 
+@include keyframes(prompt-progress-bar) {
 
+  0% {
+
+    @include translate(-50%, 0px);
+
+  }
+
+  100% {
+
+    @include translate(0%, 0px);
+
+  }
+
+}
+
+#k-prompt-progress-container {
+
+  height: 2px;
+  width: 100%;
+  overflow: hidden;
+
+  #k-prompt-progress-bar {
+
+    @include display-flex;
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include animation(prompt-progress-bar 1s linear infinite);
+    height: 100%;
+    width: 200%;
+
+    #k-prompt-progress-gradient-1 {
+
+      height: 100%;
+      width: 50%;
+      @include background-image(linear-gradient(to right, rgba($K-Prompt-Progress-Color, 0.3), rgba($K-Prompt-Progress-Color, 1)));
+
+    }
+
+    #k-prompt-progress-gradient-2 {
+
+      height: 100%;
+      width: 50%;
+      @include background-image(linear-gradient(to right, rgba($K-Prompt-Progress-Color, 0.3), rgba($K-Prompt-Progress-Color, 1)));
+
+    }
+
+  }
+
+}
+
+/*****************************************************************************************************************
+*
+* The progress and history container markup.
+*
+******************************************************************************************************************/
 
 #k-search-prompt-container {
 
@@ -53,12 +114,32 @@ $K-Search-Type-Background-Color: $md-light-blue-500;
 
     #k-search-prompt-title {
 
-      color: $md-black-primary-text;
-      text-align: center;
-      height: 2em;
       background-color: $K-Prompt-Prompt-Title-Color;
-      padding-top: 0.3em;
-      padding-bottom: 0.3em;
+
+      #k-search-prompt-key {
+
+        color: $K-Prompt-Type-Color;
+        width: 100%;
+        font-size: 0.7em;
+        font-weight: 700;
+        padding-left: 0.5em;
+        padding-top: 0.1em;
+        padding-bottom: 0.0em;
+
+      }
+
+      #k-search-prompt-text {
+
+        color: $md-black-primary-text;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0.2em;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
 
     }
 

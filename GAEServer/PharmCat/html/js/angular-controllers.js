@@ -18,12 +18,14 @@
 
     searchControllers.controller("DisplayController",
         ["$scope",
+            "Browser",
             "DrugArray",
             "ImageSearchDialog",
             "ConfirmSearchDialog",
             "SearchErrorDialog",
             "SearchToast",
-            function DisplayController($scope,
+             function DisplayController($scope,
+                                       Browser,
                                        DrugArray,
                                        ImageSearchDialog,
                                        ConfirmSearchDialog,
@@ -36,6 +38,7 @@
                 $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
                 $scope.searchToast = SearchToast; // Link the server error dialog box to this scope.
 
+                Browser.checkCompatibility(); // Perform Modernizr checks on browser capability.
 
             }]);
 
@@ -66,9 +69,9 @@
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
+                $scope.drugSearch = DrugSearch; // Performs the actual drug search
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service
-                $scope.drugSearch = DrugSearch; // Performs the actual drug search
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
 
                 $scope.getSearchParams = function () {
@@ -201,13 +204,16 @@
     searchControllers.controller("SearchPromptController",
         ["$scope",
             "SearchPrompts",
+            "PromptArray",
             "InputSearchTypes",
             function SearchPromptController($scope,
                                             SearchPrompts,
+                                            PromptArray,
                                             InputSearchTypes) {
 
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
-                $scope.types = InputSearchTypes;
+                $scope.promptArray = PromptArray; // Injected array of type-ahead and history prompts
+                $scope.types = InputSearchTypes; // Search
 
             }]);
 

@@ -64,4 +64,48 @@ var searchDirectives = angular.module( "kSearchDirectives", []);
     }]);
 
 
+    /****************************************************************************
+     *
+     * A general purpose progress bar
+     *
+     ****************************************************************************/
+
+
+    searchDirectives.directive('kPromptProgressBar', function() {
+
+        return {
+
+            restrict: "E",
+
+            scope: { displayProgressBar: "=displayprogressbar" },   // Isolate scope (only for template below).
+
+            replace: true, // Replace with the template below
+
+            transclude: true, // we want to insert custom content inside the directive
+
+            link: function(scope, element, attrs) {
+
+                scope.hideProgressBar =function() {
+
+                    scope.displayProgressBar.show = false;
+
+                }
+
+                scope.showProgressBar =function() {
+
+                    scope.displayProgressBar.show = true;
+
+                }
+
+
+
+            },
+
+            templateUrl: "partial/PromptProgress.html"
+
+        }; // end of return
+
+    }); // end of directive.
+
+
 })(window, window.angular);

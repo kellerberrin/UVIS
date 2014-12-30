@@ -114,7 +114,9 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
   & .k-display-image-price {
 
     position: relative;
-    display: flex;
+    @include display-flex;
+    @include flex-direction(row);
+    @include align-items(flex-start);
     width: 100%;
     margin: 0;
     padding: 0;
@@ -144,7 +146,6 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
       & .k-display-small-image {
 
-        float: left;
         margin: 3px;
 
       }

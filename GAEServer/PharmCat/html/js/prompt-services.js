@@ -8,6 +8,90 @@
 
     var searchPrompt = angular.module("kSearchPrompt", ["ngResource"]);
 
+    /*********************************************************************************************
+     *
+     * Communicates the prompt data and status to the prompt popup controller
+     *
+     *********************************************************************************************/
+
+    searchPrompt.factory("PromptArray", function () {
+
+        var promptArray = [];
+        var historyArray = [];
+        var promptActive = false;
+        var historyActive = null;
+
+        var setPromptArray = function (array) {
+
+            promptArray = array;
+
+        };
+
+        var setPromptActive = function (active) {
+
+            promptActive = active;
+
+        };
+
+        var getPromptArray = function () {
+
+            return promptArray;
+
+        };
+
+        var getPromptActive = function (active) {
+
+            return promptActive;
+
+        };
+
+        var setHistoryArray = function (array) {
+
+            historyArray = array;
+
+        };
+
+        var setHistoryActive = function (active) {
+
+            historyActive = active;
+
+        };
+
+        var getHistoryArray = function () {
+
+            return historyArray;
+
+        };
+
+        var getHistoryActive = function (active) {
+
+            return historyActive;
+
+        };
+
+
+        return {
+
+            setPromptArray: setPromptArray,
+
+            setPromptActive: setPromptActive,
+
+            getPromptArray: getPromptArray,
+
+            getPromptActive: getPromptActive,
+
+            setHistoryArray: setHistoryArray,
+
+            setHistoryActive: setHistoryActive,
+
+            getHistoryArray: getHistoryArray,
+
+            getHistoryActive: getHistoryActive
+
+        };
+
+    });
+
 
     /*********************************************************************************************
      *
@@ -16,20 +100,23 @@
      *********************************************************************************************/
 
     searchPrompt.factory("SearchPrompts",
-        ["GetForwardPrompts",
+        [   "AppConfig",
+            "GetForwardPrompts",
             "SearchPromptPopup",
-            function (GetForwardPrompts,
-                      SearchPromptPopup) {
+            "PromptArray",
+            function ( AppConfig,
+                       GetForwardPrompts,
+                       SearchPromptPopup,
+                       PromptArray) {
 
                 var historyArray = [];  // History of searches
-                var totalPromptCount = 10;
-                var displayHistoryArrayCount = 3;
                 var displayHistoryArray = []; // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
                 var promptArray = [];  // Search ahead prompts
                 var displayPromptArray = [];  // Displayed prompts, Length = min(10-displayHistoryArray, promptArray.length))
                 var historyActive = false; // Set when the search history is active
                 var promptActive = false; // Set when type-ahead prompt is active
                 var focusActive = false; // Does the text input have focus
+                var readPromptsActive = false; // Set when fetching prompts.
 
 
                 var setPromptStatus = function (focus, searchParams) {
@@ -40,12 +127,15 @@
 
                     if (focus && searchParams.searchstring.length > 0) {
 
+                        readPromptsActive = true;
+
                         GetForwardPrompts.getForwardPrompt(searchParams).then(
                             function (array) {
 
                                 promptArray = array;
+                                readPromptsActive = false;
                                 setDisplayPromptArrays();
-                                setFocusStatus(focusActive);
+                                setFocusStatus(focusActive);  // ****** Possible bug *****
                                 utilityModule.k_consoleLog(["getForwardPrompt", promptArray]);
 
                             }
@@ -93,7 +183,7 @@
 
                     for (var i = 0; i < historyArray.length; i++) {
 
-                        if (i >= Math.max(displayHistoryArrayCount, totalPromptCount - promptArray.length)) break;
+                        if (i >= Math.max(AppConfig.displayHistoryPromptCount(), AppConfig.totalPromptCount() - promptArray.length)) break;
 
                         displayHistoryArray.push(historyArray[i]);
 
@@ -115,7 +205,7 @@
 
                     for (i = 0; i < promptArray.length; i++) {
 
-                        if (i >= totalPromptCount - displayHistoryArray.length) break;
+                        if (i >= AppConfig.totalPromptCount() - displayHistoryArray.length) break;
 
                         displayPromptArray.push(promptArray[i]);
 
@@ -195,6 +285,18 @@
                         historyArray.unshift(searchParams);
                         setDisplayPromptArrays();
                         setFocusStatus(focusActive);
+
+                    },
+
+                    currentPrompt: function() {
+
+                        return "Test";
+
+                    },
+
+                    readPromptsActive : function() {
+
+                        return readPromptsActive;
 
                     }
 

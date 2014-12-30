@@ -22,6 +22,7 @@ class RequestSearchArgs(messages.Message):
     """Extract the drug database search arguments."""
     searchstring = messages.StringField(1, required=True)
     searchtype = messages.StringField(2, required=True)
+    searchsize = messages.StringField(3, required=True)
 
 class DrugSearchResult(messages.Message):
     """Return the json object"""
@@ -48,6 +49,7 @@ class SearchUSDrugsApi(remote.Service):
         RequestSearchArgs,
         searchstring=messages.StringField(1, required=True),
         searchtype=messages.StringField(2, required=True),
+        searchsize=messages.StringField(3, required=True),
 
     )
 
@@ -59,7 +61,7 @@ class SearchUSDrugsApi(remote.Service):
     def search_implementation(self, request):
         return DrugSearchResult(resultMessage=ReadNDCDatabaseJSON(request.searchstring,
                                                                   request.searchtype,
-                                                                  100))
+                                                                  request.searchsize))
 
     FORWARD_PROMPT_RESOURCE = endpoints.ResourceContainer(
         ForwardPromptArgs,

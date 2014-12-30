@@ -30,8 +30,8 @@
 
 
 // Comment one of these out to define the environment
-//        var environment = "Test";
-        var environment = "Production";
+        var environment = "Test";
+//        var environment = "Production";
 
         var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
         var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
@@ -48,10 +48,12 @@
 
         }
 
-        var promptCacheSize = 100;
-        var promptMaxResults = 10;
-        var searchCacheSize = 100;
-        var searchMaxResults = 100;
+        var promptCacheSize = 100;   // Prompt Cache
+        var promptMaxResults = 10;   // Prompt Read Size
+        var searchCacheSize = 100;   // Drug Search Cache
+        var searchMaxResults = 100;  // Drug Search Max Read Size
+        var totalPromptCount = 10;   // Total Prompts displayed
+        var displayHistoryPromptCount = 3; // Total History prompts count if displaying search prompts
 
         return {
 
@@ -87,6 +89,18 @@
 
                 return searchMaxResults;
 
+            },
+
+            totalPromptCount : function() {
+
+                return totalPromptCount;
+
+            },
+
+            displayHistoryPromptCount : function () {
+
+                return displayHistoryPromptCount;
+
             }
 
         };
@@ -94,4 +108,48 @@
 
     });
 
-})(window, window.angular);
+
+    drugSearchApp.constant("Modernizr", Modernizr);
+
+    drugSearchApp.factory("Browser", [ "Modernizr",  function (Modernizr) {
+
+        var incompatibilityText = "Sorry - PharmCat is Incompatible with your Web Browser.";
+        var explanation = "PharmCat requires an up-to-date or recent Web Browser version.";
+        var action = "Solution: Install the latest version of your favorite Web Browser and re-start PharmCat.";
+        var browserAlert = incompatibilityText + "\n\n" + explanation + "\n\n" + action;
+
+        var browserCapable = Modernizr.fontface
+        && Modernizr.backgroundsize
+        && Modernizr.borderimage
+        && Modernizr.borderradius
+        && Modernizr.boxshadow
+        && Modernizr.flexbox
+        && Modernizr.opacity
+        && Modernizr.rgba
+        && Modernizr.textshadow
+        && Modernizr.cssanimations
+        && Modernizr.csstransitions
+        && Modernizr.svg
+        && Modernizr.svgclippaths;
+
+        return {
+
+            checkCompatibility: function() {
+
+                if (!browserCapable) {
+
+                    window.alert(browserAlert);
+
+                }
+
+                return browserCapable;
+
+            }
+
+        };
+
+
+    }]);
+
+
+    })(window, window.angular);

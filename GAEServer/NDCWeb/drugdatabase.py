@@ -216,7 +216,7 @@ def ReadNDCDatabase(SearchText, SearchType, SearchSize):
     else:
         SearchError = True
 
-    if not(SearchError) : NDCRecords = qNDC.fetch(limit=SearchSize)
+    if not(SearchError) : NDCRecords = qNDC.fetch(limit=int(SearchSize))
 
     for NDCRecord in NDCRecords:
         NDCRecord.ndc = NDCTenDigitFormat(NDCRecord.ndc, NDCRecord.format)
