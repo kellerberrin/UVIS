@@ -29,6 +29,28 @@ var utilityModule = (function (window, angular, undefined) {
     /*********************************************************************************************
      *
      *
+     * Capitalize the first letter of a string.
+     *
+     *
+     ************************************************************************************************/
+
+    var k_capitalize = function(string) {
+
+        if (typeof string == "string" && string.length > 0) {
+
+            return string.charAt(0).toUpperCase() + string.slice(1);
+
+        } else {
+
+            return string;
+
+        }
+
+    };
+
+    /*********************************************************************************************
+     *
+     *
      * Set up record count text in the notification area.
      *
      *
@@ -84,7 +106,7 @@ var utilityModule = (function (window, angular, undefined) {
      ************************************************************************************************/
 
 
-    var K_clientDrugData = function () {
+    var k_clientDrugData = function () {
 
         this.drugDataArray = [];
 
@@ -258,11 +280,13 @@ var utilityModule = (function (window, angular, undefined) {
 
         k_drugCount: k_drugCount,
 
-        K_clientDrugData: K_clientDrugData,
+        k_clientDrugData: k_clientDrugData,
 
         k_NDC9SearchArray: k_NDC9SearchArray,
 
-        k_NDC9Format: k_NDC9Format
+        k_NDC9Format: k_NDC9Format,
+
+        k_capitalize: k_capitalize
 
     };
 

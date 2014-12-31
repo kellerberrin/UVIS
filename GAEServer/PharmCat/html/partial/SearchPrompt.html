@@ -1,11 +1,11 @@
 <!-- The search prompt popup -->
 
-<k-material-popup id="k-search-prompt-popup" displaypopup="prompts.displaySearchPrompt()">
+<k-material-popup id="k-search-prompt-popup" displaypopup="promptPopup.initialize()">
 
     <div id="k-search-prompt-container" ng-controller="SearchPromptController">
 
         <div id="k-search-prompt-list"
-             ng-class="{ promptActive : prompts.promptActive() }">
+             ng-class="{ promptActive : promptArray.getPromptActive() }">
 
             <!-- The Prompt Title -->
 
@@ -13,7 +13,7 @@
 
                 <div id="k-search-prompt-key">
 
-                    {{ prompts.currentPrompt() }}
+                    {{ promptArray.getCurrentPromptText() }}
 
                 </div>
 
@@ -23,7 +23,7 @@
 
             <!-- Prompt progress bar is active during prompt read -->
 
-            <div id="k-prompt-progress-container" ng-show=" prompts.readPromptsActive() ">
+            <div id="k-prompt-progress-container" ng-show=" promptArray.getReadPrompt() ">
 
                 <div id="k-prompt-progress-bar">
 
@@ -38,7 +38,7 @@
             <!-- The array of prompts -->
 
             <div class="k-search-prompt-array"
-                 ng-repeat="prompt in prompts.getPromptArray() track by $index">
+                 ng-repeat="prompt in promptArray.getPromptArray() track by $index">
 
                 <div class="k-search-prompt-item" ng-click="promptSearch(prompt)">
 
@@ -63,14 +63,14 @@
         </div>
 
         <div id="k-search-history-list"
-             ng-class="{ historyActive : prompts.historyActive() }">
+             ng-class="{ historyActive : promptArray.getHistoryActive() }">
 
             <div id="k-search-history-title">
                 <div>Search History</div>
             </div>
 
             <div class="k-search-history-array"
-                 ng-repeat="history in prompts.getHistoryArray() track by $index">
+                 ng-repeat="history in promptArray.getHistoryArray() track by $index">
 
                 <div class="k-search-history-item" ng-click="promptSearch(history)">
 

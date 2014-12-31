@@ -270,7 +270,7 @@
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
 // This code looks fragile because it assumes the API response will be in a specific format.
 
-                        var parsedData = new utilityModule.K_clientDrugData();
+                        var parsedData = new utilityModule.k_clientDrugData();
                         if (typeof jsonData == "string") {
                             var obj1 = angular.fromJson(jsonData);
                             if (typeof obj1.resultMessage == "string") {

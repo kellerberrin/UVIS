@@ -317,12 +317,6 @@
             togglePopup: function (displayFlag) {
 
                 displayPopup.show = displayFlag;
-                utilityModule.k_consoleLog(["togglePopup.displayPopup",
-                    displayPopup,
-                    "displayFlag",
-                    displayFlag,
-                    "immediate",
-                    displayPopup.show ? "True" : "False"]);
 
             }
 

@@ -57,6 +57,7 @@
             "DrugArray",
             "DrugSearch",
             "SearchPrompts",
+            "SearchPromptPopup",
             "InputSearchTypes",
             "ValidateInput",
             "ConfirmSearchDialog",
@@ -64,6 +65,7 @@
                                       DrugArray,
                                       DrugSearch,
                                       SearchPrompts,
+                                      SearchPromptPopup,
                                       InputSearchTypes,
                                       ValidateInput,
                                       ConfirmSearchDialog) {
@@ -71,6 +73,7 @@
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Performs the actual drug search
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
+                $scope.promptPopup = SearchPromptPopup;  // Initialize the Popup to display search prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
 
@@ -203,15 +206,12 @@
 
     searchControllers.controller("SearchPromptController",
         ["$scope",
-            "SearchPrompts",
             "PromptArray",
             "InputSearchTypes",
             function SearchPromptController($scope,
-                                            SearchPrompts,
                                             PromptArray,
                                             InputSearchTypes) {
 
-                $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
                 $scope.promptArray = PromptArray; // Injected array of type-ahead and history prompts
                 $scope.types = InputSearchTypes; // Search
 

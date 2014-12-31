@@ -14,22 +14,20 @@
      *
      *********************************************************************************************/
 
-    searchPrompt.factory("PromptArray", function () {
+    searchPrompt.factory("PromptArray", [ "SearchPromptPopup", function (SearchPromptPopup) {
 
         var promptArray = [];
         var historyArray = [];
         var promptActive = false;
-        var historyActive = null;
+        var historyActive = false;
+        var readPromptActive = true;
+        var currentPrompt = {searchstring: "", searchtype: "name"};
+        var focusActive = false;
 
         var setPromptArray = function (array) {
 
             promptArray = array;
-
-        };
-
-        var setPromptActive = function (active) {
-
-            promptActive = active;
+            setPromptStatus();
 
         };
 
@@ -48,12 +46,7 @@
         var setHistoryArray = function (array) {
 
             historyArray = array;
-
-        };
-
-        var setHistoryActive = function (active) {
-
-            historyActive = active;
+            setPromptStatus();
 
         };
 
@@ -63,34 +56,123 @@
 
         };
 
-        var getHistoryActive = function (active) {
+        var getHistoryActive = function () {
 
             return historyActive;
 
         };
 
 
+        var setReadPrompt = function(active) {
+
+            readPromptActive = active;
+
+        };
+
+
+        var getReadPrompt = function() {
+
+            return readPromptActive;
+
+        };
+
+        var setCurrentPrompt = function(prompt) {
+
+            currentPrompt = prompt;
+            setPromptStatus();
+
+        };
+
+        var getCurrentPromptText = function() {
+
+            return utilityModule.k_capitalize(currentPrompt.searchstring);
+
+        };
+
+        var setFocusActive = function(active) {
+
+
+            focusActive = active;
+            setPromptStatus();
+
+        };
+
+        var getFocusActive = function() {
+
+            return focusActive;
+
+        };
+
+        var setPromptStatus = function () {
+
+            if (getFocusActive()) {
+
+
+                promptActive = promptArray.length > 0;
+                historyActive = historyArray.length > 0;
+
+            }
+            else {
+
+                historyActive = false;
+                promptActive = false;
+
+            }
+
+            if (currentPrompt == null)
+            {
+
+                promptActive = false;
+
+            } else {
+
+
+                if (currentPrompt.searchstring.length == 0) {
+
+                    promptActive = false;
+
+                }
+
+            }
+
+            SearchPromptPopup.togglePopup(historyActive || promptActive);
+
+        };
+
+
         return {
+
+// Modify routines.
 
             setPromptArray: setPromptArray,
 
-            setPromptActive: setPromptActive,
+            setHistoryArray: setHistoryArray,
+
+            setReadPrompt: setReadPrompt,
+
+            setCurrentPrompt: setCurrentPrompt,
+
+            setFocusActive: setFocusActive,
+
+// Retrieval routines.
 
             getPromptArray: getPromptArray,
 
             getPromptActive: getPromptActive,
 
-            setHistoryArray: setHistoryArray,
-
-            setHistoryActive: setHistoryActive,
-
             getHistoryArray: getHistoryArray,
 
-            getHistoryActive: getHistoryActive
+            getHistoryActive: getHistoryActive,
+
+            getReadPrompt: getReadPrompt,
+
+            getCurrentPromptText: getCurrentPromptText,
+
+            getFocusActive: getFocusActive
 
         };
 
-    });
+    }]);
 
 
     /*********************************************************************************************
@@ -102,44 +184,23 @@
     searchPrompt.factory("SearchPrompts",
         [   "AppConfig",
             "GetForwardPrompts",
-            "SearchPromptPopup",
             "PromptArray",
             function ( AppConfig,
                        GetForwardPrompts,
-                       SearchPromptPopup,
                        PromptArray) {
 
                 var historyArray = [];  // History of searches
-                var displayHistoryArray = []; // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
                 var promptArray = [];  // Search ahead prompts
-                var displayPromptArray = [];  // Displayed prompts, Length = min(10-displayHistoryArray, promptArray.length))
-                var historyActive = false; // Set when the search history is active
-                var promptActive = false; // Set when type-ahead prompt is active
-                var focusActive = false; // Does the text input have focus
-                var readPromptsActive = false; // Set when fetching prompts.
 
 
                 var setPromptStatus = function (focus, searchParams) {
 
-
-                    focusActive = focus;
-
+                    PromptArray.setFocusActive(focus);
+                    PromptArray.setCurrentPrompt(searchParams);
 
                     if (focus && searchParams.searchstring.length > 0) {
 
-                        readPromptsActive = true;
-
-                        GetForwardPrompts.getForwardPrompt(searchParams).then(
-                            function (array) {
-
-                                promptArray = array;
-                                readPromptsActive = false;
-                                setDisplayPromptArrays();
-                                setFocusStatus(focusActive);  // ****** Possible bug *****
-                                utilityModule.k_consoleLog(["getForwardPrompt", promptArray]);
-
-                            }
-                        );
+                        GetForwardPrompts.getForwardPrompt(searchParams, addToPrompt);
 
                     } else {
 
@@ -147,30 +208,6 @@
 
                     }
 
-                    utilityModule.k_consoleLog(["getPromptStatus", searchParams, focusActive]);
-                    setFocusStatus(focusActive);
-
-                };
-
-
-                var setFocusStatus = function (focus) {
-
-                    if (focus) {
-
-
-                        promptActive = promptArray.length > 0;
-                        historyActive = historyArray.length > 0;
-
-                    }
-                    else {
-
-                        historyActive = false;
-                        promptActive = false;
-
-                    }
-
-                    utilityModule.k_consoleLog(["togglePopup", historyActive || promptActive]);
-                    SearchPromptPopup.togglePopup(historyActive || promptActive);
 
                 };
 
@@ -179,7 +216,8 @@
 
                     // Displayed search history, Length = min(max(3, 10 - promptArray.length), historyArray.length)
 
-                    displayHistoryArray = [];
+                    var displayHistoryArray = [];
+                    var displayPromptArray = [];
 
                     for (var i = 0; i < historyArray.length; i++) {
 
@@ -210,6 +248,9 @@
                         displayPromptArray.push(promptArray[i]);
 
                     }
+
+                    PromptArray.setPromptArray(displayPromptArray);
+                    PromptArray.setHistoryArray(displayHistoryArray);
 
                 };
 
@@ -251,54 +292,33 @@
                         }
 
                     }
+                    // Capitalize the displayed text.
+                    historyItem.displayhistorytext = utilityModule.k_capitalize(historyItem.displayhistorytext);
 
                     return historyItem;
 
                 };
 
+                var addToHistory = function (searchParams) {
+
+                    historyArray.unshift(searchParams);
+                    setDisplayPromptArrays();
+
+                };
+
+                var addToPrompt = function (array) {
+
+                    promptArray = array;
+                    setDisplayPromptArrays();
+
+                };
+
+
                 return {
-
-                    displaySearchPrompt: function () {
-                        return SearchPromptPopup.initialize();  // Initialize the Popup to display search prompts
-                    },
-
-                    promptActive: function () {
-                        return promptActive;
-                    },
-
-                    historyActive: function () {
-                        return historyActive;
-                    },
 
                     setPromptStatus: setPromptStatus,
 
-                    getHistoryArray: function () {
-                        return displayHistoryArray;
-                    },
-
-                    getPromptArray: function () {
-                        return displayPromptArray;
-                    },
-
-                    addToHistory: function (searchParams) {
-
-                        historyArray.unshift(searchParams);
-                        setDisplayPromptArrays();
-                        setFocusStatus(focusActive);
-
-                    },
-
-                    currentPrompt: function() {
-
-                        return "Test";
-
-                    },
-
-                    readPromptsActive : function() {
-
-                        return readPromptsActive;
-
-                    }
+                    addToHistory: addToHistory
 
                 };
 
@@ -374,57 +394,34 @@
 
     searchPrompt.factory("GetForwardPrompts", ["AppConfig",
         "ReadForwardPrompts",
-        "$q",
         "PromptCache",
         "SearchErrorDialog",
         function (AppConfig,
                   ReadForwardPrompts,
-                  $q,
                   PromptCache,
                   SearchErrorDialog) {
 
 
-            var deferred = null;
-            var readDeferred = null;
-
-            var getForwardPrompt = function (forwardParams) {
-
-                var promptArray = [];
-
-                deferred = $q.defer();  // Reset the promise;
+            var getForwardPrompt = function (forwardParams, addToPrompt) {
 
                 var cachedPrompt = PromptCache.lookupPromptCache(forwardParams);
 
                 if (cachedPrompt.inCache) {
 
-                    promptArray = cachedPrompt.promptArray;
-                    deferred.resolve(promptArray);
+                    addToPrompt(cachedPrompt.promptArray);
 
                 }
                 else {
 
-                    readPrompts(forwardParams).then(
-
-                        function(promptArray) {
-
-                            utilityModule.k_consoleLog(["forwardParams",forwardParams]);
-                            PromptCache.addToPromptCache({forwardParams : forwardParams, promptArray: promptArray});
-                            deferred.resolve(promptArray);
-
-                        }
-
-                    );
+                    readPrompts(forwardParams, addToPrompt);
 
                 }
 
-                return deferred.promise; // return a promise
-
             };
 
-            var readPrompts = function (forwardParams) {
+            var readPrompts = function (forwardParams, addToPrompt) {
 
                 var promptArray = [];
-                readDeferred = $q.defer();
 
                 var promptParamsSize = {
                     promptstring: forwardParams.searchstring,
@@ -439,23 +436,22 @@
                     function (data) {
 
                         promptArray = setPromptArray(data.promptArray, promptParamsSize.prompttype);
+                        PromptCache.addToPromptCache({forwardParams : forwardParams, promptArray: promptArray});
+                        addToPrompt(promptArray);
+
                         var milliseconds = Date.now() - requestTime;
                         utilityModule.k_consoleLog([{milliseconds: milliseconds}, promptArray]);
-                        readDeferred.resolve(promptArray);
 
                     },
 
                     function (error) {
 
                         promptArray = [];
-                        readDeferred.resolve(promptArray);
                         SearchErrorDialog.displayError(error);
 
                     }
 
                 );
-
-                return readDeferred.promise; // Return the promise
 
             };
 
