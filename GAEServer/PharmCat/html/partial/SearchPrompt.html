@@ -17,15 +17,19 @@
 
                 </div>
 
-                <div id="k-search-prompt-text">Search Ahead</div>
+                <div id="k-search-prompt-text">
+
+                    {{ promptArray.getPromptTitle() }}
+
+                </div>
 
             </div>
 
             <!-- Prompt progress bar is active during prompt read -->
 
-            <div id="k-prompt-progress-container" ng-show=" promptArray.getReadPrompt() ">
+            <div id="k-prompt-progress-container" >
 
-                <div id="k-prompt-progress-bar">
+                <div id="k-prompt-progress-bar" ng-show=" promptArray.getReadPromptActive() ">
 
                     <div id="k-prompt-progress-gradient-1"></div>
 

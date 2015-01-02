@@ -26,6 +26,8 @@
 ***********************************************************************************************/
 
 $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
+$K-Wait-Image-Image-Path: "/images/ajax-loader.gif";
+
 
 #k-image-display-dialog {
   // dialog box
@@ -54,6 +56,9 @@ $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 
       width: 100%;
       height: 100%;
+      background-image: url(#{$K-Wait-Image-Image-Path}); //spinning image
+      background-position: 50% 50%; // centered
+      background-repeat: no-repeat; // only once
 
     }
 

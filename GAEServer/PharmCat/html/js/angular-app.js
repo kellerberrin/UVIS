@@ -30,8 +30,8 @@
 
 
 // Comment one of these out to define the environment
-        var environment = "Test";
-//        var environment = "Production";
+//        var environment = "Test";
+        var environment = "Production";
 
         var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
         var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
@@ -104,7 +104,6 @@
             }
 
         };
-
 
     });
 

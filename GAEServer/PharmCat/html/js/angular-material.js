@@ -26,7 +26,7 @@ var materialComponents = angular.module( "kMaterialComponents", []);
 
             replace: true, // Replace with the template below
 
-            transclude: true, // we want to insert custom content inside the directive
+            transclude: true, // We want to insert custom content inside the directive
 
             link: function(scope, element, attrs) {
 

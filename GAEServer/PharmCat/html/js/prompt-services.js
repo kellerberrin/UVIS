@@ -20,7 +20,7 @@
         var historyArray = [];
         var promptActive = false;
         var historyActive = false;
-        var readPromptActive = true;
+        var readPromptActive = false;
         var currentPrompt = {searchstring: "", searchtype: "name"};
         var focusActive = false;
 
@@ -63,14 +63,14 @@
         };
 
 
-        var setReadPrompt = function(active) {
+        var setReadPromptActive = function(active) {
 
             readPromptActive = active;
 
         };
 
 
-        var getReadPrompt = function() {
+        var getReadPromptActive = function() {
 
             return readPromptActive;
 
@@ -103,12 +103,19 @@
 
         };
 
+        var getPromptTitle = function() {
+
+
+            return promptArray.length > 0 ? "Search Ahead" : "No Results";
+
+        };
+
         var setPromptStatus = function () {
 
             if (getFocusActive()) {
 
 
-                promptActive = promptArray.length > 0;
+                promptActive = currentPrompt.searchstring.length > 0;
                 historyActive = historyArray.length > 0;
 
             }
@@ -116,22 +123,6 @@
 
                 historyActive = false;
                 promptActive = false;
-
-            }
-
-            if (currentPrompt == null)
-            {
-
-                promptActive = false;
-
-            } else {
-
-
-                if (currentPrompt.searchstring.length == 0) {
-
-                    promptActive = false;
-
-                }
 
             }
 
@@ -148,7 +139,7 @@
 
             setHistoryArray: setHistoryArray,
 
-            setReadPrompt: setReadPrompt,
+            setReadPromptActive: setReadPromptActive,
 
             setCurrentPrompt: setCurrentPrompt,
 
@@ -164,11 +155,13 @@
 
             getHistoryActive: getHistoryActive,
 
-            getReadPrompt: getReadPrompt,
+            getReadPromptActive: getReadPromptActive,
 
             getCurrentPromptText: getCurrentPromptText,
 
-            getFocusActive: getFocusActive
+            getFocusActive: getFocusActive,
+
+            getPromptTitle: getPromptTitle
 
         };
 
@@ -394,10 +387,12 @@
 
     searchPrompt.factory("GetForwardPrompts", ["AppConfig",
         "ReadForwardPrompts",
+        "PromptArray",
         "PromptCache",
         "SearchErrorDialog",
         function (AppConfig,
                   ReadForwardPrompts,
+                  PromptArray,
                   PromptCache,
                   SearchErrorDialog) {
 
@@ -430,6 +425,7 @@
                 };
 
                 var requestTime = Date.now();
+                PromptArray.setReadPromptActive(true);
 
                 ReadForwardPrompts.typeSearch(promptParamsSize,
 
@@ -438,6 +434,7 @@
                         promptArray = setPromptArray(data.promptArray, promptParamsSize.prompttype);
                         PromptCache.addToPromptCache({forwardParams : forwardParams, promptArray: promptArray});
                         addToPrompt(promptArray);
+                        PromptArray.setReadPromptActive(false);
 
                         var milliseconds = Date.now() - requestTime;
                         utilityModule.k_consoleLog([{milliseconds: milliseconds}, promptArray]);
@@ -447,6 +444,7 @@
                     function (error) {
 
                         promptArray = [];
+                        PromptArray.setReadPromptActive(false);
                         SearchErrorDialog.displayError(error);
 
                     }

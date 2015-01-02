@@ -854,30 +854,33 @@ body {
 * drugs with the same image (same drug).
 *
 ***********************************************************************************************/
-/* line 30, ../scss/_k-dialog-toast.scss */
+/* line 32, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog {
   height: 100%;
   width: 100%;
   padding: 10px;
   margin: 0;
 }
-/* line 38, ../scss/_k-dialog-toast.scss */
+/* line 40, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-attribution {
   margin-left: 1.5em;
   font-size: 0.7em;
 }
-/* line 46, ../scss/_k-dialog-toast.scss */
+/* line 48, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-dialog-content {
   overflow: auto;
   margin: 0;
   padding: 0;
 }
-/* line 53, ../scss/_k-dialog-toast.scss */
+/* line 55, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-dialog-content #k-dialog-image {
   width: 100%;
   height: 100%;
+  background-image: url(/images/ajax-loader.gif);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
-/* line 62, ../scss/_k-dialog-toast.scss */
+/* line 67, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar {
   display: inline-block;
   /* older browsers */
@@ -887,12 +890,12 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 70, ../scss/_k-dialog-toast.scss */
+/* line 75, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar #k-image-search-text {
   margin: 0 1em 0 1em;
   padding: 0;
 }
-/* line 77, ../scss/_k-dialog-toast.scss */
+/* line 82, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar #k-image-search {
   position: absolute;
   top: -0.7em;
@@ -909,7 +912,7 @@ body {
 * Modal Search Dialog - Verify user input
 *
 ***********************************************************************************************/
-/* line 106, ../scss/_k-dialog-toast.scss */
+/* line 111, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -917,7 +920,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 116, ../scss/_k-dialog-toast.scss */
+/* line 121, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -925,7 +928,7 @@ body {
   margin: 0 0 2rem 0;
   color: black;
 }
-/* line 126, ../scss/_k-dialog-toast.scss */
+/* line 131, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions {
   display: -webkit-flex;
   display: flex;
@@ -936,14 +939,14 @@ body {
   width: 100%;
   padding: 0.5rem;
 }
-/* line 134, ../scss/_k-dialog-toast.scss */
+/* line 139, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-confirm {
   padding: 0.4em;
   margin: 0 1rem 0 0;
   background-color: #259b24;
   font-size: 1rem;
 }
-/* line 143, ../scss/_k-dialog-toast.scss */
+/* line 148, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-modify {
   padding: 0.4em;
   margin: 0 1rem 0 0;
@@ -956,7 +959,7 @@ body {
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 166, ../scss/_k-dialog-toast.scss */
+/* line 171, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -964,7 +967,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 176, ../scss/_k-dialog-toast.scss */
+/* line 181, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -972,7 +975,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 186, ../scss/_k-dialog-toast.scss */
+/* line 191, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -980,7 +983,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 196, ../scss/_k-dialog-toast.scss */
+/* line 201, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1074,7 +1077,7 @@ body {
     opacity: 0;
   }
 }
-/* line 260, ../scss/_k-dialog-toast.scss */
+/* line 265, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1090,7 +1093,7 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 276, ../scss/_k-dialog-toast.scss */
+/* line 281, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
   /* The .hg-hide class is added to element
      when the active class is added causing it to appear
@@ -1098,19 +1101,19 @@ body {
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 284, ../scss/_k-dialog-toast.scss */
+/* line 289, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 290, ../scss/_k-dialog-toast.scss */
+/* line 295, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 297, ../scss/_k-dialog-toast.scss */
+/* line 302, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1126,14 +1129,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 307, ../scss/_k-dialog-toast.scss */
+/* line 312, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 320, ../scss/_k-dialog-toast.scss */
+/* line 325, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;
@@ -2094,8 +2097,9 @@ body {
   height: 2px;
   width: 100%;
   overflow: hidden;
+  background-color: #c5cae9;
 }
-/* line 65, ../scss/_k-search-prompt.scss */
+/* line 66, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar {
   display: -webkit-flex;
   display: flex;
@@ -2109,7 +2113,7 @@ body {
   height: 100%;
   width: 200%;
 }
-/* line 74, ../scss/_k-search-prompt.scss */
+/* line 75, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-1 {
   height: 100%;
   width: 50%;
@@ -2120,7 +2124,7 @@ body {
   background-image: -webkit-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
   background-image: linear-gradient(to right, rgba(63, 81, 181, 0.3), #3f51b5);
 }
-/* line 82, ../scss/_k-search-prompt.scss */
+/* line 83, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-2 {
   height: 100%;
   width: 50%;
@@ -2137,24 +2141,24 @@ body {
 * The progress and history container markup.
 *
 ******************************************************************************************************************/
-/* line 100, ../scss/_k-search-prompt.scss */
+/* line 101, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container {
   border: solid 2px #3f51b5;
 }
-/* line 104, ../scss/_k-search-prompt.scss */
+/* line 105, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list {
   display: none;
   border: solid 2px #c5cae9;
 }
-/* line 109, ../scss/_k-search-prompt.scss */
+/* line 110, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list.promptActive {
   display: block;
 }
-/* line 115, ../scss/_k-search-prompt.scss */
+/* line 116, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title {
   background-color: #c5cae9;
 }
-/* line 119, ../scss/_k-search-prompt.scss */
+/* line 120, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-key {
   color: #303f9f;
   width: 100%;
@@ -2164,7 +2168,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 131, ../scss/_k-search-prompt.scss */
+/* line 132, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-text {
   color: black;
   width: 100%;
@@ -2175,14 +2179,14 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 146, ../scss/_k-search-prompt.scss */
+/* line 147, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 150, ../scss/_k-search-prompt.scss */
+/* line 151, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2193,7 +2197,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 158, ../scss/_k-search-prompt.scss */
+/* line 159, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item {
   position: relative;
   width: 100%;
@@ -2201,11 +2205,11 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 166, ../scss/_k-search-prompt.scss */
+/* line 167, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item:hover {
   color: #03a9f4;
 }
-/* line 172, ../scss/_k-search-prompt.scss */
+/* line 173, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-type {
   width: 100%;
   color: #303f9f;
@@ -2215,7 +2219,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 184, ../scss/_k-search-prompt.scss */
+/* line 185, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-value {
   width: 100%;
   padding-left: 1.5em;
@@ -2225,30 +2229,30 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 202, ../scss/_k-search-prompt.scss */
+/* line 203, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list {
   display: none;
   border: solid 2px #ffccde;
 }
-/* line 207, ../scss/_k-search-prompt.scss */
+/* line 208, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list.historyActive {
   display: block;
 }
-/* line 213, ../scss/_k-search-prompt.scss */
+/* line 214, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list #k-search-history-title {
   color: black;
   text-align: center;
   padding: 0.3em;
   background-color: #ffccde;
 }
-/* line 222, ../scss/_k-search-prompt.scss */
+/* line 223, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 226, ../scss/_k-search-prompt.scss */
+/* line 227, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2259,7 +2263,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 234, ../scss/_k-search-prompt.scss */
+/* line 235, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item {
   position: relative;
   width: 100%;
@@ -2269,11 +2273,11 @@ body {
   padding: 0;
   margin: 0;
 }
-/* line 244, ../scss/_k-search-prompt.scss */
+/* line 245, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item:hover {
   color: #ff80ab;
 }
-/* line 250, ../scss/_k-search-prompt.scss */
+/* line 251, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-type {
   width: 100%;
   color: #303f9f;
@@ -2283,7 +2287,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 262, ../scss/_k-search-prompt.scss */
+/* line 263, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-value {
   width: 100%;
   padding-left: 1.5em;
