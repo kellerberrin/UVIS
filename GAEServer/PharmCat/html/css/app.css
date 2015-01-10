@@ -850,29 +850,82 @@ body {
 
 /*********************************************************************************************
 *
+* Example Dialog - If the user clicks on the background image - do an example search.
+*
+***********************************************************************************************/
+/* line 29, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+/* line 37, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content #k-example-dialog-title {
+  width: 100%;
+  padding: 0 2rem 0 2rem;
+  font-size: 1.4em;
+  margin: 2rem 0 0 0;
+  color: black;
+}
+/* line 47, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content #k-example-explanation-text {
+  width: 100%;
+  margin: 2rem 0 0 0;
+  padding: 0 2rem 0 2rem;
+  font-size: 1em;
+  color: black;
+}
+/* line 59, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content #k-example-search-bar {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  position: relative;
+  margin: 2rem 0 0 0;
+  padding: 0;
+}
+/* line 66, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content #k-example-search-bar #k-example-search-text {
+  margin: 0 1em 0 2rem;
+  padding: 0;
+}
+/* line 73, ../scss/_k-dialog-toast.scss */
+#k-example-dialog-content #k-example-search-bar #k-example-search {
+  position: absolute;
+  top: -0.7em;
+  right: -2em;
+  background-image: url("/images/icons/search24.svg");
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #03a9f4;
+}
+
+/*********************************************************************************************
+*
 * Modal Image Dialog - Display a larger drug image (800px) with an option to search for
 * drugs with the same image (same drug).
 *
 ***********************************************************************************************/
-/* line 32, ../scss/_k-dialog-toast.scss */
+/* line 102, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog {
   height: 100%;
   width: 100%;
   padding: 10px;
   margin: 0;
 }
-/* line 40, ../scss/_k-dialog-toast.scss */
+/* line 110, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-attribution {
   margin-left: 1.5em;
   font-size: 0.7em;
 }
-/* line 48, ../scss/_k-dialog-toast.scss */
+/* line 118, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-dialog-content {
   overflow: auto;
   margin: 0;
   padding: 0;
 }
-/* line 55, ../scss/_k-dialog-toast.scss */
+/* line 125, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-dialog-content #k-dialog-image {
   width: 100%;
   height: 100%;
@@ -880,22 +933,20 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-/* line 67, ../scss/_k-dialog-toast.scss */
+/* line 137, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar {
-  display: inline-block;
-  /* older browsers */
   display: -webkit-inline-flex;
   display: inline-flex;
   position: relative;
   margin: 0;
   padding: 0;
 }
-/* line 75, ../scss/_k-dialog-toast.scss */
+/* line 144, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar #k-image-search-text {
   margin: 0 1em 0 1em;
   padding: 0;
 }
-/* line 82, ../scss/_k-dialog-toast.scss */
+/* line 151, ../scss/_k-dialog-toast.scss */
 #k-image-display-dialog #k-image-search-bar #k-image-search {
   position: absolute;
   top: -0.7em;
@@ -912,7 +963,7 @@ body {
 * Modal Search Dialog - Verify user input
 *
 ***********************************************************************************************/
-/* line 111, ../scss/_k-dialog-toast.scss */
+/* line 180, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -920,7 +971,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 121, ../scss/_k-dialog-toast.scss */
+/* line 190, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -928,7 +979,7 @@ body {
   margin: 0 0 2rem 0;
   color: black;
 }
-/* line 131, ../scss/_k-dialog-toast.scss */
+/* line 200, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions {
   display: -webkit-flex;
   display: flex;
@@ -939,14 +990,14 @@ body {
   width: 100%;
   padding: 0.5rem;
 }
-/* line 139, ../scss/_k-dialog-toast.scss */
+/* line 208, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-confirm {
   padding: 0.4em;
   margin: 0 1rem 0 0;
   background-color: #259b24;
   font-size: 1rem;
 }
-/* line 148, ../scss/_k-dialog-toast.scss */
+/* line 217, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-modify {
   padding: 0.4em;
   margin: 0 1rem 0 0;
@@ -956,10 +1007,110 @@ body {
 
 /*********************************************************************************************
 *
+* Barcode dialog box.
+*
+***********************************************************************************************/
+/* line 249, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content {
+  height: 100%;
+  background-color: #abb4e2;
+}
+/* line 256, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-dialog-GTIN {
+  width: 100%;
+  padding: 0 2rem 0 2rem;
+  font-size: 1em;
+  margin: 2rem 0 2rem 0;
+  color: black;
+}
+/* line 267, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-GTIN-input {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1.3em;
+  height: 1.5em;
+  width: 14em;
+  margin: 0.2em 0 0 0.75em;
+  padding: 0 0 0 0.3em;
+  color: white;
+  border: solid 2px #1a237e;
+  background-color: #03a9f4;
+}
+/* line 279, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-GTIN-input:focus, #k-barcode-dialog-content #k-barcode-GTIN-input:hover {
+  border-color: #ff80ab;
+}
+/* line 288, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-dialog-authcode {
+  width: 100%;
+  padding: 0 2rem 0 1.5rem;
+  font-size: 1.2em;
+  margin: 2rem 0 1rem 0;
+  color: black;
+}
+/* line 299, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authcode-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+/* line 305, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-spacer-1 {
+  min-width: 1em;
+  height: 1.5em;
+  background-color: lightgreen;
+}
+/* line 313, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 1.3em;
+  height: 1.5em;
+  margin: 0;
+  padding: 0 0 0 0.3em;
+  color: white;
+  border: solid 2px #1a237e;
+  background-color: #03a9f4;
+}
+/* line 325, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input:focus, #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input:hover {
+  border-color: #ff80ab;
+}
+/* line 333, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-spacer-2 {
+  min-width: 1em;
+  height: 1.5em;
+  background-color: lightgreen;
+}
+/* line 343, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-dialog-batch {
+  width: 100%;
+  padding: 0 2rem 0 1.5rem;
+  font-size: 1em;
+  margin: 0 0 1rem 0;
+  color: black;
+}
+/* line 353, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-dialog-expiry {
+  width: 100%;
+  padding: 0 2rem 0 1.5rem;
+  font-size: 1em;
+  margin: 0 0 1rem 0;
+  color: black;
+}
+
+/*********************************************************************************************
+*
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 171, ../scss/_k-dialog-toast.scss */
+/* line 377, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -967,7 +1118,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 181, ../scss/_k-dialog-toast.scss */
+/* line 387, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -975,7 +1126,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 191, ../scss/_k-dialog-toast.scss */
+/* line 397, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -983,7 +1134,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 201, ../scss/_k-dialog-toast.scss */
+/* line 407, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1077,7 +1228,7 @@ body {
     opacity: 0;
   }
 }
-/* line 265, ../scss/_k-dialog-toast.scss */
+/* line 471, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1093,7 +1244,7 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 281, ../scss/_k-dialog-toast.scss */
+/* line 487, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
   /* The .hg-hide class is added to element
      when the active class is added causing it to appear
@@ -1101,19 +1252,19 @@ body {
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 289, ../scss/_k-dialog-toast.scss */
+/* line 495, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 295, ../scss/_k-dialog-toast.scss */
+/* line 501, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 302, ../scss/_k-dialog-toast.scss */
+/* line 508, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1129,14 +1280,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 312, ../scss/_k-dialog-toast.scss */
+/* line 518, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 325, ../scss/_k-dialog-toast.scss */
+/* line 531, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;

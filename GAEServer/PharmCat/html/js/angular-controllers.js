@@ -20,25 +20,42 @@
         ["$scope",
             "Browser",
             "DrugArray",
+            "ExampleSearchDialog",
             "ImageSearchDialog",
             "ConfirmSearchDialog",
             "SearchErrorDialog",
+            "BarCodeDialog",
             "SearchToast",
-             function DisplayController($scope,
+            function DisplayController($scope,
                                        Browser,
                                        DrugArray,
+                                       ExampleSearchDialog,
                                        ImageSearchDialog,
                                        ConfirmSearchDialog,
                                        SearchErrorDialog,
+                                       BarCodeDialog,
                                        SearchToast) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
+                $scope.exampleDialog = ExampleSearchDialog; // Link the example search dialog box to this scope.
                 $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
                 $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
+                $scope.barCodeDialog = BarCodeDialog; // Link the barcode dialog box to this scope.
                 $scope.searchToast = SearchToast; // Link the server error dialog box to this scope.
 
                 Browser.checkCompatibility(); // Perform Modernizr checks on browser capability.
+
+                $scope.showExampleDialog = function() { // Show example search if clicks on empty background
+
+                    if (DrugArray.isEmpty()) {
+
+                        ExampleSearchDialog.displayExampleSearchDialog();
+
+                    }
+
+                };
+
 
             }]);
 
@@ -56,18 +73,22 @@
         ["$scope",
             "DrugArray",
             "DrugSearch",
+            "ExampleSearchDialog",
             "SearchPrompts",
             "SearchPromptPopup",
             "InputSearchTypes",
             "ValidateInput",
+            "BarCodeDialog",
             "ConfirmSearchDialog",
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
+                                      ExampleSearchDialog,
                                       SearchPrompts,
                                       SearchPromptPopup,
                                       InputSearchTypes,
                                       ValidateInput,
+                                      BarCodeDialog,
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
@@ -76,6 +97,14 @@
                 $scope.promptPopup = SearchPromptPopup;  // Initialize the Popup to display search prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
+
+
+
+                $scope.barCodeDialog = function() {
+
+                    BarCodeDialog.displayBarCodeDialog();
+
+                };
 
                 $scope.getSearchParams = function () {
 

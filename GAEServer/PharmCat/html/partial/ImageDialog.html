@@ -4,10 +4,10 @@
 
         <div id="k-image-attribution">Image Courtesy of the US National Library of Medicine</div>
 
-        <!-- Bug Fix. Dynamic adds a child image element. See the directive for details. -->
+        <!-- Bug Fix for angular image cache bug. Dynamically adds a child image element. See the directive for details. -->
         <div id="k-image-dialog-content" k-image-on-load="{{imageDialog.getImage()}}" >
 
-         <!--   <img id="k-dialog-image" ng-src="{{imageDialog.getImage()}}" k-image-on-load> -->
+        <!--<img id="k-dialog-image" ng-src="{{imageDialog.getImage()}}"> -->
 
         </div>
 

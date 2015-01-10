@@ -65,6 +65,25 @@ var searchDirectives = angular.module( "kSearchDirectives", []);
 
 
     /****************************************************************************
+     *
+     * Simple directive to stop event propagation
+     * Usage k-stop-event="click" (or some other event name)
+     *
+     ****************************************************************************/
+
+    searchDirectives.directive('kStopEvent', function () {
+        return {
+            restrict: 'A',
+            link: function (scope, element, attr) {
+                element.bind(attr.stopEvent, function (e) {
+                    e.stopPropagation();
+                });
+            }
+        };
+    });
+
+
+    /****************************************************************************
     *
     * Create a dynamic image element.
     * This is a fudge to get around the caching behavior of ngSrc

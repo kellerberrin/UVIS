@@ -26,10 +26,10 @@
      *
      *********************************************************************************************/
 
-    drugSearchApp.factory("AppConfig", function ($resource) {
+    drugSearchApp.factory("AppConfig", function () {
 
 
-// Comment one of these out to define the environment
+// Comment one of these out to define the database environment
 //        var environment = "Test";
         var environment = "Production";
 

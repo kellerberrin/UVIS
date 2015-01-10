@@ -20,6 +20,76 @@
 
 /*********************************************************************************************
 *
+* Example Dialog - If the user clicks on the background image - do an example search.
+*
+***********************************************************************************************/
+
+$K-ExampleDialog-Search-Inactive-color: $md-light-blue-500;
+
+#k-example-dialog-content {
+  // dialog box
+
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+
+  #k-example-dialog-title {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.4em;
+    margin: 2rem 0 0 0;
+    color: $md-black-display-text;
+
+  }
+
+  #k-example-explanation-text {
+    // NLM attribution text
+
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 0 2rem 0 2rem;
+    font-size: 1em;
+    color: $md-black-display-text;
+
+  }
+
+
+  #k-example-search-bar {
+
+    @include display-flex(inline-flex);
+    position: relative;
+    margin: 2rem 0 0 0;
+    padding: 0;
+
+    #k-example-search-text {
+
+      margin: 0 1em 0 2rem;
+      padding: 0;
+
+    }
+
+    #k-example-search {
+      // The search button
+
+      position: absolute;
+      top: -0.7em;
+      right: -2em;
+      background-image: url("/images/icons/search24.svg");
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-ExampleDialog-Search-Inactive-color;
+
+    }
+
+  }
+
+}
+
+/*********************************************************************************************
+*
 * Modal Image Dialog - Display a larger drug image (800px) with an option to search for
 * drugs with the same image (same drug).
 *
@@ -66,7 +136,6 @@ $K-Wait-Image-Image-Path: "/images/ajax-loader.gif";
 
   #k-image-search-bar {
 
-    display: inline-block; /* older browsers */
     @include display-flex(inline-flex);
     position: relative;
     margin: 0;
@@ -157,6 +226,143 @@ $K-Search-Modify-Color: $md-red-500;
   }
 
 }
+
+
+/*********************************************************************************************
+*
+* Barcode dialog box.
+*
+***********************************************************************************************/
+
+$K-Barcode-Scan-Color: $md-red-500;
+$K-GTIN-Input-Text-Color: white;
+$K-GTIN-Input-Border-Color: $K-PRIMARY-COLOR-900;
+$K-GTIN-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
+$K-GTIN-Input-Background-Color: $md-light-blue-500;
+$K-AuthCode-Input-Text-Color: white;
+$K-AuthCode-Input-Border-Color: $K-PRIMARY-COLOR-900;
+$K-AuthCode-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
+$K-AuthCode-Input-Background-Color: $md-light-blue-500;
+$K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
+
+
+#k-barcode-dialog-content {
+
+  height: 100%;
+  background-color: $K-BarCode-Background-Color;
+
+
+
+  #k-barcode-dialog-GTIN {
+
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    font-size: 1em;
+    margin: 2rem 0 2rem 0;
+    color: $md-black-display-text;
+
+  }
+
+
+  #k-barcode-GTIN-input {
+
+    @include border-radius(4px);
+    font-size: 1.3em;
+    height: 1.5em;
+    width: 14em;
+    margin: 0.2em 0 0 0.75em;
+    padding: 0 0 0 0.3em;
+    color: $K-GTIN-Input-Text-Color;
+    border: solid 2px $K-GTIN-Input-Border-Color;
+    background-color: $K-GTIN-Input-Background-Color;
+
+    &:focus, &:hover {
+
+      border-color: $K-GTIN-Input-Active-Border-Color;
+
+    }
+
+  }
+
+
+  #k-barcode-dialog-authcode {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1.2em;
+    margin: 2rem 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+
+  #k-barcode-authcode-container {
+
+    @include display-flex;
+    @include flex-direction(row);
+    width: 100%;
+
+    #k-barcode-authcode-spacer-1 {
+
+      min-width: 1em;
+      height: 1.5em;
+      background-color: lightgreen;
+
+    }
+
+    #k-barcode-authcode-input {
+
+      @include border-radius(4px);
+      @include flex(1);
+      font-size: 1.3em;
+      height: 1.5em;
+      margin: 0;
+      padding: 0 0 0 0.3em;
+      color: $K-AuthCode-Input-Text-Color;
+      border: solid 2px $K-AuthCode-Input-Border-Color;
+      background-color: $K-AuthCode-Input-Background-Color;
+
+      &:focus, &:hover {
+
+        border-color: $K-AuthCode-Input-Active-Border-Color;
+
+      }
+
+    }
+
+    #k-barcode-authcode-spacer-2 {
+
+      min-width: 1em;
+      height: 1.5em;
+      background-color: lightgreen;
+
+    }
+
+  }
+
+  #k-barcode-dialog-batch {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+  #k-barcode-dialog-expiry {
+
+    width: 100%;
+    padding: 0 2rem 0 1.5rem;
+    font-size: 1em;
+    margin: 0 0 1rem 0;
+    color: $md-black-primary-text;
+
+  }
+
+
+}
+
 
 
 /*********************************************************************************************

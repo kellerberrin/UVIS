@@ -33,12 +33,6 @@
 <!-- [BEGIN body html]-->
 <body ng-app="kSearchApp">
 
-<!--[if lt IE 9]>
-<p>You are using an <strong>outdated</strong> web browser.
-    Pharmcat will not function correctly.
-    Please consider upgrading your browser.</p>
-<![endif]-->
-
 <!-- 100% Horizontal Width -->
 <div id="k-total-page-width" ng-controller="DisplayController">
 
@@ -54,11 +48,15 @@
         <!-- ************ End Display Results Area *******************-->
 
         <!-- Footer-->
-        <div id="k-search-footer">&copy Copyright Kellerberrin 2014</div>
+        <div id="k-search-footer">&copy Copyright Kellerberrin 2015</div>
         <!-- End Footer-->
 
     </div>
     <!-- End PharmCat Page (max 600 px width) -->
+
+    <!-- The Example Dialog Box -->
+    <div id="k-example-dialog-anchor" ng-include src=" 'partial/ExampleDialog.html' "></div>
+    <!-- End Example Dialog Box -->
 
     <!-- The Search Image Dialog Box -->
     <div id="k-image-dialog-anchor" ng-include src=" 'partial/ImageDialog.html' "></div>
@@ -71,6 +69,10 @@
     <!-- The Input Dialog Box -->
     <div id="k-input-dialog-anchor" ng-include src=" 'partial/SearchDialog.html' "></div>
     <!-- End Input Dialog Box -->
+
+    <!-- The Barcode Dialog Box -->
+    <div id="k-barcode-dialog-anchor" ng-include src=" 'partial/BarCodeDialog.html' "></div>
+    <!-- End Barcode Dialog Box -->
 
     <!-- The Search Toast -->
     <div id="k-search-toast-anchor" ng-include src=" 'partial/SearchToast.html' "></div>

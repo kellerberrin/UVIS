@@ -47,6 +47,12 @@
 
         };
 
+        var isEmpty = function() {
+
+            return drugArray.length === 0;
+
+        };
+
         var setInputCallback = function (setSearchParams) {
 
             searchParamsCallback = setSearchParams;
@@ -72,6 +78,8 @@
             setDrugArray: setDrugArray,
 
             getDrugArray: getDrugArray,
+
+            isEmpty: isEmpty,
 
             setInputCallback: setInputCallback,
 

@@ -1,0 +1,38 @@
+<k-material-dialog id="k-barcode-dialog" displaydialog="barCodeDialog.initialize()">
+
+    <div id="k-barcode-dialog-content">
+
+        <div id="k-barcode-dialog-GTIN">{{ barCodeDialog.GTIN() }}</div>
+
+        <input id="k-barcode-GTIN-input"
+               type="text"
+               autocomplete="no"
+               class="k-input-text"
+               aria-label="GTIN Text Input">
+        </input>
+
+        <div id="k-barcode-dialog-authcode">{{ barCodeDialog.authenticationCode() }}</div>
+
+        <div id="k-barcode-authcode-container">
+
+            <div id="k-barcode-authcode-spacer-1"></div>
+
+            <input id="k-barcode-authcode-input"
+                   type="text"
+                   autocomplete="no"
+                   class="k-input-text"
+                   aria-label="AuthCode Text Input">
+            </input>
+
+            <div id="k-barcode-authcode-spacer-2"></div>
+
+        </div>
+
+        <div id="k-barcode-dialog-batch">{{ barCodeDialog.batch() }}</div>
+
+        <div id="k-barcode-dialog-expiry">{{ barCodeDialog.expiryDate() }}</div>
+
+
+    </div>
+
+</k-material-dialog>

@@ -68,12 +68,12 @@ United States Drug Database.
     :width: 203px
     :height: 190px
     :align: left
-    :target: http://kellerberrin-drugdatabase.appspot.com
+    :target: http://pharmcat.com
 
-`Find equivalent US drugs. <http://kellerberrin-drugdatabase.appspot.com>`_ An on-line version of the US Food and Drug Administration (FDA) drug database. Users
-can search the database by National Drug Code (NDC), Drug Name and Active Ingredients. This is 
-useful for finding equivalent drugs and cheaper equivalent generic drugs from different 
-manufacturers.
+`Find equivalent US drugs (http://pharmcat.com). <http://pharmcat.com>`_ An on-line version of the US Food and Drug
+Administration (FDA) drug database. Users
+can search the database by National Drug Code (NDC), Drug Name and Active Ingredients. This database is also used by the
+pharmaceutical authentication software developed by Kellerberrin.
 
 |
 |

@@ -8,6 +8,49 @@
 
     var dialogServices = angular.module("kDialogServices", []);
 
+
+    /*********************************************************************************************
+     *
+     * A dialog to display a hi-res drug image and launch an image search.
+     * Defined at the top level in Index.html
+     *
+     *********************************************************************************************/
+
+    dialogServices.factory("ExampleSearchDialog", [ "DrugSearch", function (DrugSearch) {
+
+        var exampleSearchDialog = {
+            show: false, // Display the dialog box
+            searchParams: null, // Example search parameters
+            dialogStyle: {width: "80%", "max-width": "450px"}
+        }; // Set the dialog width
+
+
+        return {
+
+            initialize: function () {
+
+                return exampleSearchDialog;
+
+            },
+
+            displayExampleSearchDialog: function () {
+
+                exampleSearchDialog.show = true;
+
+            },
+
+            exampleSearch: function () {
+
+                exampleSearchDialog.show = false;
+                DrugSearch.nameSearch("cattail");
+
+            }
+
+        }
+
+    }]);
+
+
     /*********************************************************************************************
      *
      * A dialog to display a hi-res drug image and launch an image search.
@@ -195,37 +238,57 @@
 
     /*********************************************************************************************
      *
-     * A dialog to display any errors from the search endpoints.
+     * A dialog to display the barcode reader functionality.
      * Defined at the top level in Index.html
      *
      *********************************************************************************************/
 
-    dialogServices.factory("IncompatibleDialog", function () {
+    dialogServices.factory("BarCodeDialog", function () {
 
-        var incompatibilityText = "Sorry - PharmCat is Incompatible with your Web Broswer.";
-        var explanation = "PharmCat requires an up-to-date or recent Web Browser version";
-        var action = "Action: Install the latest version of your favorite Web Browser and rerun PharmCat";
-
-        var incompatibleDialog = {
+        var barCodeDialog = {
             show: false, // Display the dialog box
             dialogStyle: {width: "80%", "max-width": "400px"}, // Set the dialog width
-            incompatibilityText : incompatibilityText,
-            explanation : explanation,
-            action : action
+            GTIN : "GTIN",
+            authenticationCode : "Authentication Code",
+            batch : "Batch Number",
+            expiryDate: "Expiry Date"
         };
-
 
         return {
 
             initialize: function () {
 
-                return incompatibleDialog;
+                return barCodeDialog;
 
             },
 
-            displayIncompatible: function (error) {
+            displayBarCodeDialog: function () {
 
-                incompatibleDialog.show = true;
+                barCodeDialog.show = true;
+
+            },
+
+            GTIN : function() {
+
+                return barCodeDialog.GTIN
+
+            },
+
+            authenticationCode : function() {
+
+                return barCodeDialog.authenticationCode;
+
+            },
+
+            batch : function() {
+
+                return barCodeDialog.batch;
+
+            },
+
+            expiryDate : function() {
+
+                return barCodeDialog.expiryDate;
 
             }
 
