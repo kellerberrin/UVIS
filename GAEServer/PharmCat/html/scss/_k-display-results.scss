@@ -17,8 +17,6 @@
   @include box-sizing(border-box);
 }
 
-
-
 /**************************************************************************************************************
 *
 *
@@ -36,6 +34,7 @@ $K-Display-Active-Selected-Color: lighten($K-ACCENT-COLOR-100, 10%);
 $K-Display-Package-Background: white;
 $K-Display-NDC-Background: $K-PRIMARY-COLOR-100;
 $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
+$K-Verify-Button-color: $md-light-green-700;
 
 .k-display-drug {
 
@@ -330,7 +329,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
   * Display NDC
   ********************************************************************************/
 
-  & .k-display-ndc-container {
+  .k-display-ndc-container {
 
     position: relative;
     margin: 0;
@@ -339,7 +338,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
     background-color: $K-Display-NDC-Background;
     width: 100%;
 
-    & .k-display-ndc9-search {
+    .k-display-ndc9-search {
 
       @include transition(all 0.25s ease-in-out);
       position: absolute;
@@ -367,7 +366,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
     }
 
-    & .k-display-ndc-title {
+    .k-display-ndc-title {
 
       font-size: 1.2em;
       padding: 0.1em 1rem 0.1em 2.5rem;
@@ -377,7 +376,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
     }
 
-    & .k-display-ndc-codes {
+    .k-display-ndc-codes {
 
       display: inline-block; /* non-flexbox browsers */
       @include display-flex(inline-flex);
@@ -386,14 +385,14 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
       @include flex-wrap(wrap);
       margin-left: 2.5rem;
 
-      & .k-display-ndc {
+      .k-display-ndc {
 
         @include display-flex;
         @include flex-direction(column);
         @include align-items(flex-start);
         margin-right: 1em;
 
-        & .k-display-ndc-title {
+        .k-display-ndc-title {
 
           color: $K-Display-NDC-Title-Color;
           font-size: 0.7em;
@@ -404,7 +403,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
         }
 
-        & .k-display-ndc-value {
+        .k-display-ndc-value {
 
           font-size: 1em;
           padding: 0.1em 0 0.1em 0;
@@ -422,13 +421,13 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
       }
 
-      & .k-display-ndc11 {
+      .k-display-ndc11 {
 
         @include display-flex;
         @include flex-direction(column);
         @include align-items(flex-start);
 
-        & .k-display-ndc11-title {
+        .k-display-ndc11-title {
 
           color: $K-Display-NDC-Title-Color;
           font-size: 0.7em;
@@ -437,7 +436,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
           border: none;
           margin: 0;
 
-          & .k-display-ndc11-package {
+          .k-display-ndc11-package {
 
             font-weight: 500;
 
@@ -445,7 +444,7 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
 
         }
 
-        & .k-display-ndc11-value {
+        .k-display-ndc11-value {
 
           font-size: 1.0em;
           padding: 0.1em 0 0.1em 0;
@@ -453,19 +452,40 @@ $K-Display-NDC-Title-Color: $K-PRIMARY-COLOR-700;
           margin: 0;
           line-height: 105%;
 
-          & .k-display-ndc11-ndc9 {
+          .k-display-ndc11-ndc9 {
 
             font-weight: 700;
 
           }
 
-          & .k-display-ndc11-format {
+          .k-display-ndc11-format {
 
             font-size: 0.7em;
 
           }
 
         }
+
+      }
+
+    }
+
+    .k-display-ndc-verify {
+
+      @include transition(all 0.25s ease-in-out);
+      position: absolute;
+      top: -1em;
+      right: -0.75em;
+      opacity: 0.4;
+      background-image: url("/images/icons/check.svg");
+      background-size: 36px 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-Verify-Button-color;
+
+      &:hover {
+
+        opacity: 1.0;
 
       }
 

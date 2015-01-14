@@ -39,6 +39,7 @@ $K-Search-Type-Color: white;
 $K-Search-Type-Background-Color: $md-light-blue-500;
 $K-Icon-Toolbar-Height: 40px;
 $K-Search-Toolbar-Height: 4em;
+$K-Toolbar-Verify-Button-Color: $md-light-green-700;
 
 #k-drug-toolbar {
 
@@ -86,11 +87,11 @@ $K-Search-Toolbar-Height: 4em;
       height: 30px;
       width: 30px;
       margin: 5px 10px 5px 10px;
-      background-image: url("/images/icons/white_barcode24.svg");
-      background-size: 20px 20px;
+      background-image: url("/images/icons/check.svg");
+      background-size: 24px 24px;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: $K-Toolbar-Icon-Background-Color;
+      background-color: $K-Toolbar-Verify-Button-Color;
 
     }
 

@@ -172,8 +172,8 @@ $K-Wait-Image-Image-Path: "/images/ajax-loader.gif";
 *
 ***********************************************************************************************/
 
-$K-Search-Confirm-Color: $md-green-500;
-$K-Search-Modify-Color: $md-red-500;
+$K-Search-Confirm-Color: $md-pink-100;
+$K-Search-Modify-Color: $md-light-blue-500;
 
 #k-search-dialog-content {
 
@@ -210,7 +210,7 @@ $K-Search-Modify-Color: $md-red-500;
       padding: 0.4em;
       margin: 0 1rem 0 0;
       background-color: $K-Search-Confirm-Color;
-      font-size: 1rem;
+      font-size: 1.3rem;
 
     }
 
@@ -219,7 +219,7 @@ $K-Search-Modify-Color: $md-red-500;
       padding: 0.4em;
       margin: 0 1rem 0 0;
       background-color: $K-Search-Modify-Color;
-      font-size: 1rem;
+      font-size: 1.3rem;
 
     }
 
@@ -234,7 +234,6 @@ $K-Search-Modify-Color: $md-red-500;
 *
 ***********************************************************************************************/
 
-$K-Barcode-Scan-Color: $md-red-500;
 $K-GTIN-Input-Text-Color: white;
 $K-GTIN-Input-Border-Color: $K-PRIMARY-COLOR-900;
 $K-GTIN-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
@@ -244,21 +243,23 @@ $K-AuthCode-Input-Border-Color: $K-PRIMARY-COLOR-900;
 $K-AuthCode-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
 $K-AuthCode-Input-Background-Color: $md-light-blue-500;
 $K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
-
+$K-Authenticate-Button-color: $md-light-green-700;
 
 #k-barcode-dialog-content {
 
   height: 100%;
-  background-color: $K-BarCode-Background-Color;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
 
 
 
   #k-barcode-dialog-GTIN {
 
     width: 100%;
-    padding: 0 2rem 0 2rem;
+    margin: 2em 0 0 0;
+    padding: 0 2em 0 2em;
     font-size: 1em;
-    margin: 2rem 0 2rem 0;
     color: $md-black-display-text;
 
   }
@@ -269,9 +270,9 @@ $K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
     @include border-radius(4px);
     font-size: 1.3em;
     height: 1.5em;
-    width: 14em;
-    margin: 0.2em 0 0 0.75em;
-    padding: 0 0 0 0.3em;
+    max-width: 14rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
     color: $K-GTIN-Input-Text-Color;
     border: solid 2px $K-GTIN-Input-Border-Color;
     background-color: $K-GTIN-Input-Background-Color;
@@ -288,13 +289,20 @@ $K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
   #k-barcode-dialog-authcode {
 
     width: 100%;
-    padding: 0 2rem 0 1.5rem;
-    font-size: 1.2em;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 0 0;
+    padding: 0 2rem 0 2rem;
+    font-size: 1em;
     color: $md-black-primary-text;
 
   }
 
+
+  #k-barcode-captcha {
+
+    margin: 2rem 0 2rem 0;
+    padding: 0 2rem 0 2rem;
+
+  }
 
   #k-barcode-authcode-container {
 
@@ -340,23 +348,35 @@ $K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
 
   }
 
-  #k-barcode-dialog-batch {
 
-    width: 100%;
-    padding: 0 2rem 0 1.5rem;
-    font-size: 1em;
-    margin: 0 0 1rem 0;
-    color: $md-black-primary-text;
+  #k-barcode-authenticate-bar {
 
-  }
+    @include display-flex(inline-flex);
+    position: relative;
+    margin: 0;
+    padding: 0;
 
-  #k-barcode-dialog-expiry {
+    #k-barcode-authenticate-text {
 
-    width: 100%;
-    padding: 0 2rem 0 1.5rem;
-    font-size: 1em;
-    margin: 0 0 1rem 0;
-    color: $md-black-primary-text;
+      margin: 0 1em 0 1em;
+      padding: 0;
+
+    }
+
+
+    #k-barcode-authenticate {
+      // The search button
+
+      position: absolute;
+      top: -0.7em;
+      right: -2em;
+      background-image: url("/images/icons/check.svg");
+      background-size: 36px 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $K-Authenticate-Button-color;
+
+    }
 
   }
 

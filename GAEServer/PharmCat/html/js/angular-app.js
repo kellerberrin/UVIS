@@ -48,6 +48,8 @@
 
         }
 
+        var showAuthentication = false; // Enable authentication functionality
+        var recaptchaSecretKey = "6LcEZQATAAAAAN7iDxjleVtnEtXyFvptf0fG9_Wx";  // Modify and Remove after testing
         var promptCacheSize = 100;   // Prompt Cache
         var promptMaxResults = 10;   // Prompt Read Size
         var searchCacheSize = 100;   // Drug Search Cache
@@ -100,6 +102,12 @@
             displayHistoryPromptCount : function () {
 
                 return displayHistoryPromptCount;
+
+            },
+
+            showAuthentication : function () {
+
+                return showAuthentication;
 
             }
 

@@ -57,6 +57,7 @@
                 };
 
 
+
             }]);
 
 
@@ -97,7 +98,6 @@
                 $scope.promptPopup = SearchPromptPopup;  // Initialize the Popup to display search prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
-
 
 
                 $scope.barCodeDialog = function() {
@@ -261,15 +261,23 @@
             "DrugSearch",
             "SearchPrompts",
             "ImageSearchDialog",
+            "BarCodeDialog",
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
                                       SearchPrompts,
-                                      ImageSearchDialog) {
+                                      ImageSearchDialog,
+                                      BarCodeDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Search type service.
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
+
+                $scope.barCodeDialog = function() {
+
+                    BarCodeDialog.displayBarCodeDialog();
+
+                };
 
                 // Disable the active ingredient search if no ingredient selected.
 

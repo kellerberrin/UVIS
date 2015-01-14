@@ -2,7 +2,7 @@
 
     <div id="k-barcode-dialog-content">
 
-        <div id="k-barcode-dialog-GTIN">{{ barCodeDialog.GTIN() }}</div>
+        <div id="k-barcode-dialog-GTIN">14 Digit NDC (GTIN or Bar Code)</div>
 
         <input id="k-barcode-GTIN-input"
                type="text"
@@ -11,7 +11,7 @@
                aria-label="GTIN Text Input">
         </input>
 
-        <div id="k-barcode-dialog-authcode">{{ barCodeDialog.authenticationCode() }}</div>
+        <div id="k-barcode-dialog-authcode">Serial Code</div>
 
         <div id="k-barcode-authcode-container">
 
@@ -28,11 +28,20 @@
 
         </div>
 
-        <div id="k-barcode-dialog-batch">{{ barCodeDialog.batch() }}</div>
+        <div id="k-barcode-captcha"
+             class="g-recaptcha"
+             data-sitekey="6LcEZQATAAAAAM3csszGhzvXpShpq2Dwgz6QtVKW">
+        </div>
 
-        <div id="k-barcode-dialog-expiry">{{ barCodeDialog.expiryDate() }}</div>
+        <div id="k-barcode-authenticate-bar">
 
+            <div id="k-barcode-authenticate-text">Authenticate</div>
+
+            <div id="k-barcode-authenticate" class="k-material-fab"></div>
+
+        </div>
 
     </div>
+
 
 </k-material-dialog>

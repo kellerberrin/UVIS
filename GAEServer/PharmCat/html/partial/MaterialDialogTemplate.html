@@ -2,7 +2,9 @@
 
     <div class="k-material-modal-overlay">
 
-        <div class="k-material-modal-dialog" ng-style="displayDialog.dialogStyle">
+        <div class="k-material-modal-dialog"
+             ng-style="displayDialog.dialogStyle"
+                ng-class="{displayDialog: displayDialog.show}">
 
             <div class="k-material-dialog-dismiss k-material-fab" ng-click="dismissDialog()"></div>
 

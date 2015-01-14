@@ -206,7 +206,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 302, ../scss/_material.scss */
+/* line 304, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -216,7 +216,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 312, ../scss/_material.scss */
+/* line 315, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -227,9 +227,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 323, ../scss/_material.scss */
+/* line 326, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: absolute;
   z-index: 10000;
   -moz-transform: translate(-50%, -50%);
@@ -240,17 +243,13 @@ body {
   left: 50%;
   max-width: 95%;
   max-height: 95%;
-  background-color: white;
+  background-color: #e9ebfa;
   /* Throw a shadow */
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
 }
-/* line 340, ../scss/_material.scss */
+/* line 345, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -261,18 +260,13 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 354, ../scss/_material.scss */
-.k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
-  width: 100%;
-  height: 100%;
-}
 
 /****************************************************************************************************
 *
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 373, ../scss/_material.scss */
+/* line 371, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -290,7 +284,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 389, ../scss/_material.scss */
+/* line 387, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -301,7 +295,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 403, ../scss/_material.scss */
+/* line 401, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -312,7 +306,7 @@ body {
 * The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 418, ../scss/_material.scss */
+/* line 416, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -327,7 +321,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -338,7 +332,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -689,7 +683,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 302, ../scss/_material.scss */
+/* line 304, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -699,7 +693,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 312, ../scss/_material.scss */
+/* line 315, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -710,9 +704,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 323, ../scss/_material.scss */
+/* line 326, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: absolute;
   z-index: 10000;
   -moz-transform: translate(-50%, -50%);
@@ -723,17 +720,13 @@ body {
   left: 50%;
   max-width: 95%;
   max-height: 95%;
-  background-color: white;
+  background-color: #e9ebfa;
   /* Throw a shadow */
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
 }
-/* line 340, ../scss/_material.scss */
+/* line 345, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -744,18 +737,13 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 354, ../scss/_material.scss */
-.k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
-  width: 100%;
-  height: 100%;
-}
 
 /****************************************************************************************************
 *
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 373, ../scss/_material.scss */
+/* line 371, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -773,7 +761,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 389, ../scss/_material.scss */
+/* line 387, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -784,7 +772,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 403, ../scss/_material.scss */
+/* line 401, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -795,7 +783,7 @@ body {
 * The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 418, ../scss/_material.scss */
+/* line 416, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -810,7 +798,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -821,7 +809,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -994,15 +982,15 @@ body {
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-confirm {
   padding: 0.4em;
   margin: 0 1rem 0 0;
-  background-color: #259b24;
-  font-size: 1rem;
+  background-color: #f8bbd0;
+  font-size: 1.3rem;
 }
 /* line 217, ../scss/_k-dialog-toast.scss */
 #k-search-dialog-content #k-search-dialog-actions #k-search-dialog-modify {
   padding: 0.4em;
   margin: 0 1rem 0 0;
-  background-color: #e51c23;
-  font-size: 1rem;
+  background-color: #03a9f4;
+  font-size: 1.3rem;
 }
 
 /*********************************************************************************************
@@ -1010,46 +998,53 @@ body {
 * Barcode dialog box.
 *
 ***********************************************************************************************/
-/* line 249, ../scss/_k-dialog-toast.scss */
+/* line 248, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content {
   height: 100%;
-  background-color: #abb4e2;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
 }
-/* line 256, ../scss/_k-dialog-toast.scss */
+/* line 257, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-dialog-GTIN {
   width: 100%;
-  padding: 0 2rem 0 2rem;
+  margin: 2em 0 0 0;
+  padding: 0 2em 0 2em;
   font-size: 1em;
-  margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 267, ../scss/_k-dialog-toast.scss */
+/* line 268, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-GTIN-input {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   font-size: 1.3em;
   height: 1.5em;
-  width: 14em;
-  margin: 0.2em 0 0 0.75em;
-  padding: 0 0 0 0.3em;
+  max-width: 14rem;
+  margin: 0 0 2rem 0;
+  padding: 0;
   color: white;
   border: solid 2px #1a237e;
   background-color: #03a9f4;
 }
-/* line 279, ../scss/_k-dialog-toast.scss */
+/* line 280, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-GTIN-input:focus, #k-barcode-dialog-content #k-barcode-GTIN-input:hover {
   border-color: #ff80ab;
 }
-/* line 288, ../scss/_k-dialog-toast.scss */
+/* line 289, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-dialog-authcode {
   width: 100%;
-  padding: 0 2rem 0 1.5rem;
-  font-size: 1.2em;
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0 0 0;
+  padding: 0 2rem 0 2rem;
+  font-size: 1em;
   color: black;
 }
-/* line 299, ../scss/_k-dialog-toast.scss */
+/* line 300, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-captcha {
+  margin: 2rem 0 2rem 0;
+  padding: 0 2rem 0 2rem;
+}
+/* line 307, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authcode-container {
   display: -webkit-flex;
   display: flex;
@@ -1057,13 +1052,13 @@ body {
   flex-direction: row;
   width: 100%;
 }
-/* line 305, ../scss/_k-dialog-toast.scss */
+/* line 313, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-spacer-1 {
   min-width: 1em;
   height: 1.5em;
   background-color: lightgreen;
 }
-/* line 313, ../scss/_k-dialog-toast.scss */
+/* line 321, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1078,31 +1073,39 @@ body {
   border: solid 2px #1a237e;
   background-color: #03a9f4;
 }
-/* line 325, ../scss/_k-dialog-toast.scss */
+/* line 333, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input:focus, #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-input:hover {
   border-color: #ff80ab;
 }
-/* line 333, ../scss/_k-dialog-toast.scss */
+/* line 341, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authcode-container #k-barcode-authcode-spacer-2 {
   min-width: 1em;
   height: 1.5em;
   background-color: lightgreen;
 }
-/* line 343, ../scss/_k-dialog-toast.scss */
-#k-barcode-dialog-content #k-barcode-dialog-batch {
-  width: 100%;
-  padding: 0 2rem 0 1.5rem;
-  font-size: 1em;
-  margin: 0 0 1rem 0;
-  color: black;
+/* line 352, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authenticate-bar {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
-/* line 353, ../scss/_k-dialog-toast.scss */
-#k-barcode-dialog-content #k-barcode-dialog-expiry {
-  width: 100%;
-  padding: 0 2rem 0 1.5rem;
-  font-size: 1em;
-  margin: 0 0 1rem 0;
-  color: black;
+/* line 359, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate-text {
+  margin: 0 1em 0 1em;
+  padding: 0;
+}
+/* line 367, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate {
+  position: absolute;
+  top: -0.7em;
+  right: -2em;
+  background-image: url("/images/icons/check.svg");
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #689f38;
 }
 
 /*********************************************************************************************
@@ -1110,7 +1113,7 @@ body {
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 377, ../scss/_k-dialog-toast.scss */
+/* line 397, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -1118,7 +1121,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 387, ../scss/_k-dialog-toast.scss */
+/* line 407, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1126,7 +1129,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 397, ../scss/_k-dialog-toast.scss */
+/* line 417, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1134,7 +1137,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 407, ../scss/_k-dialog-toast.scss */
+/* line 427, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1228,7 +1231,7 @@ body {
     opacity: 0;
   }
 }
-/* line 471, ../scss/_k-dialog-toast.scss */
+/* line 491, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1244,7 +1247,7 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 487, ../scss/_k-dialog-toast.scss */
+/* line 507, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
   /* The .hg-hide class is added to element
      when the active class is added causing it to appear
@@ -1252,19 +1255,19 @@ body {
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 495, ../scss/_k-dialog-toast.scss */
+/* line 515, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 501, ../scss/_k-dialog-toast.scss */
+/* line 521, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 508, ../scss/_k-dialog-toast.scss */
+/* line 528, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1280,14 +1283,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 518, ../scss/_k-dialog-toast.scss */
+/* line 538, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 531, ../scss/_k-dialog-toast.scss */
+/* line 551, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;
@@ -1507,7 +1510,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 302, ../scss/_material.scss */
+/* line 304, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -1517,7 +1520,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 312, ../scss/_material.scss */
+/* line 315, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -1528,9 +1531,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 323, ../scss/_material.scss */
+/* line 326, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: absolute;
   z-index: 10000;
   -moz-transform: translate(-50%, -50%);
@@ -1541,17 +1547,13 @@ body {
   left: 50%;
   max-width: 95%;
   max-height: 95%;
-  background-color: white;
+  background-color: #e9ebfa;
   /* Throw a shadow */
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
 }
-/* line 340, ../scss/_material.scss */
+/* line 345, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1562,18 +1564,13 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 354, ../scss/_material.scss */
-.k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
-  width: 100%;
-  height: 100%;
-}
 
 /****************************************************************************************************
 *
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 373, ../scss/_material.scss */
+/* line 371, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1591,7 +1588,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 389, ../scss/_material.scss */
+/* line 387, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1602,7 +1599,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 403, ../scss/_material.scss */
+/* line 401, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -1613,7 +1610,7 @@ body {
 * The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 418, ../scss/_material.scss */
+/* line 416, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -1628,7 +1625,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1639,7 +1636,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -1671,7 +1668,7 @@ body {
 * Menu Bar, search ahead and history
 *
 ******************************************************************************************************************/
-/* line 43, ../scss/_k-menu-input.scss */
+/* line 44, ../scss/_k-menu-input.scss */
 #k-drug-toolbar {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -1682,7 +1679,7 @@ body {
   color: white;
   background-color: #3f51b5;
 }
-/* line 52, ../scss/_k-menu-input.scss */
+/* line 53, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools {
   display: -webkit-flex;
   display: flex;
@@ -1694,7 +1691,7 @@ body {
   width: 100%;
   background-color: #1a237e;
 }
-/* line 61, ../scss/_k-menu-input.scss */
+/* line 62, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-menu-icon-button {
   height: 30px;
   width: 30px;
@@ -1705,7 +1702,7 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 74, ../scss/_k-menu-input.scss */
+/* line 75, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-toolbar-title {
   -webkit-flex-grow: 2;
   flex-grow: 2;
@@ -1714,18 +1711,18 @@ body {
   font-size: 1.8em;
   margin: auto 10px;
 }
-/* line 84, ../scss/_k-menu-input.scss */
+/* line 85, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button {
   height: 30px;
   width: 30px;
   margin: 5px 10px 5px 10px;
-  background-image: url("/images/icons/white_barcode24.svg");
-  background-size: 20px 20px;
+  background-image: url("/images/icons/check.svg");
+  background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #03a9f4;
+  background-color: #689f38;
 }
-/* line 97, ../scss/_k-menu-input.scss */
+/* line 98, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-search-button {
   height: 30px;
   width: 30px;
@@ -1736,7 +1733,7 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 112, ../scss/_k-menu-input.scss */
+/* line 113, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1747,7 +1744,7 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 121, ../scss/_k-menu-input.scss */
+/* line 122, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1757,14 +1754,14 @@ body {
   width: 100%;
   height: 2em;
 }
-/* line 129, ../scss/_k-menu-input.scss */
+/* line 130, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-title {
   font-size: inherit;
   height: 1.5em;
   text-align: left;
   margin: 0.5em 0 0 0.75em;
 }
-/* line 138, ../scss/_k-menu-input.scss */
+/* line 139, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1777,11 +1774,11 @@ body {
   border: solid 2px #1a237e;
   cursor: pointer;
 }
-/* line 149, ../scss/_k-menu-input.scss */
+/* line 150, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:focus, #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:hover {
   border-color: #ff80ab;
 }
-/* line 159, ../scss/_k-menu-input.scss */
+/* line 160, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1793,7 +1790,7 @@ body {
   height: 2em;
   padding: 0;
 }
-/* line 171, ../scss/_k-menu-input.scss */
+/* line 172, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1807,11 +1804,11 @@ body {
   border: solid 2px #1a237e;
   background-color: #03a9f4;
 }
-/* line 183, ../scss/_k-menu-input.scss */
+/* line 184, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:focus, #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:hover {
   border-color: #ff80ab;
 }
-/* line 191, ../scss/_k-menu-input.scss */
+/* line 192, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search {
   position: absolute;
   font-size: inherit;
@@ -1823,11 +1820,11 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 203, ../scss/_k-menu-input.scss */
+/* line 204, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search.searchActive {
   background-color: #ff80ab;
 }
-/* line 216, ../scss/_k-menu-input.scss */
+/* line 217, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-prompt-anchor {
   position: relative;
 }
@@ -2040,7 +2037,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 302, ../scss/_material.scss */
+/* line 304, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -2050,7 +2047,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 312, ../scss/_material.scss */
+/* line 315, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -2061,9 +2058,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 323, ../scss/_material.scss */
+/* line 326, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: absolute;
   z-index: 10000;
   -moz-transform: translate(-50%, -50%);
@@ -2074,17 +2074,13 @@ body {
   left: 50%;
   max-width: 95%;
   max-height: 95%;
-  background-color: white;
+  background-color: #e9ebfa;
   /* Throw a shadow */
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
 }
-/* line 340, ../scss/_material.scss */
+/* line 345, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2095,18 +2091,13 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 354, ../scss/_material.scss */
-.k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
-  width: 100%;
-  height: 100%;
-}
 
 /****************************************************************************************************
 *
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 373, ../scss/_material.scss */
+/* line 371, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2124,7 +2115,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 389, ../scss/_material.scss */
+/* line 387, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2135,7 +2126,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 403, ../scss/_material.scss */
+/* line 401, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -2146,7 +2137,7 @@ body {
 * The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 418, ../scss/_material.scss */
+/* line 416, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2161,7 +2152,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2172,7 +2163,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -2657,7 +2648,7 @@ body {
 * The dialog classes for material popup dialogs.
 *
 *****************************************************************************************************/
-/* line 302, ../scss/_material.scss */
+/* line 304, ../scss/_material.scss */
 .k-material-modal {
   /* A translucent div that covers the whole screen */
   position: fixed;
@@ -2667,7 +2658,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 312, ../scss/_material.scss */
+/* line 315, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay {
   /* A translucent div that covers the whole screen */
   position: absolute;
@@ -2678,9 +2669,12 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 323, ../scss/_material.scss */
+/* line 326, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   position: absolute;
   z-index: 10000;
   -moz-transform: translate(-50%, -50%);
@@ -2691,17 +2685,13 @@ body {
   left: 50%;
   max-width: 95%;
   max-height: 95%;
-  background-color: white;
+  background-color: #e9ebfa;
   /* Throw a shadow */
   -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
 }
-/* line 340, ../scss/_material.scss */
+/* line 345, ../scss/_material.scss */
 .k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-dialog-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2712,18 +2702,13 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 354, ../scss/_material.scss */
-.k-material-modal .k-material-modal-overlay .k-material-modal-dialog .k-material-modal-content {
-  width: 100%;
-  height: 100%;
-}
 
 /****************************************************************************************************
 *
 * The toast classes for material toasts.
 *
 *****************************************************************************************************/
-/* line 373, ../scss/_material.scss */
+/* line 371, ../scss/_material.scss */
 .k-material-toast {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2741,7 +2726,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 389, ../scss/_material.scss */
+/* line 387, ../scss/_material.scss */
 .k-material-toast .k-material-toast-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2752,7 +2737,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 403, ../scss/_material.scss */
+/* line 401, ../scss/_material.scss */
 .k-material-toast .k-material-toast-content {
   width: 100%;
   height: 100%;
@@ -2763,7 +2748,7 @@ body {
 * The popup class for material popups.
 *
 *****************************************************************************************************/
-/* line 418, ../scss/_material.scss */
+/* line 416, ../scss/_material.scss */
 .k-material-popup {
   /* A centered div above the overlay with a box shadow. */
   position: absolute;
@@ -2778,7 +2763,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2789,7 +2774,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -2823,7 +2808,7 @@ body {
 *
 *
 **************************************************************************************************************/
-/* line 40, ../scss/_k-display-results.scss */
+/* line 39, ../scss/_k-display-results.scss */
 .k-display-drug {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2848,7 +2833,7 @@ body {
   * Display NDC
   ********************************************************************************/
 }
-/* line 52, ../scss/_k-display-results.scss */
+/* line 51, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar {
   position: relative;
   margin: 0;
@@ -2857,7 +2842,7 @@ body {
   background-color: #c5cae9;
   width: 100%;
 }
-/* line 61, ../scss/_k-display-results.scss */
+/* line 60, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar .k-display-name-search {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2873,15 +2858,15 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 74, ../scss/_k-display-results.scss */
+/* line 73, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar .k-display-name-search.searchactive {
   background-color: #ff80ab;
 }
-/* line 81, ../scss/_k-display-results.scss */
+/* line 80, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar .k-display-name-search:hover {
   opacity: 1.0;
 }
-/* line 89, ../scss/_k-display-results.scss */
+/* line 88, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar .k-display-drug-name {
   font-size: 1.5em;
   padding: 0.1em 1rem 0.1em 2.5rem;
@@ -2889,7 +2874,7 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 99, ../scss/_k-display-results.scss */
+/* line 98, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-header-bar .k-display-labeler-name {
   font-size: 1em;
   padding: 0.1em 1rem 0.1em 2.5em;
@@ -2897,7 +2882,7 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 114, ../scss/_k-display-results.scss */
+/* line 113, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price {
   position: relative;
   display: -webkit-flex;
@@ -2912,7 +2897,7 @@ body {
   border: none;
   background-color: white;
 }
-/* line 126, ../scss/_k-display-results.scss */
+/* line 125, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2925,7 +2910,7 @@ body {
   margin: 5px;
   cursor: pointer;
 }
-/* line 134, ../scss/_k-display-results.scss */
+/* line 133, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image:hover {
   -moz-transform: translate(0px, -1px);
   -ms-transform: translate(0px, -1px);
@@ -2935,30 +2920,30 @@ body {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-/* line 141, ../scss/_k-display-results.scss */
+/* line 140, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image.hasimage {
   display: block;
 }
-/* line 147, ../scss/_k-display-results.scss */
+/* line 146, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-image-price .k-display-drug-image .k-display-small-image {
   margin: 3px;
 }
-/* line 161, ../scss/_k-display-results.scss */
+/* line 160, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients {
   display: none;
   position: relative;
   background-color: #ffccde;
   width: 100%;
 }
-/* line 168, ../scss/_k-display-results.scss */
+/* line 167, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients.hasactive {
   display: block;
 }
-/* line 174, ../scss/_k-display-results.scss */
+/* line 173, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label {
   height: 2em;
 }
-/* line 178, ../scss/_k-display-results.scss */
+/* line 177, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -2975,19 +2960,19 @@ body {
   background-color: #03a9f4;
   display: none;
 }
-/* line 193, ../scss/_k-display-results.scss */
+/* line 192, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.validselection {
   display: block;
 }
-/* line 199, ../scss/_k-display-results.scss */
+/* line 198, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.searchactive {
   background-color: #ff80ab;
 }
-/* line 206, ../scss/_k-display-results.scss */
+/* line 205, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-search.validselection:hover {
   opacity: 1.0;
 }
-/* line 214, ../scss/_k-display-results.scss */
+/* line 213, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-active-label .k-display-active-label-text {
   width: 100%;
   margin: 0;
@@ -2995,14 +2980,14 @@ body {
   padding: 0.1em 1rem 0.1em 2.5rem;
   font-size: 1.2em;
 }
-/* line 227, ../scss/_k-display-results.scss */
+/* line 226, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel {
   width: 100%;
   font-size: 1.0em;
   margin: 0;
   padding-bottom: 0.5em;
 }
-/* line 235, ../scss/_k-display-results.scss */
+/* line 234, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line {
   display: -webkit-flex;
   display: flex;
@@ -3011,7 +2996,7 @@ body {
   width: 100%;
   font-size: inherit;
 }
-/* line 243, ../scss/_k-display-results.scss */
+/* line 242, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name {
   float: left;
   max-width: 75%;
@@ -3020,19 +3005,19 @@ body {
   padding: 0.2em 0.2em 0.2em 0.2rem;
   background-color: #ffccde;
 }
-/* line 252, ../scss/_k-display-results.scss */
+/* line 251, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name .k-display-ingredient-name-icon {
   opacity: 0;
 }
-/* line 258, ../scss/_k-display-results.scss */
+/* line 257, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name.activeselected {
   background-color: #ffb3cd;
 }
-/* line 263, ../scss/_k-display-results.scss */
+/* line 262, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name.activeselected .k-display-ingredient-name-icon {
   opacity: 0.7;
 }
-/* line 273, ../scss/_k-display-results.scss */
+/* line 272, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength {
   float: left;
   max-width: 35%;
@@ -3041,31 +3026,31 @@ body {
   padding: 0.2em 0 0.2em 0.2rem;
   background-color: #ffccde;
 }
-/* line 282, ../scss/_k-display-results.scss */
+/* line 281, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength .k-display-ingredient-strength-icon {
   opacity: 0;
 }
-/* line 288, ../scss/_k-display-results.scss */
+/* line 287, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength.strengthselected {
   background-color: #ffb3cd;
 }
-/* line 293, ../scss/_k-display-results.scss */
+/* line 292, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength.strengthselected .k-display-ingredient-strength-icon {
   opacity: 0.7;
 }
-/* line 313, ../scss/_k-display-results.scss */
+/* line 312, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-package-container {
   width: 100%;
   background-color: white;
 }
-/* line 318, ../scss/_k-display-results.scss */
+/* line 317, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-package-container .k-display-package-description {
   padding: 0.3em 1.0rem 0.3em 2.5rem;
   border: none;
   margin: 0;
   font-size: 0.9em;
 }
-/* line 333, ../scss/_k-display-results.scss */
+/* line 332, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container {
   position: relative;
   margin: 0;
@@ -3074,7 +3059,7 @@ body {
   background-color: #c5cae9;
   width: 100%;
 }
-/* line 342, ../scss/_k-display-results.scss */
+/* line 341, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -3090,15 +3075,15 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 355, ../scss/_k-display-results.scss */
+/* line 354, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search.searchactive {
   background-color: #ff80ab;
 }
-/* line 362, ../scss/_k-display-results.scss */
+/* line 361, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc9-search:hover {
   opacity: 1.0;
 }
-/* line 370, ../scss/_k-display-results.scss */
+/* line 369, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-title {
   font-size: 1.2em;
   padding: 0.1em 1rem 0.1em 2.5rem;
@@ -3106,7 +3091,7 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 380, ../scss/_k-display-results.scss */
+/* line 379, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes {
   display: inline-block;
   /* non-flexbox browsers */
@@ -3120,7 +3105,7 @@ body {
   flex-wrap: wrap;
   margin-left: 2.5rem;
 }
-/* line 389, ../scss/_k-display-results.scss */
+/* line 388, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc {
   display: -webkit-flex;
   display: flex;
@@ -3130,7 +3115,7 @@ body {
   align-items: flex-start;
   margin-right: 1em;
 }
-/* line 396, ../scss/_k-display-results.scss */
+/* line 395, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-title {
   color: #303f9f;
   font-size: 0.7em;
@@ -3139,7 +3124,7 @@ body {
   border: none;
   margin: 0;
 }
-/* line 407, ../scss/_k-display-results.scss */
+/* line 406, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-value {
   font-size: 1em;
   padding: 0.1em 0 0.1em 0;
@@ -3147,11 +3132,11 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 415, ../scss/_k-display-results.scss */
+/* line 414, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc .k-display-ndc-value .k-display-ndc-format {
   font-size: 0.7em;
 }
-/* line 425, ../scss/_k-display-results.scss */
+/* line 424, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 {
   display: -webkit-flex;
   display: flex;
@@ -3160,7 +3145,7 @@ body {
   -webkit-align-items: flex-start;
   align-items: flex-start;
 }
-/* line 431, ../scss/_k-display-results.scss */
+/* line 430, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-title {
   color: #303f9f;
   font-size: 0.7em;
@@ -3169,11 +3154,11 @@ body {
   border: none;
   margin: 0;
 }
-/* line 440, ../scss/_k-display-results.scss */
+/* line 439, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-title .k-display-ndc11-package {
   font-weight: 500;
 }
-/* line 448, ../scss/_k-display-results.scss */
+/* line 447, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value {
   font-size: 1.0em;
   padding: 0.1em 0 0.1em 0;
@@ -3181,11 +3166,31 @@ body {
   margin: 0;
   line-height: 105%;
 }
-/* line 456, ../scss/_k-display-results.scss */
+/* line 455, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value .k-display-ndc11-ndc9 {
   font-weight: 700;
 }
-/* line 462, ../scss/_k-display-results.scss */
+/* line 461, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-codes .k-display-ndc11 .k-display-ndc11-value .k-display-ndc11-format {
   font-size: 0.7em;
+}
+/* line 473, ../scss/_k-display-results.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc-verify {
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  top: -1em;
+  right: -0.75em;
+  opacity: 0.4;
+  background-image: url("/images/icons/check.svg");
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #689f38;
+}
+/* line 486, ../scss/_k-display-results.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc-verify:hover {
+  opacity: 1.0;
 }

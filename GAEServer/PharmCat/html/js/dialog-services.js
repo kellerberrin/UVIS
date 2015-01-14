@@ -20,7 +20,6 @@
 
         var exampleSearchDialog = {
             show: false, // Display the dialog box
-            searchParams: null, // Example search parameters
             dialogStyle: {width: "80%", "max-width": "450px"}
         }; // Set the dialog width
 
