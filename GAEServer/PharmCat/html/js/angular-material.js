@@ -102,12 +102,9 @@ var materialComponents = angular.module( "kMaterialComponents", []);
 
             link: function(scope, element, attrs) {
 
-                utilityModule.k_consoleLog(["popup scope", scope]);
-
                 scope.dismissPopup =function() {
 
                     scope.displayPopup.show = false;
-                    utilityModule.k_consoleLog(["popup scope", scope]);
 
                 }
 

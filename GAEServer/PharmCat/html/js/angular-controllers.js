@@ -80,6 +80,7 @@
             "InputSearchTypes",
             "ValidateInput",
             "BarCodeDialog",
+            "SearchMenuPopup",
             "ConfirmSearchDialog",
             function SearchController($scope,
                                       DrugArray,
@@ -90,6 +91,7 @@
                                       InputSearchTypes,
                                       ValidateInput,
                                       BarCodeDialog,
+                                      SearchMenuPopup,
                                       ConfirmSearchDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
@@ -97,12 +99,19 @@
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
                 $scope.promptPopup = SearchPromptPopup;  // Initialize the Popup to display search prompts
                 $scope.searchTypes = InputSearchTypes; // Search type service
+                $scope.searchMenuPopup = SearchMenuPopup;  // Initialize the search menu.
                 $scope.blankSearchParams = {searchstring: "", searchtype: "name"};
-
 
                 $scope.barCodeDialog = function() {
 
+                    BarCodeDialog.SetNDC14("");
                     BarCodeDialog.displayBarCodeDialog();
+
+                };
+
+                $scope.searchMenu = function() {
+
+                    SearchMenuPopup.togglePopup(true);
 
                 };
 
@@ -273,8 +282,9 @@
                 $scope.drugSearch = DrugSearch; // Search type service.
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
 
-                $scope.barCodeDialog = function() {
+                $scope.barCodeDialog = function(NDC10) {
 
+                    BarCodeDialog.SetNDC14(utilityModule.k_NDC10toNDC14Format(NDC10));
                     BarCodeDialog.displayBarCodeDialog();
 
                 };

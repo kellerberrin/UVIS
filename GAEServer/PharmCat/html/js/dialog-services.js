@@ -247,10 +247,7 @@
         var barCodeDialog = {
             show: false, // Display the dialog box
             dialogStyle: {width: "80%", "max-width": "400px"}, // Set the dialog width
-            GTIN : "GTIN",
-            authenticationCode : "Authentication Code",
-            batch : "Batch Number",
-            expiryDate: "Expiry Date"
+            NDC14 : ""
         };
 
         return {
@@ -267,31 +264,19 @@
 
             },
 
-            GTIN : function() {
+            GetNDC14 : function() {
 
-                return barCodeDialog.GTIN
-
-            },
-
-            authenticationCode : function() {
-
-                return barCodeDialog.authenticationCode;
+                return barCodeDialog.NDC14;
 
             },
 
-            batch : function() {
+            SetNDC14 : function(NDC14) {
 
-                return barCodeDialog.batch;
-
-            },
-
-            expiryDate : function() {
-
-                return barCodeDialog.expiryDate;
+                barCodeDialog.NDC14 = NDC14;
 
             }
 
-        }
+        };
 
     });
 
@@ -385,6 +370,41 @@
         }
 
     });
+
+
+
+    /*********************************************************************************************
+     *
+     * The search popup menu.
+     * This popup is defined at the bottom of of the icon toolbar
+     *
+     *********************************************************************************************/
+
+    dialogServices.factory("SearchMenuPopup", function () {
+
+        var searchMenuPopup = {
+            show: false,
+            popupStyle: {width: "18em", top: "1em", left: "1em"}
+        }; // Set the menu width
+
+        return {
+
+            initialize: function () {
+
+                return searchMenuPopup;
+
+            },
+
+            togglePopup: function (displayFlag) {
+
+                searchMenuPopup.show = displayFlag;
+
+            }
+
+        }
+
+    });
+
 
 
 })(window, window.angular);

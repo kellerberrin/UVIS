@@ -17,7 +17,6 @@
   @include box-sizing(border-box);
 }
 
-
 /*********************************************************************************************
 *
 * Example Dialog - If the user clicks on the background image - do an example search.
@@ -54,7 +53,6 @@ $K-ExampleDialog-Search-Inactive-color: $md-light-blue-500;
     color: $md-black-display-text;
 
   }
-
 
   #k-example-search-bar {
 
@@ -97,7 +95,6 @@ $K-ExampleDialog-Search-Inactive-color: $md-light-blue-500;
 
 $K-ImageDialog-Search-Inactive-color: $md-light-blue-500;
 $K-Wait-Image-Image-Path: "/images/ajax-loader.gif";
-
 
 #k-image-display-dialog {
   // dialog box
@@ -227,22 +224,21 @@ $K-Search-Modify-Color: $md-light-blue-500;
 
 }
 
-
 /*********************************************************************************************
 *
 * Barcode dialog box.
 *
 ***********************************************************************************************/
 
-$K-GTIN-Input-Text-Color: white;
+$K-GTIN-Input-Text-Color: $md-black-primary-text;
 $K-GTIN-Input-Border-Color: $K-PRIMARY-COLOR-900;
 $K-GTIN-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
 $K-GTIN-Input-Background-Color: $md-light-blue-500;
-$K-AuthCode-Input-Text-Color: white;
+$K-AuthCode-Input-Text-Color: $md-black-primary-text;
 $K-AuthCode-Input-Border-Color: $K-PRIMARY-COLOR-900;
 $K-AuthCode-Input-Active-Border-Color: $K-ACCENT-COLOR-100;
 $K-AuthCode-Input-Background-Color: $md-light-blue-500;
-$K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500,30%);
+$K-BarCode-Background-Color: lighten($K-PRIMARY-COLOR-500, 30%);
 $K-Authenticate-Button-color: $md-light-green-700;
 
 #k-barcode-dialog-content {
@@ -252,26 +248,33 @@ $K-Authenticate-Button-color: $md-light-green-700;
   padding: 10px;
   margin: 0;
 
-
-
-  #k-barcode-dialog-GTIN {
+  #k-barcode-dialog-Title {
 
     width: 100%;
-    margin: 2em 0 0 0;
-    padding: 0 2em 0 2em;
-    font-size: 1em;
+    margin: 1rem 0 1rem 0;
+    padding-left: 1rem;
+    font-size: 1.3em;
     color: $md-black-display-text;
 
   }
 
+  #k-barcode-dialog-GTIN {
+
+    width: 100%;
+    margin: 0;
+    padding-left: 1em;
+    font-size: 0.9em;
+    color: $md-black-display-text;
+
+  }
 
   #k-barcode-GTIN-input {
 
     @include border-radius(4px);
+    width: 100%;
     font-size: 1.3em;
     height: 1.5em;
-    max-width: 14rem;
-    margin: 0 0 2rem 0;
+    margin: 0;
     padding: 0;
     color: $K-GTIN-Input-Text-Color;
     border: solid 2px $K-GTIN-Input-Border-Color;
@@ -285,17 +288,35 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
   }
 
-
   #k-barcode-dialog-authcode {
 
     width: 100%;
-    margin: 2rem 0 0 0;
-    padding: 0 2rem 0 2rem;
-    font-size: 1em;
+    margin-top: 1.0em;
+    padding-left: 1em;
+    font-size: 0.9em;
     color: $md-black-primary-text;
 
   }
 
+  #k-barcode-authcode-input {
+
+    @include border-radius(4px);
+    width: 100%;
+    font-size: 1.3em;
+    height: 1.5em;
+    margin: 0;
+    padding: 0;
+    color: $K-AuthCode-Input-Text-Color;
+    border: solid 2px $K-AuthCode-Input-Border-Color;
+    background-color: $K-AuthCode-Input-Background-Color;
+
+    &:focus, &:hover {
+
+      border-color: $K-AuthCode-Input-Active-Border-Color;
+
+    }
+
+  }
 
   #k-barcode-captcha {
 
@@ -303,51 +324,6 @@ $K-Authenticate-Button-color: $md-light-green-700;
     padding: 0 2rem 0 2rem;
 
   }
-
-  #k-barcode-authcode-container {
-
-    @include display-flex;
-    @include flex-direction(row);
-    width: 100%;
-
-    #k-barcode-authcode-spacer-1 {
-
-      min-width: 1em;
-      height: 1.5em;
-      background-color: lightgreen;
-
-    }
-
-    #k-barcode-authcode-input {
-
-      @include border-radius(4px);
-      @include flex(1);
-      font-size: 1.3em;
-      height: 1.5em;
-      margin: 0;
-      padding: 0 0 0 0.3em;
-      color: $K-AuthCode-Input-Text-Color;
-      border: solid 2px $K-AuthCode-Input-Border-Color;
-      background-color: $K-AuthCode-Input-Background-Color;
-
-      &:focus, &:hover {
-
-        border-color: $K-AuthCode-Input-Active-Border-Color;
-
-      }
-
-    }
-
-    #k-barcode-authcode-spacer-2 {
-
-      min-width: 1em;
-      height: 1.5em;
-      background-color: lightgreen;
-
-    }
-
-  }
-
 
   #k-barcode-authenticate-bar {
 
@@ -362,7 +338,6 @@ $K-Authenticate-Button-color: $md-light-green-700;
       padding: 0;
 
     }
-
 
     #k-barcode-authenticate {
       // The search button
@@ -380,17 +355,13 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
   }
 
-
 }
-
-
 
 /*********************************************************************************************
 *
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-
 
 #k-error-dialog-content {
 
@@ -436,18 +407,15 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
 }
 
-
 /*********************************************************************************************
 *
 * Search Toast
 *
 ***********************************************************************************************/
 
-
 $K-Search-Toast-Background-color: $K-PRIMARY-COLOR-500;
 $K-Search-Toast-Text-color: $md-white-primary-Text;
 $K-Search-Toast-Dismiss-Color: $md-pink-a100;
-
 
 @include keyframes(toast-slide-in) {
 
@@ -471,7 +439,6 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
   0% {
 
-
     @include translate(-50%, 0px);
     opacity: 1;
 
@@ -479,14 +446,12 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
   100% {
 
-
     @include translate(-50%, 200px);
     opacity: 0;
 
   }
 
 }
-
 
 #k-search-toast {
 
@@ -509,7 +474,7 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
        when the active class is added causing it to appear
        as hidden. Therefore set the styling to display:block
        so that the hide animation is visible */
-    display:block!important;
+    display: block !important;
   }
 
   &.ng-hide-add {
@@ -524,7 +489,6 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
   }
 
-
   #k-search-toast-content {
 
     /* Throw a shadow */
@@ -533,7 +497,6 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
     height: 100%;
     width: 100%;
     background-color: $K-Search-Toast-Background-color;
-
 
     #k-search-toast-message {
 
@@ -544,9 +507,7 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
     }
 
-
   }
-
 
   #k-search-toast-dismiss {
     // The dismiss button
@@ -564,3 +525,32 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 
 }
 
+/*********************************************************************************************
+*
+* The Search Menu
+*
+***********************************************************************************************/
+
+#k-search-menu-container {
+
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  .k-search-menu-item {
+
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem;
+    font-size: 1em;
+    color: $md-black-primary-text;
+
+    &:hover {
+
+      background-color: lightcoral;
+
+    }
+
+  }
+
+}

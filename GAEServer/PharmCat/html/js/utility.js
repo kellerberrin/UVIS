@@ -270,6 +270,28 @@ var utilityModule = (function (window, angular, undefined) {
     /*********************************************************************************************
      *
      *
+     * Convert a 10 digit NDC to a 14 digit NDC (GTIN or Bar Code number).
+     *
+     ************************************************************************************************/
+
+    var k_NDC10toNDC14Format = function (NDC10Code) {
+
+        var FormattedNDC14 = "003"+ k_NDC14FormatCheckDigit(NDC10Code) + "-" + NDC10Code;
+
+        return FormattedNDC14;
+
+    };
+
+    var k_NDC14FormatCheckDigit = function (NDC10Code) {
+
+
+        return "Z";  // Dummy value for now.
+
+    };
+
+    /*********************************************************************************************
+     *
+     *
      * Make the Utility routines public.
      *
      ************************************************************************************************/
@@ -286,7 +308,9 @@ var utilityModule = (function (window, angular, undefined) {
 
         k_NDC9Format: k_NDC9Format,
 
-        k_capitalize: k_capitalize
+        k_capitalize: k_capitalize,
+
+        k_NDC10toNDC14Format: k_NDC10toNDC14Format
 
     };
 

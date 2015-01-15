@@ -2,31 +2,26 @@
 
     <div id="k-barcode-dialog-content">
 
-        <div id="k-barcode-dialog-GTIN">14 Digit NDC (GTIN or Bar Code)</div>
+        <div id="k-barcode-dialog-Title">Verify Serial Code</div>
+
+        <div id="k-barcode-dialog-GTIN">14 Digit NDC (Bar Code Number)</div>
 
         <input id="k-barcode-GTIN-input"
                type="text"
                autocomplete="no"
                class="k-input-text"
+               ng-model="barCodeDialog.barCodeDialog.NDC14"
                aria-label="GTIN Text Input">
         </input>
 
         <div id="k-barcode-dialog-authcode">Serial Code</div>
 
-        <div id="k-barcode-authcode-container">
-
-            <div id="k-barcode-authcode-spacer-1"></div>
-
-            <input id="k-barcode-authcode-input"
-                   type="text"
-                   autocomplete="no"
-                   class="k-input-text"
-                   aria-label="AuthCode Text Input">
-            </input>
-
-            <div id="k-barcode-authcode-spacer-2"></div>
-
-        </div>
+        <input id="k-barcode-authcode-input"
+               type="text"
+               autocomplete="no"
+               class="k-input-text"
+               aria-label="AuthCode Text Input">
+        </input>
 
         <div id="k-barcode-captcha"
              class="g-recaptcha"

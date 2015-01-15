@@ -20,8 +20,14 @@
 
         <div id="k-icon-search-button"
                 class="k-material-flat-button"
+                ng-click="searchMenu()"
                 aria-label="Search Menu">
         </div>
+
+        <!-- The Search Menu Popup -->
+        <!-- Important! The popup is positioned relative to icon toolbar element -->
+        <div id="k-search-menu-anchor" ng-include src=" 'partial/SearchMenu.html' "></div>
+        <!-- End Search Prompt Popup -->
 
     </div>
 
