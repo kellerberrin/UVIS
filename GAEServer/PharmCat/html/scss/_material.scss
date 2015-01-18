@@ -413,17 +413,19 @@ $K-Material-Dialog-Background-Color: lighten($K-PRIMARY-COLOR-900, 65%);
 *
 *****************************************************************************************************/
 
-.k-material-popup {
+$K-Material-Popup-Background-Color: lighten($K-PRIMARY-COLOR-900, 65%);
+$K-Material-Popup-Selection-Color: $K-PRIMARY-COLOR-100;
 
-  /* A centered div above the overlay with a box shadow. */
+.k-material-popup {
 
   position: absolute;
   z-index: 10000;
-  top: 0; // default modified in js
-  left: 0; // default modified in js
+//  top: 0; // default modified in js
+//  left: 0; // default modified in js
   max-width: 95%;
   max-height: 95%;
-  background-color: rgba(255,255,255,1);
+  background-color: $K-Material-Popup-Background-Color;
+  color: $md-black-primary-text;
 
   /* Throw a shadow */
   @include K-MaterialBoxShadow(4);
@@ -446,8 +448,7 @@ $K-Material-Dialog-Background-Color: lighten($K-PRIMARY-COLOR-900, 65%);
 
     width: 100%;
     height: 100%;
-    background-color: white;
-    color: $md-black-primary-text;
+    background-color: inherit;
 
   }
 

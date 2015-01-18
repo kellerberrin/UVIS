@@ -48,7 +48,7 @@ $K-Verify-Button-color: $md-light-green-700;
   * Display Drug Name
   ********************************************************************************/
 
-  & .k-display-header-bar {
+   .k-display-header-bar {
 
     position: relative;
     margin: 0;
@@ -57,7 +57,7 @@ $K-Verify-Button-color: $md-light-green-700;
     background-color: $K-Display-Name-Background;
     width: 100%;
 
-    & .k-display-name-search {
+     .k-display-name-search {
 
       @include transition(all 0.25s ease-in-out);
       position: absolute;
@@ -85,7 +85,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
     }
 
-    & .k-display-drug-name {
+     .k-display-drug-name {
 
       font-size: 1.5em;
       padding: 0.1em 1rem 0.1em 2.5rem;
@@ -95,7 +95,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
     }
 
-    & .k-display-labeler-name {
+     .k-display-labeler-name {
 
       font-size: 1em;
       padding: 0.1em 1rem 0.1em 2.5em;
@@ -110,7 +110,7 @@ $K-Verify-Button-color: $md-light-green-700;
   * Display Drug Image and Price Information
   ********************************************************************************/
 
-  & .k-display-image-price {
+   .k-display-image-price {
 
     position: relative;
     @include display-flex;
@@ -122,7 +122,7 @@ $K-Verify-Button-color: $md-light-green-700;
     border: none;
     background-color: $K-Display-Image-Price-Background;
 
-    & .k-display-drug-image {
+     .k-display-drug-image {
 
       @include transition(all 0.25s ease-in-out);
       @include K-MaterialBoxShadow(1);
@@ -143,7 +143,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
       }
 
-      & .k-display-small-image {
+       .k-display-small-image {
 
         margin: 3px;
 
@@ -157,7 +157,7 @@ $K-Verify-Button-color: $md-light-green-700;
   * Display Active Ingredient
   ********************************************************************************/
 
-  & .k-display-active-ingredients {
+   .k-display-active-ingredients {
 
     display: none;
     position: relative;
@@ -170,11 +170,11 @@ $K-Verify-Button-color: $md-light-green-700;
 
     }
 
-    & .k-display-active-label {
+     .k-display-active-label {
 
       height: 2em;
 
-      & .k-display-active-search {
+       .k-display-active-search {
         // Active ingredient search button
 
         @include transition(all 0.25s ease-in-out);
@@ -210,7 +210,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
       }
 
-      & .k-display-active-label-text {
+       .k-display-active-label-text {
         // Active Ingedient title text
 
         width: 100%;
@@ -223,7 +223,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
     }
 
-    & .k-display-ingredient-panel {
+     .k-display-ingredient-panel {
       // Container for active ingredients.
 
       width: 100%;
@@ -231,7 +231,7 @@ $K-Verify-Button-color: $md-light-green-700;
       margin: 0;
       padding-bottom: 0.5em;
 
-      & .k-display-ingredient-line {
+       .k-display-ingredient-line {
         // Individual active ingredient line.
 
         @include display-flex;
@@ -239,7 +239,7 @@ $K-Verify-Button-color: $md-light-green-700;
         width: 100%;
         font-size: inherit;
 
-        & .k-display-ingredient-name {
+         .k-display-ingredient-name {
 
           float: left;
           max-width: 75%;
@@ -248,7 +248,7 @@ $K-Verify-Button-color: $md-light-green-700;
           padding: 0.2em 0.2em 0.2em 0.2rem;
           background-color: $K-Display-Active-Color;
 
-          & .k-display-ingredient-name-icon {
+           .k-display-ingredient-name-icon {
 
             opacity: 0;
 
@@ -259,7 +259,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
             background-color: $K-Display-Active-Selected-Color;
 
-            & .k-display-ingredient-name-icon {
+             .k-display-ingredient-name-icon {
 
               opacity: 0.7;
 
@@ -269,7 +269,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
         }
 
-        & .k-display-ingredient-strength {
+         .k-display-ingredient-strength {
 
           float: left;
           max-width: 35%;
@@ -278,7 +278,7 @@ $K-Verify-Button-color: $md-light-green-700;
           padding: 0.2em 0 0.2em 0.2rem;
           background-color: $K-Display-Active-Color;
 
-          & .k-display-ingredient-strength-icon {
+           .k-display-ingredient-strength-icon {
 
             opacity: 0;
 
@@ -289,7 +289,7 @@ $K-Verify-Button-color: $md-light-green-700;
 
             background-color: $K-Display-Active-Selected-Color;
 
-            & .k-display-ingredient-strength-icon {
+             .k-display-ingredient-strength-icon {
 
               opacity: 0.7;
 
@@ -309,12 +309,12 @@ $K-Verify-Button-color: $md-light-green-700;
   * Display Package
   ********************************************************************************/
 
-  & .k-display-package-container {
+   .k-display-package-container {
 
     width: 100%;
     background-color: $K-Display-Package-Background;
 
-    & .k-display-package-description {
+     .k-display-package-description {
 
       padding: 0.3em 1.0rem 0.3em 2.5rem;
       border: none;

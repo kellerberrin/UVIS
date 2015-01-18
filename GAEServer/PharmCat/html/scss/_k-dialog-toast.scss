@@ -531,6 +531,8 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
 *
 ***********************************************************************************************/
 
+$K-Search-Menu-Select-Color: $K-PRIMARY-COLOR-100;
+
 #k-search-menu-container {
 
   width: 100%;
@@ -540,14 +542,14 @@ $K-Search-Toast-Dismiss-Color: $md-pink-a100;
   .k-search-menu-item {
 
     width: 100%;
-    margin: 1rem 0 1rem 0;
+    margin: 0;
     padding: 1rem;
     font-size: 1em;
     color: $md-black-primary-text;
 
     &:hover {
 
-      background-color: lightcoral;
+      background-color: $K-Search-Menu-Select-Color;
 
     }
 

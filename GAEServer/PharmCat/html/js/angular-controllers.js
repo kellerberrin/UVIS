@@ -235,12 +235,40 @@
 
             }]);
 
+
+    /*********************************************************************************************
+     *
+     * The Search Menu Controller for the search menu.
+     * Defined in SearchMenu.html
+     *
+     *********************************************************************************************/
+
+
+    searchControllers.controller("SearchMenuController",
+        ["$scope",
+            "DrugArray",
+            "SearchMenuPopup",
+            function SearchMenuController($scope,
+                                          DrugArray,
+                                          SearchMenuPopup) {
+
+                $scope.clearResults = function() {
+
+                    DrugArray.setEmpty();
+                    SearchMenuPopup.togglePopup(false);
+
+                };
+
+            }]);
+
+
     /*********************************************************************************************
      *
      * The Search Prompt Controller for the prompt popup.
      * Defined in SearchPrompt.html
      *
      *********************************************************************************************/
+
 
     searchControllers.controller("SearchPromptController",
         ["$scope",
@@ -254,6 +282,8 @@
                 $scope.types = InputSearchTypes; // Search
 
             }]);
+
+
 
 
     /*********************************************************************************************

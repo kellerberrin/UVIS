@@ -384,7 +384,7 @@
 
         var searchMenuPopup = {
             show: false,
-            popupStyle: {width: "18em", top: "1em", left: "1em"}
+            popupStyle: { width: "14em", top: "1em", right: "1em" }
         }; // Set the menu width
 
         return {
