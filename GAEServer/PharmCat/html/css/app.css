@@ -319,7 +319,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -330,7 +330,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -793,7 +793,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -804,7 +804,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -1301,10 +1301,64 @@ body {
   padding: 1rem;
   font-size: 1em;
   color: black;
+  cursor: pointer;
 }
-/* line 550, ../scss/_k-dialog-toast.scss */
+/* line 551, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container .k-search-menu-item:hover {
   background-color: #c5cae9;
+}
+
+/*********************************************************************************************
+*
+* About dialog box.
+*
+***********************************************************************************************/
+/* line 570, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+/* line 577, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-title {
+  color: #ff4081;
+  font-weight: 700;
+  font-size: 1.8em;
+  padding-left: 1rem;
+  margin: 1em 0 0 0;
+}
+/* line 587, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-text {
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  font-size: 1em;
+  color: black;
+}
+/* line 597, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-developer {
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  font-size: 1em;
+  color: black;
+}
+/* line 607, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-contact {
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  font-size: 1em;
+  color: black;
+}
+/* line 617, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-attribution {
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  font-size: 1em;
+  color: black;
 }
 
 /****************************************************************************************************
@@ -1628,7 +1682,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -1639,7 +1693,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -2142,7 +2196,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2153,7 +2207,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;
@@ -2750,7 +2804,7 @@ body {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* line 433, ../scss/_material.scss */
+/* line 431, ../scss/_material.scss */
 .k-material-popup .k-material-popup-dismiss {
   position: absolute;
   top: -0.6em;
@@ -2761,7 +2815,7 @@ body {
   background-position: center;
   background-color: #ff80ab;
 }
-/* line 447, ../scss/_material.scss */
+/* line 445, ../scss/_material.scss */
 .k-material-popup .k-material-popup-content {
   width: 100%;
   height: 100%;

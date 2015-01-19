@@ -546,12 +546,81 @@ $K-Search-Menu-Select-Color: $K-PRIMARY-COLOR-100;
     padding: 1rem;
     font-size: 1em;
     color: $md-black-primary-text;
+    cursor: pointer;
 
     &:hover {
 
       background-color: $K-Search-Menu-Select-Color;
 
     }
+
+  }
+
+}
+
+
+/*********************************************************************************************
+*
+* About dialog box.
+*
+***********************************************************************************************/
+
+$K-About-Title-color: $K-ACCENT-COLOR-200;
+
+#k-about-dialog-content {
+
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+
+  #k-about-dialog-title {
+
+    color: $K-About-Title-color;
+    font-weight: 700;
+    font-size: 1.8em;
+    padding-left: 1rem;
+    margin: 1em 0 0 0;
+
+  }
+
+  #k-about-dialog-text {
+
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 1em;
+    font-size: 1em;
+    color: $md-black-display-text;
+
+  }
+
+  #k-about-dialog-developer {
+
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 1em;
+    font-size: 1em;
+    color: $md-black-display-text;
+
+  }
+
+  #k-about-dialog-contact {
+
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 1em;
+    font-size: 1em;
+    color: $md-black-display-text;
+
+  }
+
+  #k-about-dialog-attribution {
+
+    width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 1em;
+    font-size: 1em;
+    color: $md-black-display-text;
 
   }
 

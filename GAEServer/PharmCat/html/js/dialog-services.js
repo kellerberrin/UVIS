@@ -406,6 +406,38 @@
     });
 
 
+    /*********************************************************************************************
+     *
+     * The about dialog box.
+     * This popup is defined at the bottom of of the icon toolbar
+     *
+     *********************************************************************************************/
+
+    dialogServices.factory("AboutDialog", function () {
+
+        var aboutDialog = {
+            show: false, // Display the dialog box
+            dialogStyle: {width: "80%", "max-width": "400px" } // Set the dialog width
+        }; // Set the menu width
+
+        return {
+
+            initialize: function () {
+
+                return aboutDialog;
+
+            },
+
+            displayAboutDialog: function () {
+
+                aboutDialog.show = true;
+
+            }
+
+        }
+
+    });
+
 
 })(window, window.angular);
 

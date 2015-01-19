@@ -25,6 +25,7 @@
             "ConfirmSearchDialog",
             "SearchErrorDialog",
             "BarCodeDialog",
+            "AboutDialog",
             "SearchToast",
             function DisplayController($scope,
                                        Browser,
@@ -34,6 +35,7 @@
                                        ConfirmSearchDialog,
                                        SearchErrorDialog,
                                        BarCodeDialog,
+                                       AboutDialog,
                                        SearchToast) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
@@ -42,6 +44,7 @@
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
                 $scope.errorDialog = SearchErrorDialog; // Link the server error dialog box to this scope.
                 $scope.barCodeDialog = BarCodeDialog; // Link the barcode dialog box to this scope.
+                $scope.aboutDialog = AboutDialog; // Link the barcode dialog box to this scope.
                 $scope.searchToast = SearchToast; // Link the server error dialog box to this scope.
 
                 Browser.checkCompatibility(); // Perform Modernizr checks on browser capability.
@@ -247,15 +250,23 @@
     searchControllers.controller("SearchMenuController",
         ["$scope",
             "DrugArray",
+            "AboutDialog",
             "SearchMenuPopup",
             function SearchMenuController($scope,
                                           DrugArray,
+                                          AboutDialog,
                                           SearchMenuPopup) {
 
                 $scope.clearResults = function() {
 
                     DrugArray.setEmpty();
                     SearchMenuPopup.togglePopup(false);
+
+                };
+
+                $scope.displayAboutDialog = function() {
+
+                    AboutDialog.displayAboutDialog();
 
                 };
 
