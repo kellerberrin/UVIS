@@ -26,3 +26,7 @@ source UVIS_SPHINX
 
 source UVIS_PHARMCAT
 
+# Define the environment variables for the UVIS Authentication server (Endponts).
+
+source UVIS_AUTHENTICATE
+

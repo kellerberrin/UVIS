@@ -1,0 +1,31 @@
+#!/bin/bash
+# Define the environment variables for the
+# Authentication web application.
+# Should be run once in each terminal session
+# when working on UVIS US drug software.
+# It is run autmatically by the 'workenv UVIS' script  
+
+
+#Authenticate Server
+#The  GAE application name (defined in app.yaml)
+export UVISAUTHENTICATEAPPNAME="s~kellerberrin-authenticate"
+#The directory for the Authenticate app.yaml.
+export UVISAUTHENTICATEGAE="$UVISDIR/GAEServer/Authenticate"
+#The directory and name for the Authenticate Web Application (app name is defined in app.yaml)
+export UVISAUTHENTICATEGAEAPPPATH="$UVISAUTHENTICATEGAE/app.yaml"
+#The local URL for the Authenticate server
+export UVISAUTHENTICATELOCALHOST="localhost"
+#The local port for the Authenticate Server.
+export UVISAUTHENTICATELOCALPORT="9070"
+#The local admin port for the Authenticate Server 
+export UVISAUTHENTICATEADMINPORT="8030"
+#Local storage (logs & datastore) for the Authenticate Server
+export UVISAUTHENTICATELOCALSTORAGE="$UVISGAELOCALSTORAGE/Authenticate"
+#The remote URL for the Authenticate Server.
+export UVISAUTHENTICATEURL="http://kellerberrin-authenticate.appspot.com"
+
+
+
+
+
+

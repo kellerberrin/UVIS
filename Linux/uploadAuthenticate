@@ -1,0 +1,9 @@
+#!/bin/bash
+# The uploader batch file.
+# This uploads the local PharmCat web application to the 
+# Google Application Engine
+
+echo "UVISAUTHENTICATEGAE:" $UVISAUTHENTICATEGAE
+echo "UVISDEVEMAILACCOUNT:" $UVISDEVEMAILACCOUNT
+
+python $GOOGLEAPPBIN/appcfg.py --verbose --email=$UVISDEVEMAILACCOUNT update $UVISAUTHENTICATEGAE
