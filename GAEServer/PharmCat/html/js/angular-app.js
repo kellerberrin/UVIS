@@ -13,7 +13,8 @@
             "kDialogServices",
             "kSearchPrompt",
             "kSearchControllers",
-            "kSearchServices"
+            "kSearchServices",
+            "kAuthenticate"
         ]);
 
     /*********************************************************************************************
@@ -35,16 +36,20 @@
 
         var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
         var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
+        var captchaEndPointURL = "/_ah/api/productAuth/v1/captcha";
         var databaseLocationURL = null;
+        var authenticateURL = null;
 
         if (environment === "Production") {
 
             databaseLocationURL = "https://kellerberrin-drugdatabase.appspot.com";
+            authenticateURL = "https://kellerberrin-authenticate.appspot.com";
 
         }
         else {
 
             databaseLocationURL = "http://localhost:9080";
+            authenticateURL = "http://localhost:9070";
 
         }
 
@@ -68,6 +73,12 @@
             searchDatabaseURL: function () {
 
                 return databaseLocationURL + searchEndPointURL;
+
+            },
+
+            captchaURL: function () {
+
+                return authenticateURL + captchaEndPointURL;
 
             },
 

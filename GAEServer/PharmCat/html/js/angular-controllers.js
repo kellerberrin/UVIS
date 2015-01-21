@@ -267,6 +267,7 @@
                 $scope.displayAboutDialog = function() {
 
                     AboutDialog.displayAboutDialog();
+                    SearchMenuPopup.togglePopup(false);
 
                 };
 

@@ -1,13 +1,14 @@
 /* 
  *
  * Copyright Kellerberrin 2014.
+ * Non-Angular utility functions.
  *
  */
 
 "use strict";
 
 
-var utilityModule = (function (window, angular, undefined) {
+var utilityModule = (function (window, undefined) {
 
     /*********************************************************************************************
      *
@@ -314,4 +315,4 @@ var utilityModule = (function (window, angular, undefined) {
 
     };
 
-})(window, window.angular);
+})(window);

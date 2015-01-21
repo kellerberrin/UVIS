@@ -2,7 +2,7 @@ __author__ = "Kellerberrin"
 
 package = "ProductAuthentication"
 
-"""Product Authetication using cryptographic signatures and X509 certificates."""
+"""Product Authentication using cryptographic signatures and X509 certificates."""
 
 
 import endpoints
@@ -24,7 +24,7 @@ class CaptchaResult(messages.Message):
 
 @endpoints.api(name="productAuth", version="v1")
 class ProductAuthentication(remote.Service):
-    """Product Authetication API v1."""
+    """Product Authentication API v1."""
 
     REQUEST_CAPTCHA_RESOURCE = endpoints.ResourceContainer(
         RequestGoogleCaptcha,

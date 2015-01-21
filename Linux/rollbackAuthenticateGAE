@@ -1,7 +1,7 @@
 #!/bin/bash
-# The batch file to rollback and unsuccessful software release.
-# This rolls back the Authenticate web application
-# 
+# The uploader batch file.
+# This uploads the local PharmCat web application to the 
+# Google Application Engine
 
 echo "UVISAUTHENTICATEGAE:" $UVISAUTHENTICATEGAE
 echo "UVISDEVEMAILACCOUNT:" $UVISDEVEMAILACCOUNT
