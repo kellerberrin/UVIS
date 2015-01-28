@@ -131,7 +131,6 @@ class RawCSVClass:
         self.ELEVEN_DIGIT_NDC = StringArray[18]
         self.RXCUI = StringArray[19]
 
-
     def MergeImageData(self, CheckpointImageData):
 
 # Check that the NDCs match
@@ -147,8 +146,6 @@ class RawCSVClass:
         self.RXCUI = CheckpointImageData.RXCUI
 
         return True
-
-
 
     def WriteRawCSV(self):
 

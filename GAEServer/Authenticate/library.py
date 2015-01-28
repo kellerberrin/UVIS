@@ -11,11 +11,14 @@ from protorpc import message_types
 from protorpc import remote
 
 
+from authenticate import verifyCaptcha
+
 
 class RequestGoogleCaptcha(messages.Message):
     """Extract the drug database search arguments."""
     publickey = messages.StringField(1, required=True)
     response = messages.StringField(2, required=True)
+    ipaddress = messages.StringField(3, required=True)
 
 class CaptchaResult(messages.Message):
     """Return the json object"""
@@ -28,8 +31,9 @@ class ProductAuthentication(remote.Service):
 
     REQUEST_CAPTCHA_RESOURCE = endpoints.ResourceContainer(
         RequestGoogleCaptcha,
-        searchstring=messages.StringField(1, required=True),
-        searchtype=messages.StringField(2, required=True),
+        publickey=messages.StringField(1, required=True),
+        response=messages.StringField(2, required=True),
+        ipaddress=messages.StringField(3, required=True),
 
     )
 
@@ -39,6 +43,6 @@ class ProductAuthentication(remote.Service):
                       , http_method="POST"
                       , name="captcha")
     def captcha_implementation(self, request):
-        return CaptchaResult(resultMessage="Dummy Result")
+        return CaptchaResult(resultMessage=verifyCaptcha(request.publickey, request.response, request.ipaddress))
 
 application = endpoints.api_server([ProductAuthentication],  restricted=False)

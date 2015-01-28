@@ -20,6 +20,7 @@
         ["$scope",
             "Browser",
             "DrugArray",
+            "Authenticate",
             "ExampleSearchDialog",
             "ImageSearchDialog",
             "ConfirmSearchDialog",
@@ -30,6 +31,7 @@
             function DisplayController($scope,
                                        Browser,
                                        DrugArray,
+                                       Authenticate,
                                        ExampleSearchDialog,
                                        ImageSearchDialog,
                                        ConfirmSearchDialog,
@@ -39,6 +41,7 @@
                                        SearchToast) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
+                $scope.authenticate = Authenticate; // High level authentication functionality
                 $scope.exampleDialog = ExampleSearchDialog; // Link the example search dialog box to this scope.
                 $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
@@ -296,8 +299,6 @@
             }]);
 
 
-
-
     /*********************************************************************************************
      *
      * Search Display controller - displays results from a search and handles result searches.
@@ -310,18 +311,21 @@
         ["$scope",
             "DrugArray",
             "DrugSearch",
+            "Authenticate",
             "SearchPrompts",
             "ImageSearchDialog",
             "BarCodeDialog",
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
+                                      Authenticate,
                                       SearchPrompts,
                                       ImageSearchDialog,
                                       BarCodeDialog) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Search type service.
+                $scope.authenticate = Authenticate; // High level authentication functionality
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
 
                 $scope.barCodeDialog = function(NDC10) {

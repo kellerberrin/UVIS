@@ -2,26 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Angular Material 0.40 - Toast Notifications">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/.fuse_hidden00000ddc00000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/.fuse_hidden00000ddc00000003" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/.fuse_hidden00000fd400000001" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Linux/rollbackAuthenticateGAE " afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Linux/rollbacksphinxGAE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Linux/uploadAuthenticate" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Linux/uploadsphinxGAE" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../NDCWeb/appengine_config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Authenticate/authenticate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCDatabase.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCImageDatabase.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/NDCImageDatabase.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-display-results.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-display-results.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-menu-input.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-menu-input.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/US Drug Database.iml" afterPath="$PROJECT_DIR$/.idea/US Drug Database.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/ImageCheckpoint.csv" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/csvupload/ImageCheckpoint.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" afterPath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Authenticate/app.yaml" afterPath="$PROJECT_DIR$/../../Authenticate/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.yaml" afterPath="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/index.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Authenticate/library.py" afterPath="$PROJECT_DIR$/../../Authenticate/library.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/utility.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/utility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/rawNDCfiles.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,31 +53,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="input-services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/input-services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search-services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="6858">
+              <caret line="243" column="18" selection-start-line="243" selection-start-column="18" selection-end-line="243" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="angular-controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4479" max-vertical-offset="6606">
-              <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="6678">
+              <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarCodeDialog.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BarCodeDialog.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="846">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7" vertical-offset="114" max-vertical-offset="954">
+              <caret line="39" column="109" selection-start-line="39" selection-start-column="109" selection-end-line="39" selection-end-column="109" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
+      <file leaf-file-name="DrugHeader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="3222">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1458">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,28 +106,28 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.444445" vertical-offset="96" max-vertical-offset="2016">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.3333335" vertical-offset="432" max-vertical-offset="1872">
+              <caret line="32" column="93" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prompt-services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
+      <file leaf-file-name="angular-app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="8532" max-vertical-offset="9738">
-              <caret line="494" column="29" selection-start-line="494" selection-start-column="29" selection-end-line="494" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="3366">
+              <caret line="58" column="75" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authenticate-services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js">
+      <file leaf-file-name="_k-dialog-toast.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1818">
-              <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+            <state vertical-scroll-proportion="-2.6666667" vertical-offset="5886" max-vertical-offset="11430">
+              <caret line="331" column="0" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,40 +136,18 @@
       <file leaf-file-name="dialog-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4212" max-vertical-offset="8334">
-              <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2538" max-vertical-offset="8334">
+              <caret line="248" column="36" selection-start-line="248" selection-start-column="36" selection-end-line="248" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="angular-material.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js">
+      <file leaf-file-name="authenticate-services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64705884" vertical-offset="123" max-vertical-offset="2286">
-              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utility.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/utility.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4749" max-vertical-offset="5832">
-              <caret line="275" column="68" selection-start-line="275" selection-start-column="68" selection-end-line="275" selection-end-column="68" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutDialog.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="486">
-              <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1599" max-vertical-offset="4356">
+              <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -191,28 +195,28 @@
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/ImageDialog.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" />
         <option value="$USER_HOME$/Downloads/UVIS-master/GAEServer/PharmCat/html/bower.json" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/bower.json" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/MaterialDialogTemplate.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/search-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/ExampleDialog.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/SearchMenu.html" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_material.scss" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/utility.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/index.html" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/index.html" />
       </list>
     </option>
   </component>
@@ -220,7 +224,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="188" />
+    <option name="x" value="242" />
+    <option name="y" value="2" />
     <option name="width" value="1553" />
     <option name="height" value="1053" />
   </component>
@@ -397,6 +402,7 @@
     <property name="LayoutCode.rearrangeEntriesSCSS" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
+    <property name="JavaScriptLanguageLevel" value="JSX" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -444,6 +450,7 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
@@ -498,8 +505,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="0" width="1553" height="1053" extended-state="0" />
-    <editor active="false" />
+    <frame x="242" y="2" width="1553" height="1053" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -592,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7614" max-vertical-offset="8334">
           <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="396">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,54 +715,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialToastTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/input-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="105.0" vertical-offset="3150" max-vertical-offset="3920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchToast.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.655172" vertical-offset="0" max-vertical-offset="400">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchDialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="620">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="2780">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-top-level.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2660" max-vertical-offset="3440">
           <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/ErrorDialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="380">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -768,18 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialDialogTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.655172" vertical-offset="0" max-vertical-offset="540">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material-local.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.275862" vertical-offset="0" max-vertical-offset="660">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,23 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0689654" vertical-offset="2820" max-vertical-offset="6140">
           <caret line="144" column="10" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="2200">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/ImageDialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.551723" vertical-offset="0" max-vertical-offset="600">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,24 +750,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-95.17242" vertical-offset="740" max-vertical-offset="3920">
-          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4806" max-vertical-offset="8262">
+          <caret line="267" column="12" selection-start-line="267" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialPopupTemplate.html">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="673">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8532" max-vertical-offset="9738">
+          <caret line="494" column="29" selection-start-line="494" selection-start-column="29" selection-end-line="494" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="486">
+          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4965" max-vertical-offset="5832">
+          <caret line="296" column="1" selection-start-line="292" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2391" max-vertical-offset="3258">
+          <caret line="165" column="19" selection-start-line="165" selection-start-column="19" selection-end-line="165" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="2286">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-display-results.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9147" max-vertical-offset="10060">
-          <caret line="316" column="4" selection-start-line="316" selection-start-column="4" selection-end-line="316" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8178" max-vertical-offset="9198">
+          <caret line="493" column="27" selection-start-line="492" selection-start-column="0" selection-end-line="498" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DisplayResults.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2562" max-vertical-offset="3564">
+          <caret line="179" column="52" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.333334" vertical-offset="1062" max-vertical-offset="4086">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchToast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="360">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6666667" vertical-offset="396" max-vertical-offset="1980">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="396">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="558">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialToastTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="342">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialPopupTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/MaterialDialogTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="486">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/ImageDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="540">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -843,132 +878,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/ErrorDialog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1440">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="396">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="3924">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_material.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4806" max-vertical-offset="8262">
-          <caret line="267" column="12" selection-start-line="267" selection-start-column="0" selection-end-line="268" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9882" max-vertical-offset="11394">
-          <caret line="549" column="0" selection-start-line="549" selection-start-column="0" selection-end-line="549" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="7620">
-          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8532" max-vertical-offset="9738">
-          <caret line="494" column="29" selection-start-line="494" selection-start-column="29" selection-end-line="494" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="3222">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="486">
-          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="342">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4479" max-vertical-offset="6606">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5562" max-vertical-offset="6678">
+          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/utility.js">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4749" max-vertical-offset="5832">
-          <caret line="275" column="68" selection-start-line="275" selection-start-column="68" selection-end-line="275" selection-end-column="68" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1818">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2754" max-vertical-offset="6858">
+          <caret line="243" column="18" selection-start-line="243" selection-start-column="18" selection-end-line="243" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="846">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="3366">
+          <caret line="58" column="75" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/index.html">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.444445" vertical-offset="96" max-vertical-offset="2016">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.0" vertical-offset="0" max-vertical-offset="1458">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/dialog-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8099" max-vertical-offset="9260">
-          <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2538" max-vertical-offset="8334">
+          <caret line="248" column="36" selection-start-line="248" selection-start-column="36" selection-end-line="248" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/angular-material.js">
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64705884" vertical-offset="123" max-vertical-offset="2286">
-          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        <state vertical-scroll-proportion="-2.6666667" vertical-offset="5886" max-vertical-offset="11430">
+          <caret line="331" column="0" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/input-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3528">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335" vertical-offset="432" max-vertical-offset="1872">
+          <caret line="32" column="93" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1599" max-vertical-offset="4356">
+          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7" vertical-offset="114" max-vertical-offset="954">
+          <caret line="39" column="109" selection-start-line="39" selection-start-column="109" selection-end-line="39" selection-end-column="109" />
           <folding />
         </state>
       </provider>

@@ -42,7 +42,9 @@
 
         if (environment === "Production") {
 
+// Select which production database to use: 'drugdatabase' or 'drugdatabase2'.
             databaseLocationURL = "https://kellerberrin-drugdatabase.appspot.com";
+//            databaseLocationURL = "https://kellerberrin-drugdatabase2.appspot.com";
             authenticateURL = "https://kellerberrin-authenticate.appspot.com";
 
         }
@@ -54,7 +56,7 @@
         }
 
         var showAuthentication = false; // Enable authentication functionality
-        var recaptchaSecretKey = "6LcEZQATAAAAAN7iDxjleVtnEtXyFvptf0fG9_Wx";  // Modify and Remove after testing
+        var recaptchaPublicKey = "6LcEZQATAAAAAM3csszGhzvXpShpq2Dwgz6QtVKW";  // Obtained from Google
         var promptCacheSize = 100;   // Prompt Cache
         var promptMaxResults = 10;   // Prompt Read Size
         var searchCacheSize = 100;   // Drug Search Cache
@@ -119,6 +121,12 @@
             showAuthentication : function () {
 
                 return showAuthentication;
+
+            },
+
+            recaptchaPublicKey : function() {
+
+                return recaptchaPublicKey;
 
             }
 

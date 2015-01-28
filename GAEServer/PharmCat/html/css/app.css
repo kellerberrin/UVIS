@@ -1062,9 +1062,9 @@ body {
 /* line 321, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-captcha {
   margin: 2rem 0 2rem 0;
-  padding: 0 2rem 0 2rem;
+  padding: 0 1rem 0 0;
 }
-/* line 328, ../scss/_k-dialog-toast.scss */
+/* line 329, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar {
   display: -webkit-inline-flex;
   display: inline-flex;
@@ -1072,12 +1072,12 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 335, ../scss/_k-dialog-toast.scss */
+/* line 337, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate-text {
   margin: 0 1em 0 1em;
   padding: 0;
 }
-/* line 342, ../scss/_k-dialog-toast.scss */
+/* line 344, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate {
   position: absolute;
   top: -0.7em;
@@ -1094,7 +1094,7 @@ body {
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 368, ../scss/_k-dialog-toast.scss */
+/* line 370, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -1102,7 +1102,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 378, ../scss/_k-dialog-toast.scss */
+/* line 380, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1110,7 +1110,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 388, ../scss/_k-dialog-toast.scss */
+/* line 390, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1118,7 +1118,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 398, ../scss/_k-dialog-toast.scss */
+/* line 400, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1212,7 +1212,7 @@ body {
     opacity: 0;
   }
 }
-/* line 456, ../scss/_k-dialog-toast.scss */
+/* line 458, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1228,7 +1228,7 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 472, ../scss/_k-dialog-toast.scss */
+/* line 474, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
   /* The .hg-hide class is added to element
      when the active class is added causing it to appear
@@ -1236,19 +1236,19 @@ body {
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 480, ../scss/_k-dialog-toast.scss */
+/* line 482, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 486, ../scss/_k-dialog-toast.scss */
+/* line 488, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 492, ../scss/_k-dialog-toast.scss */
+/* line 494, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1264,14 +1264,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 501, ../scss/_k-dialog-toast.scss */
+/* line 503, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 512, ../scss/_k-dialog-toast.scss */
+/* line 514, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;
@@ -1288,13 +1288,13 @@ body {
 * The Search Menu
 *
 ***********************************************************************************************/
-/* line 536, ../scss/_k-dialog-toast.scss */
+/* line 538, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container {
   width: 100%;
   height: 100%;
   padding: 10px;
 }
-/* line 542, ../scss/_k-dialog-toast.scss */
+/* line 544, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container .k-search-menu-item {
   width: 100%;
   margin: 0;
@@ -1303,7 +1303,7 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 551, ../scss/_k-dialog-toast.scss */
+/* line 553, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container .k-search-menu-item:hover {
   background-color: #c5cae9;
 }
@@ -1313,14 +1313,14 @@ body {
 * About dialog box.
 *
 ***********************************************************************************************/
-/* line 570, ../scss/_k-dialog-toast.scss */
+/* line 572, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content {
   height: 100%;
   width: 100%;
   padding: 10px;
   margin: 0;
 }
-/* line 577, ../scss/_k-dialog-toast.scss */
+/* line 579, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-title {
   color: #ff4081;
   font-weight: 700;
@@ -1328,7 +1328,7 @@ body {
   padding-left: 1rem;
   margin: 1em 0 0 0;
 }
-/* line 587, ../scss/_k-dialog-toast.scss */
+/* line 589, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-text {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1336,7 +1336,7 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 597, ../scss/_k-dialog-toast.scss */
+/* line 599, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-developer {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1344,7 +1344,7 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 607, ../scss/_k-dialog-toast.scss */
+/* line 609, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-contact {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1352,7 +1352,7 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 617, ../scss/_k-dialog-toast.scss */
+/* line 619, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-attribution {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1759,6 +1759,7 @@ body {
 }
 /* line 73, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button {
+  display: none;
   height: 30px;
   width: 30px;
   margin: 5px 10px 5px 10px;
@@ -1769,6 +1770,10 @@ body {
   background-color: #689f38;
 }
 /* line 86, ../scss/_k-menu-input.scss */
+#k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button.authready {
+  display: block;
+}
+/* line 95, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-search-button {
   height: 30px;
   width: 30px;
@@ -1779,7 +1784,7 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 101, ../scss/_k-menu-input.scss */
+/* line 110, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1790,7 +1795,7 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 110, ../scss/_k-menu-input.scss */
+/* line 119, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1800,14 +1805,14 @@ body {
   width: 100%;
   height: 2em;
 }
-/* line 118, ../scss/_k-menu-input.scss */
+/* line 127, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-title {
   font-size: inherit;
   height: 1.5em;
   text-align: left;
   margin: 0.5em 0 0 0.75em;
 }
-/* line 127, ../scss/_k-menu-input.scss */
+/* line 136, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1820,11 +1825,11 @@ body {
   border: solid 2px #1a237e;
   cursor: pointer;
 }
-/* line 138, ../scss/_k-menu-input.scss */
+/* line 147, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:focus, #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:hover {
   border-color: #ff80ab;
 }
-/* line 148, ../scss/_k-menu-input.scss */
+/* line 157, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1836,7 +1841,7 @@ body {
   height: 2em;
   padding: 0;
 }
-/* line 160, ../scss/_k-menu-input.scss */
+/* line 169, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1850,11 +1855,11 @@ body {
   border: solid 2px #1a237e;
   background-color: #03a9f4;
 }
-/* line 172, ../scss/_k-menu-input.scss */
+/* line 181, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:focus, #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:hover {
   border-color: #ff80ab;
 }
-/* line 180, ../scss/_k-menu-input.scss */
+/* line 189, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search {
   position: absolute;
   font-size: inherit;
@@ -1866,11 +1871,11 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 192, ../scss/_k-menu-input.scss */
+/* line 201, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search.searchActive {
   background-color: #ff80ab;
 }
-/* line 205, ../scss/_k-menu-input.scss */
+/* line 214, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-prompt-anchor {
   position: relative;
 }
@@ -3220,6 +3225,7 @@ body {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  display: none;
   position: absolute;
   top: -1em;
   right: -0.75em;
@@ -3230,7 +3236,11 @@ body {
   background-position: center;
   background-color: #689f38;
 }
-/* line 486, ../scss/_k-display-results.scss */
+/* line 487, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-ndc-container .k-display-ndc-verify:hover {
   opacity: 1.0;
+}
+/* line 493, ../scss/_k-display-results.scss */
+.k-display-drug .k-display-ndc-container .k-display-ndc-verify.authready {
+  display: block;
 }

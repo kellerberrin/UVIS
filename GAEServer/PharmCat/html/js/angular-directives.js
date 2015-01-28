@@ -130,4 +130,46 @@ var searchDirectives = angular.module( "kSearchDirectives", []);
     });
 
 
+
+    /****************************************************************************
+     *
+     * Create a dynamic captcha element.
+     *
+     ****************************************************************************/
+
+
+    searchDirectives.directive("kCaptcha", function($compile) {
+
+        return {
+
+            restrict: "A",
+
+            link: function(scope, element, attrs) {
+
+
+// Called when the image value changes.
+                attrs.$observe('kCaptcha', function(val) {
+
+// Remove any pre-existing child (captcha) elements.
+                    $(element).children().remove( );
+
+// Create the new element
+                    var html = "<div id='k-barcode-captcha'></div>";
+                    var linkingFunction = $compile(html);
+                    var imageElem = linkingFunction(scope);
+
+// Add the captcha div element.
+                    $(element).append(imageElem);
+// Convert to a captcha
+                    authenticate.k_renderCaptcha("k-barcode-captcha");
+
+                });
+
+
+            }
+        };
+    });
+
+
+
 })(window, window.angular);

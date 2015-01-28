@@ -16,7 +16,6 @@ import CSVrecords  # Local record definitions.
 ###########################################################################################################
 
 
-
 def SetupLogging():
     """Set up Python logging to console and log file"""
 
@@ -32,11 +31,12 @@ Logger = SetupLogging()
 
 # Read all the records in an FDA RAW package file.
 
+
 def ReadAllPackageRecords():
     """Reads all the NDC Package.txt records (lines) into an array of strings."""
 
     PackageFileName = os.getenv("UVISUSDRUGRAWDATAPACKAGE")
-    if PackageFileName == None:
+    if PackageFileName is None:
 
         Logger.error("Environment variable 'UVISUSDRUGRAWDATAPACKAGE' must be defined")
         sys.exit()    # Terminate with extreme prejudice        
@@ -151,7 +151,7 @@ def ProcessRawNDCFiles() :
 # Open the csv output file.
 
     CSVFileName = os.getenv("UVISUSDRUGDATAFILE")
-    if CSVFileName == None :
+    if CSVFileName is None:
 
         Logger.error("Environment variable 'UVISUSDRUGDATAFILE' must be defined")
         sys.exit()    # Terminate with extreme prejudice        
@@ -183,7 +183,7 @@ def ProcessRawNDCFiles() :
     for Package in PackageList:
         Product = ProductDict.get(Package.PRODUCTNDC)
 # Check that we found something and write a line.
-        if Product == None :
+        if Product is None:
             Logger.error("Package NDC: %s , Could not find Product Code: %s", Package.NDCPACKAGECODE, Package.PRODUCTNDC)
         else:
             if WriteCSVLine(CSVFile, Product, Package):

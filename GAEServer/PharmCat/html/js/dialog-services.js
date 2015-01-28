@@ -246,7 +246,7 @@
 
         var barCodeDialog = {
             show: false, // Display the dialog box
-            dialogStyle: {width: "80%", "max-width": "400px"}, // Set the dialog width
+            dialogStyle: {width: "90%", "max-width": "400px"}, // Set the dialog width
             NDC14 : ""
         };
 

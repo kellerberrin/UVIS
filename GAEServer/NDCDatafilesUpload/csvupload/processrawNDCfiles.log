@@ -1,0 +1,7 @@
+2015-01-22 03:19:14,759 - ERROR - rawNDCfiles - Package NDC: 36800-480-62 , Could not find Product Code: 36800-480
+2015-01-22 03:19:15,806 - ERROR - rawNDCfiles - Package NDC: 63868-595-28 , Could not find Product Code: 63868-595
+2015-01-22 03:19:16,066 - INFO - rawNDCfiles - Package Record Count: 167150
+2015-01-22 03:19:16,066 - INFO - rawNDCfiles - Product Record Count: 88231
+2015-01-22 03:19:16,066 - INFO - rawNDCfiles - Package Class Count: 167150
+2015-01-22 03:19:16,067 - INFO - rawNDCfiles - Product Dictionary Count: 86592
+2015-01-22 03:19:16,067 - INFO - rawNDCfiles - CSV Record Count: 103802

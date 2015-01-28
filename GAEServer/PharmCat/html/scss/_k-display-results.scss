@@ -473,6 +473,7 @@ $K-Verify-Button-color: $md-light-green-700;
     .k-display-ndc-verify {
 
       @include transition(all 0.25s ease-in-out);
+      display: none;
       position: absolute;
       top: -1em;
       right: -0.75em;
@@ -486,6 +487,13 @@ $K-Verify-Button-color: $md-light-green-700;
       &:hover {
 
         opacity: 1.0;
+
+      }
+
+      &.authready {
+        // Important! this class is set when the authentication functionality is ready
+
+        display: block;
 
       }
 

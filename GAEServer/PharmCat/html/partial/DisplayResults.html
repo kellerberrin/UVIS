@@ -175,7 +175,9 @@
 
                 </div>
 
-                <div ng-click="barCodeDialog(drugRecord.ndc)" class="k-display-ndc-verify k-material-fab"></div>
+                <div ng-click="barCodeDialog(drugRecord.ndc)"
+                     class="k-display-ndc-verify k-material-fab"
+                     ng-class="{ authready : authenticate.authReady() }"></div>
 
             </div>
 

@@ -30,16 +30,8 @@
     <!-- Non Angular App specific logic -->
     <script src="/js/utility.js"></script>
     <!-- Google recaptcha functionality -->
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
-    <script type="text/javascript">
-        var onloadCallback = function() {
-            utilityModule.k_consoleLog("grecaptcha is ready!");
-            grecaptcha.render('k-barcode-captcha', {
-                'sitekey' : '6LcEZQATAAAAAM3csszGhzvXpShpq2Dwgz6QtVKW'
-            });
-            alert("grecaptcha is ready!");
-        };
-    </script>
+    <script> var onloadCallback =  function() { globalAuthenticate.k_loadCaptcha("k-barcode-captcha"); }</script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </head>
 <!-- [END head_html] -->
 <!-- [BEGIN body html]-->

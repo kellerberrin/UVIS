@@ -320,10 +320,11 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
   #k-barcode-captcha {
 
-    margin: 2rem 0 2rem 0;
-    padding: 0 2rem 0 2rem;
+      margin: 2rem 0 2rem 0;
+      padding: 0 1rem 0 0;
 
   }
+
 
   #k-barcode-authenticate-bar {
 
@@ -331,6 +332,7 @@ $K-Authenticate-Button-color: $md-light-green-700;
     position: relative;
     margin: 0;
     padding: 0;
+
 
     #k-barcode-authenticate-text {
 

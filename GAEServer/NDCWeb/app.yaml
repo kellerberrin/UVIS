@@ -1,4 +1,13 @@
-application: s~kellerberrin-drugdatabase
+# There are 2 drug database GAE applications served by this software.
+# Uncomment the application that is being uploaded from development.
+# This can be used to switch/update/upgrade the drug database with minimal
+# PharmCat user impact. Note that the database URL must also be modified.
+# Either directly in the Javascript code or by modifying a CNAME url entry.
+
+#application: s~kellerberrin-drugdatabase
+
+application: s~kellerberrin-drugdatabase2
+
 version: 1
 runtime: python27
 api_version: 1
