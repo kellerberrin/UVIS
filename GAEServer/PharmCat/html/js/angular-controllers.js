@@ -41,7 +41,7 @@
                                        SearchToast) {
 
                 $scope.results = DrugArray;  // Injected array of drugs.
-                $scope.authenticate = Authenticate; // High level authentication functionality
+                $scope.authenticate = Authenticate; // The authentication state object
                 $scope.exampleDialog = ExampleSearchDialog; // Link the example search dialog box to this scope.
                 $scope.imageDialog = ImageSearchDialog; // Link the image dialog box to this scope.
                 $scope.searchDialog = ConfirmSearchDialog; // Set the image dialog box.
@@ -80,6 +80,7 @@
         ["$scope",
             "DrugArray",
             "DrugSearch",
+            "Authenticate",
             "ExampleSearchDialog",
             "SearchPrompts",
             "SearchPromptPopup",
@@ -91,6 +92,7 @@
             function SearchController($scope,
                                       DrugArray,
                                       DrugSearch,
+                                      Authenticate,
                                       ExampleSearchDialog,
                                       SearchPrompts,
                                       SearchPromptPopup,
@@ -110,8 +112,7 @@
 
                 $scope.barCodeDialog = function() {
 
-                    BarCodeDialog.SetNDC14("");
-                    BarCodeDialog.displayBarCodeDialog();
+                    BarCodeDialog.displayBarCodeDialog("");  // Empty barcode displayed.
 
                 };
 
@@ -244,6 +245,32 @@
 
     /*********************************************************************************************
      *
+     * The Controller for the drug authentication dialog.
+     *
+     *********************************************************************************************/
+
+
+    searchControllers.controller("AuthenticateController",
+            ["$scope",
+             "Authenticate",
+             "VerifyAction",
+             function AuthenticateController ($scope,
+                                              Authenticate,
+                                              VerifyAction) {
+
+                $scope.authenticate = Authenticate; // High level authentication functionality and state model
+                $scope.verifyAction = VerifyAction; // Perform verification (end points)
+
+                $scope.verifySerialCode = function() {
+
+                    VerifyAction.captchaSessionVerify();
+
+                };
+
+            }]);
+
+    /*********************************************************************************************
+     *
      * The Search Menu Controller for the search menu.
      * Defined in SearchMenu.html
      *
@@ -330,8 +357,9 @@
 
                 $scope.barCodeDialog = function(NDC10) {
 
-                    BarCodeDialog.SetNDC14(utilityModule.k_NDC10toNDC14Format(NDC10));
-                    BarCodeDialog.displayBarCodeDialog();
+                    // Convert to GTIN (NDC14) format
+                    var barCode = utilityModule.k_NDC10toNDC14Format(NDC10);
+                    BarCodeDialog.displayBarCodeDialog(NDC10);
 
                 };
 

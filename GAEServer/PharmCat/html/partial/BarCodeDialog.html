@@ -1,16 +1,16 @@
 <k-material-dialog id="k-barcode-dialog" displaydialog="barCodeDialog.initialize()">
 
-    <div id="k-barcode-dialog-content">
+    <div id="k-barcode-dialog-content" ng-controller="AuthenticateController">
 
         <div id="k-barcode-dialog-Title">Verify Serial Code</div>
 
-        <div id="k-barcode-dialog-GTIN">14 Digit NDC (Bar Code Number)</div>
+        <div id="k-barcode-dialog-GTIN">Bar Code <strong>or</strong> NDC(10)</div>
 
         <input id="k-barcode-GTIN-input"
                type="text"
                autocomplete="no"
                class="k-input-text"
-               ng-model="barCodeDialog.barCodeDialog.NDC14"
+               ng-model="barCodeDialog.initialize().barCode"
                aria-label="GTIN Text Input">
         </input>
 
@@ -20,8 +20,17 @@
                type="text"
                autocomplete="no"
                class="k-input-text"
+               ng-model="barCodeDialog.initialize().serialCode"
                aria-label="AuthCode Text Input">
         </input>
+
+        <div id="k-barcode-authenticate-result" ng-show="authenticate.verification()">
+
+            <div id="k-barcode-authenticate-result-title">Code Cannot Be Verified</div>
+
+            <div id="k-barcode-authenticate-result-text">Distributor serial code database not available.</div>
+
+        </div>
 
         <div id="k-barcode-captcha"></div>
 
@@ -29,15 +38,7 @@
 
             <div id="k-barcode-authenticate-text">Verify</div>
 
-            <div id="k-barcode-authenticate" class="k-material-fab"></div>
-
-        </div>
-
-        <div id="k-barcode-authenticate-result">
-
-            <div id="k-barcode-authenticate-result-icon">?Cannot Be Verified?</div>
-
-            <div id="k-barcode-authenticate-result-text">Authentication database not available or registered.</div>
+            <div id="k-barcode-authenticate" class="k-material-fab" ng-click="verifySerialCode()"></div>
 
         </div>
 

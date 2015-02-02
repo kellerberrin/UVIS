@@ -277,7 +277,7 @@ var utilityModule = (function (window, undefined) {
 
     var k_NDC10toNDC14Format = function (NDC10Code) {
 
-        var FormattedNDC14 = "003"+ k_NDC14FormatCheckDigit(NDC10Code) + "-" + NDC10Code;
+        var FormattedNDC14 = "0-03" + NDC10Code + "-" + k_NDC14FormatCheckDigit(NDC10Code);
 
         return FormattedNDC14;
 

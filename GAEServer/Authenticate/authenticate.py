@@ -8,15 +8,8 @@ import os
 import logging
 import json
 
-from Crypto.Hash import SHA256
-from Crypto.PublicKey import RSA
-from Crypto import Random
-
-
 import sys
-#sys.path.append("libs")
 sys.path.insert(0, "libs")
-#sys.path.insert(0, os.path.join(os.path.dirname(__file__), "libs"))
 import requests
 
 
@@ -30,31 +23,19 @@ def verifyCaptcha(publickey, response, ipaddress):
     request = requests.get(recaptchaVerifyURL, params=verifyParams)
 
     if request.status_code != requests.codes.ok:
-        commError = {"success": False, "error-codes": "Request Communication Error", "session-key": ""}
-        return json.dumps(commError)
 
-    verifyData = request.json()
+        result = {"success": False, "error-codes": "Request Communication Error"}
 
-    responseSignature = generateResponseSignature(response)
+    else:
 
-    verifyData.update({"session-key": str(responseSignature[0])})
+        logging.info("Request headers %s, text %s", request.headers['content-type'], request.text)
 
-    return json.dumps(verifyData)
+        result = request.json()
 
-
-def generateResponseSignature(response):
-
-    randomGenerator = Random.new().read
-    keyRSA = RSA.generate(1024, randomGenerator)
-    hashSHA256 = SHA256.new(response).digest()
-    signatureRSA = keyRSA.sign(hashSHA256, '')
-
-    return signatureRSA
+    return result
 
 
-def verifyResponseSignature(response, signature, key):
+def verifySerialCode(publickey, response, barcode, serialcode, ipaddress):
 
-    hashSHA256 = SHA256.new(reponse).digest()
-    verified = key.verify(hashSHA256, signature)
+    return json.dumps(verifyCaptcha(publickey, response, ipaddress))
 
-    return verified

@@ -163,7 +163,8 @@
 
         var searchErrorDialog = {
             show: false, // Display the dialog box
-            dialogStyle: {width: "80%", "max-width": "400px"}
+            dialogStyle: {width: "80%", "max-width": "400px", "z-index": "100000"}
+
         }; // Set the dialog width
 
         var generalAction = "Action. Ensure that you are using a modern browser (Windows - Internet Explorer version 10 or higher)." +
@@ -247,7 +248,8 @@
         var barCodeDialog = {
             show: false, // Display the dialog box
             dialogStyle: {width: "90%", "max-width": "400px"}, // Set the dialog width
-            NDC14 : ""
+            barCode: "",
+            serialCode: ""
         };
 
         return {
@@ -258,21 +260,10 @@
 
             },
 
-            displayBarCodeDialog: function () {
+            displayBarCodeDialog: function (barCode) {
 
                 barCodeDialog.show = true;
-
-            },
-
-            GetNDC14 : function() {
-
-                return barCodeDialog.NDC14;
-
-            },
-
-            SetNDC14 : function(NDC14) {
-
-                barCodeDialog.NDC14 = NDC14;
+                barCodeDialog.barCode = barCode;
 
             }
 

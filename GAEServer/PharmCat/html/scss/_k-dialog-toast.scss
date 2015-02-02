@@ -275,7 +275,7 @@ $K-Authenticate-Button-color: $md-light-green-700;
     font-size: 1.3em;
     height: 1.5em;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 0.5rem;
     color: $K-GTIN-Input-Text-Color;
     border: solid 2px $K-GTIN-Input-Border-Color;
     background-color: $K-GTIN-Input-Background-Color;
@@ -305,7 +305,7 @@ $K-Authenticate-Button-color: $md-light-green-700;
     font-size: 1.3em;
     height: 1.5em;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 0.5rem;
     color: $K-AuthCode-Input-Text-Color;
     border: solid 2px $K-AuthCode-Input-Border-Color;
     background-color: $K-AuthCode-Input-Background-Color;
@@ -318,19 +318,45 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
   }
 
-  #k-barcode-captcha {
 
-      margin: 2rem 0 2rem 0;
-      padding: 0 1rem 0 0;
+  #k-barcode-authenticate-result {
+
+    width: 100%;
+    margin: 1rem 0 1rem 0;
+    background-color: lightyellow;
+    @include K-MaterialInsetBoxShadow(2);
+
+    #k-barcode-authenticate-result-title {
+
+      padding: 1rem 1rem 0 1rem;
+      font-size: 1.2rem;
+      color: $md-black-display-text;
+
+    }
+
+    #k-barcode-authenticate-result-text {
+
+      padding: 1rem 1rem 1rem 1rem;
+      font-size: 1rem;
+      color: $md-black-display-text;
+
+    }
 
   }
 
+
+  #k-barcode-captcha {
+
+    margin: 1rem 0 1rem 0;
+    padding: 0 1rem 0 0;
+
+  }
 
   #k-barcode-authenticate-bar {
 
     @include display-flex(inline-flex);
     position: relative;
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 0;
 
 

@@ -202,6 +202,32 @@ body {
 
 /****************************************************************************************************
 *
+* Inset shadows.
+*
+*****************************************************************************************************/
+
+@mixin K-MaterialInsetBoxShadow($K-Zlevel: 1) {
+
+  @if $K-Zlevel == 1 {
+    @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.12) inset, 0 1px 2px rgba(0, 0, 0, 0.24) inset);
+
+  } @else if $K-Zlevel == 2 {
+    @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16) inset, 0 3px 6px rgba(0, 0, 0, 0.23) inset);
+
+  } @else if $K-Zlevel == 3 {
+    @include box-shadow(0 10px 20px rgba(0, 0, 0, 0.19) inset, 0 6px 6px rgba(0, 0, 0, 0.23) inset);
+
+  } @else if $K-Zlevel == 4 {
+    @include box-shadow(0 14px 28px rgba(0, 0, 0, 0.25) inset, 0 10px 10px rgba(0, 0, 0, 0.22) inset);
+  } @else if $K-Zlevel == 5 {
+    @include box-shadow(0 19px 38px rgba(0, 0, 0, 0.30) inset, 0 15px 12px rgba(0, 0, 0, 0.22) inset);
+  }
+}
+
+
+
+/****************************************************************************************************
+*
 * The fab class for material buttons.
 *
 *****************************************************************************************************/

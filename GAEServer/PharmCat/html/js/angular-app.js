@@ -36,7 +36,7 @@
 
         var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
         var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
-        var captchaEndPointURL = "/_ah/api/productAuth/v1/captcha";
+        var captchaEndPointURL = "/_ah/api/productAuth/v1/verifySerial";
         var databaseLocationURL = null;
         var authenticateURL = null;
 
@@ -55,7 +55,6 @@
 
         }
 
-        var showAuthentication = false; // Enable authentication functionality
         var recaptchaPublicKey = "6LcEZQATAAAAAM3csszGhzvXpShpq2Dwgz6QtVKW";  // Obtained from Google
         var promptCacheSize = 100;   // Prompt Cache
         var promptMaxResults = 10;   // Prompt Read Size
@@ -115,12 +114,6 @@
             displayHistoryPromptCount : function () {
 
                 return displayHistoryPromptCount;
-
-            },
-
-            showAuthentication : function () {
-
-                return showAuthentication;
 
             },
 
