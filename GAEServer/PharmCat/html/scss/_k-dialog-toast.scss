@@ -324,6 +324,7 @@ $K-Authenticate-Button-color: $md-light-green-700;
     width: 100%;
     margin: 1rem 0 1rem 0;
     background-color: lightyellow;
+    @include border-radius(4px);
     @include K-MaterialInsetBoxShadow(2);
 
     #k-barcode-authenticate-result-title {
@@ -347,10 +348,20 @@ $K-Authenticate-Button-color: $md-light-green-700;
 
   #k-barcode-captcha {
 
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
     padding: 0 1rem 0 0;
 
   }
+
+  #k-barcode-captcha-label {
+
+    margin: 0 0 1rem 0;
+    padding: 0 1rem 0 0;
+    font-size: 0.8rem;
+    color: $md-black-display-text;
+
+  }
+
 
   #k-barcode-authenticate-bar {
 
@@ -647,7 +658,7 @@ $K-About-Title-color: $K-ACCENT-COLOR-200;
     width: 100%;
     margin: 1em 0 0 0;
     padding-left: 1em;
-    font-size: 1em;
+    font-size: 0.8em;
     color: $md-black-display-text;
 
   }

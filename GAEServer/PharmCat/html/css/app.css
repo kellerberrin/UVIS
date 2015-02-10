@@ -1074,28 +1074,38 @@ body {
   width: 100%;
   margin: 1rem 0 1rem 0;
   background-color: lightyellow;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) inset, 0 3px 6px rgba(0, 0, 0, 0.23) inset;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) inset, 0 3px 6px rgba(0, 0, 0, 0.23) inset;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) inset, 0 3px 6px rgba(0, 0, 0, 0.23) inset;
 }
-/* line 329, ../scss/_k-dialog-toast.scss */
+/* line 330, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-result #k-barcode-authenticate-result-title {
   padding: 1rem 1rem 0 1rem;
   font-size: 1.2rem;
   color: black;
 }
-/* line 337, ../scss/_k-dialog-toast.scss */
+/* line 338, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-result #k-barcode-authenticate-result-text {
   padding: 1rem 1rem 1rem 1rem;
   font-size: 1rem;
   color: black;
 }
-/* line 348, ../scss/_k-dialog-toast.scss */
+/* line 349, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-captcha {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0 0;
   padding: 0 1rem 0 0;
 }
-/* line 355, ../scss/_k-dialog-toast.scss */
+/* line 356, ../scss/_k-dialog-toast.scss */
+#k-barcode-dialog-content #k-barcode-captcha-label {
+  margin: 0 0 1rem 0;
+  padding: 0 1rem 0 0;
+  font-size: 0.8rem;
+  color: black;
+}
+/* line 366, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar {
   display: -webkit-inline-flex;
   display: inline-flex;
@@ -1103,12 +1113,12 @@ body {
   margin: 1rem 0 0 0;
   padding: 0;
 }
-/* line 363, ../scss/_k-dialog-toast.scss */
+/* line 374, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate-text {
   margin: 0 1em 0 1em;
   padding: 0;
 }
-/* line 370, ../scss/_k-dialog-toast.scss */
+/* line 381, ../scss/_k-dialog-toast.scss */
 #k-barcode-dialog-content #k-barcode-authenticate-bar #k-barcode-authenticate {
   position: absolute;
   top: -0.7em;
@@ -1125,7 +1135,7 @@ body {
 * Modal Error Dialog
 *
 ***********************************************************************************************/
-/* line 396, ../scss/_k-dialog-toast.scss */
+/* line 407, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-heading {
   width: 100%;
   padding: 0 2rem 0 2rem;
@@ -1133,7 +1143,7 @@ body {
   margin: 2rem 0 2rem 0;
   color: black;
 }
-/* line 406, ../scss/_k-dialog-toast.scss */
+/* line 417, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-status {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1141,7 +1151,7 @@ body {
   margin: 2rem 0 1rem 0;
   color: black;
 }
-/* line 416, ../scss/_k-dialog-toast.scss */
+/* line 427, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-text {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1149,7 +1159,7 @@ body {
   margin: 0 0 1rem 0;
   color: black;
 }
-/* line 426, ../scss/_k-dialog-toast.scss */
+/* line 437, ../scss/_k-dialog-toast.scss */
 #k-error-dialog-content #k-error-dialog-action {
   width: 100%;
   padding: 0 2rem 0 1.5rem;
@@ -1243,7 +1253,7 @@ body {
     opacity: 0;
   }
 }
-/* line 484, ../scss/_k-dialog-toast.scss */
+/* line 495, ../scss/_k-dialog-toast.scss */
 #k-search-toast {
   /* A centered div above the overlay with a box shadow. */
   -moz-transform: translate(-50%, 0%);
@@ -1259,7 +1269,7 @@ body {
   height: 60px;
   opacity: 1;
 }
-/* line 500, ../scss/_k-dialog-toast.scss */
+/* line 511, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove, #k-search-toast.ng-hide-add {
   /* The .hg-hide class is added to element
      when the active class is added causing it to appear
@@ -1267,19 +1277,19 @@ body {
      so that the hide animation is visible */
   display: block !important;
 }
-/* line 508, ../scss/_k-dialog-toast.scss */
+/* line 519, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-add {
   -moz-animation: toast-slide-out 0.5s ease-in-out;
   -webkit-animation: toast-slide-out 0.5s ease-in-out;
   animation: toast-slide-out 0.5s ease-in-out;
 }
-/* line 514, ../scss/_k-dialog-toast.scss */
+/* line 525, ../scss/_k-dialog-toast.scss */
 #k-search-toast.ng-hide-remove {
   -moz-animation: toast-slide-in 0.5s ease-in-out;
   -webkit-animation: toast-slide-in 0.5s ease-in-out;
   animation: toast-slide-in 0.5s ease-in-out;
 }
-/* line 520, ../scss/_k-dialog-toast.scss */
+/* line 531, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content {
   /* Throw a shadow */
   -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -1295,14 +1305,14 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 529, ../scss/_k-dialog-toast.scss */
+/* line 540, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-content #k-search-toast-message {
   width: 100%;
   padding: 1.5em 1em 1em 2em;
   font-size: 1em;
   color: white;
 }
-/* line 540, ../scss/_k-dialog-toast.scss */
+/* line 551, ../scss/_k-dialog-toast.scss */
 #k-search-toast #k-search-toast-dismiss {
   position: absolute;
   top: 0;
@@ -1319,13 +1329,13 @@ body {
 * The Search Menu
 *
 ***********************************************************************************************/
-/* line 564, ../scss/_k-dialog-toast.scss */
+/* line 575, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container {
   width: 100%;
   height: 100%;
   padding: 10px;
 }
-/* line 570, ../scss/_k-dialog-toast.scss */
+/* line 581, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container .k-search-menu-item {
   width: 100%;
   margin: 0;
@@ -1334,7 +1344,7 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 579, ../scss/_k-dialog-toast.scss */
+/* line 590, ../scss/_k-dialog-toast.scss */
 #k-search-menu-container .k-search-menu-item:hover {
   background-color: #c5cae9;
 }
@@ -1344,14 +1354,14 @@ body {
 * About dialog box.
 *
 ***********************************************************************************************/
-/* line 598, ../scss/_k-dialog-toast.scss */
+/* line 609, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content {
   height: 100%;
   width: 100%;
   padding: 10px;
   margin: 0;
 }
-/* line 605, ../scss/_k-dialog-toast.scss */
+/* line 616, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-title {
   color: #ff4081;
   font-weight: 700;
@@ -1359,7 +1369,7 @@ body {
   padding-left: 1rem;
   margin: 1em 0 0 0;
 }
-/* line 615, ../scss/_k-dialog-toast.scss */
+/* line 626, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-text {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1367,7 +1377,7 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 625, ../scss/_k-dialog-toast.scss */
+/* line 636, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-developer {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1375,7 +1385,7 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 635, ../scss/_k-dialog-toast.scss */
+/* line 646, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-contact {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1383,12 +1393,12 @@ body {
   font-size: 1em;
   color: black;
 }
-/* line 645, ../scss/_k-dialog-toast.scss */
+/* line 656, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-attribution {
   width: 100%;
   margin: 1em 0 0 0;
   padding-left: 1em;
-  font-size: 1em;
+  font-size: 0.8em;
   color: black;
 }
 
@@ -1760,7 +1770,7 @@ body {
 * Menu Bar, search ahead and history
 *
 ******************************************************************************************************************/
-/* line 44, ../scss/_k-menu-input.scss */
+/* line 45, ../scss/_k-menu-input.scss */
 #k-drug-toolbar {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -1771,7 +1781,7 @@ body {
   color: white;
   background-color: #3f51b5;
 }
-/* line 53, ../scss/_k-menu-input.scss */
+/* line 54, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools {
   display: -webkit-flex;
   display: flex;
@@ -1784,16 +1794,22 @@ body {
   width: 100%;
   background-color: #1a237e;
 }
-/* line 63, ../scss/_k-menu-input.scss */
+/* line 64, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-toolbar-title {
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
   color: #ff80ab;
   font-weight: 700;
   font-size: 1.8em;
   margin: auto 15px;
 }
 /* line 73, ../scss/_k-menu-input.scss */
+#k-drug-toolbar #k-icon-toolbar-tools #k-icon-toolbar-subtitle {
+  -webkit-flex-grow: 2;
+  flex-grow: 2;
+  color: #03a9f4;
+  font-size: 1em;
+  margin: auto 15px;
+}
+/* line 82, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button {
   display: none;
   height: 30px;
@@ -1805,11 +1821,11 @@ body {
   background-position: center;
   background-color: #689f38;
 }
-/* line 86, ../scss/_k-menu-input.scss */
+/* line 95, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button.authready {
   display: block;
 }
-/* line 95, ../scss/_k-menu-input.scss */
+/* line 104, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-search-button {
   height: 30px;
   width: 30px;
@@ -1820,7 +1836,7 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 110, ../scss/_k-menu-input.scss */
+/* line 119, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1831,7 +1847,7 @@ body {
   width: 100%;
   background-color: #3f51b5;
 }
-/* line 119, ../scss/_k-menu-input.scss */
+/* line 128, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1841,14 +1857,14 @@ body {
   width: 100%;
   height: 2em;
 }
-/* line 127, ../scss/_k-menu-input.scss */
+/* line 136, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-title {
   font-size: inherit;
   height: 1.5em;
   text-align: left;
   margin: 0.5em 0 0 0.75em;
 }
-/* line 136, ../scss/_k-menu-input.scss */
+/* line 145, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1861,11 +1877,11 @@ body {
   border: solid 2px #1a237e;
   cursor: pointer;
 }
-/* line 147, ../scss/_k-menu-input.scss */
+/* line 156, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:focus, #k-drug-toolbar #k-search-toolbar #k-search-type-toolbar #k-search-searchtype:hover {
   border-color: #ff80ab;
 }
-/* line 157, ../scss/_k-menu-input.scss */
+/* line 166, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar {
   display: -webkit-flex;
   display: flex;
@@ -1877,7 +1893,7 @@ body {
   height: 2em;
   padding: 0;
 }
-/* line 169, ../scss/_k-menu-input.scss */
+/* line 178, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1891,11 +1907,11 @@ body {
   border: solid 2px #1a237e;
   background-color: #03a9f4;
 }
-/* line 181, ../scss/_k-menu-input.scss */
+/* line 190, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:focus, #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-search-searchtext:hover {
   border-color: #ff80ab;
 }
-/* line 189, ../scss/_k-menu-input.scss */
+/* line 198, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search {
   position: absolute;
   font-size: inherit;
@@ -1907,11 +1923,11 @@ body {
   background-position: center;
   background-color: #03a9f4;
 }
-/* line 201, ../scss/_k-menu-input.scss */
+/* line 210, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-toolbar #k-search-text-toolbar #k-perform-search.searchActive {
   background-color: #ff80ab;
 }
-/* line 214, ../scss/_k-menu-input.scss */
+/* line 223, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-search-prompt-anchor {
   position: relative;
 }

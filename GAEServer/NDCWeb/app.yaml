@@ -4,9 +4,8 @@
 # PharmCat user impact. Note that the database URL must also be modified.
 # Either directly in the Javascript code or by modifying a CNAME url entry.
 
-#application: s~kellerberrin-drugdatabase
-
-application: s~kellerberrin-drugdatabase2
+application: s~kellerberrin-drugdatabase
+#application: s~kellerberrin-drugdatabase2
 
 version: 1
 runtime: python27

@@ -117,6 +117,12 @@ var globalAuthenticate = (function (window, angular, undefined) {
 
             };
 
+            var notCaptchaStatus = function() {
+
+                return !captchaStatus();
+
+            };
+
             var getCaptchaResponse = function() {
 
                 return captchaResponse;
@@ -168,6 +174,8 @@ var globalAuthenticate = (function (window, angular, undefined) {
                 renderCaptcha: renderCaptcha,   // Render the captcha
 
                 captchaStatus: captchaStatus,   // Has the user validated the captcha
+
+                notCaptchaStatus: notCaptchaStatus,   // Has the user validated the captcha
 
                 getCaptchaResponse: getCaptchaResponse, // return the captcha response
 

@@ -29,9 +29,19 @@
     <script src="/js/authenticate-services.js"></script>
     <!-- Non Angular App specific logic -->
     <script src="/js/utility.js"></script>
-    <!-- Google recaptcha functionality -->
+    <!-- Google reCaptcha functionality -->
     <script> var onloadCallback =  function() { globalAuthenticate.k_loadCaptcha("k-barcode-captcha"); }</script>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-59416804-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
 </head>
 <!-- [END head_html] -->
 <!-- [BEGIN body html]-->
@@ -40,7 +50,7 @@
 <!-- 100% Horizontal Width -->
 <div id="k-total-page-width" ng-controller="DisplayController">
 
-    <!-- PharmCat Page (max 600 px width) -->
+    <!-- PharmCat Page  -->
      <div id="k-search-page">
 
         <!-- ************ Header Area Layout *******************-->
@@ -56,7 +66,7 @@
         <!-- End Footer-->
 
     </div>
-    <!-- End PharmCat Page (max 600 px width) -->
+    <!-- End PharmCat Page  -->
 
     <!-- The About Dialog Box -->
     <div id="k-about-dialog-anchor" ng-include src=" 'partial/AboutDialog.html' "></div>
