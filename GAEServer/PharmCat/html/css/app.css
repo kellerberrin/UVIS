@@ -476,6 +476,10 @@ body {
     height: 750px;
   }
 }
+/* line 166, ../scss/_k-top-level.scss */
+#k-search-results.showExample {
+  cursor: pointer;
+}
 
 /****************************************************************************************************
 *
@@ -1370,7 +1374,7 @@ body {
   margin: 1em 0 0 0;
 }
 /* line 626, ../scss/_k-dialog-toast.scss */
-#k-about-dialog-content #k-about-dialog-text {
+#k-about-dialog-content #k-about-dialog-description {
   width: 100%;
   margin: 1em 0 0 0;
   padding-left: 1em;
@@ -1378,7 +1382,7 @@ body {
   color: black;
 }
 /* line 636, ../scss/_k-dialog-toast.scss */
-#k-about-dialog-content #k-about-dialog-developer {
+#k-about-dialog-content #k-about-dialog-text {
   width: 100%;
   margin: 1em 0 0 0;
   padding-left: 1em;
@@ -1386,7 +1390,7 @@ body {
   color: black;
 }
 /* line 646, ../scss/_k-dialog-toast.scss */
-#k-about-dialog-content #k-about-dialog-contact {
+#k-about-dialog-content #k-about-dialog-developer {
   width: 100%;
   margin: 1em 0 0 0;
   padding-left: 1em;
@@ -1394,6 +1398,14 @@ body {
   color: black;
 }
 /* line 656, ../scss/_k-dialog-toast.scss */
+#k-about-dialog-content #k-about-dialog-contact {
+  width: 100%;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  font-size: 1em;
+  color: black;
+}
+/* line 666, ../scss/_k-dialog-toast.scss */
 #k-about-dialog-content #k-about-dialog-attribution {
   width: 100%;
   margin: 1em 0 0 0;
@@ -1799,15 +1811,15 @@ body {
   color: #ff80ab;
   font-weight: 700;
   font-size: 1.8em;
-  margin: auto 15px;
+  margin: auto 0 auto 15px;
 }
 /* line 73, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-toolbar-subtitle {
-  -webkit-flex-grow: 2;
-  flex-grow: 2;
-  color: #03a9f4;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  color: white;
   font-size: 1em;
-  margin: auto 15px;
+  margin: auto 0 auto 15px;
 }
 /* line 82, ../scss/_k-menu-input.scss */
 #k-drug-toolbar #k-icon-toolbar-tools #k-icon-barcode-button {

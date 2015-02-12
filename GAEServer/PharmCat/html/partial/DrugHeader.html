@@ -11,7 +11,7 @@
         <div id="k-icon-barcode-button"
                 class="k-material-flat-button"
                 ng-click="barCodeDialog()"
-                ng-class="{ authready : authenticate.authReady() }"
+                ng-class="{ authready : authenticate.authReady() && appConfig.displayAuthentication()}"
                 aria-label="Scan Barcode">
         </div>
 

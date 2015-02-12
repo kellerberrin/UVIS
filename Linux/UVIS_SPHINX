@@ -18,7 +18,7 @@ export UVISSPHINXGAEAPPPATH="$UVISSPHINXGAE/app.yaml"
 #The local URL for Sphinx documentation
 export UVISSPHINXLOCALHOST="localhost"
 #The local port for Sphinx documentation.
-export UVISSPHINXLOCALPORT="8080"
+export UVISSPHINXLOCALPORT="8070"
 #The local admin port for Sphinx Documentation 
 export UVISSPHINXADMINPORT="8010"
 #Local storage (logs & datastore) for the Sphinx Documentation

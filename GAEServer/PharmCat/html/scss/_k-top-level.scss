@@ -163,4 +163,11 @@ $K-Total-Page-Height: ($K-Minimum-Search-Page-Height + $K-Header-Footer-Height);
   background-position: center top;
   background-size: 100% auto;
 
+  &.showExample {
+
+    cursor: pointer;
+
+  }
+
+
 }

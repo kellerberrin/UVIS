@@ -16,6 +16,7 @@ Software Documentation
     github/github
     usdrugdatabase/usdrugdatabase
     dns/dns
+    drupal/drupal
 
     
     
@@ -118,3 +119,21 @@ DNS Management
 
 :ref:`DNS Management<dnsmanagementdoc>` Management and aliasing of the DNS entries used by this documentation and the FDA
 database.
+
+|
+|
+|
+|
+
+
+Drupal
+++++++
+
+
+.. image:: drupal/drupal.jpg
+    :width: 136px
+    :height: 143px
+    :align: left
+    :target: drupal/drupal.html
+
+:ref:`Drupal<drupaldoc>` CMS used for non-technical documentation and functionality of PharmCat and the drug authentication.

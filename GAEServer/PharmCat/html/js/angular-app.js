@@ -30,13 +30,12 @@
     drugSearchApp.factory("AppConfig", function () {
 
 
-// Comment one of these out to define the database environment
-        var environment = "Test";
-//        var environment = "Production";
+//************* SETUP ENVIRONMENT *************************************************
 
-        var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
-        var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
-        var captchaEndPointURL = "/_ah/api/productAuth/v1/verifySerial";
+// Comment one of these out to define the database environment
+//        var environment = "Test";
+        var environment = "Production";
+
         var databaseLocationURL = null;
         var authenticateURL = null;
 
@@ -54,6 +53,15 @@
             authenticateURL = "http://localhost:9070";
 
         }
+
+        var displayAuthentication = false;   // Display the verification widgets.
+
+//************* END OF ENVIRONMENT *************************************************
+
+
+        var promptEndPointURL = "/_ah/api/searchUSdrugs/v1/forwardPrompt";
+        var searchEndPointURL = "/_ah/api/searchUSdrugs/v1/typeSearch";
+        var captchaEndPointURL = "/_ah/api/productAuth/v1/verifySerial";
 
         var recaptchaPublicKey = "6LcEZQATAAAAAM3csszGhzvXpShpq2Dwgz6QtVKW";  // Obtained from Google
         var promptCacheSize = 100;   // Prompt Cache
@@ -120,6 +128,12 @@
             recaptchaPublicKey : function() {
 
                 return recaptchaPublicKey;
+
+            },
+
+            displayAuthentication: function() {
+
+                return displayAuthentication;
 
             }
 

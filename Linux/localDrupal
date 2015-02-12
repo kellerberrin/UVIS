@@ -1,0 +1,8 @@
+#!/bin/bash
+# The uploader batch file.
+# This starts the Drupal stack (Apache and MySQL) 
+
+
+echo "DRUPALDIR:" $DRUPALDIR
+
+$DRUPALDIR/ctlscript.sh start

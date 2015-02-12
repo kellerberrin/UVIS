@@ -1,4 +1,6 @@
-<div id="k-search-results" ng-controller="ResultsController" ng-click="showExampleDialog()">
+<div id="k-search-results" ng-controller="ResultsController"
+                           ng-click="showExampleDialog()"
+                           ng-class="{ showExample : results.isEmpty() }">
 
     <div id="k-results-container" ng-repeat="drugRecord in results.getDrugArray() track by $index">
 
@@ -177,7 +179,7 @@
 
                 <div ng-click="barCodeDialog(drugRecord.ndc)"
                      class="k-display-ndc-verify k-material-fab"
-                     ng-class="{ authready : authenticate.authReady() }"></div>
+                     ng-class="{ authready : authenticate.authReady() && appConfig.displayAuthentication() }"></div>
 
             </div>
 

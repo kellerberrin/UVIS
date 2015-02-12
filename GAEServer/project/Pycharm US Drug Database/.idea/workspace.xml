@@ -3,17 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5aa6dc1f-4180-4c69-aa6f-a2d1aef94bb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/BarCodeDialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/AboutDialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/partial/DrugHeader.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-dialog-toast.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" afterPath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/app.yaml" afterPath="$PROJECT_DIR$/../../NDCWeb/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/app.yaml" afterPath="$PROJECT_DIR$/../../PharmCat/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/authenticate-services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Authenticate/authenticate.py" afterPath="$PROJECT_DIR$/../../Authenticate/authenticate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/libraries/compass_library2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/index.html" afterPath="$PROJECT_DIR$/../../PharmCat/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Webstorm US Drug Database/.idea/workspace.xml" />
     </list>
     <ignored path="Pycharm US Drug Database.iws" />

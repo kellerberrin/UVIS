@@ -78,6 +78,7 @@
 
     searchControllers.controller("SearchController",
         ["$scope",
+            "AppConfig",
             "DrugArray",
             "DrugSearch",
             "Authenticate",
@@ -90,6 +91,7 @@
             "SearchMenuPopup",
             "ConfirmSearchDialog",
             function SearchController($scope,
+                                      AppConfig,
                                       DrugArray,
                                       DrugSearch,
                                       Authenticate,
@@ -102,6 +104,7 @@
                                       SearchMenuPopup,
                                       ConfirmSearchDialog) {
 
+                $scope.appConfig = AppConfig; // Global variables and setup.
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Performs the actual drug search
                 $scope.prompts = SearchPrompts; // Injected array of type-ahead and history prompts
@@ -336,6 +339,7 @@
 
     searchControllers.controller("ResultsController",
         ["$scope",
+            "AppConfig",
             "DrugArray",
             "DrugSearch",
             "Authenticate",
@@ -343,6 +347,7 @@
             "ImageSearchDialog",
             "BarCodeDialog",
             function SearchController($scope,
+                                      AppConfig,
                                       DrugArray,
                                       DrugSearch,
                                       Authenticate,
@@ -350,6 +355,7 @@
                                       ImageSearchDialog,
                                       BarCodeDialog) {
 
+                $scope.appConfig = AppConfig; // Global variables and setup.
                 $scope.results = DrugArray;  // Injected array of drugs.
                 $scope.drugSearch = DrugSearch; // Search type service.
                 $scope.authenticate = Authenticate; // High level authentication functionality
@@ -357,8 +363,6 @@
 
                 $scope.barCodeDialog = function(NDC10) {
 
-                    // Convert to GTIN (NDC14) format
-                    var barCode = utilityModule.k_NDC10toNDC14Format(NDC10);
                     BarCodeDialog.displayBarCodeDialog(NDC10);
 
                 };
