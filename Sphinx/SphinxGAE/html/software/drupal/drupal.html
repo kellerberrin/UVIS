@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Drupal &mdash; UVIS</title>
+  <title>Users and Passwords: &mdash; UVIS</title>
   
 
   
@@ -89,7 +89,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Drupal</li>
+    <li>Users and Passwords:</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="../../_sources/software/drupal/drupal.txt" rel="nofollow"> View page source</a>
@@ -100,40 +100,46 @@
 </div>
           <div role="main">
             
-  <a class="reference internal image-reference" href="../../_images/drupal.jpg" id="drupaldoc"><img alt="../../_images/drupal.jpg" class="align-left" id="drupaldoc" src="../../_images/drupal.jpg" style="width: 136px; height: 143px;" /></a>
-<div class="section" id="drupal">
-<h1>Drupal<a class="headerlink" href="#drupal" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="domain-registrar">
-<h2>Domain registrar:<a class="headerlink" href="#domain-registrar" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="crazy-domains">
-<h3>Crazy Domains<a class="headerlink" href="#crazy-domains" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://www.crazydomains.com.au/">http://www.crazydomains.com.au/</a></p>
-<p>Login: <a class="reference external" href="mailto:james&#46;duncan&#46;mcculloch&#37;&#52;&#48;gmail&#46;com">james<span>&#46;</span>duncan<span>&#46;</span>mcculloch<span>&#64;</span>gmail<span>&#46;</span>com</a>
-password: &lt;usual non bank password&gt;</p>
-<p>Domain: <strong>kellerberrin.com.au</strong>
-Registered for two years, expires on <strong>26 Nov 2016 (auto-renew).</strong></p>
-<p>The sub-domain <strong>www.kellerberrin.com.au</strong> is aliased with GAE <strong>kellerberrin-doc.appspot.com</strong></p>
-<p>Domain: <strong>james-mcculloch.info</strong>
-Registered for 10 years, expires on <strong>27 Nov 2026 (auto-renew).</strong></p>
-<p>The sub-domain <strong>james-mcculloch.info</strong> is aliased with GAE <strong>kellerberrin-doc.appspot.com</strong></p>
+  <span class="target" id="drupaldoc"></span><a class="reference internal image-reference" href="../../_images/drupal.jpg"><img alt="../../_images/drupal.jpg" class="align-left" src="../../_images/drupal.jpg" style="width: 136px; height: 143px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="section" id="users-and-passwords">
+<h1>Users and Passwords:<a class="headerlink" href="#users-and-passwords" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-1">
+<h2>User 1<a class="headerlink" href="#user-1" title="Permalink to this headline">¶</a></h2>
+<p>User: kellerberrin
+|
+Password: &lt;usual password&gt; d***1</p>
+</div>
+<div class="section" id="phpadmin">
+<h2>Phpadmin<a class="headerlink" href="#phpadmin" title="Permalink to this headline">¶</a></h2>
+<p>User: root
+|
+Password: &lt;usual password&gt; d***1</p>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Domain registrar:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="godaddy">
-<h3>GoDaddy<a class="headerlink" href="#godaddy" title="Permalink to this headline">¶</a></h3>
-<p>Customer Number:90532561
-password: &lt;usual non bank password except the first letter is a capital letter
-and the final number is 54&gt;</p>
-<p>Domain: <strong>pharmcat.com</strong></p>
-<p>Registered for 1 year, expires on <strong>27 Sep 2015 (auto-renew).</strong></p>
-<p>The sub-domain <strong>pharmcat.com</strong> is aliased with GAE <strong>kellerberrin-pharmcat.appspot.com</strong></p>
-<p>Domain: <strong>pharmcow.com</strong></p>
-<p>Registered for 1 year, expires on <strong>3 Dec 2015 (auto-renew).</strong></p>
-<p>Domain: <strong>pharmhog.com</strong></p>
-<p>Registered for 1 year, expires on <strong>25 Dec 2015 (auto-renew).</strong></p>
+<div class="section" id="drupal-control-scripts">
+<h1>Drupal Control Scripts:<a class="headerlink" href="#drupal-control-scripts" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first"><strong>localDrupal</strong> - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306.</p>
+<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localDrupal</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
-</div>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>stopDrupal</strong> - Stop and unload the Drupal stack (Apache and MySql).</p>
+<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopDrupal</p>
+</li>
+</ol>
 </div>
 
 

@@ -152,6 +152,22 @@ original (parent) shell.</p>
 <div class="section" id="the-scripts">
 <h2>The Scripts<a class="headerlink" href="#the-scripts" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
+<li><p class="first"><strong>localDrupal</strong> - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localDrupal</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first"><strong>stopDrupal</strong> - Stop and unload the Drupal stack (Apache and MySql).</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopDrupal</p>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="3">
 <li><p class="first"><strong>localbulkloader</strong> - This script uploads the drug database data in spreadsheet &#8216;.csv&#8217; format to the <strong>local</strong> GAE
 datastore.</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localbulkloader</p>
@@ -160,7 +176,7 @@ datastore.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="2">
+<ol class="arabic" start="4">
 <li><p class="first"><strong>remotebulkloader</strong> - This script uploads the drug database data in spreadsheet &#8216;.csv&#8217; format to the <strong>remote</strong> GAE
 datastore.</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $remotebulkloader</p>
@@ -169,16 +185,16 @@ datastore.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="3">
+<ol class="arabic" start="5">
 <li><p class="first"><strong>localSphinxGAE</strong> - Run a local copy of the Sphinx documentation on the local GAE server. This
-documentation can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:8080">http://localhost:8080</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
+documentation can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:8070">http://localhost:8070</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localsphinxGAE</p>
 </li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="4">
+<ol class="arabic" start="6">
 <li><p class="first"><strong>localUSdrugGAE</strong> - Run a local copy of the US drug database on the local GAE server. This
 can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:9080">http://localhost:9080</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localUSdrugGAE</p>
@@ -187,7 +203,7 @@ can be viewed in a web browser at &#8216;<a class="reference external" href="htt
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="5">
+<ol class="arabic" start="7">
 <li><p class="first"><strong>localPharmCatGAE</strong> - Run a local copy of the PharmCat web application on the local GAE server. This
 can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:9090">http://localhost:9090</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localPharmCatGAE</p>
@@ -196,7 +212,7 @@ can be viewed in a web browser at &#8216;<a class="reference external" href="htt
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="6">
+<ol class="arabic" start="8">
 <li><p class="first"><strong>localAuthenticateGAE</strong> - Run a local copy of the Authentication server on the local GAE server. This
 can be viewed in a web browser at &#8216;<a class="reference external" href="http://localhost:9070">http://localhost:9070</a>&#8216; (see script &#8216;UVIS&#8217;)</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localAuthenticateGAE</p>
@@ -205,7 +221,7 @@ can be viewed in a web browser at &#8216;<a class="reference external" href="htt
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="7">
+<ol class="arabic" start="9">
 <li><p class="first"><strong>processrawNDCfiles</strong> - Process the raw tab delimted NDC files (package.txt and product.txt) downloaded
 from the NDC website. These are processed into a .csv file that can be uploaded into the GAE Datastore using
 the bulkloader tool (see <strong>bulkloader</strong>).</p>
@@ -215,36 +231,34 @@ the bulkloader tool (see <strong>bulkloader</strong>).</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="8">
+<ol class="arabic" start="10">
 <li><p class="first"><strong>harvestRxImages</strong> Harvests the RxImage API from the National Library of Medicine.
 If the intermediate download file &#8220;ImageCheckpoint.csv&#8221; is present. The harvest program
 only gets NDCs that are in &#8220;NDCDatabase.csv&#8221; but not in &#8220;ImageCheckpoint.csv&#8221;.
 If no &#8220;ImageCheckpoint.csv&#8221; is present than the download starts at the first record (NDC code)
 in &#8220;NDCDatabase.csv&#8221;.</p>
-<blockquote>
-<div><p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $harvestRxImages</p>
-</div></blockquote>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $harvestRxImages</p>
 </li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="9">
+<ol class="arabic simple" start="11">
 <li><strong>reldir</strong> - Not executed directly. Not important - changes the UVIS environment shell prompt.
 Should be replaced with a prompt script based on sed.</li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="10">
-<li><strong>sphinxmake</strong> - Generate a new version of the Sphinx html documentation from the &#8216;.rst&#8217; source files.</li>
+<ol class="arabic" start="12">
+<li><p class="first"><strong>sphinxmake</strong> - Generate a new version of the Sphinx html documentation from the &#8216;.rst&#8217; source files.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $sphinxmake html</p>
+</li>
 </ol>
-<blockquote>
-<div><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $sphinxmake html</div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="11">
+<ol class="arabic" start="13">
 <li><p class="first"><strong>uploadSphinxGAE</strong> - Upload the current local version of the Sphinx documentation to the remote GAE server.
 This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-doc.appspot.com">http://kellerberrin-doc.appspot.com</a>&#8216;.</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $uploadsphinxGAE</p>
@@ -253,7 +267,7 @@ This documentation can be viewed on a web browser at &#8216;<a class="reference 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="12">
+<ol class="arabic" start="14">
 <li><p class="first"><strong>rollbackSphinxGAE</strong> - rollback any failed upgrade of the Sphinx documentation to the remote GAE server.
 Typically this must be done if there is a network failure during an upgrade.
 This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-doc.appspot.com">http://kellerberrin-doc.appspot.com</a>&#8216;.</p>
@@ -263,7 +277,7 @@ This documentation can be viewed on a web browser at &#8216;<a class="reference 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="13">
+<ol class="arabic" start="15">
 <li><p class="first"><strong>uploadUSdrugGAE</strong> - Upload the current local version of the US drug database to the remote GAE server.
 This application can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-drugdatabase.appspot.com">http://kellerberrin-drugdatabase.appspot.com</a>&#8216;.</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $uploadUSdrugGAE</p>
@@ -272,7 +286,7 @@ This application can be viewed on a web browser at &#8216;<a class="reference ex
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="14">
+<ol class="arabic" start="16">
 <li><p class="first"><strong>rollbackUSdrugGAE</strong> - rollback any failed upgrade of the US drug Database documentation to the remote GAE server.
 Typically this must be done if there is a network failure during an upgrade.
 This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-database.appspot.com">http://kellerberrin-database.appspot.com</a>&#8216;.</p>
@@ -282,7 +296,7 @@ This documentation can be viewed on a web browser at &#8216;<a class="reference 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="15">
+<ol class="arabic" start="17">
 <li><p class="first"><strong>uploadPharmCatGAE</strong> - Upload the current local version of the PharmCat web application to the remote GAE server.
 This application can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-pharmcat.appspot.com">http://kellerberrin-pharmcat.appspot.com</a>&#8216; and is aliased to
 &#8216;PharmCat.com&#8217;.</p>
@@ -292,7 +306,7 @@ This application can be viewed on a web browser at &#8216;<a class="reference ex
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="16">
+<ol class="arabic" start="18">
 <li><p class="first"><strong>rollbackPharmCatGAE</strong> - rollback any failed upgrade of the PharmCat Web Application to the remote GAE server.
 Typically this must be done if there is a network failure during an upgrade.
 This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-pharmcat.appspot.com">http://kellerberrin-pharmcat.appspot.com</a>&#8216;.</p>
@@ -302,7 +316,7 @@ This documentation can be viewed on a web browser at &#8216;<a class="reference 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="17">
+<ol class="arabic" start="19">
 <li><p class="first"><strong>uploadAuthenticateGAE</strong> - Upload the current local version of the UVIS Authentication server to the remote GAE server.
 This application can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-authenticate.appspot.com">http://kellerberrin-authenticate.appspot.com</a>&#8216;.</p>
 <p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $uploadAuthenticateGAE</p>
@@ -311,7 +325,7 @@ This application can be viewed on a web browser at &#8216;<a class="reference ex
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="18">
+<ol class="arabic" start="20">
 <li><p class="first"><strong>rollbackAuthenticateGAE</strong> - rollback any failed upgrade of the Authenticate Server to the remote GAE server.
 Typically this must be done if there is a network failure during an upgrade.
 This documentation can be viewed on a web browser at &#8216;<a class="reference external" href="http://kellerberrin-authenticate.appspot.com">http://kellerberrin-authenticate.appspot.com</a>&#8216;.</p>
@@ -321,7 +335,7 @@ This documentation can be viewed on a web browser at &#8216;<a class="reference 
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="19">
+<ol class="arabic simple" start="21">
 <li><strong>UVIS</strong> - Not executed directly. Defines all the environment variables needed by the UVIS development environment.
 The following 3 sub-scripts are executed in order. Do not modify this script for different development environments
 (nodify UVIS_LOCAL_ENV below).<ol class="arabic">
@@ -335,35 +349,35 @@ The following 3 sub-scripts are executed in order. Do not modify this script for
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="20">
+<ol class="arabic simple" start="22">
 <li><strong>UVIS_SPHINX</strong> - Not executed directly. Defines all the environment variables needed by the Sphinx development environment.
 This script is run from the <strong>UVIS</strong> script above. Modify this script to modify the Sphinx environment.</li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="21">
+<ol class="arabic simple" start="23">
 <li><strong>UVIS_USDRUG</strong> - Not executed directly. Defines all the environment variables needed by the US drug database environment.
 This script is run from the <strong>UVIS</strong> script above. Modify this script to modify the US drug database environment.</li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="22">
+<ol class="arabic simple" start="24">
 <li><strong>UVIS_PHARMCAT</strong> - Not executed directly. Defines all the environment variables needed by the PharmCat web application.
 This script is run from the <strong>UVIS</strong> script above. Modify this script to modify the PharmCat web application.</li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="23">
+<ol class="arabic simple" start="25">
 <li><strong>UVIS_AUTHENTICATE</strong> - Not executed directly. Defines all the environment variables needed by the Authenticate server APIs.
 This script is run from the <strong>UVIS</strong> script above. Modify this script to modify the Authenticate server application.</li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="24">
+<ol class="arabic simple" start="26">
 <li><strong>UVIS_LOCAL_ENV</strong> - Not executed directly. Defines all the <strong>local</strong> computer environment (directories) needed by the UVIS
 development environment. This script is run from the <strong>UVIS</strong> script above.
 <strong>Important</strong> - this file must be changed for different development computers (two lines only). See the comments in the script.</li>
@@ -371,7 +385,7 @@ development environment. This script is run from the <strong>UVIS</strong> scrip
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="25">
+<ol class="arabic simple" start="27">
 <li><strong>UVIS_TURING_ENV</strong>, <strong>UVIS_JACOD_ENV</strong>, etc - Not executed directly. One of these scripts is run from <strong>UVIS_LOCAL_ENV</strong> above.
 Defines the environment variables (directories) needed by the UVIS development environment for a particular computer.
 For example; UVIS_TURING_ENV defines the UVIS environment for the Turing (desktop) environment (approx 4-6 directories).
@@ -380,7 +394,7 @@ The UVIS_LOCAL_ENV script selects which of these environments is in current use.
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="26">
+<ol class="arabic" start="28">
 <li><p class="first"><strong>workenv</strong> - Setup the UVIS development environment. Must be run in each terminal session &#8216;$workenv UVIS&#8217;.
 Creates a child shell, defines the UVIS environment variables and changes the prompt. Exit by executing &#8216;$exit&#8217; and
 returning to the original (parent) shell.</p>

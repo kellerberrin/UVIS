@@ -1,62 +1,54 @@
 .. _drupaldoc:
 
-
+.. |action| image:: emphasize.png
+    :width: 20pt
+    :height: 20pt
 
 .. image:: drupal.jpg
     :width: 136px
     :align: left
     :height: 143px
 
-
-Drupal
-======
-
-
-Domain registrar:
-+++++++++++++++++
-
-Crazy Domains
--------------
-
-http://www.crazydomains.com.au/
-
-Login: james.duncan.mcculloch@gmail.com
-password: <usual non bank password>
-
-Domain: **kellerberrin.com.au**
-Registered for two years, expires on **26 Nov 2016 (auto-renew).**
-
-The sub-domain **www.kellerberrin.com.au** is aliased with GAE **kellerberrin-doc.appspot.com**
-
-Domain: **james-mcculloch.info**
-Registered for 10 years, expires on **27 Nov 2026 (auto-renew).**
-
-The sub-domain **james-mcculloch.info** is aliased with GAE **kellerberrin-doc.appspot.com**
+|
+|
+|
+|
+|
+|
+|
 
 
+Users and Passwords:
+++++++++++++++++++++
+
+User 1
+------
+
+User: kellerberrin
+|
+Password: <usual password> d***1
+
+Phpadmin
+--------
+
+User: root
+|
+Password: <usual password> d***1
 
 
-Domain registrar:
-+++++++++++++++++
+Drupal Control Scripts:
++++++++++++++++++++++++
 
-GoDaddy
--------
 
-Customer Number:90532561
-password: <usual non bank password except the first letter is a capital letter
-and the final number is 54>
-          
-Domain: **pharmcat.com**
+1.    **localDrupal** - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306. 
 
-Registered for 1 year, expires on **27 Sep 2015 (auto-renew).**
+      |action| (UVIS) $localDrupal
 
-The sub-domain **pharmcat.com** is aliased with GAE **kellerberrin-pharmcat.appspot.com**
+|
 
-Domain: **pharmcow.com**
+2.    **stopDrupal** - Stop and unload the Drupal stack (Apache and MySql).
 
-Registered for 1 year, expires on **3 Dec 2015 (auto-renew).**
+      |action| (UVIS) $stopDrupal
 
-Domain: **pharmhog.com**
 
-Registered for 1 year, expires on **25 Dec 2015 (auto-renew).**
 
