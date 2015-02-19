@@ -66,7 +66,7 @@ $K-Toolbar-Verify-Button-Color: $md-light-green-700;
       color: $K-Toolbar-Title-color;
       font-weight: 700;
       font-size: 1.8em;
-      margin: auto 0 auto 15px;
+      margin: auto 10px auto 15px;
 
     }
 
@@ -75,7 +75,8 @@ $K-Toolbar-Verify-Button-Color: $md-light-green-700;
       @include flex-grow(1);
       color: $K-Toolbar-SubTitle-color;
       font-size: 1em;
-      margin: auto 0 auto 15px;
+      margin: auto;
+      text-align: center;
 
     }
 

@@ -28,6 +28,4 @@ export GOOGLEAPPBIN="/opt/google/google_appengine"
 export UVISGAELOCALSTORAGE="/opt/google/GAEdata"
 #The local root storage for the UVIS data files.
 export UVISDATADIR="/media/kellerberrin/WorkDisk/Kellerberrin/Software/Active/Data"
-#The Drupal start-up directory location
-export DRUPALDIR="/home/kellerberrin/drupal-7.34-1"
 

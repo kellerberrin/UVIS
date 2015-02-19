@@ -152,16 +152,17 @@ original (parent) shell.</p>
 <div class="section" id="the-scripts">
 <h2>The Scripts<a class="headerlink" href="#the-scripts" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first"><strong>localDrupal</strong> - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306.</p>
-<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localDrupal</p>
+<li><p class="first"><strong>localDrupal</strong> - Starts the <strong>LAMP</strong> stack. Apache listens on localhost:80 (&#8220;ServerName localhost&#8221; was added
+to /etc/apache2/apache2.conf) and MySql is active on port:3306.</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $startLamp</p>
 </li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <ol class="arabic" start="2">
-<li><p class="first"><strong>stopDrupal</strong> - Stop and unload the Drupal stack (Apache and MySql).</p>
-<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopDrupal</p>
+<li><p class="first"><strong>stopDrupal</strong> - Stop and unload the <strong>LAMP</strong> stack (Apache and MySql).</p>
+<p><a class="reference internal" href="../../_images/emphasize2.png"><img alt="action" src="../../_images/emphasize2.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopLamp</p>
 </li>
 </ol>
 <div class="line-block">

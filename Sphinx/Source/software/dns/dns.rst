@@ -46,17 +46,25 @@ Customer Number:90532561
 password: <usual non bank password except the first letter is a capital letter
 and the final number is 54>
           
-Domain: **pharmcat.com**
+Domain: **pharmcat.com** is aliased (301 forwarding) with GAE **kellerberrin-pharmcat.appspot.com**
 
 Registered for 1 year, expires on **27 Sep 2015 (auto-renew).**
 
-The sub-domain **pharmcat.com** is aliased with GAE **kellerberrin-pharmcat.appspot.com**
+The sub-domain **www.pharmcat.com** (CNAME) is aliased with GAE **kellerberrin-pharmcat.appspot.com**
 
 Domain: **pharmcow.com**
 
 Registered for 1 year, expires on **3 Dec 2015 (auto-renew).**
 
+Points to the Apache server on the kellerberrin account at Godaddy (IP 160.153.94.40). password: <usual non bank password except the first letter is a capital letter
+and the final number is 54> 
+
 Domain: **pharmhog.com**
 
-Registered for 1 year, expires on **25 Dec 2015 (auto-renew).**
+Registered for 1 year, expires on **25 Dec 2015 (auto-renew).**. Unused
+
+Domain: **pharmrox.com**
+
+Registered for 1 year, expires on **15 Feb 2017 (auto-renew).**. Unused
+
 

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Users and Passwords: &mdash; UVIS</title>
+  <title>Local Installation: &mdash; UVIS</title>
   
 
   
@@ -89,7 +89,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-    <li>Users and Passwords:</li>
+    <li>Local Installation:</li>
       <li class="wy-breadcrumbs-aside">
         
           <a href="../../_sources/software/drupal/drupal.txt" rel="nofollow"> View page source</a>
@@ -110,36 +110,132 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<div class="section" id="users-and-passwords">
-<h1>Users and Passwords:<a class="headerlink" href="#users-and-passwords" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="user-1">
-<h2>User 1<a class="headerlink" href="#user-1" title="Permalink to this headline">¶</a></h2>
-<p>User: kellerberrin
-|
-Password: &lt;usual password&gt; d***1</p>
+<div class="section" id="local-installation">
+<h1>Local Installation:<a class="headerlink" href="#local-installation" title="Permalink to this headline">¶</a></h1>
+<p>Install a <strong>LAMP</strong> stack (Apache2 and Mysql) using the appropriate software downloads.</p>
+<p>Note that &#8220;ServerName localhost&#8221; was added to /etc/apache2/apach2.conf to suppress a warning and ensure that the apache web listens to <strong>localhost:80</strong>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
-<div class="section" id="phpadmin">
-<h2>Phpadmin<a class="headerlink" href="#phpadmin" title="Permalink to this headline">¶</a></h2>
-<p>User: root
-|
-Password: &lt;usual password&gt; d***1</p>
+<p>Install <strong>phpmyAdmin</strong> this will use the same password as the mySQL root password defined blow.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>(optional) Install drush - a Drupal download and configuration utility.</p>
+<div class="section" id="configure-local-drupal-installations">
+<h2>Configure local Drupal Installations<a class="headerlink" href="#configure-local-drupal-installations" title="Permalink to this headline">¶</a></h2>
+<p>Unfortunately, the configration and content of a Drupal 7 website seems to be spread throughout the entire Drupal software install. The situation is better with Drupal 8, where content and configuration have been separated. However, Drupal 8 has not yet reached release candidate status (Feb 2015).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This means that moving a Drupal site to production means zipping up the entire install (plus the Drupal MySQL database) and moving this install to production.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>A by-product of this is that development Drupal installs should be kept in individual separate directories within the git software development tree.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li>This is accomplished by aliasing localhost with a virtual web address in /etc/hosts.
+For example, the following line was added to /etc/hosts   &#8220;127.0.0.1  drupal_exercise.com&#8221;. Thus we now have an
+alias for localhost called &#8220;drupal_exercise.com&#8221;.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>The next step is to add &#8220;drupal_exercise.conf&#8221; to the available virtual sites directory &#8220;/etc/apache2/sites-available&#8221;.
+Then a logical link is added to &#8220;/etc/apache/sites-enabled&#8221; that links to &#8220;drupal_exercise.conf&#8221;.
+The command is:</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>ln -s ../sites-available/drupal_exercise.com drupal_exercise.com
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>A minimal virtual sites file content for &#8220;drupal_exercise.conf&#8221; is:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;VirtualHost *:80&gt;
+    ServerName drupal_exercise.com
+    ServerAlias www.drupal_exercise.com
+    DocumentRoot /var/www/html/drual_exercise.com
+&lt;/VirtualHost&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Using this &#8220;drupal_exercise.conf&#8221; file the Drual install will be in DocumentRoot (/var/www/html/drual_exercise.com). Note that default apache2 document roots are defined in /etc/apache2/apache2.conf.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Using the above setup precedure we can setup as many Drupal installs as required, where required.</p>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </div>
-<div class="section" id="drupal-control-scripts">
-<h1>Drupal Control Scripts:<a class="headerlink" href="#drupal-control-scripts" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="local-users-and-passwords">
+<h1>Local Users and Passwords:<a class="headerlink" href="#local-users-and-passwords" title="Permalink to this headline">¶</a></h1>
+<p>Drupal users and mysql databases are setup according to the drupal install documentation.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Below are typical values for the drupal_exercise.com install described above</p>
+<div class="section" id="drupal-admin-user-1">
+<h2>Drupal (Admin) User 1<a class="headerlink" href="#drupal-admin-user-1" title="Permalink to this headline">¶</a></h2>
+<p>User: admin</p>
+<p>Password: &lt;usual password&gt; d***1</p>
+</div>
+<div class="section" id="phpmyadmin-and-mysql">
+<h2>Phpmyadmin and Mysql<a class="headerlink" href="#phpmyadmin-and-mysql" title="Permalink to this headline">¶</a></h2>
+<p>The mysql (phpmyadmin) user name and password are:</p>
+<p>Drupal database: drupal_exercise</p>
+<p>Drupal database user: kellerberrin (setup according to Drupal documentation)</p>
+<p>Password: &lt;usual password&gt; d***1</p>
+<p>MySql SuperUser: root</p>
+<p>Password: &lt;usual password&gt; d***1</p>
+</div>
+</div>
+<div class="section" id="local-drupal-control-scripts">
+<h1>Local Drupal Control Scripts:<a class="headerlink" href="#local-drupal-control-scripts" title="Permalink to this headline">¶</a></h1>
 <ol class="arabic">
-<li><p class="first"><strong>localDrupal</strong> - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306.</p>
-<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $localDrupal</p>
+<li><p class="first"><strong>startLamp</strong> - Start the LAMP stack. Apache listens on localhost:80 (or an appropriate alias such as drupal_exercise.com) and MySql is active on port:3306.</p>
+<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $startLamp</p>
 </li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <ol class="arabic" start="2">
-<li><p class="first"><strong>stopDrupal</strong> - Stop and unload the Drupal stack (Apache and MySql).</p>
-<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopDrupal</p>
+<li><p class="first"><strong>stopLamp</strong> - Stop and unload the LAMP stack (Apache and MySql).</p>
+<p><a class="reference internal" href="../../_images/emphasize6.png"><img alt="action" src="../../_images/emphasize6.png" style="width: 20pt; height: 20pt;" /></a> (UVIS) $stopLamp</p>
 </li>
 </ol>
+</div>
+<div class="section" id="remote-drupal-server">
+<h1>Remote Drupal Server<a class="headerlink" href="#remote-drupal-server" title="Permalink to this headline">¶</a></h1>
+<p>Is hosted by Godaddy (IP 192.186.252.37 - unknown if this is a static IP address?). The hosting expires on 15/2/17.
+Currently has PharmRox.com (or PharmCow.com - not yet determined) pointing to the IP address.</p>
+<p>Final setup not really completed - this section is provisional.</p>
+</div>
+<div class="section" id="remote-users-and-passwords">
+<h1>Remote Users and Passwords:<a class="headerlink" href="#remote-users-and-passwords" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="host-unix-account-and-cpanel">
+<h2>Host unix account and Cpanel<a class="headerlink" href="#host-unix-account-and-cpanel" title="Permalink to this headline">¶</a></h2>
+<p>The user account is: kellerberrin.
+password: &lt;usual non bank password except the first letter is a capital letter
+and the final number is 54&gt;</p>
+<p>The best way to reach the site is by cPanel through the GoDaddy website <strong>ssh kellerberrin&#64;pharmrox.com</strong> (or, depending on setup, <strong>ssh kellerberrin&#64;pharmcow.com</strong>).</p>
+</div>
+<div class="section" id="remote-drupal-user1-superuser">
+<h2>Remote Drupal User1 (SuperUser)<a class="headerlink" href="#remote-drupal-user1-superuser" title="Permalink to this headline">¶</a></h2>
+<p>User: admin
+|
+Password: &lt;usual password&gt; d***1</p>
+</div>
 </div>
 
 

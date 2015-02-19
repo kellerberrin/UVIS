@@ -76,15 +76,16 @@ original (parent) shell.
 The Scripts
 +++++++++++
 
-1.    **localDrupal** - Start the Bitnami Drupal stack. Apache listens on port:8080 and MySql is active on port:3306. 
+1.    **localDrupal** - Starts the **LAMP** stack. Apache listens on localhost:80 ("ServerName localhost" was added 
+      to /etc/apache2/apache2.conf) and MySql is active on port:3306. 
 
-      |action| (UVIS) $localDrupal
+      |action| (UVIS) $startLamp
 
 |
 
-2.    **stopDrupal** - Stop and unload the Drupal stack (Apache and MySql).
+2.    **stopDrupal** - Stop and unload the **LAMP** stack (Apache and MySql).
 
-      |action| (UVIS) $stopDrupal
+      |action| (UVIS) $stopLamp
 
 |
 

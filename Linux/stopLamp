@@ -1,0 +1,9 @@
+#!/bin/bash
+# The uploader batch file.
+# This stops the Drupal stack (Apache and MySQL) 
+
+
+
+sudo service apache2 stop
+sudo service mysql stop
+
