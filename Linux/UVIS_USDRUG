@@ -79,6 +79,13 @@ export UVISUSDRUGIMAGEURL="http://rximage.nlm.nih.gov/api/rximage/1/rxbase"
 export UVISUSDRUGRXCUIURL="http://rxnav.nlm.nih.gov/REST/rxcui.json"  
 
 
+# The main directory for files and logs of the SQL upload file generated from the CSV file.
+
+export UVISUSDRUGSQLDIR="$UVISUSDRUGDATA"
+# The log file for generating an SQL upload file.
+export UVISUSDRUGSQLLOGFILE="$UVISUSDRUGSQLDIR/csvupload/generateSQL.log"
+# The sql upload file.
+export UVISUSDRUGSQLUPLOAD="$UVISUSDRUGSQLDIR/csvupload/FDADrugUpload.sql"
 
 
 

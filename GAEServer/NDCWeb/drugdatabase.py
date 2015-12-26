@@ -249,6 +249,8 @@ def ForwardPromptJSON(forwardprompt, prompttype, maxpromptsize):
 
     promptArray = []
     cleanPromptArray = []
+    forwardPromptParams = {"forwardPrompt": forwardprompt, "promptType": prompttype }
+
 
     if prompttype == "name":
 
@@ -347,4 +349,4 @@ def ForwardPromptJSON(forwardprompt, prompttype, maxpromptsize):
 
     logging.info("Prompt Query:%s, Prompt Query Result:%s",  QueryString, cleanPromptArray)
 
-    return JSONClassEncoder().encode(cleanPromptArray)
+    return JSONClassEncoder().encode({ "promptArray": cleanPromptArray, "promptParams": forwardPromptParams })

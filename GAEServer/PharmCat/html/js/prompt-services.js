@@ -105,8 +105,19 @@
 
         var getPromptTitle = function() {
 
+            var promptTitle = ""
 
-            return promptArray.length > 0 ? "Search Ahead" : "No Results";
+            if (getReadPromptActive()) {
+
+                promptTitle = "Searching ...";
+
+            } else {
+
+                promptTitle = promptArray.length > 0 ? "Search Ahead" : "No Results";
+
+            }
+
+            return promptTitle;
 
         };
 
@@ -396,6 +407,9 @@
                   PromptCache,
                   SearchErrorDialog) {
 
+            var outstandingReadRequests = [];
+
+
 
             var getForwardPrompt = function (forwardParams, addToPrompt) {
 
@@ -423,6 +437,8 @@
                     prompttype: forwardParams.searchtype,
                     promptsize: AppConfig.promptMaxResults().toString()
                 };
+
+                outstandingReadRequests.unshift(forwardParams);
 
                 var requestTime = Date.now();
                 PromptArray.setReadPromptActive(true);
@@ -500,6 +516,7 @@
 // Need to JSON de-serialize the object twice because of the Server End Points formatting (see library.py).
 // This code looks fragile because it assumes the API response will be in a specific format.
 
+
                         obj2 = {};
                         if (typeof jsonData == "string") {
                             var obj1 = angular.fromJson(jsonData);
@@ -507,7 +524,9 @@
                                 var obj2 = angular.fromJson(obj1.resultMessage);
                             }
                         }
-                        return {promptArray: obj2};
+// returns obj2 = { promptArray: ["prompt1", "prompt2", ...etc ], promptParams: {"forwardPrompt": forwardprompt, "promptType": prompttype } ]
+
+                        return obj2;
                     }
                 }
             }

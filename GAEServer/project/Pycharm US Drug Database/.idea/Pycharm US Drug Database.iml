@@ -9,6 +9,8 @@
         <option name="email" value="james.duncan.mcculloch@gmail.com" />
         <option name="gp" value="dfcedfc5dfdadfcbdfc7dfc3dfc4df9b" />
         <option name="oauth2" value="false" />
+        <option name="deployConfigured" value="false" />
+        <option name="saveCredentials" value="true" />
       </configuration>
     </facet>
   </component>
@@ -27,4 +29,3 @@
     </option>
   </component>
 </module>
-

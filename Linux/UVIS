@@ -10,7 +10,7 @@
 
 source UVIS_LOCAL_ENV
 
-# The following environment variables do not need to be changed
+# The following environment variables DO NOT need to be changed
 # for different development environments if the relative UVIS directory
 # structure is unchanged from that used by the software on GITHUB. 
  

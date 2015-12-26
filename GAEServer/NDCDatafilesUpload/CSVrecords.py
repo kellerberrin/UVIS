@@ -60,6 +60,62 @@ class ProductClass:
 
 
 ############################################################################################
+## The SQL Table Definitions - Should be moved to another file.
+############################################################################################
+
+
+class SQL_FDADrugClass:
+
+    @staticmethod
+    def DropSQLTable():
+        HeaderString = "DROP TABLE FDADrug;" + "\n\n\n"
+	
+	return HeaderString
+
+
+    @staticmethod
+    def WriteSQLTableHeader():
+
+	HeaderString = "CREATE TABLE IF NOT EXISTS FDADrug (" + "\n" \
+                     + "NDC varchar(32) NOT NULL DEFAULT '0' COMMENT 'Primary Key: FDA unique 10 digit NDC identifier'," + "\n" \
+                     + "FORMAT varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "PRODUCTTYPENAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "PROPRIETARYNAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "NONPROPRIETARYNAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "DOSAGEFORMNAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "ROUTENAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "APPLICATIONNUMBER varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "LABELERNAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "SUBSTANCENAME varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "ACTIVE_NUMERATOR_STRENGTH varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "ACTIVE_INGRED_UNIT varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "PHARM_CLASSES varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "PACKAGEDESCRIPTION varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "NINE_DIGIT_NDC varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "SMALL_IMAGE_URL varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "LARGE_IMAGE_URL varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "NDCNINE_IMAGECODES varchar(255) NOT NULL DEFAULT ''," + "\n" \
+                     + "ELEVEN_DIGIT_NDC varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "RXCUI varchar(32) NOT NULL DEFAULT ''," + "\n" \
+                     + "PRIMARY KEY (NDC)" + "\n" \
+                     + ") ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Replaces Datastore FDA Drug Information.';" + "\n"
+
+        return HeaderString
+
+    @staticmethod
+    def WriteSQLInsertHeader():
+
+	HeaderString = "INSERT INTO FDADrug (" + "\n" \
+                     + "NDC, FORMAT, PRODUCTTYPENAME, PROPRIETARYNAME, NONPROPRIETARYNAME," + "\n" \
+                     + "DOSAGEFORMNAME, ROUTENAME, APPLICATIONNUMBER, LABELERNAME, SUBSTANCENAME," + "\n" \
+                     + "ACTIVE_NUMERATOR_STRENGTH, ACTIVE_INGRED_UNIT, PHARM_CLASSES, PACKAGEDESCRIPTION, NINE_DIGIT_NDC," + "\n" \
+                     + "SMALL_IMAGE_URL, LARGE_IMAGE_URL, NDCNINE_IMAGECODES, ELEVEN_DIGIT_NDC, RXCUI" + "\n" \
+                     + ") VALUES" + "\n"
+
+        return HeaderString
+
+
+############################################################################################
 ## The Raw CSV Record Format uploaded into the GAE Datastore
 ############################################################################################
 
@@ -172,6 +228,33 @@ class RawCSVClass:
 
         return RecordString
 
+    def WriteSQLLine(self):
+
+        RecordString = '("' + self.NDC + '"' + ',' \
+                    + '"' + self.FORMAT + '"' + ','  \
+                    + '"' + self.PRODUCTTYPENAME + '"' + ',' \
+                    + '"' + self.PROPRIETARYNAME + '"' + ',' \
+                    + '"' + self.NONPROPRIETARYNAME + '"' + ',' \
+                    + '"' + self.DOSAGEFORMNAME + '"' + ',' \
+                    + '"' + self.ROUTENAME + '"' + ',' \
+                    + '"' + self.APPLICATIONNUMBER + '"' + ',' \
+                    + '"' + self.LABELERNAME + '"' + ',' \
+                    + '"' + self.SUBSTANCENAME + '"' + ',' \
+                    + '"' + self.ACTIVE_NUMERATOR_STRENGTH + '"' + ',' \
+                    + '"' + self.ACTIVE_INGRED_UNIT + '"' + ',' \
+                    + '"' + self.PHARM_CLASSES + '"' + ',' \
+                    + '"' + self.PACKAGEDESCRIPTION + '"' + ',' \
+                    + '"' + self.NINE_DIGIT_NDC + '"' + ',' \
+                    + '"' + self.SMALL_IMAGE_URL + '"' + ',' \
+                    + '"' + self.LARGE_IMAGE_URL + '"' + ',' \
+                    + '"' + self.NDCNINE_IMAGECODES + '"' + ',' \
+                    + '"' + self.ELEVEN_DIGIT_NDC + '"' + ',' \
+                    + '"' + self.RXCUI + '")'
+
+        return RecordString
+
+
+
     @staticmethod
     def WriteHeader():
 
@@ -197,6 +280,7 @@ class RawCSVClass:
                     + '"' + 'RXCUI' + '"' + '\n'
 
         return HeaderString
+
 
 
 ############################################################################################

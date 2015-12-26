@@ -148,7 +148,7 @@
 
         var incompatibilityText = "Sorry - PharmCat is Incompatible with your Web Browser.";
         var explanation = "PharmCat requires an up-to-date or recent Web Browser version.";
-        var action = "Solution: Install the latest version of your favorite Web Browser and re-start PharmCat.";
+        var action = "Please install the latest version of your favorite Web Browser and re-start PharmCat.";
         var browserAlert = incompatibilityText + "\n\n" + explanation + "\n\n" + action;
 
         var browserCapable = Modernizr.fontface

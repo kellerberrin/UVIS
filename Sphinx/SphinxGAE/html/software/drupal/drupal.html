@@ -122,9 +122,35 @@
 <div class="line"><br /></div>
 </div>
 <p>(optional) Install drush - a Drupal download and configuration utility.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Important</strong> Configure the apache server correcty by enabling the rewrite module.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo a2enmod rewrite
+</pre></div>
+</div>
+<p>And enabling <strong>AllowOverride All</strong> on any virtualhost records in <strong>/etc/apache2/sites-available</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;VirtualHost *:80&gt;
+. . .
+ServerName  example.com
+ServerAdmin webmaster@example.com
+DocumentRoot /var/www/html
+. . .
+&lt;Directory /var/www/html&gt;
+        . . .
+        AllowOverride All
+&lt;/Directory&gt;
+. . .
+&lt;/VirtualHost&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 <div class="section" id="configure-local-drupal-installations">
 <h2>Configure local Drupal Installations<a class="headerlink" href="#configure-local-drupal-installations" title="Permalink to this headline">¶</a></h2>
-<p>Unfortunately, the configration and content of a Drupal 7 website seems to be spread throughout the entire Drupal software install. The situation is better with Drupal 8, where content and configuration have been separated. However, Drupal 8 has not yet reached release candidate status (Feb 2015).</p>
+<p>Unfortunately, the configuration and content of a Drupal 7 website seems to be spread throughout the entire Drupal software install. The situation is better with Drupal 8, where content and configuration have been separated. However, Drupal 8 has not yet reached release candidate status (Feb 2015).</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -149,7 +175,7 @@ alias for localhost called &#8220;drupal_exercise.com&#8221;.</li>
 Then a logical link is added to &#8220;/etc/apache/sites-enabled&#8221; that links to &#8220;drupal_exercise.conf&#8221;.
 The command is:</li>
 </ol>
-<div class="highlight-python"><div class="highlight"><pre>ln -s ../sites-available/drupal_exercise.com drupal_exercise.com
+<div class="highlight-python"><div class="highlight"><pre>ln -s ../sites-available/drupal_exercise.conf drupal_exercise.conf
 </pre></div>
 </div>
 <div class="line-block">
@@ -159,7 +185,15 @@ The command is:</li>
 <div class="highlight-python"><div class="highlight"><pre>&lt;VirtualHost *:80&gt;
     ServerName drupal_exercise.com
     ServerAlias www.drupal_exercise.com
-    DocumentRoot /var/www/html/drual_exercise.com
+    ServerAdmin james.duncan.mcculloch@gmail.com
+    DocumentRoot /var/www/html/
+    DocumentRoot /var/www/html/drupal_exercise/
+    &lt;Directory /var/www/html/drupal_exercise/&gt;
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+            Order allow,deny
+        allow from all
+    &lt;/Directory&gt;
 &lt;/VirtualHost&gt;
 </pre></div>
 </div>
@@ -175,6 +209,190 @@ The command is:</li>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
+</div>
+<div class="section" id="transferring-a-drupal-site">
+<h1>Transferring a Drupal Site:<a class="headerlink" href="#transferring-a-drupal-site" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Step one. In order to transfer a Drupal site we need to archive (tar) all the html virtual directory files and then transfer these to the virtual host directory of the target machine. For example:</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Source machine</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>cd /var/www/html
+sudo tar -cvf drupal_exercise.tar drupal_exercise/
+
+(gzipped) sudo tar -zcvf drupal_exercise.tar drupal_exercise/
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Where <strong>drupal_exercise</strong> is exchanged for the virtual host directory of interest. Then this file is transfered to the target machine and the archive file is untarred in the <strong>parent</strong> directory of the relevent virtual host directory. The resultant directory name created by untarring the archive file must match the virtual file name defined in the relevant <strong>.conf</strong> record in the <strong>apache</strong> &#8220;sites-available&#8221; (and linked to &#8220;site-enabled&#8221;) directory. If not, then change the directory name so that they match.</p>
+<p><strong>Target machine</strong> (creates a directory &#8220;drupal_exercise&#8221; which must match the virtual host directory)</p>
+<div class="highlight-python"><div class="highlight"><pre>cd /var/www/html
+sudo tar -xvf drupal_exercise.tar
+
+(gzipped) sudo tar -zxvf drupal_exercise.tar
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Step two. Transfer the source Mysql Drupal database to the Mysql Drupal database on the target machine. This is most conveniently done by using <strong>phpmyadmin</strong> to select the source Drupal database (for example, <strong>drupal_exercise</strong>) and dump to selected database to an sql dump file. Transfer this database dump file to the target machine. Use <strong>phpmyadmin</strong> on the target machine to drop/delete the Drupal database if it already exists, then recreate/create the database and import the sql dump file to recreate the Drupal database.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If the Drupal database name and user are the same on the source and target machines then we are finished and the Drupal site should fire up on the target machine. However, if database name and user name have changed then the <strong>sites/default/settings.php</strong> files should be changed. Here is the relevant PHP record (about line 215 in settings.php):</p>
+<div class="highlight-python"><div class="highlight"><pre>$databases = array (
+&#39;default&#39; =&gt;
+array (
+    &#39;default&#39; =&gt;
+    array (
+    &#39;database&#39; =&gt; &#39;drupal_exercise&#39;,
+    &#39;username&#39; =&gt; &#39;kellerberrin&#39;,
+    &#39;password&#39; =&gt; &#39;d***1&#39;,
+    &#39;host&#39; =&gt; &#39;localhost&#39;,
+    &#39;port&#39; =&gt; &#39;&#39;,
+    &#39;driver&#39; =&gt; &#39;mysql&#39;,
+    &#39;prefix&#39; =&gt; &#39;&#39;,
+    ),
+),
+);
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Important! The settings PHP file contains the Mysql database password and should be locked down as tight as possible.</strong></p>
+</div>
+<div class="section" id="securing-the-drupal-site-after-installation">
+<h1>Securing the Drupal Site after installation:<a class="headerlink" href="#securing-the-drupal-site-after-installation" title="Permalink to this headline">¶</a></h1>
+<p>Instructions assume that the Drupal virtual host directory is in &#8220;drupal_exercise&#8221;. Change this to actual virtual host directory when following the instructions.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Obviously select a proper and difficult password for Mysql root user and Drupal user. Then establish which account is maintaining the site and what group and user is <strong>apache</strong> running as.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li>Step One. First of all establish what group and user is apache running as (generally www-data)</li>
+</ol>
+<div class="highlight-python"><div class="highlight"><pre>sudo ps axo user,group,comm | grep apache
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Step Two. Make sure all the files have owner root (or whatever user is maintaining the web site - kellerberrin on the development machine) and group www-data so that <strong>apache</strong> can access the files.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>cd /var/www/html
+sudo chown -R root:www-data drupal_exercise
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>Step Three. Lock down all the directories.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>sudo find drupal_exercise -type d -exec chmod -R u=rwx,g=rx,o-rwx &#39;{}&#39; \;
+
+or
+
+sudo find drupal_exercise -type d -exec chmod 750 &#39;{}&#39; \;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li>Step Four. Lock down all the files.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>sudo find drupal_exercise -type f -exec chmod -R u=rw,g=r,o-rwx &#39;{}&#39; \;
+
+or
+
+sudo find drupal_exercise -type f -exec chmod -R 640 &#39;{}&#39; \;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="5">
+<li>Step Five. Lock down all the sub-directories of <strong>sites/default/files</strong>.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>sudo find drupal_exercise/sites/default/files -type d -exec chmod -R ug=rwx,o-rwx &#39;{}&#39; \;
+
+or
+
+sudo find drupal_exercise/sites/default/files -type d -exec chmod -R 770 &#39;{}&#39; \;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="6">
+<li>Step Six. Lock down all the files of <strong>sites/default/files</strong>.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>sudo find drupal_exercise/sites/default/files -type f -exec chmod -R ug=rw,o-rwx &#39;{}&#39; \;
+
+or
+
+sudo find drupal_exercise/sites/default/files -type f -exec chmod -R 660 &#39;{}&#39; \;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="7">
+<li>Step Seven. Lock down the settings files in <strong>sites/default/settings</strong>.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>sudo chmod ug=r,o-rwx drupal_exercise/sites/default/settings.php
+
+or
+
+sudo chmod 440 drupal_exercise/sites/default/settings.php
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Note that if Drupal needs to modify the settings file (change of database information) then <strong>temporarily</strong> change the permissions to</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo chmod ug=rw,o-rwx drupal_exercise/sites/default/settings.php
+
+or
+
+sudo chmod 660 drupal_exercise/sites/default/settings.php
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="local-users-and-passwords">
@@ -217,24 +435,37 @@ The command is:</li>
 </div>
 <div class="section" id="remote-drupal-server">
 <h1>Remote Drupal Server<a class="headerlink" href="#remote-drupal-server" title="Permalink to this headline">¶</a></h1>
-<p>Is hosted by Godaddy (IP 192.186.252.37 - unknown if this is a static IP address?). The hosting expires on 15/2/17.
-Currently has PharmRox.com (or PharmCow.com - not yet determined) pointing to the IP address.</p>
-<p>Final setup not really completed - this section is provisional.</p>
+<p>Is hosted by Google (IP 130.211.167.94 - This is a static IP address).
+Currently has PharmRox.com pointing to the IP address.</p>
+<p>Pharmrox.com is setup is a virtual server (see above)</p>
 </div>
 <div class="section" id="remote-users-and-passwords">
 <h1>Remote Users and Passwords:<a class="headerlink" href="#remote-users-and-passwords" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="host-unix-account-and-cpanel">
-<h2>Host unix account and Cpanel<a class="headerlink" href="#host-unix-account-and-cpanel" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="host-unix-account">
+<h2>Host unix account<a class="headerlink" href="#host-unix-account" title="Permalink to this headline">¶</a></h2>
 <p>The user account is: kellerberrin.
-password: &lt;usual non bank password except the first letter is a capital letter
-and the final number is 54&gt;</p>
-<p>The best way to reach the site is by cPanel through the GoDaddy website <strong>ssh kellerberrin&#64;pharmrox.com</strong> (or, depending on setup, <strong>ssh kellerberrin&#64;pharmcow.com</strong>).</p>
+password: &lt;extended non bank password, the final two characters is &#8220;5x&#8221;&gt;</p>
+<p>The best way to reach the site is by the <strong>ssh</strong> account.</p>
 </div>
 <div class="section" id="remote-drupal-user1-superuser">
 <h2>Remote Drupal User1 (SuperUser)<a class="headerlink" href="#remote-drupal-user1-superuser" title="Permalink to this headline">¶</a></h2>
 <p>User: admin
 |
 Password: &lt;usual password&gt; d***1</p>
+</div>
+<div class="section" id="installing-a-local-mail-server">
+<h2>Installing a Local Mail Server<a class="headerlink" href="#installing-a-local-mail-server" title="Permalink to this headline">¶</a></h2>
+<p>Sending mail from the local Drupal contact page failed.</p>
+<p>Googling produced the following solution to install a mail server on the local machine that Drupal can use to send emails.
+A shared host will probably have a client mail already installed.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install php-pear
+sudo pear install mail
+sudo pear install Net_SMTP
+sudo pear install Auth_SASL
+sudo pear install mail_mime
+sudo apt-get install postfix
+</pre></div>
+</div>
 </div>
 </div>
 
