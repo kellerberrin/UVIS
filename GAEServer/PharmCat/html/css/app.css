@@ -2354,12 +2354,12 @@ body {
 }
 /* line 59, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container {
-  height: 2px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: #c5cae9;
 }
-/* line 66, ../scss/_k-search-prompt.scss */
+/* line 67, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar {
   display: -webkit-flex;
   display: flex;
@@ -2373,7 +2373,7 @@ body {
   height: 100%;
   width: 200%;
 }
-/* line 75, ../scss/_k-search-prompt.scss */
+/* line 76, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-1 {
   height: 100%;
   width: 50%;
@@ -2384,7 +2384,7 @@ body {
   background-image: -webkit-linear-gradient(left, rgba(63, 81, 181, 0.3), #3f51b5);
   background-image: linear-gradient(to right, rgba(63, 81, 181, 0.3), #3f51b5);
 }
-/* line 83, ../scss/_k-search-prompt.scss */
+/* line 84, ../scss/_k-search-prompt.scss */
 #k-prompt-progress-container #k-prompt-progress-bar #k-prompt-progress-gradient-2 {
   height: 100%;
   width: 50%;
@@ -2401,24 +2401,24 @@ body {
 * The progress and history container markup.
 *
 ******************************************************************************************************************/
-/* line 101, ../scss/_k-search-prompt.scss */
+/* line 102, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container {
   border: solid 2px #3f51b5;
 }
-/* line 105, ../scss/_k-search-prompt.scss */
+/* line 106, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list {
   display: none;
   border: solid 2px #c5cae9;
 }
-/* line 110, ../scss/_k-search-prompt.scss */
+/* line 111, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list.promptActive {
   display: block;
 }
-/* line 116, ../scss/_k-search-prompt.scss */
+/* line 117, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title {
   background-color: #c5cae9;
 }
-/* line 120, ../scss/_k-search-prompt.scss */
+/* line 121, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-key {
   color: #303f9f;
   width: 100%;
@@ -2428,7 +2428,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 132, ../scss/_k-search-prompt.scss */
+/* line 133, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list #k-search-prompt-title #k-search-prompt-text {
   color: black;
   width: 100%;
@@ -2439,14 +2439,14 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 147, ../scss/_k-search-prompt.scss */
+/* line 148, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 151, ../scss/_k-search-prompt.scss */
+/* line 152, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2457,7 +2457,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 159, ../scss/_k-search-prompt.scss */
+/* line 160, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item {
   position: relative;
   width: 100%;
@@ -2465,11 +2465,11 @@ body {
   color: black;
   cursor: pointer;
 }
-/* line 167, ../scss/_k-search-prompt.scss */
+/* line 168, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item:hover {
   color: #03a9f4;
 }
-/* line 173, ../scss/_k-search-prompt.scss */
+/* line 174, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-type {
   width: 100%;
   color: #303f9f;
@@ -2479,7 +2479,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 185, ../scss/_k-search-prompt.scss */
+/* line 186, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-prompt-list .k-search-prompt-array .k-search-prompt-item .k-search-prompt-value {
   width: 100%;
   padding-left: 1.5em;
@@ -2489,30 +2489,30 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 203, ../scss/_k-search-prompt.scss */
+/* line 204, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list {
   display: none;
-  border: solid 2px #ffccde;
+  border: solid 2px #ffcdde;
 }
-/* line 208, ../scss/_k-search-prompt.scss */
+/* line 209, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list.historyActive {
   display: block;
 }
-/* line 214, ../scss/_k-search-prompt.scss */
+/* line 215, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list #k-search-history-title {
   color: black;
   text-align: center;
   padding: 0.3em;
-  background-color: #ffccde;
+  background-color: #ffcdde;
 }
-/* line 223, ../scss/_k-search-prompt.scss */
+/* line 224, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-/* line 227, ../scss/_k-search-prompt.scss */
+/* line 228, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array:hover {
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -2523,7 +2523,7 @@ body {
   transform: translate(0px, -2px);
   color: #03a9f4;
 }
-/* line 235, ../scss/_k-search-prompt.scss */
+/* line 236, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item {
   position: relative;
   width: 100%;
@@ -2533,11 +2533,11 @@ body {
   padding: 0;
   margin: 0;
 }
-/* line 245, ../scss/_k-search-prompt.scss */
+/* line 246, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item:hover {
   color: #ff80ab;
 }
-/* line 251, ../scss/_k-search-prompt.scss */
+/* line 252, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-type {
   width: 100%;
   color: #303f9f;
@@ -2547,7 +2547,7 @@ body {
   padding-top: 0.1em;
   padding-bottom: 0.0em;
 }
-/* line 263, ../scss/_k-search-prompt.scss */
+/* line 264, ../scss/_k-search-prompt.scss */
 #k-search-prompt-container #k-search-history-list .k-search-history-array .k-search-history-item .k-search-history-value {
   width: 100%;
   padding-left: 1.5em;
@@ -3052,7 +3052,7 @@ body {
 .k-display-drug .k-display-active-ingredients {
   display: none;
   position: relative;
-  background-color: #ffccde;
+  background-color: #ffcdde;
   width: 100%;
 }
 /* line 167, ../scss/_k-display-results.scss */
@@ -3123,7 +3123,7 @@ body {
   font-size: inherit;
   margin: 0.2em 0 0 2.3rem;
   padding: 0.2em 0.2em 0.2em 0.2rem;
-  background-color: #ffccde;
+  background-color: #ffcdde;
 }
 /* line 251, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-name .k-display-ingredient-name-icon {
@@ -3144,7 +3144,7 @@ body {
   font-size: inherit;
   margin: 0.2em 0 0 0.8rem;
   padding: 0.2em 0 0.2em 0.2rem;
-  background-color: #ffccde;
+  background-color: #ffcdde;
 }
 /* line 281, ../scss/_k-display-results.scss */
 .k-display-drug .k-display-active-ingredients .k-display-ingredient-panel .k-display-ingredient-line .k-display-ingredient-strength .k-display-ingredient-strength-icon {

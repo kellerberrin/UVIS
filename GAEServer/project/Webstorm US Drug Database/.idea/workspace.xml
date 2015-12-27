@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="Update the prompt">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Drupal/project/Lessons/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../Linux/localsphinxGAE" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/environment.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/drupal/drupal.doctree" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/doctrees/html/software/drupal/drupal.doctree" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/objects.inv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Drupal/project/Lessons/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../../../Drupal/project/Lessons/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Drupal/project/Lessons/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../Drupal/project/Lessons/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" afterPath="$PROJECT_DIR$/../../NDCDatafilesUpload/CSVrecords.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" afterPath="$PROJECT_DIR$/../../NDCWeb/drugdatabase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" afterPath="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/Pycharm US Drug Database.iml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/Pycharm US Drug Database.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Pycharm US Drug Database/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/US Drug Database.iml" afterPath="$PROJECT_DIR$/.idea/US Drug Database.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/compass_library2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+    <list default="true" id="c3377043-c222-4c86-895e-62a94799fc75" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-dialog-toast.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-display-results.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-display-results.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-menu-input.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-menu-input.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-search-prompt.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-search-prompt.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-top-level.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_k-top-level.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material-colors.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material-colors.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material-local.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material-local.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/_material.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/app.scssc" afterPath="$PROJECT_DIR$/../../PharmCat/html/.sass-cache/395083fd6d2074a0c78ca99aa53966a195b4f16e/app.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" afterPath="$PROJECT_DIR$/../../PharmCat/html/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" afterPath="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS" afterPath="$PROJECT_DIR$/../../../Linux/UVIS" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" afterPath="$PROJECT_DIR$/../../../Linux/UVIS_USDRUG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/Source/software/drupal/drupal.rst" afterPath="$PROJECT_DIR$/../../../Sphinx/Source/software/drupal/drupal.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/drupal/drupal.txt" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/_sources/software/drupal/drupal.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/searchindex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/drupal/drupal.html" afterPath="$PROJECT_DIR$/../../../Sphinx/SphinxGAE/html/software/drupal/drupal.html" />
     </list>
     <ignored path="US Drug Database.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,11 +54,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prompt-services.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="prompt-services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4556314">
-              <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+            <state vertical-scroll-proportion="-55.8">
+              <caret line="129" column="56" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchPrompt.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="16.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_k-search-prompt.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.09549072">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,7 +136,6 @@
         <option value="$PROJECT_DIR$/../../NDCWeb/html/js/search-services.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/app.yaml" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/PromptProgress.html" />
-        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/partial/ImageDialog.html" />
         <option value="$USER_HOME$/Downloads/UVIS-master/GAEServer/PharmCat/html/bower.json" />
@@ -159,6 +162,7 @@
         <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-menu-input.scss" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/angular-app.js" />
         <option value="$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js" />
+        <option value="$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss" />
       </list>
     </option>
   </component>
@@ -244,6 +248,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="scss">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="$PROJECT_DIR$/../../PharmCat/html">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="partial">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -417,21 +435,21 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="95" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="130" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="123" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="131" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="124" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1040" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="974" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="112" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="106" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="126" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="119" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="128" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="121" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1036" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="970" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="recentsLimit" value="5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
@@ -532,7 +550,13 @@
       <option name="project" value="LOCAL" />
       <updated>1412389426962</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update the prompt">
+      <created>1451137276161</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1451137276161</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -557,24 +581,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1361" height="743" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.49706745" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15378955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23620309" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.50293255" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.49706745" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -684,6 +708,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/search-services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -817,13 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -922,6 +933,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -929,6 +941,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -950,6 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,8 +1014,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../PharmCat/html/js/prompt-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4556314">
-          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+        <state vertical-scroll-proportion="-55.8">
+          <caret line="129" column="56" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/partial/SearchPrompt.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PharmCat/html/scss/_k-search-prompt.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09549072">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,10 @@
+#!/bin/bash
+# Convenience script to generate an MySQL upload script 
+# from the image url enhanced CSV file derived from the FDA download
+# All processing logic is in the Python file.
+
+echo "UVISUSDRUGDATAFILE:" $UVISUSDRUGDATAFILE
+echo "UVISUSDRUGSQLLOGFILE:" $UVISUSDRUGSQLLOGFILE
+echo "UVISUSDRUGSQLUPLOAD:" $UVISUSDRUGSQLUPLOAD
+
+python $UVISUSDRUGSQLDIR/generatesql.py

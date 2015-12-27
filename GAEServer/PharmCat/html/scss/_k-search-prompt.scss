@@ -58,7 +58,8 @@ $K-Prompt-Progress-Color: $K-PRIMARY-COLOR-500;
 
 #k-prompt-progress-container {
 
-  height: 2px;
+//  height: 2px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: $K-Prompt-Prompt-Title-Color;

@@ -1,0 +1,87 @@
+2015-12-25 17:02:03,992 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 17:06:01,920 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 17:32:46,481 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 17:43:50,470 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:04:49,884 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:06:59,045 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:07:37,903 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:14:28,104 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:22:08,016 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:24:00,592 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:27:08,195 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:29:38,665 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:36:17,505 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:38:16,100 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 18:43:21,930 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 21:18:27,648 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 21:19:07,307 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 21:19:36,679 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 21:19:36,680 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-25 21:19:36,690 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-25 21:19:36,691 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-25 21:19:36,728 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-25 21:19:36,749 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-25 21:19:36,766 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-25 21:21:13,594 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-25 21:21:13,595 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-25 21:21:13,606 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-25 21:21:13,606 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-25 21:21:13,644 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-25 21:21:13,664 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-25 21:21:13,682 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 10:51:01,241 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 10:51:01,242 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 10:51:01,253 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 10:51:01,253 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 10:51:01,290 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 10:51:01,310 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 10:51:01,328 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 10:51:46,274 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 10:51:46,275 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 10:51:46,285 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 10:51:46,285 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 10:51:46,323 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 10:51:46,344 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 10:51:46,361 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 11:00:09,850 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 11:00:09,851 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 11:00:09,860 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 11:00:09,860 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 11:00:09,897 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 11:00:09,917 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 11:00:09,934 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 11:01:04,253 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 11:01:04,254 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 11:01:04,263 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 11:01:04,263 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 11:01:04,301 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 11:01:04,321 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 11:01:04,338 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 11:07:28,823 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 11:07:28,824 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 11:07:28,833 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 11:07:28,834 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 11:07:28,870 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 11:07:28,889 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 11:07:28,906 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 11:11:13,042 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 11:11:13,043 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 11:11:13,053 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 11:11:13,053 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 11:11:13,090 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 11:11:13,110 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 11:11:13,127 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 11:12:23,152 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 11:12:23,153 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 11:12:23,163 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 11:12:23,163 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 11:12:23,199 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 11:12:23,219 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 11:12:23,236 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
+2015-12-26 17:47:24,017 - INFO - generatesql - CSVData Record Count: 103802
+2015-12-26 17:47:24,022 - WARNING - generatesql - Duplicate NDC Found for: 0024279150
+2015-12-26 17:47:24,033 - WARNING - generatesql - Duplicate NDC Found for: 0781161966
+2015-12-26 17:47:24,033 - WARNING - generatesql - Duplicate NDC Found for: 0781164366
+2015-12-26 17:47:24,071 - WARNING - generatesql - Duplicate NDC Found for: 5380803471
+2015-12-26 17:47:24,091 - WARNING - generatesql - Duplicate NDC Found for: 6332328637
+2015-12-26 17:47:24,110 - WARNING - generatesql - Duplicate NDC Found for: 7643920590
